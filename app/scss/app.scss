@@ -1,0 +1,192 @@
+@import "settings";
+// @import "foundation";
+@import "foundation/components/offcanvas";
+@import "foundation/components/grid";
+@import "foundation/components/type";
+@import "foundation/components/visibility";
+@import "foundation/components/reveal";
+@import "foundation/components/tables";
+
+
+//FOUNDATION ICONS
+@font-face {
+  font-family: "foundation-icons";
+  src: url("foundation-icons.eot");
+  src: url("foundation-icons.eot?#iefix") format("embedded-opentype"),
+       url("foundation-icons.woff") format("woff"),
+       url("foundation-icons.ttf") format("truetype"),
+       url("foundation-icons.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+} 
+.fi-plus:before,
+.fi-play:before,
+.fi-previous:before,
+.fi-pause:before,
+.fi-rss:before,
+.fi-x-circle:before,
+.fi-fast-forward:before,
+.fi-social-apple:before,
+.fi-rewind-ten:before,
+.fi-rewind:before,
+.fi-x:before,
+.fi-refresh:before,
+.fi-social-google-plus:before,
+.fi-trash:before,
+.fi-eye:before,
+.fi-page-multiple:before,
+.fi-indent-more:before,
+.fi-zoom-out:before {
+  font-family: "foundation-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+} 
+.fi-play:before { content: "\f198"; }
+.fi-plus:before { content: "\f199"; }
+.fi-trash:before { content: "\f204"; }
+.fi-previous:before { content: "\f19c"; }
+.fi-rss:before { content: "\f1aa"; }
+.fi-x-circle:before { content: "\f216"; }
+.fi-fast-forward:before { content: "\f148"; }
+.fi-x:before { content: "\f217"; }
+.fi-social-apple:before { content: "\f1b8"; }
+.fi-pause:before { content: "\f191"; }
+.fi-social-google-plus:before { content: "\f1ca"; }
+.fi-rewind-ten:before { content: "\f1a8"; }
+.fi-rewind:before { content: "\f1a9"; }
+.fi-refresh:before { content: "\f1a5"; }
+.fi-indent-more:before { content: "\f15d"; }
+.fi-eye:before { content: "\f147"; }
+.fi-page-multiple:before { content: "\f18a"; }
+
+.playlist {
+  table-border-style: solid;
+  table-border-size: 3 px;
+  table-border-color: #ddd;
+
+}
+
+//static player bar at bottom of screen
+#player {
+    position: fixed;
+    height: 75px;
+    width:100%;
+    //min-width: 850px;
+    bottom: 0;
+    background-color: #fafafa;
+    color: black;
+    z-index: 601;
+    box-shadow: 0 0 8px #888888;
+    box-shadow: 0 0 8px rgba(0,0,0,.4);
+    cursor: default;
+}
+#player-fill-left{
+}
+.player-preview{
+    // position: fixed;
+    // top: 15px;
+    margin-left: 80px;
+    // bottom: 0;
+    // font-weight: bold;
+    // font-size: 18px;
+}
+#album-preview {
+    // position: fixed;
+    // //left: 7px;
+    // bottom: 0;
+    // left: 80px;
+    // width: 80px;
+    // height: 80px;
+}
+#player-art {
+    background-color: transparent;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+}
+#player-fill-right{
+}
+#player-main{
+}
+#controls-wrapper {
+  height:60px;
+  position:fixed;
+  bottom:0;
+
+}
+.unHidden {
+    display: block;
+
+}
+.Hidden {
+    display: none;
+}
+
+.episodes-list {
+  height:200px;
+  overflow:auto;
+}
+
+
+$include-html-table-classes: $include-html-classes !default;
+
+// These control the background color for the table and even rows
+$table-bg: #fff;
+$table-even-row-bg: #f9f9f9;
+
+// These control the table cell border style
+$table-border-style: solid;
+$table-border-size: 1px;
+$table-border-color: #ddd;
+
+// These control the table head styles
+$table-head-bg: #f5f5f5;
+$table-head-font-size: rem-calc(14);
+$table-head-font-color: #222;
+$table-head-font-weight: bold;
+$table-head-padding: rem-calc(8 10 10);
+
+// These control the row padding and font styles
+$table-row-padding: rem-calc(9 10);
+$table-row-font-size: rem-calc(14);
+$table-row-font-color: #222;
+$table-line-height: rem-calc(18);
+
+// These are for controlling the display and margin of tables
+$table-display: table-cell;
+$table-margin-bottom: rem-calc(20);
+
+// We use these to control the style of the reveal overlay.
+$reveal-overlay-bg: rgba(#000, .45);
+$reveal-overlay-bg-old: #000;
+
+// We use these to control the style of the modal itself.
+$reveal-modal-bg: #fff;
+$reveal-position-top: 50px;
+$reveal-default-width: 80%;
+$reveal-modal-padding: rem-calc(20);
+$reveal-box-shadow: 0 0 10px rgba(#000,.4);
+
+// We use these to style the reveal close button
+$reveal-close-font-size: rem-calc(22);
+$reveal-close-top: rem-calc(8);
+$reveal-close-side: rem-calc(11);
+$reveal-close-color: #aaa;
+$reveal-close-weight: bold;
+
+// We use these to control the modal border
+$reveal-border-style: solid;
+$reveal-border-width: 1px;
+$reveal-border-color: #666;
+
+$reveal-modal-class: "reveal-modal";
+$close-reveal-modal-class: "close-reveal-modal";
