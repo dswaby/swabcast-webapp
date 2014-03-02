@@ -1,10 +1,8 @@
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
-
-
 module.exports = function (grunt) {
-
+    'use strict';
     var swabstackConfig = {
         app: 'app',
         dist: 'dist'
