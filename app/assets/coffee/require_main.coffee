@@ -27,13 +27,13 @@ requirejs.config
       exports: "Marionette"
 
     "jquery-ui": ["jquery"]
- 
+
     #   'spin.jquery':['jquery'],
     #   spin: ['spin.jquery'],
     localstorage: ["backbone"]
 
     # foundation: ["jquery"]
-    #   deps: 
+    #   deps:
     #   exports: "fn"
 
     # "reveal": ["foundation"]

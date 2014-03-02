@@ -8,213 +8,306 @@ var hbs = require('express-hbs');
 // var baucis = require('baucis');
 var socketIO = require('socket.io');
 var mongoose = require('mongoose');
+var passport = require("passport");
+var LocalStrategy = require('passport-local').Strategy;
+var FacebookStrategy = require('passport-facebook').Strategy;
 
-
-// start mongoose
-mongoose.connect('mongodb://localhost/subscriptions');
+var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/swabcast';
+var theport = process.env.PORT || 5000;
+// Makes connection asynchronously.  Mongoose will queue up database
+// operations and release them when the connection is complete.
+mongoose.connect(uristring, function(err, res) {
+    if (err) {
+        console.log('ERROR connecting to: ' + uristring + '. ' + err);
+    } else {
+        console.log('Succeeded connected to: ' + uristring);
+    }
+});
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
 
-    /*
-    * Schema for a subscription model
-    * @property feedUid
-    * referenced by episode schema 
-    * @readOnly
-    */
-    var Subscription = new mongoose.Schema({
-        feedUid: String,
-        feedUrl: String,
-        subscriptionTitle: String,
-        summary: String,
-        albumArt: String,
-        keywords: [{
-            keyword: String
-        }]
+
+    var app = express();
+    app.configure(function() {
+        app.set('port', theport);
+        app.set('view engine', 'handlebars');
+        app.set('views', __dirname + '../app/scripts/views');
     });
-    /* @uses Subscription Schema
-    * @uses mongoose.model
-    */
-    var SubscriptionModel = mongoose.model( 'Subscription', Subscription );
-    /*
-    * Schema for an episode model
-    * @property subscription_id
-    * references subscription.
-    * @readOnly
-    */
+    /* userauths Model Schema */
+    var LocalUserSchema = new mongoose.Schema({
+        username: String,
+        salt: String,
+        hash: String,
+        userDocument: String
+    });
+    /* FbUsers model Schema */
+    var FacebookUserSchema = new mongoose.Schema({
+        fbId: String,
+        email: {
+            type: String,
+            lowercase: true
+        },
+        name: String,
+        userDocument: String
+    });
+    /* Subscription Model Schema */
+    var Keyword = new mongoose.Schema({
+        keyword: String
+    });
     var Episode = new mongoose.Schema({
         uid: Number,
         mediaUrl: String,
         episodeTitle: String,
-        episodeSummary: String, 
         duration: Number,
-        subscription_id: String
+        episodeSummary: String
     });
-    /*
-    * Schema for a individual user subscription model
-    * includes flags for data/usage
-    */
-    var Subscribed = new mongoose.Schema({
-        feedUid: String,
+    var Subscription = new mongoose.Schema({
         feedUrl: String,
         subscriptionTitle: String,
         summary: String,
         albumArt: String,
-        keywords: [{
-            keyword: String
-        }],
         explicit: Boolean,
-        episodes: [{
-            uid: Number,
-            mediaUrl: String,
-            episodeTitle: String,
-            episodeSummary: String, 
-            duration: Number,
-            episodePosition: Number,
-            archived: Boolean,
-            publishDate: Date
-        }]
+        keywords: [Keyword],
+        episodes: [Episode]
     });
-    /* 
-    * @uses Subscription Schema
-    * @uses mongoose.model
-    */
-    var SubscribedModel = mongoose.model( 'Subscribed', Subscribed );
-    /* 
-    * TODO - add checking validation for existing
-    * TODO - if (!exists) {attempt parsing/retrieving based on URL}
-    * Schema for custom subscription feed
-    */
-    var CustomRSS = new mongoose.Schema({
-        feedUrl: String
+    /* UserDocument Model Schema */
+    var NewEpisodes = new mongoose.Schema({
+        newEpisodes: String
     });
-    var CustomFeedModel = mongoose.model( 'CustomRSS', CustomRSS );
-
-
-    /* set Baucis */
-    // baucis.rest({
-    //     singular: 'test'
+    var KeywordPopulation = new mongoose.Schema({
+        Keyword: String,
+        Count: Number
+    });
+    var SubscribedEpisode = new mongoose.Schema({
+        uid: Number,
+        mediaUrl: String,
+        episodeTitle: String,
+        episodeSummary: String,
+        duration: Number,
+        position: Number,
+        played: Boolean,
+        archived: Boolean
+    });
+    var Subscribed = new mongoose.Schema({
+        title: String,
+        feedUrl: String,
+        feedUid: String,
+        summary: String,
+        albumArt: String,
+        archived: Boolean,
+        newEpisodes: [NewEpisodes],
+        keywords: [Keyword],
+        episodes: [SubscribedEpisode]
+    });
+    var UserDocument = new mongoose.Schema({
+        userId: String,
+        keywordPopulation: [KeywordPopulation],
+        subscriptions: [Subscribed]
+    });
+    /* @Model UsersModel */
+    var Users = mongoose.model('userauths', LocalUserSchema);
+    /* @Model Facebook Users Model */
+    var FbUsers = mongoose.model('fbs', FacebookUserSchema);
+    /* @Model SubscriptionModel */
+    var SubscriptionModel = mongoose.model('Subscriptions', Subscription);
+    /* @Model UserDocumentModel */
+    var UserDocumentModel = mongoose.model('UserDocuments', UserDocument);
+    /*
+     * TODO - add checking validation for existing
+     * TODO - if (!exists) {attempt parsing/retrieving based on URL}
+     * Schema for custom subscription feed
+     */
+    // var CustomRSS = new mongoose.Schema({
+    //     feedUrl: String
     // });
-
-    var app = express();
-
-    app.configure(function(){
-        app.set('port', 9000);
-
-        app.set('view engine', 'handlebars');
-        app.set('views', __dirname + '../app/scripts/views');
-    });
-
-    // app.use('/api/v1', baucis());
-
+    // var CustomFeedModel = mongoose.model( 'CustomRSS', CustomRSS );
     // simple log
-    app.use(function(req, res, next){
-      console.log('%s %s', req.method, req.url);
-      next();
+    app.use(function(req, res, next) {
+        console.log('%s %s', req.method, req.url);
+        next();
     });
-
     // mount static
-    // app.use(express.static( path.join( __dirname, '../app') ));
-    // app.use(express.static( path.join( __dirname, '../.tmp') ));
-
-
-    // route index.html
-    app.get('/', function(req, res){
-      res.sendfile( path.join( __dirname, '../app/index.html' ) );
+    app.use(express.static(path.join(__dirname, '../app')));
+    app.use(express.static(path.join(__dirname, '../.tmp')));
+    // include passport authentication middleware
+    app.use(express.cookieParser());
+    app.use(express.bodyParser());
+    app.use(express.session({
+        secret: 'SECRET'
+    }));
+    app.use(passport.initialize());
+    app.use(passport.session());
+    //passport local strategy
+    passport.use(new LocalStrategy(function(username, password, done) {
+        Users.findOne({
+            username: username
+        }, function(err, user) {
+            if (err) {
+                return done(err);
+            }
+            if (!user) {
+                return done(null, false, {
+                    message: 'Incorrect username.'
+                });
+            }
+            hash(password, user.salt, function(err, hash) {
+                if (err) {
+                    return done(err);
+                }
+                if (hash == user.hash) return done(null, user);
+                done(null, false, {
+                    message: 'Incorrect password.'
+                });
+            });
+        });
+    }));
+    passport.use(new FacebookStrategy({
+        clientID: 'YOUR ID',
+        clientSecret: 'YOUR CODE',
+        callbackURL: 'http://localhost:3000/auth/facebook/callback'
+    }, function(accessToken, refreshToken, profile, done) {
+        FbUsers.findOne({
+            fbId: profile.id
+        }, function(err, oldUser) {
+            if (oldUser) {
+                done(null, oldUser);
+            } else {
+                var newUser = new FbUsers({
+                    fbId: profile.id,
+                    email: profile.emails[0].value,
+                    name: profile.displayName
+                }).save(function(err, newUser) {
+                    if (err) {
+                        throw err;
+                    }
+                    done(null, newUser);
+                });
+            }
+        });
+    }));
+    // set the user to req.user and establish a session via a cookie set in the user’s browser
+    passport.serializeUser(function(user, done) {
+        done(null, user.id);
+    });
+    passport.deserializeUser(function(id, done) {
+        Users.findById(id, function(err, user) {
+            if (err) {
+                done(err);
+            }
+            done(null, user);
+        });
     });
 
-    /* HTTP Method GET
-    * @uses Subscription
-    * URL api/subscriptions
-    * @param req request
-    * @param res response 
-    * @return returns all subscription info models
-    *
-    * @example request
-        jQuery.get('api/subscriptions', function(data, textStatus, jqXHR) {
-            console.log(textStatus); //success or err
-            console.log(jqXHR); //object
+    function authenticatedOrNot(req, res, next) {
+        if (req.isAuthenticated()) {
+            next();
+        } else {
+            res.redirect('/login');
+        }
+    }
+
+    function userExist(req, res, next) {
+        Users.count({
+            username: req.body.username
+        }, function(err, count) {
+            if (count === 0) {
+                next();
+            } else {
+                // req.session.error = "User Exist"
+                res.redirect('/singup');
+            }
         });
-    */
-    app.get('api/subscriptions', function (req, res) {
-        return SubscriptionModel.find (function( err, subscriptions) {
+    }
+    /**
+     **  @SECTION API
+     **/
+    app.get('/auth/facebook', passport.authenticate('facebook', {
+        scope: 'email'
+    }));
+    app.get('/auth/facebook/callback', passport.authenticate('facebook', {
+        failureRedirect: '/login'
+    }), function(req, res) {
+        res.render('loggedin', {
+            user: req.user
+        });
+    });
+    app.get('/', function(req, res) {
+        res.sendfile(path.join(__dirname, '../app/index.html'));
+    });
+    app.get('api/subscriptions', function(req, res) {
+        return SubscriptionModel.find(function(err, subscriptions) {
             if (!err) {
                 return res.send(subscriptions);
             } else {
-                return console.log( err );
+                return console.log(err);
             }
         });
     });
-
-    /* HTTP Method GET
-    * URL api/subscribed
-    * @param req request
-    * @param res response 
-    * @return collection of all subscribed documents
-    *
-    * @example request
-        jQuery.get('api/subscribed', function(data, textStatus, jqXHR) {
-            console.log(textStatus); //success or err
-            console.log(jqXHR); //object
+    app.get('api/subscriptions/:id', function(req, res) {
+        return SubscriptionModel.findById(req.params.id, function(err, subscription) {
+            if (!err) {
+                return res.send(subscription);
+            } else {
+                return console.log('subscription not found for id %s, error: %s', req.params.id, err);
+            }
         });
-    */
-    app.get('api/subscribed', function (req, res) {
-        return SubscribedModel.find (function( err, subscribed) {
+    });
+    app.get('api/subscribed', function(req, res) {
+        return SubscriptionModel.find(function(err, subscribed) {
             if (!err) {
                 return res.send(subscribed);
             } else {
-                return console.log( err );
+                return console.log(err);
             }
         });
     });
-
-    /*
-    * URL api/subscribed/:id
-    * @param id subscribed feedUid
-    * @return 
-    */
-    app.get('api/subscribed/:id', function (req, res) {
-        return SubscriptionModel.findById ( req.params.id, function( err, subscription) {
+    app.get('api/subscribed/:id', function(req, res) {
+        //will need to get auth_token and retrieve UserDocumentModel._id
+        return UserDocumentModel.findById(req.params.id, function(err, subscription) {
             if (!err) {
                 return res.send(subscription);
             } else {
-                return console.log( "subscription not found for id %s, error: %s", req.params.id, err );
+                return console.log('subscription not found for id %s, error: %s', req.params.id, err);
             }
         });
     });
-    /*
-    * URL api/subscriptions/:id
-    * @param id subscription ID
-    * @return 
-    */
-    app.get('api/subscriptions/:id', function (req, res) {
-        return SubscriptionModel.findById ( req.params.id, function( err, subscription) {
+    //TODO - validate
+    app.put('api/subscribed/:id/episode/:episode/:action/', function(req, res) {
+        return SubscriptionModel.findById(req.params.id, req.params.episode, req.params.action, function(err, subscription) {
             if (!err) {
                 return res.send(subscription);
             } else {
-                return console.log( "subscription not found for id %s, error: %s", req.params.id, err );
+                return console.log('subscription not found for id %s, error: %s', req.params.id, err);
             }
         });
     });
-
-    // TODO implement checking of existing subscriptions, if not, trying to parse url based on url providd
-    app.post('api/custom', function (req, res) {
-        var customRSS = new customFeedModel({
-            feedUrl = req.body.feedUrl
-        });
-        customRSS.save( function (err) {
+    app.put('api/subscribe/:id', function(req) {
+        // get subscription from subscriptions collection
+        var subscription = function() {
+            return SubscriptionModel.findById(req.params.id, function(err, subscription) {
+                if (!err) {
+                    return subscription;
+                } else {
+                    return console.log('subscription not found for id %s, error: %s', req.params.id, err);
+                }
+            });
+        };
+        var s = new Subscribed(subscription);
+        //copy subscription to user subscribed document
+        UserDocumentModel.findById(req.authToken, function(err, userDoc) {
             if (!err) {
-                return console.log(added);
+                userDoc.Subscribed.push(s);
+                return console.log('success!');
             } else {
-                return console.log( err );
+                return console.log('subscription not found for id %s, error: %s', req.params.id, err);
             }
         });
-        return res.send(customRSS);
     });
-
+    // TODO implement adding custom subscription
     // start server
-    http.createServer(app).listen(app.get('port'), function(){
+    http.createServer(app).listen(app.get('port'), function() {
         console.log('Express App started!');
     });
 });
