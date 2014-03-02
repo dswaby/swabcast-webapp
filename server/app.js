@@ -12,7 +12,7 @@ var passport = require("passport");
 var LocalStrategy = require('passport-local').Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy;
 
-var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/swabcast';
+var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/databases/swabcast';
 var theport = process.env.PORT || 5000;
 // Makes connection asynchronously.  Mongoose will queue up database
 // operations and release them when the connection is complete.
@@ -59,8 +59,8 @@ db.once('open', function callback () {
     var Episode = new mongoose.Schema({
         uid: Number,
         mediaUrl: String,
-        episodeTitle: String,
         duration: Number,
+        episodeTitle: String,
         episodeSummary: String
     });
     var Subscription = new mongoose.Schema({
@@ -236,25 +236,29 @@ db.once('open', function callback () {
     app.get('/', function(req, res) {
         res.sendfile(path.join(__dirname, '../app/index.html'));
     });
-    app.get('api/subscriptions', function(req, res) {
+    app.get( '/api', function( request, response ) {
+        response.send( 'Library API is running' );
+    });
+    app.get('/api/subscriptions', function(req, res) {
         return SubscriptionModel.find(function(err, subscriptions) {
             if (!err) {
+                console.log(subscriptions);
                 return res.send(subscriptions);
             } else {
                 return console.log(err);
             }
         });
     });
-    app.get('api/subscriptions/:id', function(req, res) {
-        return SubscriptionModel.findById(req.params.id, function(err, subscription) {
+    app.get('/api/subscriptions/:id', function(request, response) {
+        return SubscriptionModel.findById(request.params.id, function(err, subscription) {
             if (!err) {
-                return res.send(subscription);
+                return response.send(subscription);
             } else {
-                return console.log('subscription not found for id %s, error: %s', req.params.id, err);
+                return console.log('subscription not found for id %s, error: %s', request.params.id, err);
             }
         });
     });
-    app.get('api/subscribed', function(req, res) {
+    app.get('/api/subscribed', function(req, res) {
         return SubscriptionModel.find(function(err, subscribed) {
             if (!err) {
                 return res.send(subscribed);
@@ -263,7 +267,7 @@ db.once('open', function callback () {
             }
         });
     });
-    app.get('api/subscribed/:id', function(req, res) {
+    app.get('/api/subscribed/:id', function(req, res) {
         //will need to get auth_token and retrieve UserDocumentModel._id
         return UserDocumentModel.findById(req.params.id, function(err, subscription) {
             if (!err) {
@@ -274,7 +278,7 @@ db.once('open', function callback () {
         });
     });
     //TODO - validate
-    app.put('api/subscribed/:id/episode/:episode/:action/', function(req, res) {
+    app.put('/api/subscribed/:id/episode/:episode/:action/', function(req, res) {
         return SubscriptionModel.findById(req.params.id, req.params.episode, req.params.action, function(err, subscription) {
             if (!err) {
                 return res.send(subscription);
@@ -283,7 +287,7 @@ db.once('open', function callback () {
             }
         });
     });
-    app.put('api/subscribe/:id', function(req) {
+    app.put('/api/subscribe/:id', function(req) {
         // get subscription from subscriptions collection
         var subscription = function() {
             return SubscriptionModel.findById(req.params.id, function(err, subscription) {

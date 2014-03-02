@@ -5,7 +5,7 @@
   </section>
 
   <section class="middle tab-bar-section">
-    <h1 class="title">Swabcast</h1>
+    <h1 class="title">cast</h1>
   </section>
 
   <section class="right-small">

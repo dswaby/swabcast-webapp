@@ -9,8 +9,6 @@ module.exports = function (grunt) {
     };
     grunt.initConfig({
         swabstack: swabstackConfig,
-
-
         compass: {
             dist: {
                 options: {
@@ -20,9 +18,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         watch: {
-
             compass: {
                 files: ['<%= swabstack.app %>/scss/{,*/}*.{scss,sass}'],
                 tasks: ['compass']
@@ -47,8 +43,6 @@ module.exports = function (grunt) {
             }
         },
 
-
-
         // express app
         express: {
             options: {
@@ -71,7 +65,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-
+        // connect server
         connect: {
             testserver: {
                 options: {
@@ -80,6 +74,7 @@ module.exports = function (grunt) {
                 }
             }
         },
+        // coffeescript
         coffee: {
             glob_to_multiple: {
                 expand: true,
@@ -91,6 +86,7 @@ module.exports = function (grunt) {
                 ext: '.js'
             }
         },
+        //copy templates
         copy: {
             templates: {
                 files: [{
@@ -112,6 +108,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
 grunt.registerTask('default', [
+    'copy', // when starting, copy any templates that may have been added
+    'coffee', //compile any coffescript files that may have changed
     'connect:testserver',
     'express:dev',
     'watch'

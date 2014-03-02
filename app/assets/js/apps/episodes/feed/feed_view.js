@@ -1,5 +1,5 @@
 (function() {
-  define(["app", "tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/episodes/feed/templates/feed_view.tpl", "tpl!apps/episodes/feed/templates/library_view.tpl", "tpl!apps/episodes/feed/templates/tracklist.tpl"], function(Swabcast, feedLayoutTpl, feedViewTpl, libraryViewTpl, tracklistTpl) {
+  define(["app", "tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/episodes/feed/templates/feed_view.tpl", "tpl!apps/episodes/feed/templates/library_view.tpl", "tpl!apps/episodes/feed/templates/tracklist.tpl", "tpl!common/templates/modal_dialog.tpl"], function(Swabcast, feedLayoutTpl, feedViewTpl, libraryViewTpl, tracklistTpl, modalDialogTpl) {
     Swabcast.module("EpisodesApp.Feed.View", function(View, Swabcast, Backbone, Marionette, $, _) {
       View.Layout = Marionette.Layout.extend({
         template: feedLayoutTpl,

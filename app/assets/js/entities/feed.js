@@ -1390,6 +1390,32 @@
           }), 500);
           return defer.promise();
         },
+        getEpisodeEntity: function(episodeIdentifier) {
+          var defer, episodeString, feed;
+          episodeString = episodeIdentifier.split("-", 2);
+          feed = new Entities.Feed({
+            id: episodeString[0]
+          });
+          defer = $.Deferred();
+          setTimeout((function() {
+            return feed.fetch({
+              success: function(data) {
+                var episode;
+                feed = defer.resolve(data);
+                for (episode in episodes) {
+                  if (episode.id === episodeString[1]) {
+                    return episode;
+                  }
+                  return null;
+                }
+              },
+              error: function() {
+                return defer.resolve(undefined);
+              }
+            });
+          }), 500);
+          return defer.promise();
+        },
         getFeedEntities: function() {
           var defer, promise;
           feeds = new Entities.Feeds();

@@ -1368,6 +1368,25 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         ), 500
         defer.promise()
 
+      # episodeIdentifier consists of feedId + "-" followed by 7 digit numeric episodeId
+      getEpisodeEntity: (episodeIdentifier) ->
+        episodeString = episodeIdentifier.split("-",2)
+        feed = new Entities.Feed(id: episodeString[0])
+        defer = $.Deferred()
+        setTimeout (->
+          feed.fetch
+            success: (data) ->
+              feed = defer.resolve data
+              for episode of episodes
+                return episode if episode.id is episodeString[1]
+                return null
+
+            error: ->
+              defer.resolve `undefined`
+
+        ), 500
+        defer.promise()
+
       getFeedEntities: ->
         feeds = new Entities.Feeds()
         defer = $.Deferred()

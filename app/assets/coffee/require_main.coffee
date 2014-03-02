@@ -26,7 +26,7 @@ requirejs.config
       deps: ["backbone"]
       exports: "Marionette"
 
-    "jquery-ui": ["jquery"]
+    # "jquery-ui": ["jquery"]
 
     #   'spin.jquery':['jquery'],
     #   spin: ['spin.jquery'],

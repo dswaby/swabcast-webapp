@@ -1,4 +1,4 @@
-define ["app", "tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/episodes/feed/templates/feed_view.tpl", "tpl!apps/episodes/feed/templates/library_view.tpl", "tpl!apps/episodes/feed/templates/tracklist.tpl"], (Swabcast, feedLayoutTpl, feedViewTpl, libraryViewTpl, tracklistTpl) ->
+define ["app","tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/episodes/feed/templates/feed_view.tpl", "tpl!apps/episodes/feed/templates/library_view.tpl", "tpl!apps/episodes/feed/templates/tracklist.tpl", "tpl!common/templates/modal_dialog.tpl"], (Swabcast, feedLayoutTpl, feedViewTpl, libraryViewTpl, tracklistTpl, modalDialogTpl) ->
   Swabcast.module "EpisodesApp.Feed.View", (View, Swabcast, Backbone, Marionette, $, _) ->
     View.Layout = Marionette.Layout.extend(
       template: feedLayoutTpl
@@ -9,6 +9,7 @@ define ["app", "tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/epi
     View.TrackView = Marionette.ItemView.extend(
       className: "tracklist"
       tagName: "tr"
+      #template: modalDialogTpl
       template: tracklistTpl
       events:
         "click a.js-enqueue": "toggleQueue"

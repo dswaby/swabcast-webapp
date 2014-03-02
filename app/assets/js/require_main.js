@@ -23,7 +23,6 @@
         deps: ["backbone"],
         exports: "Marionette"
       },
-      "jquery-ui": ["jquery"],
       localstorage: ["backbone"]
     }
   });
