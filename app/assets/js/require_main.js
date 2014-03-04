@@ -10,7 +10,8 @@
       marionette: "vendor/backbone.marionette",
       tpl: "vendor/tpl",
       json2: "vendor/json2",
-      jasmine: "../test/lib/jasmine-2.0.0/jasmine.js"
+      jasmine: "../test/lib/jasmine-2.0.0/jasmine",
+      "jasmine-html": "../test/lib/jasmine-2.0.0/jasmine-html"
     },
     shim: {
       underscore: {
@@ -26,7 +27,14 @@
       },
       "jquery-ui": ["jquery"],
       localstorage: ["backbone"],
-      jasmine: "jasmine"
+      jasmine: {
+        deps: "",
+        exports: "jasmine"
+      },
+      "jasmine-html": {
+        deps: ["jasmine"],
+        exports: "jasmine"
+      }
     }
   });
 
