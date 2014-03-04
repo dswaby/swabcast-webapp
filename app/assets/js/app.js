@@ -1,5 +1,5 @@
 (function() {
-  define(["marionette", "apps/config/marionette/regions/dialog"], function(Marionette) {
+  define(["marionette", "apps/config/marionette/regions/dialog", "apps/config/marionette/regions/modal"], function(Marionette) {
     var Swabcast;
     Swabcast = new Marionette.Application();
     Swabcast.debugging = true;
@@ -11,7 +11,8 @@
       navRegion: "#nav-regions",
       dialogRegion: Marionette.Region.Dialog.extend({
         el: "#dialog-region"
-      })
+      }),
+      modal: Marionette.Region.ModalRegion
     });
     Swabcast.navigate = function(route, options) {
       options || (options = {});

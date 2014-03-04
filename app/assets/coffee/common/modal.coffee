@@ -1,6 +1,6 @@
-define ["app", "tpl!common/templates/modal_dialog.tpl"], (Swabcast, modalTemplate) ->
-    Swabcast.module "EpisodesApp.Common.ModalView", (Views, Swabcast, Backbone, Marionette, $, _) ->
-        ModalRegion = Backbone.Marionette.Region.extend(
+define ["app"], (Swabcast) ->
+    Swabcast.module "EpisodesApp.Common.Modal", (Views, Swabcast, Backbone, Marionette, $, _) ->
+        Modal = Backbone.Marionette.Region.extend(
             el: "#foundation-modal"
           constructor: ->
             _.bindAll this
@@ -23,4 +23,4 @@ define ["app", "tpl!common/templates/modal_dialog.tpl"], (Swabcast, modalTemplat
             return
         )
 
-    EpisodesApp.Common.ModalView
+    EpisodesApp.Common.Modal

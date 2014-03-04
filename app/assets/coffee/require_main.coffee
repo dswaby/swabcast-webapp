@@ -9,6 +9,7 @@ requirejs.config
     marionette: "vendor/backbone.marionette"
     tpl: "vendor/tpl"
     json2: "vendor/json2"
+    jasmine: "../test/lib/jasmine-2.0.0/jasmine", "../test/lib/jasmine-2.0.0/jasmine-html"
     # foundation: "vendor/foundation"
     # offcanvas: "vendor/foundation.offcanvas"
     # reveal: "vendor/foundation.reveal"
@@ -26,11 +27,18 @@ requirejs.config
       deps: ["backbone"]
       exports: "Marionette"
 
-    # "jquery-ui": ["jquery"]
+    "jquery-ui": ["jquery"]
 
     #   'spin.jquery':['jquery'],
     #   spin: ['spin.jquery'],
     localstorage: ["backbone"]
+
+    jasmine:
+      exports: "jasmine"
+      "jasmine-html"
+        deps: ["jasmine"]
+        exports: "jasmine"
+
 
     # foundation: ["jquery"]
     #   deps:

@@ -20,17 +20,17 @@ define ["app", "apps/episodes/feed/feed_view", "apps/episodes/show/show_view"], 
 
         view = new ShowView.Episode(model: model)
         view.on "episodes:list", ->
-          view.trigger "dialog:close"
+          view.trigger "view:close"
 
-        require ["apps/config/marionette/regions/dialog"], ->
-          Swabcast.dialogRegion.show view
+        require ["apps/config/marionette/regions/modal"], ->
+          Swabcast.modal.show view
 
       showFeedDetails: (model) ->
         view = new ShowView.Feed(model: model)
         view.on "episodes:list", ->
           view.trigger "dialog:close"
 
-        require ["apps/config/marionette/regions/dialog"], ->
-          Swabcast.dialogRegion.show view
+        require ["apps/config/marionette/regions/modal"], ->
+          Swabcast.modal.show view
 
   Swabcast.EpisodesApp.Feed.Controller

@@ -1,4 +1,4 @@
-define ["marionette", "apps/config/marionette/regions/dialog"], (Marionette) ->
+define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/marionette/regions/modal"], (Marionette) ->
   Swabcast = new Marionette.Application()
   Swabcast.debugging = true
   Swabcast.addRegions
@@ -8,6 +8,7 @@ define ["marionette", "apps/config/marionette/regions/dialog"], (Marionette) ->
     playerRegion: "#player"
     navRegion:"#nav-regions"
     dialogRegion: Marionette.Region.Dialog.extend(el: "#dialog-region")
+    modal: Marionette.Region.ModalRegion
 
 
   #route helpers

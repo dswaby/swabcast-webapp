@@ -30,10 +30,10 @@
             model: model
           });
           view.on("episodes:list", function() {
-            return view.trigger("dialog:close");
+            return view.trigger("view:close");
           });
-          return require(["apps/config/marionette/regions/dialog"], function() {
-            return Swabcast.dialogRegion.show(view);
+          return require(["apps/config/marionette/regions/modal"], function() {
+            return Swabcast.modal.show(view);
           });
         },
         showFeedDetails: function(model) {
@@ -44,8 +44,8 @@
           view.on("episodes:list", function() {
             return view.trigger("dialog:close");
           });
-          return require(["apps/config/marionette/regions/dialog"], function() {
-            return Swabcast.dialogRegion.show(view);
+          return require(["apps/config/marionette/regions/modal"], function() {
+            return Swabcast.modal.show(view);
           });
         }
       };

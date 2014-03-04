@@ -1,8 +1,8 @@
 (function() {
-  define(["app", "tpl!common/templates/modal_dialog.tpl"], function(Swabcast, modalTemplate) {
-    Swabcast.module("EpisodesApp.Common.ModalView", function(Views, Swabcast, Backbone, Marionette, $, _) {
-      var ModalRegion;
-      return ModalRegion = Backbone.Marionette.Region.extend({
+  define(["app"], function(Swabcast) {
+    Swabcast.module("EpisodesApp.Common.Modal", function(Views, Swabcast, Backbone, Marionette, $, _) {
+      var Modal;
+      return Modal = Backbone.Marionette.Region.extend({
         el: "#foundation-modal"
       }, {
         constructor: function() {
@@ -25,7 +25,7 @@
         }
       });
     });
-    return EpisodesApp.Common.ModalView;
+    return EpisodesApp.Common.Modal;
   });
 
 }).call(this);
