@@ -5,7 +5,8 @@ module.exports = function (grunt) {
     'use strict';
     var swabstackConfig = {
         app: 'app',
-        dist: 'dist'
+        dist: 'dist',
+        test: 'app/test'
     };
     grunt.initConfig({
         swabstack: swabstackConfig,
@@ -83,6 +84,15 @@ module.exports = function (grunt) {
                 cwd: '<%= swabstack.app %>/assets/coffee/',
                 src: ['**/*.coffee','*.coffee'],
                 dest: '<%= swabstack.app %>/assets/js/',
+                ext: '.js'
+            },
+            jasmine_tests: {
+                expand: true,
+                flatten: false,
+                bare: true,
+                cwd: '<%= swabstack.app %>/test/',
+                src: ['**/*.coffee','*.coffee'],
+                dest: '<%= swabstack.app %>/test/',
                 ext: '.js'
             }
         },

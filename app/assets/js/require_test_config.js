@@ -1,6 +1,6 @@
 (function() {
   requirejs.config({
-    baseUrl: "assets/js",
+    baseUrl: "../assets/js",
     paths: {
       backbone: "vendor/backbone",
       localstorage: "vendor/backbone.localstorage",
@@ -9,7 +9,10 @@
       underscore: "vendor/underscore",
       marionette: "vendor/backbone.marionette",
       tpl: "vendor/tpl",
-      json2: "vendor/json2"
+      json2: "vendor/json2",
+      jasmine: "../test/lib/jasmine-2.0.0/jasmine",
+      "jasmine-html": "../test/lib/jasmine-2.0.0/jasmine-html",
+      spec: "../test/spec"
     },
     shim: {
       underscore: {
@@ -24,7 +27,15 @@
         exports: "Marionette"
       },
       "jquery-ui": ["jquery"],
-      localstorage: ["backbone"]
+      localstorage: ["backbone"],
+      jasmine: {
+        deps: "",
+        exports: "jasmine"
+      },
+      "jasmine-html": {
+        deps: ["jasmine"],
+        exports: "jasmine"
+      }
     }
   });
 
