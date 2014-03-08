@@ -9,7 +9,8 @@
       underscore: "vendor/underscore",
       marionette: "vendor/backbone.marionette",
       tpl: "vendor/tpl",
-      json2: "vendor/json2"
+      json2: "vendor/json2",
+      f: "vendor/foundation"
     },
     shim: {
       underscore: {
@@ -24,8 +25,19 @@
         exports: "Marionette"
       },
       "jquery-ui": ["jquery"],
-      localstorage: ["backbone"]
-    }
+      localstorage: ["backbone"],
+      "vendor/foundation.offcanvas": {
+        deps: ["jquery"]
+      },
+      "vendor/foundation": {
+        deps: ["jquery"]
+      },
+      "vendor/foundation.reveal": {
+        deps: ["jquery"]
+      }
+    },
+    name: "main",
+    out: "main.min.js"
   });
 
   require(["app"], function(Swabcast) {

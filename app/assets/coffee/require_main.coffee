@@ -9,10 +9,7 @@ requirejs.config
     marionette: "vendor/backbone.marionette"
     tpl: "vendor/tpl"
     json2: "vendor/json2"
-    # foundation: "vendor/foundation"
-    # offcanvas: "vendor/foundation.offcanvas"
-    # reveal: "vendor/foundation.reveal"
-
+    f: "vendor/foundation"
 
   #syphon: 'vendor/backbone.syphon',
   shim:
@@ -33,14 +30,21 @@ requirejs.config
     #   spin: ['spin.jquery'],
     localstorage: ["backbone"]
 
+    "vendor/foundation.offcanvas":
+      deps: ["jquery"]
 
-    # foundation: ["jquery"]
-    #   deps:
-    #   exports: "fn"
+    "vendor/foundation":
+      deps: ["jquery"]
+
+    "vendor/foundation.reveal":
+      deps: ["jquery"]
 
     # "reveal": ["foundation"]
 
     # "offcanvas": ["foundation"]
+
+  name: "main",
+  out: "main.min.js"
 
 
 #syphon:['backbone']
