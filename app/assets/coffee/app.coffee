@@ -1,4 +1,5 @@
 define ["marionette"], (Marionette) ->
+
   Swabcast = new Marionette.Application()
   Swabcast.debugging = true
   Swabcast.addRegions

@@ -11,7 +11,7 @@
               var self;
               self = this;
               if (playerData) {
-                self.logPlayerData();
+
               } else {
 
               }

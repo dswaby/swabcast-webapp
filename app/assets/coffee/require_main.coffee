@@ -9,7 +9,7 @@ requirejs.config
     marionette: "vendor/backbone.marionette"
     tpl: "vendor/tpl"
     json2: "vendor/json2"
-    f: "vendor/foundation"
+    foundation: "vendor/foundation"
 
   #syphon: 'vendor/backbone.syphon',
   shim:
@@ -24,6 +24,10 @@ requirejs.config
       deps: ["backbone"]
       exports: "Marionette"
 
+    foundation:
+      deps: ["jquery"]
+      exports: "Foundation"
+
     "jquery-ui": ["jquery"]
 
     #   'spin.jquery':['jquery'],
@@ -31,13 +35,10 @@ requirejs.config
     localstorage: ["backbone"]
 
     "vendor/foundation.offcanvas":
-      deps: ["jquery"]
-
-    "vendor/foundation":
-      deps: ["jquery"]
+      deps: ["jquery", "foundation"]
 
     "vendor/foundation.reveal":
-      deps: ["jquery"]
+      deps: ["jquery", "foundation"]
 
     # "reveal": ["foundation"]
 
@@ -46,7 +47,23 @@ requirejs.config
   name: "main",
   out: "main.min.js"
 
-
 #syphon:['backbone']
 require ["app"], (Swabcast) ->
   Swabcast.start()
+
+requirejs [
+  "jquery"
+  "foundation"
+  "vendor/foundation.offcanvas"
+  "vendor/foundation.reveal"
+], ($) ->
+
+  (($, window, undefined_) ->
+    $doc = $(document)
+    Modernizr = window.Modernizr
+    $(document).foundation()
+
+  ) $, window
+  return
+
+

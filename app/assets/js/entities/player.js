@@ -1,5 +1,5 @@
 (function() {
-  define(["app", "apps/config/storage/localstorage"], function(Swabcast) {
+  define(["app", "apps/config/storage/localstorage", "entities/feed"], function(Swabcast) {
     Swabcast.module("Entities", function(Entities, Swabcast, Backbone, Marionette, $, _) {
       var API, initializePlayerSyncData;
       API = void 0;
@@ -11,7 +11,7 @@
       initializePlayerSyncData = function() {
         var syncData;
         syncData = void 0;
-        syncData = new Entities.Episode({
+        syncData = new Swabcast.Entities.Episode({
           title: "",
           mediaUrl: "",
           albumArt: "",
@@ -25,7 +25,7 @@
           defer = void 0;
           playerSaveData = void 0;
           promise = void 0;
-          playerSaveData = new Entities.Episode({
+          playerSaveData = new Swabcast.Entities.Episode({
             id: 0
           });
           defer = $.Deferred();
@@ -45,7 +45,7 @@
         playerReset: function() {
           var playerSaveData;
           playerSaveData = void 0;
-          playerSaveData = new Entities.Episode({
+          playerSaveData = new Swabcast.Entities.Episode({
             id: 0
           });
           return console.log("playerdata:reset triggered");

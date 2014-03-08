@@ -10,7 +10,7 @@
       marionette: "vendor/backbone.marionette",
       tpl: "vendor/tpl",
       json2: "vendor/json2",
-      f: "vendor/foundation"
+      foundation: "vendor/foundation"
     },
     shim: {
       underscore: {
@@ -24,16 +24,17 @@
         deps: ["backbone"],
         exports: "Marionette"
       },
+      foundation: {
+        deps: ["jquery"],
+        exports: "Foundation"
+      },
       "jquery-ui": ["jquery"],
       localstorage: ["backbone"],
       "vendor/foundation.offcanvas": {
-        deps: ["jquery"]
-      },
-      "vendor/foundation": {
-        deps: ["jquery"]
+        deps: ["jquery", "foundation"]
       },
       "vendor/foundation.reveal": {
-        deps: ["jquery"]
+        deps: ["jquery", "foundation"]
       }
     },
     name: "main",
@@ -42,6 +43,15 @@
 
   require(["app"], function(Swabcast) {
     return Swabcast.start();
+  });
+
+  requirejs(["jquery", "foundation", "vendor/foundation.offcanvas", "vendor/foundation.reveal"], function($) {
+    (function($, window, undefined_) {
+      var $doc, Modernizr;
+      $doc = $(document);
+      Modernizr = window.Modernizr;
+      return $(document).foundation();
+    })($, window);
   });
 
 }).call(this);

@@ -8,7 +8,6 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
         $.when(fetchPlayerData).done (playerData) ->
           self = this
           if playerData
-            self.logPlayerData()
           else
 
           @initializePlayer = ->
