@@ -43,4 +43,22 @@
     return Swabcast.start();
   });
 
+  require(["app", "jasmine-html"], function($, jasmine) {
+    var htmlReporter, jasmineEnv, specs;
+    jasmineEnv = jasmine.getEnv();
+    jasmineEnv.updateInterval = 1000;
+    htmlReporter = new jasmine.HtmlReporter();
+    jasmineEnv.addReporter(htmlReporter);
+    jasmineEnv.specFilter = function(spec) {
+      return htmlReporter.specFilter(spec);
+    };
+    specs = [];
+    specs.push("lib/jasmine/spec/notepadSpec");
+    $(function() {
+      require(specs, function(spec) {
+        jasmineEnv.execute();
+      });
+    });
+  });
+
 }).call(this);

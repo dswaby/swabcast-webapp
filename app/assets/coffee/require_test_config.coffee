@@ -55,3 +55,25 @@ requirejs.config
 #syphon:['backbone']
 require ["app"], (Swabcast) ->
   Swabcast.start()
+
+require [
+  "app"
+  "jasmine-html"
+], ($, jasmine) ->
+  jasmineEnv = jasmine.getEnv()
+  jasmineEnv.updateInterval = 1000
+  htmlReporter = new jasmine.HtmlReporter()
+  jasmineEnv.addReporter htmlReporter
+  jasmineEnv.specFilter = (spec) ->
+    htmlReporter.specFilter spec
+
+  specs = []
+  specs.push "lib/jasmine/spec/notepadSpec"
+  $ ->
+    require specs, (spec) ->
+      jasmineEnv.execute()
+      return
+
+    return
+
+  return

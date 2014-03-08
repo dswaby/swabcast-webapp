@@ -1,17 +1,17 @@
 (function() {
-  require(["entities/feed"], function() {});
-
-  describe("Episode", function() {
-    var episode, feed;
-    episode = void 0;
-    feed = void 0;
-    beforeEach(function() {
-      episode = new Swabcast.Entities.Episode();
-      feed = new Swabcast.Entities.Feed();
-    });
-    return it("should be defined", function() {
-      expect(episode.get("enqueue")).toEqual(false);
-      expect(episode.get("albumArt")).toEqual("default.jpg");
+  require(["entities/feed"], function() {
+    return describe("Episode", function() {
+      var episode, feed;
+      episode = void 0;
+      feed = void 0;
+      beforeEach(function() {
+        episode = new Swabcast.Entities.Episode();
+        feed = new Swabcast.Entities.Feed();
+      });
+      return it("should be defined", function() {
+        expect(episode.get("enqueue")).toEqual(false);
+        expect(episode.get("albumArt")).toEqual("default.jpg");
+      });
     });
   });
 

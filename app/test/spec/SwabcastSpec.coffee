@@ -1,17 +1,15 @@
 require ["entities/feed"], ->
-
-describe "Episode", ->
-  episode = undefined
-  feed = undefined
-  beforeEach ->
-    episode = new Swabcast.Entities.Episode()
-    feed = new Swabcast.Entities.Feed()
-    return
-  it "should be defined", ->
-    expect(episode.get("enqueue")).toEqual(false)
-    expect(episode.get("albumArt")).toEqual("default.jpg")
-    return
-
+  describe "Episode", ->
+    episode = undefined
+    feed = undefined
+    beforeEach ->
+      episode = new Swabcast.Entities.Episode()
+      feed = new Swabcast.Entities.Feed()
+      return
+    it "should be defined", ->
+      expect(episode.get("enqueue")).toEqual(false)
+      expect(episode.get("albumArt")).toEqual("default.jpg")
+      return
 
 describe "Player", ->
   player = undefined
