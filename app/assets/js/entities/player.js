@@ -2,13 +2,16 @@
   define(["app", "apps/config/storage/localstorage"], function(Swabcast) {
     Swabcast.module("Entities", function(Entities, Swabcast, Backbone, Marionette, $, _) {
       var API, initializePlayerSyncData;
+      API = void 0;
+      initializePlayerSyncData = void 0;
       Entities.Player = Backbone.Model.extend({
         urlRoot: "player"
       });
       Entities.configureStorage(Entities.Player);
       initializePlayerSyncData = function() {
         var syncData;
-        syncData = new Entities.Player({
+        syncData = void 0;
+        syncData = new Entities.Episode({
           title: "",
           mediaUrl: "",
           albumArt: "",
@@ -19,7 +22,10 @@
       API = {
         getPlayer: function() {
           var defer, playerSaveData, promise;
-          playerSaveData = new Entities.Player({
+          defer = void 0;
+          playerSaveData = void 0;
+          promise = void 0;
+          playerSaveData = new Entities.Episode({
             id: 0
           });
           defer = $.Deferred();
@@ -38,7 +44,8 @@
         },
         playerReset: function() {
           var playerSaveData;
-          playerSaveData = new Entities.Player({
+          playerSaveData = void 0;
+          playerSaveData = new Entities.Episode({
             id: 0
           });
           return console.log("playerdata:reset triggered");

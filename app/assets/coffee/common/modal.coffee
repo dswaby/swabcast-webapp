@@ -1,26 +1,48 @@
-define ["app"], (Swabcast) ->
-    Swabcast.module "EpisodesApp.Common.Modal", (Views, Swabcast, Backbone, Marionette, $, _) ->
-        Modal = Backbone.Marionette.Region.extend(
-            el: "#foundation-modal"
-          constructor: ->
+define ["marionette"], (Marionette) ->
+    Marionette.Region.ModalRegion = Marionette.Region.extend(
+        constructor: ->
             _.bindAll this
             Backbone.Marionette.Region::constructor.apply this, arguments_
             @on "view:show", @showModal, this
             return
 
-          getEl: (selector) ->
+        getEl: (selector) ->
             $el = $(selector)
             $el.on "hidden", @close
             $el
 
-          showModal: (view) ->
+        setUiBindings: (view) ->
+            $(document).on "open", "[data-reveal]", ->
+              modal = $(this)
+              return
+
+            $(document).on "opened", "[data-reveal]", ->
+              modal = $(this)
+              return
+
+            $(document).on "close", "[data-reveal]", ->
+              modal = $(this)
+
+              return
+
+            $(document).on "closed", "[data-reveal]", ->
+              modal = $(this)
+              return
+
+        showModal: (view) ->
+            console.log("showModal triggered in ModalRegion, Fuck Yeah!!")
+
             view.on "close", @hideModal, this
             @$el.modal "show"
             return
 
-          hideModal: ->
+        hideModal: ->
             @$el.modal "hide"
             return
-        )
 
-    EpisodesApp.Common.Modal
+
+        close: ->
+            @$el.foundation "reveal", "close"
+            return
+    )
+    Marionette.Region.ModalRegion

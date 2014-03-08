@@ -17,7 +17,7 @@
           return this.trigger("episode:edit", this.model);
         },
         showList: function(e) {
-          console.log("clicked");
+          console.log("show episode list triggered, event:", e);
           e.stopPropagation();
           return this.trigger("episodes:list");
         },
@@ -37,8 +37,9 @@
           "click button.js-show-list": "showList"
         },
         showList: function(e) {
+          console.log("show feed list triggered, event:", e);
           e.stopPropagation();
-          return this.trigger("episodes:list");
+          return this.trigger("view:show");
         }
       });
     });

@@ -2,23 +2,22 @@
   define(["app", "apps/config/storage/localstorage"], function(Swabcast) {
     Swabcast.module("Entities", function(Entities, Swabcast, Backbone, Marionette, $, _) {
       var API, feeds, initializeFeeds;
-      Entities.Track = Backbone.Model.extend({
+      Entities.Episode = Backbone.Model.extend({
         urlRoot: "track",
         defaults: {
           albumArt: "podcast-default.png",
           episodeTitle: "",
-          episodeParent: "",
           mediaUrl: "",
           enqueue: false
         }
       });
-      Entities.configureStorage(Entities.Track);
-      Entities.Tracks = Backbone.Collection.extend({
-        url: "track",
-        model: Entities.Track,
+      Entities.configureStorage(Entities.Episode);
+      Entities.Episodes = Backbone.Collection.extend({
+        url: "episode",
+        model: Entities.Episode,
         comparator: "episodeTitle"
       });
-      Entities.configureStorage(Entities.Tracks);
+      Entities.configureStorage(Entities.Episodes);
       Entities.Feed = Backbone.Model.extend({
         urlRoot: "feeds",
         defaults: {
@@ -1392,6 +1391,7 @@
         },
         getEpisodeEntity: function(episodeIdentifier) {
           var defer, episodeString, feed;
+          console.log("penis");
           episodeString = episodeIdentifier.split("-", 2);
           feed = new Entities.Feed({
             id: episodeString[0]
@@ -1434,13 +1434,20 @@
             }
           });
           return promise;
-        }
+        },
+        getPlaylistDisplayData: function() {}
       };
+      Swabcast.reqres.setHandler("episode:entity", function(episodeId) {
+        return API.getEpisodeEntity(episodeId);
+      });
       Swabcast.reqres.setHandler("entities:library", function() {
         return API.getFeedEntities();
       });
-      return Swabcast.reqres.setHandler("feed:entity", function(id) {
+      Swabcast.reqres.setHandler("feed:entity", function(id) {
         return API.getFeedEntity(id);
+      });
+      return Swabcast.reqres.setHandler("titles:episode:entity", function(playlistIdentifiers) {
+        return API.getPlaylistDisplayData(playlistIdentifiers);
       });
     });
   });

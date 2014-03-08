@@ -16,9 +16,11 @@
 
               }
               this.initializePlayer = function() {
-                playerData = playerData || self.viewData();
-                self.audioPlayer.createAudio();
-                return self.updateAudio();
+                if (!playerData) {
+                  playerData = self.defaultPlayerData();
+                  self.audioPlayer.createAudio();
+                  return self.updateAudio();
+                }
               };
               this.updateAudio = function(sourceUrl) {
                 sourceUrl = sourceUrl || playerData.get("mediaUrl");
@@ -37,7 +39,7 @@
               };
               this.newPlayerData = function(newModelData) {
                 var newPlayerData;
-                newPlayerData = new Swabcast.Entities.Player({
+                newPlayerData = new Swabcast.Entities.Episode({
                   albumArt: newModelData.get("albumArt"),
                   mediaUrl: newModelData.get("mediaUrl"),
                   title: newModelData.get("episodeTitle"),
@@ -51,28 +53,13 @@
               };
               this.defaultPlayerData = function() {
                 var defaultData;
-                defaultData = new Swabcast.Entities.Player({
+                defaultData = new Swabcast.Entities.Episode({
                   albumArt: "default.jpg",
                   mediaUrl: "./assets/mp3/abranmepaso.mp3",
                   title: "defaultData",
                   currentPosition: 0
                 });
                 return defaultData;
-              };
-              this.viewData = function() {
-                var newplayerdata, nextinq;
-                nextinq = Swabcast.request("playlist:first");
-                $.when(nextinq).done(function(track) {});
-                if (nextinq) {
-                  newplayerdata = new Swabcast.Entities.Player({
-                    albumArt: nextinq.get("albumArt"),
-                    mediaUrl: nextinq.get("mediaUrl"),
-                    title: nextinq.get("episodeTitle"),
-                    currentPosition: 0
-                  });
-                  return newplayerdata;
-                }
-                return self.defaultPlayerData();
               };
               this.audioPlayer = {
                 createAudio: function() {

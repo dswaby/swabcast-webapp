@@ -12,9 +12,12 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
           else
 
           @initializePlayer = ->
-            playerData = playerData or self.viewData() #if save data doesnt exist, set to next in playlist
-            self.audioPlayer.createAudio() #create audio
-            self.updateAudio()
+            if not playerData
+              # playerData = self.viewData()
+              playerData = self.defaultPlayerData()
+
+              self.audioPlayer.createAudio() #create audio
+              self.updateAudio()
 
           @updateAudio = (sourceUrl) ->
             sourceUrl = sourceUrl or playerData.get("mediaUrl")
@@ -31,7 +34,7 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
             self.audioPlayer.clearAudio()
 
           @newPlayerData = (newModelData) ->
-            newPlayerData = new Swabcast.Entities.Player(
+            newPlayerData = new Swabcast.Entities.Episode(
               albumArt: newModelData.get("albumArt")
               mediaUrl: newModelData.get("mediaUrl")
               title: newModelData.get("episodeTitle")
@@ -44,28 +47,13 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
             self.audioPlayer.play()
 
           @defaultPlayerData = ->
-            defaultData = new Swabcast.Entities.Player(
+            defaultData = new Swabcast.Entities.Episode(
               albumArt: "default.jpg"
               mediaUrl: "./assets/mp3/abranmepaso.mp3"
               title: "defaultData"
               currentPosition: 0
             )
             defaultData
-
-          @viewData = ->
-            nextinq = Swabcast.request("playlist:first")
-            $.when(nextinq).done (track) ->
-
-            if nextinq
-              newplayerdata = new Swabcast.Entities.Player(
-                albumArt: nextinq.get("albumArt")
-                mediaUrl: nextinq.get("mediaUrl")
-                title: nextinq.get("episodeTitle")
-                currentPosition: 0
-              )
-              return newplayerdata
-            self.defaultPlayerData()
-
 
           #audioplayer object
           @audioPlayer =

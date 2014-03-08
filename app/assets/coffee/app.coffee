@@ -1,4 +1,4 @@
-define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/marionette/regions/modal"], (Marionette) ->
+define ["marionette"], (Marionette) ->
   Swabcast = new Marionette.Application()
   Swabcast.debugging = true
   Swabcast.addRegions
@@ -7,8 +7,10 @@ define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/mari
     libraryRegion: "#library-region"
     playerRegion: "#player"
     navRegion:"#nav-regions"
-    dialogRegion: Marionette.Region.Dialog.extend(el: "#dialog-region")
-    modal: Marionette.Region.ModalRegion
+    require ["apps/config/marionette/regions/dialog"], ->
+      dialogRegion: Marionette.Region.Dialog.extend(el: "#dialog-region")
+    require ["apps/config/marionette/regions/modal"], ->
+      modalRegion: Marionette.Region.ModalRegion.extend(el: "#modal-region")
 
 
   #route helpers
@@ -32,9 +34,9 @@ define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/mari
         if Swabcast.getCurrentRoute() is "playlist"
           console.log("playlist triggered")
           Swabcast.trigger("playlist:mainview")
-        if Swabcast.getCurrentRoute() is "subscriptions"
-          require ["apps/subscriptions/subscriptions_app"], ->
-            console.log("subscriptions triggered")
-            Swabcast.trigger("subscriptions:all")
+        # if Swabcast.getCurrentRoute() is "subscriptions"
+        #   require ["apps/subscriptions/subscriptions_app"], ->
+        #     console.log("subscriptions triggered")
+        #     Swabcast.trigger("subscriptions:all")
 
   Swabcast

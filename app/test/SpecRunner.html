@@ -11,15 +11,18 @@
   <script type="text/javascript" src="lib/jasmine-2.0.0/jasmine-html.js"></script>
   <script type="text/javascript" src="lib/jasmine-2.0.0/boot.js"></script>
 
-  <!-- include source files here... -->
-  // <script type="text/javascript" src="src/Player.js"></script>
-  // <script type="text/javascript" src="src/Song.js"></script>
+  <script type="text/javascript" src="spec/SpecHelper.js"></script>
+  <script type="text/javascript" src="spec/PlayerSpec.js"></script>
 
-  <!-- include spec files here... -->
+
+  <script type="text/javascript" src="src/Player.js"></script>
+  <script type="text/javascript" src="src/Song.js"></script>
+
+
 
   <script data-main="../assets/js/require_test_config.js" src="../assets/js/vendor/require.js"></script>
   <script>
-      require({ paths: { spec: "../../test/spec" } }, [
+      require({ paths: { spec: "./../../test/spec" } }, [
               // Pull in all your modules containing unit tests here.
               "spec/SwabcastSpec"
           ], function () {
@@ -28,6 +31,35 @@
               jasmineEnv.addReporter(new jasmine.HtmlReporter());
               jasmineEnv.execute();
           });
+  </script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
   </script>
 
 </head>

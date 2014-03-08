@@ -1,21 +1,20 @@
 define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
-    Entities.Track = Backbone.Model.extend(
+    Entities.Episode = Backbone.Model.extend(
       urlRoot: "track"
       defaults:
         albumArt: "podcast-default.png"
         episodeTitle: ""
-        episodeParent: ""
         mediaUrl: ""
         enqueue: false
     )
-    Entities.configureStorage Entities.Track
-    Entities.Tracks = Backbone.Collection.extend(
-      url: "track"
-      model: Entities.Track
+    Entities.configureStorage Entities.Episode
+    Entities.Episodes = Backbone.Collection.extend(
+      url: "episode"
+      model: Entities.Episode
       comparator: "episodeTitle"
     )
-    Entities.configureStorage Entities.Tracks
+    Entities.configureStorage Entities.Episodes
     Entities.Feed = Backbone.Model.extend(
       urlRoot: "feeds"
       defaults:
@@ -1346,7 +1345,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
       ])
       feeds.forEach (feed) ->
 
-        #feed.tracks = Swabcast.Utils.Helpers.nestCollection(feed, 'tracks', new Entities.Track(feed.get('tracks')));
+        #feed.tracks = Swabcast.Utils.Helpers.nestCollection(feed, 'tracks', new Entities.Episode(feed.get('tracks')));
 
         #feed.tracks.parent = this;
         feed.save()
@@ -1370,6 +1369,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
 
       # episodeIdentifier consists of feedId + "-" followed by 7 digit numeric episodeId
       getEpisodeEntity: (episodeIdentifier) ->
+        console.log("penis")
         episodeString = episodeIdentifier.split("-",2)
         feed = new Entities.Feed(id: episodeString[0])
         defer = $.Deferred()
@@ -1401,12 +1401,23 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
 
         promise
 
+      getPlaylistDisplayData: ->
+
+
+    Swabcast.reqres.setHandler "episode:entity", (episodeId) ->
+      API.getEpisodeEntity episodeId
+
     Swabcast.reqres.setHandler "entities:library", ->
       API.getFeedEntities()
 
     Swabcast.reqres.setHandler "feed:entity", (id) ->
       API.getFeedEntity id
 
+    # for playlist entity, returns multidimensional array
+    # consisting of unique episode identifier
+    # and Episode Title
+    Swabcast.reqres.setHandler "titles:episode:entity", (playlistIdentifiers) ->
+      API.getPlaylistDisplayData playlistIdentifiers
 
   #end of module
   return

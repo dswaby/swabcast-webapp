@@ -1,7 +1,7 @@
 swabcast
 ========
 ![Dont be a hater](https://github.com/dswaby/swabcast/blob/master/lolcommits/donthate.png?raw=true)
-this repo is for the front end of a my project which is a podcast management site for finding, listening to, syncing and managing podcast feeds
+this repo is for a podcast management site for finding, listening to, syncing and managing podcast feeds
 
 current preview can be found @ [http://swa.by/staging/](http://swa.by/staging/)
 

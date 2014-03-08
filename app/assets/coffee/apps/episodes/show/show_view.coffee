@@ -14,7 +14,7 @@ define ["app", "tpl!apps/episodes/show/templates/episode_detailed_view.tpl", "tp
         @trigger "episode:edit", @model
 
       showList: (e) ->
-        console.log "clicked"
+        console.log("show episode list triggered, event:", e)
         e.stopPropagation()
         @trigger "episodes:list"
 
@@ -32,8 +32,9 @@ define ["app", "tpl!apps/episodes/show/templates/episode_detailed_view.tpl", "tp
         "click button.js-show-list": "showList"
 
       showList: (e) ->
+        console.log("show feed list triggered, event:", e)
         e.stopPropagation()
-        @trigger "episodes:list"
+        @trigger "view:show"
     )
 
   Swabcast.EpisodesApp.Show.View

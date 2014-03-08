@@ -21,6 +21,7 @@
         },
         showEpisodeDetails: function(model) {
           var view;
+          console.log("show episode details triggered, model: ", model);
           model.set({
             episodeParent: model.parent.get("subscriptionTitle"),
             albumArt: model.parent.get("albumArt"),
@@ -33,11 +34,12 @@
             return view.trigger("view:close");
           });
           return require(["apps/config/marionette/regions/modal"], function() {
-            return Swabcast.modal.show(view);
+            return Swabcast.modalRegion.show(view);
           });
         },
         showFeedDetails: function(model) {
           var view;
+          console.log("show feed details triggered, model: ", model);
           view = new ShowView.Feed({
             model: model
           });
@@ -45,7 +47,7 @@
             return view.trigger("dialog:close");
           });
           return require(["apps/config/marionette/regions/modal"], function() {
-            return Swabcast.modal.show(view);
+            return Swabcast.modalRegion.show(view);
           });
         }
       };

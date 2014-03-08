@@ -13,6 +13,7 @@ define ["app", "apps/episodes/feed/feed_view", "apps/episodes/show/show_view"], 
           Swabcast.libraryRegion.show feedLayout
 
       showEpisodeDetails: (model) ->
+        console.log("show episode details triggered, model: ", model)
         model.set
           episodeParent: model.parent.get("subscriptionTitle")
           albumArt: model.parent.get("albumArt")
@@ -23,14 +24,15 @@ define ["app", "apps/episodes/feed/feed_view", "apps/episodes/show/show_view"], 
           view.trigger "view:close"
 
         require ["apps/config/marionette/regions/modal"], ->
-          Swabcast.modal.show view
+          Swabcast.modalRegion.show view
 
       showFeedDetails: (model) ->
+        console.log("show feed details triggered, model: ", model)
         view = new ShowView.Feed(model: model)
         view.on "episodes:list", ->
           view.trigger "dialog:close"
 
         require ["apps/config/marionette/regions/modal"], ->
-          Swabcast.modal.show view
+          Swabcast.modalRegion.show view
 
   Swabcast.EpisodesApp.Feed.Controller

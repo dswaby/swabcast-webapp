@@ -25,7 +25,7 @@ module.exports = function (grunt) {
                 tasks: ['compass']
             },
             coffee: {
-                files: ['<%= swabstack.app %>/assets/coffee/{,*/}*.coffee'],
+                files: ['<%= swabstack.app %>/assets/coffee/{,**/}*.coffee'],
                 tasks: ['coffee']
             },
 
@@ -91,7 +91,7 @@ module.exports = function (grunt) {
                 flatten: false,
                 bare: true,
                 cwd: '<%= swabstack.app %>/test/',
-                src: ['**/*.coffee','*.coffee'],
+                src: ['spec/SwabcastSpec.coffee', 'SpecRunner.coffee'],
                 dest: '<%= swabstack.app %>/test/',
                 ext: '.js'
             }
@@ -106,8 +106,15 @@ module.exports = function (grunt) {
                     dest: '<%= swabstack.app %>/assets/js/'
                 }]
             }
+        },
+        docco: {
+          debug: {
+            src: ['<%= swabstack.app %>/assets/js'],
+            options: {
+              output: 'docs/'
+            }
+          }
         }
-
     });
 
     grunt.loadNpmTasks('grunt-contrib-compass');
@@ -116,6 +123,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-docco');
 
 grunt.registerTask('default', [
     'copy', // when starting, copy any templates that may have been added

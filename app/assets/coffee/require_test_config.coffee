@@ -1,5 +1,5 @@
 requirejs.config
-  baseUrl: "assets/js"
+  baseUrl: "../assets/js"
   paths:
     backbone: "vendor/backbone"
     localstorage: "vendor/backbone.localstorage"
@@ -12,7 +12,9 @@ requirejs.config
     # foundation: "vendor/foundation"
     # offcanvas: "vendor/foundation.offcanvas"
     # reveal: "vendor/foundation.reveal"
-
+    jasmine: "../test/lib/jasmine-2.0.0/jasmine",
+    "jasmine-html": "../test/lib/jasmine-2.0.0/jasmine-html",
+    spec: "../test/spec"
 
   #syphon: 'vendor/backbone.syphon',
   shim:
@@ -33,6 +35,13 @@ requirejs.config
     #   spin: ['spin.jquery'],
     localstorage: ["backbone"]
 
+    jasmine:
+      deps: ""
+      exports: "jasmine"
+
+    "jasmine-html":
+      deps: ["jasmine"]
+      exports: "jasmine"
 
     # foundation: ["jquery"]
     #   deps:

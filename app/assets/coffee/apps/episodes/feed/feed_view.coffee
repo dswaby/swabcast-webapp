@@ -46,7 +46,7 @@ define ["app","tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/epis
 
       initialize: ->
         parent = @model
-        trackList = new Swabcast.Entities.Tracks(@model.get("tracks"))
+        trackList = new Swabcast.Entities.Episodes(@model.get("episodes"))
         @collection = trackList
         @collection.each (track) ->
           track.parent = parent

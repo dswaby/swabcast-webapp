@@ -52,7 +52,7 @@
         initialize: function() {
           var parent, trackList;
           parent = this.model;
-          trackList = new Swabcast.Entities.Tracks(this.model.get("tracks"));
+          trackList = new Swabcast.Entities.Episodes(this.model.get("episodes"));
           this.collection = trackList;
           return this.collection.each(function(track) {
             return track.parent = parent;

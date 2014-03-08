@@ -3,7 +3,7 @@
     Swabcast.module("Entities", function(Entities, Swabcast, Backbone, Marionette, $, _) {
       var API, initializePlaylist, playlist;
       Entities.Playlist = Backbone.Model.extend({
-        urlRoot: "api/playlist",
+        url: "api/playlist",
         defaults: {
           name: "default",
           episodes: []
@@ -16,9 +16,9 @@
               epId = _ref[_i];
               epInfo = epId.split("-", 2);
               if (epId[0].length > 32) {
-                return "Error with subscription Id for playlist item" + (epId + 1) + " in playlist";
+                return "Error with subscription Id for playlist item";
               }
-              if (epId[0].length > 32) {
+              if (epId[1].length > 32) {
                 return "Playlist Error";
               }
             }
@@ -84,23 +84,29 @@
           return promise;
         },
         firstInPlaylist: function() {
-          var defer, promise, queuedTracks;
+          var defer, queuedTracks;
           queuedTracks = new Entities.Playlist();
           defer = $.Deferred();
-          queuedTracks.fetch({
-            success: function(data) {
-              return defer.resolve(data);
+          queuedTracks.fetch;
+          ({
+            success: function(playlist) {
+              var episodes;
+              episodes = playlist.get("episodes");
+              if (episodes.length) {
+                return defer.resolve(episodes[0]);
+              } else {
+                return defer.resolve('undefined');
+              }
+            },
+            error: function() {
+              return defer.resolve(undefined);
             }
           });
-          promise = defer.promise();
-          $.when(promise).done(function(playlist) {
-            return promise = Entities.Feed.getEpisodeEntity(queuedtracks[0]);
-          });
-          return promise;
+          return defer.promise();
         },
         updatePlaylistOrder: function() {
           var highestOrder, queuedtracks;
-          queuedtracks = getPlaylistEntities();
+          queuedtracks = this.getPlaylistEntities();
           if (queuedtracks.length === 0) {
             return;
           }
