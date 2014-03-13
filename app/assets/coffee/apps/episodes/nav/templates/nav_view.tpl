@@ -21,7 +21,7 @@
   <li class="left-off-canvas-toggle js-not-implemented"><a href=""><i class="fi-plus"></i>&nbsp Add Subscriptions</a></li>
 
   <li class="left-off-canvas-toggle show-for-small-only"><a href="#" class="js-playlist"><i class="fi-indent-more"></i> &nbsp Playlist</a></li>
-  <li class="left-off-canvas-toggle"><a href="#"><i class="fi-torso-business"></i>&nbsp About Me</a></li>
+
 
 </ul>
 </aside>
@@ -31,7 +31,9 @@
 <ul id="offcanvas-nav-right" class="off-canvas-list">
   <li><label>App Settings</label></li>
   <li class="js-reset-local"><a>Reset Local Storage</a></li>
-  <li class="js-not-implemented"><a>Settings</a></li>
+  <li class="js-not-implemented"><a href="#"><i class="fi-widget"></i>&nbsp Settings</a></li>
+  <li class="left-off-canvas-toggle"><a href="#"><i class="fi-info"></i>&nbsp About App</a></li>
+  <li class="left-off-canvas-toggle"><a href="#"><i class="fi-torso-business"></i>&nbsp About Me</a></li>
   <li><a class="right-off-canvas-toggle">Exit</a></li>
 </ul>
 

@@ -3,7 +3,7 @@
     Swabcast.module("Entities", function(Entities, Swabcast, Backbone, Marionette, $, _) {
       var API, feeds, initializeFeeds;
       Entities.Episode = Backbone.Model.extend({
-        urlRoot: "track",
+        urlRoot: "episode",
         defaults: {
           "albumArt": "podcast-default.png",
           "episodeTitle": "",

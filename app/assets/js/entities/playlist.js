@@ -2,9 +2,13 @@
   define(["app", "apps/config/storage/localstorage", "entities/feed"], function(Swabcast) {
     Swabcast.module("Entities", function(Entities, Swabcast, Backbone, Marionette, $, _) {
       var API, initializePlaylist, playlist;
-      Entities.Playlist = Backbone.Collection.extend({
+      Entities.QueuedEpisode = Entities.Episode.extend({
+        urlRoot: "playlist",
+        order: 0
+      });
+      Entities.Playlist = Entities.Episodes.extend({
         url: "playlist",
-        model: Entities.Episode,
+        model: Entities.QueuedEpisode,
         comparator: "id"
       });
       Entities.configureStorage(Entities.Playlist);

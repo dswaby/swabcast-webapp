@@ -74,7 +74,6 @@
         },
         featureNotImplemented: function() {
           return require(["apps/episodes/feed/feed_controller"], function() {
-            console.log("featureNotImplemented triggered in EpisodesApp Mediator");
             return EpisodesApp.Feed.Controller.notImplemented();
           });
         }

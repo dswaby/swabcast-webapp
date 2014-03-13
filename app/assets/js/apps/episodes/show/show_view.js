@@ -25,6 +25,7 @@
           "click button.js-enqueue": "queueEpisode"
         },
         initialize: function() {
+          console.log("episode detailed view");
           return this.title = this.model.get("subscriptionTitle");
         },
         editClicked: function(e) {
@@ -52,6 +53,7 @@
           "click button.js-back-button": "goBack"
         },
         initialize: function() {
+          console.log("feed detailed view");
           return this.title = this.model.get("subscriptionTitle");
         },
         goBack: function(e) {

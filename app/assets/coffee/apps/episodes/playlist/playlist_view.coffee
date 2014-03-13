@@ -1,4 +1,7 @@
-define ["app", "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl", "tpl!apps/episodes/playlist/templates/playlist_layout.tpl", "tpl!apps/episodes/playlist/templates/playlist.tpl"], (Swabcast, playlistItemTpl, playlistLayoutTpl, playlistTpl) ->
+define ["app", "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl",
+"tpl!apps/episodes/playlist/templates/playlist_layout.tpl",
+"tpl!apps/episodes/playlist/templates/playlist.tpl"],
+(Swabcast, playlistItemTpl, playlistLayoutTpl, playlistTpl) ->
   Swabcast.module "EpisodesApp.Playlist.View", (View, Swabcast, Backbone, Marionette, $, _) ->
     View.Layout = Marionette.Layout.extend(
       template: playlistLayoutTpl
@@ -8,7 +11,7 @@ define ["app", "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl", "t
     )
     View.Track = Marionette.ItemView.extend(
       tagName: "tr"
-      className: ""
+      className: "playlist-item"
       template: playlistItemTpl
       events:
         "click a": "stopPropagating"

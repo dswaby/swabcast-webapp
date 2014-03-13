@@ -4113,6 +4113,11 @@ table tfoot tr td {
   width: 100%;
 }
 
+/* line 29, ../scss/app.scss */
+.library {
+  max-width: 275px;
+}
+
 @font-face {
   font-family: "foundation-icons";
   src: url("foundation-icons.eot");
@@ -4121,7 +4126,7 @@ table tfoot tr td {
   font-style: normal;
 }
 
-/* line 61, ../scss/app.scss */
+/* line 67, ../scss/app.scss */
 .fi-alert:before,
 .fi-arrow-up:before,
 .fi-skull:before,
@@ -4143,6 +4148,8 @@ table tfoot tr td {
 .fi-eye:before,
 .fi-page-multiple:before,
 .fi-indent-more:before,
+.fi-info:before,
+.fi-widget:before,
 .fi-zoom-out:before {
   font-family: "foundation-icons";
   font-style: normal;
@@ -4155,119 +4162,129 @@ table tfoot tr td {
   text-decoration: inherit;
 }
 
-/* line 72, ../scss/app.scss */
+/* line 78, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 73, ../scss/app.scss */
+/* line 79, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 74, ../scss/app.scss */
+/* line 80, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 75, ../scss/app.scss */
+/* line 81, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 76, ../scss/app.scss */
+/* line 82, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 77, ../scss/app.scss */
+/* line 83, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 78, ../scss/app.scss */
+/* line 84, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 79, ../scss/app.scss */
+/* line 85, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 80, ../scss/app.scss */
+/* line 86, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 81, ../scss/app.scss */
+/* line 87, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 82, ../scss/app.scss */
+/* line 88, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 83, ../scss/app.scss */
+/* line 89, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 84, ../scss/app.scss */
+/* line 90, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 85, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 86, ../scss/app.scss */
+/* line 92, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 87, ../scss/app.scss */
+/* line 93, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 88, ../scss/app.scss */
+/* line 94, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 89, ../scss/app.scss */
+/* line 95, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 90, ../scss/app.scss */
+/* line 96, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 91, ../scss/app.scss */
+/* line 97, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 92, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 94, ../scss/app.scss */
+/* line 99, ../scss/app.scss */
+.fi-info:before {
+  content: "\f15e";
+}
+
+/* line 100, ../scss/app.scss */
+.fi-widget:before {
+  content: "\f214";
+}
+
+/* line 104, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
   table-border-color: #ddd;
 }
 
-/* line 102, ../scss/app.scss */
+/* line 112, ../scss/app.scss */
 #player {
   position: fixed;
   height: 75px;
@@ -4281,12 +4298,12 @@ table tfoot tr td {
   cursor: default;
 }
 
-/* line 117, ../scss/app.scss */
+/* line 127, ../scss/app.scss */
 .player-preview {
   margin-left: 80px;
 }
 
-/* line 133, ../scss/app.scss */
+/* line 143, ../scss/app.scss */
 #player-art {
   background-color: transparent;
   display: block;
@@ -4297,24 +4314,24 @@ table tfoot tr td {
   height: 75px;
 }
 
-/* line 146, ../scss/app.scss */
+/* line 156, ../scss/app.scss */
 #controls-wrapper {
   height: 60px;
   position: fixed;
   bottom: 0;
 }
 
-/* line 152, ../scss/app.scss */
+/* line 162, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 156, ../scss/app.scss */
+/* line 166, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 160, ../scss/app.scss */
+/* line 170, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;

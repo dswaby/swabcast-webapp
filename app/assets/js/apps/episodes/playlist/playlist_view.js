@@ -10,7 +10,7 @@
       });
       View.Track = Marionette.ItemView.extend({
         tagName: "tr",
-        className: "",
+        className: "playlist-item",
         template: playlistItemTpl,
         events: {
           "click a": "stopPropagating",

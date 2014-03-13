@@ -26,6 +26,10 @@
   width: 100%;
 }
 
+.library {
+  max-width: 275px;
+}
+
 //FOUNDATION ICONS
 @font-face {
   font-family: "foundation-icons";
@@ -58,6 +62,8 @@
 .fi-eye:before,
 .fi-page-multiple:before,
 .fi-indent-more:before,
+.fi-info:before,
+.fi-widget:before,
 .fi-zoom-out:before {
   font-family: "foundation-icons";
   font-style: normal;
@@ -90,6 +96,10 @@
 .fi-skull:before { content: "\f1b3"; }
 .fi-alert:before { content: "\f101"; }
 .fi-arrow-up:before { content: "\f10c"; }
+.fi-info:before { content: "\f15e"; }
+.fi-widget:before { content: "\f214"; }
+
+
 
 .playlist {
   table-border-style: solid;

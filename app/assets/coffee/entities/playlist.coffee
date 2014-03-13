@@ -1,11 +1,16 @@
 define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
-    Entities.Playlist = Backbone.Collection.extend(
-      url: "playlist"
-      model: Entities.Episode
-      comparator: "id"
+
+    Entities.QueuedEpisode = Entities.Episode.extend(
+      urlRoot: "playlist"
+      order: 0
     )
 
+    Entities.Playlist = Entities.Episodes.extend(
+      url: "playlist"
+      model: Entities.QueuedEpisode
+      comparator: "id"
+    )
     Entities.configureStorage Entities.Playlist
 
     playlist = undefined

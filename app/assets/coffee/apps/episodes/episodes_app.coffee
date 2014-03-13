@@ -63,7 +63,6 @@ define ["app"], (Swabcast) ->
 
       featureNotImplemented: ->
         require ["apps/episodes/feed/feed_controller"], ->
-          console.log("featureNotImplemented triggered in EpisodesApp Mediator")
           EpisodesApp.Feed.Controller.notImplemented()
 
     Swabcast.on "media:all", ->

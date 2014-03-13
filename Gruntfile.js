@@ -18,25 +18,25 @@ module.exports = function (grunt) {
                     'sassDir': './<%= swabstack.app %>/assets/scss',
                     'output-style': 'expanded'
                 }
-            },
-            dist: {
-                options: {
-                    'config': './<%= swabstack.app %>/config.rb',  // css_dir = 'dev/css'
-                    'sassDir': './<%= swabstack.app %>/assets/scss',
-                    'cssDir': './<%= swabstack.dist %>/css',
-                    'output-style': 'compressed'
-
-                }
             }
+            // dist: {
+            //     options: {
+            //         'config': './<%= swabstack.app %>/config.rb',  // css_dir = 'dev/css'
+            //         'sassDir': './<%= swabstack.app %>/assets/scss',
+            //         'cssDir': './<%= swabstack.dist %>/css',
+            //         'output-style': 'compressed'
+
+            //     }
+            // }
         },
         watch: {
             compass: {
                 files: ['<%= swabstack.app %>/scss/{,*/}*.{scss,sass}'],
-                tasks: ['compass']
+                tasks: ['compass:app']
             },
             coffee: {
                 files: ['<%= swabstack.app %>/assets/coffee/{,**/}*.coffee'],
-                tasks: ['coffee']
+                tasks: ['coffee:glob_to_multiple']
             },
             templates: {
                 files: ['<%= swabstack.app %>}/assets/**/templates/{,**/}*.tpl'],
@@ -145,20 +145,27 @@ module.exports = function (grunt) {
                     dest: '<%= swabstack.app %>/assets/js/'
                 }]
             },
-            distComponents: {
+            assets: {
                 files: [{
                     expand: true,
                     cwd: '<%= swabstack.app %>/assets/',
-                    src: ['img/*','css/**/*.*','js/vendor/modernizr.js', 'bower_components/'],
+                    src: ['mp3/**.*', 'img/**.*'],
+                    dest: '<%= swabstack.dist %>/assets/'
+                }]
+            },
+            components: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= swabstack.app %>/assets/',
+                    src: ['js/vendor/modernizr.js', 'css/foundation-icon*.*', 'svgs/**.*', 'css/images/**.*'],
                     dest: '<%= swabstack.dist %>/'
                 }]
             },
-            distImg: {
+            requireBuilt: { //since having issues getting nested dependancys working with grunt task
+                // first from app folder, run 'node r.js -o assets/js/build.js'
                 files: [{
-                    expand: true,
-                    cwd: '<%= swabstack.app %>/assets/',
-                    src: ['img/*'],
-                    dest: '<%= swabstack.dist %>/assets/'
+                    src: ['./<%= swabstack.app %>/assets/js/require_main_built.js'],
+                    dest: './<%= swabstack.dist %>/require_main_built.js'
                 }]
             }
         },
@@ -168,7 +175,7 @@ module.exports = function (grunt) {
               banner: '/* Like a ninja */'
             },
             files: {
-              '<%= swabstack.dist %>/combined.min.css': ['./<%= swabstack.app %>/assets/css/app.css', './<%= swabstack.app %>/assets/css/jquery-ui-1.10.0.custom.css']
+              '<%= swabstack.dist %>/css/combined.min.css': ['./<%= swabstack.app %>/assets/css/app.css', './<%= swabstack.app %>/assets/css/jquery-ui-1.10.0.custom.css']
             }
           }
         },
@@ -218,14 +225,13 @@ grunt.registerTask('default', [
 
 grunt.registerTask('build', [
     'targethtml:dist',
+    'copy:templates', // when starting, copy any templates that may have been added
     'compass:app',
     'cssmin',
-    'copy:distComponents',
-    'copy:distImg',
-    'copy:vendorjs',
-    'copy:templates', // when starting, copy any templates that may have been added
+    'copy:components',
+    'copy:assets',
+    'copy:requireBuilt',
     'coffee' //compile any coffescript files that may have changed
-    // 'requirejs' - having trouble with this grunt task, run 'node r.js -o assets/js/build.js' from app folder
     ]);
 
 };

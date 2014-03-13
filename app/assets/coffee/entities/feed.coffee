@@ -1,7 +1,7 @@
 define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
     Entities.Episode = Backbone.Model.extend(
-      urlRoot: "track"
+      urlRoot: "episode"
       defaults:
         "albumArt": "podcast-default.png"
         "episodeTitle": ""
@@ -9,12 +9,14 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "enqueue": false
     )
     Entities.configureStorage Entities.Episode
+
     Entities.Episodes = Backbone.Collection.extend(
       url : "episode"
       model: Entities.Episode
       comparator: "episodeTitle"
     )
     Entities.configureStorage Entities.Episodes
+
     Entities.Feed = Backbone.Model.extend(
       urlRoot: "feeds"
       defaults:
