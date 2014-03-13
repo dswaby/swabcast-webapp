@@ -15,14 +15,12 @@
 <aside class="left-off-canvas-menu">
 
 <ul id="offcanvas-nav-left" class="off-canvas-list">
-  <li><a><label>Main App</label></a></li>
+  <li><a><label>App Navigation</label></a></li>
 
-  <li><a>This is link 0</a></li>
-  <li><a>This is link 1</a></li>
-  <li><a>This is link 2</a></li>
+  <li><a>Add Subscriptions</a></li>
   <li class="show-for-small-only"><a href="#" class="js-playlist"><i class="fi-indent-more"></i> &nbsp Playlist</a></li>
-  <li><a href="#"><i class=""></i>Subscriptions</a></li>
-  <li><a href="#"></a></li>
+  <li class="active"><a href="#"><i class=""></i>Subscriptions</a></li>
+
 </ul>
 </aside>
 

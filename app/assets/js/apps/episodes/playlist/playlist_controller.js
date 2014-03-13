@@ -2,32 +2,29 @@
   define(["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/player_controller"], function(Swabcast, View) {
     Swabcast.module("EpisodesApp.Playlist", function(Playlist, Swabcast, Backbone, Marionette, $, _) {
       return Playlist.Controller = {
-        showTracks: function(mainScreen) {
-          mainScreen = mainScreen || false;
-          return require(["entities/playlist"], function() {
-            var playlistIds, playlistLayout;
-            playlistIds = Swabcast.request("episode:playlist");
+        showTracks: function() {
+          return require(["entities/episode"], function() {
+            var fetchingPlaylist, playlistLayout;
+            fetchingPlaylist = Swabcast.request("episode:playlist");
             playlistLayout = new View.Layout();
-            $.when(playlistIds).done(function(list) {
-              var episodes, playlistTracks, self;
-              episodes = list.get("episodes");
-              console.log(list);
+            $.when(fetchingPlaylist).done(function(tracks) {
+              var playlistTracks, self;
               self = this;
-              if (typeof episodes[0] !== "undefined") {
-                this.nowPlaying = episodes[0];
+              if (typeof tracks.at(0) !== "undefined") {
+                this.nowPlaying = tracks.at(0);
               }
               playlistTracks = new View.Tracks({
-                collection: list
+                collection: tracks
               });
               require(["apps/episodes/list/list_controller"], function() {
                 return playlistTracks.on("itemview:episode:delete", function(childView, model) {
                   var modelUid;
-                  if (typeof episodes[1] === "undefined" && episodes.length === 1) {
+                  if (typeof tracks.at(1) === "undefined" && tracks.length === 1) {
                     Swabcast.commands.execute("playerdata:remove");
                     Swabcast.commands.execute("player:empty");
                   }
-                  if (episodes[0] === model && episodes.length >= 2) {
-                    Swabcast.commands.execute("playlist:updatenowplaying", episodes[1]);
+                  if (tracks.at(0) === model && tracks.length >= 2) {
+                    Swabcast.commands.execute("playlist:updatenowplaying", tracks.at(1));
                   }
                   modelUid = model.get("uid");
                   model.destroy();
@@ -38,17 +35,17 @@
                 var highestOrder, inQueue, newTrack;
                 highestOrder = void 0;
                 inQueue = void 0;
-                if (list.length !== 0) {
-                  inQueue = list.find(function(t) {
+                if (tracks.length !== 0) {
+                  inQueue = tracks.find(function(t) {
                     return t.get("uid") === model.get("uid");
                   });
-                  highestOrder = list.max(function(t) {
+                  highestOrder = tracks.max(function(t) {
                     return t.get("order");
                   });
                   highestOrder = highestOrder.get("order") + 1;
                 }
                 if (!inQueue) {
-                  newTrack = new Swabcast.Entities.PlaylistEpisode({
+                  newTrack = new Swabcast.Entities.Episode({
                     uid: model.get("uid") || null,
                     albumArt: model.parent.get("albumArt") || null,
                     episodeTitle: model.get("episodeTitle") || null,
@@ -58,13 +55,13 @@
                     enqueue: true,
                     order: highestOrder || 1
                   });
-                  list.add(newTrack);
+                  tracks.add(newTrack);
                   newTrack.save();
-                  if (list.at(0) === newTrack) {
+                  if (tracks.at(0) === newTrack) {
                     Swabcast.commands.execute("player:setepisode", newTrack);
                   }
-                  if (!list.nowPlaying) {
-                    return list.nowPlaying = newTrack;
+                  if (!tracks.nowPlaying) {
+                    return tracks.nowPlaying = newTrack;
                   }
                 } else {
 
@@ -77,16 +74,8 @@
                 return playlistTracks.children.findByModel(model).flash("success");
               });
             });
-            if (mainScreen === true) {
-              console.log('show playlist triggered');
-              return Swabcast.libraryRegion.show(playlistLayout);
-            } else {
-              return Swabcast.sideBarRegion.show(playlistLayout);
-            }
+            return Swabcast.sideBarRegion.show(playlistLayout);
           });
-        },
-        showPlaylistMain: function() {
-          return console.log("BLAH");
         }
       };
     });

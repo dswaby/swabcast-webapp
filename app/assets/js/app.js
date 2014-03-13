@@ -1,5 +1,5 @@
 (function() {
-  define(["marionette"], function(Marionette) {
+  define(["marionette", "apps/config/marionette/regions/dialog", "apps/config/marionette/regions/modal"], function(Marionette) {
     var Swabcast;
     Swabcast = new Marionette.Application();
     Swabcast.debugging = true;
@@ -8,20 +8,14 @@
       sideBarRegion: "#sidebar-region",
       libraryRegion: "#library-region",
       playerRegion: "#player",
-      navRegion: "#nav-regions"
-    }, require(["apps/config/marionette/regions/dialog"], function() {
-      return {
-        dialogRegion: Marionette.Region.Dialog.extend({
-          el: "#dialog-region"
-        })
-      };
-    }), require(["apps/config/marionette/regions/modal"], function() {
-      return {
-        modalRegion: Marionette.Region.ModalRegion.extend({
-          el: "#modal-region"
-        })
-      };
-    }));
+      navRegion: "#nav-regions",
+      dialogRegion: Marionette.Region.Dialog.extend({
+        el: "#dialog-region"
+      }),
+      modalRegion: Marionette.Region.ModalRegion.extend({
+        el: "#modal-region"
+      })
+    });
     Swabcast.navigate = function(route, options) {
       options || (options = {});
       return Backbone.history.navigate(route, options);
@@ -35,7 +29,10 @@
         if (Backbone.history) {
           Backbone.history.start();
           if (Swabcast.getCurrentRoute() === "") {
-            Swabcast.navigate("episodes");
+            Swabcast.navigate("library");
+            Swabcast.trigger("media:all");
+          }
+          if (Swabcast.getCurrentRoute() === "library") {
             Swabcast.trigger("media:all");
           }
           if (Swabcast.getCurrentRoute() === "playlist") {

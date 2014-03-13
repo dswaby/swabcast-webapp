@@ -11,11 +11,21 @@ module.exports = function (grunt) {
     grunt.initConfig({
         swabstack: swabstackConfig,
         compass: {
+            app: {
+                options: {
+                    'config': './<%= swabstack.app %>/config.rb',
+                    'cssDir': './<%= swabstack.app %>/assets/css',
+                    'sassDir': './<%= swabstack.app %>/assets/scss',
+                    'output-style': 'expanded'
+                }
+            },
             dist: {
                 options: {
-                    config: '<%= swabstack.app %>/config.rb',
-                    basePath: '<%= swabstack.app %>/',
-                    cssDir: '<%= swabstack.app %>/assets/css'
+                    config: './<%= swabstack.app %>/config.rb',  // css_dir = 'dev/css'
+                    'sassDir': './<%= swabstack.app %>/assets/scss',
+                    'cssDir': './<%= swabstack.dist %>/css',
+                    'output-style': 'compressed'
+
                 }
             }
         },
@@ -28,11 +38,19 @@ module.exports = function (grunt) {
                 files: ['<%= swabstack.app %>/assets/coffee/{,**/}*.coffee'],
                 tasks: ['coffee']
             },
+            templates: {
+                files: ['<%= swabstack.app %>}/assets/**/templates/{,**/}*.tpl'],
+                tasks: ['copy:templates']
+            },
+            vendorjs: {
+                files: ['<%= swabstack.app %>/assets/js/**/*.js'],
+                tasks: ['copy:vendorjs']
+            },
 
             livereload: {
                 files: [
 
-                    '<%= swabstack.app %>/*.html',
+                    '<%= swabstack.app %>/index.html',
                     '{.tmp,<%= swabstack.app %>}/assets/css/{,**/}*.css',
                     '{.tmp,<%= swabstack.app %>}/assets/js/{,**/}*.js',
                     '{.tmp,<%= swabstack.app %>}/assets/**/templates/{,**/}*.tpl',
@@ -66,6 +84,19 @@ module.exports = function (grunt) {
                 }
             }
         },
+        targethtml: {
+            app: {
+                files: {
+                    '<%= swabstack.app %>/index.html': '<%= swabstack.app %>/index-template.html'
+                }
+            },
+            dist: {
+                files: {
+                    './<%= swabstack.dist %>/index.html': '<%= swabstack.app %>/index-template.html'
+                }
+            }
+        },
+
         // connect server
         connect: {
             testserver: {
@@ -105,6 +136,22 @@ module.exports = function (grunt) {
                     src: ['**/*.{tpl,md}'],
                     dest: '<%= swabstack.app %>/assets/js/'
                 }]
+            },
+            vendorjs: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= swabstack.app %>/assets/coffee/',
+                    src: ['**/*.js'],
+                    dest: '<%= swabstack.app %>/assets/js/'
+                }]
+            },
+            media: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= swabstack.app %>/assets/',
+                    src: ['img/*','css/**/*.*','js/vendor/modernizr.js'],
+                    dest: '<%= swabstack.dist %>/'
+                }]
             }
         },
         docco: {
@@ -114,23 +161,49 @@ module.exports = function (grunt) {
               output: 'docs/'
             }
           }
+        },
+        requirejs: {
+          compile: {
+            options: {
+              baseUrl: '<%= swabstack.app %>/assets/js',
+              mainConfigFile: '<%= swabstack.app %>/assets/js/require_main.js',
+              name: 'vendor/almond', // assumes a production build using almond
+              out: './<%= swabstack.dist %>/require_main_built.js',
+              findNestedDependencies: true,
+            }
+          }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-docco');
+    grunt.loadNpmTasks('grunt-targethtml');
 
 grunt.registerTask('default', [
-    'copy', // when starting, copy any templates that may have been added
+    'copy:vendorjs',
+    'copy:templates', // when starting, copy any templates that may have been added
+    'compass:app',
     'coffee', //compile any coffescript files that may have changed
+    'targethtml:app',
     'connect:testserver',
     'express:dev',
     'watch'
+    ]);
+
+grunt.registerTask('build', [
+    'targethtml:dist',
+    'copy:media',
+    'compass:dist',
+    'copy:vendorjs',
+    'copy:templates', // when starting, copy any templates that may have been added
+    'coffee', //compile any coffescript files that may have changed
+    'requirejs'
     ]);
 
 };

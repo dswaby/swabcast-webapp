@@ -2,7 +2,7 @@
 <div class="panel">
     <div class="row">
         <div class="span2">
-            <img src=./assets/img/<%= albumArt %> alt="" class="library">
+            <img src=./assets/img/<%= albumArt %> alt="" class="library" style="max-width:300px">
             <h2><%= episodeParent %></h2>
         </div>
         <div class="span8">

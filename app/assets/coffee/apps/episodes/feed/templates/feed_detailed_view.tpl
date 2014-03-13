@@ -1,5 +1,5 @@
 <br /><br />
-<div class="container" class="reveal-modal" data-reveal>
+<div class="container">
     <div class="hero-unit">
         <div class="row">
             <div class="span2">

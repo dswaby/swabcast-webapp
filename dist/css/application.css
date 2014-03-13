@@ -1,0 +1,123 @@
+body {
+	padding-top: 60px;
+}
+
+/*.enqueued {
+
+}*/
+
+/*Region Specific*/
+
+.unHidden {
+    display: block;
+}
+.Hidden {
+    display: none;
+}
+
+#library-region{
+    height: 100%;
+    overflow: auto;
+}
+
+#content{
+    position: absolute;
+    top:57px;
+    width:75%;
+    overflow: auto;
+    height: 90%;
+    margin-left: 25%;
+}
+.brand {
+    margin-left: 30px !important;
+}
+
+#side-bar{
+    margin-top: 30px;
+    float: left;
+    max-height: 70%;
+    overflow: auto;
+}
+#page-main{
+    height: 16px;
+}
+#player {
+    position: absolute;
+    height: 56px;
+    width:100%;
+    min-width: 850px;
+    bottom: 0;
+    background-color: #fafafa;
+    color: black;
+    z-index: 600;
+    box-shadow: 0 0 8px #888888;
+    box-shadow: 0 0 8px rgba(0,0,0,.4);
+    cursor: default;
+}
+#player-fill-left{
+}
+.player-preview{
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    bottom: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+#album-preview {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    bottom: 0;
+    margin: auto;
+    width: 55px;
+    height: 55px;
+}
+#player-art {
+    background-color: transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#player-fill-right{
+}
+#player-main{
+}
+
+.library img{
+    width:100% !important;
+}
+/*End of region specific*/
+.disabled {
+      color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+    color: #F5F5F5;
+}
+
+.disabled p {
+    color: #F5F5F5;
+}
+
+.disabled button{
+    color: #F5F5F5;
+}
+
+.disabled a {
+    color: #F5F5F5;
+}
+
+.disabled i {
+    color: #F5F5F5;
+}
+
+.smallfont {
+    font-size: 12px;
+}
+.scrollablelist {
+  height: 200px;
+  overflow: auto;
+}

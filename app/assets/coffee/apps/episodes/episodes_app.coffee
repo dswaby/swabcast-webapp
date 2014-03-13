@@ -57,6 +57,10 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeedDetails model
 
+      showFeedEpisodes: (model) ->
+        require ["apps/episodes/feed/feed_controller"], ->
+          EpisodesApp.Feed.Controller.showEpisodeList model
+
 
     Swabcast.on "media:all", ->
       API.showPageMedia()
@@ -77,6 +81,7 @@ define ["app"], (Swabcast) ->
       API.editEpisode id
 
     Swabcast.on "episodes:playlist", ->
+      Swabcast.navigate "playlist"
       API.showPlaylist()
 
     Swabcast.on "episode:details", (model) ->
@@ -84,6 +89,9 @@ define ["app"], (Swabcast) ->
 
     Swabcast.on "feed:details", (model) ->
       API.showFeedDetails model
+
+    Swabcast.on "feed:episodelist", (model) ->
+      API.showFeedEpisodes model
 
     Swabcast.on "playist:mainview", ->
       console.log('playlist mainView triggered')

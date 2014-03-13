@@ -1,5 +1,5 @@
 (function() {
-  define(["app", "apps/episodes/feed/feed_view", "apps/episodes/show/show_view"], function(Swabcast, View, ShowView) {
+  define(["app", "apps/episodes/feed/feed_view", "apps/episodes/show/show_view", "apps/config/marionette/regions/dialog"], function(Swabcast, View, ShowView) {
     Swabcast.module("EpisodesApp.Feed", function(Feed, Swabcast, Backbone, Marionette, $, _) {
       return Feed.Controller = {
         showFeeds: function() {
@@ -21,34 +21,41 @@
         },
         showEpisodeDetails: function(model) {
           var view;
-          console.log("show episode details triggered, model: ", model);
           model.set({
             episodeParent: model.parent.get("subscriptionTitle"),
             albumArt: model.parent.get("albumArt"),
             feedUrl: model.parent.get("feedUrl")
           });
-          view = new ShowView.Episode({
+          view = new ShowView.EpisodeDetail({
+            model: model
+          });
+          console.log("show episode details triggered, model: ", model);
+          view.on("episodes:list", function() {
+            return view.trigger("view:close");
+          });
+          return Swabcast.dialogRegion.show(view);
+        },
+        showEpisodeList: function(model) {
+          var view;
+          console.log("Feed controller recieved model, creating showview.episodelist", model);
+          console.log(model);
+          view = new ShowView.EpisodeList({
             model: model
           });
           view.on("episodes:list", function() {
             return view.trigger("view:close");
           });
-          return require(["apps/config/marionette/regions/modal"], function() {
-            return Swabcast.modalRegion.show(view);
-          });
+          return Swabcast.dialogRegion.show(view);
         },
         showFeedDetails: function(model) {
           var view;
-          console.log("show feed details triggered, model: ", model);
           view = new ShowView.Feed({
             model: model
           });
           view.on("episodes:list", function() {
             return view.trigger("dialog:close");
           });
-          return require(["apps/config/marionette/regions/modal"], function() {
-            return Swabcast.modalRegion.show(view);
-          });
+          return Swabcast.dialogRegion.show(view);
         }
       };
     });

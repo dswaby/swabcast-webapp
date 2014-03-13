@@ -3,7 +3,7 @@
 
 </div>
 <div>
-	<div id="feeditems-collection" class="large-10 columns">
+	<div id="feeditems-collection" class="large-8 small-10 columns" style="margin-bottom:80px !important;">
 	</div>
 </div>
 <!-- End Feed Layout Template -->

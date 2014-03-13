@@ -66,6 +66,11 @@
           return require(["apps/episodes/feed/feed_controller"], function() {
             return EpisodesApp.Feed.Controller.showFeedDetails(model);
           });
+        },
+        showFeedEpisodes: function(model) {
+          return require(["apps/episodes/feed/feed_controller"], function() {
+            return EpisodesApp.Feed.Controller.showEpisodeList(model);
+          });
         }
       };
       Swabcast.on("media:all", function() {
@@ -87,6 +92,7 @@
         return API.editEpisode(id);
       });
       Swabcast.on("episodes:playlist", function() {
+        Swabcast.navigate("playlist");
         return API.showPlaylist();
       });
       Swabcast.on("episode:details", function(model) {
@@ -94,6 +100,9 @@
       });
       Swabcast.on("feed:details", function(model) {
         return API.showFeedDetails(model);
+      });
+      Swabcast.on("feed:episodelist", function(model) {
+        return API.showFeedEpisodes(model);
       });
       Swabcast.on("playist:mainview", function() {
         var mainview;

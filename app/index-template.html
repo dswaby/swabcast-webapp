@@ -1,0 +1,104 @@
+<!doctype html>
+<!--                        __                __
+                           /\ \__            /\ \
+     ____      ___     ___ \ \ ,_\     __    \_\ \
+    /\_ ,`\   / __`\  / __`\\ \ \/   /'__`\  /'_` \
+    \/_/  /_ /\ \L\ \/\ \L\ \\ \ \_ /\  __/ /\ \L\ \
+      /\____\\ \____/\ \____/ \ \__\\ \____\\ \___,_\
+      \/____/ \/___/  \/___/   \/__/ \/____/ \/__,_ /
+-->
+<html class="no-js" lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!--  iPhone Specific -->
+    <link rel="apple-touch-icon" href="assets/img/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/touch-icon-ipad-retina.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--  End iPhone Specific -->
+    <title>Swabcast Foundation</title>
+    <!--(if target app)><!-->
+    <link rel="stylesheet" href="assets/css/app.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui-1.10.0.custom.css"/>
+     <script src="./assets/js/vendor/modernizr.js"></script>
+    <!--<!(endif)-->
+
+    <!--(if target dist)><!-->
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/jquery-ui-1.10.0.custom.css"/>
+    <script src="./js/vendor/modernizr.js"></script>
+
+    <!--<!(endif)-->
+
+
+
+  </head>
+  <body >
+    <div class="off-canvas-wrap">
+      <div class="inner-wrap">
+        <div id="nav-regions">
+        </div>
+        <!-- All Content for episodes page -->
+        <section class="main-section">
+        <div class="row">
+          <div style="height:20px;"></div>
+        </div>
+          <div>
+            <div id="page-main" class="large-12 small-12 columns">
+              <div>
+                <div id="alert-view" class="alert" style="display: none">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </div>
+          <!--  Playlist Container -->
+                <div class="large-3 columns show-for-large-up" style="background:#F4F4F4; height:500px;">
+                  <div class="show-for-large-up">
+                      <div id="side-bar">
+                          <li class="">Playlist</li>
+                          <ul class="" id="sidebar-region">
+                          </ul>
+                      </div>
+                  </div>
+                </div>
+          <!--  End Playlist Container -->
+                <div id="main-region"></div>
+                <div id="content">
+                  <!-- Library -->
+                    <div>
+                      <div id="library-region">
+                        <h6>Loading your library........</h6>
+                        <p>this may take a few moments</p></div>
+                    </div>
+                </div>
+                <div id="dialog-region"> </div>
+                <div id="modal-region"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+            <div id="progress-slider"></div>
+            <div id="player"></div>
+      </section>
+        <!--  <a class="exit-off-canvas"></a> -->
+      </div>
+    </div>
+    <!-- require in dev -->
+    <!--(if target app)><!-->
+      <script data-main="./assets/js/require_main.js" src="./assets/js/vendor/require.js"></script>
+    <!--<!(endif)-->
+
+    <!-- optimized with r.js -->
+    <!--
+    <script src="./assets/js/vendor/require.js"></script>
+    <script src="./assets/js/require_main.built.js"></script>
+    -->
+
+    <!-- optimized with r.js using almond shim -->
+    <!--(if target dist)><!-->
+      <script src="./require_main_built.js"></script>
+    <!--<!(endif)-->
+  </body>
+</html>

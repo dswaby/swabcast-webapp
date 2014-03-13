@@ -1,4 +1,4 @@
-define ["marionette"], (Marionette) ->
+define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/marionette/regions/modal"], (Marionette) ->
 
   Swabcast = new Marionette.Application()
   Swabcast.debugging = true
@@ -8,11 +8,8 @@ define ["marionette"], (Marionette) ->
     libraryRegion: "#library-region"
     playerRegion: "#player"
     navRegion:"#nav-regions"
-    require ["apps/config/marionette/regions/dialog"], ->
-      dialogRegion: Marionette.Region.Dialog.extend(el: "#dialog-region")
-    require ["apps/config/marionette/regions/modal"], ->
-      modalRegion: Marionette.Region.ModalRegion.extend(el: "#modal-region")
-
+    dialogRegion: Marionette.Region.Dialog.extend(el: "#dialog-region")
+    modalRegion: Marionette.Region.ModalRegion.extend(el: "#modal-region")
 
   #route helpers
   Swabcast.navigate = (route, options) ->
@@ -22,7 +19,6 @@ define ["marionette"], (Marionette) ->
   Swabcast.getCurrentRoute = ->
     Backbone.history.fragment
 
-
   #end route helpers
   Swabcast.on "initialize:after", ->
     require ["apps/episodes/episodes_app"], ->
@@ -30,7 +26,9 @@ define ["marionette"], (Marionette) ->
       if Backbone.history
         Backbone.history.start()
         if Swabcast.getCurrentRoute() is ""
-          Swabcast.navigate "episodes"
+          Swabcast.navigate "library"
+          Swabcast.trigger "media:all"
+        if Swabcast.getCurrentRoute() is "library"
           Swabcast.trigger "media:all"
         if Swabcast.getCurrentRoute() is "playlist"
           console.log("playlist triggered")
