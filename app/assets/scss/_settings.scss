@@ -22,7 +22,7 @@
 // $rem-base: 16px;
 
 // We use this to control whether or not CSS classes come through in the gem files.
-// $include-html-classes: true;
+$include-html-classes: true;
 // $include-print-styles: true;
 // $include-html-global-classes: $include-html-classes;
 
@@ -200,7 +200,7 @@
 
 // Button Groups
 
-// $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: $include-html-classes;
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 // $button-bar-margin-opposite: rem-calc(10);
@@ -823,7 +823,7 @@ $off-canvas-overlay-transition: background 150ms ease;
 
 // Split Buttons
 
-// $include-html-button-classes: $include-html-classes;
+$include-html-button-classes: $include-html-classes;
 
 // We use these to control different shared styles for Split Buttons
 // $split-button-function-factor: 10%;

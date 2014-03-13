@@ -1,7 +1,7 @@
 <!--   Playlist Layout -->
 <div id="now-playing"></div>
 <div id="playlist-region" >
-	<img src="http://placehold.it/500x500&text=Logo">
+	<!-- <img src="http://placehold.it/500x500&text=Logo"> -->
 
 <!--
 	<div class="hide-for-small panel">

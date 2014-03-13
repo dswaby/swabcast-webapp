@@ -34,7 +34,7 @@
         },
         showList: function(e) {
           e.stopPropagation();
-          return this.trigger("dialog:close");
+          return Swabcast.trigger("feed:episodelist", this.model.parent);
         },
         queueEpisode: function(e) {
           e.preventDefault();
@@ -67,7 +67,8 @@
         events: {
           "click a.js-enqueue": "toggleQueue",
           "click a.js-feedview": "feedDetails",
-          "click a.js-view-detail": "showClicked"
+          "click a.js-view-detail": "showClicked",
+          "click a.js-preview-audio": "previewAudio"
         },
         destroyTrackView: function(e) {
           e.preventDefault();
@@ -89,8 +90,13 @@
               enqueue: true
             });
             this.model.save();
-            return Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.model);
+            Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.model);
           }
+          return this.trigger("dialog:close");
+        },
+        previewAudio: function(e) {
+          e.preventDefault();
+          return e.stopPropagation();
         }
       });
       return View.EpisodeList = Marionette.CompositeView.extend({

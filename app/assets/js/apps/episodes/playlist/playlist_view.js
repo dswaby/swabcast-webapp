@@ -31,7 +31,7 @@
         }
       });
       return View.Tracks = Marionette.CompositeView.extend({
-        tagName: "div",
+        tagName: "table",
         className: "playlist",
         template: playlistTpl,
         itemView: View.Track,

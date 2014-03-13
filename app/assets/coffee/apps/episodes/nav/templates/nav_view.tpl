@@ -16,10 +16,12 @@
 
 <ul id="offcanvas-nav-left" class="off-canvas-list">
   <li><a><label>App Navigation</label></a></li>
+  <li class="active left-off-canvas-toggle"><a href="#"><i class="fi-rss"></i>&nbsp Subscribed Feeds</a></li>
 
-  <li class="left-off-canvas-toggle js-not-implemented"><a href="">Add Subscriptions</a></li>
+  <li class="left-off-canvas-toggle js-not-implemented"><a href=""><i class="fi-plus"></i>&nbsp Add Subscriptions</a></li>
+
   <li class="left-off-canvas-toggle show-for-small-only"><a href="#" class="js-playlist"><i class="fi-indent-more"></i> &nbsp Playlist</a></li>
-  <li class="active left-off-canvas-toggle"><a href="#"><i class=""></i>Subscriptions</a></li>
+  <li class="left-off-canvas-toggle"><a href="#"><i class="fi-torso-business"></i>&nbsp About Me</a></li>
 
 </ul>
 </aside>

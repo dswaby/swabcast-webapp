@@ -1,11 +1,7 @@
-
-<img style="margin-left:20%;" src="./assets/img/not_implemented.png">
-<div style="clear:both"></div>
-
-
-<div style="clear:both"></div>
+<h1 style="float:left">Uh Oh! &nbsp &nbsp</h1>
+<i style="font-size:160px; float:left" class="fi-skull"></i>
 <div style="float:left">
 <br />
-<p>This application is a side project usually under active development, if there is a feature that is not yet implemented, I plan to implement that feature once I have time. Please try back another time</p>
+<p>This application is a side project under development as often as I have time to work on it, if you are seeing this notification, it means that I intend to implement this feature, but haven't gotten around to it yet. Please try back another time</p>
 
 </div>

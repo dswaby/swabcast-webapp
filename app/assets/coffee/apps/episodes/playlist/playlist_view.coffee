@@ -27,7 +27,7 @@ define ["app", "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl", "t
 
     )
     View.Tracks = Marionette.CompositeView.extend(
-      tagName: "div"
+      tagName: "table"
       className: "playlist"
       template: playlistTpl
       itemView: View.Track

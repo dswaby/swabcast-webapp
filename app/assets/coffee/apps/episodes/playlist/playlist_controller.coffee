@@ -49,6 +49,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               #if not in playlist, copy attributes to playlistEpisode model
               #TODO decouple the seperate models
               unless inQueue
+                console.log(model.parent.get("albumArt"))
                 newTrack = new Swabcast.Entities.Episode(
                   uid: model.get("uid") or null
                   albumArt: model.parent.get("albumArt") or null

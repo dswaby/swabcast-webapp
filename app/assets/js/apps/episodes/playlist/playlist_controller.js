@@ -45,6 +45,7 @@
                   highestOrder = highestOrder.get("order") + 1;
                 }
                 if (!inQueue) {
+                  console.log(model.parent.get("albumArt"));
                   newTrack = new Swabcast.Entities.Episode({
                     uid: model.get("uid") || null,
                     albumArt: model.parent.get("albumArt") || null,

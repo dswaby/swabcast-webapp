@@ -41,7 +41,7 @@ define ["app",
 
       showList: (e) ->
         e.stopPropagation()
-        @trigger "dialog:close"
+        Swabcast.trigger "feed:episodelist", @model.parent
 
       queueEpisode: (e) ->
         e.preventDefault()
@@ -75,6 +75,7 @@ define ["app",
         "click a.js-enqueue": "toggleQueue"
         "click a.js-feedview": "feedDetails"
         "click a.js-view-detail": "showClicked"
+        "click a.js-preview-audio": "previewAudio"
 
       destroyTrackView: (e) ->
         e.preventDefault()
@@ -95,6 +96,11 @@ define ["app",
           @model.set enqueue: true
           @model.save()
           Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @model
+        @trigger "dialog:close"
+
+      previewAudio: (e)->
+        e.preventDefault()
+        e.stopPropagation()
     )
 
     # view for displaying list of episodes for current view
