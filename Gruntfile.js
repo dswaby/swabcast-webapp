@@ -21,7 +21,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 options: {
-                    config: './<%= swabstack.app %>/config.rb',  // css_dir = 'dev/css'
+                    'config': './<%= swabstack.app %>/config.rb',  // css_dir = 'dev/css'
                     'sassDir': './<%= swabstack.app %>/assets/scss',
                     'cssDir': './<%= swabstack.dist %>/css',
                     'output-style': 'compressed'
@@ -73,7 +73,7 @@ module.exports = function (grunt) {
                     script: 'server/app.js'
                 }
             },
-            prod: {
+            dist: {
                 options: {
                     script: 'server/app.js'
                 }
@@ -145,14 +145,32 @@ module.exports = function (grunt) {
                     dest: '<%= swabstack.app %>/assets/js/'
                 }]
             },
-            media: {
+            distComponents: {
                 files: [{
                     expand: true,
                     cwd: '<%= swabstack.app %>/assets/',
-                    src: ['img/*','css/**/*.*','js/vendor/modernizr.js'],
+                    src: ['img/*','css/**/*.*','js/vendor/modernizr.js', 'bower_components/'],
                     dest: '<%= swabstack.dist %>/'
                 }]
+            },
+            distImg: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= swabstack.app %>/assets/',
+                    src: ['img/*'],
+                    dest: '<%= swabstack.dist %>/assets/'
+                }]
             }
+        },
+        cssmin: {
+          combine: {
+            options: {
+              banner: '/* Like a ninja */'
+            },
+            files: {
+              '<%= swabstack.dist %>/combined.min.css': ['./<%= swabstack.app %>/assets/css/app.css', './<%= swabstack.app %>/assets/css/jquery-ui-1.10.0.custom.css']
+            }
+          }
         },
         docco: {
           debug: {
@@ -176,6 +194,7 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -184,6 +203,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-docco');
     grunt.loadNpmTasks('grunt-targethtml');
+
 
 grunt.registerTask('default', [
     'copy:vendorjs',
@@ -198,12 +218,14 @@ grunt.registerTask('default', [
 
 grunt.registerTask('build', [
     'targethtml:dist',
-    'copy:media',
-    'compass:dist',
+    'compass:app',
+    'cssmin',
+    'copy:distComponents',
+    'copy:distImg',
     'copy:vendorjs',
     'copy:templates', // when starting, copy any templates that may have been added
-    'coffee', //compile any coffescript files that may have changed
-    'requirejs'
+    'coffee' //compile any coffescript files that may have changed
+    // 'requirejs' - having trouble with this grunt task, run 'node r.js -o assets/js/build.js' from app folder
     ]);
 
 };

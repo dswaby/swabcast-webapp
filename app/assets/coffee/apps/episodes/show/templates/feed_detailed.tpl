@@ -10,7 +10,7 @@
             <a href="<%= feedUrl %>"><h2><%= subscriptionTitle %></h2>
             <a href="<%= feedUrl %>"><h6><%= feedUrl %></h6></a>
             <p><%= summary %></p>
-                <button class="btn btn-small js-show-list">
+                <button class="btn btn-small js-back-button">
                     <i class="icon-arrow-left"></i>
                     Back
                 </button>

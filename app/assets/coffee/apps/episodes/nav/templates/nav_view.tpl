@@ -17,19 +17,20 @@
 <ul id="offcanvas-nav-left" class="off-canvas-list">
   <li><a><label>App Navigation</label></a></li>
 
-  <li><a>Add Subscriptions</a></li>
-  <li class="show-for-small-only"><a href="#" class="js-playlist"><i class="fi-indent-more"></i> &nbsp Playlist</a></li>
-  <li class="active"><a href="#"><i class=""></i>Subscriptions</a></li>
+  <li class="left-off-canvas-toggle js-not-implemented"><a href="">Add Subscriptions</a></li>
+  <li class="left-off-canvas-toggle show-for-small-only"><a href="#" class="js-playlist"><i class="fi-indent-more"></i> &nbsp Playlist</a></li>
+  <li class="active left-off-canvas-toggle"><a href="#"><i class=""></i>Subscriptions</a></li>
 
 </ul>
 </aside>
 
 <aside class="right-off-canvas-menu">
+
 <ul id="offcanvas-nav-right" class="off-canvas-list">
-  <li><label>Settings</label></li>
-  <li class="js-reset-local">Reset Local Storage</li>
-  <li>Add Subscription</li>
-  <li><a class="exit-off-canvas">Exit</a></li>
+  <li><label>App Settings</label></li>
+  <li class="js-reset-local"><a>Reset Local Storage</a></li>
+  <li class="js-not-implemented"><a>Settings</a></li>
+  <li><a class="right-off-canvas-toggle">Exit</a></li>
 </ul>
 
 </aside>

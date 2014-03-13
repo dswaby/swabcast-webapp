@@ -29,7 +29,6 @@
           view = new ShowView.EpisodeDetail({
             model: model
           });
-          console.log("show episode details triggered, model: ", model);
           view.on("episodes:list", function() {
             return view.trigger("view:close");
           });
@@ -37,8 +36,6 @@
         },
         showEpisodeList: function(model) {
           var view;
-          console.log("Feed controller recieved model, creating showview.episodelist", model);
-          console.log(model);
           view = new ShowView.EpisodeList({
             model: model
           });
@@ -52,6 +49,17 @@
           view = new ShowView.Feed({
             model: model
           });
+          view.on("episodes:list", function() {
+            console.log("episodes:list triggered");
+            return view.trigger("dialog:close");
+          });
+          return Swabcast.dialogRegion.show(view);
+        },
+        notImplemented: function() {
+          var view;
+          console.log("Made it here");
+          view = new ShowView.FeatureNotImplemented();
+          console.log("Not Implemented View Triggered");
           view.on("episodes:list", function() {
             return view.trigger("dialog:close");
           });

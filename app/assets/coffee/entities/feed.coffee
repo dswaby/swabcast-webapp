@@ -1396,7 +1396,6 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
 
         promise = defer.promise()
         $.when(promise).done (feeds) ->
-          console.log(feeds)
           if feeds.length is 0
             models = initializeFeeds()
             feeds.reset models

@@ -7,8 +7,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
       #                    var loadingView = new Swabcast.Common.Views.Loading();
       #                    Swabcast.libraryRegion.show(loadingView);
       #                });
-        require ["entities/episode"], ->
-          fetchingPlaylist = Swabcast.request("episode:playlist")
+        require ["entities/playlist"], ->
+          fetchingPlaylist = Swabcast.request("entities:playlist")
           playlistLayout = new View.Layout()
           $.when(fetchingPlaylist).done (tracks) ->
             self = this

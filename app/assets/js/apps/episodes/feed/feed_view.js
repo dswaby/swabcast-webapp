@@ -26,7 +26,6 @@
         showEpisodeList: function(e) {
           e.preventDefault();
           e.stopPropagation();
-          console.log("sending model to 'feed:episodelist'", this.model);
           return Swabcast.trigger("feed:episodelist", this.model);
         }
       });

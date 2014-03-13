@@ -3,9 +3,9 @@
     Swabcast.module("EpisodesApp.Playlist", function(Playlist, Swabcast, Backbone, Marionette, $, _) {
       return Playlist.Controller = {
         showTracks: function() {
-          return require(["entities/episode"], function() {
+          return require(["entities/playlist"], function() {
             var fetchingPlaylist, playlistLayout;
-            fetchingPlaylist = Swabcast.request("episode:playlist");
+            fetchingPlaylist = Swabcast.request("entities:playlist");
             playlistLayout = new View.Layout();
             $.when(fetchingPlaylist).done(function(tracks) {
               var playlistTracks, self;

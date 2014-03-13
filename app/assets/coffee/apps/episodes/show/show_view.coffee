@@ -1,11 +1,27 @@
 define ["app",
 "tpl!apps/episodes/show/templates/episode_detailed_view.tpl",
 "tpl!apps/episodes/show/templates/missing_episode.tpl",
+"tpl!apps/episodes/show/templates/feature_not_implemented.tpl",
 "tpl!apps/episodes/show/templates/feed_detailed.tpl",
 "tpl!apps/episodes/show/templates/feed_episodes.tpl",
 "tpl!apps/episodes/show/templates/episode_item_view.tpl"],
-(Swabcast, episodeDetailedTpl, missingTpl, feedDetailedTpl, feedEpisodesTpl, episodeItemViewTpl) ->
+(Swabcast, episodeDetailedTpl, missingTpl, featureNotImplemented, feedDetailedTpl, feedEpisodesTpl, episodeItemViewTpl) ->
   Swabcast.module "EpisodesApp.Show.View", (View, Swabcast, Backbone, Marionette, $, _) ->
+
+    View.FeatureNotImplemented = Marionette.ItemView.extend(
+      template: featureNotImplemented
+      events:
+        "click button.js-back-button": "goBack"
+
+      initialize: ->
+        @title = "Feature Not Implemented Yet"
+
+      goBack: (e) ->
+        #e.stopPropagation()
+        console.log("goBack Triggered")
+        @trigger "dialog:close"
+    )
+    # view for displaying summary page of individual episode
     View.EpisodeNotFound = Marionette.ItemView.extend(template: missingTpl)
     # view for displaying summary page of individual episode
     View.EpisodeDetail = Marionette.ItemView.extend(
@@ -15,15 +31,17 @@ define ["app",
         "click a.js-edit": "editClicked"
         "click button.js-enqueue": "queueEpisode"
 
+      initialize: ->
+        @title = @model.get("subscriptionTitle")
+
       editClicked: (e) ->
         e.preventDefault()
         e.stopPropagation()
         @trigger "episode:edit", @model
 
       showList: (e) ->
-        console.log("show episode list triggered, event:",)
         e.stopPropagation()
-        @trigger "episodes:list"
+        @trigger "dialog:close"
 
       queueEpisode: (e) ->
         e.preventDefault()
@@ -38,12 +56,15 @@ define ["app",
     View.Feed = Marionette.ItemView.extend(
       template: feedDetailedTpl
       events:
-        "click button.js-show-list": "showList"
+        "click button.js-back-button": "goBack"
 
-      showList: (e) ->
-        console.log("show feed list triggered, event:", e)
+      initialize: ->
+        @title = @model.get("subscriptionTitle")
+
+      goBack: (e) ->
         e.stopPropagation()
-        @trigger "view:show"
+        console.log("goBack Triggered")
+        @trigger "dialog:close"
     )
 
     View.EpisodeListItem = Marionette.ItemView.extend(
@@ -89,7 +110,6 @@ define ["app",
         "click a.js-feed-details": "showFeedEpisodes"
 
       initialize: ->
-        console.log("recieved model", @model)
         parent = @model
         trackList = new Swabcast.Entities.Episodes(@model.get("episodes"))
         @title = @model.get("subscriptionTitle")

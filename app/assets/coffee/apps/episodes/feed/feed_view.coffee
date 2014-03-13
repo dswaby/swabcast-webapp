@@ -69,7 +69,6 @@ define ["app","tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/epis
       showEpisodeList: (e) ->
         e.preventDefault()
         e.stopPropagation()
-        console.log("sending model to 'feed:episodelist'", @model)
         Swabcast.trigger "feed:episodelist", @model
 
     )

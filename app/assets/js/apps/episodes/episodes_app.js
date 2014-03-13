@@ -71,6 +71,12 @@
           return require(["apps/episodes/feed/feed_controller"], function() {
             return EpisodesApp.Feed.Controller.showEpisodeList(model);
           });
+        },
+        featureNotImplemented: function() {
+          return require(["apps/episodes/feed/feed_controller"], function() {
+            console.log("featureNotImplemented triggered in EpisodesApp Mediator");
+            return EpisodesApp.Feed.Controller.notImplemented();
+          });
         }
       };
       Swabcast.on("media:all", function() {
@@ -101,12 +107,14 @@
       Swabcast.on("feed:details", function(model) {
         return API.showFeedDetails(model);
       });
+      Swabcast.on("feature:not:implemented", function() {
+        return API.featureNotImplemented();
+      });
       Swabcast.on("feed:episodelist", function(model) {
         return API.showFeedEpisodes(model);
       });
       Swabcast.on("playist:mainview", function() {
         var mainview;
-        console.log('playlist mainView triggered');
         mainview = true;
         return API.showPlaylistView(mainview);
       });

@@ -61,6 +61,10 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showEpisodeList model
 
+      featureNotImplemented: ->
+        require ["apps/episodes/feed/feed_controller"], ->
+          console.log("featureNotImplemented triggered in EpisodesApp Mediator")
+          EpisodesApp.Feed.Controller.notImplemented()
 
     Swabcast.on "media:all", ->
       API.showPageMedia()
@@ -90,11 +94,16 @@ define ["app"], (Swabcast) ->
     Swabcast.on "feed:details", (model) ->
       API.showFeedDetails model
 
+    Swabcast.on "feature:not:implemented", ->
+      API.featureNotImplemented()
+
+    # need to update this by adding to the show controller
+    # retrieve by id
     Swabcast.on "feed:episodelist", (model) ->
+      # Swabcast.navigate "episodes-list/" + model.get("_id")
       API.showFeedEpisodes model
 
     Swabcast.on "playist:mainview", ->
-      console.log('playlist mainView triggered')
       mainview = true
       API.showPlaylistView(mainview)
 

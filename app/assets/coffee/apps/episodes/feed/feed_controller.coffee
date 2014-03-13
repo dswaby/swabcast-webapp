@@ -19,15 +19,12 @@ define ["app", "apps/episodes/feed/feed_view", "apps/episodes/show/show_view", "
           feedUrl: model.parent.get("feedUrl")
 
         view = new ShowView.EpisodeDetail(model: model)
-        console.log("show episode details triggered, model: ", model)
         view.on "episodes:list", ->
           view.trigger "view:close"
 
         Swabcast.dialogRegion.show view
 
       showEpisodeList: (model)->
-        console.log("Feed controller recieved model, creating showview.episodelist", model)
-        console.log(model)
         view = new ShowView.EpisodeList(model: model)
         view.on "episodes:list", ->
           view.trigger "view:close"
@@ -36,6 +33,16 @@ define ["app", "apps/episodes/feed/feed_view", "apps/episodes/show/show_view", "
 
       showFeedDetails: (model) ->
         view = new ShowView.Feed(model: model)
+        view.on "episodes:list", ->
+          console.log("episodes:list triggered")
+          view.trigger "dialog:close"
+
+        Swabcast.dialogRegion.show view
+
+      notImplemented: ->
+        console.log("Made it here")
+        view = new ShowView.FeatureNotImplemented()
+        console.log("Not Implemented View Triggered")
         view.on "episodes:list", ->
           view.trigger "dialog:close"
 

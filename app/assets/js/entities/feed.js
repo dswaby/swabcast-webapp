@@ -1427,7 +1427,6 @@
           promise = defer.promise();
           $.when(promise).done(function(feeds) {
             var models;
-            console.log(feeds);
             if (feeds.length === 0) {
               models = initializeFeeds();
               return feeds.reset(models);

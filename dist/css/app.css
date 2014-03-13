@@ -3084,8 +3084,8 @@ meta.foundation-mq-topbar {
 }
 /* line 311, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .tab-bar .menu-icon:hover span {
-  -webkit-box-shadow: 1px 10px 1px 1px #b3b3b3, 1px 16px 1px 1px #b3b3b3, 1px 22px 1px 1px #b3b3b3;
-  box-shadow: 0 10px 0 1px #b3b3b3, 0 16px 0 1px #b3b3b3, 0 22px 0 1px #b3b3b3;
+  -webkit-box-shadow: 1px 10px 1px 1px #e6e6e6, 1px 16px 1px 1px #e6e6e6, 1px 22px 1px 1px #e6e6e6;
+  box-shadow: 0 10px 0 1px #e6e6e6, 0 16px 0 1px #e6e6e6, 0 22px 0 1px #e6e6e6;
 }
 
 /* line 323, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
@@ -3096,7 +3096,7 @@ meta.foundation-mq-topbar {
   bottom: 0;
   position: absolute;
   overflow-y: auto;
-  background: #d3d7d7;
+  background: #333333;
   z-index: 1001;
   box-sizing: content-box;
   -webkit-overflow-scrolling: touch;
@@ -3120,7 +3120,7 @@ meta.foundation-mq-topbar {
   bottom: 0;
   position: absolute;
   overflow-y: auto;
-  background: #d3d7d7;
+  background: #333333;
   z-index: 1001;
   box-sizing: content-box;
   -webkit-overflow-scrolling: touch;
@@ -3147,18 +3147,18 @@ ul.off-canvas-list li label {
   padding: 0.3rem 0.9375rem;
   color: #5e5e5e;
   text-transform: uppercase;
-  font-weight: regular;
+  font-weight: bold;
   background: white;
   border-top: 1px solid white;
-  border-bottom: 1px solid #5e5e5e;
-  margin: 10;
+  border-bottom: none;
+  margin: 15px;
 }
 /* line 224, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 ul.off-canvas-list li a {
   display: block;
   padding: 0.66667rem;
-  color: #222222;
-  border-bottom: 1px solid #9ba4a4;
+  color: white;
+  border-bottom: 1px solid #262626;
   transition: background 300ms ease;
 }
 /* line 229, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
@@ -4095,11 +4095,6 @@ table tr td,
 table tfoot tr td {
   display: table-cell;
   line-height: 1.125rem;
-}
-
-/* line 13, ../scss/app.scss */
-.selected li {
-  background-color: #f2f2f2;
 }
 
 /* line 17, ../scss/app.scss */

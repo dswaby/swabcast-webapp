@@ -1,6 +1,19 @@
 (function() {
-  define(["app", "tpl!apps/episodes/show/templates/episode_detailed_view.tpl", "tpl!apps/episodes/show/templates/missing_episode.tpl", "tpl!apps/episodes/show/templates/feed_detailed.tpl", "tpl!apps/episodes/show/templates/feed_episodes.tpl", "tpl!apps/episodes/show/templates/episode_item_view.tpl"], function(Swabcast, episodeDetailedTpl, missingTpl, feedDetailedTpl, feedEpisodesTpl, episodeItemViewTpl) {
+  define(["app", "tpl!apps/episodes/show/templates/episode_detailed_view.tpl", "tpl!apps/episodes/show/templates/missing_episode.tpl", "tpl!apps/episodes/show/templates/feature_not_implemented.tpl", "tpl!apps/episodes/show/templates/feed_detailed.tpl", "tpl!apps/episodes/show/templates/feed_episodes.tpl", "tpl!apps/episodes/show/templates/episode_item_view.tpl"], function(Swabcast, episodeDetailedTpl, missingTpl, featureNotImplemented, feedDetailedTpl, feedEpisodesTpl, episodeItemViewTpl) {
     Swabcast.module("EpisodesApp.Show.View", function(View, Swabcast, Backbone, Marionette, $, _) {
+      View.FeatureNotImplemented = Marionette.ItemView.extend({
+        template: featureNotImplemented,
+        events: {
+          "click button.js-back-button": "goBack"
+        },
+        initialize: function() {
+          return this.title = "Feature Not Implemented Yet";
+        },
+        goBack: function(e) {
+          console.log("goBack Triggered");
+          return this.trigger("dialog:close");
+        }
+      });
       View.EpisodeNotFound = Marionette.ItemView.extend({
         template: missingTpl
       });
@@ -11,15 +24,17 @@
           "click a.js-edit": "editClicked",
           "click button.js-enqueue": "queueEpisode"
         },
+        initialize: function() {
+          return this.title = this.model.get("subscriptionTitle");
+        },
         editClicked: function(e) {
           e.preventDefault();
           e.stopPropagation();
           return this.trigger("episode:edit", this.model);
         },
         showList: function(e) {
-          console.log("show episode list triggered, event:");
           e.stopPropagation();
-          return this.trigger("episodes:list");
+          return this.trigger("dialog:close");
         },
         queueEpisode: function(e) {
           e.preventDefault();
@@ -34,12 +49,15 @@
       View.Feed = Marionette.ItemView.extend({
         template: feedDetailedTpl,
         events: {
-          "click button.js-show-list": "showList"
+          "click button.js-back-button": "goBack"
         },
-        showList: function(e) {
-          console.log("show feed list triggered, event:", e);
+        initialize: function() {
+          return this.title = this.model.get("subscriptionTitle");
+        },
+        goBack: function(e) {
           e.stopPropagation();
-          return this.trigger("view:show");
+          console.log("goBack Triggered");
+          return this.trigger("dialog:close");
         }
       });
       View.EpisodeListItem = Marionette.ItemView.extend({
@@ -87,7 +105,6 @@
         },
         initialize: function() {
           var parent, trackList;
-          console.log("recieved model", this.model);
           parent = this.model;
           trackList = new Swabcast.Entities.Episodes(this.model.get("episodes"));
           this.title = this.model.get("subscriptionTitle");
