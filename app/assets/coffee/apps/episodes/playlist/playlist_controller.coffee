@@ -1,7 +1,7 @@
 define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/player_controller"], (Swabcast, View) ->
   Swabcast.module "EpisodesApp.Playlist", (Playlist, Swabcast, Backbone, Marionette, $, _) ->
     Playlist.Controller = showTracks: ->
-
+      donut = true
 
       #require(['common/views'], function(){
       #                    var loadingView = new Swabcast.Common.Views.Loading();
