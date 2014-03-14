@@ -10,7 +10,6 @@
           return this.title = "Feature Not Implemented Yet";
         },
         goBack: function(e) {
-          console.log("goBack Triggered");
           return this.trigger("dialog:close");
         }
       });
@@ -25,7 +24,6 @@
           "click button.js-enqueue": "queueEpisode"
         },
         initialize: function() {
-          console.log("episode detailed view");
           return this.title = this.model.get("subscriptionTitle");
         },
         editClicked: function(e) {
@@ -53,12 +51,10 @@
           "click button.js-back-button": "goBack"
         },
         initialize: function() {
-          console.log("feed detailed view");
           return this.title = this.model.get("subscriptionTitle");
         },
         goBack: function(e) {
           e.stopPropagation();
-          console.log("goBack Triggered");
           return this.trigger("dialog:close");
         }
       });
@@ -75,8 +71,7 @@
         destroyTrackView: function(e) {
           e.preventDefault();
           e.stopPropagation();
-          this.trigger("episode:delete", this.model);
-          return console.log("clicked", this.model);
+          return this.trigger("episode:delete", this.model);
         },
         showClicked: function(e) {
           e.preventDefault();

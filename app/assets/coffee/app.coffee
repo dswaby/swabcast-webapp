@@ -30,6 +30,8 @@ define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/mari
           Swabcast.trigger "media:all"
         if Swabcast.getCurrentRoute() is "library"
           Swabcast.trigger "media:all"
+        if Swabcast.getCurrentRoute() is "test"
+          console.log("Testing")
         if Swabcast.getCurrentRoute() is "playlist"
           Swabcast.trigger "media:all"
           console.log("playlist triggered")

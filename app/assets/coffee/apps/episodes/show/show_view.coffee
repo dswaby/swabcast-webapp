@@ -18,7 +18,6 @@ define ["app",
 
       goBack: (e) ->
         #e.stopPropagation()
-        console.log("goBack Triggered")
         @trigger "dialog:close"
     )
     # view for displaying summary page of individual episode
@@ -32,7 +31,6 @@ define ["app",
         "click button.js-enqueue": "queueEpisode"
 
       initialize: ->
-        console.log("episode detailed view")
         @title = @model.get("subscriptionTitle")
 
       editClicked: (e) ->
@@ -60,13 +58,10 @@ define ["app",
         "click button.js-back-button": "goBack"
 
       initialize: ->
-        console.log("feed detailed view")
-
         @title = @model.get("subscriptionTitle")
 
       goBack: (e) ->
         e.stopPropagation()
-        console.log("goBack Triggered")
         @trigger "dialog:close"
     )
 
@@ -84,7 +79,6 @@ define ["app",
         e.preventDefault()
         e.stopPropagation()
         @trigger "episode:delete", @model
-        console.log "clicked", @model
 
       showClicked: (e) ->
         e.preventDefault()

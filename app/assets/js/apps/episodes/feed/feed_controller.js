@@ -50,16 +50,13 @@
             model: model
           });
           view.on("episodes:list", function() {
-            console.log("episodes:list triggered");
             return view.trigger("dialog:close");
           });
           return Swabcast.dialogRegion.show(view);
         },
         notImplemented: function() {
           var view;
-          console.log("Made it here");
           view = new ShowView.FeatureNotImplemented();
-          console.log("Not Implemented View Triggered");
           view.on("episodes:list", function() {
             return view.trigger("dialog:close");
           });

@@ -34,15 +34,12 @@ define ["app", "apps/episodes/feed/feed_view", "apps/episodes/show/show_view", "
       showFeedDetails: (model) ->
         view = new ShowView.Feed(model: model)
         view.on "episodes:list", ->
-          console.log("episodes:list triggered")
           view.trigger "dialog:close"
 
         Swabcast.dialogRegion.show view
 
       notImplemented: ->
-        console.log("Made it here")
         view = new ShowView.FeatureNotImplemented()
-        console.log("Not Implemented View Triggered")
         view.on "episodes:list", ->
           view.trigger "dialog:close"
 
