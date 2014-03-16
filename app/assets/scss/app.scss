@@ -6,13 +6,38 @@
 @import "../bower_components/foundation/scss/foundation/components/visibility";
 @import "../bower_components/foundation/scss/foundation/components/reveal";
 @import "../bower_components/foundation/scss/foundation/components/tables";
+@import "../bower_components/foundation/scss/foundation/components/alert-boxes";
 
+
+.off-canvas-wrap {
+  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9)) !important;
+}
 
 
 //custom styles
 // .selected li {
 //   background-color: #ffffff;
 // }
+
+.feed-head {
+  padding: 20px;
+  position: relative;
+  background: #14b9e8 !important;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+}
+
+.feed-color {
+  color: #14b9e8 !important;
+}
+
+.feed-list {
+  background: #4B4B4B -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(71, 69, 69)), to(#3D3B3B)) !important;
+}
+
+.not-found {
+  margin-left:10px;
+}
 
 .episodes-table-wrapper {
   height: 100%;
@@ -30,6 +55,11 @@
   max-width: 275px;
 }
 
+.icon-closure {
+  font-size:30px;
+  margin-right:5px;
+  max-width:30px;
+}
 //FOUNDATION ICONS
 @font-face {
   font-family: "foundation-icons";
@@ -42,6 +72,7 @@
   font-style: normal;
 }
 .fi-alert:before,
+.fi-star:before,
 .fi-arrow-up:before,
 .fi-skull:before,
 .fi-torso-business:before,
@@ -75,6 +106,7 @@
   display: inline-block;
   text-decoration: inherit;
 }
+.fi-star:before { content: "\f1ee"; }
 .fi-play:before { content: "\f198"; }
 .fi-plus:before { content: "\f199"; }
 .fi-trash:before { content: "\f204"; }
@@ -265,4 +297,4 @@ $button-round: $global-rounded;
 $button-disabled-opacity: 0.6;
 
 
-
+$header-font-color: #444444 !default;

@@ -19,7 +19,7 @@
       View.EpisodeDetail = Marionette.ItemView.extend({
         template: episodeDetailedTpl,
         events: {
-          "click button.js-show-list": "showList",
+          "click button.dismiss": "closeDialog",
           "click a.js-edit": "editClicked",
           "click button.js-enqueue": "queueEpisode"
         },
@@ -31,9 +31,8 @@
           e.stopPropagation();
           return this.trigger("episode:edit", this.model);
         },
-        showList: function(e) {
-          e.stopPropagation();
-          return Swabcast.trigger("feed:episodelist", this.model.parent);
+        closeDialog: function(e) {
+          return this.trigger("dialog:close");
         },
         queueEpisode: function(e) {
           e.preventDefault();
@@ -65,7 +64,7 @@
         events: {
           "click a.js-enqueue": "toggleQueue",
           "click a.js-feedview": "feedDetails",
-          "click a.js-view-detail": "showClicked",
+          "click td.js-view-detail": "showClicked",
           "click a.js-preview-audio": "previewAudio"
         },
         destroyTrackView: function(e) {
@@ -89,11 +88,23 @@
             this.model.save();
             Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.model);
           }
+          this.$el.fadeOut("slow", function() {
+            return $(this).fadeIn("slow");
+          });
           return this.trigger("dialog:close");
         },
         previewAudio: function(e) {
           e.preventDefault();
           return e.stopPropagation();
+        },
+        flash: function(cssClass) {
+          var $view;
+          $view = this.$el;
+          return $view.hide().toggleClass(cssClass).fadeIn(400, function() {
+            return setTimeout((function() {
+              return $view.toggleClass(cssClass);
+            }), 300);
+          });
         }
       });
       return View.EpisodeList = Marionette.CompositeView.extend({
@@ -130,6 +141,7 @@
           return this.$el.toggleClass("success");
         },
         showFeedEpisodes: function(e) {
+          console.log("WHAT THE FUCK");
           e.preventDefault();
           e.stopPropagation();
           return Swabcast.trigger("feed:details", this.model);

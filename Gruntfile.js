@@ -181,9 +181,9 @@ module.exports = function (grunt) {
         },
         docco: {
           debug: {
-            src: ['<%= swabstack.app %>/assets/js'],
+            src: ['<%= swabstack.app %>/assets/coffee/**/*.coffee'],
             options: {
-              output: 'docs/'
+              output: './docs/'
             }
           }
         },

@@ -42,4 +42,4 @@ define ["app", "tpl!apps/episodes/edit/templates/edit_episode.tpl"], (Swabcast, 
         _.each errors, markErrors
     )
 
-  Swabcast.EpisodesApp.Common.Views
+  Swabcast.Common.Views

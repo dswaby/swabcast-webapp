@@ -10,7 +10,8 @@
       marionette: "vendor/backbone.marionette",
       tpl: "vendor/tpl",
       json2: "vendor/json2",
-      foundation: "vendor/foundation"
+      foundation: "vendor/foundation",
+      transmit: "vendor/jquery.transmit"
     },
     shim: {
       underscore: {
@@ -29,11 +30,17 @@
         exports: "Foundation"
       },
       "jquery-ui": ["jquery"],
+      transmit: {
+        deps: ["jquery"]
+      },
       localstorage: ["backbone"],
       "vendor/foundation.offcanvas": {
         deps: ["jquery", "foundation"]
       },
       "vendor/foundation.reveal": {
+        deps: ["jquery", "foundation"]
+      },
+      "vendor/foundation.fastclick": {
         deps: ["jquery", "foundation"]
       }
     },
@@ -45,7 +52,7 @@
     return Swabcast.start();
   });
 
-  requirejs(["jquery", "foundation", "vendor/foundation.offcanvas", "vendor/foundation.reveal"], function($) {
+  requirejs(["jquery", "foundation", "vendor/foundation.offcanvas", "vendor/foundation.reveal", "vendor/foundation.fastclick"], function($) {
     (function($, window, undefined_) {
       var $doc, Modernizr;
       $doc = $(document);

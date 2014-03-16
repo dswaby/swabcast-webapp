@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"test/lib",
+				"node_modules",
+				"app/assets/foundation-icons",
+				"docs/",
+				".sass-cache/",
+				"app/.sass-cache/"
+			],
+			"follow_symlinks": true,
+			"path": "."
+		}
+	]
+}

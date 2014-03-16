@@ -42,7 +42,44 @@
           view.on("episodes:list", function() {
             return view.trigger("view:close");
           });
-          return Swabcast.dialogRegion.show(view);
+          require(["common/view"], function(CommonViews) {
+            var backButton;
+            backButton = new CommonViews.NavHelper({
+              buttonText: "Back to subscriptions"
+            });
+            return Swabcast.navHelperRegion.show(backButton);
+          });
+          return Swabcast.libraryRegion.show(view);
+        },
+        showFeedEpisodesById: function(id) {
+          require(["common/view"], function(CommonViews) {
+            var backButton, loadingView;
+            loadingView = new CommonViews.Loading({
+              title: "Artificialy delaying this response",
+              message: "This is the view that will show if waiting for data"
+            });
+            Swabcast.libraryRegion.show(loadingView);
+            backButton = new CommonViews.NavHelper({
+              buttonText: "Back to subscriptions"
+            });
+            Swabcast.navHelperRegion.show(backButton);
+          });
+          return require(["entities/feed"], function() {
+            var fetchingFeed;
+            fetchingFeed = Swabcast.request("feed:entity", id);
+            return $.when(fetchingFeed).done(function(feed) {
+              var view;
+              view = void 0;
+              if (feed !== undefined) {
+                view = new ShowView.EpisodeList({
+                  model: feed
+                });
+              } else {
+                view = new View.FeedNotFound();
+              }
+              Swabcast.libraryRegion.show(view);
+            });
+          });
         },
         showFeedDetails: function(model) {
           var view;

@@ -3,13 +3,13 @@ define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/mari
   Swabcast = new Marionette.Application()
   Swabcast.debugging = true
   Swabcast.addRegions
-    mainRegion: "#main-region"
     sideBarRegion: "#sidebar-region"
     libraryRegion: "#library-region"
     playerRegion: "#player"
     navRegion:"#nav-regions"
     dialogRegion: Marionette.Region.Dialog.extend(el: "#dialog-region")
-    modalRegion: Marionette.Region.ModalRegion.extend(el: "#modal-region")
+    notificationRegion: "#notification-region"
+    navHelperRegion: "#navhelper-region"
 
   #route helpers
   Swabcast.navigate = (route, options) ->
@@ -30,8 +30,8 @@ define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/mari
           Swabcast.trigger "media:all"
         if Swabcast.getCurrentRoute() is "library"
           Swabcast.trigger "media:all"
-        if Swabcast.getCurrentRoute() is "test"
-          console.log("Testing")
+        # if Swabcast.getCurrentRoute() is "feed"
+        #   Swabcast.trigger("feedid:episodeslist")
         if Swabcast.getCurrentRoute() is "playlist"
           Swabcast.trigger "media:all"
           console.log("playlist triggered")

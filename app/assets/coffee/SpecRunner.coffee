@@ -1,5 +1,5 @@
 requirejs.config
-  baseUrl: "../assets/js"
+  baseUrl: "assets/js"
   paths:
     backbone: "vendor/backbone"
     localstorage: "vendor/backbone.localstorage"
@@ -9,12 +9,12 @@ requirejs.config
     marionette: "vendor/backbone.marionette"
     tpl: "vendor/tpl"
     json2: "vendor/json2"
-    # foundation: "vendor/foundation"
-    # offcanvas: "vendor/foundation.offcanvas"
-    # reveal: "vendor/foundation.reveal"
-    jasmine: "../test/lib/jasmine-2.0.0/jasmine",
-    "jasmine-html": "../test/lib/jasmine-2.0.0/jasmine-html",
-    spec: "../test/spec"
+    foundation: "vendor/foundation"
+    jasmine: "vendor/jasmine"
+    "jasmine-html": "vendor/jasmine-html"
+
+
+    spec: "../../../test/jasmine/spec/"
 
   #syphon: 'vendor/backbone.syphon',
   shim:
@@ -29,37 +29,48 @@ requirejs.config
       deps: ["backbone"]
       exports: "Marionette"
 
+    foundation:
+      deps: ["jquery"]
+      exports: "Foundation"
+
     "jquery-ui": ["jquery"]
 
     #   'spin.jquery':['jquery'],
     #   spin: ['spin.jquery'],
     localstorage: ["backbone"]
 
+    "vendor/foundation.offcanvas":
+      deps: ["jquery", "foundation"]
+
+    "vendor/foundation.reveal":
+      deps: ["jquery", "foundation"]
+
+    "vendor/foundation.fastclick":
+      deps: ["jquery", "foundation"]
+
     jasmine:
-      deps: ""
       exports: "jasmine"
 
     "jasmine-html":
       deps: ["jasmine"]
-      exports: "jasmine"
-
-    # foundation: ["jquery"]
-    #   deps:
-    #   exports: "fn"
+    exports: "jasmine"
 
     # "reveal": ["foundation"]
 
     # "offcanvas": ["foundation"]
 
+  name: "main",
+  out: "main.min.js"
 
 #syphon:['backbone']
-require ["app"], (Swabcast) ->
-  Swabcast.start()
+
+
 
 require [
-  "app"
-  "jasmine-html"
-], ($, jasmine) ->
+  "vendor/underscore"
+  "vendor/jquery"
+  "vendor/jasmine-html"
+], (_, $, jasmine) ->
   jasmineEnv = jasmine.getEnv()
   jasmineEnv.updateInterval = 1000
   htmlReporter = new jasmine.HtmlReporter()
@@ -68,12 +79,14 @@ require [
     htmlReporter.specFilter spec
 
   specs = []
-  specs.push "lib/jasmine/spec/notepadSpec"
+  specs.push "spec/FeedSpec"
+
   $ ->
-    require specs, (spec) ->
+    require specs, ->
       jasmineEnv.execute()
       return
 
     return
 
   return
+

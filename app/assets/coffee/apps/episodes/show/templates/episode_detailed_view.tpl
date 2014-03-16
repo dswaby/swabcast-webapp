@@ -15,9 +15,9 @@
             <% if (typeof(episodeSummary) === "undefined") { %>
                 <p>Episode Summary not available</p>
             <% } %>
-            <button class="button js-show-list">
+            <button class="button dismiss">
                 <i class="icon-arrow-left"></i>
-                Back
+                Close
             </button>
             <button class="button js-enqueue">
                 <i class="icon-plus-sign"></i>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>playlist.coffee</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="SpecRunner.html">
+                SpecRunner.coffee
+              </a>
+            
+              
+              <a class="source" href="app.html">
+                app.coffee
+              </a>
+            
+              
+              <a class="source" href="dialog.html">
+                dialog.coffee
+              </a>
+            
+              
+              <a class="source" href="modal.html">
+                modal.coffee
+              </a>
+            
+              
+              <a class="source" href="revealoptions.html">
+                revealoptions.coffee
+              </a>
+            
+              
+              <a class="source" href="localstorage.html">
+                localstorage.coffee
+              </a>
+            
+              
+              <a class="source" href="episodes_app.html">
+                episodes_app.coffee
+              </a>
+            
+              
+              <a class="source" href="feed_controller.html">
+                feed_controller.coffee
+              </a>
+            
+              
+              <a class="source" href="feed_view.html">
+                feed_view.coffee
+              </a>
+            
+              
+              <a class="source" href="list_controller.html">
+                list_controller.coffee
+              </a>
+            
+              
+              <a class="source" href="list_view.html">
+                list_view.coffee
+              </a>
+            
+              
+              <a class="source" href="nav_controller.html">
+                nav_controller.coffee
+              </a>
+            
+              
+              <a class="source" href="nav_view.html">
+                nav_view.coffee
+              </a>
+            
+              
+              <a class="source" href="player_controller.html">
+                player_controller.coffee
+              </a>
+            
+              
+              <a class="source" href="player_view.html">
+                player_view.coffee
+              </a>
+            
+              
+              <a class="source" href="playlist_controller.html">
+                playlist_controller.coffee
+              </a>
+            
+              
+              <a class="source" href="playlist_view.html">
+                playlist_view.coffee
+              </a>
+            
+              
+              <a class="source" href="show_controller.html">
+                show_controller.coffee
+              </a>
+            
+              
+              <a class="source" href="show_view.html">
+                show_view.coffee
+              </a>
+            
+              
+              <a class="source" href="list_controller.html">
+                list_controller.coffee
+              </a>
+            
+              
+              <a class="source" href="list_view.html">
+                list_view.coffee
+              </a>
+            
+              
+              <a class="source" href="show_controller.html">
+                show_controller.coffee
+              </a>
+            
+              
+              <a class="source" href="show_view.html">
+                show_view.coffee
+              </a>
+            
+              
+              <a class="source" href="subscriptions_app.html">
+                subscriptions_app.coffee
+              </a>
+            
+              
+              <a class="source" href="modal.html">
+                modal.coffee
+              </a>
+            
+              
+              <a class="source" href="utils.html">
+                utils.coffee
+              </a>
+            
+              
+              <a class="source" href="view.html">
+                view.coffee
+              </a>
+            
+              
+              <a class="source" href="views.html">
+                views.coffee
+              </a>
+            
+              
+              <a class="source" href="feed.html">
+                feed.coffee
+              </a>
+            
+              
+              <a class="source" href="player.html">
+                player.coffee
+              </a>
+            
+              
+              <a class="source" href="playlist.html">
+                playlist.coffee
+              </a>
+            
+              
+              <a class="source" href="subscriptions.html">
+                subscriptions.coffee
+              </a>
+            
+              
+              <a class="source" href="topics.html">
+                topics.coffee
+              </a>
+            
+              
+              <a class="source" href="require_main.html">
+                require_main.coffee
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>playlist.coffee</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>define [<span class="hljs-string">"app"</span>, <span class="hljs-string">"apps/config/storage/localstorage"</span>, <span class="hljs-string">"entities/feed"</span>], <span class="hljs-function"><span class="hljs-params">(Swabcast)</span> -&gt;</span>
+  Swabcast.<span class="hljs-built_in">module</span> <span class="hljs-string">"Entities"</span>, <span class="hljs-function"><span class="hljs-params">(Entities, Swabcast, Backbone, Marionette, $, _)</span> -&gt;</span>
+
+    Entities.QueuedEpisode = Entities.Episode.extend(
+      <span class="hljs-attribute">urlRoot</span>: <span class="hljs-string">"playlist"</span>
+      <span class="hljs-attribute">order</span>: <span class="hljs-number">0</span>
+    )
+
+    Entities.Playlist = Entities.Episodes.extend(
+      <span class="hljs-attribute">url</span>: <span class="hljs-string">"playlist"</span>
+      <span class="hljs-attribute">model</span>: Entities.QueuedEpisode
+      <span class="hljs-attribute">comparator</span>: <span class="hljs-string">"id"</span>
+    )
+    Entities.configureStorage Entities.Playlist
+
+    playlist = <span class="hljs-literal">undefined</span>
+    <span class="hljs-function"><span class="hljs-title">initializePlaylist</span> = -&gt;</span>
+      blankPlaylist = <span class="hljs-keyword">new</span> Entities.Playlist()
+      blankPlaylist.save()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>public</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    API =
+      <span class="hljs-attribute">getEpisodeEntity</span>: <span class="hljs-function"><span class="hljs-params">(uniqueId)</span> -&gt;</span>
+        episode = <span class="hljs-keyword">new</span> Entities.Episode(<span class="hljs-attribute">id</span>: uniqueId)
+        defer = $.Deferred()
+        setTimeout (<span class="hljs-function">-&gt;</span>
+          episode.fetch
+            <span class="hljs-attribute">success</span>: <span class="hljs-function"><span class="hljs-params">(data)</span> -&gt;</span>
+              defer.resolve data
+
+            <span class="hljs-attribute">error</span>:<span class="hljs-function"> -&gt;</span>
+              defer.resolve `<span class="javascript"><span class="hljs-literal">undefined</span></span>`
+
+        ), <span class="hljs-number">100</span>
+        defer.promise()
+
+      <span class="hljs-attribute">getPlaylistEntities</span>:<span class="hljs-function"> -&gt;</span>
+        episodes = <span class="hljs-keyword">new</span> Entities.Playlist()
+        defer = $.Deferred()
+        episodes.fetch <span class="hljs-attribute">success</span>: <span class="hljs-function"><span class="hljs-params">(data)</span> -&gt;</span>
+          defer.resolve data
+
+        promise = defer.promise()
+        $.<span class="hljs-keyword">when</span><span class="hljs-function"><span class="hljs-params">(promise)</span>.<span class="hljs-title">done</span> <span class="hljs-params">(episodes)</span> -&gt;</span>
+          <span class="hljs-keyword">if</span> episodes.length <span class="hljs-keyword">is</span> <span class="hljs-number">0</span>
+            models = initializeEpisodes()
+            episodes.reset models
+
+        promise
+
+      <span class="hljs-attribute">getPlaylistEntities</span>:<span class="hljs-function"> -&gt;</span>
+        queuedTracks = <span class="hljs-keyword">new</span> Entities.Playlist()
+        defer = $.Deferred()
+        queuedTracks.fetch <span class="hljs-attribute">success</span>: <span class="hljs-function"><span class="hljs-params">(data)</span> -&gt;</span>
+          defer.resolve data
+
+        promise = defer.promise()
+        $.<span class="hljs-keyword">when</span><span class="hljs-function"><span class="hljs-params">(promise)</span>.<span class="hljs-title">done</span> <span class="hljs-params">(queuedtracks)</span> -&gt;</span>
+
+        promise
+
+      <span class="hljs-attribute">firstInPlaylist</span>:<span class="hljs-function"> -&gt;</span>
+        queuedTracks = <span class="hljs-keyword">new</span> Entities.Playlist()
+        defer = $.Deferred()
+        queuedTracks.fetch
+        <span class="hljs-attribute">success</span>: <span class="hljs-function"><span class="hljs-params">(playlist)</span> -&gt;</span>
+          episodes = playlist.get(<span class="hljs-string">"episodes"</span>)
+          <span class="hljs-keyword">if</span> episodes.length
+            defer.resolve episodes[<span class="hljs-number">0</span>]
+          <span class="hljs-keyword">else</span>
+            defer.resolve <span class="hljs-string">'undefined'</span>
+        <span class="hljs-attribute">error</span>:<span class="hljs-function"> -&gt;</span>
+            defer.resolve `<span class="javascript"><span class="hljs-literal">undefined</span></span>`
+
+        defer.promise()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>$.when(promise).done (playlist) -&gt;
+  episodes = playlist.get(“episodes”)
+  if not episodes.length
+    return promise</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>  promise = Entities.Feed.getEpisodeEntity(playlist.episodes[0])</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>promise</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>has to be a more efficient way of doing this</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-attribute">updatePlaylistOrder</span>:<span class="hljs-function"> -&gt;</span>
+        queuedtracks = <span class="hljs-property">@getPlaylistEntities</span>()
+        <span class="hljs-keyword">return</span>  <span class="hljs-keyword">if</span> queuedtracks.length <span class="hljs-keyword">is</span> <span class="hljs-number">0</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>get the highestOrderedTrackNumber</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        highestOrder = queuedtracks.max<span class="hljs-function"><span class="hljs-params">((t) -&gt;
+          t.get <span class="hljs-string">"order"</span>
+        )</span>
+
+</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>update order attribute for all models</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        <span class="hljs-keyword">if</span> highestOrder - <span class="hljs-number">1</span> <span class="hljs-keyword">isnt</span> queuedtracks.length
+          <span class="hljs-built_in">console</span>.log <span class="hljs-string">"updating track order attributes"</span>
+          queuedtracks.forEach <span class="hljs-function"><span class="hljs-params">(t)</span> -&gt;</span>
+            t.set <span class="hljs-attribute">order</span>: t.indexOf(<span class="hljs-property">@model</span>) + <span class="hljs-number">1</span>
+            t.save()
+            <span class="hljs-built_in">console</span>.log t
+
+
+    Swabcast.reqres.setHandler <span class="hljs-string">"entities:playlist"</span>,<span class="hljs-function"> -&gt;</span>
+      API.getPlaylistEntities()
+
+    Swabcast.reqres.setHandler <span class="hljs-string">"episode:entity"</span>, <span class="hljs-function"><span class="hljs-params">(uid)</span> -&gt;</span>
+      API.getEpisodeEntity uid
+
+    Swabcast.reqres.setHandler <span class="hljs-string">"episode:playlist"</span>,<span class="hljs-function"> -&gt;</span>
+      API.getPlaylistEntities()
+
+    Swabcast.reqres.setHandler <span class="hljs-string">"playlist:first"</span>,<span class="hljs-function"> -&gt;</span>
+      API.firstInPlaylist()
+
+
+  <span class="hljs-keyword">return</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

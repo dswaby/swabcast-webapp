@@ -4,25 +4,26 @@
       var API;
       EpisodesApp.Router = Marionette.AppRouter.extend({
         appRoutes: {
-          episodes: "showPageMedia",
+          library: "showPageMedia",
           "episodes/:id": "showEpisode",
+          "feed/:id": "showFeedEpisodesById",
           "episodes/:id/edit": "editEpisode",
           playlist: "showPlaylist"
         }
       });
       API = {
         showPageMedia: function() {
+          require(["apps/episodes/nav/nav_controller"], function() {
+            return EpisodesApp.Nav.Controller.showNav();
+          });
           require(["apps/episodes/playlist/playlist_controller"], function() {
             return EpisodesApp.Playlist.Controller.showTracks();
           });
           require(["apps/episodes/feed/feed_controller"], function() {
             return EpisodesApp.Feed.Controller.showFeeds();
           });
-          require(["apps/episodes/player/player_controller"], function() {
+          return require(["apps/episodes/player/player_controller"], function() {
             return EpisodesApp.Player.Controller.showControls();
-          });
-          return require(["apps/episodes/nav/nav_controller"], function() {
-            return EpisodesApp.Nav.Controller.showNav();
           });
         },
         showPlaylistView: function(mainView) {
@@ -72,6 +73,20 @@
             return EpisodesApp.Feed.Controller.showEpisodeList(model);
           });
         },
+        showFeedEpisodesById: function(id) {
+          require(["apps/episodes/nav/nav_controller"], function() {
+            return EpisodesApp.Nav.Controller.showNav();
+          });
+          require(["apps/episodes/playlist/playlist_controller"], function() {
+            return EpisodesApp.Playlist.Controller.showTracks();
+          });
+          require(["apps/episodes/player/player_controller"], function() {
+            return EpisodesApp.Player.Controller.showControls();
+          });
+          return require(["apps/episodes/feed/feed_controller"], function() {
+            return EpisodesApp.Feed.Controller.showFeedEpisodesById(id);
+          });
+        },
         featureNotImplemented: function() {
           return require(["apps/episodes/feed/feed_controller"], function() {
             return EpisodesApp.Feed.Controller.notImplemented();
@@ -110,6 +125,7 @@
         return API.featureNotImplemented();
       });
       Swabcast.on("feed:episodelist", function(model) {
+        Swabcast.navigate("feed/" + model.get("id"));
         return API.showFeedEpisodes(model);
       });
       Swabcast.on("playist:mainview", function() {

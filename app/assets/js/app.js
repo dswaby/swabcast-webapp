@@ -4,7 +4,6 @@
     Swabcast = new Marionette.Application();
     Swabcast.debugging = true;
     Swabcast.addRegions({
-      mainRegion: "#main-region",
       sideBarRegion: "#sidebar-region",
       libraryRegion: "#library-region",
       playerRegion: "#player",
@@ -12,9 +11,8 @@
       dialogRegion: Marionette.Region.Dialog.extend({
         el: "#dialog-region"
       }),
-      modalRegion: Marionette.Region.ModalRegion.extend({
-        el: "#modal-region"
-      })
+      notificationRegion: "#notification-region",
+      navHelperRegion: "#navhelper-region"
     });
     Swabcast.navigate = function(route, options) {
       options || (options = {});
@@ -34,9 +32,6 @@
           }
           if (Swabcast.getCurrentRoute() === "library") {
             Swabcast.trigger("media:all");
-          }
-          if (Swabcast.getCurrentRoute() === "test") {
-            console.log("Testing");
           }
           if (Swabcast.getCurrentRoute() === "playlist") {
             Swabcast.trigger("media:all");

@@ -3,10 +3,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
     Playlist.Controller = showTracks: ->
       donut = true
 
-      #require(['common/views'], function(){
-      #                    var loadingView = new Swabcast.Common.Views.Loading();
-      #                    Swabcast.libraryRegion.show(loadingView);
-      #                });
       require ["entities/playlist"], ->
         fetchingPlaylist = Swabcast.request("entities:playlist")
         playlistLayout = new View.Layout()
@@ -47,7 +43,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               highestOrder = highestOrder.get("order") + 1
 
             #if not in playlist, copy attributes to episode model
-            #TODO decouple the seperate models
+
             unless inQueue
               newTrack = new Swabcast.Entities.QueuedEpisode(
                 uid: model.get("uid") or null
@@ -66,6 +62,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
 
             #TODO - send to playerSaveData and to playercontrols
             else
+              console.log("In queue, send failure response")
 
           playlistLayout.on "show", ->
             playlistLayout.playlistRegion.show playlistTracks

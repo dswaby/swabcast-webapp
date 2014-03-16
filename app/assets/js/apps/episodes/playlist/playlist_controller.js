@@ -66,7 +66,7 @@
                     return tracks.nowPlaying = newTrack;
                   }
                 } else {
-
+                  return console.log("In queue, send failure response");
                 }
               });
               playlistLayout.on("show", function() {

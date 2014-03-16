@@ -49,7 +49,7 @@
         }
       });
     });
-    return Swabcast.EpisodesApp.Common.Views;
+    return Swabcast.Common.Views;
   });
 
 }).call(this);

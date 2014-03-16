@@ -6,45 +6,43 @@
 
   <link rel="shortcut icon" type="image/png" href="lib/jasmine-1.3.1/jasmine_favicon.png">
   <link rel="stylesheet" type="text/css" href="./assets/css/jasmine.css">
-  <script type="text/javascript" src="./assets/js/vendor/jasmine.js"></script>
-  <script type="text/javascript" src="./assets/js/vendor/jasmine-html.js"></script>
+
 
   <!-- include source files here... -->
-  <script type="text/javascript" src="./src/Player.js"></script>
-  <script type="text/javascript" src="./src/Song.js"></script>
-  <script data-main="./assets/js/require_main.js" src="./assets/js/vendor/require.js"></script>
 
+  <script data-main="./assets/js/SpecRunner" src="./assets/js/vendor/require.js"></script>
   <!-- include spec files here... -->
-  <script type="text/javascript" src="../test/SpecHelper.js"></script>
-  <script type="text/javascript" src="../test/PlayerSpec.js"></script>
+
 
   <script type="text/javascript">
-    (function() {
-      var jasmineEnv = jasmine.getEnv();
-      jasmineEnv.updateInterval = 100000;
+require(['vendor/underscore', 'vendor/jquery', 'vendor/jasmine-html'], function(_, $, jasmine){
 
-      var htmlReporter = new jasmine.HtmlReporter();
+  var jasmineEnv = jasmine.getEnv();
+  jasmineEnv.updateInterval = 1000;
 
-      jasmineEnv.addReporter(htmlReporter);
+  var htmlReporter = new jasmine.HtmlReporter();
 
-      jasmineEnv.specFilter = function(spec) {
-        return htmlReporter.specFilter(spec);
-      };
+  jasmineEnv.addReporter(htmlReporter);
 
-      var currentWindowOnload = window.onload;
+  jasmineEnv.specFilter = function(spec) {
+    return htmlReporter.specFilter(spec);
+  };
 
-      window.onload = function() {
-        if (currentWindowOnload) {
-          currentWindowOnload();
-        }
-        execJasmine();
-      };
+  var specs = [];
 
-      function execJasmine() {
-        jasmineEnv.execute();
-      }
+  specs.push('spec/FeedSpec');
 
-    })();
+
+
+  $(function(){
+    require(specs, function(){
+      console.log(specs);
+      jasmineEnv.execute();
+    });
+  });
+
+});
+
   </script>
 
 </head>

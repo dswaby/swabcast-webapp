@@ -1,0 +1,19 @@
+CACHE MANIFEST
+# This is a comment.
+# Cache manifest version 0.0.01
+
+CACHE:
+index.html
+require_main_built.js
+js/
+css/images/
+assets/img/
+
+NETWORK:
+# All URLs that start with the following lines
+# are whitelisted.
+http://swa.by/
+
+FALLBACK
+
+/ /assets/img

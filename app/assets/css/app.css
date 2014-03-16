@@ -638,13 +638,13 @@ td {
 /* Default Link Styles */
 /* line 287, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a {
-  color: #008cba;
+  color: #444444;
   text-decoration: none;
   line-height: inherit;
 }
 /* line 293, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a:hover, a:focus {
-  color: #0078a0;
+  color: #3a3a3a;
 }
 /* line 295, ../bower_components/foundation/scss/foundation/components/_type.scss */
 a img {
@@ -679,7 +679,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222222;
+  color: #444444;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -688,7 +688,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 327, ../bower_components/foundation/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #858585;
   line-height: 0;
 }
 
@@ -725,7 +725,7 @@ h6 {
 /* line 341, ../bower_components/foundation/scss/foundation/components/_type.scss */
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: #858585;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -877,7 +877,7 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: #555555;
+  color: #6f6f6f;
 }
 /* line 466, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote cite:before {
@@ -886,14 +886,14 @@ blockquote cite:before {
 /* line 471, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: #6f6f6f;
 }
 
 /* line 477, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: #858585;
 }
 
 /* Microformats */
@@ -4097,25 +4097,132 @@ table tfoot tr td {
   line-height: 1.125rem;
 }
 
-/* line 17, ../scss/app.scss */
+/* line 106, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding: 0.875rem 1.5rem 0.875rem 0.875rem;
+  font-size: 0.8125rem;
+  background-color: #008cba;
+  border-color: #0078a0;
+  color: white;
+}
+/* line 109, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box .close {
+  font-size: 1.375rem;
+  padding: 9px 6px 4px;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.6875rem;
+  right: 0.25rem;
+  color: #333333;
+  opacity: 0.3;
+}
+/* line 91, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box .close:hover, .alert-box .close:focus {
+  opacity: 0.5;
+}
+/* line 111, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box.radius {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 112, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box.round {
+  -webkit-border-radius: 1000px;
+  border-radius: 1000px;
+}
+/* line 114, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box.success {
+  background-color: #43ac6a;
+  border-color: #3a945b;
+  color: white;
+}
+/* line 115, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box.alert {
+  background-color: #f04124;
+  border-color: #de2d0f;
+  color: white;
+}
+/* line 116, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box.secondary {
+  background-color: #e7e7e7;
+  border-color: #c7c7c7;
+  color: #4f4f4f;
+}
+/* line 117, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box.warning {
+  background-color: #f08a24;
+  border-color: #de770f;
+  color: white;
+}
+/* line 118, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
+.alert-box.info {
+  background-color: #a0d3e8;
+  border-color: #74bfdd;
+  color: #4f4f4f;
+}
+
+/* line 12, ../scss/app.scss */
+.off-canvas-wrap {
+  background: #ece9e9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#ece9e9)) !important;
+}
+
+/* line 22, ../scss/app.scss */
+.feed-head {
+  padding: 20px;
+  position: relative;
+  background: #14b9e8 !important;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+}
+
+/* line 30, ../scss/app.scss */
+.feed-color {
+  color: #14b9e8 !important;
+}
+
+/* line 34, ../scss/app.scss */
+.feed-list {
+  background: #4b4b4b -webkit-gradient(linear, 0% 0%, 0% 100%, from(#474545), to(#3d3b3b)) !important;
+}
+
+/* line 38, ../scss/app.scss */
+.not-found {
+  margin-left: 10px;
+}
+
+/* line 42, ../scss/app.scss */
 .episodes-table-wrapper {
   height: 100%;
   overflow: auto;
 }
 
-/* line 21, ../scss/app.scss */
+/* line 46, ../scss/app.scss */
 .locked {
   overflow: hidden;
 }
 
-/* line 25, ../scss/app.scss */
+/* line 50, ../scss/app.scss */
 .playlist {
   width: 100%;
 }
 
-/* line 29, ../scss/app.scss */
+/* line 54, ../scss/app.scss */
 .library {
   max-width: 275px;
+}
+
+/* line 58, ../scss/app.scss */
+.icon-closure {
+  font-size: 30px;
+  margin-right: 5px;
+  max-width: 30px;
 }
 
 @font-face {
@@ -4126,8 +4233,9 @@ table tfoot tr td {
   font-style: normal;
 }
 
-/* line 67, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 .fi-alert:before,
+.fi-star:before,
 .fi-arrow-up:before,
 .fi-skull:before,
 .fi-torso-business:before,
@@ -4162,129 +4270,134 @@ table tfoot tr td {
   text-decoration: inherit;
 }
 
-/* line 78, ../scss/app.scss */
+/* line 109, ../scss/app.scss */
+.fi-star:before {
+  content: "\f1ee";
+}
+
+/* line 110, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 79, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 80, ../scss/app.scss */
+/* line 112, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 81, ../scss/app.scss */
+/* line 113, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 82, ../scss/app.scss */
+/* line 114, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 83, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 84, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 85, ../scss/app.scss */
+/* line 117, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 86, ../scss/app.scss */
+/* line 118, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 87, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 88, ../scss/app.scss */
+/* line 120, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 89, ../scss/app.scss */
+/* line 121, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 90, ../scss/app.scss */
+/* line 122, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 91, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 92, ../scss/app.scss */
+/* line 124, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 93, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 94, ../scss/app.scss */
+/* line 126, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 95, ../scss/app.scss */
+/* line 127, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 96, ../scss/app.scss */
+/* line 128, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 97, ../scss/app.scss */
+/* line 129, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 98, ../scss/app.scss */
+/* line 130, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 99, ../scss/app.scss */
+/* line 131, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 100, ../scss/app.scss */
+/* line 132, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 104, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
   table-border-color: #ddd;
 }
 
-/* line 112, ../scss/app.scss */
+/* line 144, ../scss/app.scss */
 #player {
   position: fixed;
   height: 75px;
@@ -4298,12 +4411,12 @@ table tfoot tr td {
   cursor: default;
 }
 
-/* line 127, ../scss/app.scss */
+/* line 159, ../scss/app.scss */
 .player-preview {
   margin-left: 80px;
 }
 
-/* line 143, ../scss/app.scss */
+/* line 175, ../scss/app.scss */
 #player-art {
   background-color: transparent;
   display: block;
@@ -4314,24 +4427,24 @@ table tfoot tr td {
   height: 75px;
 }
 
-/* line 156, ../scss/app.scss */
+/* line 188, ../scss/app.scss */
 #controls-wrapper {
   height: 60px;
   position: fixed;
   bottom: 0;
 }
 
-/* line 162, ../scss/app.scss */
+/* line 194, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 166, ../scss/app.scss */
+/* line 198, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 170, ../scss/app.scss */
+/* line 202, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;

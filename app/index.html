@@ -1,15 +1,25 @@
 <!doctype html>
-<!--                        __                __
-                           /\ \__            /\ \
-     ____      ___     ___ \ \ ,_\     __    \_\ \
-    /\_ ,`\   / __`\  / __`\\ \ \/   /'__`\  /'_` \
-    \/_/  /_ /\ \L\ \/\ \L\ \\ \ \_ /\  __/ /\ \L\ \
-      /\____\\ \____/\ \____/ \ \__\\ \____\\ \___,_\
-      \/____/ \/___/  \/___/   \/__/ \/____/ \/__,_ /
--->
-<html class="no-js" lang="en">
-  <head>
+<!---
+  ____              _         _
+ / _____      ____ _| |__  ___| |_ ___ _ __
+ \___ \ \ /\ / / _` | '_ \/ __| __/ _ | '__|
+  ___) \ V  V | (_| | |_) \__ | ||  __| |
+ |____/ \_/\_/ \__,_|_.__/|___/\__\___|_|
 
+-->
+
+
+<html class="no-js" lang="en">
+<!--!(endif)-->
+
+<!--(if target dist)><!-->
+<html class="no-js" lang="en" manifest="cached.manifest">
+<!--!(endif)-->
+  <head>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <!--  iPhone Specific -->
@@ -18,9 +28,10 @@
     <link rel="apple-touch-icon" sizes="120x120" href="assets/img/touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="assets/img/touch-icon-ipad-retina.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
+
     <!--  End iPhone Specific -->
     <title>Swabcast Foundation</title>
-    
+    <!--(if target app)><!-->
     <link rel="stylesheet" href="assets/css/app.css"/>
     <link rel="stylesheet" href="assets/css/jquery-ui-1.10.0.custom.css"/>
      <script src="./assets/js/vendor/modernizr.js"></script>
@@ -45,7 +56,7 @@
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
           <!--  Playlist Container -->
-                <div class="large-3 columns show-for-large-up" style="background:#F4F4F4; height: 550px; padding:5px !important;">
+                <div class="large-3 columns show-for-large-up" style="background:#F4F4F4; height: 550px; padding:5px !important; margin-right:10px;">
                   <div class="show-for-large-up">
                       <div id="side-bar">
                           <h3>Playlist</h3>
@@ -55,17 +66,16 @@
                   </div>
                 </div>
           <!--  End Playlist Container -->
-                <div id="main-region"></div>
+                <div id="navhelper-region"></div>
+                <div id="notification-region"></div>
                 <div id="content">
                   <!-- Library -->
                     <div>
                       <div id="library-region">
-                        <h6>Loading your library........</h6>
-                        <p>this may take a few moments</p></div>
+
                     </div>
                 </div>
                 <div id="dialog-region"> </div>
-                <div id="modal-region"></div>
 
                 </div>
               </div>

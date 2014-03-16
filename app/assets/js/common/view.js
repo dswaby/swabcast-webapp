@@ -1,44 +1,57 @@
 (function() {
-  define(["app", "tpl!apps/common/templates/spinner.tpl"], function(Swabcast, spinnerTpl) {
+  define(["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl"], function(Swabcast, loadingView, notificationView, navHelper) {
     Swabcast.module("Common.Views", function(Views, Swabcast, Backbone, Marionette, $, _) {
-      return Views.Loading = Marionette.ItemView.extend({
-        template: spinnerTpl,
+      Views.Loading = Marionette.ItemView.extend({
+        template: loadingView,
         initialize: function(options) {
           options = options || {};
-          this.title = options.title || "Loading Data";
-          return this.message = options.message || "Plaease Wait";
+          this.title = options.title || "Loading";
+          return this.message = options.message || "Plaease Wait..";
         },
         serializeData: function() {
           return {
             title: this.title,
             message: this.message
           };
+        }
+      });
+      Views.Notification = Marionette.ItemView.extend({
+        template: notificationView,
+        initialize: function(options) {
+          options = options || {};
+          this.title = options.title || "Alert!";
+          this.message = options.message || "This is an alert.";
+          return this.alert = options.alert || "info";
         },
-        onShow: function() {
-          var opts;
-          opts = {
-            lines: 13,
-            length: 20,
-            width: 10,
-            radius: 35,
-            corners: 1,
-            rotate: 0,
-            direction: 1,
-            color: "#000",
-            speed: 2,
-            trail: 60,
-            shadow: true,
-            hwaccel: false,
-            className: "spinner",
-            zIndex: 2e9,
-            top: "30px",
-            left: "auto"
+        serializeData: function() {
+          return {
+            title: this.title,
+            message: this.message,
+            alert: this.alert
           };
-          return $("#spinner").spin(opts);
+        }
+      });
+      return Views.NavHelper = Marionette.ItemView.extend({
+        template: navHelper,
+        events: {
+          "click button.js-library-back": "navigateToLibrary"
+        },
+        initialize: function(options) {
+          options = options || {};
+          return this.buttonText = options.buttonText || "Back";
+        },
+        serializeData: function() {
+          return {
+            buttonText: this.buttonText
+          };
+        },
+        navigateToLibrary: function() {
+          Swabcast.trigger("episodes:library");
+          return this.el.close;
         }
       });
     });
-    return Common.Views;
+    return Swabcast.Common.Views;
   });
 
 }).call(this);

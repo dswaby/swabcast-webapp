@@ -26,7 +26,7 @@ define ["app",
     View.EpisodeDetail = Marionette.ItemView.extend(
       template: episodeDetailedTpl
       events:
-        "click button.js-show-list": "showList"
+        "click button.dismiss": "closeDialog"
         "click a.js-edit": "editClicked"
         "click button.js-enqueue": "queueEpisode"
 
@@ -38,9 +38,8 @@ define ["app",
         e.stopPropagation()
         @trigger "episode:edit", @model
 
-      showList: (e) ->
-        e.stopPropagation()
-        Swabcast.trigger "feed:episodelist", @model.parent
+      closeDialog: (e) ->
+        @trigger "dialog:close"
 
       queueEpisode: (e) ->
         e.preventDefault()
@@ -72,7 +71,7 @@ define ["app",
       events:
         "click a.js-enqueue": "toggleQueue"
         "click a.js-feedview": "feedDetails"
-        "click a.js-view-detail": "showClicked"
+        "click td.js-view-detail": "showClicked"
         "click a.js-preview-audio": "previewAudio"
 
       destroyTrackView: (e) ->
@@ -93,11 +92,20 @@ define ["app",
           @model.set enqueue: true
           @model.save()
           Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @model
+        @$el.fadeOut "slow", ->
+          $(this).fadeIn "slow"
         @trigger "dialog:close"
 
       previewAudio: (e)->
         e.preventDefault()
         e.stopPropagation()
+
+      flash: (cssClass) ->
+        $view = @$el
+        $view.hide().toggleClass(cssClass).fadeIn 400, ->
+          setTimeout (->
+            $view.toggleClass cssClass
+          ), 300
     )
 
     # view for displaying list of episodes for current view
@@ -130,6 +138,8 @@ define ["app",
         @$el.toggleClass "success"
 
       showFeedEpisodes: (e) ->
+        console.log("WHAT THE FUCK")
+
         e.preventDefault()
         e.stopPropagation()
 

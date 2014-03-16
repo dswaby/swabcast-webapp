@@ -1,11 +1,24 @@
 (function() {
-  define(["app", "tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/episodes/feed/templates/feed_view.tpl", "tpl!apps/episodes/feed/templates/library_view.tpl", "tpl!apps/episodes/feed/templates/tracklist.tpl"], function(Swabcast, feedLayoutTpl, feedViewTpl, libraryViewTpl, tracklistTpl) {
+  define(["app", "tpl!apps/episodes/feed/templates/feed_layout.tpl", "tpl!apps/episodes/feed/templates/feed_view.tpl", "tpl!apps/episodes/feed/templates/library_view.tpl", "tpl!apps/episodes/feed/templates/tracklist.tpl", "tpl!apps/episodes/feed/templates/not_found.tpl"], function(Swabcast, feedLayoutTpl, feedViewTpl, libraryViewTpl, tracklistTpl, notFoundTpl) {
     Swabcast.module("EpisodesApp.Feed.View", function(View, Swabcast, Backbone, Marionette, $, _) {
       View.Layout = Marionette.Layout.extend({
         template: feedLayoutTpl,
         regions: {
           podcastDetailsRegion: "#podcast-details",
           feedItemsCollectionRegion: "#feeditems-collection"
+        }
+      });
+      View.FeedNotFound = Marionette.ItemView.extend({
+        tagName: "div",
+        className: "not-found",
+        template: notFoundTpl,
+        events: {
+          "click button.library-back": "backToLibrary",
+          backToLibrary: function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return Swabcast.trigger("episodes:library");
+          }
         }
       });
       View.FeedView = Marionette.ItemView.extend({

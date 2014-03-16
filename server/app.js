@@ -288,9 +288,9 @@ db.once('open', function callback () {
             }
         });
     });
-    app.get('/api/subscribed/:id', function(req, res) {
+    app.get('/api/subscribed/', function(req, res) {
         //will need to get auth_token and retrieve UserDocumentModel._id
-        return UserDocumentModel.findById(req.params.id, function(err, subscription) {
+        return UserDocumentModel.findById('5302cf4471349a081e000007', function(err, subscription) {
             if (!err) {
                 return res.send(subscription);
             } else {

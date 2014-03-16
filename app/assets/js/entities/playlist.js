@@ -6,7 +6,8 @@
         urlRoot: "playlist",
         order: 0
       });
-      Entities.Playlist = Entities.Episodes.extend({
+      Entities.configureStorage(Entities.QueuedEpisode);
+      Entities.Playlist = Backbone.Collection.extend({
         url: "playlist",
         model: Entities.QueuedEpisode,
         comparator: "id"

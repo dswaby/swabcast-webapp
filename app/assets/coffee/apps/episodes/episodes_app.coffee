@@ -1,13 +1,17 @@
 define ["app"], (Swabcast) ->
   Swabcast.module "EpisodesApp", (EpisodesApp, Swabcast, Backbone, Marionette, $, _) ->
     EpisodesApp.Router = Marionette.AppRouter.extend(appRoutes:
-      episodes: "showPageMedia"
+      library: "showPageMedia"
       "episodes/:id": "showEpisode"
+      "feed/:id": "showFeedEpisodesById"
       "episodes/:id/edit": "editEpisode"
       playlist: "showPlaylist"
     )
     API =
       showPageMedia: ->
+        require ["apps/episodes/nav/nav_controller"], ->
+          EpisodesApp.Nav.Controller.showNav()
+
         require ["apps/episodes/playlist/playlist_controller"], ->
           EpisodesApp.Playlist.Controller.showTracks()
 
@@ -16,9 +20,6 @@ define ["app"], (Swabcast) ->
 
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
-
-        require ["apps/episodes/nav/nav_controller"], ->
-          EpisodesApp.Nav.Controller.showNav()
 
       showPlaylistView: (mainView) ->
         require ["apps/episodes/playlist/playlist_controller"], ->
@@ -61,6 +62,19 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showEpisodeList model
 
+      showFeedEpisodesById: (id) ->
+        require ["apps/episodes/nav/nav_controller"], ->
+          EpisodesApp.Nav.Controller.showNav()
+
+        require ["apps/episodes/playlist/playlist_controller"], ->
+          EpisodesApp.Playlist.Controller.showTracks()
+
+        require ["apps/episodes/player/player_controller"], ->
+          EpisodesApp.Player.Controller.showControls()
+
+        require ["apps/episodes/feed/feed_controller"], ->
+          EpisodesApp.Feed.Controller.showFeedEpisodesById id
+
       featureNotImplemented: ->
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.notImplemented()
@@ -96,11 +110,12 @@ define ["app"], (Swabcast) ->
     Swabcast.on "feature:not:implemented", ->
       API.featureNotImplemented()
 
-    # need to update this by adding to the show controller
-    # retrieve by id
     Swabcast.on "feed:episodelist", (model) ->
-      # Swabcast.navigate "episodes-list/" + model.get("_id")
+      Swabcast.navigate "feed/" + model.get("id")
       API.showFeedEpisodes model
+
+    # Swabcast.on "feedid:episodeslist", (id) ->
+    #   API.showFeedEpisodes
 
     Swabcast.on "playist:mainview", ->
       mainview = true
