@@ -4,13 +4,11 @@
       return View.Nav = Marionette.ItemView.extend({
         template: navTpl,
         events: {
-          "click li a.js-playlist": "showPlaylist",
+          "click li.js-playlist": "showPlaylist",
           "click li.js-reset-local": "resetLocalStorage",
           "click li.js-not-implemented": "notImplemented"
         },
         showPlaylist: function(e) {
-          e.preventDefault();
-          e.stopPropagation();
           return Swabcast.trigger("playlist:mainview");
         },
         resetLocalStorage: function(e) {
@@ -22,8 +20,6 @@
           return console.log('storage cleared');
         },
         notImplemented: function(e) {
-          e.preventDefault();
-          e.stopPropagation();
           console.log("not implemented yet :(");
           return Swabcast.trigger("feature:not:implemented");
         }

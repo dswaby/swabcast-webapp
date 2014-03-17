@@ -49,7 +49,7 @@
         },
         showPlaylist: function() {
           return require(["apps/episodes/playlist/playlist_controller"], function() {
-            return EpisodesApp.Playlist.Controller.logThisMessage();
+            return EpisodesApp.Playlist.Controller.showTracks();
           });
         },
         showEpisodeDetails: function(model) {

@@ -21,8 +21,8 @@
     <li class="left-off-canvas-toggle js-not-implemented">
       <a href=""><i class="fi-plus"></i>&nbsp Add Subscriptions</a>
     </li>
-    <li class="show-for-small-only">
-      <a href="#" class="left-off-canvas-toggle js-playlist"><i class="fi-indent-more"></i> &nbsp Playlist</a>
+    <li class="left-off-canvas-toggle js-playlist">
+      <a href=""><i class="fi-indent-more"></i> &nbsp Playlist</a>
     </li>
   </ul>
 </aside>

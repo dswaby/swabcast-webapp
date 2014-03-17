@@ -41,7 +41,7 @@ define ["app"], (Swabcast) ->
 
       showPlaylist: ->
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.logThisMessage()
+          EpisodesApp.Playlist.Controller.showTracks()
 
       showEpisodeDetails: (model) ->
         require ["apps/episodes/feed/feed_controller"], ->

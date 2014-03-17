@@ -52,7 +52,7 @@
               });
             });
             if (mainView) {
-              Swabcast.sideBarRegion.reset();
+              Swabcast.sideBarRegion.close();
               require(["common/view"], function(CommonViews) {
                 var backButton, winheight;
                 backButton = new CommonViews.NavHelper({
@@ -68,10 +68,10 @@
           });
         },
         showPlayistMain: function() {
-          var o;
+          var opt;
           console.log("show mainView");
-          o = true;
-          return this.showTracks(o);
+          opt = true;
+          return this.showTracks(opt);
         }
       };
     });

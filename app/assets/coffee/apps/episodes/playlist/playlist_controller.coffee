@@ -6,9 +6,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
       showTracks: (mainView) ->
         mainView = mainView or false
         require ["entities/playlist", "apps/episodes/list/list_controller"], ->
-
           fetchingPlaylist = Swabcast.request("entities:playlist")
-
           playlistLayout = new View.Layout()
           $.when(fetchingPlaylist).done (tracks) ->
             self = this
@@ -48,13 +46,12 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
 
           if (mainView)
             # TODO - do this better
-            Swabcast.sideBarRegion.reset()
+            Swabcast.sideBarRegion.close()
             require ["common/view"], (CommonViews) ->
               backButton = new CommonViews.NavHelper(
                 buttonText: "Back to subscriptions"
               )
               Swabcast.navHelperRegion.show backButton
-
               # set the view to window height, this feels a little hack
               winheight = $(window).height() - 75
             Swabcast.libraryRegion.show playlistLayout
@@ -63,8 +60,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
 
       showPlayistMain: ->
         console.log("show mainView")
-        o = true
-        @showTracks (o)
+        opt = true
+        @showTracks (opt)
 
 
   Swabcast.EpisodesApp.Playlist.Controller

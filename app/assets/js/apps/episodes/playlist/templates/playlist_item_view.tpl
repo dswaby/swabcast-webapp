@@ -1,7 +1,5 @@
 <td>
-    <div style="height:75px !important; width:75px !important;">
-             <img src=./assets/img/<%= albumArt %> alt="" >
-    </div>
+    <img src=./assets/img/<%= albumArt %> alt="" height="75px" width="75px" />
 </td>
 
 <td>

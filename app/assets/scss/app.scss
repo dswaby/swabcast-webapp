@@ -51,6 +51,11 @@
 
 .playlist {
   width: 100%;
+  top:0;
+}
+
+.playlist-sidebar {
+  background:#F4F4F4; min-height: 550px; padding:2px !important; margin-right:10px;
 }
 
 .library-image {

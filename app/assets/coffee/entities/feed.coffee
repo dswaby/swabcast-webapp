@@ -7,6 +7,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "episodeTitle": ""
         "mediaUrl": ""
         "enqueue": false
+        "publishedAt": 0
     )
     Entities.configureStorage Entities.Episode
 
@@ -23,8 +24,8 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "id": ""
         "subscriptionTitle": ""
         "albumArt": "default.jpg"
-        "summary": "na"
-        "feedUrl": "http://somefeed.com/feed.xml"
+        "summary": ""
+        "feedUrl": ""
         "authors": ""
     )
     Entities.configureStorage Entities.Feed

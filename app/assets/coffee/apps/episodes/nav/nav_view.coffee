@@ -4,13 +4,11 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTp
     View.Nav = Marionette.ItemView.extend(
       template: navTpl
       events:
-        "click li a.js-playlist": "showPlaylist",
+        "click li.js-playlist": "showPlaylist",
         "click li.js-reset-local": "resetLocalStorage"
         "click li.js-not-implemented": "notImplemented"
 
       showPlaylist: (e) ->
-        e.preventDefault()
-        e.stopPropagation()
         Swabcast.trigger "playlist:mainview"
 
       resetLocalStorage: (e) ->
@@ -22,8 +20,6 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTp
         console.log('storage cleared')
 
       notImplemented: (e) ->
-        e.preventDefault()
-        e.stopPropagation()
         console.log("not implemented yet :(")
 
         Swabcast.trigger "feature:not:implemented"

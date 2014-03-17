@@ -8,7 +8,8 @@
           "albumArt": "podcast-default.png",
           "episodeTitle": "",
           "mediaUrl": "",
-          "enqueue": false
+          "enqueue": false,
+          "publishedAt": 0
         }
       });
       Entities.configureStorage(Entities.Episode);
@@ -24,8 +25,8 @@
           "id": "",
           "subscriptionTitle": "",
           "albumArt": "default.jpg",
-          "summary": "na",
-          "feedUrl": "http://somefeed.com/feed.xml",
+          "summary": "",
+          "feedUrl": "",
           "authors": ""
         }
       });
