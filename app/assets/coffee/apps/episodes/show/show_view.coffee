@@ -42,12 +42,6 @@ define ["app",
         @trigger "dialog:close"
 
       queueEpisode: (e) ->
-        # e.preventDefault()
-        # e.stopPropagation()
-        # if @model.get("enqueue") is false
-        #   Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @model
-        #   @model.set "enqueue", true
-        # @trigger "dialog:close"
         e.preventDefault()
         e.stopPropagation()
         @$el.addClass "disabled"
@@ -61,7 +55,7 @@ define ["app",
           $.when(addToPlaylist).done (apiResponse) ->
             if apiResponse == "fail"
               # trigger error alert
-              console.log("we dun goofed")
+              console.log("I dun goofed")
             if apiResponse == "success"
               # trigger success alert
               console.log("holy fuck it worked")
@@ -124,9 +118,7 @@ define ["app",
               console.log("holy fuck it worked")
             episodeElement.fadeOut "slow", ->
               $(this).fadeIn "slow"
-
           @trigger "dialog:close"
-
 
       previewAudio: (e)->
         e.preventDefault()
@@ -151,7 +143,6 @@ define ["app",
       events:
         "click a.js-episode-list-modal": "showEpisodesDialog"
         "click a.js-feed-details": "showFeedEpisodes"
-
 
       initialize: ->
         parent = @model

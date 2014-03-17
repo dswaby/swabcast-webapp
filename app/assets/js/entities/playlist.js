@@ -100,7 +100,7 @@
               });
               tracks.add(newTrack);
               newTrack.save();
-              Swabcast.trigger("episodes:playlist");
+              Swabcast.trigger("playlist:enqueue", newTrack);
               return defer.resolve("success");
             } else {
               return defer.resolve("fail");

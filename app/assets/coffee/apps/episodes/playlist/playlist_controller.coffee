@@ -29,9 +29,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
 
-            playlistTracks.listenTo Playlist, "playlist:enqueue", ->
-              tracks.fetch()
-              playlistTracks.render()
+            playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
+              playlistTracks.add model
               if tracks.length == 1
                 newTrack = tracks.at(0)
                 Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack

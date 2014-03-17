@@ -1,7 +1,8 @@
 <!-- episode_item_view.tpl -->
-
 <td style="width:40px;">
-
+    <a class="js-enqueue"><%= publishedAt %></a>
+</td>
+<td style="width:40px;">
         <a class="js-preview-audio icon-closure"><i class="fi-play"></i></a>
 </td>
 
@@ -15,5 +16,7 @@
         <a class="js-enqueue"><i class="fi-plus"></i></a>
     </div>
 </td>
+
+
 
 <!-- End episode_item_view.tpl -->

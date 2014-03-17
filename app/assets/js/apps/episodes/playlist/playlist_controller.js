@@ -30,10 +30,9 @@
                 model.destroy();
                 return Swabcast.EpisodesApp.List.trigger("episode:removefromqueue", modelUid);
               });
-              playlistTracks.listenTo(Playlist, "playlist:enqueue", function() {
+              playlistTracks.listenTo(Playlist, "playlist:enqueue", function(model) {
                 var newTrack;
-                tracks.fetch();
-                playlistTracks.render();
+                playlistTracks.add(model);
                 if (tracks.length === 1) {
                   newTrack = tracks.at(0);
                   if (tracks.at(0) === newTrack) {

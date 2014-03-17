@@ -8,31 +8,33 @@ define ["app"], (Swabcast) ->
       playlist: "showPlaylist"
     )
     API =
+      # "media:all"
       showPageMedia: ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
-
         require ["apps/episodes/playlist/playlist_controller"], ->
           EpisodesApp.Playlist.Controller.showTracks()
-
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeeds()
-
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
 
+      # "playlist:mainview"
       showPlaylistMain: ->
         require ["apps/episodes/playlist/playlist_controller"], ->
           EpisodesApp.Playlist.Controller.showPlayistMain()
 
+      # "episodes:library"
       showLibrary: ->
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeeds()
 
+      # "episodes:list"
       listEpisodes: ->
         require ["apps/episodes/list/list_controller"], ->
           EpisodesApp.List.Controller.listEpisodes()
 
+      # "episode:show", (id)
       showEpisode: (id) ->
         EpisodesApp.Show.Controller.showEpisode id
 
@@ -58,13 +60,10 @@ define ["app"], (Swabcast) ->
       showFeedEpisodesById: (id) ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
-
         require ["apps/episodes/playlist/playlist_controller"], ->
           EpisodesApp.Playlist.Controller.showTracks()
-
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
-
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeedEpisodesById id
 

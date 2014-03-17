@@ -89,7 +89,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
             )
             tracks.add newTrack
             newTrack.save()
-            Swabcast.trigger "episodes:playlist"
+            Swabcast.trigger "playlist:enqueue", newTrack
             defer.resolve "success"
           else
             defer.resolve "fail"

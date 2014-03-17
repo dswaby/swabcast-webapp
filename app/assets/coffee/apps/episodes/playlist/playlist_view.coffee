@@ -40,7 +40,6 @@ define ["app", "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl",
           @appendHtml = (collectionView, itemView, index) ->
             collectionView.$el.append itemView.el
 
-
       onCompositeCollectionRendered: ->
         @appendHtml = (collectionView, itemView, index) ->
           collectionView.$el.append itemView.el

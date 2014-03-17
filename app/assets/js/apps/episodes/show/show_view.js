@@ -48,7 +48,7 @@
             episodeElement = this.$el;
             $.when(addToPlaylist).done(function(apiResponse) {
               if (apiResponse === "fail") {
-                console.log("we dun goofed");
+                console.log("I dun goofed");
               }
               if (apiResponse === "success") {
                 console.log("holy fuck it worked");
