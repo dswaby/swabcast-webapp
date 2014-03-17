@@ -9,7 +9,6 @@
           "click li.js-not-implemented": "notImplemented"
         },
         showPlaylist: function(e) {
-          console.log('playlist clicked');
           e.preventDefault();
           e.stopPropagation();
           return Swabcast.trigger("playlist:mainview");

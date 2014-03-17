@@ -1,10 +1,14 @@
 define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/player_controller"], (Swabcast, View) ->
   Swabcast.module "EpisodesApp.Playlist", (Playlist, Swabcast, Backbone, Marionette, $, _) ->
     Playlist.Controller =
-      showTracks: ->
-
+      # by default this view will show in the sideBarRegion
+      # optional mainView parameter will close an existing view in sideBarRegion
+      showTracks: (mainView) ->
+        mainView = mainView or false
         require ["entities/playlist", "apps/episodes/list/list_controller"], ->
+
           fetchingPlaylist = Swabcast.request("entities:playlist")
+
           playlistLayout = new View.Layout()
           $.when(fetchingPlaylist).done (tracks) ->
             self = this
@@ -42,10 +46,25 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             playlistTracks.on "playlist:update", (childView, model) ->
               playlistTracks.children.findByModel(model).flash "success"
 
+          if (mainView)
+            # TODO - do this better
+            Swabcast.sideBarRegion.reset()
+            require ["common/view"], (CommonViews) ->
+              backButton = new CommonViews.NavHelper(
+                buttonText: "Back to subscriptions"
+              )
+              Swabcast.navHelperRegion.show backButton
 
-          Swabcast.sideBarRegion.show playlistLayout
-    logThisMessage: ->
-      console.log("this message")
+              # set the view to window height, this feels a little hack
+              winheight = $(window).height() - 75
+            Swabcast.libraryRegion.show playlistLayout
+          else
+            Swabcast.sideBarRegion.show playlistLayout
+
+      showPlayistMain: ->
+        console.log("show mainView")
+        o = true
+        @showTracks (o)
 
 
   Swabcast.EpisodesApp.Playlist.Controller

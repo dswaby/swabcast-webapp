@@ -21,16 +21,9 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
 
-      showPlaylistView: (mainView) ->
+      showPlaylistMain: ->
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks mainView
-
-        require ["apps/episodes/player/player_controller"], ->
-          EpisodesApp.Player.Controller.showControls()
-
-        require ["apps/episodes/nav/nav_controller"], ->
-          EpisodesApp.Nav.Controller.showNav()
-
+          EpisodesApp.Playlist.Controller.showPlayistMain()
 
       showLibrary: ->
         require ["apps/episodes/feed/feed_controller"], ->
@@ -114,8 +107,9 @@ define ["app"], (Swabcast) ->
       Swabcast.navigate "feed/" + model.get("id")
       API.showFeedEpisodes model
 
-    Swabcast.on "playist:mainview", ->
-      API.showPlaylistView(mainview)
+    Swabcast.on "playlist:mainview", ->
+      console.log("showPlaylistMain triggered")
+      API.showPlaylistMain()
 
     Swabcast.addInitializer ->
       new EpisodesApp.Router(controller: API)

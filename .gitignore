@@ -2,3 +2,4 @@ node_modules/
 test/lib/
 .sass-cache/
 app/assets/bower_components/
+.sublime-grunt.cache

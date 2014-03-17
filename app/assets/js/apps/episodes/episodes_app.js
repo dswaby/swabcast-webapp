@@ -26,15 +26,9 @@
             return EpisodesApp.Player.Controller.showControls();
           });
         },
-        showPlaylistView: function(mainView) {
-          require(["apps/episodes/playlist/playlist_controller"], function() {
-            return EpisodesApp.Playlist.Controller.showTracks(mainView);
-          });
-          require(["apps/episodes/player/player_controller"], function() {
-            return EpisodesApp.Player.Controller.showControls();
-          });
-          return require(["apps/episodes/nav/nav_controller"], function() {
-            return EpisodesApp.Nav.Controller.showNav();
+        showPlaylistMain: function() {
+          return require(["apps/episodes/playlist/playlist_controller"], function() {
+            return EpisodesApp.Playlist.Controller.showPlayistMain();
           });
         },
         showLibrary: function() {
@@ -128,8 +122,9 @@
         Swabcast.navigate("feed/" + model.get("id"));
         return API.showFeedEpisodes(model);
       });
-      Swabcast.on("playist:mainview", function() {
-        return API.showPlaylistView(mainview);
+      Swabcast.on("playlist:mainview", function() {
+        console.log("showPlaylistMain triggered");
+        return API.showPlaylistMain();
       });
       return Swabcast.addInitializer(function() {
         return new EpisodesApp.Router({

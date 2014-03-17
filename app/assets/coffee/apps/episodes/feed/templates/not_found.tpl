@@ -2,5 +2,4 @@
 
 Feed not found :(
 <br /><br />
-<button class="library-back">Go Back</button>
 </div>

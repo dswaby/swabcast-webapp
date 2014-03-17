@@ -1,5 +1,5 @@
 <!-- Player View Template -->
-<div class="row">
+<div>
     <div id="player-fill-left" class="small-4 large-5 columns">
     	<div id="album-preview">
     		<% if (typeof(albumArt) != "undefined") { %>

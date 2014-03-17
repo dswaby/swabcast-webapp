@@ -9,7 +9,6 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTp
         "click li.js-not-implemented": "notImplemented"
 
       showPlaylist: (e) ->
-        console.log('playlist clicked')
         e.preventDefault()
         e.stopPropagation()
         Swabcast.trigger "playlist:mainview"

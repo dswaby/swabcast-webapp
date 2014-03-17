@@ -1,8 +1,9 @@
 (function() {
   define(["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/player_controller"], function(Swabcast, View) {
     Swabcast.module("EpisodesApp.Playlist", function(Playlist, Swabcast, Backbone, Marionette, $, _) {
-      Playlist.Controller = {
-        showTracks: function() {
+      return Playlist.Controller = {
+        showTracks: function(mainView) {
+          mainView = mainView || false;
           return require(["entities/playlist", "apps/episodes/list/list_controller"], function() {
             var fetchingPlaylist, playlistLayout;
             fetchingPlaylist = Swabcast.request("entities:playlist");
@@ -50,13 +51,27 @@
                 return playlistTracks.children.findByModel(model).flash("success");
               });
             });
-            return Swabcast.sideBarRegion.show(playlistLayout);
+            if (mainView) {
+              Swabcast.sideBarRegion.reset();
+              require(["common/view"], function(CommonViews) {
+                var backButton, winheight;
+                backButton = new CommonViews.NavHelper({
+                  buttonText: "Back to subscriptions"
+                });
+                Swabcast.navHelperRegion.show(backButton);
+                return winheight = $(window).height() - 75;
+              });
+              return Swabcast.libraryRegion.show(playlistLayout);
+            } else {
+              return Swabcast.sideBarRegion.show(playlistLayout);
+            }
           });
-        }
-      };
-      return {
-        logThisMessage: function() {
-          return console.log("this message");
+        },
+        showPlayistMain: function() {
+          var o;
+          console.log("show mainView");
+          o = true;
+          return this.showTracks(o);
         }
       };
     });

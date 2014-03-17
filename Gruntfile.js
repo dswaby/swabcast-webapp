@@ -180,10 +180,16 @@ module.exports = function (grunt) {
           }
         },
         docco: {
-          debug: {
+          coffeescript: {
             src: ['<%= swabstack.app %>/assets/coffee/**/*.coffee'],
             options: {
-              output: './docs/'
+              output: './docs/CoffeScript/'
+            }
+          },
+          javascript: {
+            src: ['<%= swabstack.app %>/assets/js/**/*.js'],
+            options: {
+              output: './docs/Javascript/'
             }
           }
         },
@@ -231,7 +237,7 @@ grunt.registerTask('build', [
     'copy:components',
     'copy:assets',
     'copy:requireBuilt',
-    'coffee' //compile any coffescript files that may have changed
+    'docco' //generate documentation
     ]);
 
 };
