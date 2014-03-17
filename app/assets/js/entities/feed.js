@@ -40,522 +40,835 @@
         feeds = new Entities.Feeds([
           {
             "id": 8396,
-            "feedUrl": "http://shoptalkshow.com/feed/podcast/",
+            "feedUrl": "http://shoptalkshow.om",
+            "mediaUrl": "http://shoptalkshow.com/feed/podcast/",
+            "authors": "ShopTalk",
             "subscriptionTitle": "ShopTalk",
             "summary": "ShopTalk is a podcast about front end web design, development and UX. Each week Chris Coyier and Dave Rupert are joined by a special guest to talk shop and answer listener submitted questions.",
             "albumArt": "shoptalk.jpeg",
-            "numberOfEpisodes": 92,
             "episodes": [
               {
+                "uid": 36537622,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/510/0/157058-106-with-nick-pettit.mp3",
+                "explicit": false,
+                "episodeTitle": "106: With Nick Pettit",
+                "episodeSummary": "This week we were joined by Nick Pettit, educator at Treehouse, an online learning platform. We talked about (roughly in order): News’n’Links’n’Drama: 17:25 Correction regarding Drupal and 1000 script/style files. 20:10 Github releases Atom, a hackable text editor Q &amp; A: 23:29 I’m curious about making the shift from HTML, CSS, jQuery, WordPress development to... <a href=\"http://shoptalkshow.com/episodes/106-nick-pettit/\" title=\"Read 106: With Nick Pettit\">Read more »</a>",
+                "publishedAt": 1394547940,
+                "size": 34686773,
+                "duration": 4303
+              }, {
+                "uid": 36212854,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/508/0/154220-105-rapidfire-24.mp3",
+                "explicit": false,
+                "episodeTitle": "105: RAPIDFIRE 24",
+                "episodeSummary": "This week it’s another RAPIDFIRE! We take listener questions and try to answer them as best we can within a 3 minute time constraint. We talked about (roughly in order): Q &amp; A: 2:19 What’s the best way to release a tiny JQuery plugin? 6:14 My question is about Grunt and requireJS: if I concatenate... <a href=\"http://shoptalkshow.com/episodes/105-rapidfire-24/\" title=\"Read 105: RAPIDFIRE 24\">Read more »</a>",
+                "publishedAt": 1393620849,
+                "size": 28966109,
+                "duration": 3609
+              }, {
+                "uid": 36057303,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/504/0/152437-104-with-leslie-jensen-inman.mp3",
+                "explicit": false,
+                "episodeTitle": "104: With Leslie Jensen-Inman",
+                "episodeSummary": "This week we were joined by Dr. Leslie Jensen-Inman, headmaster of the Unicorn Institute (aka Center Centre) in Chattanooga, TN. We talked about (roughly in order): 26:50 Firefox 26 now supporting audio decoding Q &amp; A: 29:20 Will Center Center have online classes? 30:34 Do you guys have any experience with the WordPress plug-in WP... <a href=\"http://shoptalkshow.com/episodes/104-leslie-jensen-inman/\" title=\"Read 104: With Leslie Jensen-Inman\">Read more »</a>",
+                "publishedAt": 1393036447,
+                "size": 29577344,
+                "duration": 3666
+              }, {
+                "uid": 35986838,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/500/0/152062-103-with-louis-lazeris.mp3",
+                "explicit": false,
+                "episodeTitle": "103: With Louis Lazaris",
+                "episodeSummary": "This week we were joined by Louis Lazeris. Louis is the curator of the Web Tools Weekly email newsletters, and co-author of HTML5 &amp; CSS3 for the Real World. We talked about (roughly in order): News’n’Links’n’Drama: 8:54 w3schools: The Ugly, the Bad, and the Good Q &amp; A: 20:54 Is there any good solution on... <a href=\"http://shoptalkshow.com/episodes/103-louis-lazaris/\" title=\"Read 103: With Louis Lazaris\">Read more »</a>",
+                "publishedAt": 1392869108,
+                "size": 29068805,
+                "duration": 3601
+              }, {
+                "uid": 35848240,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/499/0/150063-102-rapidfire-23.mp3",
+                "explicit": false,
+                "episodeTitle": "102: Rapidfire 23",
+                "episodeSummary": "This week it’s another RAPIDFIRE!!! We take listener questions and try to answer them as best we can within a 3 minute time constraint. We talked about (roughly in order): Q &amp; A: 3:07 HTML email is super fun to design for, so I’m a little surprised that you guys aren’t all about it, and... <a href=\"http://shoptalkshow.com/episodes/102-rapidfire-23/\" title=\"Read 102: Rapidfire 23\">Read more »</a>",
+                "publishedAt": 1392244589,
+                "size": 29896832,
+                "duration": 3725
+              }, {
+                "uid": 35736650,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/496/0/148777-101-with-john-resig.mp3",
+                "explicit": false,
+                "episodeTitle": "#101: With John Resig",
+                "episodeSummary": "This week we were joined by John Resig. John is the Dean of Computer Science at Khan Academy and the creator of the jQuery JavaScript library. He’s also the author of the books Pro JavaScript Techniques and Secrets of the JavaScript Ninja. We talked about (roughly in order): Q &amp; A: 42:08 Is it worth... <a href=\"http://shoptalkshow.com/episodes/101-john-resig/\" title=\"Read #101: With John Resig\">Read more »</a>",
+                "publishedAt": 1391804397,
+                "size": 32624768,
+                "duration": 4066
+              }, {
+                "uid": 35589999,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/492/0/146822-100-with-rachel-andrew.mp3",
+                "explicit": false,
+                "episodeTitle": "100: With Rachel Andrew",
+                "episodeSummary": "This week we were joined by Rachel Andrew, author and purveyor of Perch, a lightweight PHP content management system. We talked about (roughly in order): News’n’Links’n’Drama: 10:23 CSS Regions Considered Harmful 16:40 Squarespace Logo 21:06 Google Webfonts: The Spy Inside Q &amp; A: 26:55 One thing that’s not very well known is that Perch actually... <a href=\"http://shoptalkshow.com/episodes/100-rachel-andrew/\" title=\"Read 100: With Rachel Andrew\">Read more »</a>",
+                "publishedAt": 1391118234,
+                "size": 29149312,
+                "duration": 3632
+              }, {
+                "uid": 35476590,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/489/0/145281-099-with-jonathan-mahoney.mp3",
+                "explicit": false,
+                "episodeTitle": "099: With Jonathan Mahoney",
+                "episodeSummary": "This week we were joined by Jonathan Mahoney, a UX Architect for a B2B enterprise company. We talked about (roughly in order): News’n’Links’n’Drama: 12:55 Myth Busting: CSS Animations vs. JavaScript 17:33 When to use target=”_blank”? 23:17 Google bought Nest Q &amp; A: 25:20 Should I convert my existing website to be responsive, or start over... <a href=\"http://shoptalkshow.com/episodes/099-jonathan-mahoney/\" title=\"Read 099: With Jonathan Mahoney\">Read more »</a>",
+                "publishedAt": 1390586207,
+                "size": 27033728,
+                "duration": 3368
+              }, {
+                "uid": 35347845,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/486/0/143243-098-lyza-danger-gardner.mp3",
+                "explicit": false,
+                "episodeTitle": "098: With Lyza Danger Gardner",
+                "episodeSummary": "This week we were joined by Lyza Danger Gardner. We talked about (roughly in order): News’n’Links’n’Drama: 12:33 Web Standards Killed The HTML Star, and Is Web Design Dead? 21:40 Grunt is dead? What about Gulp? Q &amp; A: 27:04 I’m curious to know how we as a community are handling touch events on mobile devices... <a href=\"http://shoptalkshow.com/episodes/098-lyza-danger-gardner/\" title=\"Read 098: With Lyza Danger Gardner\">Read more »</a>",
+                "publishedAt": 1389846151,
+                "size": 30345344,
+                "duration": 3782
+              }, {
+                "uid": 35161487,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/484/0/097_Mina_Markham.mp3",
+                "explicit": false,
+                "episodeTitle": "097: With Mina Markham",
+                "episodeSummary": "This week we were joined by Mina Markham, a Sass-lovin’ designer and developer from Dallas, Texas. She’s a Syracuse University alum, part-time freelancer, full-time Parago employee, and soon-to-be Girl Develop It teacher. We talked about (roughly in order): News’n’Links’n’Drama Myth.io: “CSS Level 4 kind of stuff” Q &amp; A 17:01 I’ve just started using Compass... <a href=\"http://shoptalkshow.com/episodes/097-mina-markham/\" title=\"Read 097: With Mina Markham\">Read more »</a>",
+                "publishedAt": 1388079144,
+                "size": 30383096,
+                "duration": 3765
+              }, {
+                "uid": 34836747,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/482/0/136861-096-rapidfire-22.mp3",
+                "explicit": false,
+                "episodeTitle": "096: Rapidfire #22",
+                "episodeSummary": "This week is another RAPIDFIRE!!! We talked about (roughly in order): Q &amp; A: 2:02 Should I use “.mainNav” or “nav.main”? Do you see any issues with using either? 4:54 I’m looking to find a new job. How should I approach employers when I’m not proud of the sites I’ve been working on? 7:18 I... <a href=\"http://shoptalkshow.com/episodes/096-rapidfire-22/\" title=\"Read 096: Rapidfire #22\">Read more »</a>",
+                "publishedAt": 1387208294,
+                "size": 25557120,
+                "duration": 3163
+              }, {
+                "uid": 34629014,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/478/0/136283-095-with-daniel-mall.mp3",
+                "explicit": false,
+                "episodeTitle": "095: With Daniel Mall",
+                "episodeSummary": "This week we were joined by super-designer Dan Mall. Dan currently runs Superfriend.ly, is a co-host of the Businessology podcast, and previously worked at Happy Cog and Big Spaceship. We talked about (roughly in order): News’n’Links’n’Drama: 17:10 CSSOff #hotdrama: Dan made a PSD that was too good. Q &amp; A: 33:02 In defense of AMPPS…... <a href=\"http://shoptalkshow.com/episodes/095-daniel-mall/\" title=\"Read 095: With Daniel Mall\">Read more »</a>",
+                "publishedAt": 1386701918,
+                "size": 29950080,
+                "duration": 3732
+              }, {
+                "uid": 34390636,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/474/0/134654-094-with-emily-dunkle.mp3",
+                "explicit": false,
+                "episodeTitle": "094: With Emily Dunkle",
+                "episodeSummary": "This week we were joined by Emily Dunkle. Emily is a UI &amp; UX Designer from Massachusetts. She believes in semantic markup, design of all kinds, and a good old-fashioned legal pad. We talked about (roughly in order): Q &amp; A: 16:37 My company’s IT department has taken over our website. What can I do... <a href=\"http://shoptalkshow.com/episodes/094-emily-dunkle/\" title=\"Read 094: With Emily Dunkle\">Read more »</a>",
+                "publishedAt": 1386109065,
+                "size": 31096960,
+                "duration": 3856
+              }, {
+                "uid": 33785749,
+                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/472/0/132312-093-rapidfire-21.mp3",
+                "explicit": false,
+                "episodeTitle": "093: RAPIDFIRE #21",
+                "episodeSummary": "This week, it’s another RAPID FIRE!!! Chris and Dave take on listener questions, fast and furious. 2:27 Do you guys have any advice when the time comes to hand over a WordPress site? 5:57 What are your opinions about disabilities (hopefully about stuttering but not necessary) in the workplace? 9:06 How do I address responsiveness... <a href=\"http://shoptalkshow.com/episodes/093-rapidfire-21/\" title=\"Read 093: RAPIDFIRE #21\">Read more »</a>",
+                "publishedAt": 1385158395,
+                "size": 29530240,
+                "duration": 3660
+              }, {
                 "uid": 33639033,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/464/0/131434-092-with-dudley-storey.mp3",
+                "explicit": false,
                 "episodeTitle": "092: With Dudley Storey",
                 "episodeSummary": "This week we were joined by Dudley Storey. Dudley is a teacher, craftsman, designer &amp; writer, and the author of Pro CSS3 Animation. News’n’Links’n’Drama: 7:00 Webkit hates src-N End Of Year Responsive Images Report 13:14 CSSOff 2013 17:20 Learn jQuery from Scratch (CSS-Tricks Class) Q &amp; A: 21:15 Is it worth taking the time to... <a href=\"http://shoptalkshow.com/episodes/092-with-dudley-storey/\" title=\"Read 092: With Dudley Storey\">Read more »</a>",
+                "publishedAt": 1384892192,
+                "size": 31856768,
                 "duration": 3950
               }, {
                 "uid": 33356609,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/468/0/129716-091-js-jabber-crossover.mp3",
+                "explicit": false,
                 "episodeTitle": "091: With Jamison Dance AND Merrick Christensen",
                 "episodeSummary": "This week we were joined by Merrick and Jamison from the Javascript Jabber podcast. They are both super awesome at javascript and very handsome. We talked about (roughly in order): News’n’Links’n’Drama: 10:42 Responsive Web Design: Relying Too Much On Screen Size by LukeW Rebuttal by Ethan Marcotte: RESPONSIVE DESIGN, SCREENS, AND SHEARING LAYERS PPK: Of... <a href=\"http://shoptalkshow.com/episodes/091-js-jabber/\" title=\"Read 091: With Jamison Dance AND Merrick Christensen\">Read more »</a>",
+                "publishedAt": 1384270583,
+                "size": 29849728,
                 "duration": 3731
               }, {
                 "uid": 33057072,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/462/0/127943-090-with-pamela-fox.mp3",
+                "explicit": false,
                 "episodeTitle": "090: With Pamela Fox",
                 "episodeSummary": "This week we were joined by Pamela Fox, a web developer and educator currently working at Khan Academy. We talked about (roughly in order): News’n’Links’n’Drama: 9:30 Big Snow Tiny Conf 10:30 Automating Workflow Slide Deck Q &amp; A: 14:54 I’m sold on GIT and have used it locally on my machine. How can I go... <a href=\"http://shoptalkshow.com/episodes/090-pamela-fox/\" title=\"Read 090: With Pamela Fox\">Read more »</a>",
+                "publishedAt": 1383661233,
+                "size": 31252608,
                 "duration": 3875
               }, {
                 "uid": 32836743,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/457/0/126438-089-with-karen-mcgrane.mp3",
+                "explicit": false,
                 "episodeTitle": "089: With Karen McGrane",
                 "episodeSummary": "This week we were joined by Karen McGrane. Karen is a mobile content strategist and has a fantastic book called Content Strategy for Mobile. We talked about (roughly in order): News’n’Links’n’Drama: 24:08 Front End Architechture Showdown CSS Cargo Cult 25:19 Does our Industry have a Drinking Problem? 29:34 Scroll Hijacking Q &amp; A: 34:56 Why... <a href=\"http://shoptalkshow.com/episodes/089-karen-mcgrane/\" title=\"Read 089: With Karen McGrane\">Read more »</a>",
+                "publishedAt": 1383172951,
+                "size": 32184448,
                 "duration": 3992
               }, {
                 "uid": 32553489,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/453/0/124664-088-with-scott-jehl.mp3",
+                "explicit": false,
                 "episodeTitle": "088: With Scott Jehl",
                 "episodeSummary": "This week we were joined by Scott Jehl, a progressive enhancer at Filament Group. We talked about (roughly in order): News’n’Links’n’Drama: 15:48 Godaddy aquired Media Temple Q &amp; A: 24:30 I want to use a ‘mobile first’ approach, but the client wants to see the desktop version first. How would you solve this little problem?... <a href=\"http://shoptalkshow.com/episodes/088-scott-jehl/\" title=\"Read 088: With Scott Jehl\">Read more »</a>",
+                "publishedAt": 1382476646,
+                "size": 34836608,
                 "duration": 4323
               }, {
                 "uid": 32348061,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/444/0/123327-087-with-nicholas-gallagher.mp3",
+                "explicit": false,
                 "episodeTitle": "087: With Nicolas Gallagher",
                 "episodeSummary": "This week we were joined by Nicolas Gallagher, CSS expert. We talked about (roughly in order): News’n’Links’n’Drama: 8:29 EFF gets involved in DRM Q &amp; A: 13:40 I’m a front end developer working in Rails these days. I want an automated way to produce styles guides. How do you produce guides for your clients? Have... <a href=\"http://shoptalkshow.com/episodes/087-nicolas-gallagher/\" title=\"Read 087: With Nicolas Gallagher\">Read more »</a>",
+                "publishedAt": 1381959299,
+                "size": 30300288,
                 "duration": 3756
               }, {
                 "uid": 32111032,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/439/0/120469-086-with-jenn-schiffer.mp3",
+                "explicit": false,
                 "episodeTitle": "086: With Jenn Schiffer",
                 "episodeSummary": "This week we were joined by Jenn Schiffer. Jenn works at sports-ball and knows Michael Jordan. She also makes websites! We talked about (roughly in order): Q &amp; A: 9:51 How can we go about getting back in touch with our inner creative coder? And how can we start introducing this back into our ‘bread... <a href=\"http://shoptalkshow.com/episodes/086-with-jenn-schiffer/\" title=\"Read 086: With Jenn Schiffer\">Read more »</a>",
+                "publishedAt": 1381355303,
+                "size": 29014144,
                 "duration": 3595
               }, {
                 "uid": 31892954,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/434/0/119092-085-with-kimberly-blessing.mp3",
+                "explicit": false,
                 "episodeTitle": "085: With Kimberly Blessing",
                 "episodeSummary": "This week we were joined by Kimberly Blessing. We talked about (roughly in order): News’n’Links’n’Drama: 6:17 CERN – The birth of the web The first web browser FORK THE LINE-MODE BROWSER Q &amp; A: 16:02 What are your opinions on the nonstandard mozmm units? See also : Blog post. 24:20 I was wondering if either... <a href=\"http://shoptalkshow.com/episodes/085-with-kimberly-blessing/\" title=\"Read 085: With Kimberly Blessing\">Read more »</a>",
+                "publishedAt": 1380815067,
+                "size": 26992768,
                 "duration": 3343
               }, {
                 "uid": 26416307,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/431/0/111080-084-rapidfire-20.mp3",
+                "explicit": false,
                 "episodeTitle": "084: RAPIDFIRE #20",
                 "episodeSummary": "It’s time for another RAPIDFIRE! No news, no drama, just lots of question and answer action. Q &amp; A: 0:51 How do you prefer ordering your queries within your stylesheet? Is mobile-first really the best strategy here? 8:27 Would either of you have any insights as to how to test, target, and develop for the... <a href=\"http://shoptalkshow.com/episodes/084-rapidfire-20/\" title=\"Read 084: RAPIDFIRE #20\">Read more »</a>",
+                "publishedAt": 1377788248,
+                "size": 28299729,
                 "duration": 3505
               }, {
                 "uid": 25647103,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/429/0/111077-083-with-flo-motlik.mp3",
+                "explicit": false,
                 "episodeTitle": "083: With Florian Motlik",
                 "episodeSummary": "This week we were joined by Florian Motlik. Flo is an awesome programmer an a co-founder of Codeship.io, a part of Codestars Boston. This episode is a deep dive into continuous deployment and automation. We talked about (roughly in order): Q &amp; A: 13:08 I would like to use Git for version control, and set... <a href=\"http://shoptalkshow.com/episodes/083-with-florian-motlik/\" title=\"Read 083: With Florian Motlik\">Read more »</a>",
+                "publishedAt": 1377698578,
+                "size": 31236224,
                 "duration": 3873
               }, {
                 "uid": 25086885,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/360/0/109751-082-with-jason-santa-maria.mp3",
+                "explicit": false,
                 "episodeTitle": "082: With Jason Santa Maria",
                 "episodeSummary": "This week we were joined by Jason Santa Maria, a designer currently in Brooklyn, New York. You might know Jason from his work on Typekit or more recently the writing collaboration tool Editorially. Or perhaps from past work like the WordPress logo and from working at renowned web studio Happy Cog. We talked about (roughly... <a href=\"http://shoptalkshow.com/episodes/082-with-jason-santa-maria/\" title=\"Read 082: With Jason Santa Maria\">Read more »</a>",
+                "publishedAt": 1376832407,
+                "size": 29954848,
                 "duration": 3712
               }, {
                 "uid": 25330262,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/357/0/109752-081-with-geri-coady.mp3",
+                "explicit": false,
                 "episodeTitle": "081: With Geri Coady",
                 "episodeSummary": "This week we were joined by Geri Coady, an illustrator, designer, and author from Newfoundland, Canada. We talked about (roughly in order): News’n’Links’n’Drama 17:51 WooThemes Price Change, also here 22:00 Chrome’s password saving drama Q &amp; A 29:02 Are there any particular hues and shades of colors that are particularly inaccessible or render unfaithfully? Also,... <a href=\"http://shoptalkshow.com/episodes/081-with-geri-coady/\" title=\"Read 081: With Geri Coady\">Read more »</a>",
+                "publishedAt": 1376577128,
+                "size": 29132931,
                 "duration": 3609
               }, {
                 "uid": 25330263,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/352/0/109753-080-rapidfire-19.mp3",
+                "explicit": false,
                 "episodeTitle": "080: RAPIDFIRE #19",
                 "episodeSummary": "It’s time for another RAPIDFIRE! We talk about (roughly in order): Q &amp; A 2:30 Which books would you recommend learning about CSS and /or UX design? 6:32 There is a lot of hype around the Hammer and Mixture static site generators right now. Can teams work on these together, or are they just made... <a href=\"http://shoptalkshow.com/episodes/080-rapidfire-18/\" title=\"Read 080: RAPIDFIRE #19\">Read more »</a>",
+                "publishedAt": 1375371677,
+                "size": 28852271,
                 "duration": 3574
               }, {
                 "uid": 25330264,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/355/0/109754-079-with-travis-miller.mp3",
+                "explicit": false,
                 "episodeTitle": "079: With Travis Miller",
                 "episodeSummary": "This week we were joined by Travis Miller, a full stack developer at SPARK. Chris and Dave met Travis at Front End Conf where he gave a talk about hip hop and the web. We talk about (roughly in order): News’n’Links’n’Drama: 9:24 Why You Shouldn’t Tell That Random Girl On The Street That She’s Hot... <a href=\"http://shoptalkshow.com/episodes/079-with-travis-miller/\" title=\"Read 079: With Travis Miller\">Read more »</a>",
+                "publishedAt": 1375219174,
+                "size": 30428813,
                 "duration": 3771
               }, {
                 "uid": 25330265,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/353/0/109755-078-with-rick-blalock.mp3",
+                "explicit": false,
                 "episodeTitle": "078: With Rick Blalock",
                 "episodeSummary": "This week we were joined by mobile architect Rick Blalock. Rick currently works at Appcelerator, a framework for building out native applications in Javascript. Rick also knows quite a bit about Joomla. We talked about (roughly in order): News’n’Links’n’Drama: 12:30 Why mobile apps are slow 21:17 Tweetbot Neue 22:42 Clear up EE drama: Brandon Kelley... <a href=\"http://shoptalkshow.com/episodes/078-with-rick-blalock/\" title=\"Read 078: With Rick Blalock\">Read more »</a>",
+                "publishedAt": 1374618580,
+                "size": 32077244,
                 "duration": 3977
               }, {
                 "uid": 25330266,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/351/0/109756-077-rapidfire-18.mp3",
+                "explicit": false,
                 "episodeTitle": "077: RAPIDFIRE #18",
                 "episodeSummary": "This week it’s another RAPIDFIRE! We talked about (roughly in order): Q &amp; A 2:23 I recently ran the W3C Markup Validation tool on one of my WordPress site. I was amazed to see how many errors came up… Do you have any suggestions for validating my markup? 9:19 Should I learn Haml or Emmet... <a href=\"http://shoptalkshow.com/episodes/077-rapidfire-18/\" title=\"Read 077: RAPIDFIRE #18\">Read more »</a>",
+                "publishedAt": 1373545425,
+                "size": 35093865,
                 "duration": 4354
               }, {
                 "uid": 25330267,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/347/0/109757-076-with-tim-sabat-and-alex-vazquez.mp3",
+                "explicit": false,
                 "episodeTitle": "076: With Tim Sabat and Alex Vazquez",
                 "episodeSummary": "This week we were joined by Tim Sabat and Alex Vazquez. Like Chris, Tim and Alex worked at Wufoo, then SurveyMonkey after the acquisition. Now all three of them are the founders of CodePen. We talk about (roughly in order): News’n’Links’n’Drama 13:02 Expression Engine Drama – “Competition Ethics &amp; Add-ons” 17:40 Firefox 23: Disable Javascript... <a href=\"http://shoptalkshow.com/episodes/076-with-tim-sabat-and-alex-vazquez/\" title=\"Read 076: With Tim Sabat and Alex Vazquez\">Read more »</a>",
+                "publishedAt": 1373315450,
+                "size": 32111726,
                 "duration": 3981
               }, {
                 "uid": 25330268,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/348/0/109758-075-with-tim-kadlec.mp3",
+                "explicit": false,
                 "episodeTitle": "075: With Tim Kadlec",
                 "episodeSummary": "This week we were joined by Tim Kadlec. Tim is a front end developer, blogger, book author, and started the web conference Breaking Development at his previous job. We talk about (roughly in order): News’n’Links’n’Drama 3:40 “Just Build Websites!” Soundbyte 5:30 Breaking Development Conf 9:30 Tim’s Drama: Science and responsive images 19:15 “The Sidebar In... <a href=\"http://shoptalkshow.com/episodes/075-with-tim-kadlec/\" title=\"Read 075: With Tim Kadlec\">Read more »</a>",
+                "publishedAt": 1372942492,
+                "size": 31491570,
                 "duration": 3904
               }, {
                 "uid": 25330269,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/345/0/109759-live-from-front-end-conf.mp3",
+                "explicit": false,
+                "sequence": null,
                 "episodeTitle": "Live from Front-End Conf",
                 "episodeSummary": "This episode of Shop Talk was filmed before a live studio audience. Thanks to Dan &amp; Cherrie Denney for inviting us down to Front-End Design Conference in St. Petersburg, Florida. Chris played the banjo a bit and Dave wore a Floridian shirt. It is a spectacular conference and a lot of fun was had. We... <a href=\"http://shoptalkshow.com/episodes/live-from-front-end-conf/\" title=\"Read Live from Front-End Conf\">Read more »</a>",
+                "publishedAt": 1372182780,
+                "size": 27928916,
                 "duration": 1745
               }, {
                 "uid": 25330270,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/342/0/109760-074-with-noah-stokes.mp3",
+                "explicit": false,
                 "episodeTitle": "074: With Noah Stokes",
                 "episodeSummary": "This week we were joined by Noah Stokes, founder and partner of Bold (a web design studio) as well as a designer and front end coder with the best of them. Noah is also a professional newscaster, blogger‘, and speaker. We talked about (roughly in order): News’n’Links’n’Drama: 9:57 PRISM 13:05 “Ughck. Images.” 17:47 More about... <a href=\"http://shoptalkshow.com/episodes/074-with-noah-stokes/\" title=\"Read 074: With Noah Stokes\">Read more »</a>",
+                "publishedAt": 1372103551,
+                "size": 30742492,
                 "duration": 3810
               }, {
                 "uid": 25330271,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/340/0/109761-073-with-val-head.mp3",
+                "explicit": false,
                 "episodeTitle": "073: With Val Head",
                 "episodeSummary": "This week we were joined by Val Head. Val is a designer and consultant. She co-founded Web Design Day and Refresh Pittsburgh, is the Managing Editor of CreativeJS.com, and just released the CSS Animations Pocket Guide on Five Simple Steps. We have some sponsor spots open! Get your thing in front of lots of smart,... <a href=\"http://shoptalkshow.com/episodes/073-with-val-head/\" title=\"Read 073: With Val Head\">Read more »</a>",
+                "publishedAt": 1371576976,
+                "size": 29244526,
                 "duration": 3623
               }, {
                 "uid": 25330272,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/338/0/109762-072-with-raquel-velez.mp3",
+                "explicit": false,
                 "episodeTitle": "072: With Raquel Velez",
                 "episodeSummary": "This week we were joined by Raquel Velez, an all around web and robot hacker focusing on Node.js at the moment at Storify. We talked about (roughly in order): News’n’Links’n’Drama: 5:30 Why is Node good for robots? Q &amp; A: 14:50 I was wondering if you could talk about what the ideal scenario is to... <a href=\"http://shoptalkshow.com/episodes/072-with-raquel-velez/\" title=\"Read 072: With Raquel Velez\">Read more »</a>",
+                "publishedAt": 1370906832,
+                "size": 30278975,
                 "duration": 3752
               }, {
                 "uid": 25330273,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/333/0/109763-071-rapidfire-17.mp3",
+                "explicit": false,
                 "episodeTitle": "071: RAPIDFIRE #17",
                 "episodeSummary": "This week we have a special RAPIDFIRE episode for you! We’re gonna answer as many of your questions as possible, as best as we can (in three minutes or less)! We talked about (roughly in order): Q &amp; A 2:50 I’m trying to think about mobile first. Is serving HTML content through JavaScript bad? Can... <a href=\"http://shoptalkshow.com/episodes/071-rapidfire-17/\" title=\"Read 071: RAPIDFIRE #17\">Read more »</a>",
+                "publishedAt": 1369922447,
+                "size": 28317284,
                 "duration": 3507
               }, {
                 "uid": 25330274,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/329/0/109764-070-with-hampton-catlin.mp3",
+                "explicit": false,
                 "episodeTitle": "070: With Hampton Catlin",
                 "episodeSummary": "This week we were joined by Hampton Catlin. Hampton is the inventor of Sass and Haml, the original creator of Wikipedia Mobile, and several successful iPhone applications including Dictionary! Hampton is currently building crazy new technologies to mobilize the web at Moovweb. We talked about (roughly in order): News’n’Links’n’Drama 19:20 Welcome, Recent Graduates by Mike... <a href=\"http://shoptalkshow.com/episodes/070-with-hampton-catlin/\" title=\"Read 070: With Hampton Catlin\">Read more »</a>",
+                "publishedAt": 1369890134,
+                "size": 29957982,
                 "duration": 3712
               }, {
                 "uid": 25330275,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/327/0/109765-069-with-mike-taylor.mp3",
+                "explicit": false,
                 "episodeTitle": "069: With Mike Taylor",
                 "episodeSummary": "This week we were joined by Mike Taylor, a whitespace strategist from Opera. We talked about (roughly in order): News’n’Links’n’Drama: 6:37 The W3C added EME Spec (aka DRM for video) Q &amp; A 19:24 Percentages seem to render different in Opera, what’s the deal? Should I use media queries instead? 23:42 Wouldn’t it be nice... <a href=\"http://shoptalkshow.com/episodes/069-with-mike-taylor/\" title=\"Read 069: With Mike Taylor\">Read more »</a>",
+                "publishedAt": 1369171130,
+                "size": 28602813,
                 "duration": 3543
               }, {
                 "uid": 25330276,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/323/0/109766-068-with-ben-schwarz.mp3",
+                "explicit": false,
                 "episodeTitle": "068: With Ben Schwarz",
                 "episodeSummary": "This week we were joined by Ben Schwarz, a full stack web hacker, tool maker, and tip sharer from Melbourne, Australia. We talked about (roughly in order): News’n’Links’n’Drama: 4:00 Ben’s latest project Gallery CSS 11:30 Global Accessibility Awareness Day 14:50 National Fart JavaScript Awareness Day Q &amp; A: 16:30 When does Ben use Grunt JS... <a href=\"http://shoptalkshow.com/episodes/068-with-ben-schwarz/\" title=\"Read 068: With Ben Schwarz\">Read more »</a>",
+                "publishedAt": 1368649621,
+                "size": 33453166,
                 "duration": 4149
               }, {
                 "uid": 25330277,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/317/0/109767-067-with-pam-selle.mp3",
+                "explicit": false,
                 "episodeTitle": "067: With Pam Selle",
                 "episodeSummary": "This week we were joined by Pam Selle, a full stack developer in many languages and all around hacker from Philly. Pam works at AxisPhilly, teaches for GirlDevelopIt, and blogs at The Webivore. We talk about (roughly in order): News’n’Links’n’Drama 1:50 Introducing Pam Selle 2:45 Pam’s day job: Axis Philly 4:00 Girl Develop It 8:37... <a href=\"http://shoptalkshow.com/episodes/067-with-pam-selle/\" title=\"Read 067: With Pam Selle\">Read more »</a>",
+                "publishedAt": 1367950924,
+                "size": 39239965,
                 "duration": 3898
               }, {
                 "uid": 25330278,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/300/0/109768-066-rapidfire-16.mp3",
+                "explicit": false,
                 "episodeTitle": "066: RAPIDFIRE #16",
                 "episodeSummary": "Another classic RAPIDFIRE! No guests, no drama, no news, just all redhot question on answer action. What do you use to concatenate JavaScript files before production on Windows? Aren’t thinks like history.pushState just new JavaScript things, not HTML5? Can Sublime Text help with re-usable components? How do you diagram these fancy one-page style apps? How... <a href=\"http://shoptalkshow.com/episodes/066-rapidfire-16/\" title=\"Read 066: RAPIDFIRE #16\">Read more »</a>",
+                "publishedAt": 1366898402,
+                "size": 37198081,
                 "duration": 4649
               }, {
                 "uid": 25330279,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/313/0/109769-065-with-ben-frain.mp3",
+                "explicit": false,
                 "episodeTitle": "065: With Ben Frain",
                 "episodeSummary": "This week we were joined by Ben Frain, a web developer, technology columnist, and book author from Cheshire, UK. Ben has written for major publications like MacUser, .net, and The Guardian and is also a very famous television actor. We talked about (roughly in order): News’n'Links’n'Drama Seven Rules nonsense. Aral Balkan’s Slide &amp; Stage The... <a href=\"http://shoptalkshow.com/episodes/056-with-ben-frain/\" title=\"Read 065: With Ben Frain\">Read more »</a>",
+                "publishedAt": 1366740579,
+                "size": 31444036,
                 "duration": 3898
               }, {
                 "uid": 25330280,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/290/0/109770-064-rapidfire-15.mp3",
+                "explicit": false,
                 "episodeTitle": "064: RAPIDFIRE #15",
                 "episodeSummary": "Another RAPIDFIRE episode where Dave and Chris answer as many questions as possible. No guests, no news, no drama, just all question on answer action. This time they set a timer so no answer may exceed 3 minutes! 2:43 Should you learn jQuery or JavaScript first? 5:30 How come two scripts seem to work fine... <a href=\"http://shoptalkshow.com/episodes/064-rapidfire-15/\" title=\"Read 064: RAPIDFIRE #15\">Read more »</a>",
+                "publishedAt": 1365688801,
+                "size": 27195272,
                 "duration": 3367
               }, {
                 "uid": 25330281,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/307/0/109771-063-with-rachel-nabors.mp3",
+                "explicit": false,
                 "episodeTitle": "063: With Rachel Nabors",
                 "episodeSummary": "This week we were joined by Rachel Nabors, a cartoonist, illustrator, designer, and front end developer out of Raleigh, North Carolina. Rachel is highly interested in animations and sound in CSS and JavaScript. We talk about (roughly in order): News’n'Links’n'Drama 11:34 – hgroup removed from HTML 5.1 16:25 – Copy vs. Design (Robert Williams, Tim... <a href=\"http://shoptalkshow.com/episodes/with-rachel-nabors/\" title=\"Read 063: With Rachel Nabors\">Read more »</a>",
+                "publishedAt": 1365550814,
+                "size": 34536934,
                 "duration": 4284
               }, {
                 "uid": 25330282,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/298/0/109772-062-with-brandon-mathis.mp3",
+                "explicit": false,
                 "episodeTitle": "062: With Brandon Mathis",
                 "episodeSummary": "This week we were joined by Brandon Mathis, a web worker out of Birmingham, Alabama working for MongoHQ. Brandon is on the Compass team and is the creator of the static site generator Octopress. We talk about (roughly in order): News’n'Links (9:41) – Getting Started with Octopress Q &amp; A (26:32) – Regenerating sprites with... <a href=\"http://shoptalkshow.com/episodes/062-with-brandon-mathis/\" title=\"Read 062: With Brandon Mathis\">Read more »</a>",
+                "publishedAt": 1364857782,
+                "size": 30445323,
                 "duration": 3805
               }, {
                 "uid": 25330283,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/292/0/109773-061-with-alex-sexton.mp3",
+                "explicit": false,
                 "episodeTitle": "061: With Alex Sexton",
                 "episodeSummary": "This week we were joined by Alex Sexton, a JavaScript developer for BazaarVoice, ex-yayQuery star, Modernizr team member, YepNope inventor, TXJS organizer, and essentially the world’s best loved ginger. We talked about (roughly in order): New’n'Links’n'Drama Donglegate: Venture Beat, Hacker News, Amanda Blum, Estelle Weyl Are UX and Design different? Dan Eden, Mark Otto Done... <a href=\"http://shoptalkshow.com/episodes/061-with-alex-sexton/\" title=\"Read 061: With Alex Sexton\">Read more »</a>",
+                "publishedAt": 1364415426,
+                "size": 31646120,
                 "duration": 3923
               }, {
                 "uid": 25330284,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/288/0/109774-060-with-samantha-warren.mp3",
+                "explicit": false,
                 "episodeTitle": "060: With Samantha Warren",
                 "episodeSummary": "This week we were joined by Samantha Warren, a designer and recent San Fransico-ite. She moved from Washington D.C. to work for Twitter. Samantha is known for her love of all things typography and design and speaks at conferences around the world about these things. Most recently, about Style Tiles, a concept for showing design... <a href=\"http://shoptalkshow.com/episodes/060-with-samantha-warren/\" title=\"Read 060: With Samantha Warren\">Read more »</a>",
+                "publishedAt": 1363637226,
+                "size": 32152950,
                 "duration": 3987
               }, {
                 "uid": 25330285,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/281/0/109775-059-with-lara-swanson.mp3",
+                "explicit": false,
                 "episodeTitle": "059: With Lara Swanson",
                 "episodeSummary": "This week we were joined by Lara Swanson, formerly UX manager at Dyn and now a manager of mobile web at Etsy. Lara has long been a champion of web performance, UX, and being a good front end developer. We talk about (roughly in order): News’n'Links’n'Drama LayerVault vs. DesignModo “Pinkifying the recruiting process” FRED Client-Hints... <a href=\"http://shoptalkshow.com/episodes/059-with-lara-swanson/\" title=\"Read 059: With Lara Swanson\">Read more »</a>",
+                "publishedAt": 1363123118,
+                "size": 32120921,
                 "duration": 3983
               }, {
                 "uid": 25330286,
                 "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/278/0/109776-058-with-derek-featherstone.mp3",
+                "explicit": false,
                 "episodeTitle": "058: With Derek Featherstone",
                 "episodeSummary": "This week we were joined by Derek Featherstone, an accessibility specialist and leader of Simply Accessible, a consulting firm in Ottawa, Canada. The full show transcript is available here. We talk about (roughly in order): News’n'Links’n'Drama ARIA tree roles, not so simple Nav in lists discussion again Q &amp; A Does display: table; have an... <a href=\"http://shoptalkshow.com/episodes/058-with-derek-featherstone/\" title=\"Read 058: With Derek Featherstone\">Read more »</a>",
+                "publishedAt": 1362409205,
+                "size": 32537835,
                 "duration": 4035
-              }, {
-                "uid": 25330287,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/274/0/109777-057-with-jeff-starr.mp3",
-                "episodeTitle": "057: With Jeff Starr",
-                "episodeSummary": "This week we were joined by Jeff Starr, who has been blogging about the web for longer than either of us. Jeff is a WordPress master, co-author of Digging Into WordPress (with Chris) and author of HTAccess Made Easy. We talk about (roughly in order): News’n'Links’n'Drama DevTees Opera goes WebKit Speaking Up: Sarah Parmenter &amp;... <a href=\"http://shoptalkshow.com/episodes/057-with-jeff-starr/\" title=\"Read 057: With Jeff Starr\">Read more »</a>",
-                "duration": 3972
-              }, {
-                "uid": 25330288,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/269/0/109778-056-rapidfire-14.mp3",
-                "episodeTitle": "056: RAPIDFIRE #14",
-                "episodeSummary": "No guests, no drama, no, whatever, other stuff. Just all question on answer action with Chris and Dave. We talk about (roughly in order): Like a unicorn horn through the heart. How to handle a late in the game career change. More thoughts on when/where to use Class/ID. How do you learn more about the... <a href=\"http://shoptalkshow.com/episodes/056-rapidfire-14/\" title=\"Read 056: RAPIDFIRE #14\">Read more »</a>",
-                "duration": 3505
-              }, {
-                "uid": 25330289,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/264/0/109779-055-rapidfire-13.mp3",
-                "episodeTitle": "055: RAPIDFIRE #13",
-                "episodeSummary": "This week is just Dave and Chris answering as many listener questions as possible. That’s right, it’s RAPIDFIRE time! rat-a-tat-tat. We talk about (roughly in order): What do we think of Kirby CMS? Do we use Compass too? Are there Compass specific plugins? Can you change a Sass variable depending on the media query? Is... <a href=\"http://shoptalkshow.com/episodes/55-rapidfire-13/\" title=\"Read 055: RAPIDFIRE #13\">Read more »</a>",
-                "duration": 2929
-              }, {
-                "uid": 25330290,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/267/0/109780-054-with-stephanie-rewis.mp3",
-                "episodeTitle": "054: With Stephanie Rewis",
-                "episodeSummary": "Stephanie Rewis is a front end engineer who was a speaker, trainer, and builder all simultaneously for many many years and is now the VP of front end at a not yet launched CRM startup. We talk about (roughly in order): News’n'Links’n'Drama Navigation in Lists? Q &amp; A Do you use CSS3 selectors? (not just... <a href=\"http://shoptalkshow.com/episodes/054-with-stephanie-rewis/\" title=\"Read 054: With Stephanie Rewis\">Read more »</a>",
-                "duration": 3991
-              }, {
-                "uid": 25330291,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/261/0/109781-053-with-divya-manian-garann-means.mp3",
-                "episodeTitle": "053: With Divya Manian & Garann Means",
-                "episodeSummary": "This week we were joined by Divya Manian, an “Open Web Pamphleteer” at Adobe and Garann Means, a web developer at Etsy and fellow Austinite with Dave. Together they from Frip Frap, a video podcast about front end stuff. That’s right, #CROSSOVER! We talk about (roughly in order): News’n'Links’n'Drama WordPress vs Envato drama. Two second... <a href=\"http://shoptalkshow.com/episodes/053-with-divya-manian-garann-means/\" title=\"Read 053: With Divya Manian &amp; Garann Means\">Read more »</a>",
-                "duration": 3372
-              }, {
-                "uid": 25330292,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/256/0/109782-052-with-niki-brown-and-liz-andrade.mp3",
-                "episodeTitle": "052: With Niki Brown and Liz Andrade",
-                "episodeSummary": "This week we were joined by Niki Brown and Liz Andrade, both independent web designers and developers who together form the Pagebreak Podcast. That’s right, another #CROSSOVER! We talk about (roughly in order): News’n'Links In true crossover style, we discuss the article Becoming Better Communicators. Q &amp; A When you build a site with WordPress,... <a href=\"http://shoptalkshow.com/episodes/052-with-niki-brown-and-liz-andrade/\" title=\"Read 052: With Niki Brown and Liz Andrade\">Read more »</a>",
-                "duration": 3879
-              }, {
-                "uid": 25330293,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/252/0/109783-051-with-drew-wilson.mp3",
-                "episodeTitle": "051: With Drew Wilson",
-                "episodeSummary": "This week we were joined by Drew Wilson, a designer and developer (a true cross-bread powerhouse) out of Oceanside, California. Drew created the first widely popular icon font, Pictos. He is a conference organizer, producing ValioCon. He’s the creator of web apps like Space Box and Dialoggs. The list goes on and on. We talk... <a href=\"http://shoptalkshow.com/episodes/with-drew-wilson/\" title=\"Read 051: With Drew Wilson\">Read more »</a>",
-                "duration": 3897
-              }, {
-                "uid": 25330294,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/250/0/109784-050-with-daryl-koopersmith.mp3",
-                "episodeTitle": "050: With Daryl Koopersmith",
-                "episodeSummary": "This week we were joined by Daryl Koopersmith, a San Francisco based web developer. Daryl was a lead developer on WordPress, and co-headed up the recent 3.5 release, specifically working on the new (awesome) media manager. We talk about (roughly in order): News’n'Links’n'Drama Daryl has left Automattic and is looking for something fresh Pseudo elements... <a href=\"http://shoptalkshow.com/episodes/050-with-daryl-koopersmith/\" title=\"Read 050: With Daryl Koopersmith\">Read more »</a>",
-                "duration": 4029
-              }, {
-                "uid": 25330295,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/246/0/109785-049-with-david-walsh.mp3",
-                "episodeTitle": "049: With David Walsh",
-                "episodeSummary": "David Walsh is a MooTools lover, recent Mozilla-er, and (for a final “M”), fellow original Madisonian with Chris. David has been writing at his blog The David Walsh Blog for over five years. We talk about (roughly in order): News’n'Links That whole domain theft thing ShopTalk Shirts CodePen PRO is out now Q &amp; A... <a href=\"http://shoptalkshow.com/episodes/049-with-david-walsh/\" title=\"Read 049: With David Walsh\">Read more »</a>",
-                "duration": 3925
-              }, {
-                "uid": 25330296,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/242/0/109786-048-with-jen-simmons.mp3",
-                "episodeTitle": "048: With Jen Simmons",
-                "episodeSummary": "This week we were joined by Jen Simmons the host of The Web Ahead (CROSSOVER!) and a long time freelancer, consulter, builder, and friend of the web. We talk about (roughly in order): News’n'Links’n'Drama Jen also doing The Web Behind with Eric Meyer Instagram Term of Service debacle Animation performance (1, 2) Q&amp;A If you’re... <a href=\"http://shoptalkshow.com/episodes/048with-jen-simmons/\" title=\"Read 048: With Jen Simmons\">Read more »</a>",
-                "duration": 4011
-              }, {
-                "uid": 25330297,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/239/0/109787-047-with-tim-smith.mp3",
-                "episodeTitle": "047: with Tim Smith",
-                "episodeSummary": "This week we were joined by Tim Smith, a designer doing both freelance work and in-house design work as well as soon-to-be magazine publisher. This is a crossover episode, as both Dave and Chris have been on Tim’s excellent podcast The East Wing. We talk about (roughly in order): News’n'Links’n'Drama Brian Franco’s book An Illustrated... <a href=\"http://shoptalkshow.com/episodes/047-with-tim-smith/\" title=\"Read 047: with Tim Smith\">Read more »</a>",
-                "duration": 3986
-              }, {
-                "uid": 25330298,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/231/0/109788-046-rapidfire-12.mp3",
-                "episodeTitle": "046: RAPIDFIRE #12",
-                "episodeSummary": "This is a classic RAPIDFIRE episode. No guests, no drama, no news, just straight question on answer action. We talk about (roughly in order): What is the best way to host videos behind a pay wall? Chris uses WordPress with Restrict Content Pro (with PayPal) and Vimeo Pro to host the video. Can there be... <a href=\"http://shoptalkshow.com/episodes/046-rapidfire-12/\" title=\"Read 046: RAPIDFIRE #12\">Read more »</a>",
-                "duration": 3626
-              }, {
-                "uid": 25330299,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/229/0/109789-045-with-harry-roberts.mp3",
-                "episodeTitle": "045: With Harry Roberts",
-                "episodeSummary": "This week we were joined by Harry Roberts of CSS Wizardy. Harry does a lot of writing about CSS architecture and writing good CSS. He has a fancy title at BSkyB and has worked on apps such as Faavorite. We talk about (roughly in order): #HOTDRAMA To use or not to use ID’s, the saga.... <a href=\"http://shoptalkshow.com/episodes/045-with-harry-roberts/\" title=\"Read 045: With Harry Roberts\">Read more »</a>",
-                "duration": 3766
-              }, {
-                "uid": 25330300,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/222/0/109790-044-with-jeffrey-zeldman.mp3",
-                "episodeTitle": "044: With Jeffrey Zeldman",
-                "episodeSummary": "This week we were joined by Jeffrey Zeldman, a man who scarcely needs an introduction around these parts. In the early days of the web Jeffery was influential in pushing web standards forward and getting us to the happy place we are in now. He’s also the man behind the web magazine A List Apart,... <a href=\"http://shoptalkshow.com/episodes/044-with-jeffrey-zeldman/\" title=\"Read 044: With Jeffrey Zeldman\">Read more »</a>",
-                "duration": 2773
               }
             ]
           }, {
             "id": 199,
-            "feedUrl": "http://feeds.feedburner.com/javascriptjabber",
+            "home": "http://javascriptjabber.com",
+            "url": "http://feeds.feedburner.com/javascriptjabber",
+            "author": "Charles Max Wood, AJ O'Neal, Jamison Dance, Joe Eames, Tim Caswell, Merrick Christensen",
             "subscriptionTitle": "Javascript Jabber",
             "summary": "A technical discussion of JavaScript related topics. Things like Node.js, Web Frameworks, JSON, CoffeeScript, Event and Object models and much more.",
-            "albumArt": "jsj.png",
-            "numberOfEpisodes": 40,
+            "imageURL": "jsj.png",
             "episodes": [
               {
+                "uid": 36568194,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ100.mp3",
+                "explicit": false,
+                "episodeTitle": "100 JSJ Centennial Episode Celebration",
+                "episodeSummary": "Panel Aaron Frost (twitter github blog) Merrick Christensen (twitter github) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 07:45 – JSJ Opening Music Mystery Inu: The Bailing 09:39 – Crazy Recording Locations 12:57 – Favorite […]",
+                "publishedAt": 1394629215,
+                "size": 47295985,
+                "duration": 2956
+              }, {
+                "uid": 36348056,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ099NPMInc.mp3",
+                "explicit": false,
+                "episodeTitle": "099 JSJ npm, Inc. with Isaac Schlueter, Laurie Voss, and Rod Boothby",
+                "episodeSummary": "Panel Isaac Schlueter (twitter github blog) Laurie Voss (twitter github blog) Rod Boothby (twitter blog) Aaron Frost (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:33 – npm, Inc. Services &amp; Possible Features Joyent 05:06 […]",
+                "publishedAt": 1394028011,
+                "size": 54363716,
+                "duration": 3398
+              }, {
+                "uid": 36150212,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ098AssembleIO.mp3",
+                "explicit": false,
+                "episodeTitle": "098 JSJ Assemble.io with Brian Woodward and Jon Schlinkert",
+                "episodeSummary": "Panel Jon Schlinkert (twitter github) Brian Woodward (twitter github blog) Joe Eames (twitter github blog) Aaron Frost (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:44 – Jon and Brian Introductions Sellside 05:14 – Assemble.io Assemble.io (GitHub) Jekyll 12:34 – Resources Foundation […]",
+                "publishedAt": 1393423257,
+                "size": 42146341,
+                "duration": 2634
+              }, {
+                "uid": 35983180,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ097GulpJS.mp3",
+                "explicit": false,
+                "episodeTitle": "097 JSJ Gulp.js with Eric Schoffstall",
+                "episodeSummary": "Panel Eric Schoffstall (twittergithubblog) Aaron Frost (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:47 – Eric Schoffstall Introduction FRACTAL 02:35 – Gulp 05:11 – Streams 07:51 – Gulp vs Grunt 09:22 […]",
+                "publishedAt": 1392818449,
+                "size": 40885755,
+                "duration": 2555
+              }, {
+                "uid": 35889579,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ096LargeSinglePageApps.mp3",
+                "explicit": false,
+                "episodeTitle": "096 JSJ The Challenges of Large Single Page JavaScript Applications with Bart Wood",
+                "episodeSummary": "Panel Bart Wood (twitter github) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:29 – Bart Wood Introduction 02:12 – The Frontend Backbone.js 02:48 – Working on Single Page Applications 05:56 – Limitations Memory JSFiddle 09:51 – Online Practice Management Solution 11:40 – Other Storage […]",
+                "publishedAt": 1392386405,
+                "size": 43217595,
+                "duration": 2701
+              }, {
+                "uid": 35735301,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ095AngularUI.mp3",
+                "explicit": false,
+                "episodeTitle": "095 JSJ AngularUI with Dean Sofer",
+                "episodeSummary": "Panel Dean Sofer (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:00 – Dean Sofer Introduction Paxata 02:25 – Big Data 03:44 – AngularUI PHP-OS 09:25 – Angular and Ember.js UI-Router 10:40 […]",
+                "publishedAt": 1391793004,
+                "size": 48377251,
+                "duration": 3024
+              }, {
+                "uid": 35595376,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ094BonzaiJS.mp3",
+                "explicit": false,
+                "episodeTitle": "094 JSJ BonsaiJS with Tobi Reiss",
+                "episodeSummary": "Panel Tobi Reiss (twittergithubblog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:38 – Tobi Reiss Introduction uxebu 02:32 – BonsaiJS pixelplant 05:06 – Performance The Renderer SVG Bonsai vs Flash 12:32 – Bonsai vs Other […]",
+                "publishedAt": 1391176844,
+                "size": 42173902,
+                "duration": 2636
+              }, {
+                "uid": 35473681,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ093NYT.mp3",
+                "explicit": false,
+                "episodeTitle": "093 JSJ The New York Times and JavaScript with Eitan Konigsburg, Alastair Coote and Reed Emmons",
+                "episodeSummary": "Panel Eitan Konigsburg (twittergithub) Alastair Coote (twitter github blog) Reed Emmons (twitter) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:06 – Introductions New York Times 03:17 – The Mobile Site 05:18 – The Desktop Site vs The Mobile Site […]",
+                "publishedAt": 1390572054,
+                "size": 52252213,
+                "duration": 3266
+              }, {
+                "uid": 35366877,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ092MEAN.mp3",
+                "explicit": false,
+                "episodeTitle": "092 JSJ The MEAN Stack with Ward Bell and Valeri Karpov",
+                "episodeSummary": "Panel Valeri Karpov (twitterbloggithub) Ward Bell (twitter blog github) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:25 – The MEAN Stack Mongo.db Express.js AngularJS Node.js MySQL 05:21 – Concurrency 12:49 – Express.js Sinatra 14:48 – Working Within the MEAN […]",
+                "publishedAt": 1389967211,
+                "size": 62227187,
+                "duration": 3889
+              }, {
+                "uid": 35275605,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ091JSONAPIs.mp3",
+                "explicit": false,
+                "episodeTitle": "091 JSJ JSON APIs",
+                "episodeSummary": "Panel AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:15 – XML vs JSON JSON API AJ O’Neal: No, really, XML is retarded. 05:41 – Single-page App vs Server-side App […]",
+                "publishedAt": 1389362410,
+                "size": 54970802,
+                "duration": 3436
+              }, {
+                "uid": 35160068,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ090UsersGroups.mp3",
+                "explicit": false,
+                "episodeTitle": "090 JSJ Users Groups",
+                "episodeSummary": "Panel AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:56 – AJ’s Experience Starting a Users Group VAGUE Utah JS Utah JS Forum + Mailing List 06:34 – Mailing Lists 07:23 – IRC 08:07 – Setting up Users Groups Consistency […]",
+                "publishedAt": 1388757643,
+                "size": 37502358,
+                "duration": 2344
+              }, {
+                "uid": 35069208,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ089NodeSecurity.mp3",
+                "explicit": false,
+                "episodeTitle": "089 JSJ The Node Security Project with Adam Baldwin",
+                "episodeSummary": "Panel Adam Baldwin (twitter github @nodesecurity) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:00 – Adam Baldwin Introduction Team Lead at ^lift Security from &amp;yet Founder and Organizer of The Node Security Project 02:12 […]",
+                "publishedAt": 1388152819,
+                "size": 50201649,
+                "duration": 3138
+              }, {
+                "uid": 34903673,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ088LazyJS.mp3",
+                "explicit": false,
+                "episodeTitle": "088 JSJ Lazy.js with Daniel Tao",
+                "episodeSummary": "Panel Daniel Tao (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:50 – Freelancing Q&amp;A 01:21 – Daniel Tao Introduction Google Ads Review Team 02:26 – Lazy.js Underscore Lo-Dash JavaScript Jabber Episode #79: Lo-Dash with John-David Dalton Lazy Evaluation 03:28 – Lazily […]",
+                "publishedAt": 1387552180,
+                "size": 44758141,
+                "duration": 2797
+              }, {
+                "uid": 34748679,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ087TC39.mp3",
+                "explicit": false,
+                "episodeTitle": "087 JSJ TC39 with Alex Russell",
+                "episodeSummary": "Panel Alex Russell (twitter github blog) AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:52 – Alex Russell Introduction Blink TC39 – ECMAScript 03:35 – Google DevTools 04:44 – Alex’s Background The Dojo Project Chrome Frame 07:14 – TC39 – […]",
+                "publishedAt": 1386943210,
+                "size": 61180596,
+                "duration": 3824
+              }, {
+                "uid": 34154298,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ086EmberDiscourse.mp3",
+                "explicit": false,
+                "episodeTitle": "086 JSJ Ember.js & Discourse with Robin Ward",
+                "episodeSummary": "Panel Robin Ward (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:53 – Robin Ward Introduction @evil_trout Discourse 01:36 – Discourse Ruby Rogues: #106 – Discourse with Jeff Atwood Ruby Rogues: #117 – […]",
+                "publishedAt": 1385733609,
+                "size": 61092417,
+                "duration": 3818
+              }, {
+                "uid": 33760438,
+                "mediaUrl": "http://traffic.libsyn.com/jsjabber/85_Episode_085__Huxley_with_Pete_Hunt.mp3",
+                "explicit": false,
+                "episodeTitle": "085 JSJ Huxley with Pete Hunt",
+                "episodeSummary": "Panel Pete Hunt (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:10 – Pete Hunt Introduction Facebook Instagram 02:11 – Huxley Selenium WebDriver 12:36 – The Huxley Community 15:33 – Selenium vs […]",
+                "publishedAt": 1385128852,
+                "size": 38674325,
+                "duration": 2417
+              }, {
                 "uid": 33476130,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/84_Episode_084__Node_with_Mikeal_Rogers.mp3",
+                "explicit": false,
                 "episodeTitle": "084 JSJ Node with Mikeal Rogers",
-                "episodeSummary": "Panel Mikeal Rogers (github blog) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Discussion 00:59 – Mikeal Rogers Introduction CTO of Getable windmill request 06:41 – NodeConf ng-conf 16:06 – Node: Frontend and Backend Pluralsight: AngularJS Fundamentals I-Tier: Dismantling the Monoliths 22:30 – JVMs Node.JS Is Stupid And If You Use It So […]"
+                "episodeSummary": "Panel Mikeal Rogers (github blog) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Discussion 00:59 – Mikeal Rogers Introduction CTO of Getable windmill request 06:41 – NodeConf ng-conf 16:06 – Node: Frontend and Backend Pluralsight: AngularJS Fundamentals I-Tier: Dismantling the Monoliths 22:30 – JVMs Node.JS Is Stupid And If You Use It So […]",
+                "publishedAt": 1384524035,
+                "size": 49120381,
+                "duration": 3070
               }, {
                 "uid": 33199872,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ083FRPRXJS.mp3",
+                "explicit": false,
                 "episodeTitle": "083 JSJ FRP and RxJS with Matthew Podwysocki",
-                "episodeSummary": "Panel Matthew Podwysocki (twitter github @ReactiveX) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:01 – 061 JSJ Functional Reactive Programming with Juha Paananen and Joe Fiorini Coursera: Principles of Reactive Programming 02:49 – Matthew Podwysocki Microsoft 05:12 – Functional […]"
+                "episodeSummary": "Panel Matthew Podwysocki (twitter github @ReactiveX) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:01 – 061 JSJ Functional Reactive Programming with Juha Paananen and Joe Fiorini Coursera: Principles of Reactive Programming 02:49 – Matthew Podwysocki Microsoft 05:12 – Functional […]",
+                "publishedAt": 1383931891,
+                "size": 41201321,
+                "duration": 2575
               }, {
                 "uid": 32903056,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ082JSHint.mp3",
+                "explicit": false,
                 "episodeTitle": "082 JSJ JSHint with Anton Kovalyov",
-                "episodeSummary": "Panel Anton Kovalyov (twitter github blog) AJ O’Neal (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:57 – Anton Kovalyov Mozilla Disqus JSHint JSLint 03:40 – Why I forked JSLint to JSHint 07:15 – JSHint vs JSLint 14:19 – Sticking with the […]"
+                "episodeSummary": "Panel Anton Kovalyov (twitter github blog) AJ O’Neal (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:57 – Anton Kovalyov Mozilla Disqus JSHint JSLint 03:40 – Why I forked JSLint to JSHint 07:15 – JSHint vs JSLint 14:19 – Sticking with the […]",
+                "publishedAt": 1383310817,
+                "size": 40484511,
+                "duration": 2530
               }, {
                 "uid": 32647192,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ081AsyncTesting.mp3",
+                "explicit": false,
                 "episodeTitle": "081 JSJ  Promises for Testing Async JavaScript with Pete Hodgson",
-                "episodeSummary": "Panel Pete Hodgson (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:19 – Pete Hodgson: Testing Asynchronous JavaScript Promises Domenic Denicola 12:43 – Efficiency 21:14 – q 037 JSJ Promises with Domenic Denicola and Kris Kowal jQuery 22:41 […]"
+                "episodeSummary": "Panel Pete Hodgson (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:19 – Pete Hodgson: Testing Asynchronous JavaScript Promises Domenic Denicola 12:43 – Efficiency 21:14 – q 037 JSJ Promises with Domenic Denicola and Kris Kowal jQuery 22:41 […]",
+                "publishedAt": 1382706004,
+                "size": 48882176,
+                "duration": 3055
               }, {
                 "uid": 32404374,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ080ImpactJS.mp3",
+                "explicit": false,
                 "episodeTitle": "080 JSJ Impact.js with Dominic Szablewski",
-                "episodeSummary": "Panel Dominic Szablewski (twitter github PhobosLab) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:20 – Dominic Szablewski Introduction 01:54 – Impact.js Biolab Disaster 03:00 – Selling/Charging vs Open-Source/Consulting Z-Type 06:09 – Game Development 08:42 […]"
+                "episodeSummary": "Panel Dominic Szablewski (twitter github PhobosLab) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:20 – Dominic Szablewski Introduction 01:54 – Impact.js Biolab Disaster 03:00 – Selling/Charging vs Open-Source/Consulting Z-Type 06:09 – Game Development 08:42 […]",
+                "publishedAt": 1382094032,
+                "size": 56279614,
+                "duration": 3517
               }, {
                 "uid": 32155766,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ079LoDash.mp3",
+                "explicit": false,
                 "episodeTitle": "079 JSJ Lo-Dash with John-David Dalton",
-                "episodeSummary": "Panel John-David Dalton (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:32 – John-David Dalton Introduction Lo-Dash jsPerf benchmark.js Microsoft 02:19 – jsPerf 07:48 – Lo-Dash Underscore Lo-Dash [...]"
+                "episodeSummary": "Panel John-David Dalton (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:32 – John-David Dalton Introduction Lo-Dash jsPerf benchmark.js Microsoft 02:19 – jsPerf 07:48 – Lo-Dash Underscore Lo-Dash [...]",
+                "publishedAt": 1381489214,
+                "size": 62098855,
+                "duration": 3881
               }, {
                 "uid": 32060741,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ078WorkingFromHome.mp3",
+                "explicit": false,
                 "episodeTitle": "078 JSJ Working From Home",
-                "episodeSummary": "Panel Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:39 – Going Rogue Video 01:10 – Working From Home 02:17 – Office Setups/Furniture LX Desk Mount LCD Arm Aeron Chair by Herman Miller VendorGear Headrest for Herman Miller Aeron Chair A standing desk for $22 [...]"
+                "episodeSummary": "Panel Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:39 – Going Rogue Video 01:10 – Working From Home 02:17 – Office Setups/Furniture LX Desk Mount LCD Arm Aeron Chair by Herman Miller VendorGear Headrest for Herman Miller Aeron Chair A standing desk for $22 [...]",
+                "publishedAt": 1380884423,
+                "size": 55928512,
+                "duration": 3496
               }, {
                 "uid": 32060742,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ077Monocle.mp3",
+                "explicit": false,
                 "episodeTitle": "077 JSJ Monocle with Alex MacCaw",
-                "episodeSummary": "Panel Alex MacCaw (twitter github blog) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:13 – Going Rogue Video 02:12 – Alex MacCaw Introduction 029 JSJ Bower.js with Alex MacCaw and Jacob Thornton JavaScript Web [...]"
+                "episodeSummary": "Panel Alex MacCaw (twitter github blog) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:13 – Going Rogue Video 02:12 – Alex MacCaw Introduction 029 JSJ Bower.js with Alex MacCaw and Jacob Thornton JavaScript Web [...]",
+                "publishedAt": 1380279629,
+                "size": 48184153,
+                "duration": 3012
               }, {
                 "uid": 31495696,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ076Meteor.mp3",
+                "explicit": false,
                 "episodeTitle": "076 JSJ Meteor.js with Marcus Phillips and Fred Zirdung",
-                "episodeSummary": "Panel Marcus Phillips (twitter github) Fred Zirdung (twitter github) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:30 – Marcus Phillips and Fred Zirdung Introduction Hack Reactor 03:31 – Experience with Meteor 05:45 – Intro to Meteor Client-side Environment Tethered [...]"
+                "episodeSummary": "Panel Marcus Phillips (twitter github) Fred Zirdung (twitter github) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:30 – Marcus Phillips and Fred Zirdung Introduction Hack Reactor 03:31 – Experience with Meteor 05:45 – Intro to Meteor Client-side Environment Tethered [...]",
+                "publishedAt": 1379677269,
+                "size": 48459611,
+                "duration": 3029
               }, {
                 "uid": 31184980,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ075MaintainableJS.mp3",
+                "explicit": false,
                 "episodeTitle": "075 JSJ Maintainable JavaScript with Nicholas Zakas",
-                "episodeSummary": "Panel Nicholas C. Zakas (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:24 – Nicholas Zakas Introduction Box Maintainable JavaScript by Nicholas C. Zakas High Performance JavaScript (Build [...]"
+                "episodeSummary": "Panel Nicholas C. Zakas (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:24 – Nicholas Zakas Introduction Box Maintainable JavaScript by Nicholas C. Zakas High Performance JavaScript (Build [...]",
+                "publishedAt": 1379073630,
+                "size": 55377271,
+                "duration": 3461
               }, {
                 "uid": 31007222,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ074Grunt.mp3",
+                "explicit": false,
                 "episodeTitle": "074 JSJ Grunt with Ben Alman",
-                "episodeSummary": "Panel Ben Alman (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Ryan Florence (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:34 – Ben Alman Introduction Bocoup 02:54 – “Cowboy” Cowboy Coder 06:53 – The Birth of Grunt Ender make rake jake [...]"
+                "episodeSummary": "Panel Ben Alman (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Ryan Florence (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:34 – Ben Alman Introduction Bocoup 02:54 – “Cowboy” Cowboy Coder 06:53 – The Birth of Grunt Ender make rake jake [...]",
+                "publishedAt": 1378465234,
+                "size": 71237945,
+                "duration": 4452
               }, {
                 "uid": 27869126,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ073React.mp3",
+                "explicit": false,
                 "episodeTitle": "073 JSJ React with Pete Hunt and Jordan Walke",
-                "episodeSummary": "Panel Pete Hunt (twitter github blog) Jordan Walke (twitter github) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:34 – Pete Hunt Introduction Instagram Facebook 02:45 – Jordan Walke Introduction 04:15 [...]"
+                "episodeSummary": "Panel Pete Hunt (twitter github blog) Jordan Walke (twitter github) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:34 – Pete Hunt Introduction Instagram Facebook 02:45 – Jordan Walke Introduction 04:15 [...]",
+                "publishedAt": 1377860445,
+                "size": 53776878,
+                "duration": 3361
               }, {
                 "uid": 25004196,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ072Screencasting.mp3",
+                "explicit": false,
                 "episodeTitle": "072 JSJ Screencasts",
-                "episodeSummary": "Panel Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:31 – Screencasting Experience Pluralsight: AngularJS Fundamentals – Joe Pluralsight: jQuery Advanced Topics – Joe Pluralsight: Testing Clientside JavaScript – Joe Teach Me To Code – Chuck 02:44 – Getting into [...]"
+                "episodeSummary": "Panel Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:31 – Screencasting Experience Pluralsight: AngularJS Fundamentals – Joe Pluralsight: jQuery Advanced Topics – Joe Pluralsight: Testing Clientside JavaScript – Joe Teach Me To Code – Chuck 02:44 – Getting into [...]",
+                "publishedAt": 1377275467,
+                "size": 47535887,
+                "duration": 2971
               }, {
                 "uid": 19396953,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ071Microsoft.mp3",
+                "explicit": false,
                 "episodeTitle": "071 JSJ JavaScript Strategies at Microsoft with Scott Hanselman",
-                "episodeSummary": "Panel Scott Hanselman (twitter github blog) Joe Eames (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:14 – Scott Hanselman Introduction Community Program Manager for Web Tools at Microsoft Azure and Web Tools ASP.NET Runtime 03:17 – Microsoft and JavaScript Microsoft Build [...]"
+                "episodeSummary": "Panel Scott Hanselman (twitter github blog) Joe Eames (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:14 – Scott Hanselman Introduction Community Program Manager for Web Tools at Microsoft Azure and Web Tools ASP.NET Runtime 03:17 – Microsoft and JavaScript Microsoft Build [...]",
+                "publishedAt": 1376650839,
+                "size": 54787521,
+                "duration": 3424
               }, {
                 "uid": 17102387,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ070JavascriptAllonge.mp3",
+                "explicit": false,
                 "episodeTitle": "070 JSJ Book Club: JavaScript Allongé with Reginald Braithwaite",
-                "episodeSummary": "Panel Reginald Braithwaite (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:08 – Reg Braithwaite Introduction Github 03:46 – JavaScript Allongé by Reginald Braithwaite 06:43 – The Y [...]"
+                "episodeSummary": "Panel Reginald Braithwaite (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:08 – Reg Braithwaite Introduction Github 03:46 – JavaScript Allongé by Reginald Braithwaite 06:43 – The Y [...]",
+                "publishedAt": 1376066833,
+                "size": 63843934,
+                "duration": 3990
               }, {
                 "uid": 14144822,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ069ApplicationCaching.mp3",
+                "explicit": false,
                 "episodeTitle": "069 JSJ The Application Cache with Jake Archibald",
-                "episodeSummary": "Panel Jake Archibald (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:14 – Jake Archibald Introduction Works on Developer Relations on the Google Chrome Team 01:57 – The Application Cache Eric Bidelman: A Beginner’s Guide to Using the Application Cache – HTML5 [...]"
+                "episodeSummary": "Panel Jake Archibald (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:14 – Jake Archibald Introduction Works on Developer Relations on the Google Chrome Team 01:57 – The Application Cache Eric Bidelman: A Beginner’s Guide to Using the Application Cache – HTML5 [...]",
+                "publishedAt": 1375448454,
+                "size": 49360307,
+                "duration": 3085
               }, {
                 "uid": 9398347,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ068ES6.mp3",
+                "explicit": false,
                 "episodeTitle": "068 JSJ – ES6 with Aaron Frost",
-                "episodeSummary": "Panel Aaron Frost (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Discussion 01:36 – Aaron Frost Introduction Web Developer at Domo 1.21 Gigawatts – Chromeapps with Angularjs and Node (Aaron Frost and Dave Geddes) JS.next: A Manager’s Guide by Aaron Frost 02:21 – ECMAScript and JavaScript [...]"
+                "episodeSummary": "Panel Aaron Frost (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Discussion 01:36 – Aaron Frost Introduction Web Developer at Domo 1.21 Gigawatts – Chromeapps with Angularjs and Node (Aaron Frost and Dave Geddes) JS.next: A Manager’s Guide by Aaron Frost 02:21 – ECMAScript and JavaScript [...]",
+                "publishedAt": 1374822048,
+                "size": 45619970,
+                "duration": 2851
               }, {
                 "uid": 8619095,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ067Testem.mp3",
+                "explicit": false,
                 "episodeTitle": "067 JSJ – Testem with Toby Ho",
-                "episodeSummary": "Panel Toby Ho (twitter github blog) Joe Eames (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:53 – Aaron Frost Introduction Domo 1.21 Gigawatts – Chromeapps with Angularjs and Node (Aaron Frost and Dave Geddes) 02:45 – Toby Ho Introduction testem Toby [...]"
+                "episodeSummary": "Panel Toby Ho (twitter github blog) Joe Eames (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:53 – Aaron Frost Introduction Domo 1.21 Gigawatts – Chromeapps with Angularjs and Node (Aaron Frost and Dave Geddes) 02:45 – Toby Ho Introduction testem Toby [...]",
+                "publishedAt": 1374217234,
+                "size": 46840409,
+                "duration": 2928
               }, {
                 "uid": 7255072,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ066TransitioningToJS.mp3",
+                "explicit": false,
                 "episodeTitle": "066 JSJ Transitioning to JavaScript",
-                "episodeSummary": "Panel Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:10 – Making the transition from one primary language to JavaScript 01:30 – Merrick’s Experience ActionScript 03:32 – Joe’s Experience .NET Microsoft 07:46 – Moving from C# to JavaScript Misconceptions 09:25 – [...]"
+                "episodeSummary": "Panel Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:10 – Making the transition from one primary language to JavaScript 01:30 – Merrick’s Experience ActionScript 03:32 – Joe’s Experience .NET Microsoft 07:46 – Moving from C# to JavaScript Misconceptions 09:25 – [...]",
+                "publishedAt": 1373007607,
+                "size": 38962305,
+                "duration": 2435
               }, {
                 "uid": 6721031,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ065BuildTools.mp3",
+                "explicit": false,
                 "episodeTitle": "065 JSJ Build Tools with Adam Hawkins",
-                "episodeSummary": "Panel Adam Hawkins (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:16 – Adam Hawkins Introduction JavaScript Application Build Tools: Adam Hawkins 003 JSJ Build Tools 01:51 – What Are Build Tools? 02:46 – Build Process Ember.js [...]"
+                "episodeSummary": "Panel Adam Hawkins (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:16 – Adam Hawkins Introduction JavaScript Application Build Tools: Adam Hawkins 003 JSJ Build Tools 01:51 – What Are Build Tools? 02:46 – Build Process Ember.js [...]",
+                "publishedAt": 1372434821,
+                "size": 46856302,
+                "duration": 2929
               }, {
                 "uid": 5839738,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ064EmberTools.mp3",
+                "explicit": false,
                 "episodeTitle": "064 JSJ Ember Tools with Ryan Florence",
-                "episodeSummary": "Panel Ryan Florence (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:28 – Ryan Florence Introduction Instructure Canvas Network 03:04 – Ember 101 05:03 – Ember.js Workflow 047 JSJ Specialized vs Monolithic with [...]"
+                "episodeSummary": "Panel Ryan Florence (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:28 – Ryan Florence Introduction Instructure Canvas Network 03:04 – Ember 101 05:03 – Ember.js Workflow 047 JSJ Specialized vs Monolithic with [...]",
+                "publishedAt": 1371798011,
+                "size": 49466667,
+                "duration": 2996
               }, {
                 "uid": 5049101,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ063Burnout.mp3",
+                "explicit": false,
                 "episodeTitle": "063 JSJ Burnout",
-                "episodeSummary": "Panel Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:47 – Burnout Google: define burnout 04:57 – Pair Programming 06:19 – Burnout Guilt Thought-workers vs Laborers 10:15 – Positive Reinforcement 11:18 – Causes of Burnout Prolonged [...]"
+                "episodeSummary": "Panel Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:47 – Burnout Google: define burnout 04:57 – Pair Programming 06:19 – Burnout Guilt Thought-workers vs Laborers 10:15 – Positive Reinforcement 11:18 – Causes of Burnout Prolonged [...]",
+                "publishedAt": 1371193207,
+                "size": 50748313,
+                "duration": 2923
               }, {
                 "uid": 4089653,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ062Dojo.mp3",
+                "explicit": false,
                 "episodeTitle": "062 JSJ Dojo with Dylan Schiemann",
-                "episodeSummary": "Panel Dylan Schiemann (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:57 – Dylan Schiemann Introduction The Dojo Toolkit CEO of SitePen 01:14 – Dojo TD Ameritrade The Wall Street Journal JPMorgan [...]"
+                "episodeSummary": "Panel Dylan Schiemann (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:57 – Dylan Schiemann Introduction The Dojo Toolkit CEO of SitePen 01:14 – Dojo TD Ameritrade The Wall Street Journal JPMorgan [...]",
+                "publishedAt": 1370588424,
+                "size": 62933913,
+                "duration": 3685
               }, {
                 "uid": 3550183,
                 "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ061FRP.mp3",
+                "explicit": false,
                 "episodeTitle": "061 JSJ Functional Reactive Programming with Juha Paananen and Joe Fiorini",
-                "episodeSummary": "Panel Juha Paananen (twitter github blog) Joe Fiorini (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:20 – Joe Fiorini Introduction Interaction Developer at Designing Interactive in Cleveland, [...]"
-              }, {
-                "uid": 2709123,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ060DevelopmentEnviroments.mp3",
-                "episodeTitle": "060 JSJ Development Environments",
-                "episodeSummary": "Panel AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:09 – Mac, Windows or Linux? tmux Emacs Homebrew DigitalOcean 05:41 – Tools Jenkins CI TeamCity 07:49 – Editors and IDEs Vim MacVim MacVim Alloy Fork The [...]"
-              }, {
-                "uid": 2594254,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ059JQueryMobile.mp3",
-                "episodeTitle": "059 JSJ jQuery Mobile with Todd Parker",
-                "episodeSummary": "Panel Todd Parker (twitter github) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:53 – Todd Parker Introduction Filament Group 01:21 – DevChat.tv Indiegogo Campaign 01:55 – jQuery Mobile jQuery UI 04:13 – Responsive web design [...]"
-              }, {
-                "uid": 2511638,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ058AccessibleWebsites.mp3",
-                "episodeTitle": "058 JSJ Building Accessible Websites with Brian Hogan",
-                "episodeSummary": "Use this link and code JAVAJAB to get 20% off your registration for FluentConf 2013! Panel Brian Hogan (twitter github blog) AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:55 – Brian Hogan Introduction HTML5 and [...]"
-              }, {
-                "uid": 2419211,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ057FunctionalProgramming.mp3",
-                "episodeTitle": "057 JSJ Functional Programming with Zach Kessin",
-                "episodeSummary": "Panel Zachary Kessin (twitter github Mostly Erlang Podcast) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:55 – Zach Kessin Introduction Programming HTML5 Applications Building Web Applications with Erlang Product Structure Mostly Erlang Podcast 03:01 – Functional Programming Haskell LISP Scheme [...]"
-              }, {
-                "uid": 2342619,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ056MarionetteJS.mp3",
-                "episodeTitle": "056 JSJ Marionette.js with Derick Bailey",
-                "episodeSummary": "Use this link and code JAVAJAB to get 20% off your registration for FluentConf 2013! Panel Derick Bailey (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Tim Caswell (twitter github howtonode.org) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:03 – [...]"
-              }, {
-                "uid": 2316273,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ055WebDeveloperSkills.mp3",
-                "episodeTitle": "055 JSJ Web Developer Skills",
-                "episodeSummary": "Use this link and code JAVAJAB to get 20% off your registration for FluentConf 2013! Panel AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Discussion 00:57 – What does it mean to be a “web developer” “T-shaped skills” 11:01 – Minumum level entry skills [...]"
-              }, {
-                "uid": 2290396,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ054ParsingASTsGrammars.mp3",
-                "episodeTitle": "054 JSJ JavaScript Parsing, ASTs, and Language Grammar w/ David Herman and Ariya Hidayat",
-                "episodeSummary": "Use this link and code JAVAJAB to get 20% off your registration for FluentConf 2013! Panel David Herman (twitter blog Effective JavaScript) Ariya Hidayat (twitter github blog) Tim Caswell (twitter github howtonode.org) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code [...]"
-              }, {
-                "uid": 2266994,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ053SoftwareTeamDynamics.mp3",
-                "episodeTitle": "053 JSJ Software Team Dynamics",
-                "episodeSummary": "Use this link and code JAVAJAB to get 20% off your registration for FluentConf 2013! Panel Joe Eames (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:48 – External Conflicts Dealing with people [...]"
-              }, {
-                "uid": 2240816,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ052NodeAndNPM.mp3",
-                "episodeTitle": "052 JSJ Node & NPM with Isaac Schlueter",
-                "episodeSummary": "Use this link and code JAVAJAB to get 20% off your registration for FluentConf 2013! Panel Isaac Schlueter (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:33 – [...]"
-              }, {
-                "uid": 2214917,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ051FindingAJob.mp3",
-                "episodeTitle": "051 JSJ Finding a Job",
-                "episodeSummary": "Panel AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:02 – Panelist employment backgrounds 04:34 – Programming job market Networking 06:31 – How to get a job doing what you like BetterServers Skunkworks project 09:36 – Qualifications 11:40 – How [...]"
-              }, {
-                "uid": 2191841,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ050QUnit.mp3",
-                "episodeTitle": "050 JSJ QUnit with Jörn Zaefferer",
-                "episodeSummary": "Panel Jörn Zaefferer (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:15 – Jörn Zaefferer Introduction jQuery QUnit 02:32 – QUnit jQuery Mobile Introduction to Unit Testing | QUnit 06:59 – Built-in support for HTML fixtures for [...]"
-              }, {
-                "uid": 2168324,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ049MooTools.mp3",
-                "episodeTitle": "049 JSJ MooTools with Valerio Proietti and Arian Stolwijk",
-                "episodeSummary": "Panel Valerio Proietti (twitter github) Arian Stolwijk (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:08 – Arian Stolwijk Introduction MooTools Developer Symbaloo 01:39 – Valerio Proietti Introduction MooTools Creator Spotify 02:21 – [...]"
-              }, {
-                "uid": 2141603,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ048WhyJavascriptIsHard.mp3",
-                "episodeTitle": "048 JSJ Why JavaScript Is Hard",
-                "episodeSummary": "Panel Joe Eames (twitter github blog) Tim Caswell (twitter github howtonode.org) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) AJ O’Neal (twitter github blog) Discussion 00:56 – Why JavaScript is hard to learn 02:30 – This 05:30 – Bind 09:11 – Browsers 11:01 – Class-based inheritance Prototypal inheritance 16:37 – New function 18:51 – Closures 20:51 – JavaScript is asynchronous [...]"
-              }, {
-                "uid": 2108625,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ047SpecializedVSMonolithic.mp3",
-                "episodeTitle": "047 JSJ Specialized vs Monolithic with James Halliday and Tom Dale",
-                "episodeSummary": "Panel Tom Dale (twitter github blog Tilde Inc.) James Halliday (twitter github substack.net) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Tim Caswell (twitter github howtonode.org) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:52 – James Halliday Introduction browserify 02:37 – Tom Dale Introduction iCloud Ember.js Big Data &amp; Hadoop 04:47 – [...]"
-              }, {
-                "uid": 2079848,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ046StayingCurrent.mp3",
-                "episodeTitle": "046 JSJ Staying Current",
-                "episodeSummary": "Panel Joe Eames (twitter github blog) Merrick Christensen (twitter github) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 03:19 – The Future of JavaScript and ES6 es-discuss — Discussion of ECMAScript @esdiscuss six ES6 in node.js @brendaneich (Brendan Eich) @rwaldron (Rick Waldron) 10:18 – Getting News about JavaScript @derickbailey (Derick Bailey) @tjholowaychuk (TJ [...]"
-              }, {
-                "uid": 2049665,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ045jQuery.mp3",
-                "episodeTitle": "045 JSJ jQuery",
-                "episodeSummary": "Panel AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:11 – jQuery vs Prototype vs MooTools 10:50 – JavaScript Going Mainstream Fast Browsers Firefox Web Developer Tools V8 Web Stack 13:21 – Usable JavaScript 17:05 – jQuery Pros Cross-Platform CSS Selection [...]"
+                "episodeSummary": "Panel Juha Paananen (twitter github blog) Joe Fiorini (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:20 – Joe Fiorini Introduction Interaction Developer at Designing Interactive in Cleveland, [...]",
+                "publishedAt": 1369983642,
+                "size": 47535940,
+                "duration": 2971
               }
             ]
           }, {
@@ -568,379 +881,530 @@
               {
                 "uid": "flippinBozo-1dsf",
                 "episodeTitle": "Episode 13: All Aboard",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/013/2013-11-01-episode-13.mp3"
               }, {
                 "uid": "flippinBozo-dsv2",
                 "episodeTitle": "Episode 12: Agile Design",
                 "episodeSummary": "What if we made design a part of the Agile Software Process?",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/012/2013-10-15-episode-12.mp3"
               }, {
                 "uid": "flippinBozo-vsvs3",
                 "episodeTitle": "Episode 11: Functional Reactive Programming",
                 "episodeSummary": "What's the deal with FRP? Christoph gives us the skinny on Functional Reactive Programming.",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/011/2013-10-01-episode-11.mp3"
               }, {
                 "uid": "flippinBozo-vdszfs",
                 "episodeTitle": "Episode 10: Javascriptocalypse",
                 "episodeSummary": "What if you wanted to write a fancy in-browser app but were less than enthusiastic about the Javascript ecosystem?",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/010/2013-08-01-episode-10.mp3"
               }, {
                 "uid": "flippinBozo-vfvdfs",
                 "episodeTitle": "Episode 9: Internalizing Open Source",
                 "episodeSummary": "What if you ran your internal, closed-source, proprietary, mega-corporate projects like open source projects? Similar styles? Similar tools?",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/009/2013-07-15-episode-9.mp3"
               }, {
                 "uid": "flippinBozo-fvsbvdsf",
                 "episodeTitle": "Episode 8: Clean Room Development",
                 "episodeSummary": "This one's all about the music. What if you had to rewrite your software after every release?",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/008/2013-07-01-episode-8.mp3"
               }, {
                 "uid": "flippinBozo-fzvsdfb",
                 "episodeTitle": "Episode 7: Steel Mills to Data Warehouses",
                 "episodeSummary": "What if you can't duplicate your production stack for testing and so on? For instance, factory software? I'm starting to think this whole podcast is, ultimately, about design.",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/007/2013-05-19-episode-7.mp3"
               }, {
                 "uid": "flippinBozo-fsbfds",
                 "episodeTitle": "Episode 6: Lazy Package Objects",
                 "episodeSummary": "Thought experiments are all well and good, but sometimes you gotta try 'em out to see what's what.",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/006/2013-05-04-episode-6.mp3"
               }, {
                 "uid": "flippinBozo-024ge",
                 "episodeTitle": "Episode 5: A Walled Off Garden of Perfection",
                 "episodeSummary": "Can't change your variables once you assign a value? WTF? Surely, this is something up with which we cannot put! Or: a round-about introduction to some of the concerns addressed by the functional programming paradigm.",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/005/2013-04-14-episode-5.mp3"
               }, {
                 "uid": "flippinBozo-gwra",
                 "episodeTitle": "Episode 4: The March of IDEs",
                 "episodeSummary": "In this episode, we start with our conclusion and try to move on from there.",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/004/2013-03-31-episode-4.mp3"
               }, {
                 "uid": "flippinBozo-9rh31",
                 "episodeTitle": "Episode 3: Technical Debt On Wheels",
                 "episodeSummary": "What if you were required to write a prototype for every significant development of your software system?",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/003/2013-03-13-episode-3.mp3"
               }, {
                 "uid": "flippinBozo-2f",
                 "episodeTitle": "Episode 2: Unitless Tests",
                 "episodeSummary": "Our second podcast. This one got away from us in length, but it all adds up. Somehow. Does a project's implementation strategy affect team dynamics? What if you couldn't include tests in your source tree? Digressions abound!",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/002/2013-02-17-episode-2.mp3"
               }, {
                 "uid": "flippinBozo-32tvb",
                 "episodeTitle": "Episode 1: Origin Stories",
                 "episodeSummary": "Welcome to the first episode of <em>Flipping the Bozo Bit</em>, a casual, conversational, podcast questioning the truisms of software development and management with plenty of digressions mixed in to taste.",
+                "publishedAt": 1369983642,
                 "mediaUrl": "http://flippingthebozobit.tv/episode/001/2013-01-28-episode-1.mp3"
               }
             ]
           }, {
             "id": 7591,
             "feedUrl": "http://nitch.cc/podcast",
+            "authors": "Nitch",
             "subscriptionTitle": "The Nitch Podcast",
-            "summary": "A weekly podcast about making apps that run everywhere using open web standards like HTML, CSS, JavaScript, REST, and JSON. Hosted by Jonathan Stark and Kelli Shaver.",
+            "summary": "A weekly podcast about building apps that run everywhere using open web standards like HTML, CSS, JavaScript, REST, and JSON. Hosted by Jonathan Stark and Kelli Shaver.",
             "albumArt": "nitch.png",
-            "numberOfEpisodes": 82,
             "episodes": [
               {
+                "uid": 36622962,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_99_Total_Dad_Plan.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 99: Total Dad Plan",
+                "episodeSummary": "Jonathan and Kelli talk about preaching to the choir(.io), web apps for watches, and a second look at smart glasses.",
+                "publishedAt": 1394780656,
+                "size": 64172851,
+                "duration": 4211
+              }, {
+                "uid": 36418684,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_98_Pee_Rink.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 98: Pee Rink",
+                "episodeSummary": "Jonathan and Kelli talk about first impressions of Google Glass, DIY SaaS integration with Zapier, and zoning out to the sounds of Github.",
+                "publishedAt": 1394181739,
+                "size": 64172851,
+                "duration": 4028
+              }, {
+                "uid": 36200351,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_97_Dogs_With_No_Noses.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 97: Dogs With No Noses",
+                "episodeSummary": "Jonathan and Kelli talk about recent announcements from Facebook, Nokia, Mozilla, and Samsung - and how they affect app developers.",
+                "publishedAt": 1393592873,
+                "size": 64172851,
+                "duration": 2349
+              }, {
+                "uid": 36041240,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_96_You_Cant_Tuna_Fish_To_Get_To_The_Other_Side.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 96: You Can’t Tuna Fish To Get To The Other Side",
+                "episodeSummary": "Jonathan and Kelli talk about the shocking demand for smart headphones and what designers and developers can do to start building experiences for the coming zombie apocalypse of screenless devices.",
+                "publishedAt": 1392986431,
+                "size": 64172851,
+                "duration": 4188
+              }, {
+                "uid": 35885552,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_95_Banana_Piano.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 95: Banana Piano",
+                "episodeSummary": "Jonathan and Kelli talk about the relative merits of CSS grid systems and JavaScript libraries.",
+                "publishedAt": 1392386400,
+                "size": 64172851,
+                "duration": 2776
+              }, {
+                "uid": 35751804,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_94_Function_Frog.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 94: Function Frog",
+                "episodeSummary": "Jonathan and Kelli talk about a slew of geeky books we've read lately: security, astronauts, innovation, cyberwar, and more. Think of it as recommended reading for nerds.",
+                "publishedAt": 1391781600,
+                "size": 64172851,
+                "duration": 3422
+              }, {
+                "uid": 35595476,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_93_Lightsaber_Customer_Service.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 93: Lightsaber Customer Service",
+                "episodeSummary": "Jonathan and Kelli talk about Kelli's new Raspberry Pi: what to do with it, how to program it, and what she loves about it.",
+                "publishedAt": 1391176800,
+                "size": 64172851,
+                "duration": 4014
+              }, {
+                "uid": 35469059,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_92_Cattering_Ram.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 92: Cattering Ram",
+                "episodeSummary": "Jonathan and Kelli talk about a few of our favorite APIs: Stripe, Dropbox, Github, Twilio, and not Facebook.",
+                "publishedAt": 1390553645,
+                "size": 64172851,
+                "duration": 3342
+              }, {
+                "uid": 35360591,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_91_Papil_and_Pencer.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 91: Papil and Pencer",
+                "episodeSummary": "Jonathan and Kelli talk about the tools we use to get our jobs done on a daily basis. Command line utilities, browser plugins, text editors, project management, and more.",
+                "publishedAt": 1389937277,
+                "size": 64172851,
+                "duration": 6322
+              }, {
+                "uid": 35271233,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_90_Weve_Got_Gas.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 90: We’ve Got Gas",
+                "episodeSummary": "Jonathan and Kelli talk about “hacking” our Hue wireless lights.",
+                "publishedAt": 1389337581,
+                "size": 64172851,
+                "duration": 3729
+              }, {
+                "uid": 35162928,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_89_Aspirational_Laundry.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 89: Aspirational Laundry",
+                "episodeSummary": "Jonathan and Kelli talk about the pros, cons, and programming implications of the top ten gadgets we received in 2013.",
+                "publishedAt": 1388757600,
+                "size": 64172851,
+                "duration": 6504
+              }, {
+                "uid": 35068258,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_88_Old_Waffles.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 88: Old Waffles",
+                "episodeSummary": "J-Bot and K-Bot revisit highlights from the previous year and beyond.",
+                "publishedAt": 1388146387,
+                "size": 64172851,
+                "duration": 3219
+              }, {
+                "uid": 34905028,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_87_Sleep_Hockeying.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 87: Sleep Hockeying",
+                "episodeSummary": "Jonathan and Kelli talk about the Twitter redesign, improvements to mobile browsers, math bugs in JavaScript, and more.",
+                "publishedAt": 1387548000,
+                "size": 64172851,
+                "duration": 3025
+              }, {
+                "uid": 34742271,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_86_Eleventy_One.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 86: Eleventy One",
+                "episodeSummary": "Jonathan and Kelli talk about cross-platform consistency: should your app conform to platform conventions or maintain a consistent look and feel everywhere?",
+                "publishedAt": 1386927493,
+                "size": 64172851,
+                "duration": 3786
+              }, {
+                "uid": 34482598,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_85_Earlids.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 85: Earlids",
+                "episodeSummary": "Jonathan and Kelli talk about notification overload: what it is, how to deal with it, and where we might be headed.",
+                "publishedAt": 1386307474,
+                "size": 64172851,
+                "duration": 3693
+              }, {
+                "uid": 34165314,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_84_Pizza_Car.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 84: Pizza Car",
+                "episodeSummary": "Jonathan and Kelli discuss the highlights of “APIs: A Strategy Guide” by Daniel Jacobson.",
+                "publishedAt": 1385733600,
+                "size": 64172851,
+                "duration": 3710
+              }, {
+                "uid": 33775945,
+                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_83_Dark_Middle.mp3",
+                "explicit": false,
+                "episodeTitle": "Episode 83: Dark Middle",
+                "episodeSummary": "Jonathan and Kelli talk about Feathers, a minimalist CSS reset and boilerplate gem created by our very own Kelli Shaver.",
+                "publishedAt": 1385128800,
+                "size": 64172851,
+                "duration": 2780
+              }, {
                 "uid": 33480524,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_82_Pink_With_a_Hint_of_Orange.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 82: Pink With a Hint of Orange",
                 "episodeSummary": "Jonathan and Kelli talk about Pattern Lab, a tool for building atomic design systems created by Brad Frost and Dave Olsen.",
+                "publishedAt": 1384524000,
+                "size": 64172851,
                 "duration": 1776
               }, {
                 "uid": 33211704,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_81_Responsive_Picnic_Tables.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 81: Responsive Picnic Tables",
                 "episodeSummary": "Jonathan and Kelli rant about dealing with HTML tables in responsive web design.",
+                "publishedAt": 1383919200,
+                "size": 64172851,
                 "duration": 3567
               }, {
                 "uid": 32913183,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_80_Even_More_Betterer.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 80: Even More Betterer",
                 "episodeSummary": "Jonathan and Kelli talk about Ruby and Rails: learning resources, application considerations, and Kelli’s big win!",
+                "publishedAt": 1383314400,
+                "size": 64172851,
                 "duration": 1639
               }, {
                 "uid": 32650343,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_79_Oreo_Island.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 79: Oreo Island",
                 "episodeSummary": "Jonathan and Kelli discuss a bunch of projects that they recently launched.",
+                "publishedAt": 1382709600,
+                "size": 64172851,
                 "duration": 2828
               }, {
                 "uid": 32408374,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_78_Reedonkulous.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 78: Reedonkulous",
                 "episodeSummary": "Jonathan and Kelli give a brief intro to Git, how you can use it to replace FTP in your workflow, and why you probably should.",
+                "publishedAt": 1382104800,
+                "size": 64172851,
                 "duration": 1075
               }, {
                 "uid": 31920875,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_77_Accidental_Interneting.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 77: Accidental Interneting",
                 "episodeSummary": "Jonathan and Kelli chat about the benefits of accessibility, availability, and progressive enhancement in cross-platform web projects.",
+                "publishedAt": 1380808800,
+                "size": 64172851,
                 "duration": 2640
               }, {
                 "uid": 31746003,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_76_Tickle_Class.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 76: Tickle Class",
                 "episodeSummary": "Jonathan and Kelli discuss perception vs reality in the context of application performance. In particular, the importance of instantaneous feedback, a simple way to remove the pesky 300ms delay in webapps on touch devices, and the real reason why jank is a bad thing.",
+                "publishedAt": 1380290400,
+                "size": 64172851,
                 "duration": 2272
               }, {
                 "uid": 31496700,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_75_Shes_Coming_Unglued.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 75: She’s Coming Unglued",
                 "episodeSummary": "Jonathan and Kelli talk about Google’s two-factor authentication, smartwatch use cases, and a possible strategy behind Apple’s decision to release two new iPhones at the same time.",
+                "publishedAt": 1379685600,
+                "size": 64172851,
                 "duration": 2326
               }, {
                 "uid": 31210186,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_74_Psycho_Like_Me.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 74: Psycho Like Me",
                 "episodeSummary": "Jonathan and Kelli talk about how the iPhone 5c announcement illustrates that future-friendly thinking is more important than ever.",
+                "publishedAt": 1379080800,
+                "size": 64172851,
                 "duration": 1677
               }, {
                 "uid": 30983261,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_73_Tiny_Tornado.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 73: Tiny Tornado",
                 "episodeSummary": "Jonathan and Kelli talk about SmartWatches: The Wimm One, MetaWatch, Pebble, and more.",
+                "publishedAt": 1378476000,
+                "size": 64172851,
                 "duration": 2188
               }, {
                 "uid": 27869901,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_72_Code_Brown.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 72: Code Brown",
                 "episodeSummary": "Jonathan and Kelli talk reach into the topic grab bag and pull out programmable lightbulbs, embracing constraints, prototyping in PHP, benchmarking CSS, and more.",
+                "publishedAt": 1377871200,
+                "size": 64172851,
                 "duration": 3882
               }, {
                 "uid": 25019028,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_71_For_the_Meeple_By_the_Meeple.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 71: For the Meeple, By the Meeple",
                 "episodeSummary": "Jonathan and Kelli talk about what happened during Kelli's 48 hour weekend hackathon, including first impressions of RedHat's OpenShift cloud platform, pub/sub in Ruby with Faye, and oh, so much more.",
+                "publishedAt": 1377266400,
+                "size": 64172851,
                 "duration": 3131
               }, {
                 "uid": 19249230,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_70_It_Cant_Be_Worse_Than_Calgary.mp3",
-                "episodeTitle": "Episode 70: It Can't Be Worse Than Calgary",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli talk about timezone bugs on Amazon S3, problems with ruby on new EC2's chipset architecture, and news about RailsForum, Pandacodium, Spoken, Inside the Brackets, and a lot more.",
+                "publishedAt": 1376639674,
+                "size": 64172851,
                 "duration": 3512
               }, {
                 "uid": 16784017,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_69_Thats_A_Plus.mp3",
-                "episodeTitle": "Episode 69: That's A Plus",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli talk about real live project work on apps that run cross browser, cross platform, and beyond.",
+                "publishedAt": 1376033708,
+                "size": 64172851,
                 "duration": 3078
               }, {
                 "uid": 16784016,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_68_Fancy_Class.mp3",
-                "episodeTitle": "Episode 68: Fancy Class",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli walk through a process for modern web development using responsive design, CSS3, and copious amounts of progressive enhancement.",
+                "publishedAt": 1375452000,
+                "size": 64172851,
                 "duration": 2899
               }, {
                 "uid": 9408154,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_67_Django_Curious.mp3",
-                "episodeTitle": "Episode 67: Django Curious",
+                "explicit": false,
                 "episodeSummary": "Kelli helps Jonathan finally - FINALLY! - make the switch from PHP to Rails.",
+                "publishedAt": 1374843886,
+                "size": 64172851,
                 "duration": 2503
               }, {
                 "uid": 8776590,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_66_I_Blame_My_Shorts.mp3",
-                "episodeTitle": "Episode 66: I Blame My Shorts",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli talk about function hoisting in Firefox, a fun new side project, and collapsing space with smartphone cameras.",
+                "publishedAt": 1374242400,
+                "size": 64172851,
                 "duration": 2394
               }, {
                 "uid": 8023287,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_65_Bumpin_Colons.mp3",
-                "episodeTitle": "Episode 65: Bumpin’ Colons",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli continue with the fourth and final installment of their screencast on how to build a REST API with Ruby on Rails.",
+                "publishedAt": 1373637600,
+                "size": 64172851,
                 "duration": 3700
               }, {
                 "uid": 7215332,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_64_Cat_Number_One.mp3",
-                "episodeTitle": "Episode 64: Cat Number One",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli get very superstitious about Rails 4, JSON endpoints, responsive web design, and more.",
+                "publishedAt": 1373014796,
+                "size": 64172851,
                 "duration": 2158
               }, {
                 "uid": 6612701,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_63_Disco_Mode.mp3",
-                "episodeTitle": "Episode 63: Disco Mode",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli talk about responsive design, progressive enhancement, and development tools in the context of a big huge site redesign.",
+                "publishedAt": 1372428000,
+                "size": 64172851,
                 "duration": 2565
               }, {
                 "uid": 6457165,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_62_Love_Me_Some_Curlies.mp3",
-                "episodeTitle": "Episode 62: Love Me Some Curlies",
+                "explicit": false,
+                "episodeSummary": "Jonathan and Kelli continue with part 3 of their screencast on how to build a REST API with Ruby on Rails. Please visit <a href=\"http://nitch.cc\">http://nitch.cc</a> and look for Episode 62 if you'd like to view the video.",
+                "publishedAt": 1371823200,
+                "size": 64172851,
                 "duration": 3011
               }, {
                 "uid": 5563788,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_61_Expecting_Ernestina.mp3",
-                "episodeTitle": "Episode 61: Expecting Ernestina",
+                "explicit": false,
+                "episodeSummary": "Jonathan and Kelli continue their screencast on how to build a REST API with Ruby on Rails. Please visit <a href=\"http://nitch.cc\">http://nitch.cc</a> and look for Episode 61 if you'd like to view the video.",
+                "publishedAt": 1371218400,
+                "size": 64172851,
                 "duration": 3949
               }, {
                 "uid": 4347039,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_60_Numerosity.mp3",
-                "episodeTitle": "Episode 60: Numerosity",
+                "explicit": false,
                 "episodeSummary": "Kelli builds a rest api with ruby on rails, Jonathan asks stupid questions while she does it, and we post video of the whole shebang for you to enjoy in your copious free time.",
+                "publishedAt": 1370613600,
+                "size": 64172851,
                 "duration": 3949
               }, {
                 "uid": 2774964,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_59_Moonburn.mp3",
-                "episodeTitle": "Episode 59: Moonburn",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli talk about the WeMo Switch, blink(1) USB, hue light bulbs, and the APIs that tie them all together.",
+                "publishedAt": 1370008800,
+                "size": 64172851,
                 "duration": 3026
               }, {
                 "uid": 2686457,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_58_Fifty_Shades_of_Black.mp3",
-                "episodeTitle": "Episode 58: Fifty Shades of Black",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli talk about the upcoming screencast episode, performance problems with KnockoutJS, and the massive implications of Google's recent announcements at the IO conference.",
+                "publishedAt": 1369404000,
+                "size": 64172851,
                 "duration": 4163
               }, {
                 "uid": 2595335,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_57_Flossing_With_Rails.mp3",
-                "episodeTitle": "Episode 57: Flossing With Rails",
+                "explicit": false,
                 "episodeSummary": "Jonathan and Kelli talk about building - and more importantly, testing - REST APIs with Rails and RSpec.",
+                "publishedAt": 1368799200,
+                "size": 64172851,
                 "duration": 1925
               }, {
                 "uid": 2509212,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_56_Eighteen_Hours_Since_Last_Twisted_Ankle.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 56: Eighteen Hours Since Last Twisted Ankle",
                 "episodeSummary": "Jonathan and Kelli talk about how to quote a project for a client who needs an app that can run everywhere.",
+                "publishedAt": 1368173642,
+                "size": 64172851,
                 "duration": 1996
               }, {
                 "uid": 2427362,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_55_Nerds_in_Grass_Skirts.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 55: Nerds in Grass Skirts",
                 "episodeSummary": "Jonathan and Kelli talk about experimentation with the Lua programming language and the possible implications on cross-platform application development.",
+                "publishedAt": 1367587575,
+                "size": 64172851,
                 "duration": 2195
               }, {
                 "uid": 2372813,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_54_The_Royal_You.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 54: The Royal You",
                 "episodeSummary": "Jonathan and Kelli talk about jQuery vs. Zepto... and other pointless debates.",
+                "publishedAt": 1366984800,
+                "size": 64172851,
                 "duration": 2010
               }, {
                 "uid": 2343931,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_53_Fluffdates.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 53: Fluffdates",
                 "episodeSummary": "Jonathan and Kelli sit back and say \"I told you so\" for 30 minutes as they talk about Glassware, the Mirror API, and improved methods for the distribution of cat photos with Google Glass.",
+                "publishedAt": 1366380000,
+                "size": 64172851,
                 "duration": 2010
               }, {
                 "uid": 2317963,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_52_Punching_Kittens_with_Ethan_Marcotte.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 52: Punching Kittens with Ethan Marcotte",
                 "episodeSummary": "Jonathan and Kelli welcome special guest Ethan Marcotte to discuss some of the non-technical challenges of Responsive Web Design: unresponsive ad units, browsing the web on game consoles, getting client sign-off without Photoshop comps, and much more.",
+                "publishedAt": 1365775200,
+                "size": 64172851,
                 "duration": 2596
               }, {
                 "uid": 2288997,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_51_BBQ_Chicken_Disease.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 51: BBQ Chicken Disease",
                 "episodeSummary": "Jonathan and Kelli talk about Amazon Web Services - EC2, RDS, CloudWatch, and our new personal favorite, Simple Notification Service.",
+                "publishedAt": 1365170400,
+                "size": 64172851,
                 "duration": 2326
               }, {
                 "uid": 2265490,
                 "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_50_Up_Since_72.mp3",
+                "explicit": false,
                 "episodeTitle": "Episode 50: Up Since '72",
                 "episodeSummary": "Jonathan and Kelli talk about drag and drop on touchscreen devices and opting out of responsive web design.",
+                "publishedAt": 1364565600,
+                "size": 64172851,
                 "duration": 1690
-              }, {
-                "uid": 2239308,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_49_Bathroom_Warming_Party.mp3",
-                "episodeTitle": "Episode 49: Bathroom Warming Party",
-                "episodeSummary": "Jonathan and Kelli talk about maintaining context in small screen apps, reconsidering jQuery for mobile projects, and preparing your content for the zombie apocalypse of smartwatches.",
-                "duration": 4081
-              }, {
-                "uid": 2218136,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_48_Touch_Sensitive_Backsides.mp3",
-                "episodeTitle": "Episode 48: Touch Sensitive Backsides",
-                "episodeSummary": "Jonathan and Kelli talk about WebHook gotchas, reconsidering SMS, and touch sensitive backsides.",
-                "duration": 4192
-              }, {
-                "uid": 2196961,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_47_Digesting_the_Koolaid.mp3",
-                "episodeTitle": "Episode 47: Digesting the Koolaid",
-                "episodeSummary": "Jonathan and Kelli talk about Lawnchair performance tips, simplfying your CSS with CSS Simple, and preparing for the zombie apocalypse of devices, part 2.",
-                "duration": 4192
-              }, {
-                "uid": 2172195,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_46_Rear_View_Hat.mp3",
-                "episodeTitle": "Episode 46: Rear View Hat",
-                "episodeSummary": "Jonathan and Kelli prove that APIs are totally awesome, get into trouble with mobile first responsive design, and experiement with the next revolutionary mobile technology.",
-                "duration": 3315
-              }, {
-                "uid": 2127710,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_45_SASS_Mafia.mp3",
-                "episodeTitle": "Episode 45: SASS Mafia",
-                "episodeSummary": "Jonathan and Kelli talk about onclick conflicts between jQuery and Google Analytics, our development setup for Responsive Web Design, and why SASS is stupid. Kidding! Sheesh... lighten up :)",
-                "duration": 3847
-              }, {
-                "uid": 2105058,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_44_Shut_Up_Shot_Clock.mp3",
-                "episodeTitle": "Episode 44: Shut Up Shot Clock",
-                "episodeSummary": "Jonathan and Kelli talk about our defaults when starting a new project - tools, technology, language, structure, and more.",
-                "duration": 3925
-              }, {
-                "uid": 2078096,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_43_Spaghetti_Frames.mp3",
-                "episodeTitle": "Episode 43: Spaghetti Frames",
-                "episodeSummary": "Jonathan and Kelli talk about getting clever with Amazon's Elastic Block Store, redefining wireframes in the context of responsive web design, and our growing obsession with Jackbooks.",
-                "duration": 3328
-              }, {
-                "uid": 2046698,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_42_Jackbooks.mp3",
-                "episodeTitle": "Episode 42: Jackbooks",
-                "episodeSummary": "Jonathan and Kelli talk about gotchas with CORS headers in Rails apps, the definition of \"Mobile First\", and a process for Responsive Web Design.",
-                "duration": 2860
-              }, {
-                "uid": 2002442,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_41_Heavy_Semicolon.mp3",
-                "episodeTitle": "Episode 41: Heavy Semicolon",
-                "episodeSummary": "Jonathan and Kelli talk about enhancing site performance with Varnish, simplifying web development workflow with Sprockets, and legally binding responsive web design.",
-                "duration": 2860
-              }, {
-                "uid": 1977450,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_40_All_We_Are_Missing_Is_Everything_Else.mp3",
-                "episodeTitle": "Episode 40: All We're Missing Is Everything Else",
-                "episodeSummary": "Jonathan and Kelli talk about the pros and cons of Bootstrap, learning to live with Objective-C, and new developments in lamp programming (and we don't mean Linux).",
-                "duration": 4135
-              }, {
-                "uid": 1947915,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_39_Ramblecast_You_Have_Been_Warned.mp3",
-                "episodeTitle": "Episode 39: Ramblecast (You've Been Warned)",
-                "episodeSummary": "Jonathan and Kelli prognosticate endlessly about the future of computing, the effects of wireless connectivity on society, and what we can do now to prepare.",
-                "duration": 4377
-              }, {
-                "uid": 1913427,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_38_BRB_Bedroom_On_Fire.mp3",
-                "episodeTitle": "Episode 38: BRB... Bedroom On Fire",
-                "episodeSummary": "Jonathan and Kelli talk about trouble with really big buttons, SMS apps for Kenyan farmers, and how to send API requests to a lamp.",
-                "duration": 3328
-              }, {
-                "uid": 1841519,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_37_Slow_Headbutt.mp3",
-                "episodeTitle": "Episode 37: Slow Headbutt",
-                "episodeSummary": "Jonathan and Kelli talk about Safari rendering bugs, more location hash gotchas, and a rundown of dev tools including knockout.js, markup.js, Yeoman, and Reflector.",
-                "duration": 2985
-              }, {
-                "uid": 1768571,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_36_Syntastical_Sugar.mp3",
-                "episodeTitle": "Episode 36: Syntastical Sugar",
-                "episodeSummary": "Jonathan and Kelli talk about cross-browser location hash inconsistencies, thoughts on CoffeeScript, and the genius of NPR's \"Create Once, Publish Everywhere\" platform.",
-                "duration": 3602
-              }, {
-                "uid": 1713643,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_35_Once_More_With_Feeling.mp3",
-                "episodeTitle": "Episode 35: Once More With Feeling",
-                "episodeSummary": "This week Jonathan and Kelli discuss media queries on Retina Macs, overflow scrolling on touchscreen devices, and lessons learned from a spaghetti code weekend with PHP.",
-                "duration": 3602
-              }, {
-                "uid": 1689871,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_34_The_Wacky_Flag.mp3",
-                "episodeTitle": "Episode 34: The Wacky Flag",
-                "episodeSummary": "Jonathan and Kelli talk about Web SQL Database, storing images as base64, and error handling considerations for REST APIs.",
-                "duration": 3272
-              }, {
-                "uid": 1661476,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_33_Piemaster.mp3",
-                "episodeTitle": "Episode 33: Piemaster",
-                "episodeSummary": "Jonathan and Kelli talk about Kelli's first impressions of cross-platform mobile framework PhoneGap.",
-                "duration": 4099
               }
             ]
           }, {
-            "id": 8392,
+            "id": 28607,
             "feedUrl": "http://emergingtech.chariotsolutions.com/category/devnews/feed/",
             "author": "Ken Rimple, Chariot Solutions",
             "subscriptionTitle": "Chariot Developer News",
@@ -948,311 +1412,270 @@
             "albumArt": "devnews-fullres.jpg",
             "episodes": [
               {
-                "uid": 33599814,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-68-2013-11-18.mp3",
+                "uid": 36597554,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/E9qcgi3-YXE/Chariot-DeveloperNews-Episode-82-2014-03-10.mp3",
+                "episodeTitle": "DevNews 82 – We discuss Dashing dashboards, our favorite Vagrant, ECMAScript 6 (look, ma, CLASSES) and of course we rant…",
+                "episodeSummary": "<p>You miss a week, you get, well, more articles. See what the DevNews team has come up with this week - we talk about the unveiling of the BitCoin Founder (maybe?), Mt. Gox a bit, software patents (and Ken brings up his old trope - Unlocking the Sky IS a good book!), the new Vagrant and Vagrant remote client, how Cell Phone Unlocking WOULD have been great if the lobbyists could have stopped tweaking it, and more.</p><p>The post <a href=\"http://chariotsolutions.com/podcast/devnews-82-discuss-dashing-dashboards-favorite-vagrant-ecmascript-6-look-ma-classes-course-rant/\">DevNews 82 We discuss Dashing dashboards, our favorite Vagrant, ECMAScript 6 (look, ma, CLASSES) and of course we rant</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1394703419,
+                "size": 61790861,
+                "duration": 2574
+              }, {
+                "uid": 36130762,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/UXamtux92II/Chariot-DeveloperNews-Episode-81-2014-02-24.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #81 – Distortion, crypto flaw in iOS and Mac, imperative to functional and more",
+                "episodeSummary": "<p>We talk about the new Java 8 functional programming mode, forget to hit record, talk about the peering issues with Netflix vs everyone, and more... Now with louder, distorted audio!</p><p>The post <a href=\"http://chariotsolutions.com/podcast/devnews-81-distortion-crypto-flaw-ios-mac-imperative-functional/\">DevNews #81 Distortion, crypto flaw in iOS and Mac, imperative to functional and more</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1393347444,
+                "size": 45985613,
+                "duration": 1916
+              }, {
+                "uid": 35948296,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/mBtdqVpY8po/Chariot-DevNews-80-2014-02-17.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #80 – We talk Javascript goodness, Java8 time, CMS, SMS, SOS!",
+                "episodeSummary": "<p>We talk about Javascript's object-based nature and the Augment library, SMS with Twilio, CMS with Statamic, a great JS podcast episode, more.</p><p>The post <a href=\"http://chariotsolutions.com/podcast/devnews-80-talk-javascript-goodness-java8-time-cms-sms-sos/\">DevNews #80 We talk Javascript goodness, Java8 time, CMS, SMS, SOS!</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1392677739,
+                "size": 59836973,
+                "duration": 2493
+              }, {
+                "uid": 35801043,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/L1OOThZBzOg/Chariot-Devnews-79-2014-02-11.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #79 – My So-called $8000 Spun Nylon 3D Printed Lamp",
+                "episodeSummary": "<p>Joel and Ken talk about 3D printing advances, some Go tutorials, a great Promises tutorial, Chromecast's new streaming API, and more. Stay tuned toward the end for some hilarious product reviews when we discuss FlappyBird.</p><p>The post <a href=\"http://chariotsolutions.com/podcast/devnews-79-called-8000-spun-nylon-3d-printed-lamp/\">DevNews #79 My So-called $8000 Spun Nylon 3D Printed Lamp</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1392069363,
+                "size": 51917729,
+                "duration": 2163
+              }, {
+                "uid": 35659262,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/DSPk9PtusPE/devnews-78_2014-02-03.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #78 – Don’s NFC programming book, we’re snowed in, and what about Julia?",
+                "episodeSummary": "<p>We talk about Don's new book, Motorola Mobility's sale to Lenovo, the Julia programming language, Erlang's new features including hashes, Chrome WebApps in PhoneGap, and more.</p><p>The post <a href=\"http://chariotsolutions.com/podcast/devnews-78-dons-nfc-programming-book-snowed-julia/\">DevNews #78 Dons NFC programming book, were snowed in, and what about Julia?</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1391479954,
+                "size": 49119995,
+                "duration": 2046
+              }, {
+                "uid": 35547617,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/FNuf2cM83Kw/Chariot-DevNews-Episode-77-2014-01-27.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #77 – I bet you can’t run that Kanban Board on a DEC Rainbow…",
+                "episodeSummary": "<p>&gt;Wherein we start by discussing Michael Winslow, playing with reverb, and Eric mentions a DEC Rainbow. Topics include improvements to Node in 0.12, a Ruby/Rails children's book kickstarter, leaving Scrum for Kanban, and more...</p><p>The post <a href=\"http://chariotsolutions.com/podcast/devnews-77-bet-cant-run-kanban-board-dec-rainbow/\">DevNews #77 I bet you cant run that Kanban Board on a DEC Rainbow</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1390880086,
+                "size": 47493647,
+                "duration": 1979
+              }, {
+                "uid": 35538623,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/8AN7tio79U0/Chariot-TechCast-82-2014-01-27-Andreas-Stefik.mp3",
+                "explicit": false,
+                "episodeTitle": "TechCast #82 – Dr. Andreas Stefik on Using Scientific Research To Analyze Programming Language Syntax Across Languages",
+                "episodeSummary": "<p>Dr. Andreas Stefik discusses the findings in his paper, an Emperical Investigation into Programming Language Syntax. The results may surprise you… </p><p>The post <a href=\"http://chariotsolutions.com/podcast/techcast-82-dr-andreas-stefik-using-scientific-research-analyze-programming-language-syntax-across-languages/\">TechCast #82 – Dr. Andreas Stefik on Using Scientific Research To Analyze Programming Language Syntax Across Languages</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1390846236,
+                "size": 57494822,
+                "duration": 2395
+              }, {
+                "uid": 35533917,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/XFF18oVDRjc/Business-Of-tech-04-2014-01-24.mp3",
+                "explicit": false,
+                "episodeTitle": "Business of Technology #4 – Gilt Groupe CTO Michael Bryzek on Gilt and Open Source",
+                "episodeSummary": "<p>In this interview with Gilt Groupe CTO Michael Bryzek, we discuss how the company started, the open source technologies they've used, and how their open source commitment has evolved. We take some time to talk about the scale of their operation, and how they leverage micro services as a way to make it more manageable and scalable in both infrastructure and human terms.</p><p>The post <a href=\"http://chariotsolutions.com/podcast/business-technology-4-gilt-groupe-cto-michael-bryzek-gilt-open-source/\">Business of Technology #4 Gilt Groupe CTO Michael Bryzek on Gilt and Open Source</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1390829432,
+                "size": 43468220,
+                "duration": 1811
+              }, {
+                "uid": 35407276,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/jParidhK5WA/Chariot-DeveloperNews-Episode-76-2014-01-20.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #76 – HAML-esque JS templates, a monitor for $400, what’s the world coming to?",
+                "episodeSummary": "<p>We have a great set of resources for you today, ranging from HAML-like templates in Javascript, to a great Go tutorial website, to some heavy-duty Scala Akka Finite State Machine discusisons, iOS Workflows, a $15 Arduino with GPS, and much more. Hosts - Ken Rimple, Joel Confino, Eric Snyder and Sujan Kapadia.</p><p>The post <a href=\"http://chariotsolutions.com/podcast/devnews-76-haml-esque-js-templates-monitor-400-whats-world-coming/\">DevNews #76 HAML-esque JS templates, a monitor for $400, whats the world coming to?</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1390252784,
+                "size": 48277381,
+                "duration": 2011
+              }, {
+                "uid": 35319205,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/DVVpp4rSBKk/Chariot-DevNews-75-2014-01-13.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #75 – Go Go Angular to BSON Land to pick up MongoDB",
+                "episodeSummary": "<p>This week we talk about Joel's experiences with AngularJS, infinite scrolling, MOOCs, five things to watch for when coding in MongoDB, and more.</p><p>The post <a href=\"http://chariotsolutions.com/podcast/devnews-75-go-go-angular-bson-land-pick-mongodb/\">DevNews #75 Go Go Angular to BSON Land to pick up MongoDB</a> appeared first on <a href=\"http://chariotsolutions.com\">Chariot Solutions</a>.</p>",
+                "publishedAt": 1389648864,
+                "size": 51534565,
+                "duration": 2576
+              }, {
+                "uid": 35217083,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/rPZXjJP9zRE/Chariot-DevNews-Episode-74-2014-01-06.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #74 – Our 2013 recap, 2014 guesses and much more",
+                "episodeSummary": "Ken and Joel give their \"predictions\" and \"recap\" of 2014, which is purely their version, but somebody's got to do it. Also, we talk tools for testing in NodeJS, namely Mocha and Chai, some linux and regex visualization websites, a &lt; $300 ChromeBook announced by Toshiba at CES, writing and posting HTML content on GitHub using gh_pages, and more.",
+                "publishedAt": 1389036378,
+                "size": 32287903,
+                "duration": 1614
+              }, {
+                "uid": 35114392,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/cYdabQsVmTI/Devnews-73-2013-12-30.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #73 – Grunt JS Tutorial, Ubuntu for Android, UI vs Command Line, and more…",
+                "episodeSummary": "Ken and Joel wrap up the year with a bit of conversation about smart watches, whether you're a user of tools or conversationalist with your code, and a number of other little ditties.",
+                "publishedAt": 1388435596,
+                "size": 31987583,
+                "duration": 1599
+              }, {
+                "uid": 35101683,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/OaDmjhZqojs/Chariot-Developer-News-Episode-72-2013-12-20.mp3",
+                "explicit": false,
+                "episodeTitle": "Developer News #72 – The Winter Break Edition with Historical Videos, new Google Sheets",
+                "episodeSummary": "This week we give you some light viewing for the week - a Letterman interview circa 1983 or so with the famous Rear Admiral Grace Hopper, and a really interesting demonstration by recently passed Douglas Englebart (search him above to find other DevNews articles on him) dubbed the Mother of all Demos (1968). Super cool stuff. Also, we discuss a nice little SQL tutorial website for PostgreSQL, the \"Smartest Person in the Room complex\", our new Data I/O screencasts, and a few blog entries from Chariot's developers.",
+                "publishedAt": 1387571567,
+                "size": 22242974,
+                "duration": 1112
+              }, {
+                "uid": 35101689,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/z8lM6XopADY/Chariot-Developer-News-Episode-71-2013-12-09.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #71 – Roblox, one hour of code, Google’s robot army and more",
+                "episodeSummary": "This week, we talk about some kid related topics, including Roblox and \"An hour of code\", an initiative for getting students to learn how to program. We cover Big-O notation and come back slightly better off, but with some more in-depth suggestions for you. We also talk about an article on regular expressions, how TestingBog ditched AWS, Joyant is now supporting Node.js, the bad stigma of being called a techie, and bitcoins.",
+                "publishedAt": 1386620459,
+                "size": 33340940,
+                "duration": 2084
+              }, {
+                "uid": 35101698,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/v-eK08kD1Wk/Chariot-DeveloperNews-Episode-70-12-2-2013.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #70 – Droids and flying robots taking over the world and Scala.JS",
+                "episodeSummary": "Lots of tech news available today, none of it (well aside from DNA crunching) needs an advanced degree! We have news on Typesafe's Jamie Allen's keynote at JAXEnter 2013 in London, two robot stories, a tale about lost bitcoins, DNA Analysis in Javascript, and Githubs expanding contexts for diffs. Also, Joel brings us a review of his first impressions with Ember.js and micro-services are exploding - what does that mean for the enterprise CTO / CIO who bets on that strategy? Find out by listening... It's all here in the DevNews.",
+                "publishedAt": 1386019342,
+                "size": 39269271,
+                "duration": 1963
+              }, {
+                "uid": 35101707,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/6XtQA7WDpl8/Chariot-Developer-News-Episode-69-2013-11-25.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #69 – Google Machine Learning Becomes Sentient – or does it just love shredders?",
+                "episodeSummary": "In this episode, Joel warns us that the machines have started to learn on their own - and that maybe they can tell shredders apart from trashcans... Also, a great TechCrunch article on how you can now build dynamic grids of compute servers using Mesos and have them automatically bootstrapped and configured by Docker. We talk about CoreOS, which is a small linux distro for beginning machine configurations, the Genymotion android VM that everyone was talking about at AnDevCon2013, and more.",
+                "publishedAt": 1385413040,
+                "size": 61145255,
+                "duration": 3057
+              }, {
+                "uid": 35101720,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/IuBHnQM4i3g/Chariot-Business-Of-Tech-3-2013-11-21.mp3",
+                "explicit": false,
+                "episodeTitle": "Business of Technology #3 – Anita Garamella Andrews on Data Analytics",
+                "episodeSummary": "Tracey Welson-Rossman talks to Anita Garamella Andrews, VP of Client Analytics Services at R.J. Metrics, about analytics and actionable data.",
+                "publishedAt": 1385401808,
+                "size": 30707900,
+                "duration": 1535
+              }, {
+                "uid": 35101732,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/hZ9bZ-g0S14/Chariot-DevNews-68-2013-11-18.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #68 – Clouds and Androids abound, reactive ones!",
-                "episodeSummary": "<p>Help us spread the word - Go to the LifeHacker Favorite Podcasts post and spread the word. That's <a href=\"http://lifehacker.com/the-best-informative-brain-boosting-podcasts-worth-sub-1464783451\">http://lifehacker.com/the-best-informative-brain-boosting-podcasts-worth-sub-1464783451</a> or if you're typing this, emergingtech.chariotsolutions.com/shoutout (ok, not much shorter, but we're working on it!</p> Show Notes Startups fail. <a href=\"http://www.theverge.com/2013/11/5/5039216/everpix-life-and-death-inside-the-worlds-best-photo-startup\">Say goodbye to Everpix</a> <a href=\"http://blog.flowdock.com/2013/01/22/functional-reactive-programming-with-bacon-js\">Functional Reactive Programming with Bacon.js</a> - this article refers to the <a href=\"https://github.com/baconjs/bacon.js\">Bacon.JS project</a>. Also, if you're a Java expert check out <a href=\"(refer%20to%20rxjava%20if%20you%E2%80%99re%20a%20Java%20expert\">RxJava</a> The skills of academia are attractive to business in data science - hence <a href=\"http://jakevdp.github.io/blog/2013/10/26/big-data-brain-drain/\">the newest brain drain</a> Charioteer Rich Freedman <a href=\"http://twitter.com/greybeardedgeek\">@greybeardedgeek</a> tip for dealing with designers and PS layers for icons, etc.. - see his",
+                "episodeSummary": "With a week of the gang has a lot to talk about, from reactive programming in Javascript with Bacon.js, to the failure of a startup (so long, and best of luck to the EverPix team, we loved your service) to the brain drain in academia due to data science, to some nitty gritty Javascript, a new reactive project in Spring, we got it all. Don't forget to post us on the LifeHacker favorite podcasts page!",
+                "publishedAt": 1384809603,
+                "size": 61444618,
                 "duration": 3072
               }, {
-                "uid": 33057886,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-67-11-04-2013.mp3",
+                "uid": 35101748,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/pRhmT2exVyU/Chariot-DeveloperNews-Episode-67-11-04-2013.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #67 – Monoliths begone, lock free APIs, Bunnies and RabbitMQ, and computer viruses by air",
-                "episodeSummary": "Links \"Five tips for big software projects\":<a href=\"http://blog.chariotsolutions.com/2013/10/5-tips-for-big-software-projects.html\">http://blog.chariotsolutions.com/2013/10/5-tips-for-big-software-projects.html</a> “Dismanteling the monoliths”:<a href=\"https://engineering.groupon.com/2013/misc/i-tier-dismantling-the-monoliths/\">https://engineering.groupon.com/2013/misc/i-tier-dismantling-the-monoliths/</a> - rails apps converting to Nodejs at Groupon I’m taking a stab at lock-free this week - First, my reading took me to Mechanical Sympathy (which we’ve discussed before) and now that there is a JSR for some new constructions - (StampedLock) this site has a great project - <a href=\"https://github.com/mjpt777/rw-concurrency\">https://github.com/mjpt777/rw-concurrency</a> which runs a bunch of benchmarks. All of this came from reading down the rabbit hole to this - from an article where I feel completely stupid. (prn stupid-feeling-reader (<a href=\"http://psy-lob-saw.blogspot.com/2013/10/spsc-revisited-part-iii-fastflow-sparse.html\">http://psy-lob-saw.blogspot.com/2013/10/spsc-revisited-part-iii-fastflow-sparse.html</a>) “Bunny Ruby api for RabbitMQ”:<a href=\"http://blog.rubyrabbitmq.info/blog/2013/10/29/bunny-1-dot-0-0-is-released/\">http://blog.rubyrabbitmq.info/blog/2013/10/29/bunny-1-dot-0-0-is-released/</a>…",
+                "episodeSummary": "Links \"Five tips for big software projects\":http://blog.chariotsolutions.com/2013/10/5-tips-for-big-software-projects.html “Dismanteling the monoliths”:https://engineering.groupon.com/2013/misc/i-tier-dismantling-the-monoliths/ - rails apps converting to Nodejs at Groupon I’m taking a stab at lock-free this week - First, my reading took me to Mechanical Sympathy (which we’ve discussed before) and now that there is a JSR for some new constructions - (StampedLock) this site has […]",
+                "publishedAt": 1383663599,
+                "size": 56476128,
                 "duration": 2824
               }, {
-                "uid": 32763070,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-66-2013-10-28.mp3",
+                "uid": 35101757,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/UyIEgxM7wns/Chariot-DeveloperNews-Episode-66-2013-10-28.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #66 – RESTful tutorials, CAPCHAs and Machine Learning, a million to win a hackathon and more…",
-                "episodeSummary": "Show notes coming soon...…",
+                "episodeSummary": "We talk about Newton – a pure Javascript Physics engine AI Startup says it has defeated captchas Got a great mobile app idea? You can win $1M in the SalesForce hackathon Elixir – a “groovy” for Erlang? We talk about JBoss Forge",
+                "publishedAt": 1383009448,
+                "size": 44093566,
                 "duration": 1837
               }, {
-                "uid": 32601759,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-Developer-News-Episode-65-2013-10-23.mp3",
+                "uid": 35101772,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/5WWr3HazTa0/Chariot-Developer-News-Episode-65-2013-10-23.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #65 – Apple’s patent for touching glass with fingers is upheld?",
-                "episodeSummary": "Links <a href=\"http://www.infoq.com/presentations/asgard\">A great presentation by Jon Sondow on</a> the <a href=\"https://github.com/Netflix/asgard\">Netflix Asgard Project</a>- a Grails application server that deploys to AWS. Highlights include: Obama for America used it to keep its sites rolling and alive Used to be Netflix Application Console It is only one of the open source projects on <a href=\"http://netflix.github.io\">Netflix's GitHub page</a>. Reasons not to just use the AWS console include - you can hide the keys, customize the deployment model, automate workflow, log changes, and more. Also check out youtube.com/theasgardshow - a regular Q&amp;A show they archive on YouTube. <a href=\"https://github.com/jimhigson/oboe.js\">The Oboe.js Async Ajax Processing Project</a> -Oboe.js's",
+                "episodeSummary": "Links A great presentation by Jon Sondow on the Netflix Asgard Project- a Grails application server that deploys to AWS. Highlights include: Obama for America used it to keep its sites rolling and alive Used to be Netflix Application Console It is only one of the open source projects on Netflix's GitHub page. Reasons not […]",
+                "publishedAt": 1382585395,
+                "size": 38450594,
                 "duration": 1922
               }, {
-                "uid": 32347512,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-64-2013-10-14.mp3",
+                "uid": 35101783,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/SM4XLaQe9is/Chariot-DeveloperNews-Episode-64-2013-10-14.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #64 – We’re older and losing our hair…",
-                "episodeSummary": "<p><em>Well, Ken is, anyway... A number of interesting topics this week.</em></p> Topic List Newly OSS’d project <a href=\"https://github.com/precog/platform\">Precog: advanced analyics for NoSql</a> <a href=\"http://blogs.lessthandot.com/index.php/WebDev/UIDevelopment/angularjs-vs-knockout-introduction-1\">Angularjs vs Knockout</a> - a great multi-page post comparing a number of features. <a href=\"http://java.dzone.com/articles/big-data-analytics-beyond\">Beyond map/reduce</a> - it's not just …",
+                "episodeSummary": "Well, Ken is, anyway... A number of interesting topics this week. Topic List Newly OSS’d project Precog: advanced analyics for NoSql Angularjs vs Knockout - a great multi-page post comparing a number of features. Beyond map/reduce - it's not just about that Google whitepaper. 10 reasons to use AngularJS Cloud provider Nirvanix shuts down An […]",
+                "publishedAt": 1381958399,
+                "size": 35159687,
                 "duration": 1758
               }, {
-                "uid": 32033512,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-63-2013-10-07.mp3",
+                "uid": 35101794,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/F58yoJQ09eA/Chariot-DeveloperNews-Episode-63-2013-10-07.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #63 – Robots that gallop, IDEs written in HTML, a browser swarm, what’s next?",
-                "episodeSummary": "The links <p>Sponsored by <a href=\"http://haydle.com\">Haydle</a>-ask, answer and rate answers to your company's questions, <a href=\"http://emergingtech.chariotsolutions.com/dataio2013\">Data I/O 2013</a>a conference featuring a variety of technologies and techniques for dealing with large-scale and sophisticated data, and <a href=\"http://chariotsolutions.com/education\">Chariot Education Services</a>, providing training </p>",
+                "episodeSummary": "The links Sponsored by Haydle - ask, answer and rate answers to your company's questions, Data I/O 2013 a conference featuring a variety of technologies and techniques for dealing with large-scale and sophisticated data, and Chariot Education Services, providing training in Java, Spring, Maven/Nexus, Groovy/Grails, Hibernate, Map/Reduce and more. Codio: A Web IDE (Javascript / HTML, CSS, etc.) […]",
+                "publishedAt": 1381177509,
+                "size": 32957282,
                 "duration": 1648
               }, {
-                "uid": 31822836,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-62-2013-10-01.mp3",
+                "uid": 35101807,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/-Wc8ZPbEiSc/biztech-2-susan-mc-fenton-2013-10-07.mp3",
+                "explicit": false,
+                "episodeTitle": "Business of Technology #2 – Susan McPherson Corporate Social Responsibility",
+                "episodeSummary": "Susan McPherson has always had a foot in the non-profit world. With a number of years in a board position on Business Council for Peace, and working with Fabian Cousteau to help people to understand the importance of the oceans, but at Fenton, she was able to start helping corporations use tools that NGOs normally […]",
+                "publishedAt": 1381147228,
+                "size": 29559557,
+                "duration": 1478
+              }, {
+                "uid": 35101821,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/MPyYv6Ts2WU/Chariot-TechCast-Episode-81-2013-10-03.mp3",
+                "explicit": false,
+                "episodeTitle": "TechCast #81 – Recap of the StrangeLoop 2013 conference with Joe Berger, Dan Boykis and Anatoly Polinsky",
+                "episodeSummary": "In this podcast, I am joined by Dan Boykis and Anatoly Polinsky, two of our Chariot consultants who attended The Strange Loop conference in September. I also have some reflections from Chariot consultant Joe Berger, provided via email. Strange Loop is a 2-day conference with wraparound tutorials, and also contained a language \"un-conference\" by Alex Payne.",
+                "publishedAt": 1380886695,
+                "size": 60994267,
+                "duration": 3050
+              }, {
+                "uid": 35101834,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/z5q-FyH5jF8/Chariot-DeveloperNews-Episode-62-2013-10-01.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #62 – The JVM wins, the JVM wins, the JVM wins!",
-                "episodeSummary": "<p>Or,</p> <p>\"I can't stand a standing desk, but I can chase a running VM...\"</p> <p>This episode is light on iOS, heavy on Java and Javascript, and covers some large-scale processing and machine learning articles to boot.</p> Topics Ain't it good",
+                "episodeSummary": "This episode is light on iOS, heavy on Java and Javascript, and covers some large-scale processing and machine learning articles to boot.",
+                "publishedAt": 1380647372,
+                "size": 41021042,
                 "duration": 2051
               }, {
-                "uid": 31615729,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-61-2013-09-25.mp3",
-                "episodeTitle": "DevNews #60 – It’s an iOS and Javascript world in here…",
-                "episodeSummary": "Probably the lead story - the Lambda final revisions are in for JDK 8 and <a href=\"http://cr.openjdk.java.net/~briangoetz/lambda/lambda-state-final.html%20\">Brian Goetz has an informal summary</a> here R<a href=\"https://github.com/Netflix/RxJava\">xJava: Functional Reactive Programming on the JVM</a> (Java, Scala, Clojure) Javascript world <a href=\"https://github.com/thedigitalself/angular-sprout\">Angular-sprout</a> -- Builds on angular-seed,",
+                "uid": 35101846,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/hP58pFHsPbQ/Chariot-DeveloperNews-61-2013-09-25.mp3",
+                "explicit": false,
+                "episodeTitle": "DevNews #61 – It’s an iOS and Javascript world in here…",
+                "episodeSummary": "Lots of iOS and Javascript news this week. We talk about jQuery 1.11/2.1 beta, a hands-on with iOS 7, privacy settings to pay attention to in iOS 7, and more...",
+                "publishedAt": 1380124574,
+                "size": 42900291,
                 "duration": 2145
               }, {
-                "uid": 31340830,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-60-Dont-Give-Joel-A-Furby-2013-09-16.mp3",
+                "uid": 35101856,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/h_hAOyiGD00/Chariot-DeveloperNews-60-Dont-Give-Joel-A-Furby-2013-09-16.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #60 – Somebody buy Joel a Furby",
-                "episodeSummary": "<p>This week - it's Not about Furby, but about the new Apple iPhones. Your hosts, Ken Rimple, Sujan Kapadia and Joel Confino talk about whether they'd go out and buy one, whether they still display the same appeal, and what's </p>",
+                "episodeSummary": "This week - it's Not about Furby, but about the new Apple iPhones. Your hosts, Ken Rimple, Sujan Kapadia and Joel Confino talk about whether they'd go out and buy one, whether they still display the same appeal, and what's under the surface that could be a potential game changer.",
+                "publishedAt": 1379443313,
+                "size": 40942675,
                 "duration": 2047
               }, {
-                "uid": 31164512,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-59-09-09-2013.mp3",
+                "uid": 35101867,
+                "mediaUrl": "http://feedproxy.google.com/~r/ChariotTechCast/~5/7CdTlewHOeI/Chariot-DevNews-Episode-59-09-09-2013.mp3",
+                "explicit": false,
                 "episodeTitle": "DevNews #59 – Bugs made of paper and graphine transistors – does the NSA know?",
-                "episodeSummary": "YEAH! Integrating yeoman-style projects into a larger maven build - Addy Osmani comes up with the goods. <a href=\"http://addyosmani.com/blog/making-maven-grunt/\">Making Maven Grunt</a> <a href=\"http://m.nbcnews.com/technology/nsa-foils-much-internet-encryption-8C11083204\">We buried the lead - NSA can get to everything</a> <a href=\"http://arstechnica.com/security/2013/09/of-course-nsa-can-crack-crypto-anyone-can-the-question-is-how-much/\">Joel brings up the counter-point, an article by ARS</a>.",
+                "episodeSummary": "YEAH! Integrating yeoman-style projects into a larger maven build - Addy Osmani comes up with the goods. Making Maven Grunt We buried the lead - NSA can get to everything Joel brings up the counter-point, an article by ARS. Vertx 2.0 Q&amp;A on InfoQ w/Tim Fox - As per last week's episode, Vert.X is an […]",
+                "publishedAt": 1378744342,
+                "size": 35159249,
                 "duration": 1758
-              }, {
-                "uid": 28661796,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-58-2013-09-03.mp3",
-                "episodeTitle": "DevNews #58 – The London Eye – of Sauron",
-                "episodeSummary": "<p>The Developer News is sponsored by Chariot Solutions <a href=\"http://chariotsolutions.com/education\">Education Services</a>. Get trained in Scala, Spring, Grails, Maven, Nexus, and more.</p> Links, please! A nice, involved, deep tutorial on building a <a href=\"http://www.thinkster.io/pick/521e8672e2a3b28f98000314/angularjs-tutorial-learn-to-build-modern-web-apps\">fantasy football league manager</a> using AngularJS. Vert.X has really",
-                "duration": 2058
-              }, {
-                "uid": 25021246,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot_Developer_News_Episode_57_-_2013-08-26.mp3",
-                "episodeTitle": "DevNews #57 – Wherein we decide that PCs are dead, Java VMs still scream, and we want Keynote for Androuid",
-                "episodeSummary": "<p>We know Keynote for Android will never happen, but keep listening until you hear about Ken's encounter with a keyboarded, and moused, Android tablet in a remote assignment somewhere in Amish country...</p> <p>Quick sponsor note - registrations are now available </p>",
-                "duration": 2754
-              }, {
-                "uid": 20370768,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-56-08-19-2013.mp3",
-                "episodeTitle": "DevNews #56 – Wherein we go shopping for drones…",
-                "episodeSummary": "<p>Well, not really, but did you know the US public and corporations can't buy non-military drones for corporate use yet? But it's coming. Soon, you may be pulled over by a flying saucer who wants your ID.</p> <p>Here are our </p>",
-                "duration": 2259
-              }, {
-                "uid": 18160835,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-55-2013-08-12.mp3",
-                "episodeTitle": "DevNews #55 – In which our titles are shorter, and we ask, why not Javascript?",
-                "episodeSummary": "<p>In this episode, we discuss Javascript, javascript and more javascript... But, we also discuss DBaaS (YAaaS acronym), a tasty infographic, a set of web frameworks reviewed by the people who bring you JRebel, and more.</p> <a href=\"http://readwrite.com/2013/08/09/why-javascript-will-become-the-dominant-programming-language-of-the-enterprise#awesm=~oe2wfKq2cMz6Iu\">Javascript - the future dominant </a>",
-                "duration": 1285
-              }, {
-                "uid": 15141251,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-54-2013-07-04.mp3",
-                "episodeTitle": "Chariot Developer News Episode #54 – Wherein an HTTPS vulnerability makes us drop our gear",
-                "episodeSummary": "<p>A recent SSL / TLS vulnerability causes temporary panic in the recording room when Joel knocks over the headphone mixer... But seriously folks, it's a doosie, one we'll be watching over the next few weeks. The mixer mishap is pretty </p>",
-                "duration": 1284
-              }, {
-                "uid": 12721292,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-53-2013-07-29.mp3",
-                "episodeTitle": "Chariot Developer News Episode #53 – wherein Joel and Ken dislike everything",
-                "episodeSummary": "<p>Joel and Ken cover: A twitter conversation wherein Scala is bigger than COBOL for job hunters, but not bigger than Pizza Delivery Dzone - <a href=\"http://java.dzone.com/articles/my-java-ee-8-wishlist\">My Java EE 8 Wishlist</a> 160 million credit cards hacked by “high tech” cyber criminal gang …</p>",
-                "duration": 1426
-              }, {
-                "uid": 8912434,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-52-2013-07-22.mp3",
-                "episodeTitle": "Chariot Developer News Episode #52 – SIM Card Hacking, JS tools, Unix tools for BigData",
-                "episodeSummary": "Show Links <a href=\"http://www.engadget.com/2013/07/22/sim-card-hack/\">Sim Card Hack</a> exposes potentially - <a href=\"http://securitywatch.pcmag.com/mobile-security/313914-encryption-bug-in-sim-card-can-be-used-to-hack-millions-of-phones\">millions of phones</a>, potentially. Here's hoping our phones use Triple-DES encryption. <a href=\"http://abetteruserexperience.com/2013/05/twitter-bootstrap-vs-foundation-4-which-one-is-right-for-you/\">Foundation -vs- Twitter Bootstrap</a> - a good overview of both and their strengths. Great comments as well. <a href=\"http://www.gregreda.com/2013/07/15/unix-commands-for-data-science/\">Unix commands for </a>",
-                "duration": 1617
-              }, {
-                "uid": 8175963,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-51-July-15-2013.mp3",
-                "episodeTitle": "Chariot Developer News Episode #51 – More dev history, new Web IDE, Big Data debates, and more",
-                "episodeSummary": "New AWS feature - Resource permissions for EC2 RDS <a href=\"http://aws.amazon.com/about-aws/whats-new/2013/07/08/announcing-resource-permissions-for-amazon-ec2-and-amazon-rds/?ref_=pe_395470_31013550_7\">http://aws.amazon.com/about-aws/whats-new/2013/07/08/announcing-resource-permissions-for-amazon-ec2-and-amazon-rds/?ref_=pe_395470_31013550_7</a> History of tech - Vannivar Bush and Douglas Engelbart intersected - he read Vannivar’s future of tehchnology paper - <a href=\"http://www.theatlantic.com/technology/archive/2013/07/the-hut-where-the-internet-began/277551/%20\">http://www.theatlantic.com/technology/archive/2013/07/the-hut-where-the-internet-began/277551/</a><a href=\"http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/\"> </a><a href=\"http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/\">http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/</a> Another browser-based IDE, but this one has lots of …",
-                "duration": 1624
-              }, {
-                "uid": 7361123,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-50-2013-07-08.mp3",
-                "episodeTitle": "Chariot DevNews Episode #50 – Phones hacked, security and passwords, and more",
-                "episodeSummary": "<p>It's our 50th episode! More to come, now weekly. Send us feedback on <a href=\"http://twitter.com/techcast\">@techcast</a>.</p> Topics ARS - You can crack iPhone auto-generated hotspot passwords in seconds - <a href=\"http://arstechnica.com/security/2013/06/new-attack-cracks-iphone-autogenerated-hotspot-passwords-in-seconds/\">http://arstechnica.com/security/2013/06/new-attack-cracks-iphone-autogenerated-hotspot-passwords-in-seconds/</a> Android phone #s breeched by Facebook app - <a href=\"http://www.darkreading.com/mobile/android-phone-numbers-leaked-by-facebook/240157723\">http://www.darkreading.com/mobile/android-phone-numbers-leaked-by-facebook/240157723</a> - ARS …",
-                "duration": 1660
-              }, {
-                "uid": 6929144,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-devnews49-Tools-All-The-Way-Down.mp3",
-                "episodeTitle": "Chariot DevNews Episode #49 – Tools all the way down",
-                "episodeSummary": "<p>This week we're reviewing our favorite tools, development and otherwise.</p> <p>Joel and Ken talk about:</p> JSbin.com and JSFiddle.net - two browser-based tools that make fiddling with Javascript easy and fun <a href=\"http://trello.com\">Trello</a> - a good project-board tool. <a href=\"http://codiqa.com\">Codiqa</a> - a browser-based",
-                "duration": 1180
-              }, {
-                "uid": 6151707,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-48-2013-06-24.mp3",
-                "episodeTitle": "Chariot DevNews Episode #48 – Big Data all over the place",
-                "episodeSummary": "<p>Its the big return of the regular DevNews this week. My co-host Joel Confino and I discuss lots of big data stuff, including:</p> <p></p> <p>They hype it, then they try to kill it <a href=\"http://bits.blogs.nytimes.com/2013/06/01/why-big-data-is-not-truth/\">Why Big Data is not truth</a> </p>",
-                "duration": 2270
-              }, {
-                "uid": 5715824,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-episode_47-Steve-Smith-on-iOS-and-WWDC.mp3",
-                "episodeTitle": "Chariot DevNews Episode #47 – Chariot’s Steve Smith on the Apple WWDC and iOS 7",
-                "episodeSummary": "Chariot’s Steve Smith attended Apple’s World-wide developer conference last week, and we sat down today to talk to him about it. Topics WWDC ticket ordering process fun New hardware releases iOS 7 features OS X Mavericks His view as a …",
-                "duration": 1540
-              }, {
-                "uid": 1149620,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-46-2012-08-20.mp3",
-                "episodeTitle": "DevNews #46 – a bevy of Chariot blog entries for your developer fiber",
-                "episodeSummary": "<p></p><p>Rebooting this podcast starting THIS WEEK! I hope to have one developer news every other week, starting today.</p><br><p>This summer has been anything but a vacation, with our training exploding and me spending lots of time in the classroom. </p>",
-                "duration": 873
-              }, {
-                "uid": 1121170,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/DeveloperNews45.mp3",
-                "episodeTitle": "DevNews #45 – Rod Johnson leaves VMware, FuseSource acquired by RedHat, more…",
-                "episodeSummary": "<p>Note to view all of the links that made up this podcast, visit our Delicious show page at<a href=\"http://delicious.com/developernews/45\">http://delicious.com/developernews/45</a></p> <p>Sponsors<br></p> <p>Chariot Solutions Education Services -Training in Spring, Hibernate, Scala, Maven and more. Visit us on the web at chariotsolutions.com/education</p>",
-                "duration": 1793
-              }, {
-                "uid": 1121171,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-44-04-26-2012.mp3",
-                "episodeTitle": "DevNews #44 – Grails, Griffon, Apache Tika, our favorite developer tools and more",
-                "episodeSummary": "<p>Rich Freedman lent some time to talk to Ken Rimple tonight over skype and re-launch the Developer News series, which has been on hiatus since February. Here are some of the topics they discussed:</p> <a href=\"http://tika.apache.org/\">Apache Tika Apache Tika</a> <a href=\"http://www.dzone.com/links/r/griffon_095_released.html\">Griffon </a>",
-                "duration": 1595
-              }, {
-                "uid": 1121172,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-43.mp3",
-                "episodeTitle": "DevNews #43 – Programming wisdom, videos, grails, Roo, Heroku, SQL sharing and more",
-                "episodeSummary": "<p>Hey, all. Gordon and I cooked up a few tasty items for your digestion this week. Weve got SpringRoo news, stuff on git and more.<br></p> <p><a href=\"http://schneide.wordpress.com/2012/02/13/take-your-programming-course-with-a-grain-of-salt-please/\">Take your programming course with a grain of salt, please</a> A developer takes a </p>",
-                "duration": 2483
-              }, {
-                "uid": 1121173,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-42-01-30-2012.mp3",
-                "episodeTitle": "DevNews #42 – We hitchhike through Spring, Rails, WebOS and Javascript",
-                "episodeSummary": "<p>In this fine episode, we cover Spring 3.1, with features such as the Spring c: namespace, open webos, Rails 3.2.0, and Javascript MVC frameworks, to name a few topics.<br></p> <p><a href=\"http://blog.springsource.org/2011/12/13/spring-framework-3-1-goes-ga/\">Spring Framework 3.1 goes GA | SpringSource Team Blog</a> Complete </p>",
-                "duration": 1284
-              }, {
-                "uid": 1121174,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-41-2012-01-16.mp3",
-                "episodeTitle": "DevNews #41 – Microsoft and Secure Boot, 1 GB I/O per second, NYC High School for Comp Sci",
-                "episodeSummary": "<p>DevNews #41 is brought to you by Chariot Solutions, leaders in software development in mobile, web, and integration, as well as mentoring and training. Find out about our services at chariotsolutions.com.</p> <p>Links:<br></p> <p><a href=\"http://www.joelonsoftware.com/items/2012/01/13.html\">New York City gets a Software Engineering High </a></p>",
-                "duration": 1375
-              }, {
-                "uid": 1121175,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-40-Many-Spring-Announcements.mp3",
-                "episodeTitle": "DevNews #40 – Spring 3.1 is here, Grails 2.0, and Heroku for Grails",
-                "episodeSummary": "<p>Show Notes<br></p> <p>Spring 3.1 goes GA -<a href=\"http://blog.springsource.org/2011/12/13/spring-framework-3-1-goes-ga/\">http://blog.springsource.org/2011/12/13/spring-framework-3-1-goes-ga/</a><br> Grails 2.0 Released -<a href=\"http://blog.springsource.org/2011/12/15/grails-2-0-released/\">http://blog.springsource.org/2011/12/15/grails-2-0-released/</a><br> Grails on Heroku goes beta -<a href=\"http://blog.heroku.com/archives/2011/12/15/grails/\">http://blog.heroku.com/archives/2011/12/15/grails/</a><br> Peter Ledbrook on vert.x -<a href=\"http://skillsmatter.com/podcast/home/groovy-vert-x\">http://skillsmatter.com/podcast/home/groovy-vert-x</a><br> vert.x 0.2 with limited Groovy support -<a href=\"http://purplefox.github.com/vert.x/\">http://purplefox.github.com/</a></p>",
-                "duration": 1138
-              }, {
-                "uid": 1121176,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-39-2011-10-18.mp3",
-                "episodeTitle": "DevNews #39 – Steve Jobs RIP, MIT CS books, Roo updates",
-                "episodeSummary": "<p>Welcome to Episode 39! This week we discussed:<br></p> <p><a href=\"http://www.marco.org/2011/10/13/ios5-caches-cleaning\">Cleaning? ? Marco.org</a><br><a href=\"http://www.rimple.com/tech/2011/10/18/roo-in-the-corner-new-features-in-trunk.html\">Roo (in the) Corner new features in?trunk Rimple on Tech Random Thoughts</a><br><a href=\"http://www1.idc.ac.il/tecs/\">The Elements of Computing Systems / Nisan &amp; Schocken / </a><a href=\"http://www.idc.ac.il/tecs\">www.idc.ac.il/tecs</a><br><a href=\"http://blog.stackoverflow.com/2011/10/steve-jobs-1955-2011/\">Steve Jobs, 1955-2011 </a></p>",
-                "duration": 1289
-              }, {
-                "uid": 1121177,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/chariot-devnews-38-2011-09-09.mp3",
-                "episodeTitle": "DevNews #38 – The world is changing (a bit) and more",
-                "episodeSummary": "<p>This week we catch up with all of the worlds news in what normally is a quiet August. Then we discuss some new releases in the Firefox world, the new Java Lambda decision, Java 7 features, and a warning about </p>",
-                "duration": 1954
-              }, {
-                "uid": 1121178,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/DeveloperNews-37-2011-07-19.mp3",
-                "episodeTitle": "DevNews #37 – Heroku adds Clojure AND Mats, we talk LMAX, Grails 1.4 is now 2.0, design patterns in JS",
-                "episodeSummary": "<p>Joining Ken Rimple this week are Jamie Allen (@jamie_allen) and Jason Gritman. Topics discussed:<br></p> <p><a href=\"http://grails.1312388.n4.nabble.com/Grails-1-4-is-now-Grails-2-0-td3627931.html\">Grails user Grails 1.4 is now Grails 2.0</a><br><a href=\"http://blog.springsource.com/2011/06/30/countdown-to-grails-2-0-static-resources/\">Countdown to Grails 2.0: Static resources | SpringSource Team Blog</a><br><a href=\"http://addyosmani.com/resources/essentialjsdesignpatterns/book/\">Essential JavaScript Design Patterns For Beginners</a></p>",
-                "duration": 1680
-              }, {
-                "uid": 1121179,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-36-2011-06-14.mp3",
-                "episodeTitle": "DevNews #36 – Kevin Griffin on iOS5, Java 7 RI is the Open JDK, Unity for Ubuntu, Listener Feedback, more",
-                "episodeSummary": "<p>What a couple of weeks!<br> The <a href=\"http://phillyemergingtech.com\">Philly Emerging Tech 2011 Conference</a> really knocked me for a loop. What a great show, and so much to process from it too. Well have content coming in very soon, including screencasts of close </p>",
-                "duration": 2975
-              }, {
-                "uid": 1121180,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-35.mp3",
-                "episodeTitle": "DevNews #35 – A slew of Google IO announcements, Scala forces join, and more",
-                "episodeSummary": "<p>In this weeks episode, weve given Eric a lot of coffee and set him loose on the Google I/O announcements. We also discuss the new Scala / Akka company, TypeSafe, Hudson being donated to the Eclipse foundation, 7 inch tablets, </p>",
-                "duration": 1552
-              }, {
-                "uid": 1121181,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-34.mp3",
-                "episodeTitle": "DevNews #34 – Google hires Gosling, closes Android Honeycomb, we talk productivity",
-                "episodeSummary": "<p>Hello there, and welcome to April 1st. Still working on those screenshot URLs from our episode on Friday, but we do have the links from articles we spoke about in the podcast below.<br></p> <p><a href=\"http://www.zdnet.com/blog/perlow/i-bought-a-mac-so-sue-me/16509\">I bought a Mac. So sue me. </a></p>",
-                "duration": 1151
-              }, {
-                "uid": 1121182,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-Devnews-Epsiode-33-2011-03-22.mp3",
-                "episodeTitle": "DevNews #33 – The triumphant return of Eric, Node.js, Rails Metaprogramming, much more",
-                "episodeSummary": "<p>We start out this week looking at the career of superprogrammer Fabrice Bellard, and move on to topics as different as RSA seed files and potential compromise, Apples 10.6.7 update, graphing and data visualization, metaprogramming in Ruby, heck the list </p>",
-                "duration": 1500
-              }, {
-                "uid": 1121183,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-32-2011-03-11.mp3",
-                "episodeTitle": "DevNews #32 – No Eric today, it’s all about the Cukes, Couchbase for iOS, Wavemaker, DSLs and more",
-                "episodeSummary": "<p>Welcome to our Developer News, Episode #32. Eric is here in spirit and on assignment. He donated three articles see if you can see which ones are his!. As usual, our dev news show notes are here, but can </p>",
-                "duration": 1035
-              }, {
-                "uid": 1121184,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-Episode-31-02-23-2011.mp3",
-                "episodeTitle": "DevNews #31 – Rails 3.1 rumors, Forking and Joining in Java 7, Google Patents and more",
-                "episodeSummary": "<p>The TechCast is brought to you this (and every) week by our employer / sponsor, Chariot Solutions. We have lots of training in Spring and Maven coming up in March, and if you hurry you can enjoy an early bird </p>",
-                "duration": 1565
-              }, {
-                "uid": 1121185,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-30-02-07-2011.mp3",
-                "episodeTitle": "DevNews #30 – Seam 3 Beta 1, Netflix hearts NoSQL, Green Beans, HTTPS myths, more",
-                "episodeSummary": "<p>Show notes to follow. For now, visit <a href=\"http://delicious.com/developernews/30\">http://delicious.com/developernews/30</a></p> <p>Ken &amp; Eric</p>",
-                "duration": 1972
-              }, {
-                "uid": 1121186,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews_29-2011-01-14.mp3",
-                "episodeTitle": "DevNews #29 – WebM takes the ‘M’ out of HTML5, JRuby best release ever, more…",
-                "episodeSummary": "<p>This weeks Dev News is brought to you by the letter M, as in WebM. Google has announced that future releases of the Chrome browser will no longer support H.264, instead moving to the new WebM and VP8 codec/format. So </p>",
-                "duration": 2054
-              }, {
-                "uid": 1121187,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/chariot-devnews-28-12-07-2010.mp3",
-                "episodeTitle": "DevNews #28 – Web Frameworks, Amazon goes DNSing, Refining Ruby, and more",
-                "episodeSummary": "<p>Eric and Ken talk about Amazons new DNS server, Route 53, discuss Matt Raibles excellent web frameworks comparison study, discuss resources for Scala from the <a href=\"http://basementcoders.com\">Basement Coders</a>, talk about a new mixin feature request around the Ruby language, and </p>",
-                "duration": 1955
-              }, {
-                "uid": 1121188,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-27-11-11-2010.mp3",
-                "episodeTitle": "DevNews #27 – Java, Python and the Mobile Don",
-                "episodeSummary": "<p>This weeks show includes BREAKING NEWS (we need some sort of web effect for this) Apple is joining the Open JDK. Should really mix things up.<br></p> <p><a href=\"http://www.businesswire.com/news/home/20101112005253/en/Oracle-Apple-Announce-OpenJDK-Project-Mac-OS\">Oracle and Apple Announce OpenJDK Project for Mac OS X | Business </a></p>",
-                "duration": 1286
-              }, {
-                "uid": 1121189,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews26-Oct23-2010.mp3",
-                "episodeTitle": "DevNews #26 – Everybody is a Legacy Framework, Apple JDK Deprecation, IBM drops Harmony, mass hysteria",
-                "episodeSummary": "<p>Ok, folks. So many things happened in the past week that we needed to get an episode out to talk about them. Not that Eric or me have any line into correct reasoning behind anything, but we wanted to talk, </p>",
-                "duration": 983
-              }, {
-                "uid": 1121190,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-25-10-07-2010.mp3",
-                "episodeTitle": "DevNews #25 – Java in Stasis?  Applying a chainsaw, revving Hibernate and other saucy topics",
-                "episodeSummary": "<p>Do you know why youre binding those HQL parameters? Want to make the simplest AppEngine application in Groovy? How about learning about why youre such a bad programmer (that includes all of us, according to the post).</p> <p>All this and </p>",
-                "duration": 2173
-              }, {
-                "uid": 1121191,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-24-09-20-2010.mp3",
-                "episodeTitle": "DevNews #24 – A triple shot of Python, RESTful Rails, and NoSQL GORM and Reddis",
-                "episodeSummary": "<p>Weve all been very busy of late. Just got a chance to catch up and so we have lots to talk about in episode #24.</p> <p>Links<br></p> <p><a href=\"http://pypi.python.org/pypi/jellyfish/0.1.2\">Python Package Index : jellyfish 0.1.2</a><br><a href=\"http://pyjs.org/\">Pyjamas Python Javascript Compiler, Desktop Widget Set </a></p>",
-                "duration": 1551
-              }, {
-                "uid": 1121192,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-23-08-24-2010.mp3",
-                "episodeTitle": "DevNews #23 – I hereby patent strange podcast episode titles…",
-                "episodeSummary": "<p>(Sorry for the delay between shows lately. Its the summer, and I was away on vacation)</p> <p>Especially THIS week, the opinions of Ken and Eric do not reflect the opinions of Chariot Solutions</p> <p>Speaking of this week, here are the </p>",
-                "duration": 1198
-              }, {
-                "uid": 1121193,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-Episode-22-08-08-2010.mp3",
-                "episodeTitle": "DevNews #22 – We’ve Got Mobile and CI, Digg and grails sharding, and more",
-                "episodeSummary": "<p>Thanks to Kevin Griffin for joining Eric Snyder and myself this week.<br> Articles of interest<br> From <a href=\"http://www.delicious.com/developernews/22\">http://www.delicious.com/developernews/2</a>:<br></p> <p><a href=\"http://nosql.mypopescu.com/post/904840384/django-and-nosql-databases-revisited\">Django and NoSQL Databases Revisited myNoSQL</a><br><a href=\"http://soatechlab.blogspot.com/2010/08/pgp-encryption-with-mule-esb.html\">Using PGP Encryption with Mule</a><br><a href=\"http://chariotsolutions.blogspot.com/2010/08/machine-learning-google-prediction-api.html\">Chariot Solutions: Machine Learning: Google Prediction API</a><br><a href=\"http://about.digg.com/blog/continuous-deployment-code-review-and-pre-tested-commits-digg4\">Continuous Deployment, Code </a></p>",
-                "duration": 947
-              }, {
-                "uid": 1121194,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DeveloperNews-21-07-29-2010.mp3",
-                "episodeTitle": "DevNews #21 – We have Rails 3 RC1, Grails and Griffon, and more!",
-                "episodeSummary": "<p>In the DevNews today <br></p> <p><a href=\"http://oreillynet.com/pub/e/1604\">CouchApp Evently Guided Hack w/ CouchDB</a><br><a href=\"http://charlesleifer.com/blog/announcing-djangoembed-rich-media-consuming-and-providing-with-django/\">Announcing djangoembed, rich media consuming and providing with Django</a><br><a href=\"http://www.groovyblogs.org/entries/jump?id=15098\">Andres Almirays Weblog : Weblog</a><br><a href=\"http://weblog.rubyonrails.org/2010/7/26/rails-3-0-release-candidate\">Daily Dose Rails 3 Arrives at First RC Station</a><br><a href=\"http://feedproxy.google.com/~r/Interface21TeamBlog/~3/TTezYGYdIro/\">Spring MVC 3 Showcase</a><br><a href=\"http://feedproxy.google.com/~r/Interface21TeamBlog/~3/I3ZFSgIR6s8/\">GORM Gotchas </a></p>",
-                "duration": 1055
-              }, {
-                "uid": 1121195,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/Chariot-DevNews-20-07-14-2010.mp3",
-                "episodeTitle": "DevNews #20 – Start, Finish, or Play the Game",
-                "episodeSummary": "<p>Amongst our weaponry<br></p> <p><a href=\"http://www.drobnik.com/touch/2010/07/understanding-ios-4-backgrounding-and-delegate-messaging/\">Understanding iOS 4 Backgrounding and Delegate Messaging @ Dr. Touch</a><br><a href=\"http://github.com/mxcl/homebrew\">mxcls homebrew at master GitHub</a><br><a href=\"http://www.engineyard.com/blog/2010/homebrew-os-xs-missing-package-manager/\">Homebrew: OS Xs Missing Package Manager | Engine Yard Ruby on Rails Blog</a><br><a href=\"http://www.jamesward.com/2010/07/07/amf-js-a-pure-javascript-amf-implementation/\">amf.js A Pure JavaScript AMF Implementation</a></p>",
-                "duration": 1216
-              }, {
-                "uid": 1121196,
-                "mediaUrl": "http://traffic.libsyn.com/chariottechcast/DevNews-Episode-19-07-01-2010.mp3",
-                "episodeTitle": "DevNews #19 – Releases Releases, oh pay me, HTML5 salary please",
-                "episodeSummary": "<p>Chariot Developer News Episode #19<br> Hosts: Ken Rimple and Eric Snyder<br> The watchword this week is Release Many releases upcoming or out, including FireFox 4 beta/preview 1, Tomcat 7 beta 1, and the upcoming Passenger 3 and GMail with HTML </p>",
-                "duration": 1079
               }
             ]
           }, {
             "id": 29820,
-            "homeUrl": "http://threedevsandamaybe.com/",
-            "feedUrl": "http://threedevsandamaybe.com/podcast.xml",
+            "feedUrl": "http://threedevsandamaybe.com/",
             "authors": "Michael Budd, Fraser Hart, Lewis Cains, Edd Mann",
             "subscriptionTitle": "Three Devs and a Maybe - Introduction to Web Development",
             "summary": "A very basic introduction to web development, everything you'll need to know if you're thinking of persuing a hobbie or career in web development.",
@@ -1263,1119 +1686,129 @@
                 "mediaUrl": "http://threedevsandamaybe.com/download/15-web-design-with-justin-delucia.mp3",
                 "explicit": null,
                 "episodeTitle": "Episode 15 - Web Design with Justin DeLucia",
-                "episodeSummary": "This week we are lucky to have special guest and good friend of the show Justin DeLucia on to discuss all things web design. Starting off with background discussion on how he got into the industry, we move on to how designers and developers work (and should work) together. Finally, we wrap up with our longest quiz yet, which undoubtedly went off in many random tangents.",
+                "description": "This week we are lucky to have special guest and good friend of the show Justin DeLucia on to discuss all things web design. Starting off with background discussion on how he got into the industry, we move on to how designers and developers work (and should work) together. Finally, we wrap up with our longest quiz yet, which undoubtedly went off in many random tangents.",
+                "publishedAt": 1394667000,
+                "size": 54392832,
                 "duration": 6013
               }, {
                 "uid": 36379403,
                 "mediaUrl": "http://threedevsandamaybe.com/download/14-using-composer-and-the-command-line-cli.mp3",
                 "explicit": null,
                 "episodeTitle": "Episode 14 - Using Composer and the Command Line (CLI)",
-                "episodeSummary": "With only a two man crew this week we decided to have a little ramble about Composer and the Command Line. Initially discussing the benefits of Composer over alternatives (i.e. PEAR), we move onto some of the real-world issues that can arise from 'depending' on it. We then segue into discussing the Command Line and some of the key points new users should now about.",
+                "description": "With only a two man crew this week we decided to have a little ramble about Composer and the Command Line. Initially discussing the benefits of Composer over alternatives (i.e. PEAR), we move onto some of the real-world issues that can arise from 'depending' on it. We then segue into discussing the Command Line and some of the key points new users should now about.",
+                "publishedAt": 1394056800,
+                "size": 44419072,
                 "duration": 4852
               }, {
                 "uid": 36158045,
                 "mediaUrl": "http://threedevsandamaybe.com/download/13-using-the-php-documentation.mp3",
                 "explicit": null,
                 "episodeTitle": "Episode 13 - Using the PHP Documentation",
-                "episodeSummary": "This week we discuss the important topic of learning how to effectively use the PHP documentation. Although easily neglected for other resources (i.e. StackOverflow), the official PHP documentation is a great place to learn about new functions and how they can be used. Finally, we touch on some accompanying third-party documentation tools we use on a daily basis.",
+                "description": "This week we discuss the important topic of learning how to effectively use the PHP documentation. Although easily neglected for other resources (i.e. StackOverflow), the official PHP documentation is a great place to learn about new functions and how they can be used. Finally, we touch on some accompanying third-party documentation tools we use on a daily basis.",
+                "publishedAt": 1393451877,
+                "size": 35321856,
                 "duration": 3930
               }, {
                 "uid": 35982392,
                 "mediaUrl": "http://threedevsandamaybe.com/download/12-what-is-mvc.mp3",
                 "explicit": null,
                 "episodeTitle": "Episode 12 - What is MVC?",
-                "episodeSummary": "This week we discuss the popular MVC (Model-View-Controller) design pattern and how it is used in web application development today. We start with a brief history lesson and introduction to design patterns, then move on to a quiz which highlights some of variants that have been created.",
+                "description": "This week we discuss the popular MVC (Model-View-Controller) design pattern and how it is used in web application development today. We start with a brief history lesson and introduction to design patterns, then move on to a quiz which highlights some of variants that have been created.",
+                "publishedAt": 1392843600,
+                "size": 36313088,
                 "duration": 4049
               }, {
                 "uid": 35872085,
                 "mediaUrl": "http://threedevsandamaybe.com/download/11-css-straight-from-the-hart.mp3",
                 "explicit": null,
                 "episodeTitle": "Episode 11 - CSS, Straight from the Hart",
-                "episodeSummary": "In this weeks show we introduce CSS to the web-development party. Starting off with a brief history lesson, we transition into highlighting why it is useful and the different types of styling options available. Finally, we put to rest the confusion between the different versions.",
+                "description": "In this weeks show we introduce CSS to the web-development party. Starting off with a brief history lesson, we transition into highlighting why it is useful and the different types of styling options available. Finally, we put to rest the confusion between the different versions.",
+                "publishedAt": 1392242400,
+                "size": 65712379,
                 "duration": 4082
               }, {
                 "uid": 35698867,
                 "mediaUrl": "http://threedevsandamaybe.com/download/10-html-experiences-and-navigation-implementation-part-2.mp3",
                 "explicit": null,
                 "episodeTitle": "Episode 10 - HTML Experiences and Navigation Implementation - Part 2",
-                "episodeSummary": "This week we wrap up the discussion on HTML, highlighting useful tools that we have encountered and incorporate into our work-flow. We then move on to briefly talk about considerations that should be addressed when designing and implementing website navigation.",
+                "description": "This week we wrap up the discussion on HTML, highlighting useful tools that we have encountered and incorporate into our work-flow. We then move on to briefly talk about considerations that should be addressed when designing and implementing website navigation.",
+                "publishedAt": 1391634949,
+                "size": 40253440,
                 "duration": 4505
               }, {
                 "uid": 35576577,
                 "mediaUrl": "http://threedevsandamaybe.com/download/9-introduction-to-object-oriented-programming.mp3",
                 "explicit": null,
                 "episodeTitle": "Episode 9 - Introduction to Object-oriented programming",
-                "episodeSummary": "Sadly we are one host down this week with Lewis hard are work, so we decided to postpone part two of the HTML discussion till next week. In the meantime however, we divert are attention to introducing the Object-oriented programming paradigm. We discuss its' advantages, along with concepts such as Objects, Classes, Data Encapsulation, Inheritance and Polymorphism.",
+                "description": "Sadly we are one host down this week with Lewis hard are work, so we decided to postpone part two of the HTML discussion till next week. In the meantime however, we divert are attention to introducing the Object-oriented programming paradigm. We discuss its' advantages, along with concepts such as Objects, Classes, Data Encapsulation, Inheritance and Polymorphism.",
+                "publishedAt": 1391038200,
+                "size": 34725888,
                 "duration": 3873
               }, {
                 "uid": 35439052,
                 "mediaUrl": "http://threedevsandamaybe.com/download/8-html-experiences-part-1.mp3",
                 "explicit": null,
                 "episodeTitle": "Episode 8 - HTML Experiences - Part 1",
-                "episodeSummary": "This week we decided to do an episode on good ol' HTML. There are many good resources online for learning the language, so instead we decided to discuss our personal experiences. Along with this we reflect on browser support issues and how to help alleviate these problems.",
+                "description": "This week we decided to do an episode on good ol' HTML. There are many good resources online for learning the language, so instead we decided to discuss our personal experiences. Along with this we reflect on browser support issues and how to help alleviate these problems.",
+                "publishedAt": 1390423984,
+                "size": 33531904,
                 "duration": 3738
               }, {
                 "uid": 35410986,
                 "mediaUrl": "http://threedevsandamaybe.com/download/7-discussion-on-freelance-work.mp3",
-                "explicit": null,
                 "episodeTitle": "Episode 7 - Discussion on Freelance Work",
-                "episodeSummary": "Following our discussion last week, we received a very cool email from a listener highlighting freelance work. In this weeks podcast we have a chat about our freelance experiences and how we find projects to take on. Following this we touch on things to look out for and how to juggle your day job and outside work.",
+                "description": "Following our discussion last week, we received a very cool email from a listener highlighting freelance work. In this weeks podcast we have a chat about our freelance experiences and how we find projects to take on. Following this we touch on things to look out for and how to juggle your day job and outside work.",
+                "publishedAt": 1389736800,
+                "size": 35090432,
                 "duration": 3878
               }, {
                 "uid": 35410987,
                 "mediaUrl": "http://threedevsandamaybe.com/download/6-advice-to-new-php-web-developers.mp3",
-                "explicit": null,
                 "episodeTitle": "Episode 6 - Advice to new PHP web developers",
-                "episodeSummary": "With all the recent discussion in the PHP community we decided it would be a good time to give some grounded advice to new developers. When you do decide to bite the bullet and begin learning web-development/PHP you may quickly be overwhelmed with talk of frameworks, third-party code and dependencies. In this podcast we give our take on what is best to learn and when, and how we each personally went about doing it.",
+                "description": "With all the recent discussion in the PHP community we decided it would be a good time to give some grounded advice to new developers. When you do decide to bite the bullet and begin learning web-development/PHP you may quickly be overwhelmed with talk of frameworks, third-party code and dependencies. In this podcast we give our take on what is best to learn and when, and how we each personally went about doing it.",
+                "publishedAt": 1389043800,
+                "size": 32524288,
                 "duration": 3792
               }, {
                 "uid": 35410988,
                 "mediaUrl": "http://threedevsandamaybe.com/download/5-exploring-text-source-editors-and-ides.mp3",
-                "explicit": null,
                 "episodeTitle": "Episode 5 - Exploring Text/Source Editors and IDEs",
-                "episodeSummary": "In the podcast this week we discuss the important topic of text editors. You will be using one daily if you plan to get serious about your programing, so it pays to be aware of what is out there. We first highlight the difference between text and source editors, and then name a couple of examples we have used in the past. Finally, we briefly discuss IDE's and the merits of using such an application when programming.",
+                "description": "In the podcast this week we discuss the important topic of text editors. You will be using one daily if you plan to get serious about your programing, so it pays to be aware of what is out there. We first highlight the difference between text and source editors, and then name a couple of examples we have used in the past. Finally, we briefly discuss IDE's and the merits of using such an application when programming.",
+                "publishedAt": 1387405800,
+                "size": 35260416,
                 "duration": 4109
               }, {
                 "uid": 35410989,
                 "mediaUrl": "http://threedevsandamaybe.com/download/4-web-hosting-and-domains-part-2.mp3",
-                "explicit": null,
                 "episodeTitle": "Episode 4 - Web Hosting and Domains - Part 2",
-                "episodeSummary": "Second part of our discussion on Web Hosting options and what to look out for. We then move on to talk about Domains, DNS and the different types of record types (A, CNAME etc.).",
+                "description": "Second part of our discussion on Web Hosting options and what to look out for. We then move on to talk about Domains, DNS and the different types of record types (A, CNAME etc.).",
+                "publishedAt": 1386626400,
+                "size": 37036032,
                 "duration": 3954
               }, {
                 "uid": 35410990,
                 "mediaUrl": "http://threedevsandamaybe.com/download/3-web-hosting-part-1.mp3",
-                "explicit": null,
                 "episodeTitle": "Episode 3 - Web Hosting - Part 1",
-                "episodeSummary": "1st part of our section on web hosting. In this episode we cover an essential part of web development, choosing a web hosting solution that is right for you.",
+                "description": "1st part of our section on web hosting. In this episode we cover an essential part of web development, choosing a web hosting solution that is right for you.",
+                "publishedAt": 1386018000,
+                "size": 33284096,
                 "duration": 3550
               }, {
                 "uid": 35410991,
                 "mediaUrl": "http://threedevsandamaybe.com/download/2-getting-started.mp3",
-                "explicit": null,
                 "episodeTitle": "Episode 2 - Setting up a local environment, basic PHP functionality",
-                "episodeSummary": "This episode explores getting started, including, creating a local environment, and explores some very basic programming logic, in particular PHP logic. We touch on collections/arrays, data types, looping techniques.",
+                "description": "This episode explores getting started, including, creating a local environment, and explores some very basic programming logic, in particular PHP logic. We touch on collections/arrays, data types, looping techniques.",
+                "publishedAt": 1383598800,
+                "size": 28952576,
                 "duration": 3056
               }, {
                 "uid": 35410992,
                 "mediaUrl": "http://threedevsandamaybe.com/download/1-introduction-episode.mp3",
-                "explicit": null,
                 "episodeTitle": "Introduction Episode - Who are the hosts, what is PHP, where to start",
-                "episodeSummary": "This episode introduces listeners to the people hosting the podcast. It also touches on some very basic topics such as, what is needed to get in to web development, what experience is required, what will it cost, what will I need to learn. This is for absolute beginners, no knowledge at all of web development is required.",
+                "description": "This episode introduces listeners to the people hosting the podcast. It also touches on some very basic topics such as, what is needed to get in to web development, what experience is required, what will it cost, what will I need to learn. This is for absolute beginners, no knowledge at all of web development is required.",
+                "publishedAt": 1382191200,
+                "size": 37881856,
                 "duration": 4588
-              }
-            ]
-          }, {
-            "id": 199,
-            "homeUrl": "http://javascriptjabber.com",
-            "feedUrl": "http://feeds.feedburner.com/javascriptjabber",
-            "authors": "Charles Max Wood, AJ O'Neal, Jamison Dance, Joe Eames, Tim Caswell, Merrick Christensen",
-            "subscriptionTitle": "Javascript Jabber",
-            "summary": "A technical discussion of JavaScript related topics. Things like Node.js, Web Frameworks, JSON, CoffeeScript, Event and Object models and much more.",
-            "albumArt": "JSJ_cover_logo.jpg",
-            "episodes": [
-              {
-                "uid": 36568194,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ100.mp3",
-                "explicit": false,
-                "episodeTitle": "100 JSJ Centennial Episode Celebration",
-                "episodeSummary": "Panel Aaron Frost (twitter github blog) Merrick Christensen (twitter github) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 07:45 – JSJ Opening Music Mystery Inu: The Bailing 09:39 – Crazy Recording Locations 12:57 – Favorite […]",
-                "duration": 2956
-              }, {
-                "uid": 36348056,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ099NPMInc.mp3",
-                "explicit": false,
-                "episodeTitle": "099 JSJ npm, Inc. with Isaac Schlueter, Laurie Voss, and Rod Boothby",
-                "episodeSummary": "Panel Isaac Schlueter (twitter github blog) Laurie Voss (twitter github blog) Rod Boothby (twitter blog) Aaron Frost (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:33 – npm, Inc. Services &amp; Possible Features Joyent 05:06 […]",
-                "duration": 3398
-              }, {
-                "uid": 36150212,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ098AssembleIO.mp3",
-                "explicit": false,
-                "episodeTitle": "098 JSJ Assemble.io with Brian Woodward and Jon Schlinkert",
-                "episodeSummary": "Panel Jon Schlinkert (twitter github) Brian Woodward (twitter github blog) Joe Eames (twitter github blog) Aaron Frost (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:44 – Jon and Brian Introductions Sellside 05:14 – Assemble.io Assemble.io (GitHub) Jekyll 12:34 – Resources Foundation […]",
-                "duration": 2634
-              }, {
-                "uid": 35983180,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ097GulpJS.mp3",
-                "explicit": false,
-                "episodeTitle": "097 JSJ Gulp.js with Eric Schoffstall",
-                "episodeSummary": "Panel Eric Schoffstall (twittergithubblog) Aaron Frost (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:47 – Eric Schoffstall Introduction FRACTAL 02:35 – Gulp 05:11 – Streams 07:51 – Gulp vs Grunt 09:22 […]",
-                "duration": 2555
-              }, {
-                "uid": 35889579,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ096LargeSinglePageApps.mp3",
-                "explicit": false,
-                "episodeTitle": "096 JSJ The Challenges of Large Single Page JavaScript Applications with Bart Wood",
-                "episodeSummary": "Panel Bart Wood (twitter github) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:29 – Bart Wood Introduction 02:12 – The Frontend Backbone.js 02:48 – Working on Single Page Applications 05:56 – Limitations Memory JSFiddle 09:51 – Online Practice Management Solution 11:40 – Other Storage […]",
-                "duration": 2701
-              }, {
-                "uid": 35735301,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ095AngularUI.mp3",
-                "explicit": false,
-                "episodeTitle": "095 JSJ AngularUI with Dean Sofer",
-                "episodeSummary": "Panel Dean Sofer (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:00 – Dean Sofer Introduction Paxata 02:25 – Big Data 03:44 – AngularUI PHP-OS 09:25 – Angular and Ember.js UI-Router 10:40 […]",
-                "duration": 3024
-              }, {
-                "uid": 35595376,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ094BonzaiJS.mp3",
-                "explicit": false,
-                "episodeTitle": "094 JSJ BonsaiJS with Tobi Reiss",
-                "episodeSummary": "Panel Tobi Reiss (twittergithubblog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:38 – Tobi Reiss Introduction uxebu 02:32 – BonsaiJS pixelplant 05:06 – Performance The Renderer SVG Bonsai vs Flash 12:32 – Bonsai vs Other […]",
-                "duration": 2636
-              }, {
-                "uid": 35473681,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ093NYT.mp3",
-                "explicit": false,
-                "episodeTitle": "093 JSJ The New York Times and JavaScript with Eitan Konigsburg, Alastair Coote and Reed Emmons",
-                "episodeSummary": "Panel Eitan Konigsburg (twittergithub) Alastair Coote (twitter github blog) Reed Emmons (twitter) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:06 – Introductions New York Times 03:17 – The Mobile Site 05:18 – The Desktop Site vs The Mobile Site […]",
-                "duration": 3266
-              }, {
-                "uid": 35366877,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ092MEAN.mp3",
-                "explicit": false,
-                "episodeTitle": "092 JSJ The MEAN Stack with Ward Bell and Valeri Karpov",
-                "episodeSummary": "Panel Valeri Karpov (twitterbloggithub) Ward Bell (twitter blog github) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:25 – The MEAN Stack Mongo.db Express.js AngularJS Node.js MySQL 05:21 – Concurrency 12:49 – Express.js Sinatra 14:48 – Working Within the MEAN […]",
-                "duration": 3889
-              }, {
-                "uid": 35275605,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ091JSONAPIs.mp3",
-                "explicit": false,
-                "episodeTitle": "091 JSJ JSON APIs",
-                "episodeSummary": "Panel AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:15 – XML vs JSON JSON API AJ O’Neal: No, really, XML is retarded. 05:41 – Single-page App vs Server-side App […]",
-                "duration": 3436
-              }, {
-                "uid": 35160068,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ090UsersGroups.mp3",
-                "explicit": false,
-                "episodeTitle": "090 JSJ Users Groups",
-                "episodeSummary": "Panel AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:56 – AJ’s Experience Starting a Users Group VAGUE Utah JS Utah JS Forum + Mailing List 06:34 – Mailing Lists 07:23 – IRC 08:07 – Setting up Users Groups Consistency […]",
-                "duration": 2344
-              }, {
-                "uid": 35069208,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ089NodeSecurity.mp3",
-                "explicit": false,
-                "episodeTitle": "089 JSJ The Node Security Project with Adam Baldwin",
-                "episodeSummary": "Panel Adam Baldwin (twitter github @nodesecurity) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:00 – Adam Baldwin Introduction Team Lead at ^lift Security from &amp;yet Founder and Organizer of The Node Security Project 02:12 […]",
-                "duration": 3138
-              }, {
-                "uid": 34903673,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ088LazyJS.mp3",
-                "explicit": false,
-                "episodeTitle": "088 JSJ Lazy.js with Daniel Tao",
-                "episodeSummary": "Panel Daniel Tao (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:50 – Freelancing Q&amp;A 01:21 – Daniel Tao Introduction Google Ads Review Team 02:26 – Lazy.js Underscore Lo-Dash JavaScript Jabber Episode #79: Lo-Dash with John-David Dalton Lazy Evaluation 03:28 – Lazily […]",
-                "duration": 2797
-              }, {
-                "uid": 34748679,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ087TC39.mp3",
-                "explicit": false,
-                "episodeTitle": "087 JSJ TC39 with Alex Russell",
-                "episodeSummary": "Panel Alex Russell (twitter github blog) AJ O’Neal (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:52 – Alex Russell Introduction Blink TC39 – ECMAScript 03:35 – Google DevTools 04:44 – Alex’s Background The Dojo Project Chrome Frame 07:14 – TC39 – […]",
-                "duration": 3824
-              }, {
-                "uid": 34154298,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ086EmberDiscourse.mp3",
-                "explicit": false,
-                "episodeTitle": "086 JSJ Ember.js & Discourse with Robin Ward",
-                "episodeSummary": "Panel Robin Ward (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:53 – Robin Ward Introduction @evil_trout Discourse 01:36 – Discourse Ruby Rogues: #106 – Discourse with Jeff Atwood Ruby Rogues: #117 – […]",
-                "duration": 3818
-              }, {
-                "uid": 33760438,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/85_Episode_085__Huxley_with_Pete_Hunt.mp3",
-                "explicit": false,
-                "episodeTitle": "085 JSJ Huxley with Pete Hunt",
-                "episodeSummary": "Panel Pete Hunt (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:10 – Pete Hunt Introduction Facebook Instagram 02:11 – Huxley Selenium WebDriver 12:36 – The Huxley Community 15:33 – Selenium vs […]",
-                "duration": 2417
-              }, {
-                "uid": 33476130,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/84_Episode_084__Node_with_Mikeal_Rogers.mp3",
-                "explicit": false,
-                "episodeTitle": "084 JSJ Node with Mikeal Rogers",
-                "episodeSummary": "Panel Mikeal Rogers (github blog) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Discussion 00:59 – Mikeal Rogers Introduction CTO of Getable windmill request 06:41 – NodeConf ng-conf 16:06 – Node: Frontend and Backend Pluralsight: AngularJS Fundamentals I-Tier: Dismantling the Monoliths 22:30 – JVMs Node.JS Is Stupid And If You Use It So […]",
-                "duration": 3070
-              }, {
-                "uid": 33199872,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ083FRPRXJS.mp3",
-                "explicit": false,
-                "episodeTitle": "083 JSJ FRP and RxJS with Matthew Podwysocki",
-                "episodeSummary": "Panel Matthew Podwysocki (twitter github @ReactiveX) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:01 – 061 JSJ Functional Reactive Programming with Juha Paananen and Joe Fiorini Coursera: Principles of Reactive Programming 02:49 – Matthew Podwysocki Microsoft 05:12 – Functional […]",
-                "duration": 2575
-              }, {
-                "uid": 32903056,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ082JSHint.mp3",
-                "explicit": false,
-                "episodeTitle": "082 JSJ JSHint with Anton Kovalyov",
-                "episodeSummary": "Panel Anton Kovalyov (twitter github blog) AJ O’Neal (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:57 – Anton Kovalyov Mozilla Disqus JSHint JSLint 03:40 – Why I forked JSLint to JSHint 07:15 – JSHint vs JSLint 14:19 – Sticking with the […]",
-                "duration": 2530
-              }, {
-                "uid": 32647192,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ081AsyncTesting.mp3",
-                "explicit": false,
-                "episodeTitle": "081 JSJ  Promises for Testing Async JavaScript with Pete Hodgson",
-                "episodeSummary": "Panel Pete Hodgson (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:19 – Pete Hodgson: Testing Asynchronous JavaScript Promises Domenic Denicola 12:43 – Efficiency 21:14 – q 037 JSJ Promises with Domenic Denicola and Kris Kowal jQuery 22:41 […]",
-                "duration": 3055
-              }, {
-                "uid": 32404374,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ080ImpactJS.mp3",
-                "explicit": false,
-                "episodeTitle": "080 JSJ Impact.js with Dominic Szablewski",
-                "episodeSummary": "Panel Dominic Szablewski (twitter github PhobosLab) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:20 – Dominic Szablewski Introduction 01:54 – Impact.js Biolab Disaster 03:00 – Selling/Charging vs Open-Source/Consulting Z-Type 06:09 – Game Development 08:42 […]",
-                "duration": 3517
-              }, {
-                "uid": 32155766,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ079LoDash.mp3",
-                "explicit": false,
-                "episodeTitle": "079 JSJ Lo-Dash with John-David Dalton",
-                "episodeSummary": "Panel John-David Dalton (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:32 – John-David Dalton Introduction Lo-Dash jsPerf benchmark.js Microsoft 02:19 – jsPerf 07:48 – Lo-Dash Underscore Lo-Dash [...]",
-                "duration": 3881
-              }, {
-                "uid": 32060741,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ078WorkingFromHome.mp3",
-                "explicit": false,
-                "episodeTitle": "078 JSJ Working From Home",
-                "episodeSummary": "Panel Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:39 – Going Rogue Video 01:10 – Working From Home 02:17 – Office Setups/Furniture LX Desk Mount LCD Arm Aeron Chair by Herman Miller VendorGear Headrest for Herman Miller Aeron Chair A standing desk for $22 [...]",
-                "duration": 3496
-              }, {
-                "uid": 32060742,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ077Monocle.mp3",
-                "explicit": false,
-                "episodeTitle": "077 JSJ Monocle with Alex MacCaw",
-                "episodeSummary": "Panel Alex MacCaw (twitter github blog) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:13 – Going Rogue Video 02:12 – Alex MacCaw Introduction 029 JSJ Bower.js with Alex MacCaw and Jacob Thornton JavaScript Web [...]",
-                "duration": 3012
-              }, {
-                "uid": 31495696,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ076Meteor.mp3",
-                "explicit": false,
-                "episodeTitle": "076 JSJ Meteor.js with Marcus Phillips and Fred Zirdung",
-                "episodeSummary": "Panel Marcus Phillips (twitter github) Fred Zirdung (twitter github) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:30 – Marcus Phillips and Fred Zirdung Introduction Hack Reactor 03:31 – Experience with Meteor 05:45 – Intro to Meteor Client-side Environment Tethered [...]",
-                "duration": 3029
-              }, {
-                "uid": 31184980,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ075MaintainableJS.mp3",
-                "explicit": false,
-                "episodeTitle": "075 JSJ Maintainable JavaScript with Nicholas Zakas",
-                "episodeSummary": "Panel Nicholas C. Zakas (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:24 – Nicholas Zakas Introduction Box Maintainable JavaScript by Nicholas C. Zakas High Performance JavaScript (Build [...]",
-                "duration": 3461
-              }, {
-                "uid": 31007222,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ074Grunt.mp3",
-                "explicit": false,
-                "episodeTitle": "074 JSJ Grunt with Ben Alman",
-                "episodeSummary": "Panel Ben Alman (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Ryan Florence (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:34 – Ben Alman Introduction Bocoup 02:54 – “Cowboy” Cowboy Coder 06:53 – The Birth of Grunt Ender make rake jake [...]",
-                "duration": 4452
-              }, {
-                "uid": 27869126,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ073React.mp3",
-                "explicit": false,
-                "episodeTitle": "073 JSJ React with Pete Hunt and Jordan Walke",
-                "episodeSummary": "Panel Pete Hunt (twitter github blog) Jordan Walke (twitter github) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:34 – Pete Hunt Introduction Instagram Facebook 02:45 – Jordan Walke Introduction 04:15 [...]",
-                "duration": 3361
-              }, {
-                "uid": 25004196,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ072Screencasting.mp3",
-                "explicit": false,
-                "episodeTitle": "072 JSJ Screencasts",
-                "episodeSummary": "Panel Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:31 – Screencasting Experience Pluralsight: AngularJS Fundamentals – Joe Pluralsight: jQuery Advanced Topics – Joe Pluralsight: Testing Clientside JavaScript – Joe Teach Me To Code – Chuck 02:44 – Getting into [...]",
-                "duration": 2971
-              }, {
-                "uid": 19396953,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ071Microsoft.mp3",
-                "explicit": false,
-                "episodeTitle": "071 JSJ JavaScript Strategies at Microsoft with Scott Hanselman",
-                "episodeSummary": "Panel Scott Hanselman (twitter github blog) Joe Eames (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:14 – Scott Hanselman Introduction Community Program Manager for Web Tools at Microsoft Azure and Web Tools ASP.NET Runtime 03:17 – Microsoft and JavaScript Microsoft Build [...]",
-                "duration": 3424
-              }, {
-                "uid": 17102387,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ070JavascriptAllonge.mp3",
-                "explicit": false,
-                "episodeTitle": "070 JSJ Book Club: JavaScript Allongé with Reginald Braithwaite",
-                "episodeSummary": "Panel Reginald Braithwaite (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:08 – Reg Braithwaite Introduction Github 03:46 – JavaScript Allongé by Reginald Braithwaite 06:43 – The Y [...]",
-                "duration": 3990
-              }, {
-                "uid": 14144822,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ069ApplicationCaching.mp3",
-                "explicit": false,
-                "episodeTitle": "069 JSJ The Application Cache with Jake Archibald",
-                "episodeSummary": "Panel Jake Archibald (twitter github blog) Jamison Dance (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:14 – Jake Archibald Introduction Works on Developer Relations on the Google Chrome Team 01:57 – The Application Cache Eric Bidelman: A Beginner’s Guide to Using the Application Cache – HTML5 [...]",
-                "duration": 3085
-              }, {
-                "uid": 9398347,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ068ES6.mp3",
-                "explicit": false,
-                "episodeTitle": "068 JSJ – ES6 with Aaron Frost",
-                "episodeSummary": "Panel Aaron Frost (twitter github blog) Merrick Christensen (twitter github) Joe Eames (twitter github blog) Jamison Dance (twitter github blog) Discussion 01:36 – Aaron Frost Introduction Web Developer at Domo 1.21 Gigawatts – Chromeapps with Angularjs and Node (Aaron Frost and Dave Geddes) JS.next: A Manager’s Guide by Aaron Frost 02:21 – ECMAScript and JavaScript [...]",
-                "duration": 2851
-              }, {
-                "uid": 8619095,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ067Testem.mp3",
-                "explicit": false,
-                "episodeTitle": "067 JSJ – Testem with Toby Ho",
-                "episodeSummary": "Panel Toby Ho (twitter github blog) Joe Eames (twitter github blog) Aaron Frost (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:53 – Aaron Frost Introduction Domo 1.21 Gigawatts – Chromeapps with Angularjs and Node (Aaron Frost and Dave Geddes) 02:45 – Toby Ho Introduction testem Toby [...]",
-                "duration": 2928
-              }, {
-                "uid": 7255072,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ066TransitioningToJS.mp3",
-                "explicit": false,
-                "episodeTitle": "066 JSJ Transitioning to JavaScript",
-                "episodeSummary": "Panel Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:10 – Making the transition from one primary language to JavaScript 01:30 – Merrick’s Experience ActionScript 03:32 – Joe’s Experience .NET Microsoft 07:46 – Moving from C# to JavaScript Misconceptions 09:25 – [...]",
-                "duration": 2435
-              }, {
-                "uid": 6721031,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ065BuildTools.mp3",
-                "explicit": false,
-                "episodeTitle": "065 JSJ Build Tools with Adam Hawkins",
-                "episodeSummary": "Panel Adam Hawkins (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:16 – Adam Hawkins Introduction JavaScript Application Build Tools: Adam Hawkins 003 JSJ Build Tools 01:51 – What Are Build Tools? 02:46 – Build Process Ember.js [...]",
-                "duration": 2929
-              }, {
-                "uid": 5839738,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ064EmberTools.mp3",
-                "explicit": false,
-                "episodeTitle": "064 JSJ Ember Tools with Ryan Florence",
-                "episodeSummary": "Panel Ryan Florence (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:28 – Ryan Florence Introduction Instructure Canvas Network 03:04 – Ember 101 05:03 – Ember.js Workflow 047 JSJ Specialized vs Monolithic with [...]",
-                "duration": 2996
-              }, {
-                "uid": 5049101,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ063Burnout.mp3",
-                "explicit": false,
-                "episodeTitle": "063 JSJ Burnout",
-                "episodeSummary": "Panel Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:47 – Burnout Google: define burnout 04:57 – Pair Programming 06:19 – Burnout Guilt Thought-workers vs Laborers 10:15 – Positive Reinforcement 11:18 – Causes of Burnout Prolonged [...]",
-                "duration": 2923
-              }, {
-                "uid": 4089653,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ062Dojo.mp3",
-                "explicit": false,
-                "episodeTitle": "062 JSJ Dojo with Dylan Schiemann",
-                "episodeSummary": "Panel Dylan Schiemann (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) AJ O’Neal (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:57 – Dylan Schiemann Introduction The Dojo Toolkit CEO of SitePen 01:14 – Dojo TD Ameritrade The Wall Street Journal JPMorgan [...]",
-                "duration": 3685
-              }, {
-                "uid": 3550183,
-                "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ061FRP.mp3",
-                "explicit": false,
-                "episodeTitle": "061 JSJ Functional Reactive Programming with Juha Paananen and Joe Fiorini",
-                "episodeSummary": "Panel Juha Paananen (twitter github blog) Joe Fiorini (twitter github blog) AJ O’Neal (twitter github blog) Jamison Dance (twitter github blog) Joe Eames (twitter github blog) Merrick Christensen (twitter github) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:20 – Joe Fiorini Introduction Interaction Developer at Designing Interactive in Cleveland, [...]",
-                "duration": 2971
-              }
-            ]
-          }, {
-            "id": 8396,
-            "homeUrl": "http://shoptalkshow.com",
-            "feedUrl": "http://shoptalkshow.com/feed/podcast/",
-            "authors": "ShopTalk",
-            "subscriptionTitle": "ShopTalk",
-            "summary": "ShopTalk is a podcast about front end web design, development and UX. Each week Chris Coyier and Dave Rupert are joined by a special guest to talk shop and answer listener submitted questions.",
-            "albumArt": "shoptalk_album.jpg",
-            "episodes": [
-              {
-                "uid": 36537622,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/510/0/157058-106-with-nick-pettit.mp3",
-                "explicit": false,
-                "episodeTitle": "106: With Nick Pettit",
-                "episodeSummary": "This week we were joined by Nick Pettit, educator at Treehouse, an online learning platform. We talked about (roughly in order): News’n’Links’n’Drama: 17:25 Correction regarding Drupal and 1000 script/style files. 20:10 Github releases Atom, a hackable text editor Q &amp; A: 23:29 I’m curious about making the shift from HTML, CSS, jQuery, WordPress development to... <a href=\"http://shoptalkshow.com/episodes/106-nick-pettit/\" title=\"Read 106: With Nick Pettit\">Read more »</a>",
-                "duration": 4303
-              }, {
-                "uid": 36212854,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/508/0/154220-105-rapidfire-24.mp3",
-                "explicit": false,
-                "episodeTitle": "105: RAPIDFIRE 24",
-                "episodeSummary": "This week it’s another RAPIDFIRE! We take listener questions and try to answer them as best we can within a 3 minute time constraint. We talked about (roughly in order): Q &amp; A: 2:19 What’s the best way to release a tiny JQuery plugin? 6:14 My question is about Grunt and requireJS: if I concatenate... <a href=\"http://shoptalkshow.com/episodes/105-rapidfire-24/\" title=\"Read 105: RAPIDFIRE 24\">Read more »</a>",
-                "duration": 3609
-              }, {
-                "uid": 36057303,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/504/0/152437-104-with-leslie-jensen-inman.mp3",
-                "explicit": false,
-                "episodeTitle": "104: With Leslie Jensen-Inman",
-                "episodeSummary": "This week we were joined by Dr. Leslie Jensen-Inman, headmaster of the Unicorn Institute (aka Center Centre) in Chattanooga, TN. We talked about (roughly in order): 26:50 Firefox 26 now supporting audio decoding Q &amp; A: 29:20 Will Center Center have online classes? 30:34 Do you guys have any experience with the WordPress plug-in WP... <a href=\"http://shoptalkshow.com/episodes/104-leslie-jensen-inman/\" title=\"Read 104: With Leslie Jensen-Inman\">Read more »</a>",
-                "duration": 3666
-              }, {
-                "uid": 35986838,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/500/0/152062-103-with-louis-lazeris.mp3",
-                "explicit": false,
-                "episodeTitle": "103: With Louis Lazaris",
-                "episodeSummary": "This week we were joined by Louis Lazeris. Louis is the curator of the Web Tools Weekly email newsletters, and co-author of HTML5 &amp; CSS3 for the Real World. We talked about (roughly in order): News’n’Links’n’Drama: 8:54 w3schools: The Ugly, the Bad, and the Good Q &amp; A: 20:54 Is there any good solution on... <a href=\"http://shoptalkshow.com/episodes/103-louis-lazaris/\" title=\"Read 103: With Louis Lazaris\">Read more »</a>",
-                "duration": 3601
-              }, {
-                "uid": 35848240,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/499/0/150063-102-rapidfire-23.mp3",
-                "explicit": false,
-                "episodeTitle": "102: Rapidfire 23",
-                "episodeSummary": "This week it’s another RAPIDFIRE!!! We take listener questions and try to answer them as best we can within a 3 minute time constraint. We talked about (roughly in order): Q &amp; A: 3:07 HTML email is super fun to design for, so I’m a little surprised that you guys aren’t all about it, and... <a href=\"http://shoptalkshow.com/episodes/102-rapidfire-23/\" title=\"Read 102: Rapidfire 23\">Read more »</a>",
-                "duration": 3725
-              }, {
-                "uid": 35736650,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/496/0/148777-101-with-john-resig.mp3",
-                "explicit": false,
-                "episodeTitle": "#101: With John Resig",
-                "episodeSummary": "This week we were joined by John Resig. John is the Dean of Computer Science at Khan Academy and the creator of the jQuery JavaScript library. He’s also the author of the books Pro JavaScript Techniques and Secrets of the JavaScript Ninja. We talked about (roughly in order): Q &amp; A: 42:08 Is it worth... <a href=\"http://shoptalkshow.com/episodes/101-john-resig/\" title=\"Read #101: With John Resig\">Read more »</a>",
-                "duration": 4066
-              }, {
-                "uid": 35589999,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/492/0/146822-100-with-rachel-andrew.mp3",
-                "explicit": false,
-                "episodeTitle": "100: With Rachel Andrew",
-                "episodeSummary": "This week we were joined by Rachel Andrew, author and purveyor of Perch, a lightweight PHP content management system. We talked about (roughly in order): News’n’Links’n’Drama: 10:23 CSS Regions Considered Harmful 16:40 Squarespace Logo 21:06 Google Webfonts: The Spy Inside Q &amp; A: 26:55 One thing that’s not very well known is that Perch actually... <a href=\"http://shoptalkshow.com/episodes/100-rachel-andrew/\" title=\"Read 100: With Rachel Andrew\">Read more »</a>",
-                "duration": 3632
-              }, {
-                "uid": 35476590,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/489/0/145281-099-with-jonathan-mahoney.mp3",
-                "explicit": false,
-                "episodeTitle": "099: With Jonathan Mahoney",
-                "episodeSummary": "This week we were joined by Jonathan Mahoney, a UX Architect for a B2B enterprise company. We talked about (roughly in order): News’n’Links’n’Drama: 12:55 Myth Busting: CSS Animations vs. JavaScript 17:33 When to use target=”_blank”? 23:17 Google bought Nest Q &amp; A: 25:20 Should I convert my existing website to be responsive, or start over... <a href=\"http://shoptalkshow.com/episodes/099-jonathan-mahoney/\" title=\"Read 099: With Jonathan Mahoney\">Read more »</a>",
-                "duration": 3368
-              }, {
-                "uid": 35347845,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/486/0/143243-098-lyza-danger-gardner.mp3",
-                "explicit": false,
-                "episodeTitle": "098: With Lyza Danger Gardner",
-                "episodeSummary": "This week we were joined by Lyza Danger Gardner. We talked about (roughly in order): News’n’Links’n’Drama: 12:33 Web Standards Killed The HTML Star, and Is Web Design Dead? 21:40 Grunt is dead? What about Gulp? Q &amp; A: 27:04 I’m curious to know how we as a community are handling touch events on mobile devices... <a href=\"http://shoptalkshow.com/episodes/098-lyza-danger-gardner/\" title=\"Read 098: With Lyza Danger Gardner\">Read more »</a>",
-                "duration": 3782
-              }, {
-                "uid": 35161487,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/484/0/097_Mina_Markham.mp3",
-                "explicit": false,
-                "episodeTitle": "097: With Mina Markham",
-                "episodeSummary": "This week we were joined by Mina Markham, a Sass-lovin’ designer and developer from Dallas, Texas. She’s a Syracuse University alum, part-time freelancer, full-time Parago employee, and soon-to-be Girl Develop It teacher. We talked about (roughly in order): News’n’Links’n’Drama Myth.io: “CSS Level 4 kind of stuff” Q &amp; A 17:01 I’ve just started using Compass... <a href=\"http://shoptalkshow.com/episodes/097-mina-markham/\" title=\"Read 097: With Mina Markham\">Read more »</a>",
-                "duration": 3765
-              }, {
-                "uid": 34836747,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/482/0/136861-096-rapidfire-22.mp3",
-                "explicit": false,
-                "episodeTitle": "096: Rapidfire #22",
-                "episodeSummary": "This week is another RAPIDFIRE!!! We talked about (roughly in order): Q &amp; A: 2:02 Should I use “.mainNav” or “nav.main”? Do you see any issues with using either? 4:54 I’m looking to find a new job. How should I approach employers when I’m not proud of the sites I’ve been working on? 7:18 I... <a href=\"http://shoptalkshow.com/episodes/096-rapidfire-22/\" title=\"Read 096: Rapidfire #22\">Read more »</a>",
-                "duration": 3163
-              }, {
-                "uid": 34629014,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/478/0/136283-095-with-daniel-mall.mp3",
-                "explicit": false,
-                "episodeTitle": "095: With Daniel Mall",
-                "episodeSummary": "This week we were joined by super-designer Dan Mall. Dan currently runs Superfriend.ly, is a co-host of the Businessology podcast, and previously worked at Happy Cog and Big Spaceship. We talked about (roughly in order): News’n’Links’n’Drama: 17:10 CSSOff #hotdrama: Dan made a PSD that was too good. Q &amp; A: 33:02 In defense of AMPPS…... <a href=\"http://shoptalkshow.com/episodes/095-daniel-mall/\" title=\"Read 095: With Daniel Mall\">Read more »</a>",
-                "duration": 3732
-              }, {
-                "uid": 34390636,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/474/0/134654-094-with-emily-dunkle.mp3",
-                "explicit": false,
-                "episodeTitle": "094: With Emily Dunkle",
-                "episodeSummary": "This week we were joined by Emily Dunkle. Emily is a UI &amp; UX Designer from Massachusetts. She believes in semantic markup, design of all kinds, and a good old-fashioned legal pad. We talked about (roughly in order): Q &amp; A: 16:37 My company’s IT department has taken over our website. What can I do... <a href=\"http://shoptalkshow.com/episodes/094-emily-dunkle/\" title=\"Read 094: With Emily Dunkle\">Read more »</a>",
-                "duration": 3856
-              }, {
-                "uid": 33785749,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/472/0/132312-093-rapidfire-21.mp3",
-                "explicit": false,
-                "episodeTitle": "093: RAPIDFIRE #21",
-                "episodeSummary": "This week, it’s another RAPID FIRE!!! Chris and Dave take on listener questions, fast and furious. 2:27 Do you guys have any advice when the time comes to hand over a WordPress site? 5:57 What are your opinions about disabilities (hopefully about stuttering but not necessary) in the workplace? 9:06 How do I address responsiveness... <a href=\"http://shoptalkshow.com/episodes/093-rapidfire-21/\" title=\"Read 093: RAPIDFIRE #21\">Read more »</a>",
-                "duration": 3660
-              }, {
-                "uid": 33639033,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/464/0/131434-092-with-dudley-storey.mp3",
-                "explicit": false,
-                "episodeTitle": "092: With Dudley Storey",
-                "episodeSummary": "This week we were joined by Dudley Storey. Dudley is a teacher, craftsman, designer &amp; writer, and the author of Pro CSS3 Animation. News’n’Links’n’Drama: 7:00 Webkit hates src-N End Of Year Responsive Images Report 13:14 CSSOff 2013 17:20 Learn jQuery from Scratch (CSS-Tricks Class) Q &amp; A: 21:15 Is it worth taking the time to... <a href=\"http://shoptalkshow.com/episodes/092-with-dudley-storey/\" title=\"Read 092: With Dudley Storey\">Read more »</a>",
-                "duration": 3950
-              }, {
-                "uid": 33356609,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/468/0/129716-091-js-jabber-crossover.mp3",
-                "explicit": false,
-                "episodeTitle": "091: With Jamison Dance AND Merrick Christensen",
-                "episodeSummary": "This week we were joined by Merrick and Jamison from the Javascript Jabber podcast. They are both super awesome at javascript and very handsome. We talked about (roughly in order): News’n’Links’n’Drama: 10:42 Responsive Web Design: Relying Too Much On Screen Size by LukeW Rebuttal by Ethan Marcotte: RESPONSIVE DESIGN, SCREENS, AND SHEARING LAYERS PPK: Of... <a href=\"http://shoptalkshow.com/episodes/091-js-jabber/\" title=\"Read 091: With Jamison Dance AND Merrick Christensen\">Read more »</a>",
-                "duration": 3731
-              }, {
-                "uid": 33057072,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/462/0/127943-090-with-pamela-fox.mp3",
-                "explicit": false,
-                "episodeTitle": "090: With Pamela Fox",
-                "episodeSummary": "This week we were joined by Pamela Fox, a web developer and educator currently working at Khan Academy. We talked about (roughly in order): News’n’Links’n’Drama: 9:30 Big Snow Tiny Conf 10:30 Automating Workflow Slide Deck Q &amp; A: 14:54 I’m sold on GIT and have used it locally on my machine. How can I go... <a href=\"http://shoptalkshow.com/episodes/090-pamela-fox/\" title=\"Read 090: With Pamela Fox\">Read more »</a>",
-                "duration": 3875
-              }, {
-                "uid": 32836743,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/457/0/126438-089-with-karen-mcgrane.mp3",
-                "explicit": false,
-                "episodeTitle": "089: With Karen McGrane",
-                "episodeSummary": "This week we were joined by Karen McGrane. Karen is a mobile content strategist and has a fantastic book called Content Strategy for Mobile. We talked about (roughly in order): News’n’Links’n’Drama: 24:08 Front End Architechture Showdown CSS Cargo Cult 25:19 Does our Industry have a Drinking Problem? 29:34 Scroll Hijacking Q &amp; A: 34:56 Why... <a href=\"http://shoptalkshow.com/episodes/089-karen-mcgrane/\" title=\"Read 089: With Karen McGrane\">Read more »</a>",
-                "duration": 3992
-              }, {
-                "uid": 32553489,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/453/0/124664-088-with-scott-jehl.mp3",
-                "explicit": false,
-                "episodeTitle": "088: With Scott Jehl",
-                "episodeSummary": "This week we were joined by Scott Jehl, a progressive enhancer at Filament Group. We talked about (roughly in order): News’n’Links’n’Drama: 15:48 Godaddy aquired Media Temple Q &amp; A: 24:30 I want to use a ‘mobile first’ approach, but the client wants to see the desktop version first. How would you solve this little problem?... <a href=\"http://shoptalkshow.com/episodes/088-scott-jehl/\" title=\"Read 088: With Scott Jehl\">Read more »</a>",
-                "duration": 4323
-              }, {
-                "uid": 32348061,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/444/0/123327-087-with-nicholas-gallagher.mp3",
-                "explicit": false,
-                "episodeTitle": "087: With Nicolas Gallagher",
-                "episodeSummary": "This week we were joined by Nicolas Gallagher, CSS expert. We talked about (roughly in order): News’n’Links’n’Drama: 8:29 EFF gets involved in DRM Q &amp; A: 13:40 I’m a front end developer working in Rails these days. I want an automated way to produce styles guides. How do you produce guides for your clients? Have... <a href=\"http://shoptalkshow.com/episodes/087-nicolas-gallagher/\" title=\"Read 087: With Nicolas Gallagher\">Read more »</a>",
-                "duration": 3756
-              }, {
-                "uid": 32111032,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/439/0/120469-086-with-jenn-schiffer.mp3",
-                "explicit": false,
-                "episodeTitle": "086: With Jenn Schiffer",
-                "episodeSummary": "This week we were joined by Jenn Schiffer. Jenn works at sports-ball and knows Michael Jordan. She also makes websites! We talked about (roughly in order): Q &amp; A: 9:51 How can we go about getting back in touch with our inner creative coder? And how can we start introducing this back into our ‘bread... <a href=\"http://shoptalkshow.com/episodes/086-with-jenn-schiffer/\" title=\"Read 086: With Jenn Schiffer\">Read more »</a>",
-                "duration": 3595
-              }, {
-                "uid": 31892954,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/434/0/119092-085-with-kimberly-blessing.mp3",
-                "explicit": false,
-                "episodeTitle": "085: With Kimberly Blessing",
-                "episodeSummary": "This week we were joined by Kimberly Blessing. We talked about (roughly in order): News’n’Links’n’Drama: 6:17 CERN – The birth of the web The first web browser FORK THE LINE-MODE BROWSER Q &amp; A: 16:02 What are your opinions on the nonstandard mozmm units? See also : Blog post. 24:20 I was wondering if either... <a href=\"http://shoptalkshow.com/episodes/085-with-kimberly-blessing/\" title=\"Read 085: With Kimberly Blessing\">Read more »</a>",
-                "duration": 3343
-              }, {
-                "uid": 26416307,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/431/0/111080-084-rapidfire-20.mp3",
-                "explicit": false,
-                "episodeTitle": "084: RAPIDFIRE #20",
-                "episodeSummary": "It’s time for another RAPIDFIRE! No news, no drama, just lots of question and answer action. Q &amp; A: 0:51 How do you prefer ordering your queries within your stylesheet? Is mobile-first really the best strategy here? 8:27 Would either of you have any insights as to how to test, target, and develop for the... <a href=\"http://shoptalkshow.com/episodes/084-rapidfire-20/\" title=\"Read 084: RAPIDFIRE #20\">Read more »</a>",
-                "duration": 3505
-              }, {
-                "uid": 25647103,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/429/0/111077-083-with-flo-motlik.mp3",
-                "explicit": false,
-                "episodeTitle": "083: With Florian Motlik",
-                "episodeSummary": "This week we were joined by Florian Motlik. Flo is an awesome programmer an a co-founder of Codeship.io, a part of Codestars Boston. This episode is a deep dive into continuous deployment and automation. We talked about (roughly in order): Q &amp; A: 13:08 I would like to use Git for version control, and set... <a href=\"http://shoptalkshow.com/episodes/083-with-florian-motlik/\" title=\"Read 083: With Florian Motlik\">Read more »</a>",
-                "duration": 3873
-              }, {
-                "uid": 25086885,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/360/0/109751-082-with-jason-santa-maria.mp3",
-                "explicit": false,
-                "episodeTitle": "082: With Jason Santa Maria",
-                "episodeSummary": "This week we were joined by Jason Santa Maria, a designer currently in Brooklyn, New York. You might know Jason from his work on Typekit or more recently the writing collaboration tool Editorially. Or perhaps from past work like the WordPress logo and from working at renowned web studio Happy Cog. We talked about (roughly... <a href=\"http://shoptalkshow.com/episodes/082-with-jason-santa-maria/\" title=\"Read 082: With Jason Santa Maria\">Read more »</a>",
-                "duration": 3712
-              }, {
-                "uid": 25330262,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/357/0/109752-081-with-geri-coady.mp3",
-                "explicit": false,
-                "episodeTitle": "081: With Geri Coady",
-                "episodeSummary": "This week we were joined by Geri Coady, an illustrator, designer, and author from Newfoundland, Canada. We talked about (roughly in order): News’n’Links’n’Drama 17:51 WooThemes Price Change, also here 22:00 Chrome’s password saving drama Q &amp; A 29:02 Are there any particular hues and shades of colors that are particularly inaccessible or render unfaithfully? Also,... <a href=\"http://shoptalkshow.com/episodes/081-with-geri-coady/\" title=\"Read 081: With Geri Coady\">Read more »</a>",
-                "duration": 3609
-              }, {
-                "uid": 25330263,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/352/0/109753-080-rapidfire-19.mp3",
-                "explicit": false,
-                "episodeTitle": "080: RAPIDFIRE #19",
-                "episodeSummary": "It’s time for another RAPIDFIRE! We talk about (roughly in order): Q &amp; A 2:30 Which books would you recommend learning about CSS and /or UX design? 6:32 There is a lot of hype around the Hammer and Mixture static site generators right now. Can teams work on these together, or are they just made... <a href=\"http://shoptalkshow.com/episodes/080-rapidfire-18/\" title=\"Read 080: RAPIDFIRE #19\">Read more »</a>",
-                "duration": 3574
-              }, {
-                "uid": 25330264,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/355/0/109754-079-with-travis-miller.mp3",
-                "explicit": false,
-                "episodeTitle": "079: With Travis Miller",
-                "episodeSummary": "This week we were joined by Travis Miller, a full stack developer at SPARK. Chris and Dave met Travis at Front End Conf where he gave a talk about hip hop and the web. We talk about (roughly in order): News’n’Links’n’Drama: 9:24 Why You Shouldn’t Tell That Random Girl On The Street That She’s Hot... <a href=\"http://shoptalkshow.com/episodes/079-with-travis-miller/\" title=\"Read 079: With Travis Miller\">Read more »</a>",
-                "duration": 3771
-              }, {
-                "uid": 25330265,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/353/0/109755-078-with-rick-blalock.mp3",
-                "explicit": false,
-                "episodeTitle": "078: With Rick Blalock",
-                "episodeSummary": "This week we were joined by mobile architect Rick Blalock. Rick currently works at Appcelerator, a framework for building out native applications in Javascript. Rick also knows quite a bit about Joomla. We talked about (roughly in order): News’n’Links’n’Drama: 12:30 Why mobile apps are slow 21:17 Tweetbot Neue 22:42 Clear up EE drama: Brandon Kelley... <a href=\"http://shoptalkshow.com/episodes/078-with-rick-blalock/\" title=\"Read 078: With Rick Blalock\">Read more »</a>",
-                "duration": 3977
-              }, {
-                "uid": 25330266,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/351/0/109756-077-rapidfire-18.mp3",
-                "explicit": false,
-                "episodeTitle": "077: RAPIDFIRE #18",
-                "episodeSummary": "This week it’s another RAPIDFIRE! We talked about (roughly in order): Q &amp; A 2:23 I recently ran the W3C Markup Validation tool on one of my WordPress site. I was amazed to see how many errors came up… Do you have any suggestions for validating my markup? 9:19 Should I learn Haml or Emmet... <a href=\"http://shoptalkshow.com/episodes/077-rapidfire-18/\" title=\"Read 077: RAPIDFIRE #18\">Read more »</a>",
-                "duration": 4354
-              }, {
-                "uid": 25330267,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/347/0/109757-076-with-tim-sabat-and-alex-vazquez.mp3",
-                "explicit": false,
-                "episodeTitle": "076: With Tim Sabat and Alex Vazquez",
-                "episodeSummary": "This week we were joined by Tim Sabat and Alex Vazquez. Like Chris, Tim and Alex worked at Wufoo, then SurveyMonkey after the acquisition. Now all three of them are the founders of CodePen. We talk about (roughly in order): News’n’Links’n’Drama 13:02 Expression Engine Drama – “Competition Ethics &amp; Add-ons” 17:40 Firefox 23: Disable Javascript... <a href=\"http://shoptalkshow.com/episodes/076-with-tim-sabat-and-alex-vazquez/\" title=\"Read 076: With Tim Sabat and Alex Vazquez\">Read more »</a>",
-                "duration": 3981
-              }, {
-                "uid": 25330268,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/348/0/109758-075-with-tim-kadlec.mp3",
-                "explicit": false,
-                "episodeTitle": "075: With Tim Kadlec",
-                "episodeSummary": "This week we were joined by Tim Kadlec. Tim is a front end developer, blogger, book author, and started the web conference Breaking Development at his previous job. We talk about (roughly in order): News’n’Links’n’Drama 3:40 “Just Build Websites!” Soundbyte 5:30 Breaking Development Conf 9:30 Tim’s Drama: Science and responsive images 19:15 “The Sidebar In... <a href=\"http://shoptalkshow.com/episodes/075-with-tim-kadlec/\" title=\"Read 075: With Tim Kadlec\">Read more »</a>",
-                "duration": 3904
-              }, {
-                "uid": 25330269,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/345/0/109759-live-from-front-end-conf.mp3",
-                "explicit": false,
-                "episodeTitle": "Live from Front-End Conf",
-                "episodeSummary": "This episode of Shop Talk was filmed before a live studio audience. Thanks to Dan &amp; Cherrie Denney for inviting us down to Front-End Design Conference in St. Petersburg, Florida. Chris played the banjo a bit and Dave wore a Floridian shirt. It is a spectacular conference and a lot of fun was had. We... <a href=\"http://shoptalkshow.com/episodes/live-from-front-end-conf/\" title=\"Read Live from Front-End Conf\">Read more »</a>",
-                "duration": 1745
-              }, {
-                "uid": 25330270,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/342/0/109760-074-with-noah-stokes.mp3",
-                "explicit": false,
-                "episodeTitle": "074: With Noah Stokes",
-                "episodeSummary": "This week we were joined by Noah Stokes, founder and partner of Bold (a web design studio) as well as a designer and front end coder with the best of them. Noah is also a professional newscaster, blogger‘, and speaker. We talked about (roughly in order): News’n’Links’n’Drama: 9:57 PRISM 13:05 “Ughck. Images.” 17:47 More about... <a href=\"http://shoptalkshow.com/episodes/074-with-noah-stokes/\" title=\"Read 074: With Noah Stokes\">Read more »</a>",
-                "duration": 3810
-              }, {
-                "uid": 25330271,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/340/0/109761-073-with-val-head.mp3",
-                "explicit": false,
-                "episodeTitle": "073: With Val Head",
-                "episodeSummary": "This week we were joined by Val Head. Val is a designer and consultant. She co-founded Web Design Day and Refresh Pittsburgh, is the Managing Editor of CreativeJS.com, and just released the CSS Animations Pocket Guide on Five Simple Steps. We have some sponsor spots open! Get your thing in front of lots of smart,... <a href=\"http://shoptalkshow.com/episodes/073-with-val-head/\" title=\"Read 073: With Val Head\">Read more »</a>",
-                "duration": 3623
-              }, {
-                "uid": 25330272,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/338/0/109762-072-with-raquel-velez.mp3",
-                "explicit": false,
-                "episodeTitle": "072: With Raquel Velez",
-                "episodeSummary": "This week we were joined by Raquel Velez, an all around web and robot hacker focusing on Node.js at the moment at Storify. We talked about (roughly in order): News’n’Links’n’Drama: 5:30 Why is Node good for robots? Q &amp; A: 14:50 I was wondering if you could talk about what the ideal scenario is to... <a href=\"http://shoptalkshow.com/episodes/072-with-raquel-velez/\" title=\"Read 072: With Raquel Velez\">Read more »</a>",
-                "duration": 3752
-              }, {
-                "uid": 25330273,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/333/0/109763-071-rapidfire-17.mp3",
-                "explicit": false,
-                "episodeTitle": "071: RAPIDFIRE #17",
-                "episodeSummary": "This week we have a special RAPIDFIRE episode for you! We’re gonna answer as many of your questions as possible, as best as we can (in three minutes or less)! We talked about (roughly in order): Q &amp; A 2:50 I’m trying to think about mobile first. Is serving HTML content through JavaScript bad? Can... <a href=\"http://shoptalkshow.com/episodes/071-rapidfire-17/\" title=\"Read 071: RAPIDFIRE #17\">Read more »</a>",
-                "duration": 3507
-              }, {
-                "uid": 25330274,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/329/0/109764-070-with-hampton-catlin.mp3",
-                "explicit": false,
-                "episodeTitle": "070: With Hampton Catlin",
-                "episodeSummary": "This week we were joined by Hampton Catlin. Hampton is the inventor of Sass and Haml, the original creator of Wikipedia Mobile, and several successful iPhone applications including Dictionary! Hampton is currently building crazy new technologies to mobilize the web at Moovweb. We talked about (roughly in order): News’n’Links’n’Drama 19:20 Welcome, Recent Graduates by Mike... <a href=\"http://shoptalkshow.com/episodes/070-with-hampton-catlin/\" title=\"Read 070: With Hampton Catlin\">Read more »</a>",
-                "duration": 3712
-              }, {
-                "uid": 25330275,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/327/0/109765-069-with-mike-taylor.mp3",
-                "explicit": false,
-                "episodeTitle": "069: With Mike Taylor",
-                "episodeSummary": "This week we were joined by Mike Taylor, a whitespace strategist from Opera. We talked about (roughly in order): News’n’Links’n’Drama: 6:37 The W3C added EME Spec (aka DRM for video) Q &amp; A 19:24 Percentages seem to render different in Opera, what’s the deal? Should I use media queries instead? 23:42 Wouldn’t it be nice... <a href=\"http://shoptalkshow.com/episodes/069-with-mike-taylor/\" title=\"Read 069: With Mike Taylor\">Read more »</a>",
-                "duration": 3543
-              }, {
-                "uid": 25330276,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/323/0/109766-068-with-ben-schwarz.mp3",
-                "explicit": false,
-                "episodeTitle": "068: With Ben Schwarz",
-                "episodeSummary": "This week we were joined by Ben Schwarz, a full stack web hacker, tool maker, and tip sharer from Melbourne, Australia. We talked about (roughly in order): News’n’Links’n’Drama: 4:00 Ben’s latest project Gallery CSS 11:30 Global Accessibility Awareness Day 14:50 National Fart JavaScript Awareness Day Q &amp; A: 16:30 When does Ben use Grunt JS... <a href=\"http://shoptalkshow.com/episodes/068-with-ben-schwarz/\" title=\"Read 068: With Ben Schwarz\">Read more »</a>",
-                "duration": 4149
-              }, {
-                "uid": 25330277,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/317/0/109767-067-with-pam-selle.mp3",
-                "explicit": false,
-                "episodeTitle": "067: With Pam Selle",
-                "episodeSummary": "This week we were joined by Pam Selle, a full stack developer in many languages and all around hacker from Philly. Pam works at AxisPhilly, teaches for GirlDevelopIt, and blogs at The Webivore. We talk about (roughly in order): News’n’Links’n’Drama 1:50 Introducing Pam Selle 2:45 Pam’s day job: Axis Philly 4:00 Girl Develop It 8:37... <a href=\"http://shoptalkshow.com/episodes/067-with-pam-selle/\" title=\"Read 067: With Pam Selle\">Read more »</a>",
-                "duration": 3898
-              }, {
-                "uid": 25330278,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/300/0/109768-066-rapidfire-16.mp3",
-                "explicit": false,
-                "episodeTitle": "066: RAPIDFIRE #16",
-                "episodeSummary": "Another classic RAPIDFIRE! No guests, no drama, no news, just all redhot question on answer action. What do you use to concatenate JavaScript files before production on Windows? Aren’t thinks like history.pushState just new JavaScript things, not HTML5? Can Sublime Text help with re-usable components? How do you diagram these fancy one-page style apps? How... <a href=\"http://shoptalkshow.com/episodes/066-rapidfire-16/\" title=\"Read 066: RAPIDFIRE #16\">Read more »</a>",
-                "duration": 4649
-              }, {
-                "uid": 25330279,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/313/0/109769-065-with-ben-frain.mp3",
-                "explicit": false,
-                "episodeTitle": "065: With Ben Frain",
-                "episodeSummary": "This week we were joined by Ben Frain, a web developer, technology columnist, and book author from Cheshire, UK. Ben has written for major publications like MacUser, .net, and The Guardian and is also a very famous television actor. We talked about (roughly in order): News’n'Links’n'Drama Seven Rules nonsense. Aral Balkan’s Slide &amp; Stage The... <a href=\"http://shoptalkshow.com/episodes/056-with-ben-frain/\" title=\"Read 065: With Ben Frain\">Read more »</a>",
-                "duration": 3898
-              }, {
-                "uid": 25330280,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/290/0/109770-064-rapidfire-15.mp3",
-                "explicit": false,
-                "episodeTitle": "064: RAPIDFIRE #15",
-                "episodeSummary": "Another RAPIDFIRE episode where Dave and Chris answer as many questions as possible. No guests, no news, no drama, just all question on answer action. This time they set a timer so no answer may exceed 3 minutes! 2:43 Should you learn jQuery or JavaScript first? 5:30 How come two scripts seem to work fine... <a href=\"http://shoptalkshow.com/episodes/064-rapidfire-15/\" title=\"Read 064: RAPIDFIRE #15\">Read more »</a>",
-                "duration": 3367
-              }, {
-                "uid": 25330281,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/307/0/109771-063-with-rachel-nabors.mp3",
-                "explicit": false,
-                "episodeTitle": "063: With Rachel Nabors",
-                "episodeSummary": "This week we were joined by Rachel Nabors, a cartoonist, illustrator, designer, and front end developer out of Raleigh, North Carolina. Rachel is highly interested in animations and sound in CSS and JavaScript. We talk about (roughly in order): News’n'Links’n'Drama 11:34 – hgroup removed from HTML 5.1 16:25 – Copy vs. Design (Robert Williams, Tim... <a href=\"http://shoptalkshow.com/episodes/with-rachel-nabors/\" title=\"Read 063: With Rachel Nabors\">Read more »</a>",
-                "duration": 4284
-              }, {
-                "uid": 25330282,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/298/0/109772-062-with-brandon-mathis.mp3",
-                "explicit": false,
-                "episodeTitle": "062: With Brandon Mathis",
-                "episodeSummary": "This week we were joined by Brandon Mathis, a web worker out of Birmingham, Alabama working for MongoHQ. Brandon is on the Compass team and is the creator of the static site generator Octopress. We talk about (roughly in order): News’n'Links (9:41) – Getting Started with Octopress Q &amp; A (26:32) – Regenerating sprites with... <a href=\"http://shoptalkshow.com/episodes/062-with-brandon-mathis/\" title=\"Read 062: With Brandon Mathis\">Read more »</a>",
-                "duration": 3805
-              }, {
-                "uid": 25330283,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/292/0/109773-061-with-alex-sexton.mp3",
-                "explicit": false,
-                "episodeTitle": "061: With Alex Sexton",
-                "episodeSummary": "This week we were joined by Alex Sexton, a JavaScript developer for BazaarVoice, ex-yayQuery star, Modernizr team member, YepNope inventor, TXJS organizer, and essentially the world’s best loved ginger. We talked about (roughly in order): New’n'Links’n'Drama Donglegate: Venture Beat, Hacker News, Amanda Blum, Estelle Weyl Are UX and Design different? Dan Eden, Mark Otto Done... <a href=\"http://shoptalkshow.com/episodes/061-with-alex-sexton/\" title=\"Read 061: With Alex Sexton\">Read more »</a>",
-                "duration": 3923
-              }, {
-                "uid": 25330284,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/288/0/109774-060-with-samantha-warren.mp3",
-                "explicit": false,
-                "episodeTitle": "060: With Samantha Warren",
-                "episodeSummary": "This week we were joined by Samantha Warren, a designer and recent San Fransico-ite. She moved from Washington D.C. to work for Twitter. Samantha is known for her love of all things typography and design and speaks at conferences around the world about these things. Most recently, about Style Tiles, a concept for showing design... <a href=\"http://shoptalkshow.com/episodes/060-with-samantha-warren/\" title=\"Read 060: With Samantha Warren\">Read more »</a>",
-                "duration": 3987
-              }, {
-                "uid": 25330285,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/281/0/109775-059-with-lara-swanson.mp3",
-                "explicit": false,
-                "episodeTitle": "059: With Lara Swanson",
-                "episodeSummary": "This week we were joined by Lara Swanson, formerly UX manager at Dyn and now a manager of mobile web at Etsy. Lara has long been a champion of web performance, UX, and being a good front end developer. We talk about (roughly in order): News’n'Links’n'Drama LayerVault vs. DesignModo “Pinkifying the recruiting process” FRED Client-Hints... <a href=\"http://shoptalkshow.com/episodes/059-with-lara-swanson/\" title=\"Read 059: With Lara Swanson\">Read more »</a>",
-                "duration": 3983
-              }, {
-                "uid": 25330286,
-                "mediaUrl": "http://shoptalkshow.com/podpress_trac/feed/278/0/109776-058-with-derek-featherstone.mp3",
-                "explicit": false,
-                "episodeTitle": "058: With Derek Featherstone",
-                "episodeSummary": "This week we were joined by Derek Featherstone, an accessibility specialist and leader of Simply Accessible, a consulting firm in Ottawa, Canada. The full show transcript is available here. We talk about (roughly in order): News’n'Links’n'Drama ARIA tree roles, not so simple Nav in lists discussion again Q &amp; A Does display: table; have an... <a href=\"http://shoptalkshow.com/episodes/058-with-derek-featherstone/\" title=\"Read 058: With Derek Featherstone\">Read more »</a>",
-                "duration": 4035
-              }
-            ]
-          }, {
-            "id": 7591,
-            "homeUrl": "http://nitch.cc/podcast",
-            "feedUrl": "http://nitch.cc/itunes.rss",
-            "authors": "Nitch",
-            "subscriptionTitle": "The Nitch Podcast",
-            "summary": "A weekly podcast about building apps that run everywhere using open web standards like HTML, CSS, JavaScript, REST, and JSON. Hosted by Jonathan Stark and Kelli Shaver.",
-            "albumArt": "nitch.png",
-            "episodes": [
-              {
-                "uid": 36418684,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_98_Pee_Rink.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 98: Pee Rink",
-                "episodeSummary": "Jonathan and Kelli talk about first impressions of Google Glass, DIY SaaS integration with Zapier, and zoning out to the sounds of Github.",
-                "duration": 4028
-              }, {
-                "uid": 36200351,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_97_Dogs_With_No_Noses.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 97: Dogs With No Noses",
-                "episodeSummary": "Jonathan and Kelli talk about recent announcements from Facebook, Nokia, Mozilla, and Samsung - and how they affect app developers.",
-                "duration": 2349
-              }, {
-                "uid": 36041240,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_96_You_Cant_Tuna_Fish_To_Get_To_The_Other_Side.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 96: You Can’t Tuna Fish To Get To The Other Side",
-                "episodeSummary": "Jonathan and Kelli talk about the shocking demand for smart headphones and what designers and developers can do to start building experiences for the coming zombie apocalypse of screenless devices.",
-                "duration": 4188
-              }, {
-                "uid": 35885552,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_95_Banana_Piano.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 95: Banana Piano",
-                "episodeSummary": "Jonathan and Kelli talk about the relative merits of CSS grid systems and JavaScript libraries.",
-                "duration": 2776
-              }, {
-                "uid": 35751804,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_94_Function_Frog.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 94: Function Frog",
-                "episodeSummary": "Jonathan and Kelli talk about a slew of geeky books we've read lately: security, astronauts, innovation, cyberwar, and more. Think of it as recommended reading for nerds.",
-                "duration": 3422
-              }, {
-                "uid": 35595476,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_93_Lightsaber_Customer_Service.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 93: Lightsaber Customer Service",
-                "episodeSummary": "Jonathan and Kelli talk about Kelli's new Raspberry Pi: what to do with it, how to program it, and what she loves about it.",
-                "duration": 4014
-              }, {
-                "uid": 35469059,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_92_Cattering_Ram.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 92: Cattering Ram",
-                "episodeSummary": "Jonathan and Kelli talk about a few of our favorite APIs: Stripe, Dropbox, Github, Twilio, and not Facebook.",
-                "duration": 3342
-              }, {
-                "uid": 35360591,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_91_Papil_and_Pencer.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 91: Papil and Pencer",
-                "episodeSummary": "Jonathan and Kelli talk about the tools we use to get our jobs done on a daily basis. Command line utilities, browser plugins, text editors, project management, and more.",
-                "duration": 6322
-              }, {
-                "uid": 35271233,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_90_Weve_Got_Gas.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 90: We’ve Got Gas",
-                "episodeSummary": "Jonathan and Kelli talk about “hacking” our Hue wireless lights.",
-                "duration": 3729
-              }, {
-                "uid": 35162928,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_89_Aspirational_Laundry.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 89: Aspirational Laundry",
-                "episodeSummary": "Jonathan and Kelli talk about the pros, cons, and programming implications of the top ten gadgets we received in 2013.",
-                "duration": 6504
-              }, {
-                "uid": 35068258,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_88_Old_Waffles.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 88: Old Waffles",
-                "episodeSummary": "J-Bot and K-Bot revisit highlights from the previous year and beyond.",
-                "duration": 3219
-              }, {
-                "uid": 34905028,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_87_Sleep_Hockeying.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 87: Sleep Hockeying",
-                "episodeSummary": "Jonathan and Kelli talk about the Twitter redesign, improvements to mobile browsers, math bugs in JavaScript, and more.",
-                "duration": 3025
-              }, {
-                "uid": 34742271,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_86_Eleventy_One.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 86: Eleventy One",
-                "episodeSummary": "Jonathan and Kelli talk about cross-platform consistency: should your app conform to platform conventions or maintain a consistent look and feel everywhere?",
-                "duration": 3786
-              }, {
-                "uid": 34482598,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_85_Earlids.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 85: Earlids",
-                "episodeSummary": "Jonathan and Kelli talk about notification overload: what it is, how to deal with it, and where we might be headed.",
-                "duration": 3693
-              }, {
-                "uid": 34165314,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_84_Pizza_Car.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 84: Pizza Car",
-                "episodeSummary": "Jonathan and Kelli discuss the highlights of “APIs: A Strategy Guide” by Daniel Jacobson.",
-                "duration": 3710
-              }, {
-                "uid": 33775945,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_83_Dark_Middle.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 83: Dark Middle",
-                "episodeSummary": "Jonathan and Kelli talk about Feathers, a minimalist CSS reset and boilerplate gem created by our very own Kelli Shaver.",
-                "duration": 2780
-              }, {
-                "uid": 33480524,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_82_Pink_With_a_Hint_of_Orange.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 82: Pink With a Hint of Orange",
-                "episodeSummary": "Jonathan and Kelli talk about Pattern Lab, a tool for building atomic design systems created by Brad Frost and Dave Olsen.",
-                "duration": 1776
-              }, {
-                "uid": 33211704,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_81_Responsive_Picnic_Tables.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 81: Responsive Picnic Tables",
-                "episodeSummary": "Jonathan and Kelli rant about dealing with HTML tables in responsive web design.",
-                "duration": 3567
-              }, {
-                "uid": 32913183,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_80_Even_More_Betterer.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 80: Even More Betterer",
-                "episodeSummary": "Jonathan and Kelli talk about Ruby and Rails: learning resources, application considerations, and Kelli’s big win!",
-                "duration": 1639
-              }, {
-                "uid": 32650343,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_79_Oreo_Island.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 79: Oreo Island",
-                "episodeSummary": "Jonathan and Kelli discuss a bunch of projects that they recently launched.",
-                "duration": 2828
-              }, {
-                "uid": 32408374,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_78_Reedonkulous.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 78: Reedonkulous",
-                "episodeSummary": "Jonathan and Kelli give a brief intro to Git, how you can use it to replace FTP in your workflow, and why you probably should.",
-                "duration": 1075
-              }, {
-                "uid": 31920875,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_77_Accidental_Interneting.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 77: Accidental Interneting",
-                "episodeSummary": "Jonathan and Kelli chat about the benefits of accessibility, availability, and progressive enhancement in cross-platform web projects.",
-                "duration": 2640
-              }, {
-                "uid": 31746003,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_76_Tickle_Class.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 76: Tickle Class",
-                "episodeSummary": "Jonathan and Kelli discuss perception vs reality in the context of application performance. In particular, the importance of instantaneous feedback, a simple way to remove the pesky 300ms delay in webapps on touch devices, and the real reason why jank is a bad thing.",
-                "duration": 2272
-              }, {
-                "uid": 31496700,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_75_Shes_Coming_Unglued.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 75: She’s Coming Unglued",
-                "episodeSummary": "Jonathan and Kelli talk about Google’s two-factor authentication, smartwatch use cases, and a possible strategy behind Apple’s decision to release two new iPhones at the same time.",
-                "duration": 2326
-              }, {
-                "uid": 31210186,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_74_Psycho_Like_Me.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 74: Psycho Like Me",
-                "episodeSummary": "Jonathan and Kelli talk about how the iPhone 5c announcement illustrates that future-friendly thinking is more important than ever.",
-                "duration": 1677
-              }, {
-                "uid": 30983261,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_73_Tiny_Tornado.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 73: Tiny Tornado",
-                "episodeSummary": "Jonathan and Kelli talk about SmartWatches: The Wimm One, MetaWatch, Pebble, and more.",
-                "duration": 2188
-              }, {
-                "uid": 27869901,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_72_Code_Brown.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 72: Code Brown",
-                "episodeSummary": "Jonathan and Kelli talk reach into the topic grab bag and pull out programmable lightbulbs, embracing constraints, prototyping in PHP, benchmarking CSS, and more.",
-                "duration": 3882
-              }, {
-                "uid": 25019028,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_71_For_the_Meeple_By_the_Meeple.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 71: For the Meeple, By the Meeple",
-                "episodeSummary": "Jonathan and Kelli talk about what happened during Kelli's 48 hour weekend hackathon, including first impressions of RedHat's OpenShift cloud platform, pub/sub in Ruby with Faye, and oh, so much more.",
-                "duration": 3131
-              }, {
-                "uid": 19249230,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_70_It_Cant_Be_Worse_Than_Calgary.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 70: It Can't Be Worse Than Calgary",
-                "episodeSummary": "Jonathan and Kelli talk about timezone bugs on Amazon S3, problems with ruby on new EC2's chipset architecture, and news about RailsForum, Pandacodium, Spoken, Inside the Brackets, and a lot more.",
-                "duration": 3512
-              }, {
-                "uid": 16784017,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_69_Thats_A_Plus.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 69: That's A Plus",
-                "episodeSummary": "Jonathan and Kelli talk about real live project work on apps that run cross browser, cross platform, and beyond.",
-                "duration": 3078
-              }, {
-                "uid": 16784016,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_68_Fancy_Class.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 68: Fancy Class",
-                "episodeSummary": "Jonathan and Kelli walk through a process for modern web development using responsive design, CSS3, and copious amounts of progressive enhancement.",
-                "duration": 2899
-              }, {
-                "uid": 9408154,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_67_Django_Curious.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 67: Django Curious",
-                "episodeSummary": "Kelli helps Jonathan finally - FINALLY! - make the switch from PHP to Rails.",
-                "duration": 2503
-              }, {
-                "uid": 8776590,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_66_I_Blame_My_Shorts.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 66: I Blame My Shorts",
-                "episodeSummary": "Jonathan and Kelli talk about function hoisting in Firefox, a fun new side project, and collapsing space with smartphone cameras.",
-                "duration": 2394
-              }, {
-                "uid": 8023287,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_65_Bumpin_Colons.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 65: Bumpin’ Colons",
-                "episodeSummary": "Jonathan and Kelli continue with the fourth and final installment of their screencast on how to build a REST API with Ruby on Rails.",
-                "duration": 3700
-              }, {
-                "uid": 7215332,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_64_Cat_Number_One.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 64: Cat Number One",
-                "episodeSummary": "Jonathan and Kelli get very superstitious about Rails 4, JSON endpoints, responsive web design, and more.",
-                "duration": 2158
-              }, {
-                "uid": 6612701,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_63_Disco_Mode.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 63: Disco Mode",
-                "episodeSummary": "Jonathan and Kelli talk about responsive design, progressive enhancement, and development tools in the context of a big huge site redesign.",
-                "duration": 2565
-              }, {
-                "uid": 6457165,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_62_Love_Me_Some_Curlies.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 62: Love Me Some Curlies",
-                "episodeSummary": "Jonathan and Kelli continue with part 3 of their screencast on how to build a REST API with Ruby on Rails. Please visit <a href=\"http://nitch.cc\">http://nitch.cc</a> and look for Episode 62 if you'd like to view the video.",
-                "duration": 3011
-              }, {
-                "uid": 5563788,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_61_Expecting_Ernestina.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 61: Expecting Ernestina",
-                "episodeSummary": "Jonathan and Kelli continue their screencast on how to build a REST API with Ruby on Rails. Please visit <a href=\"http://nitch.cc\">http://nitch.cc</a> and look for Episode 61 if you'd like to view the video.",
-                "duration": 3949
-              }, {
-                "uid": 4347039,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_60_Numerosity.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 60: Numerosity",
-                "episodeSummary": "Kelli builds a rest api with ruby on rails, Jonathan asks stupid questions while she does it, and we post video of the whole shebang for you to enjoy in your copious free time.",
-                "duration": 3949
-              }, {
-                "uid": 2774964,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_59_Moonburn.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 59: Moonburn",
-                "episodeSummary": "Jonathan and Kelli talk about the WeMo Switch, blink(1) USB, hue light bulbs, and the APIs that tie them all together.",
-                "duration": 3026
-              }, {
-                "uid": 2686457,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_58_Fifty_Shades_of_Black.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 58: Fifty Shades of Black",
-                "episodeSummary": "Jonathan and Kelli talk about the upcoming screencast episode, performance problems with KnockoutJS, and the massive implications of Google's recent announcements at the IO conference.",
-                "duration": 4163
-              }, {
-                "uid": 2595335,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_57_Flossing_With_Rails.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 57: Flossing With Rails",
-                "episodeSummary": "Jonathan and Kelli talk about building - and more importantly, testing - REST APIs with Rails and RSpec.",
-                "duration": 1925
-              }, {
-                "uid": 2509212,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_56_Eighteen_Hours_Since_Last_Twisted_Ankle.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 56: Eighteen Hours Since Last Twisted Ankle",
-                "episodeSummary": "Jonathan and Kelli talk about how to quote a project for a client who needs an app that can run everywhere.",
-                "duration": 1996
-              }, {
-                "uid": 2427362,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_55_Nerds_in_Grass_Skirts.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 55: Nerds in Grass Skirts",
-                "episodeSummary": "Jonathan and Kelli talk about experimentation with the Lua programming language and the possible implications on cross-platform application development.",
-                "duration": 2195
-              }, {
-                "uid": 2372813,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_54_The_Royal_You.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 54: The Royal You",
-                "episodeSummary": "Jonathan and Kelli talk about jQuery vs. Zepto... and other pointless debates.",
-                "duration": 2010
-              }, {
-                "uid": 2343931,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_53_Fluffdates.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 53: Fluffdates",
-                "episodeSummary": "Jonathan and Kelli sit back and say \"I told you so\" for 30 minutes as they talk about Glassware, the Mirror API, and improved methods for the distribution of cat photos with Google Glass.",
-                "duration": 2010
-              }, {
-                "uid": 2317963,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_52_Punching_Kittens_with_Ethan_Marcotte.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 52: Punching Kittens with Ethan Marcotte",
-                "episodeSummary": "Jonathan and Kelli welcome special guest Ethan Marcotte to discuss some of the non-technical challenges of Responsive Web Design: unresponsive ad units, browsing the web on game consoles, getting client sign-off without Photoshop comps, and much more.",
-                "duration": 2596
-              }, {
-                "uid": 2288997,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_51_BBQ_Chicken_Disease.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 51: BBQ Chicken Disease",
-                "episodeSummary": "Jonathan and Kelli talk about Amazon Web Services - EC2, RDS, CloudWatch, and our new personal favorite, Simple Notification Service.",
-                "duration": 2326
-              }, {
-                "uid": 2265490,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_50_Up_Since_72.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 50: Up Since '72",
-                "episodeSummary": "Jonathan and Kelli talk about drag and drop on touchscreen devices and opting out of responsive web design.",
-                "duration": 1690
-              }, {
-                "uid": 2239308,
-                "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_49_Bathroom_Warming_Party.mp3",
-                "explicit": false,
-                "episodeTitle": "Episode 49: Bathroom Warming Party",
-                "episodeSummary": "Jonathan and Kelli talk about maintaining context in small screen apps, reconsidering jQuery for mobile projects, and preparing your content for the zombie apocalypse of smartwatches.",
-                "duration": 4081
               }
             ]
           }, {
