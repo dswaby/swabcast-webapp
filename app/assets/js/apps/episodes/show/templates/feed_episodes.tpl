@@ -2,7 +2,7 @@
 <div id="feed-head" class="row">
     <div id="color-wrapper" class="feed-head">
         <div class="large-6 small-12 columns">
-            <img src=./assets/img/<%= albumArt %> alt="" class="library">
+            <img src=./assets/img/<%= albumArt %> alt="" class="library-image">
             <a href="<%= feedUrl %>"><h2 style="color:#fff"><%= subscriptionTitle %></h2></a>
         </div>
         <div class="large-6 small-12 columns">

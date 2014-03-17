@@ -4215,11 +4215,12 @@ table tfoot tr td {
 }
 
 /* line 56, ../scss/app.scss */
-.library {
+.library-image {
   max-width: 275px;
+  padding: 5px;
 }
 
-/* line 60, ../scss/app.scss */
+/* line 61, ../scss/app.scss */
 .icon-closure {
   font-size: 30px;
   margin-right: 5px;
@@ -4234,7 +4235,7 @@ table tfoot tr td {
   font-style: normal;
 }
 
-/* line 100, ../scss/app.scss */
+/* line 101, ../scss/app.scss */
 .fi-alert:before,
 .fi-star:before,
 .fi-arrow-up:before,
@@ -4271,134 +4272,134 @@ table tfoot tr td {
   text-decoration: inherit;
 }
 
-/* line 111, ../scss/app.scss */
+/* line 112, ../scss/app.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 112, ../scss/app.scss */
+/* line 113, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 113, ../scss/app.scss */
+/* line 114, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 114, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 115, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 116, ../scss/app.scss */
+/* line 117, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 117, ../scss/app.scss */
+/* line 118, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 118, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 119, ../scss/app.scss */
+/* line 120, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 120, ../scss/app.scss */
+/* line 121, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 121, ../scss/app.scss */
+/* line 122, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 122, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 123, ../scss/app.scss */
+/* line 124, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 124, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 125, ../scss/app.scss */
+/* line 126, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 126, ../scss/app.scss */
+/* line 127, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 127, ../scss/app.scss */
+/* line 128, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 128, ../scss/app.scss */
+/* line 129, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 129, ../scss/app.scss */
+/* line 130, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 130, ../scss/app.scss */
+/* line 131, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 131, ../scss/app.scss */
+/* line 132, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 132, ../scss/app.scss */
+/* line 133, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 133, ../scss/app.scss */
+/* line 134, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 134, ../scss/app.scss */
+/* line 135, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 138, ../scss/app.scss */
+/* line 139, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
   table-border-color: #ddd;
 }
 
-/* line 146, ../scss/app.scss */
+/* line 147, ../scss/app.scss */
 #player {
   position: fixed;
   height: 75px;
@@ -4412,12 +4413,12 @@ table tfoot tr td {
   cursor: default;
 }
 
-/* line 161, ../scss/app.scss */
+/* line 162, ../scss/app.scss */
 .player-preview {
   margin-left: 80px;
 }
 
-/* line 177, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 #player-art {
   background-color: transparent;
   display: block;
@@ -4428,24 +4429,24 @@ table tfoot tr td {
   height: 75px;
 }
 
-/* line 190, ../scss/app.scss */
+/* line 191, ../scss/app.scss */
 #controls-wrapper {
   height: 60px;
   position: fixed;
   bottom: 0;
 }
 
-/* line 196, ../scss/app.scss */
+/* line 197, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 201, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 204, ../scss/app.scss */
+/* line 205, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;

@@ -498,14 +498,13 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "duration": 4035
         ]
       ,
-        "id": 199,
-        "home": "http://javascriptjabber.com",
-        "url": "http://feeds.feedburner.com/javascriptjabber",
-        "author": "Charles Max Wood, AJ O'Neal, Jamison Dance, Joe Eames, Tim Caswell, Merrick Christensen",
-        "subscriptionTitle": "Javascript Jabber",
-        "summary": "A technical discussion of JavaScript related topics. Things like Node.js, Web Frameworks, JSON, CoffeeScript, Event and Object models and much more.",
-        "imageURL": "jsj.png"
-
+        "id": 199
+        "home": "http://javascriptjabber.com"
+        "url": "http://feeds.feedburner.com/javascriptjabber"
+        "author": "Charles Max Wood, AJ O'Neal, Jamison Dance, Joe Eames, Tim Caswell, Merrick Christensen"
+        "subscriptionTitle": "Javascript Jabber"
+        "summary": "A technical discussion of JavaScript related topics. Things like Node.js, Web Frameworks, JSON, CoffeeScript, Event and Object models and much more."
+        "albumArt": "jsj.png"
         "episodes": [
           "uid": 36568194
           "mediaUrl": "http://traffic.libsyn.com/jsjabber/JSJ100.mp3"
@@ -962,437 +961,451 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "uid": 36622962
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_99_Total_Dad_Plan.mp3"
           "explicit": false
-          "episodeTitle": "Episode 99: Total Dad Plan",
-          "episodeSummary": "Jonathan and Kelli talk about preaching to the choir(.io), web apps for watches, and a second look at smart glasses.",
-          "publishedAt": 1394780656,
-          "size": 64172851,
+          "episodeTitle": "Episode 99: Total Dad Plan"
+          "episodeSummary": "Jonathan and Kelli talk about preaching to the choir(.io), web apps for watches, and a second look at smart glasses."
+          "publishedAt": 1394780656
+          "size": 64172851
           "duration": 4211
-        ,
+         ,
           "uid": 36418684
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_98_Pee_Rink.mp3"
           "explicit": false
-          "episodeTitle": "Episode 98: Pee Rink",
-          "episodeSummary": "Jonathan and Kelli talk about first impressions of Google Glass, DIY SaaS integration with Zapier, and zoning out to the sounds of Github.",
-          "publishedAt": 1394181739,
-          "size": 64172851,
+          "episodeTitle": "Episode 98: Pee Rink"
+          "episodeSummary": "Jonathan and Kelli talk about first impressions of Google Glass, DIY SaaS integration with Zapier, and zoning out to the sounds of Github."
+          "publishedAt": 1394181739
+          "size": 64172851
           "duration": 4028
-        ,
+         ,
           "uid": 36200351
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_97_Dogs_With_No_Noses.mp3"
           "explicit": false
-          "episodeTitle": "Episode 97: Dogs With No Noses",
-          "episodeSummary": "Jonathan and Kelli talk about recent announcements from Facebook, Nokia, Mozilla, and Samsung - and how they affect app developers.",
-          "publishedAt": 1393592873,
-          "size": 64172851,
+          "episodeTitle": "Episode 97: Dogs With No Noses"
+          "episodeSummary": "Jonathan and Kelli talk about recent announcements from Facebook, Nokia, Mozilla, and Samsung - and how they affect app developers."
+          "publishedAt": 1393592873
+          "size": 64172851
           "duration": 2349
-        ,
+         ,
           "uid": 36041240
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_96_You_Cant_Tuna_Fish_To_Get_To_The_Other_Side.mp3"
           "explicit": false
-          "episodeTitle": "Episode 96: You Can’t Tuna Fish To Get To The Other Side",
-          "episodeSummary": "Jonathan and Kelli talk about the shocking demand for smart headphones and what designers and developers can do to start building experiences for the coming zombie apocalypse of screenless devices.",
-          "publishedAt": 1392986431,
-          "size": 64172851,
+          "episodeTitle": "Episode 96: You Can’t Tuna Fish To Get To The Other Side"
+          "episodeSummary": "Jonathan and Kelli talk about the shocking demand for smart headphones and what designers and developers can do to start building experiences for the coming zombie apocalypse of screenless devices."
+          "publishedAt": 1392986431
+          "size": 64172851
           "duration": 4188
-        ,
+         ,
           "uid": 35885552
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_95_Banana_Piano.mp3"
           "explicit": false
-          "episodeTitle": "Episode 95: Banana Piano",
-          "episodeSummary": "Jonathan and Kelli talk about the relative merits of CSS grid systems and JavaScript libraries.",
-          "publishedAt": 1392386400,
-          "size": 64172851,
+          "episodeTitle": "Episode 95: Banana Piano"
+          "episodeSummary": "Jonathan and Kelli talk about the relative merits of CSS grid systems and JavaScript libraries."
+          "publishedAt": 1392386400
+          "size": 64172851
           "duration": 2776
-        ,
+         ,
           "uid": 35751804
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_94_Function_Frog.mp3"
           "explicit": false
-          "episodeTitle": "Episode 94: Function Frog",
-          "episodeSummary": "Jonathan and Kelli talk about a slew of geeky books we've read lately: security, astronauts, innovation, cyberwar, and more. Think of it as recommended reading for nerds.",
-          "publishedAt": 1391781600,
-          "size": 64172851,
+          "episodeTitle": "Episode 94: Function Frog"
+          "episodeSummary": "Jonathan and Kelli talk about a slew of geeky books we've read lately: security, astronauts, innovation, cyberwar, and more. Think of it as recommended reading for nerds."
+          "publishedAt": 1391781600
+          "size": 64172851
           "duration": 3422
-        ,
+         ,
           "uid": 35595476
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_93_Lightsaber_Customer_Service.mp3"
           "explicit": false
-          "episodeTitle": "Episode 93: Lightsaber Customer Service",
-          "episodeSummary": "Jonathan and Kelli talk about Kelli's new Raspberry Pi: what to do with it, how to program it, and what she loves about it.",
-          "publishedAt": 1391176800,
-          "size": 64172851,
+          "episodeTitle": "Episode 93: Lightsaber Customer Service"
+          "episodeSummary": "Jonathan and Kelli talk about Kelli's new Raspberry Pi: what to do with it, how to program it, and what she loves about it."
+          "publishedAt": 1391176800
+          "size": 64172851
           "duration": 4014
-        ,
+         ,
           "uid": 35469059
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_92_Cattering_Ram.mp3"
           "explicit": false
-          "episodeTitle": "Episode 92: Cattering Ram",
-          "episodeSummary": "Jonathan and Kelli talk about a few of our favorite APIs: Stripe, Dropbox, Github, Twilio, and not Facebook.",
-          "publishedAt": 1390553645,
-          "size": 64172851,
+          "episodeTitle": "Episode 92: Cattering Ram"
+          "episodeSummary": "Jonathan and Kelli talk about a few of our favorite APIs: Stripe, Dropbox, Github, Twilio, and not Facebook."
+          "publishedAt": 1390553645
+          "size": 64172851
           "duration": 3342
-        ,
+         ,
           "uid": 35360591
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_91_Papil_and_Pencer.mp3"
           "explicit": false
-          "episodeTitle": "Episode 91: Papil and Pencer",
-          "episodeSummary": "Jonathan and Kelli talk about the tools we use to get our jobs done on a daily basis. Command line utilities, browser plugins, text editors, project management, and more.",
-          "publishedAt": 1389937277,
-          "size": 64172851,
+          "episodeTitle": "Episode 91: Papil and Pencer"
+          "episodeSummary": "Jonathan and Kelli talk about the tools we use to get our jobs done on a daily basis. Command line utilities, browser plugins, text editors, project management, and more."
+          "publishedAt": 1389937277
+          "size": 64172851
           "duration": 6322
-        ,
+         ,
           "uid": 35271233
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_90_Weve_Got_Gas.mp3"
           "explicit": false
-          "episodeTitle": "Episode 90: We’ve Got Gas",
-          "episodeSummary": "Jonathan and Kelli talk about “hacking” our Hue wireless lights.",
-          "publishedAt": 1389337581,
-          "size": 64172851,
+          "episodeTitle": "Episode 90: We’ve Got Gas"
+          "episodeSummary": "Jonathan and Kelli talk about “hacking” our Hue wireless lights."
+          "publishedAt": 1389337581
+          "size": 64172851
           "duration": 3729
-        ,
+         ,
           "uid": 35162928
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_89_Aspirational_Laundry.mp3"
           "explicit": false
-          "episodeTitle": "Episode 89: Aspirational Laundry",
-          "episodeSummary": "Jonathan and Kelli talk about the pros, cons, and programming implications of the top ten gadgets we received in 2013.",
-          "publishedAt": 1388757600,
-          "size": 64172851,
+          "episodeTitle": "Episode 89: Aspirational Laundry"
+          "episodeSummary": "Jonathan and Kelli talk about the pros, cons, and programming implications of the top ten gadgets we received in 2013."
+          "publishedAt": 1388757600
+          "size": 64172851
           "duration": 6504
-        ,
+         ,
           "uid": 35068258
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_88_Old_Waffles.mp3"
           "explicit": false
-          "episodeTitle": "Episode 88: Old Waffles",
-          "episodeSummary": "J-Bot and K-Bot revisit highlights from the previous year and beyond.",
-          "publishedAt": 1388146387,
-          "size": 64172851,
+          "episodeTitle": "Episode 88: Old Waffles"
+          "episodeSummary": "J-Bot and K-Bot revisit highlights from the previous year and beyond."
+          "publishedAt": 1388146387
+          "size": 64172851
           "duration": 3219
-        ,
+         ,
           "uid": 34905028
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_87_Sleep_Hockeying.mp3"
           "explicit": false
-          "episodeTitle": "Episode 87: Sleep Hockeying",
-          "episodeSummary": "Jonathan and Kelli talk about the Twitter redesign, improvements to mobile browsers, math bugs in JavaScript, and more.",
-          "publishedAt": 1387548000,
-          "size": 64172851,
+          "episodeTitle": "Episode 87: Sleep Hockeying"
+          "episodeSummary": "Jonathan and Kelli talk about the Twitter redesign, improvements to mobile browsers, math bugs in JavaScript, and more."
+          "publishedAt": 1387548000
+          "size": 64172851
           "duration": 3025
-        ,
+         ,
           "uid": 34742271
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_86_Eleventy_One.mp3"
           "explicit": false
-          "episodeTitle": "Episode 86: Eleventy One",
-          "episodeSummary": "Jonathan and Kelli talk about cross-platform consistency: should your app conform to platform conventions or maintain a consistent look and feel everywhere?",
-          "publishedAt": 1386927493,
-          "size": 64172851,
+          "episodeTitle": "Episode 86: Eleventy One"
+          "episodeSummary": "Jonathan and Kelli talk about cross-platform consistency: should your app conform to platform conventions or maintain a consistent look and feel everywhere?"
+          "publishedAt": 1386927493
+          "size": 64172851
           "duration": 3786
-        ,
+         ,
           "uid": 34482598
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_85_Earlids.mp3"
           "explicit": false
-          "episodeTitle": "Episode 85: Earlids",
-          "episodeSummary": "Jonathan and Kelli talk about notification overload: what it is, how to deal with it, and where we might be headed.",
-          "publishedAt": 1386307474,
-          "size": 64172851,
+          "episodeTitle": "Episode 85: Earlids"
+          "episodeSummary": "Jonathan and Kelli talk about notification overload: what it is, how to deal with it, and where we might be headed."
+          "publishedAt": 1386307474
+          "size": 64172851
           "duration": 3693
-        ,
+         ,
           "uid": 34165314
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_84_Pizza_Car.mp3"
           "explicit": false
-          "episodeTitle": "Episode 84: Pizza Car",
-          "episodeSummary": "Jonathan and Kelli discuss the highlights of “APIs: A Strategy Guide” by Daniel Jacobson.",
-          "publishedAt": 1385733600,
-          "size": 64172851,
+          "episodeTitle": "Episode 84: Pizza Car"
+          "episodeSummary": "Jonathan and Kelli discuss the highlights of “APIs: A Strategy Guide” by Daniel Jacobson."
+          "publishedAt": 1385733600
+          "size": 64172851
           "duration": 3710
-        ,
+         ,
           "uid": 33775945
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_83_Dark_Middle.mp3"
           "explicit": false
-          "episodeTitle": "Episode 83: Dark Middle",
-          "episodeSummary": "Jonathan and Kelli talk about Feathers, a minimalist CSS reset and boilerplate gem created by our very own Kelli Shaver.",
-          "publishedAt": 1385128800,
-          "size": 64172851,
+          "episodeTitle": "Episode 83: Dark Middle"
+          "episodeSummary": "Jonathan and Kelli talk about Feathers, a minimalist CSS reset and boilerplate gem created by our very own Kelli Shaver."
+          "publishedAt": 1385128800
+          "size": 64172851
           "duration": 2780
-        ,
+         ,
           "uid": 33480524
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_82_Pink_With_a_Hint_of_Orange.mp3"
           "explicit": false
-          "episodeTitle": "Episode 82: Pink With a Hint of Orange",
-          "episodeSummary": "Jonathan and Kelli talk about Pattern Lab, a tool for building atomic design systems created by Brad Frost and Dave Olsen.",
-          "publishedAt": 1384524000,
-          "size": 64172851,
+          "episodeTitle": "Episode 82: Pink With a Hint of Orange"
+          "episodeSummary": "Jonathan and Kelli talk about Pattern Lab, a tool for building atomic design systems created by Brad Frost and Dave Olsen."
+          "publishedAt": 1384524000
+          "size": 64172851
           "duration": 1776
-        ,
+         ,
           "uid": 33211704
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_81_Responsive_Picnic_Tables.mp3"
           "explicit": false
-          "episodeTitle": "Episode 81: Responsive Picnic Tables",
-          "episodeSummary": "Jonathan and Kelli rant about dealing with HTML tables in responsive web design.",
-          "publishedAt": 1383919200,
-          "size": 64172851,
+          "episodeTitle": "Episode 81: Responsive Picnic Tables"
+          "episodeSummary": "Jonathan and Kelli rant about dealing with HTML tables in responsive web design."
+          "publishedAt": 1383919200
+          "size": 64172851
           "duration": 3567
-        ,
+         ,
           "uid": 32913183
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_80_Even_More_Betterer.mp3"
           "explicit": false
-          "episodeTitle": "Episode 80: Even More Betterer",
-          "episodeSummary": "Jonathan and Kelli talk about Ruby and Rails: learning resources, application considerations, and Kelli’s big win!",
-          "publishedAt": 1383314400,
-          "size": 64172851,
+          "episodeTitle": "Episode 80: Even More Betterer"
+          "episodeSummary": "Jonathan and Kelli talk about Ruby and Rails: learning resources, application considerations, and Kelli’s big win!"
+          "publishedAt": 1383314400
+          "size": 64172851
           "duration": 1639
-        ,
+         ,
           "uid": 32650343
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_79_Oreo_Island.mp3"
           "explicit": false
-          "episodeTitle": "Episode 79: Oreo Island",
-          "episodeSummary": "Jonathan and Kelli discuss a bunch of projects that they recently launched.",
-          "publishedAt": 1382709600,
-          "size": 64172851,
+          "episodeTitle": "Episode 79: Oreo Island"
+          "episodeSummary": "Jonathan and Kelli discuss a bunch of projects that they recently launched."
+          "publishedAt": 1382709600
+          "size": 64172851
           "duration": 2828
-        ,
+         ,
           "uid": 32408374
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_78_Reedonkulous.mp3"
           "explicit": false
-          "episodeTitle": "Episode 78: Reedonkulous",
-          "episodeSummary": "Jonathan and Kelli give a brief intro to Git, how you can use it to replace FTP in your workflow, and why you probably should.",
-          "publishedAt": 1382104800,
-          "size": 64172851,
+          "episodeTitle": "Episode 78: Reedonkulous"
+          "episodeSummary": "Jonathan and Kelli give a brief intro to Git, how you can use it to replace FTP in your workflow, and why you probably should."
+          "publishedAt": 1382104800
+          "size": 64172851
           "duration": 1075
-        ,
+         ,
           "uid": 31920875
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_77_Accidental_Interneting.mp3"
           "explicit": false
-          "episodeTitle": "Episode 77: Accidental Interneting",
-          "episodeSummary": "Jonathan and Kelli chat about the benefits of accessibility, availability, and progressive enhancement in cross-platform web projects.",
-          "publishedAt": 1380808800,
-          "size": 64172851,
+          "episodeTitle": "Episode 77: Accidental Interneting"
+          "episodeSummary": "Jonathan and Kelli chat about the benefits of accessibility, availability, and progressive enhancement in cross-platform web projects."
+          "publishedAt": 1380808800
+          "size": 64172851
           "duration": 2640
-        ,
+         ,
           "uid": 31746003
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_76_Tickle_Class.mp3"
           "explicit": false
-          "episodeTitle": "Episode 76: Tickle Class",
-          "episodeSummary": "Jonathan and Kelli discuss perception vs reality in the context of application performance. In particular, the importance of instantaneous feedback, a simple way to remove the pesky 300ms delay in webapps on touch devices, and the real reason why jank is a bad thing.",
-          "publishedAt": 1380290400,
-          "size": 64172851,
+          "episodeTitle": "Episode 76: Tickle Class"
+          "episodeSummary": "Jonathan and Kelli discuss perception vs reality in the context of application performance. In particular, the importance of instantaneous feedback, a simple way to remove the pesky 300ms delay in webapps on touch devices, and the real reason why jank is a bad thing."
+          "publishedAt": 1380290400
+          "size": 64172851
           "duration": 2272
-        ,
+         ,
           "uid": 31496700
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_75_Shes_Coming_Unglued.mp3"
           "explicit": false
-          "episodeTitle": "Episode 75: She’s Coming Unglued",
-          "episodeSummary": "Jonathan and Kelli talk about Google’s two-factor authentication, smartwatch use cases, and a possible strategy behind Apple’s decision to release two new iPhones at the same time.",
-          "publishedAt": 1379685600,
-          "size": 64172851,
+          "episodeTitle": "Episode 75: She’s Coming Unglued"
+          "episodeSummary": "Jonathan and Kelli talk about Google’s two-factor authentication, smartwatch use cases, and a possible strategy behind Apple’s decision to release two new iPhones at the same time."
+          "publishedAt": 1379685600
+          "size": 64172851
           "duration": 2326
-        ,
+         ,
           "uid": 31210186
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_74_Psycho_Like_Me.mp3"
           "explicit": false
-          "episodeTitle": "Episode 74: Psycho Like Me",
-          "episodeSummary": "Jonathan and Kelli talk about how the iPhone 5c announcement illustrates that future-friendly thinking is more important than ever.",
-          "publishedAt": 1379080800,
-          "size": 64172851,
+          "episodeTitle": "Episode 74: Psycho Like Me"
+          "episodeSummary": "Jonathan and Kelli talk about how the iPhone 5c announcement illustrates that future-friendly thinking is more important than ever."
+          "publishedAt": 1379080800
+          "size": 64172851
           "duration": 1677
-        ,
+         ,
           "uid": 30983261
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_73_Tiny_Tornado.mp3"
           "explicit": false
-          "episodeTitle": "Episode 73: Tiny Tornado",
-          "episodeSummary": "Jonathan and Kelli talk about SmartWatches: The Wimm One, MetaWatch, Pebble, and more.",
-          "publishedAt": 1378476000,
-          "size": 64172851,
+          "episodeTitle": "Episode 73: Tiny Tornado"
+          "episodeSummary": "Jonathan and Kelli talk about SmartWatches: The Wimm One, MetaWatch, Pebble, and more."
+          "publishedAt": 1378476000
+          "size": 64172851
           "duration": 2188
-        ,
+         ,
           "uid": 27869901
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_72_Code_Brown.mp3"
           "explicit": false
-          "episodeTitle": "Episode 72: Code Brown",
-          "episodeSummary": "Jonathan and Kelli talk reach into the topic grab bag and pull out programmable lightbulbs, embracing constraints, prototyping in PHP, benchmarking CSS, and more.",
-          "publishedAt": 1377871200,
-          "size": 64172851,
+          "episodeTitle": "Episode 72: Code Brown"
+          "episodeSummary": "Jonathan and Kelli talk reach into the topic grab bag and pull out programmable lightbulbs, embracing constraints, prototyping in PHP, benchmarking CSS, and more."
+          "publishedAt": 1377871200
+          "size": 64172851
           "duration": 3882
-        ,
+         ,
           "uid": 25019028
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_71_For_the_Meeple_By_the_Meeple.mp3"
           "explicit": false
-          "episodeTitle": "Episode 71: For the Meeple, By the Meeple",
-          "episodeSummary": "Jonathan and Kelli talk about what happened during Kelli's 48 hour weekend hackathon, including first impressions of RedHat's OpenShift cloud platform, pub/sub in Ruby with Faye, and oh, so much more.",
-          "publishedAt": 1377266400,
-          "size": 64172851,
+          "episodeTitle": "Episode 71: For the Meeple, By the Meeple"
+          "episodeSummary": "Jonathan and Kelli talk about what happened during Kelli's 48 hour weekend hackathon, including first impressions of RedHat's OpenShift cloud platform, pub/sub in Ruby with Faye, and oh, so much more."
+          "publishedAt": 1377266400
+          "size": 64172851
           "duration": 3131
-        ,
+         ,
           "uid": 19249230
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_70_It_Cant_Be_Worse_Than_Calgary.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli talk about timezone bugs on Amazon S3, problems with ruby on new EC2's chipset architecture, and news about RailsForum, Pandacodium, Spoken, Inside the Brackets, and a lot more.",
-          "publishedAt": 1376639674,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 70: It Can't Be Worse Than Calgary"
+          "episodeSummary": "Jonathan and Kelli talk about timezone bugs on Amazon S3, problems with ruby on new EC2's chipset architecture, and news about RailsForum, Pandacodium, Spoken, Inside the Brackets, and a lot more."
+          "publishedAt": 1376639674
+          "size": 64172851
           "duration": 3512
-        ,
+         ,
           "uid": 16784017
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_69_Thats_A_Plus.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli talk about real live project work on apps that run cross browser, cross platform, and beyond.",
-          "publishedAt": 1376033708,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 69: That's A Plus"
+          "episodeSummary": "Jonathan and Kelli talk about real live project work on apps that run cross browser, cross platform, and beyond."
+          "publishedAt": 1376033708
+          "size": 64172851
           "duration": 3078
-        ,
+         ,
           "uid": 16784016
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_68_Fancy_Class.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli walk through a process for modern web development using responsive design, CSS3, and copious amounts of progressive enhancement.",
-          "publishedAt": 1375452000,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 68: Fancy Class"
+          "episodeSummary": "Jonathan and Kelli walk through a process for modern web development using responsive design, CSS3, and copious amounts of progressive enhancement."
+          "publishedAt": 1375452000
+          "size": 64172851
           "duration": 2899
-        ,
+         ,
           "uid": 9408154
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_67_Django_Curious.mp3"
-          "explicit": false
-          "episodeSummary": "Kelli helps Jonathan finally - FINALLY! - make the switch from PHP to Rails.",
-          "publishedAt": 1374843886,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 67: Django Curious"
+          "episodeSummary": "Kelli helps Jonathan finally - FINALLY! - make the switch from PHP to Rails."
+          "publishedAt": 1374843886
+          "size": 64172851
           "duration": 2503
-        ,
+         ,
           "uid": 8776590
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_66_I_Blame_My_Shorts.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli talk about function hoisting in Firefox, a fun new side project, and collapsing space with smartphone cameras.",
-          "publishedAt": 1374242400,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 66: I Blame My Shorts"
+          "episodeSummary": "Jonathan and Kelli talk about function hoisting in Firefox, a fun new side project, and collapsing space with smartphone cameras."
+          "publishedAt": 1374242400
+          "size": 64172851
           "duration": 2394
-        ,
+         ,
           "uid": 8023287
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_65_Bumpin_Colons.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli continue with the fourth and final installment of their screencast on how to build a REST API with Ruby on Rails.",
-          "publishedAt": 1373637600,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 65: Bumpin’ Colons"
+          "episodeSummary": "Jonathan and Kelli continue with the fourth and final installment of their screencast on how to build a REST API with Ruby on Rails."
+          "publishedAt": 1373637600
+          "size": 64172851
           "duration": 3700
-        ,
+         ,
           "uid": 7215332
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_64_Cat_Number_One.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli get very superstitious about Rails 4, JSON endpoints, responsive web design, and more.",
-          "publishedAt": 1373014796,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 64: Cat Number One"
+          "episodeSummary": "Jonathan and Kelli get very superstitious about Rails 4, JSON endpoints, responsive web design, and more."
+          "publishedAt": 1373014796
+          "size": 64172851
           "duration": 2158
-        ,
+         ,
           "uid": 6612701
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_63_Disco_Mode.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli talk about responsive design, progressive enhancement, and development tools in the context of a big huge site redesign.",
-          "publishedAt": 1372428000,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 63: Disco Mode"
+          "episodeSummary": "Jonathan and Kelli talk about responsive design, progressive enhancement, and development tools in the context of a big huge site redesign."
+          "publishedAt": 1372428000
+          "size": 64172851
           "duration": 2565
-        ,
+         ,
           "uid": 6457165
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_62_Love_Me_Some_Curlies.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli continue with part 3 of their screencast on how to build a REST API with Ruby on Rails. Please visit <a href=\"http://nitch.cc\">http://nitch.cc</a> and look for Episode 62 if you'd like to view the video.",
-          "publishedAt": 1371823200,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 62: Love Me Some Curlies"
+          "episodeSummary": "Jonathan and Kelli continue with part 3 of their screencast on how to build a REST API with Ruby on Rails. Please visit <a href=\"http://nitch.cc\">http://nitch.cc</a> and look for Episode 62 if you'd like to view the video."
+          "publishedAt": 1371823200
+          "size": 64172851
           "duration": 3011
-        ,
+         ,
           "uid": 5563788
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_61_Expecting_Ernestina.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli continue their screencast on how to build a REST API with Ruby on Rails. Please visit <a href=\"http://nitch.cc\">http://nitch.cc</a> and look for Episode 61 if you'd like to view the video.",
-          "publishedAt": 1371218400,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 61: Expecting Ernestina"
+          "episodeSummary": "Jonathan and Kelli continue their screencast on how to build a REST API with Ruby on Rails. Please visit <a href=\"http://nitch.cc\">http://nitch.cc</a> and look for Episode 61 if you'd like to view the video."
+          "publishedAt": 1371218400
+          "size": 64172851
           "duration": 3949
-        ,
+         ,
           "uid": 4347039
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_60_Numerosity.mp3"
-          "explicit": false
-          "episodeSummary": "Kelli builds a rest api with ruby on rails, Jonathan asks stupid questions while she does it, and we post video of the whole shebang for you to enjoy in your copious free time.",
-          "publishedAt": 1370613600,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 60: Numerosity"
+          "episodeSummary": "Kelli builds a rest api with ruby on rails, Jonathan asks stupid questions while she does it, and we post video of the whole shebang for you to enjoy in your copious free time."
+          "publishedAt": 1370613600
+          "size": 64172851
           "duration": 3949
-        ,
+         ,
           "uid": 2774964
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_59_Moonburn.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli talk about the WeMo Switch, blink(1) USB, hue light bulbs, and the APIs that tie them all together.",
-          "publishedAt": 1370008800,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 59: Moonburn"
+          "episodeSummary": "Jonathan and Kelli talk about the WeMo Switch, blink(1) USB, hue light bulbs, and the APIs that tie them all together."
+          "publishedAt": 1370008800
+          "size": 64172851
           "duration": 3026
-        ,
+         ,
           "uid": 2686457
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_58_Fifty_Shades_of_Black.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli talk about the upcoming screencast episode, performance problems with KnockoutJS, and the massive implications of Google's recent announcements at the IO conference.",
-          "publishedAt": 1369404000,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 58: Fifty Shades of Black"
+          "episodeSummary": "Jonathan and Kelli talk about the upcoming screencast episode, performance problems with KnockoutJS, and the massive implications of Google's recent announcements at the IO conference."
+          "publishedAt": 1369404000
+          "size": 64172851
           "duration": 4163
-        ,
+         ,
           "uid": 2595335
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_57_Flossing_With_Rails.mp3"
-          "explicit": false
-          "episodeSummary": "Jonathan and Kelli talk about building - and more importantly, testing - REST APIs with Rails and RSpec.",
-          "publishedAt": 1368799200,
-          "size": 64172851,
+          "explicit": false,
+          "episodeTitle": "Episode 57: Flossing With Rails"
+          "episodeSummary": "Jonathan and Kelli talk about building - and more importantly, testing - REST APIs with Rails and RSpec."
+          "publishedAt": 1368799200
+          "size": 64172851
           "duration": 1925
-        ,
+         ,
           "uid": 2509212
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_56_Eighteen_Hours_Since_Last_Twisted_Ankle.mp3"
           "explicit": false
-          "episodeTitle": "Episode 56: Eighteen Hours Since Last Twisted Ankle",
-          "episodeSummary": "Jonathan and Kelli talk about how to quote a project for a client who needs an app that can run everywhere.",
-          "publishedAt": 1368173642,
-          "size": 64172851,
+          "episodeTitle": "Episode 56: Eighteen Hours Since Last Twisted Ankle"
+          "episodeSummary": "Jonathan and Kelli talk about how to quote a project for a client who needs an app that can run everywhere."
+          "publishedAt": 1368173642
+          "size": 64172851
           "duration": 1996
-        ,
+         ,
           "uid": 2427362
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_55_Nerds_in_Grass_Skirts.mp3"
           "explicit": false
-          "episodeTitle": "Episode 55: Nerds in Grass Skirts",
-          "episodeSummary": "Jonathan and Kelli talk about experimentation with the Lua programming language and the possible implications on cross-platform application development.",
-          "publishedAt": 1367587575,
-          "size": 64172851,
+          "episodeTitle": "Episode 55: Nerds in Grass Skirts"
+          "episodeSummary": "Jonathan and Kelli talk about experimentation with the Lua programming language and the possible implications on cross-platform application development."
+          "publishedAt": 1367587575
+          "size": 64172851
           "duration": 2195
-        ,
+         ,
           "uid": 2372813
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_54_The_Royal_You.mp3"
           "explicit": false
-          "episodeTitle": "Episode 54: The Royal You",
-          "episodeSummary": "Jonathan and Kelli talk about jQuery vs. Zepto... and other pointless debates.",
-          "publishedAt": 1366984800,
-          "size": 64172851,
+          "episodeTitle": "Episode 54: The Royal You"
+          "episodeSummary": "Jonathan and Kelli talk about jQuery vs. Zepto... and other pointless debates."
+          "publishedAt": 1366984800
+          "size": 64172851
           "duration": 2010
-        ,
+         ,
           "uid": 2343931
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_53_Fluffdates.mp3"
           "explicit": false
-          "episodeTitle": "Episode 53: Fluffdates",
-          "episodeSummary": "Jonathan and Kelli sit back and say \"I told you so\" for 30 minutes as they talk about Glassware, the Mirror API, and improved methods for the distribution of cat photos with Google Glass.",
-          "publishedAt": 1366380000,
-          "size": 64172851,
+          "episodeTitle": "Episode 53: Fluffdates"
+          "episodeSummary": "Jonathan and Kelli sit back and say \"I told you so\" for 30 minutes as they talk about Glassware, the Mirror API, and improved methods for the distribution of cat photos with Google Glass."
+          "publishedAt": 1366380000
+          "size": 64172851
           "duration": 2010
-        ,
+         ,
           "uid": 2317963
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_52_Punching_Kittens_with_Ethan_Marcotte.mp3"
           "explicit": false
-          "episodeTitle": "Episode 52: Punching Kittens with Ethan Marcotte",
-          "episodeSummary": "Jonathan and Kelli welcome special guest Ethan Marcotte to discuss some of the non-technical challenges of Responsive Web Design: unresponsive ad units, browsing the web on game consoles, getting client sign-off without Photoshop comps, and much more.",
-          "publishedAt": 1365775200,
-          "size": 64172851,
+          "episodeTitle": "Episode 52: Punching Kittens with Ethan Marcotte"
+          "episodeSummary": "Jonathan and Kelli welcome special guest Ethan Marcotte to discuss some of the non-technical challenges of Responsive Web Design: unresponsive ad units, browsing the web on game consoles, getting client sign-off without Photoshop comps, and much more."
+          "publishedAt": 1365775200
+          "size": 64172851
           "duration": 2596
-        ,
+         ,
           "uid": 2288997
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_51_BBQ_Chicken_Disease.mp3"
           "explicit": false
-          "episodeTitle": "Episode 51: BBQ Chicken Disease",
-          "episodeSummary": "Jonathan and Kelli talk about Amazon Web Services - EC2, RDS, CloudWatch, and our new personal favorite, Simple Notification Service.",
-          "publishedAt": 1365170400,
-          "size": 64172851,
+          "episodeTitle": "Episode 51: BBQ Chicken Disease"
+          "episodeSummary": "Jonathan and Kelli talk about Amazon Web Services - EC2, RDS, CloudWatch, and our new personal favorite, Simple Notification Service."
+          "publishedAt": 1365170400
+          "size": 64172851
           "duration": 2326
-        ,
+         ,
           "uid": 2265490
           "mediaUrl": "https://s3.amazonaws.com/nitch/Episode_50_Up_Since_72.mp3"
           "explicit": false
-          "episodeTitle": "Episode 50: Up Since '72",
-          "episodeSummary": "Jonathan and Kelli talk about drag and drop on touchscreen devices and opting out of responsive web design.",
-          "publishedAt": 1364565600,
-          "size": 64172851,
+          "episodeTitle": "Episode 50: Up Since '72"
+          "episodeSummary": "Jonathan and Kelli talk about drag and drop on touchscreen devices and opting out of responsive web design."
+          "publishedAt": 1364565600
+          "size": 64172851
           "duration": 1690
         ]
       ,
