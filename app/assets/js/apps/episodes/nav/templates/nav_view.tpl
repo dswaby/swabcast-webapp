@@ -33,13 +33,13 @@
     <li class="js-reset-local">
       <a>Reset Local Storage</a>
     </li>
-    <li class="js-not-implemented">
+    <li class="right-off-canvas-toggle js-not-implemented">
       <a href="#"><i class="fi-widget"></i>&nbsp Settings</a>
     </li>
-    <li class="left-off-canvas-toggle">
+    <li class="right-off-canvas-toggle js-static-app">
       <a href="#"><i class="fi-info"></i>&nbsp About App</a>
     </li>
-    <li class="left-off-canvas-toggle">
+    <li class="right-off-canvas-toggle js-static-me">
       <a href="#"><i class="fi-torso-business"></i>&nbsp About Me</a>
     </li>
     <li>

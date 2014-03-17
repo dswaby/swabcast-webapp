@@ -6,7 +6,8 @@
         events: {
           "click li.js-playlist": "showPlaylist",
           "click li.js-reset-local": "resetLocalStorage",
-          "click li.js-not-implemented": "notImplemented"
+          "click li.js-not-implemented": "notImplemented",
+          "click li.js-static-me": "showAboutMe"
         },
         showPlaylist: function(e) {
           return Swabcast.trigger("playlist:mainview");
@@ -14,10 +15,15 @@
         resetLocalStorage: function(e) {
           e.preventDefault();
           e.stopPropagation();
-          console.log('clearing storage');
           localStorage.clear();
           location.reload();
           return console.log('storage cleared');
+        },
+        showAboutMe: function() {
+          return Swabcast.trigger("static:about:me");
+        },
+        showAboutApp: function() {
+          return Swabcast.trigger("static:about:app");
         },
         notImplemented: function(e) {
           console.log("not implemented yet :(");

@@ -7,6 +7,8 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTp
         "click li.js-playlist": "showPlaylist",
         "click li.js-reset-local": "resetLocalStorage"
         "click li.js-not-implemented": "notImplemented"
+        "click li.js-static-me": "showAboutMe"
+
 
       showPlaylist: (e) ->
         Swabcast.trigger "playlist:mainview"
@@ -14,15 +16,20 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTp
       resetLocalStorage: (e) ->
         e.preventDefault()
         e.stopPropagation()
-        console.log('clearing storage')
         localStorage.clear()
         location.reload()
         console.log('storage cleared')
 
+      showAboutMe: ->
+        Swabcast.trigger "static:about:me"
+
+      showAboutApp: ->
+        Swabcast.trigger "static:about:app"
+
       notImplemented: (e) ->
         console.log("not implemented yet :(")
-
         Swabcast.trigger "feature:not:implemented"
+
     )
 
   Swabcast.EpisodesApp.Nav.View

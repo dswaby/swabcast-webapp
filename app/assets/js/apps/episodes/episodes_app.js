@@ -36,6 +36,16 @@
             return EpisodesApp.Feed.Controller.showFeeds();
           });
         },
+        showAboutApp: function() {
+          return require(["apps/episodes/static/static_controller"], function() {
+            return EpisodesApp.Static.Controller.showAboutApp();
+          });
+        },
+        showAboutMe: function() {
+          return require(["apps/episodes/static/static_controller"], function() {
+            return EpisodesApp.Static.Controller.showAboutMe();
+          });
+        },
         listEpisodes: function() {
           return require(["apps/episodes/list/list_controller"], function() {
             return EpisodesApp.List.Controller.listEpisodes();
@@ -123,8 +133,13 @@
         return API.showFeedEpisodes(model);
       });
       Swabcast.on("playlist:mainview", function() {
-        console.log("showPlaylistMain triggered");
         return API.showPlaylistMain();
+      });
+      Swabcast.on("static:about:app", function() {
+        return API.showAboutApp();
+      });
+      Swabcast.on("static:about:me", function() {
+        return API.showAboutMe();
       });
       return Swabcast.addInitializer(function() {
         return new EpisodesApp.Router({

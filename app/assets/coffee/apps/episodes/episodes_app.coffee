@@ -29,6 +29,16 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeeds()
 
+      # "static:about:app"
+      showAboutApp: ->
+        require ["apps/episodes/static/static_controller"], ->
+          EpisodesApp.Static.Controller.showAboutApp()
+
+      # "static:about:me"
+      showAboutMe: ->
+        require ["apps/episodes/static/static_controller"], ->
+          EpisodesApp.Static.Controller.showAboutMe()
+
       # "episodes:list"
       listEpisodes: ->
         require ["apps/episodes/list/list_controller"], ->
@@ -107,8 +117,13 @@ define ["app"], (Swabcast) ->
       API.showFeedEpisodes model
 
     Swabcast.on "playlist:mainview", ->
-      console.log("showPlaylistMain triggered")
       API.showPlaylistMain()
+
+    Swabcast.on "static:about:app", ->
+      API.showAboutApp()
+
+    Swabcast.on "static:about:me", ->
+      API.showAboutMe()
 
     Swabcast.addInitializer ->
       new EpisodesApp.Router(controller: API)
