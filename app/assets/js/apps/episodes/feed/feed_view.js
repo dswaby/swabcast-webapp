@@ -40,6 +40,12 @@
           e.preventDefault();
           e.stopPropagation();
           return Swabcast.trigger("feed:episodelist", this.model);
+        },
+        animateOut: function() {
+          return console.log("TODO: animate this view into view, DERPPP");
+        },
+        animateIn: function() {
+          return console.log("TODO: animate this view out of view");
         }
       });
       return View.FeedLibraryView = Marionette.CollectionView.extend({

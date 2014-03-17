@@ -20,7 +20,7 @@
 <div style="height:100%;">
     <div id="list-color-wrapper" class="row feed-list">
         <table id="" class="large-10 large-centered small-12 columns" style="margin-bottom:85px;">
-                <tbody id="episodes-list" style="width:96% !important;" >
+                <tbody id="episodes-list">
 
                 </tbody>
         </table>

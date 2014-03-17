@@ -8,6 +8,7 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTp
         "click li.js-reset-local": "resetLocalStorage"
         "click li.js-not-implemented": "notImplemented"
         "click li.js-static-me": "showAboutMe"
+        "click li.js-static-app": "showAboutApp"
 
 
       showPlaylist: (e) ->

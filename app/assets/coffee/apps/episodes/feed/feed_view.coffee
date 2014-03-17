@@ -1,3 +1,8 @@
+#important, we do not want to close this view,
+# even though this is cached, opening and closing this view
+# is proving to be problematic with image loading
+# due to the large amount of images loading in this view
+# we will need to hide and reveal this region to prevent reloading images
 define ["app","tpl!apps/episodes/feed/templates/feed_layout.tpl",
 "tpl!apps/episodes/feed/templates/feed_view.tpl",
 "tpl!apps/episodes/feed/templates/library_view.tpl",
@@ -44,6 +49,12 @@ define ["app","tpl!apps/episodes/feed/templates/feed_layout.tpl",
         e.preventDefault()
         e.stopPropagation()
         Swabcast.trigger "feed:episodelist", @model
+
+      animateOut: ->
+        console.log("TODO: animate this view into view, DERPPP")
+
+      animateIn: ->
+        console.log("TODO: animate this view out of view")
 
     )
     View.FeedLibraryView = Marionette.CollectionView.extend(

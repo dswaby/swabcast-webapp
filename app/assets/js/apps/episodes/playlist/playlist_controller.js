@@ -2,8 +2,8 @@
   define(["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/player_controller"], function(Swabcast, View) {
     Swabcast.module("EpisodesApp.Playlist", function(Playlist, Swabcast, Backbone, Marionette, $, _) {
       return Playlist.Controller = {
-        showTracks: function(mainView) {
-          mainView = mainView || false;
+        showTracks: function(extendedView) {
+          extendedView = extendedView || false;
           return require(["entities/playlist", "apps/episodes/list/list_controller"], function() {
             var fetchingPlaylist, playlistLayout;
             fetchingPlaylist = Swabcast.request("entities:playlist");
@@ -50,7 +50,7 @@
                 return playlistTracks.children.findByModel(model).flash("success");
               });
             });
-            if (mainView) {
+            if (extendedView) {
               Swabcast.sideBarRegion.close();
               require(["common/view"], function(CommonViews) {
                 var backButton, winheight;
@@ -68,7 +68,7 @@
         },
         showPlayistMain: function() {
           var opt;
-          console.log("show mainView");
+          console.log("show extendedView");
           opt = true;
           return this.showTracks(opt);
         }

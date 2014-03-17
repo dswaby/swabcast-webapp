@@ -2,10 +2,6 @@
 <td style="width:40px;">
     <a class="js-enqueue"><%= publishedAt %></a>
 </td>
-<td style="width:40px;">
-        <a class="js-preview-audio icon-closure"><i class="fi-play"></i></a>
-</td>
-
 <td class="js-view-detail">
     <a style="margin-left:5px;font-size:14px" ><%= episodeTitle %></a>
     <a class="feed-color"><i class="fi-eye"></i></a>

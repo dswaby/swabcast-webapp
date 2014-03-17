@@ -1,4 +1,4 @@
-<div class="large-8 small-12 columns">
+<div class="large-8 small-12 columns" style="margin-bottom:75px;">
   <h1> Swabcast </h1>
   <img src="./assets/img/swabcast.svg" height="150px" width="150px" />
   <p> The swabcast app is a personal side project I work on in the ongoing effort to experiment with and learn upcoming web technologies.

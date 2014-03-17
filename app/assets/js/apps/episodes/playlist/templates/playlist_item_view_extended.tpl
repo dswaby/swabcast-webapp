@@ -9,5 +9,9 @@
 </td>
 
 <td>
+    <a href="#" class="js-remove-track"><i style="font-size:20px" class="fi-x-circle"></i></a>
+</td>
+
+<td>
     <a href="#" class="js-top-of-queue"><i style="font-size:20px" class="fi-arrow-up"></i></a>
 </td>

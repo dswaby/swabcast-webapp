@@ -7,7 +7,8 @@
           "click li.js-playlist": "showPlaylist",
           "click li.js-reset-local": "resetLocalStorage",
           "click li.js-not-implemented": "notImplemented",
-          "click li.js-static-me": "showAboutMe"
+          "click li.js-static-me": "showAboutMe",
+          "click li.js-static-app": "showAboutApp"
         },
         showPlaylist: function(e) {
           return Swabcast.trigger("playlist:mainview");

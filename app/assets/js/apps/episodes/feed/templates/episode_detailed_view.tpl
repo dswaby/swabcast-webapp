@@ -6,17 +6,17 @@
             <h2><%= episodeParent %></h2>
         </div>
         <div class="span8">
-        <a href="<%= feedUrl %>"><h6><%= feedUrl %></h6></a>
-        <h4><%= episodeTitle %></h4>
-        <p><%= episodeSummary %></p>
-        <button class="button js-show-list">
-            <i class="icon-arrow-left"></i>
-            Back
-        </button>
-        <button class="button js-enqueue">
-            <i class="icon-plus-sign"></i>
-            Queue
-        </button>
+            <a href="<%= feedUrl %>"><h6><%= feedUrl %></h6></a>
+            <h4><%= episodeTitle %></h4>
+            <p><%= episodeSummary %></p>
+                <button class="button js-show-list">
+                    <i class="icon-arrow-left"></i>
+                    Back
+                </button>
+                <button class="button js-enqueue">
+                    <i class="icon-plus-sign"></i>
+                    Queue
+                </button>
         </div>
         <div>
         </div>

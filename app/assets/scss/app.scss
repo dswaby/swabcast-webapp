@@ -59,15 +59,28 @@
 }
 
 .library-image {
-  max-width: 275px;
+  max-width: 100%;
   padding:5px;
 }
 
+.cover-art-block {
+  padding:0 !important;
+}
 .icon-closure {
   font-size:30px;
   margin-right:5px;
   max-width:30px;
 }
+
+.dialog-fixed-bottom {
+  position: absolute;
+  bottom:0;
+}
+
+#page-main {
+  padding: 0 !important;
+}
+
 //FOUNDATION ICONS
 @font-face {
   font-family: "foundation-icons";
@@ -186,8 +199,8 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
 }
 #player-fill-right{
 }

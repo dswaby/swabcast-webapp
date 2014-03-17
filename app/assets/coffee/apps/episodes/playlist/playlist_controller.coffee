@@ -3,8 +3,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
     Playlist.Controller =
       # by default this view will show in the sideBarRegion
       # optional mainView parameter will close an existing view in sideBarRegion
-      showTracks: (mainView) ->
-        mainView = mainView or false
+      showTracks: (extendedView) ->
+        extendedView = extendedView or false
         require ["entities/playlist", "apps/episodes/list/list_controller"], ->
           fetchingPlaylist = Swabcast.request("entities:playlist")
           playlistLayout = new View.Layout()
@@ -28,7 +28,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               model.destroy()
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
-
             playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
               playlistTracks.add model
               if tracks.length == 1
@@ -36,14 +35,13 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                 Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
                 tracks.nowPlaying = newTrack  unless tracks.nowPlaying
 
-
             playlistLayout.on "show", ->
               playlistLayout.playlistRegion.show playlistTracks
 
             playlistTracks.on "playlist:update", (childView, model) ->
               playlistTracks.children.findByModel(model).flash "success"
 
-          if (mainView)
+          if (extendedView)
             # TODO - do this better
             Swabcast.sideBarRegion.close()
             require ["common/view"], (CommonViews) ->
@@ -58,7 +56,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             Swabcast.sideBarRegion.show playlistLayout
 
       showPlayistMain: ->
-        console.log("show mainView")
+        console.log("show extendedView")
         opt = true
         @showTracks (opt)
 
