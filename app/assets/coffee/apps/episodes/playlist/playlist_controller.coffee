@@ -3,6 +3,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
     Playlist.Controller =
       # by default this view will show in the sideBarRegion
       # optional mainView parameter will close an existing view in sideBarRegion
+      # and use the extendedView
       showTracks: (extendedView) ->
         extendedView = extendedView or false
         require ["entities/playlist", "apps/episodes/list/list_controller"], ->
@@ -14,7 +15,14 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             #nowplaying responsible for managing current episode to be in the player box
             #on change, triggers events and sends episode model to player and playersavedata
             @nowPlaying = (tracks.at(0))  unless typeof tracks.at(0) is "undefined"
-            playlistTracks = new View.Tracks(collection: tracks)
+            playlistTracks = undefined
+
+            if (extendedView)
+              playlistTracks = new View.TracksExtended(collection: tracks)
+            else
+              playlistTracks = new View.Tracks(collection: tracks)
+
+
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
 
               #if track that is about to be removed is at index 0

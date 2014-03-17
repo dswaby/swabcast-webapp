@@ -1,5 +1,13 @@
 <br /><br />
 <div class="panel">
+    <div>
+        <button class="button dismiss">
+            <i class="icon-arrow-left"></i>Close
+        </button>
+        <button class="button js-enqueue">
+            <i class="icon-plus-sign"></i>Queue
+        </button>
+    </div>
     <div class="large-6 columns">
         <h2><%= episodeParent %></h2>
 
@@ -15,15 +23,5 @@
             <p>Episode Summary not available</p>
         <% } %>
 
-    </div>
-    <div class="dialog-fixed-bottom">
-        <button class="button dismiss">
-            <i class="icon-arrow-left"></i>
-            Close
-        </button>
-        <button class="button js-enqueue">
-            <i class="icon-plus-sign"></i>
-            Queue
-        </button>
     </div>
 </div>

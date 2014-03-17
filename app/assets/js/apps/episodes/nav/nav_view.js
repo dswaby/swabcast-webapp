@@ -1,6 +1,7 @@
 (function() {
   define(["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], function(Swabcast, navTpl) {
     Swabcast.module("EpisodesApp.Nav.View", function(View, Swabcast, Backbone, Marionette, $, _) {
+      View.Layout = Marionette.Layout.extend();
       return View.Nav = Marionette.ItemView.extend({
         template: navTpl,
         events: {

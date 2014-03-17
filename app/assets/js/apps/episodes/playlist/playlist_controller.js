@@ -14,9 +14,16 @@
               if (typeof tracks.at(0) !== "undefined") {
                 this.nowPlaying = tracks.at(0);
               }
-              playlistTracks = new View.Tracks({
-                collection: tracks
-              });
+              playlistTracks = void 0;
+              if (extendedView) {
+                playlistTracks = new View.TracksExtended({
+                  collection: tracks
+                });
+              } else {
+                playlistTracks = new View.Tracks({
+                  collection: tracks
+                });
+              }
               playlistTracks.on("itemview:episode:delete", function(childView, model) {
                 var modelUid;
                 if (typeof tracks.at(1) === "undefined" && tracks.length === 1) {

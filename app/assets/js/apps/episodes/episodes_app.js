@@ -6,9 +6,9 @@
         appRoutes: {
           library: "showPageMedia",
           "episodes/:id": "showEpisode",
-          "feed/:id": "showFeedEpisodesById",
+          "feed/:id": "showFeedEpisodesOnLoad",
           "episodes/:id/edit": "editEpisode",
-          playlist: "showPlaylist"
+          playlist: "showPlaylistOnLoad"
         }
       });
       API = {
@@ -77,7 +77,7 @@
             return EpisodesApp.Feed.Controller.showEpisodeList(model);
           });
         },
-        showFeedEpisodesById: function(id) {
+        showFeedEpisodesOnLoad: function(id) {
           require(["apps/episodes/nav/nav_controller"], function() {
             return EpisodesApp.Nav.Controller.showNav();
           });
@@ -89,6 +89,17 @@
           });
           return require(["apps/episodes/feed/feed_controller"], function() {
             return EpisodesApp.Feed.Controller.showFeedEpisodesById(id);
+          });
+        },
+        showPlaylistOnLoad: function() {
+          require(["apps/episodes/nav/nav_controller"], function() {
+            return EpisodesApp.Nav.Controller.showNav();
+          });
+          require(["apps/episodes/playlist/playlist_controller"], function() {
+            return EpisodesApp.Playlist.Controller.showPlayistMain();
+          });
+          return require(["apps/episodes/player/player_controller"], function() {
+            return EpisodesApp.Player.Controller.showControls();
           });
         },
         featureNotImplemented: function() {
@@ -133,6 +144,7 @@
         return API.showFeedEpisodes(model);
       });
       Swabcast.on("playlist:mainview", function() {
+        Swabcast.navigate("playlist");
         return API.showPlaylistMain();
       });
       Swabcast.on("static:about:app", function() {

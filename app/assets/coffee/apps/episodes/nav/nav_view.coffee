@@ -1,6 +1,10 @@
 define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTpl) ->
   Swabcast.module "EpisodesApp.Nav.View", (View, Swabcast, Backbone, Marionette, $, _) ->
 
+    View.Layout = Marionette.Layout.extend(
+
+    )
+
     View.Nav = Marionette.ItemView.extend(
       template: navTpl
       events:

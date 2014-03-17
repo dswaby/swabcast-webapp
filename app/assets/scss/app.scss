@@ -93,6 +93,7 @@
   font-style: normal;
 }
 .fi-alert:before,
+.fi-arrow-left:before,
 .fi-star:before,
 .fi-arrow-up:before,
 .fi-skull:before,
@@ -151,6 +152,7 @@
 .fi-arrow-up:before { content: "\f10c"; }
 .fi-info:before { content: "\f15e"; }
 .fi-widget:before { content: "\f214"; }
+.fi-arrow-left:before { content: "\f10a"; }
 
 
 

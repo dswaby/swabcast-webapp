@@ -3,9 +3,9 @@ define ["app"], (Swabcast) ->
     EpisodesApp.Router = Marionette.AppRouter.extend(appRoutes:
       library: "showPageMedia"
       "episodes/:id": "showEpisode"
-      "feed/:id": "showFeedEpisodesById"
+      "feed/:id": "showFeedEpisodesOnLoad"
       "episodes/:id/edit": "editEpisode"
-      playlist: "showPlaylist"
+      playlist: "showPlaylistOnLoad"
     )
     API =
       # "media:all"
@@ -23,6 +23,7 @@ define ["app"], (Swabcast) ->
       showPlaylistMain: ->
         require ["apps/episodes/playlist/playlist_controller"], ->
           EpisodesApp.Playlist.Controller.showPlayistMain()
+
 
       # "episodes:library"
       showLibrary: ->
@@ -67,7 +68,7 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showEpisodeList model
 
-      showFeedEpisodesById: (id) ->
+      showFeedEpisodesOnLoad: (id) ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
@@ -76,6 +77,15 @@ define ["app"], (Swabcast) ->
           EpisodesApp.Player.Controller.showControls()
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeedEpisodesById id
+
+      showPlaylistOnLoad: ->
+        require ["apps/episodes/nav/nav_controller"], ->
+          EpisodesApp.Nav.Controller.showNav()
+        require ["apps/episodes/playlist/playlist_controller"], ->
+          EpisodesApp.Playlist.Controller.showPlayistMain()
+        require ["apps/episodes/player/player_controller"], ->
+          EpisodesApp.Player.Controller.showControls()
+
 
       featureNotImplemented: ->
         require ["apps/episodes/feed/feed_controller"], ->
@@ -117,6 +127,7 @@ define ["app"], (Swabcast) ->
       API.showFeedEpisodes model
 
     Swabcast.on "playlist:mainview", ->
+      Swabcast.navigate "playlist"
       API.showPlaylistMain()
 
     Swabcast.on "static:about:app", ->

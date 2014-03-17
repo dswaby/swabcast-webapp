@@ -193,16 +193,16 @@ module.exports = function (grunt) {
             }
           }
         },
-        requirejs: {
-          compile: {
-            options: {
-              baseUrl: '<%= swabstack.app %>/assets/js',
-              mainConfigFile: '<%= swabstack.app %>/assets/js/require_main.js',
-              name: 'vendor/almond', // assumes a production build using almond
-              out: './<%= swabstack.dist %>/require_main_built.js',
-              findNestedDependencies: true,
+        shell: {
+            buildRequire: {
+                command: 'node r.js -o assets/js/build.js',
+                options: {
+                    stdout: true,
+                    execOptions: {
+                        cwd: 'app'
+                    }
+                }
             }
-          }
         }
     });
 
@@ -216,6 +216,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-docco');
     grunt.loadNpmTasks('grunt-targethtml');
+    grunt.loadNpmTasks('grunt-shell');
 
 
 grunt.registerTask('default', [
@@ -230,6 +231,7 @@ grunt.registerTask('default', [
     ]);
 
 grunt.registerTask('build', [
+    'shell',
     'targethtml:dist',
     'copy:templates', // when starting, copy any templates that may have been added
     'compass:app',
@@ -237,7 +239,6 @@ grunt.registerTask('build', [
     'copy:components',
     'copy:assets',
     'copy:requireBuilt',
-    'docco' //generate documentation
     ]);
 
 };
