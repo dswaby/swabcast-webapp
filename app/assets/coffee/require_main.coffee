@@ -1,5 +1,7 @@
 requirejs.config
   baseUrl: "assets/js"
+  urlArgs: 'cb=' + Math.random()
+
   paths:
     backbone: "vendor/backbone"
     localstorage: "vendor/backbone.localstorage"
@@ -10,7 +12,7 @@ requirejs.config
     tpl: "vendor/tpl"
     json2: "vendor/json2"
     foundation: "vendor/foundation"
-    transmit: "vendor/jquery.transmit"
+    transit: "vendor/jquery.transit"
 
   #syphon: 'vendor/backbone.syphon',
   shim:
@@ -31,7 +33,7 @@ requirejs.config
 
     "jquery-ui": ["jquery"]
 
-    transmit:
+    transit:
       deps: ["jquery"]
 
     #   'spin.jquery':['jquery'],

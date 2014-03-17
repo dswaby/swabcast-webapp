@@ -1,4 +1,4 @@
-define ["marionette", "jquery-ui"], (Marionette) ->
+define ["marionette", "jquery-ui", "transit"], (Marionette) ->
   Marionette.Region.Dialog = Marionette.Region.extend(
     onShow: (view) ->
       $('body').addClass("locked")

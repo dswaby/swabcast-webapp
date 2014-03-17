@@ -32,7 +32,9 @@
 }
 
 .feed-list {
-  background: #4B4B4B -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(71, 69, 69)), to(#3D3B3B)) !important;
+  //background: #4B4B4B -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(71, 69, 69)), to(#3D3B3B)) !important;
+  background: #fff;
+  padding-top:12px;
 }
 
 .not-found {
@@ -209,7 +211,7 @@ $include-html-table-classes: $include-html-classes !default;
 
 // These control the background color for the table and even rows
 $table-bg: #fff;
-$table-even-row-bg: #f9f9f9;
+$table-even-row-bg: #fff;
 
 // These control the table cell border style
 $table-border-style: solid;

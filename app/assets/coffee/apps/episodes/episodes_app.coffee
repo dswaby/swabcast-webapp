@@ -48,7 +48,7 @@ define ["app"], (Swabcast) ->
 
       showPlaylist: ->
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks()
+          EpisodesApp.Playlist.Controller.logThisMessage()
 
       showEpisodeDetails: (model) ->
         require ["apps/episodes/feed/feed_controller"], ->
@@ -83,6 +83,7 @@ define ["app"], (Swabcast) ->
       API.showPageMedia()
 
     Swabcast.on "episodes:library", ->
+      Swabcast.navigate "library"
       API.showLibrary()
 
     Swabcast.on "episodes:list", ->
@@ -98,7 +99,6 @@ define ["app"], (Swabcast) ->
       API.editEpisode id
 
     Swabcast.on "episodes:playlist", ->
-      Swabcast.navigate "playlist"
       API.showPlaylist()
 
     Swabcast.on "episode:details", (model) ->
@@ -114,11 +114,7 @@ define ["app"], (Swabcast) ->
       Swabcast.navigate "feed/" + model.get("id")
       API.showFeedEpisodes model
 
-    # Swabcast.on "feedid:episodeslist", (id) ->
-    #   API.showFeedEpisodes
-
     Swabcast.on "playist:mainview", ->
-      mainview = true
       API.showPlaylistView(mainview)
 
     Swabcast.addInitializer ->

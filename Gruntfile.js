@@ -6,7 +6,7 @@ module.exports = function (grunt) {
     var swabstackConfig = {
         app: 'app',
         dist: 'dist',
-        test: 'app/test'
+        test: 'test'
     };
     grunt.initConfig({
         swabstack: swabstackConfig,
@@ -19,15 +19,6 @@ module.exports = function (grunt) {
                     'output-style': 'expanded'
                 }
             }
-            // dist: {
-            //     options: {
-            //         'config': './<%= swabstack.app %>/config.rb',  // css_dir = 'dev/css'
-            //         'sassDir': './<%= swabstack.app %>/assets/scss',
-            //         'cssDir': './<%= swabstack.dist %>/css',
-            //         'output-style': 'compressed'
-
-            //     }
-            // }
         },
         watch: {
             compass: {
@@ -102,7 +93,7 @@ module.exports = function (grunt) {
             testserver: {
                 options: {
                     port: 1234,
-                    base: '.'
+                    base: './'
                 }
             }
         },
@@ -145,6 +136,15 @@ module.exports = function (grunt) {
                     dest: '<%= swabstack.app %>/assets/js/'
                 }]
             },
+            // tests: {
+            //     files: [{
+            //         expand: true,
+            //         cwd: '<%= swabstack.app %>/assets/js/',
+            //         src: ['**/*.js'],
+            //         dest: '<%= swabstack.test %>/scripts/js/'
+            //     }]
+
+            // },
             assets: {
                 files: [{
                     expand: true,

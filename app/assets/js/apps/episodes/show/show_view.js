@@ -35,11 +35,28 @@
           return this.trigger("dialog:close");
         },
         queueEpisode: function(e) {
+          var addToPlaylist, episodeElement;
           e.preventDefault();
           e.stopPropagation();
+          this.$el.addClass("disabled");
           if (this.model.get("enqueue") === false) {
-            Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.model);
-            this.model.set("enqueue", true);
+            this.model.set({
+              enqueue: true
+            });
+            this.model.save();
+            addToPlaylist = Swabcast.request("playlist:addtoqueue", this.model);
+            episodeElement = this.$el;
+            $.when(addToPlaylist).done(function(apiResponse) {
+              if (apiResponse === "fail") {
+                console.log("we dun goofed");
+              }
+              if (apiResponse === "success") {
+                console.log("holy fuck it worked");
+                return episodeElement.fadeOut("slow", function() {
+                  return $(this).fadeIn("slow");
+                });
+              }
+            });
           }
           return this.trigger("dialog:close");
         }
@@ -78,6 +95,7 @@
           return Swabcast.trigger("episode:details", this.model);
         },
         toggleQueue: function(e) {
+          var addToPlaylist, episodeElement;
           e.preventDefault();
           e.stopPropagation();
           this.$el.addClass("disabled");
@@ -86,12 +104,21 @@
               enqueue: true
             });
             this.model.save();
-            Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.model);
+            addToPlaylist = Swabcast.request("playlist:addtoqueue", this.model);
+            episodeElement = this.$el;
+            $.when(addToPlaylist).done(function(apiResponse) {
+              if (apiResponse === "fail") {
+                console.log("we dun goofed");
+              }
+              if (apiResponse === "success") {
+                console.log("holy fuck it worked");
+              }
+              return episodeElement.fadeOut("slow", function() {
+                return $(this).fadeIn("slow");
+              });
+            });
+            return this.trigger("dialog:close");
           }
-          this.$el.fadeOut("slow", function() {
-            return $(this).fadeIn("slow");
-          });
-          return this.trigger("dialog:close");
         },
         previewAudio: function(e) {
           e.preventDefault();

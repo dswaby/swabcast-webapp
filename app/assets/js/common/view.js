@@ -45,9 +45,19 @@
             buttonText: this.buttonText
           };
         },
+        onBeforeClose: function() {
+          return this.$el.transition({
+            perspective: "100px",
+            rotate3d: "1,1,0,180deg"
+          });
+        },
         navigateToLibrary: function() {
+          this.$el.transition({
+            perspective: "100px",
+            rotate3d: "1,1,0,180deg"
+          });
           Swabcast.trigger("episodes:library");
-          return this.el.close;
+          return this.close();
         }
       });
     });

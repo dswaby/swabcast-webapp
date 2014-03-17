@@ -3,6 +3,14 @@
     Swabcast.module("EpisodesApp.Feed", function(Feed, Swabcast, Backbone, Marionette, $, _) {
       return Feed.Controller = {
         showFeeds: function() {
+          require(["common/view"], function(CommonViews) {
+            var loadingView;
+            loadingView = new CommonViews.Loading({
+              title: "Artificialy delaying this response",
+              message: "This is the view that will show if waiting for data"
+            });
+            return Swabcast.libraryRegion.show(loadingView);
+          });
           return require(["entities/feed"], function() {
             var feedLayout, fetchingLibrary;
             fetchingLibrary = Swabcast.request("entities:library");

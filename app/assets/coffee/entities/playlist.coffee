@@ -61,6 +61,41 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
 
         promise
 
+      addToPlaylist: (model) ->
+        queuedTracks = @getPlaylistEntities()
+        defer = $.Deferred()
+
+        $.when(queuedTracks).done (tracks) ->
+          highestOrder = undefined
+          inQueue = undefined
+          if tracks.length isnt 0
+            inQueue = tracks.find((t) ->
+              t.get("uid") is model.get("uid")
+            )
+            highestOrder = tracks.max((t) ->
+              t.get "order"
+            )
+            highestOrder = highestOrder.get("order") + 1
+          unless inQueue
+            newTrack = new Swabcast.Entities.QueuedEpisode(
+              uid: model.get("uid") or null
+              albumArt: model.parent.get("albumArt") or null
+              episodeTitle: model.get("episodeTitle") or null
+              feedUrl: model.parent.get("feedUrl") or null
+              episodeParent: model.parent.get("subscriptionTitle") or null
+              mediaUrl: model.get("mediaUrl") or null
+              enqueue: true
+              order: highestOrder or 1
+            )
+            tracks.add newTrack
+            newTrack.save()
+            Swabcast.trigger "episodes:playlist"
+            defer.resolve "success"
+          else
+            defer.resolve "fail"
+        defer.promise()
+
+
       firstInPlaylist: ->
         queuedTracks = new Entities.Playlist()
         defer = $.Deferred()
@@ -115,6 +150,9 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
 
     Swabcast.reqres.setHandler "playlist:first", ->
       API.firstInPlaylist()
+
+    Swabcast.reqres.setHandler "playlist:addtoqueue", (model) ->
+      API.addToPlaylist model
 
 
   return

@@ -1,8 +1,28 @@
-TODO
-====
+Used in this project
+====================
 
-*  set up request response object for success failure of enqueing track
-*  figure out what the fuck is going on with collections retuy
-*  add common views to template cache
-*  fix bugs in player, specifically loading and seeking related
-*
+  * development
+    * Grunt
+    * Coffeescript
+    * requirejs
+
+  * app
+    * jquery, jquery-ui, transit.jquery
+    * AMD with requirejs
+    * almond.js - require.js shim
+    * r.js optimizer
+    * backbone.js
+    * marionette.js
+    * foundation CSS/ fastclick
+
+  * Server
+    * node.js
+    * express.js framework
+    * mongodb
+    * mongoose
+
+
+  * Testing
+    * phantomjs-mocha
+    * mocha
+    * chai

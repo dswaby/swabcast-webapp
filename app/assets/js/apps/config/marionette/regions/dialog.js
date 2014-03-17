@@ -1,5 +1,5 @@
 (function() {
-  define(["marionette", "jquery-ui"], function(Marionette) {
+  define(["marionette", "jquery-ui", "transit"], function(Marionette) {
     Marionette.Region.Dialog = Marionette.Region.extend({
       onShow: function(view) {
         var dialogWidth, self, winheight;

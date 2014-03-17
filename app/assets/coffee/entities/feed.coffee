@@ -2368,11 +2368,20 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "summary": "Topics, tools and tips for web application developers, including testing strategies, upcoming conferences, interviews with developers, seo techniques, optimization tip and more."
         "albumArt": "webdev.jpg"
         "episodes": [
+          "uid": 36684164
+          "url": "http://feedproxy.google.com/~r/WebdevradioPodcastHome/~5/XvmdjHnpzjc/wdr_119.mp3"
+          "explicit": false
+          "episodeTitle": "Episode 119: Toran Billups interview"
+          "episodeSummary": "I had a chance to chat with Toran Billups about EmberJS, PyTenn and other stuff. Take a listen toranbillups.com emberjs.com"
+          "publishedAt": 1394899124
+          "duration": 4308
+        ,
           "uid": 36260631
           "mediaUrl": "http://feedproxy.google.com/~r/WebdevradioPodcastHome/~5/sdz8z2kGi7I/wdr_118.mp3"
           "explicit": false
           "episodeTitle": "Episode 118: Safe navigation coming to C#, PHP object injection in WordPress"
           "episodeSummary": "C# may get the safe navigation operator soon! <a href=\"http://blogs.msdn.com/b/jerrynixon/archive/2014/02/26/at-last-c-is-getting-sometimes-called-the-safe-navigation-operator.aspx\">http://blogs.msdn.com/b/jerrynixon/archive/2014/02/26/at-last-c-is-getting-sometimes-called-the-safe-navigation-operator.aspx</a> Bing Code Search for Visual Studio <a href=\"http://blogs.msdn.com/b/visualstudio/archive/2014/02/17/introducing-bing-code-search-for-c.aspx\">http://blogs.msdn.com/b/visualstudio/archive/2014/02/17/introducing-bing-code-search-for-c.aspx</a> PHP Object Injection in WordPress <a href=\"http://vagosec.org/2013/09/wordpress-php-object-injection/\">http://vagosec.org/2013/09/wordpress-php-object-injection/</a> Dates are hard – Ben Ramsey <a href=\"http://benramsey.com/blog/2014/02/dates-are-hard/wdr_118\">http://benramsey.com/blog/2014/02/dates-are-hard/wdr_118</a>"
+          "publishedAt": 1393443043
           "duration": 1100
         ,
           "uid": 35939572
@@ -2380,6 +2389,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 117: XDK, security headers and a bit more"
           "episodeSummary": "Intel’s XDK cross platform mobile development: http://xdk-software.intel.com Try out ElasticSearch in a ‘fiddle-like’ environment: <a href=\"https://www.found.no/play/\">https://www.found.no/play/</a> NightwatchJS browser test: http://nightwatchjs.org Security headers you should know about: http://ibuildings.nl/blog/2013/03/4-http-security-headers-you-should-always-be-using"
+          "publishedAt": 1391090277
           "duration": null
         ,
           "uid": 34951736
@@ -2387,6 +2397,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 116 – Foundation 5, DotNetFiddle and more"
           "episodeSummary": "Puppet vs Chef vs Ansible vs Salt post and discussion <a href=\"http://www.infoworld.com/d/data-center/review-puppet-vs-chef-vs-ansible-vs-salt-231308\">http://www.infoworld.com/d/data-center/review-puppet-vs-chef-vs-ansible-vs-salt-231308</a> <a href=\"http://www.alpacajs.org\">http://www.alpacajs.org</a> Zurb Foundation 5 released discussion Yii framework 2.0 alpha DotNetFiddle – Fiddle with C# from your browser"
+          "publishedAt": 1387854037
           "duration": 1337
         ,
           "uid": 34710716
@@ -2394,6 +2405,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 115: The confessional, PHP BDD and PHP VCR"
           "episodeSummary": "PHP BDD Framework: https://github.com/danielstjules/pho Comparison chart of front-end CSS frameworks: http://usablica.github.io/front-end-frameworks/compare.html PHP VCR: <a href=\"http://php-vcr.github.io%C2%A0reddit\">http://php-vcr.github.io reddit</a> discussion Protect yourself with different terminal colors based on what server you’re connecting to!"
+          "publishedAt": 1386853962
           "duration": 1421
         ,
           "uid": 33300010
@@ -2401,6 +2413,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 114: Netbeans 7.4, Fontello, and Timing Attacks"
           "episodeSummary": "Netbeans 7.4 is out. HTML5 development for Android and iOS devices HTML5 development in Java EE and PHP applications Editing support for Knockout and AngularJS frameworks fontello – icon fonts generator effekt.css timing attacks via html5"
+          "publishedAt": 1384152665
           "duration": 1689
         ,
           "uid": 33005887
@@ -2408,6 +2421,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 113 – PHP.net compromised, Flexbox in your future?"
           "episodeSummary": "The PHP.net website was compromised, but we don’t yet know what the exploit was. No actual code or binaries were affected; the site was just serving up javascript malware. Healtcare.gov is still a mess, but are there lessons we can … <a href=\"http://webdevradio.com/2013/11/episode-113-php-net-compromised-flexbox-in-your-future/\">Continue reading →</a>"
+          "publishedAt": 1383555982
           "duration": 1183
         ,
           "uid": 32781953
@@ -2415,6 +2429,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 112 – Facebook CSRF, KnockoutJS 3"
           "episodeSummary": "I think I’m missing something about apigility.org – help me figure it out. Facebook’s team fixes CSRF exploit in 2 hours. Is Rails’ CookieStore broken by default, or working just fine? KnockoutJS 3 was released – upgrade/change notes are here … <a href=\"http://webdevradio.com/2013/10/260/\">Continue reading →</a>"
+          "publishedAt": 1383059094
           "duration": 1491
         ,
           "uid": 7067547
@@ -2422,6 +2437,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 111 – 8 years and counting"
           "episodeSummary": "So… this is the 8 year anniversary of webdevradio – what’s changed in the last 8 years? Lots! What’s the same? Lots! I go in to a bit more detail than that… Some recent news as well… Rails 4 released … <a href=\"http://webdevradio.com/2013/07/episode-111-8-years-and-counting/\">Continue reading →</a>"
+          "publishedAt": 1372872065
           "duration": null
         ,
           "uid": 2684923
@@ -2429,6 +2445,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 110: Azure hits 1 billion, RubyFlux compiler, Laracasts and more"
           "episodeSummary": "OK, in no particular order: RubyFlux (article I originally found) TechEmpower round 5 Where is .NET headed? Web Components: Polymer Project and X-Tags LaraCasts"
+          "publishedAt": 1369367662
           "duration": null
         ,
           "uid": 2330120
@@ -2436,6 +2453,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode 109: Typescript and a bit more…"
           "episodeSummary": "Heading off to Russia for a bit – if there’s anything you think I should see when I’m there, let me know Saw a good presentation on TypeScript recently, which has piqued my interest – hopefully it piques yours as … <a href=\"http://webdevradio.com/2013/04/episode-109-typescript-and-a-bit-more/\">Continue reading →</a>"
+          "publishedAt": 1369367662
           "duration": null
         ]
       ,
@@ -2452,6 +2470,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #18 - March 13th, 2014"
           "episodeSummary": "<p> In this episode we cover ECMAScript 6 features, a look into custom elements, untangling your JavaScript with Browserify and Multiline.js. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/18-episode-18-march-13th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"https://github.com/lukehoban/es6features\">ECMAScript 6 Features</a> There are a lot of new features in ECMAScript 6. If you’re not actively developing in it, trying to wrap your head around all of the changes is a heavy job. Luckily, Luke Hoban wrote up a great document, in the form of a GitHub readme, detailing the major ECMAScript 6 features. <a href=\"https://github.com/lukehoban/es6features\"> </a> <a href=\"http://lincolnloop.com/blog/untangle-your-javascript-browserify/\">Untangle Your JavaScript with Browserify</a> Modular development on the client side isn’t limited to ES6. You can get some of the biggest advantages of it by breaking your code up into smaller modules and having them require each other. Take a look at how Browserify can help with this post. <a href=\"http://lincolnloop.com/blog/untangle-your-javascript-browserify/\"> </a> <a href=\"https://github.com/sindresorhus/multiline\">Multiline</a> Multiline strings in JavaScript aren't possible and won't be possible anytime soon. Multiline is a tiny library that offers a solution to this without needing a pre-compiler. <a href=\"https://github.com/sindresorhus/multiline\"> </a>"
+          "publishedAt": 1394740217
           "duration": 327
         ,
           "uid": 36425715
@@ -2459,6 +2478,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #17 - March 6th, 2014"
           "episodeSummary": "<p> In this episode we cover GitHubs new Atom.io editor, some useful Knockout binding handlers you can't live without, Testing practices in JavaScript and Angular and Distributed Logging for Node using YAL. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/17-episode-17-march-6th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"https://atom.io/\">Atom</a> GitHub released a new text editor called Atom, a desktop application based on web technologies. Atom is a hackable editor which you can extend using JavaScript, HTML and CSS. <a href=\"https://atom.io/\"> </a> <a href=\"http://tech.pro/blog/1863/10-knockout-binding-handlers-i-don-t-want-to-live-without\">Useful KO.js Binding Handlers</a> Leland Richardson wrote a blog post about \"10 Knockout.js Binding Handlers\" he doesn't want to live without, where he goes over some custom binding handlers he likes to use to help keep his code more readable. <a href=\"http://tech.pro/blog/1863/10-knockout-binding-handlers-i-don-t-want-to-live-without\"> </a> <a href=\"http://blog.envylabs.com/post/61403296076/testing-angularjs-apps-with-protractor\">Testing AngularJS Apps with Protractor</a> Why test JavaScript? That's a question we've all asked at some point. In this short talk we discuss why you might want to test in JavaScript, along with some suggestions on where to go to learn more. <a href=\"http://blog.envylabs.com/post/61403296076/testing-angularjs-apps-with-protractor\"> </a> <a href=\"https://segment.io/blog/2014-02-21-distributed-logging-infrastructure-with-yal/\">Distributed Logging with YAL</a> TJ Holowaychuk, creator of express, koa, and most of the other node libraries you may or may not have heard about, recently wrote a post on the Segment.io blog about a new logging tool they've released called YAL. Learn how to get setup with YAL, Yet Another Logger, and add it to your Node.js application. <a href=\"https://segment.io/blog/2014-02-21-distributed-logging-infrastructure-with-yal/\"> </a>"
+          "publishedAt": 1394129811
           "duration": 484
         ,
           "uid": 36183188
@@ -2466,6 +2486,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #16 - February 27th, 2014"
           "episodeSummary": "<p> In this episode, we talk about Rewriting a Web App in ES6, the Component package manager, the Chrome Fast Tab Switcher chrome extension built in React.js, building an Ember.js app with a Rails API and the future of the Ghost Admin UI. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/16-episode-16-february-27th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"http://blog.tastejs.com/rewriting-a-webapp-with-ecmascript-6/\">Rewriting the TodoMVC web app in ES6</a> Addy Osmani wrote a blog post over at the TasteJS blog on Rewriting a Web App with ECMA Script 6. The post goes over re­writing the well known TodoMVC application, implemented in Backbone, but using some of the upcoming features in ES6 like the Destructuring Assignment, Class Syntax, Spread Operator, Rest Parameter and others. <a href=\"http://blog.tastejs.com/rewriting-a-webapp-with-ecmascript-6/\"> </a> <a href=\"http://flippinawesome.org/2014/02/17/introduction-to-the-component-javascript-package-manager/\">The Component package manager</a> Toby Ho wrote up an Introduction to Component which goes into detail about how to use components, where to find them, making your own components and more. If you are looking for a better way of sharing client side libraries than attaching them to the window object, give this blog post a read. <a href=\"http://flippinawesome.org/2014/02/17/introduction-to-the-component-javascript-package-manager/\"> </a> <a href=\"https://github.com/BinaryMuse/chrome-fast-tab-switcher\">Chrome Fast Tab Switcher</a> Fast Tab Switcher is a Chrome extension by Brandon Tilley that allows us to quickly switch between browser tabs using just our keyboard. The extension itself is just a JavaScript app written using React.js. Brandon also wrote a blog post on how he built the extension, and goes over the different React features, like its new syntax called JSX, and using Browserify and Reactify to built the project. <a href=\"https://github.com/BinaryMuse/chrome-fast-tab-switcher\"> </a> <a href=\"http://robots.thoughtbot.com/emberjs-with-a-separate-rails-api\">Ember.js with a separate Rails API</a> Jason Draper from Thoughtbot wrote a blog post on his experience working on a project that uses Ember.js backed by a Rails API. In the post, Jason also goes into some of the gems within Rails they used, as well as how they managed to use fixtures and CoffeeScript effectively. <a href=\"http://robots.thoughtbot.com/emberjs-with-a-separate-rails-api\"> </a> <a href=\"http://dev.ghost.org/hello-ember/\">Ghost Admin UI in Ember.js</a> Hannah Wolfe recently announced that the Ghost Admin UI is going to be rebuilt in Ember.js. According to Hannah, as a fast moving open source project, the team doesn't want to spend time on things like discussing project structure, designing a framework, documentation, and creating guidelines so that new contributors can get up to speed. With Ember.js, the majority of decisions have already been made, which makes it easier to roll out features and onboard new developers. <a href=\"http://dev.ghost.org/hello-ember/\"> </a>"
+          "publishedAt": 1393528242
           "duration": 404
         ,
           "uid": 35995302
@@ -2473,6 +2494,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #15 - February 20th, 2014"
           "episodeSummary": "<p> Broccoli, multithread.js, Fireplace, JavaScript Promises, Iterators. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/15-episode-15-february-20th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive Courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"http://www.solitr.com/blog/2014/02/broccoli-first-release/\">Broccoli</a> JavaScript build tool and server. <a href=\"http://www.solitr.com/blog/2014/02/broccoli-first-release/\"> </a> <a href=\"http://mattgreer.org/articles/promises%C2%ADin%C2%ADwicked%C2%ADdetail/\">JavaScript Promises... In Wicked Detail</a> Detailed blog post about promises from scratch. <a href=\"http://mattgreer.org/articles/promises%C2%ADin%C2%ADwicked%C2%ADdetail/\"> </a> <a href=\"http://macr.ae/article/iterators%C2%ADand%C2%ADgenerators.html\">Playing with iterators and generators</a> Learn more about iterators and generators in ECMAScript 6. <a href=\"http://macr.ae/article/iterators%C2%ADand%C2%ADgenerators.html\"> </a>"
+          "publishedAt": 1392923962
           "duration": 422
         ,
           "uid": 35859958
@@ -2480,6 +2502,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #14 - February 13th, 2014"
           "episodeSummary": "<p> In this episode we cover gulp-plugin-boilerplate to help you get started with creating gulp plugins quickly, making Angular.js apps realtime with Pusher, page scrolling with ScrollReveal.js, building a simple Todo list using Koa and npm Inc receives funding. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/14-episode-14-february-13th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive Courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"https://github.com/sindresorhus/gulp-plugin-boilerplate/\">Gulp-plugin-boilerplate</a> Sindre Sorhus has created a gulp-­plugin-­boilerplate to help you get started with creating gulp plugins quickly. In addition to manually building the plugin from the boilerplate, you can also build the plugin with yeoman. <a href=\"https://github.com/sindresorhus/gulp-plugin-boilerplate/\"> </a> <a href=\"http://blog.pusher.com/making-angular-js-realtime-with-pusher/\">Using Angular.js with Pusher</a> Sylvain Giuliani wrote an article on the Pusher blog showing how to use Pusher with Angular.js apps. The article shows how to work with the \"angular-pusher\" library. Sylvain finishes with an example of a Node.js app that triggers events to Pusher, which are then listened to by the Angular.js app. <a href=\"http://blog.pusher.com/making-angular-js-realtime-with-pusher/\"> </a> <a href=\"https://github.com/julianlloyd/scrollReveal.js\">ScrollReveal.js</a> ScrollReveal.js is a library that tries to stick to the more tasteful side of things when it comes to altering scrolling in the browser. It only revelas elements on the page after they are scrolled to. <a href=\"https://github.com/julianlloyd/scrollReveal.js\"> </a> <a href=\"http://blog.peterdecroos.com/blog/2014/02/01/koa-zero-to-todo-list/\">Building a Todo list app in Koa.js</a> Peter de Croos wrote a cool blog post teaching how to create a simple web app using Koa.js. He teaches how to build a very simple Todo list using Koa and some modules like koa-­route, for routing, koa-­static, for serving up static files and co-­body for parsing the body of post requests. The app also uses the bluebird module, a full featured Promises/A+ implementation, which is used to \"promisify\" the 'fs' native node module so that its functions return promises that can be used as arguments to yield. <a href=\"http://blog.peterdecroos.com/blog/2014/02/01/koa-zero-to-todo-list/\"> </a> <a href=\"http://blog.npmjs.org/post/76320673650/funding\">npm Inc receives $2.6M funding</a> This week Isaac Schlueter of npm Inc announced that company has closed a round of seed funding with True Ventures. According to Isaac, they will use the money to hire a number of employees, improve availability of the website, host the registry themselves, bring the downloads count statistics back and build the proper monitoring systems for the infrastructure. Isaac said the money raised from the recent scalenpm campaign went to Nodejitsu for hosting the registry for the past few years. <a href=\"http://blog.npmjs.org/post/76320673650/funding\"> </a> <a href=\"http://fivejs.envylabs.com\">Thank You for Listening to Five Minutes of JavaScript</a> <p>The \"5 Minutes of JavaScript\" podcast is released every Thursday. To stay informed about and active with this podcast, we encourage you to do one of the following:</p> <p> Follow <a href=\"https://twitter.com/FiveJSPodcast\">5 Minutes of JavaScript</a> on Twitter<br> Or, subscribe with <a href=\"https://itunes.apple.com/us/podcast/5-minutes-of-javascript/id775261328?mt=2\">iTunes</a> or <a href=\"http://feeds.feedburner.com/FiveMinutesOfJavaScript\">RSS</a> </p> <a href=\"http://fivejs.envylabs.com\"> </a>"
+          "publishedAt": 1392304613
           "duration": 384
         ,
           "uid": 35711914
@@ -2487,6 +2510,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #13 - February 6th, 2014"
           "episodeSummary": "<p> In this episode we talk about marking search engine crawlers happy with Predender.io, E2E tests with Nightwatch, YouMightNotNeedJQuery.com, building graphs with Sigma.js, dotJS conference videos and FluentConf. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/13-episode-13-february-6th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive Courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"https://prerender.io\">Prerender.io</a> Prerender.io helps rich JavaScript web applications improve their SEO by rendering HTML content back to search engine crawlers. It can be used as a third party service or you can clone the repository and run your own Predender.io server. <a href=\"https://prerender.io\"> </a> <a href=\"http://nightwatchjs.org\">Nightwatch.js</a> Nightwatch.js is a UI testing framework based on Node.js and the Selenium webdriver. It allows you to write End­-to-­End tests using only JavaScript and CSS selectors. <a href=\"http://nightwatchjs.org\"> </a> <a href=\"http://youmightnotneedjquery.com\">YouMightNotNeedjQuery.com</a> Zack Bloom and Adam Schwartz from HubSpot created the youmightnotneedjquery.com website, which shows common tasks solved using jQuery and compares each of them with a solution using pure JavaScript. <a href=\"http://youmightnotneedjquery.com\"> </a> <a href=\"http://sigmajs.org\">Sigma.js</a> Sigma.js is a JavaScript library dedicated to graph drawing. It makes easy to publish networks on Web pages, and allows developers to integrate network exploration in rich Web applications. <a href=\"http://sigmajs.org\"> </a> <a href=\"http://www.youtube.com/watch?v=4JdS5RHGroQ\">Videos for dotJS 2013</a> Some of the videos are up from the 2013 dotJS conference in Paris. Just to name a few, James Burke, the creator of require.js gave a talk on Module Frontiers. Andy Osmani, the creator of Yeoman gave a talk on Polymer. And Pamela Fox from Khan Academy gave a talk on Making JavaScript more Learnable. <a href=\"http://www.youtube.com/watch?v=4JdS5RHGroQ\"> </a> <a href=\"http://fluentconf.com/fluent2014\">FluentConf 2014</a> <p>FluentConf is a conference about JavaScript, HTML5, CSS3 and more. It's taking place in San Francisco, from March 11th through the 13th.</p> <p>The speaker line up includes Brendan Eich, Paul Irish, Ilya Grigorik and more.</p> <p>You can get 25% off regular ticket price by using the discount code CODESCHOOL25</p> <a href=\"http://fluentconf.com/fluent2014\"> </a> <a href=\"http://fivejs.envylabs.com\">Thank You for Listening to Five Minutes of JavaScript</a> The \"5 Minutes of JavaScript\" podcast is released every Thursday. To stay informed about and active with this podcast, we encourage you to do one of the following: <p> Follow <a href=\"https://twitter.com/FiveJSPodcast\">5 Minutes of JavaScript</a> on Twitter<br> Or, subscribe with <a href=\"https://itunes.apple.com/us/podcast/5-minutes-of-javascript/id775261328?mt=2\">iTunes</a> or <a href=\"http://feeds.feedburner.com/FiveMinutesOfJavaScript\">RSS</a> </p> <a href=\"http://fivejs.envylabs.com\"> </a>"
+          "publishedAt": 1391702332
           "duration": 438
         ,
           "uid": 35584997
@@ -2494,6 +2518,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #12 - January 30th, 2014"
           "episodeSummary": "<p> This episode covers what's new in CoffeeScript 1.7, using Tether to help with positioning tooltips, getting started with WebRTC using RTC.io, the making of the Warming up with Ember.js course, Node 0.12 performance optimizations and FluentConf 2014. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/12-episode-12-january-30th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive Courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"https://gist.github.com/aseemk/8637896\">CoffeeScript 1.7</a> CoffeeScript 1.7 was recently released! Some of its new features include parens­free method chaining, proper multiline strings, expansion in array restructuring, and new mathematical operators for power, floor division and modulo. <a href=\"https://gist.github.com/aseemk/8637896\"> </a> <a href=\"https://github.com/HubSpot/tether\">Tether</a> Tether is a JavaScript library from HubSpot for efficiently making an absolutely positioned element stay next to another element on the page. <a href=\"https://github.com/HubSpot/tether\"> </a> <a href=\"http://rtc.io\">rtc.io</a> rtc.io is a collection of open source modules that can help with getting started building JavaScript realtime apps. <a href=\"http://rtc.io\"> </a> <a href=\"http://blog.codeschool.com/post/74064923793/the-making-of-warming-up-with-ember-js\">The Making of Warming up With Ember</a> This week the Code School team wrote up a blog post discussing the creation process for their recent Ember.js course. <a href=\"http://blog.codeschool.com/post/74064923793/the-making-of-warming-up-with-ember-js\"> </a> <a href=\"http://strongloop.com/strongblog/performance-node-js-v-0-12-whats-new/\">Node.js v0.12 Performance Optimization</a> Ben Noordhuis from StrongLoop wrote a blog post about the performance optimizations in the upcoming 0.12 version of Node.js. <a href=\"http://strongloop.com/strongblog/performance-node-js-v-0-12-whats-new/\"> </a> <a href=\"http://fluentconf.com/fluent2014\">FluentConf 2014</a> <p>FluentConf is a conference about JavaScript, HTML5, CSS3 and more. It's taking place in San Francisco, from March 11th through the 13th.</p> <p>The speaker line up includes Brendan Eich, Paul Irish, Ilya Grigorik and more.</p> <p>You can get 25% off regular ticket price by using the discount code CODESCHOOL25</p> <a href=\"http://fluentconf.com/fluent2014\"> </a> <a href=\"http://fivejs.envylabs.com\">Thank You for Listening to Five Minutes of JavaScript</a> The \"5 Minutes of JavaScript\" podcast is released every Thursday. <a href=\"http://fivejs.envylabs.com\"> </a>"
+          "publishedAt": 1391090823
           "duration": 374
         ,
           "uid": 35484699
@@ -2501,6 +2526,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #11 - January 23rd, 2014"
           "episodeSummary": "<p> This episode covers component, polymer, learnable programming, BrowserSync and ES6 Promises. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/11-episode-11-january-23rd-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by codeschool</a> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"https://github.com/component/component\">Component Package Manage</a> Component package manager for building a better web. <a href=\"https://github.com/component/component\"> </a> <a href=\"http://www.polymer-project.org/faq.html#uicomponents\">Polymer</a> Polymer is a new type of library for the web, built on top of Web Components, and designed to leverage the evolving web platform on modern browsers. <a href=\"http://www.polymer-project.org/faq.html#uicomponents\"> </a> <a href=\"http://amasad.me/2014/01/10/implementing-bret-victors-learnable-programming-has-never-been-easier/\">Implementing Bret Victor's Learnable Programming Has Never Been Easier</a> Amjad Masad implements Bret Victors Learnable programming demonstration using debugjs and D3. <a href=\"http://amasad.me/2014/01/10/implementing-bret-victors-learnable-programming-has-never-been-easier/\"> </a> <a href=\"https://github.com/shakyShane/browser-sync\">BrowserSync</a> Keep multiple browsers &amp; devices in sync when building websites. <a href=\"https://github.com/shakyShane/browser-sync\"> </a> <a href=\"http://www.html5rocks.com/en/tutorials/es6/promises/\">A Promise is a Promise</a> Article detailing what's new with promises in ES6. <a href=\"http://www.html5rocks.com/en/tutorials/es6/promises/\"> </a> <a href=\"http://fivejs.envylabs.com\">Thank You for Listening to Five Minutes of JavaScript</a> The \"5 Minutes of JavaScript\" podcast is released every Thursday. <a href=\"http://fivejs.envylabs.com\"> </a>"
+          "publishedAt": 1390513632
           "duration": 417
         ,
           "uid": 35377184
@@ -2508,6 +2534,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #10 - January 16th, 2014"
           "episodeSummary": "<p> This episode covers Koa.js, Picturefill, Gulp.js, performance talks at the Chrome Dev Summit, leadership change in Node.js and FluentConf. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/10-episode-10-january-16th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive Courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"http://koajs.com\">Koa</a> Koa.js is a new web framework designed by the team behind express that ditches callback based middleware in favor of JavaScript generators. <a href=\"http://koajs.com\"> </a> <a href=\"https://github.com/jansepar/picturefill\">Picturefill</a> Picturefill is a Responsive Images approach that you can use today that mimics the proposed picture element. <a href=\"https://github.com/jansepar/picturefill\"> </a> <a href=\"http://gulpjs.com\">Gulp</a> Gulp.js is a new streaming build system. It replaces imperative object definitions in favor of a streams inspired method chaining configuration. <a href=\"http://gulpjs.com\"> </a> <a href=\"http://updates.html5rocks.com/2014/01/Chrome-Dev-Summit-Performance-Summary\">Chrome Dev Summit: Performance Summary</a> Paul Lewis over at the HTML5Rocks website has recently published a post with links to some Chrome Dev Summit performance talks and a short summary for each talk. There's talks by Colt McAnlis, Ilya Grigorik, Tom Wiltzius &amp; Nat Duca, and Bryan McQuade. <a href=\"http://updates.html5rocks.com/2014/01/Chrome-Dev-Summit-Performance-Summary\"> </a> <a href=\"http://blog.nodejs.org/2014/01/15/the-next-phase-of-node-js/\">Isaac steps down as Node.js project leader</a> Isaac Schlueter posted on the Node.js blog that he is stepping down as the Node.js project leader to focus his time on npm. TJ Fontaine, who has been effectively leading the Node project for the past year, is the new official project leader. <a href=\"http://blog.nodejs.org/2014/01/15/the-next-phase-of-node-js/\"> </a> <a href=\"http://fluentconf.com/fluent2014\">FluentConf</a> FluentConf is going to be taking place in San Francisco, from March 11th through the 13th. The speaker line up includes Brendan Eich, Paul Irish, Ilya Grigorik and more. Early Price tickets are still available! <a href=\"http://fluentconf.com/fluent2014\"> </a> <a href=\"http://fivejs.envylabs.com\">Thank You for Listening to Five Minutes of JavaScript</a> The \"5 Minutes of JavaScript\" podcast is released every Thursday. <a href=\"http://fivejs.envylabs.com\"> </a>"
+          "publishedAt": 1389887387
           "duration": 406
         ,
           "uid": 35377185
@@ -2515,6 +2542,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #9 - January 9th, 2014"
           "episodeSummary": "<p> Vert.x, Ember1.3.0, CodeCombat goes open source, In-Browser debuggers with JS generators, NPM Module Foundry <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/9-episode-9-january-9th-2014\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\">Sponsored by Code School</a> Learn by doing with our interactive Courses and weekly CodeTV screencasts for just $29/month. <a href=\"http://codeschool.com/?utm_source=five-js&amp;utm_medium=podcast&amp;utm_content=five-js&amp;utm_campaign=sponsor\"> </a> <a href=\"http://vertx.io\">Vert.x</a> Vert.x is a lightweight, high performance application platform for the Java Virtual Machine. It’s like Node.js for the JVM. <a href=\"http://vertx.io\"> </a> <a href=\"https://github.com/emberjs/ember.js/blob/v1.3.0/CHANGELOG.md\">Ember 1.3.0</a> This week, the Ember team released version 1.3.0, just 2 months after releasing 1.2. In addition to a number of bugfixes, there’s a helpful debugger handlebars helper which you can use in your templates. There’s also a new syntax for observing multiple keys in an array, like for example you have an array and you want to see if both property a and property b changed. <a href=\"https://github.com/emberjs/ember.js/blob/v1.3.0/CHANGELOG.md\"> </a> <a href=\"http://blog.codecombat.com/we-have-open-sourced-everything\">CodeCombat</a> CodeCombat, the multiplayer programming game for learning how to code, has recently open sourced their platform. There's a bunch of different areas of interest they need help on, like compilers, physics simulations, user experience, AI, performance tuning, audio processing, translation, security and a lot more. <a href=\"http://blog.codecombat.com/we-have-open-sourced-everything\"> </a> <a href=\"http://amasad.me/2014/01/06/building-an-in-browser-javascript-vm-and-debugger-using-generators/\">Building an In-Browser JavaScript VM and Debugger Using Generators</a> Amjad Masad put together an amazing in-browser debugger using JavaScript, Generators and CodeMirror. He goes over some of the main concepts of it in his blog post, including the code transformations, handling timers and how ES6 generators help. <a href=\"http://amasad.me/2014/01/06/building-an-in-browser-javascript-vm-and-debugger-using-generators/\"> </a> <a href=\"http://blog.nodejitsu.com/npm-binary-modules-and-module-foundry\">NPM Module Foundry</a> Module Foundry is a build server that accepts a package.json file or tarball and returns a fully built tarball. <a href=\"http://blog.nodejitsu.com/npm-binary-modules-and-module-foundry\"> </a> <a href=\"http://five-js.envylabs.com\">Thank You for Listening to Five Minutes of JavaScript</a> The \"5 Minutes of JavaScript\" podcast is released every Thursday. <a href=\"http://five-js.envylabs.com\"> </a>"
+          "publishedAt": 1389277002
           "duration": 353
         ,
           "uid": 35377186
@@ -2522,6 +2550,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #8 - December 19th, 2013"
           "episodeSummary": "<p> Free JavaScript resources, meet the Sails.js MVC framework, Daily JS developer Survey, What's coming up in Ember.js for 2014. <br></p> <p><a href=\"http://five-js.envylabs.com/episodes/8-episode-8-december-19th-2013\">Listen to this episode on 5 Minutes of JavaScript</a></p> <a href=\"https://www.codeschool.com/courses/warming-up-with-emberjs/\">Sponsored by Code School</a> <a href=\"https://www.codeschool.com/courses/warming-up-with-emberjs/\"> </a> <a href=\"http://jsbooks.revolunet.com\">A list of free JavaScript resources</a> The <a href=\"http://jsbooks.revolunet.com\">http://jsbooks.revolunet.com</a> website compiles list of free ebooks, articles and other websites to learn everything JavaScript. <a href=\"http://jsbooks.revolunet.com\"> </a> <a href=\"http://sailsjs.org\">Sails.js</a> Sails.js is a JavaScript MVC framework that makes it easy to build custom, enterprise­ grade Node.js apps <a href=\"http://sailsjs.org\"> </a> <a href=\"https://github.com/phusion/passenger/wiki/Phusion-Passenger%3A-Meteor-tutorial#wiki-why\">Phusion Passenger adds support to Meteor</a> The Phusion Passenger application server recently added support for Meteor applications. <a href=\"https://github.com/phusion/passenger/wiki/Phusion-Passenger%3A-Meteor-tutorial#wiki-why\"> </a> <a href=\"http://dailyjs.com/2013/12/12/javascript-survey-results/\">Daily JS JavaScript Developer Survey</a> Last week, DailyJS released their yearly JavaScript developer survey. <a href=\"http://dailyjs.com/2013/12/12/javascript-survey-results/\"> </a> <a href=\"http://emberjs.com/blog/2013/12/17/whats-coming-in-ember-in-2014.html\">What’s coming in Ember in 2014</a> The Ember.js core team met this past weekend to talk about the roadmap for 2014 and published their plans on the official blog. <a href=\"http://emberjs.com/blog/2013/12/17/whats-coming-in-ember-in-2014.html\"> </a> <a href=\"http://five-js.envylabs.com\">Thank You for Listening to Five Minutes of JavaScript</a> Thank you for listening to 5 Minute of JavaScript. Stay tuned every thursday for the latest news in the JavaScript community. <a href=\"http://five-js.envylabs.com\"> </a>"
+          "publishedAt": 1387548020
           "duration": 356
         ,
           "uid": 35377187
@@ -2529,6 +2558,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #7 - December 12th, 2013"
           "episodeSummary": "Numeral.js helps working with numbers, a closer look at PayPal's Node.js benchmarks, Browserify hits 3.0, ScaleNPM results and notes from the Ember.js Core Team Meeting."
+          "publishedAt": 1386860409
           "duration": 359
         ,
           "uid": 35377188
@@ -2536,6 +2566,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #6 - December 5th, 2013"
           "episodeSummary": "Angular-Pickadate, Monocle.io is open-sourced, Wave simulations in WebGL, Choosing a JavaScript MVC Framework and RedditJS"
+          "publishedAt": 1386255171
           "duration": 346
         ,
           "uid": 35377189
@@ -2543,6 +2574,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #5 - November 28th, 2013"
           "episodeSummary": "FastClick.js, ScaleNPM, You Don't Know JS and Node.js Stream Playground."
+          "publishedAt": 1386254736
           "duration": 359
         ,
           "uid": 35377190
@@ -2550,6 +2582,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #4 - November 15th, 2013"
           "episodeSummary": "Isomorphic JavaScript, Node.js at IBM, Ember Components and Node v0.10.22"
+          "publishedAt": 1386254423
           "duration": 337
         ,
           "uid": 35377191
@@ -2557,6 +2590,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #3 - November 8th, 2013"
           "episodeSummary": "Contrasting Backbone and Angular, using Pedalboard.js to code guitar effects, automate with Grunt.js, Declarative vs. Imperative and Node.js at PayPal."
+          "publishedAt": 1385751869
           "duration": 408
         ,
           "uid": 35377192
@@ -2564,6 +2598,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #2- November 1st, 2013"
           "episodeSummary": "The Event Loop explained, Ember.js and URLs, KO v3.0, Animating DOM transitions, Framer.js, Charlie.js"
+          "publishedAt": 1384614891
           "duration": 397
         ,
           "uid": 35377193
@@ -2571,6 +2606,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Episode #1- October 25th, 2013"
           "episodeSummary": "Stripe adds support for Node.js, templating with Nunjucks, Node.js DoS fix, Firebase and Ember.js and SnapSVG"
+          "publishedAt": 1384209772
           "duration": 341
         ]
       ,
@@ -2582,11 +2618,20 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "summary": "Wired Game|Life Audio: Wired's top videogame experts Chris Kohler and Peter Rubin comment on the state of videogaming, with reviews, previews, and game events."
         "albumArt": "300x300_gamelifeaudio.jpg"
         "episodes": [
+          "uid": 36649764,
+          "mediaUrl": "http://downloads.wired.com/podcasts/assets/gamelifeaudio/gamelifereboot_103.mp3"
+          "explicit": null
+          "episodeTitle": "103: Game|Life –– Sales, SXSW, and Shooter Games"
+          "episodeSummary": ""
+          "publishedAt": 1394820000
+          "duration": 2931
+        ,
           "uid": 36433426
           "mediaUrl": "http://downloads.wired.com/podcasts/assets/gamelifeaudio/gamelifereboot_102.mp3"
           "explicit": null
           "episodeTitle": "102: Game|Life –– Dude, Can You Handle South Park's Authori-tah?"
           "episodeSummary": ""
+          "publishedAt": 1394215200
           "duration": 4458
         ,
           "uid": 36213586
@@ -2594,6 +2639,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "101: Game|Life –– Good Games Come In Threes"
           "episodeSummary": ""
+          "publishedAt": 1393610400
           "duration": 3654
         ,
           "uid": 36048692
@@ -2601,6 +2647,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "100: Game|Life –– An Extra Special 100th Mega-sode"
           "episodeSummary": ""
+          "publishedAt": 1393005600
           "duration": 3973
         ,
           "uid": 35921444
@@ -2608,6 +2655,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "99: Game|Life –– NES Remix 2, Flappy Bird, and More"
           "episodeSummary": ""
+          "publishedAt": 1392400800
           "duration": 3462
         ,
           "uid": 35921438
@@ -2615,6 +2663,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "98: Game|Life –– Minisode: Changing Game Structures and Demo Angst"
           "episodeSummary": ""
+          "publishedAt": 1391796000
           "duration": 1411
         ,
           "uid": 35921422
@@ -2622,6 +2671,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "97: Game|Life –– What's Next for Nintendo?"
           "episodeSummary": ""
+          "publishedAt": 1391191200
           "duration": 4494
         ,
           "uid": 35921408
@@ -2629,6 +2679,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "96: Game|Life –– Nintendo or Ninten-don't?"
           "episodeSummary": ""
+          "publishedAt": 1390586400
           "duration": 4207
         ,
           "uid": 35921392
@@ -2636,6 +2687,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "95: Game|Life –– Broken Age's Dual Story System: Does It Work?"
           "episodeSummary": ""
+          "publishedAt": 1389981600
           "duration": 3543
         ,
           "uid": 35921378
@@ -2643,6 +2695,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "94: Game|Life –– The State of Smartphone Games"
           "episodeSummary": ""
+          "publishedAt": 1389376800
           "duration": 4333
         ,
           "uid": 35921366
@@ -2650,6 +2703,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "93: Game|Life –– So Long, 2013!"
           "episodeSummary": ""
+          "publishedAt": 1386961200
           "duration": 2843
         ,
           "uid": 35921351
@@ -2657,6 +2711,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "92: Game|Life –– Can Wii Go On With U?"
           "episodeSummary": ""
+          "publishedAt": 1386356400
           "duration": 2793
         ,
           "uid": 35921337
@@ -2664,6 +2719,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "91: Game|Life –– The Mostly Magical Xbox One, And More"
           "episodeSummary": ""
+          "publishedAt": 1385146800
           "duration": 3767
         ,
           "uid": 35921323
@@ -2671,6 +2727,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "90: Game|Life –– The PS4 Arrives"
           "episodeSummary": ""
+          "publishedAt": 1384549200
           "duration": 2989
         ,
           "uid": 35921308
@@ -2678,6 +2735,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "89: Game|Life –– Hands On with Xbox One, PS4, Steam Machines, and Mario 3D World"
           "episodeSummary": ""
+          "publishedAt": 1383937200
           "duration": 2819
         ,
           "uid": 35921295
@@ -2685,6 +2743,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "88: Game|Life –– Next-Gen Console Angst and The Stanley Parable"
           "episodeSummary": ""
+          "publishedAt": 1383332400
           "duration": 3016
         ,
           "uid": 35921284
@@ -2692,6 +2751,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "87: Game|Life –– Return of the Podcast"
           "episodeSummary": ""
+          "publishedAt": 1382727600
           "duration": 2922
         ,
           "uid": 35921274
@@ -2699,6 +2759,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "86: Game|Life –– Minisode: Why There's No Podcast This Week"
           "episodeSummary": ""
+          "publishedAt": 1382131800
           "duration": 373
         ,
           "uid": 35921266
@@ -2706,6 +2767,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "85: Game|Life –– Grand Theft Auto V: The Latest and Greatest"
           "episodeSummary": ""
+          "publishedAt": 1380308400
           "duration": 2587
         ,
           "uid": 35921257
@@ -2713,6 +2775,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "84: Game|Life –– Mini-Episode"
           "episodeSummary": ""
+          "publishedAt": 1379703600
           "duration": 371
         ,
           "uid": 35921246
@@ -2720,6 +2783,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "83: Game|Life –– Meh to Microconsoles"
           "episodeSummary": ""
+          "publishedAt": 1379098800
           "duration": 3397
         ,
           "uid": 35921235
@@ -2727,6 +2791,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "82: Game|Life –– What We Learned at PAX"
           "episodeSummary": ""
+          "publishedAt": 1378494000
           "duration": 2993
         ,
           "uid": 35921226
@@ -2734,6 +2799,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "81: Game|Life –– PAX Preview and Nintendo 2DS Impressions"
           "episodeSummary": ""
+          "publishedAt": 1377889200
           "duration": 2945
         ,
           "uid": 35921216
@@ -2741,6 +2807,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "80: Game|Life –– Xbox One Anticipation and Gone Home"
           "episodeSummary": ""
+          "publishedAt": 1377284400
           "duration": 3013
         ,
           "uid": 35921208
@@ -2748,6 +2815,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "79: Game|Life –– Rise of the Oculus"
           "episodeSummary": ""
+          "publishedAt": 1376074800
           "duration": 3331
         ,
           "uid": 35921198
@@ -2755,6 +2823,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "78: Game|Life –– The Good, the Bad, and the Busty"
           "episodeSummary": ""
+          "publishedAt": 1375470000
           "duration": 2820
         ,
           "uid": 35921188
@@ -2762,6 +2831,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "77: Game|Life –– EarthBound and Eternal Darkness"
           "episodeSummary": ""
+          "publishedAt": 1374865200
           "duration": 2321
         ,
           "uid": 35921180
@@ -2769,6 +2839,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "76: Game|Life –– The Microsoft Shuffle"
           "episodeSummary": ""
+          "publishedAt": 1373655600
           "duration": 3122
         ,
           "uid": 35921170
@@ -2776,6 +2847,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "75: Game|Life –– The Post-E3 Show!"
           "episodeSummary": ""
+          "publishedAt": 1371841200
           "duration": 3616
         ,
           "uid": 35921161
@@ -2783,6 +2855,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "74: Game|Life –– Mini Pre E3 Update"
           "episodeSummary": ""
+          "publishedAt": 1370631600
           "duration": 757
         ,
           "uid": 35921151
@@ -2790,6 +2863,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "73: Game|Life –– A Slow Week"
           "episodeSummary": ""
+          "publishedAt": 1370026800
           "duration": 2495
         ,
           "uid": 35921140
@@ -2797,6 +2871,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "72: Game|Life –– XBox One Aftermath"
           "episodeSummary": ""
+          "publishedAt": 1369411200
           "duration": 3025
         ,
           "uid": 35921128
@@ -2804,6 +2879,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "71: Game|Life SPECIAL –– XBox Reveal"
           "episodeSummary": ""
+          "publishedAt": 1369117800
           "duration": 3837
         ,
           "uid": 35921118
@@ -2811,6 +2887,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "70: Game|Life –– Nintendo: Stop Hitting Yourself! No seriously, we're worried"
           "episodeSummary": ""
+          "publishedAt": 1368806400
           "duration": 2645
         ,
           "uid": 35921104
@@ -2818,6 +2895,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "69: Game|Life –– Why It's Ok For Big Guys To Kickstart"
           "episodeSummary": ""
+          "publishedAt": 1368201600
           "duration": 1957
         ,
           "uid": 35921089
@@ -2825,6 +2903,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "68: Game|Life –– Back from Japan! And the New X-Box"
           "episodeSummary": ""
+          "publishedAt": 1367596800
           "duration": 3773
         ,
           "uid": 35921074
@@ -2832,6 +2911,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "67: Game|Life –– EA Games, Microsoft, Batman, Megaman: The FPS"
           "episodeSummary": ""
+          "publishedAt": 1365782400
           "duration": 1292
         ,
           "uid": 35921058
@@ -2839,6 +2919,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "66: Game|Life –– LucasArts, Roger Ebert, Bioshock: Infinite –– Ultimate Ending Spoilers Edition"
           "episodeSummary": ""
+          "publishedAt": 1365166800
           "duration": 3642
         ,
           "uid": 35921043
@@ -2846,6 +2927,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "65: Game|Life –– Bioshock: Infinite –– Spoiler Free Edition"
           "episodeSummary": ""
+          "publishedAt": 1364562000
           "duration": 1938
         ,
           "uid": 35921030
@@ -2853,6 +2935,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "64: Game|Life –– PAX Is Here! Also The Walking Dead, and EA"
           "episodeSummary": ""
+          "publishedAt": 1363973400
           "duration": 2715
         ,
           "uid": 35921018
@@ -2860,6 +2943,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "63: Game|Life –– Torment, Lord British, and Sim City"
           "episodeSummary": ""
+          "publishedAt": 1362747600
           "duration": 2293
         ,
           "uid": 35921003
@@ -2867,6 +2951,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "62: Game|Life –– It's the PS4!"
           "episodeSummary": ""
+          "publishedAt": 1362142800
           "duration": 3290
         ,
           "uid": 35920989
@@ -2874,6 +2959,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "61: Game|Life –– Nintendo's Sorry State"
           "episodeSummary": ""
+          "publishedAt": 1360933200
           "duration": 1438
         ,
           "uid": 35920974
@@ -2881,6 +2967,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "60: Game|Life –– Bad News Week: Nintendo's Sorry Financials and More"
           "episodeSummary": ""
+          "publishedAt": 1359723600
           "duration": 3442
         ,
           "uid": 35920959
@@ -2888,6 +2975,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "59: Game|Life –– the Fall of THQ, the rise of Nintendo's Virtual Console, and What's A Vaporware Anyway?"
           "episodeSummary": ""
+          "publishedAt": 1359118800
           "duration": 2967
         ,
           "uid": 35920944
@@ -2895,6 +2983,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "58: Game|Life –– Disney Infinity (and beyond), video games and gun violence"
           "episodeSummary": ""
+          "publishedAt": 1358514000
           "duration": 2967
         ,
           "uid": 35920929
@@ -2902,6 +2991,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "57: Game|Life –– CES and the 2013 Console War"
           "episodeSummary": ""
+          "publishedAt": 1357909200
           "duration": 2419
         ,
           "uid": 35920915
@@ -2909,6 +2999,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "56: Game|Life –– Game of the Year Countdown!"
           "episodeSummary": ""
+          "publishedAt": 1355490000
           "duration": 2596
         ,
           "uid": 35920902
@@ -2916,6 +3007,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "55: Game|Life –– The MoMA Videogame Exhibit, Nintendo Direct, and Professor Layton vs. Ace Attorney"
           "episodeSummary": ""
+          "publishedAt": 1354885200
           "duration": 2463
         ,
           "uid": 35920886
@@ -2923,6 +3015,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "54: Game|Life –– David Ventura, iNiS, Destiny, and Cross-Generation Gaming"
           "episodeSummary": ""
+          "publishedAt": 1354280400
           "duration": 2742
         ,
           "uid": 35920871
@@ -2930,6 +3023,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": null
           "episodeTitle": "53: Game|Life –– Hitman: Absolution, Nintendoland, and Call of Duty: Black Ops Declassified"
           "episodeSummary": ""
+          "publishedAt": 1354272400
           "duration": 2601
         ]
       ,
@@ -2946,6 +3040,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "147 RR APIs That Don’t Suck with Michele Titolo"
           "episodeSummary": "Panel Michele Titolo (twitter blog) David Brady (twitter github blog ADDcasts) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:20 – Michele Titolo CocoaPods CTO of Women Who Code 01:48 – CocoaPods NSBrief – #107: Michele Titolo 02:50 – Working With APIs Michele Titolo: […]"
+          "publishedAt": 1394629241
           "duration": 4605
         ,
           "uid": 36567752
@@ -2953,6 +3048,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "147 RR APIs That Don’t Suck with Michele Titolo"
           "episodeSummary": "Panel Michele Titolo (twitter blog) David Brady (twitter github blog ADDcasts) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:20 – Michele Titolo CocoaPods CTO of Women Who Code 01:48 – CocoaPods NSBrief – #107: Michele Titolo 02:50 – Working With APIs Michele Titolo: […]"
+          "publishedAt": 1394028012
           "duration": 4605
         ,
           "uid": 36347282
@@ -2960,6 +3056,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "146 RR Book Club – Ruby Under a Microscope with Pat Shaughnessy"
           "episodeSummary": "Panel Pat Shaughnessy (twitter github blog) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Avdi Grimm (twitter github blog book) Aaron Patterson (twitter github blog) Discussion 01:53 – Pat Shaughnessy Introduction 02:19 – Ruby Under a Microscope by Pat Shaughnessy 05:03 – How to Learn Code Experiments 11:14 – How Ruby is […]"
+          "publishedAt": 1392213611
           "duration": 4022
         ,
           "uid": 36150156
@@ -2967,6 +3064,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "145 RR Data Analytics with Heather Rivers"
           "episodeSummary": "Panel Heather Rivers (twitter github blog) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Avdi Grimm (twitter github blog book) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 00:00 – RIP Jim Weirich 03:30 – Heather Rivers Introduction MODE Analytics 05:40 – Data Analytics The Lean Startup: […]"
+          "publishedAt": 1391608827
           "duration": 3525
         ,
           "uid": 35976510
@@ -2974,6 +3072,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "144 RR Passion"
           "episodeSummary": "Panel Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:39 – Passion Avdi Grimm: The Moderately Enthusiastic Programmer Avdi Grimm: The Passion Gospel David Brady: Loyalty and Layoffs Ruby Rogues Episode #125: Loyalty […]"
+          "publishedAt": 1391004009
           "duration": 3953
         ,
           "uid": 35837751
@@ -2981,6 +3080,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "143 RR Passenger Enterprise with Tinco Andringa and Hongli Lai"
           "episodeSummary": "Panel Hongli Lai (twitter github blog) Tinco Andringa (github) James Edward Gray (twitter github blog) Avdi Grimm (twitter github blog book) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:35 – Hongli Lai and Tinco Andringa Introductions Phusion 02:29 – Phusion Passenger 04:29 – Rack 05:04 – Node.js, MeteorJS, Python […]"
+          "publishedAt": 1390399235
           "duration": 2674
         ,
           "uid": 35690707
@@ -2988,6 +3088,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "142 RR Depression and Mental Illness with Greg Baugues"
           "episodeSummary": "Panel Greg Baugues (twitter github blog) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Avdi Grimm (twitter github blog book) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:32 – Greg Baugues Introduction Twilio 03:33 – Greg Baugues: Devs and Depression 07:20 – Stigma James Edward Gray […]"
+          "publishedAt": 1389787257
           "duration": 4891
         ,
           "uid": 35567717
@@ -2995,6 +3096,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "141 RR Teaching Kids with Ron Evans"
           "episodeSummary": "Get your Ruby Rogues T-Shirt or hoodie!! Ladies’ sizes available as well! Panel Ron Evans (twitter github blog) David Brady (twitter github blog ADDcasts) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:24 – Ron Evans Introduction The Hybrid […]"
+          "publishedAt": 1388498422
           "duration": 6049
         ,
           "uid": 35432978
@@ -3002,6 +3104,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "140 RR Heroku with Richard Schneeman"
           "episodeSummary": "Get your Ruby Rogues T-Shirt or hoodie!! Ladies’ sizes available as well! Panel Richard Schneeman (twitter github blog) Josh Susser (twitter github blog) David Brady (twitter github blog ADDcasts) Avdi Grimm (twitter github blog book) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:51 – The Job Replacement Guide by […]"
+          "publishedAt": 1389787257
           "duration": 4348
         ,
           "uid": 35339679
@@ -3009,6 +3112,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "139 RR Riak with Sean Cribbs and Bryce Kerley"
           "episodeSummary": "Panel Sean Cribbs (twitter github blog) Bryce Kerley (twitter github blog) Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) David Brady (twitter github blog ADDcasts) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:32 – Job Replacement Guide by David Brady 03:28 – Sean Cribbs Introduction […]"
+          "publishedAt": 1388498422
           "duration": 4330
         ,
           "uid": 35131048
@@ -3016,6 +3120,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "138 RR The RubyRep Holiday Takeover"
           "episodeSummary": "Panel Mandy Moore (twitter RubyRep DevReps) Discussion Happy Holidays and Happy New Year from the Ruby Rogues (and Mandy)!! Book Club Ruby Under a Microscope by Pat Shaughnessy! We will be interviewing Pat on February 27, 2014. The episode will air on March 6th, 2014. No Starch was kind enough to provide this coupon […]"
+
           "duration": 2250
         ,
           "uid": 34965811
@@ -3023,6 +3128,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "137 RR Book Club – Functional Programming for the Object-Oriented Programmer with Brian Marick"
           "episodeSummary": "Panel Brian Marick (twitter github blog) Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:27 – Brian Marick Introduction Functional Programming for the Object-Oriented Programmer by Brian Marick 01:58 – The Making of FPOOP LISP Clojure Leanpub 05:00 […]"
+          "publishedAt": 1387980049
           "duration": 3510
         ,
           "uid": 34868806
@@ -3030,6 +3136,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "136 RR Consulting vs Product Work Part 2 with Steven Proctor"
           "episodeSummary": "Panel Steven Proctor (twitter github blog) James Edward Gray (twitter github blog) Katrina Owen (twitter github blog) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:37 – Steven Proctor Introduction Simplify 03:36 – Background 121 RR Consulting vs Product Work with Adam Keys 08:37 – […]"
+          "publishedAt": 1387375242
           "duration": 3110
         ,
           "uid": 34657371
@@ -3037,6 +3144,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "135 RR HTTP 2.0 with Ilya Grigorik"
           "episodeSummary": "Panel Ilya Grigorik (twitter github blog) Josh Susser (twitter github blog) Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:49 – Ilya Grigorik Introduction Web Performance Engineer at Google 03:08 – HTTP 2.0 HTTP 0.9 Gopher HTTP 1.0 […]"
+          "publishedAt": 1386770402
           "duration": 4162
         ,
           "uid": 34417643
@@ -3044,6 +3152,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "134 RR Sharktime with Lucas Dohmen"
           "episodeSummary": "Panel Lucas Dohmen (twitter github) Katrina Owen (twitter github blog) David Brady (twitter github blog ADDcasts) Avdi Grimm (twitter github blog book) Discussion 01:51 – Ruby Rogues T-Shirts! 02:22 – Lucas Dohmen Introduction Ruby Golf Contest Winner Lucas’ Ruby Golf Submission: Sharktime Lucas’ Ruby Golf Submission: To-Do List triAGENS 11:03 – ArangoDB arangodb 12:35 – […]"
+          "publishedAt": 1386165649
           "duration": 4715
         ,
           "uid": 34047801
@@ -3051,6 +3160,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "133 RR Threading with Emily Stolfo"
           "episodeSummary": "Panel Emily Stolfo (twitter github) Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) David Brady (twitter github blog ADDcasts) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:00 – Emily Stolfo Introduction MongoDB Columbia University 06:46 – Emily Stolfo: Thread Safety First José Valim: Concurrency in […]"
+          "publishedAt": 1385560812
           "duration": 4726
         ,
           "uid": 33656509
@@ -3058,6 +3168,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "132 RR Nothing to Hide with Steve Klabnik"
           "episodeSummary": "Panel Steve Klabnik (blog twitter github) James Edward Gray (twitter github blog) David Brady (twitter github blog ADDcasts) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:48 – Steve Klabnik Introduction 021 RR REST Done Right with Steve Klabnik 02:52 – GoGaRuCo 2013 – No […]"
+          "publishedAt": 1384956037
           "duration": 5017
         ,
           "uid": 33395976
@@ -3065,6 +3176,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "131 RR How to Learn"
           "episodeSummary": "In this Rogues Only episode, the panel talks about talent vs effort, tips for starting to learn something new, and how to read programming books. Panel James Edward Gray (twitter github blog) Katrina Owen (twitter github blog) David Brady (twitter github blog ADDcasts) Avdi Grimm (twitter github blog book) Charles Max Wood (twitter github Teach […]"
+          "publishedAt": 1384351201
           "duration": 5916
         ,
           "uid": 33100996
@@ -3072,6 +3184,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "130 RR Data Visualization with Aja Hammerly"
           "episodeSummary": "Panel Aja Hammerly (twitter github blog) David Brady (twitter github blog ADDcasts) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:08 – Aja Hammerly Introduction 03:28 – Aja Hammerly, Seeing the Big Picture: Quick and Easy Data Visualization with […]"
+          "publishedAt": 1383746413
           "duration": 3720
         ,
           "uid": 32817278
@@ -3079,6 +3192,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "129 RR Sharpening Tools with Ben Orenstein"
           "episodeSummary": "Panel Ben Orenstein (twitter github blog) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Avdi Grimm (twitter github blog book) Katrina Owen (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:29 – Ben Orenstein Introduction Giant Robots Smashing into other Giant Robots thoughtbot thoughtbot […]"
+          "publishedAt": 1383138059
           "duration": 3776
         ,
           "uid": 32578155
@@ -3086,6 +3200,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "128 RR Book Club: Confident Ruby with Avdi Grimm"
           "episodeSummary": "Panel Avdi Grimm (twitter github blog book) Josh Susser (twitter github blog) David Brady (twitter github blog ADDcasts) Katrina Owen (twitter github blog) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 03:28 – The Point of Confident Ruby Confident Ruby by Avdi Grimm 05:57 […]"
+          "publishedAt": 1382533231
           "duration": 4592
         ]
       ,
@@ -3102,6 +3217,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Curtis Armstrong"
           "episodeSummary": "<p>Nerd hero Curtis Armstrong hangs out with Chris and Jonah to talk about playing Booger in <em>Revenge of the Nerds</em>, his many other roles in <em>Risky Business</em>, <em>Better Off Dead</em>, and <em>Moonlighting</em>, being at the first <em>Star Trek</em> convention ever, and working on <em>King of the Nerds</em>!</p>"
+          "publishedAt": 139482906
           "duration": 4129
         ,
           "uid": 36494070
@@ -3109,6 +3225,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "William Katt"
           "episodeSummary": "<p>William Katt sits down with Chris to talk about his days on <em>The Greatest American Hero</em>, his role in the original <em>Carrie</em>, growing up in the San Fernando Valley back when nothing was there and his new comic book based movie <em>Sparks</em>!</p>"
+          "publishedAt": 1394644434
           "duration": 3411
         ,
           "uid": 36419378
@@ -3116,6 +3233,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Neil deGrasse Tyson Returns Again"
           "episodeSummary": "<p>Its a three peat with astrophysicist <a href=\"http://www.youtube.com/playlist?list=PLl4T6p7km9dYau3451qvJXN4G9UYM1mTh\">Neil deGrasse Tyson</a>! They start off their conversation about how the universe works, then talk about science of bottomless pits, the importance of asking questions, and the new <em>Cosmos</em>!</p>"
+          "publishedAt": 1394436600
           "duration": 4245
         ,
           "uid": 36378506
@@ -3123,6 +3241,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Crispin Glover"
           "episodeSummary": "<p>It's a bonus episode with the amazing Crispin Glover! He talks about the commercialization and propaganda of movies, the controversial lawsuit over <em>Back to the Future</em>, how different the 80's would have been for him if he had the internet to release projects and tell his side of stories and his new film <em>The Bag Man</em>!</p>"
+          "publishedAt": 1394182800
           "duration": 4982
         ,
           "uid": 36336656
@@ -3130,6 +3249,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Andy Daly"
           "episodeSummary": "<p>The hilarious Andy Daly hangs out with Chris and Jonah to talk about the differences of doing character work at clubs and alt rooms, how parents trick their kids into behaving and his new TV show <em>Review</em> on Comedy Central, Thursdays at 10pm!</p>"
+          "publishedAt": 1394096400
           "duration": 4166
         ,
           "uid": 36294245
@@ -3137,6 +3257,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Jaimie Alexander"
           "episodeSummary": "<p>The lovely Jaimie Alexander sits down with Chris to talk about her role as Sif in Thor, she explains how to use a knife to Chris, getting satisfaction of seeing their high school bullies living crappy lives and bringing Sif onto <em>Agents of S.H.I.E.L.D</em> on March 11th!</p>"
+          "publishedAt": 1394010000
           "duration": 4980
         ,
           "uid": 36212020
@@ -3144,6 +3265,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Michelle Monaghan"
           "episodeSummary": "<p>The lovely Michelle Monaghan hangs out with Chris and Matt to talk about growing up in a town of 700 people, making a show about open relationships and her love of college sports!</p>"
+          "publishedAt": 1393891361
           "duration": 2949
         ,
           "uid": 36159437
@@ -3151,6 +3273,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Donald Faison"
           "episodeSummary": "<p>The hilarious Donald Faison comes on the podcast! He talks to Chris and Jonah about starting a family, his time on <em>Scrubs</em>, and their favorite shows currently on TV!</p>"
+          "publishedAt": 1393617657
           "duration": 4579
         ,
           "uid": 36109671
@@ -3158,6 +3281,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "St. Vincent"
           "episodeSummary": "<p>Musician St. Vincent sits down with Chris and Jonah to talk about what compels people to become artists, what inspires her to write songs, and how they deal with disgusting microphones while on tour!</p>"
+          "publishedAt": 1393453052
           "duration": 4634
         ,
           "uid": 36006972
@@ -3165,6 +3289,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Kit Harington"
           "episodeSummary": "<p>Jon Snow himself, Kit Harington, hangs out with Chris to talk about his beloved Manchester United, filming Game of Thrones in freezing Iceland while his co-workers film in sunny Croatia and his new film <em>Pompeii</em>!</p>"
+          "publishedAt": 1393270874
           "duration": 3961
         ,
           "uid": 35981295
@@ -3172,6 +3297,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Abbi Jacobson and Ilana Glazer"
           "episodeSummary": "<p>Abbi Jacobson and Ilana Glazer join Chris and Matt and special guest co-host Craig Rowin to talk about how they started working together, coming up with their tv show <em>Broad City</em> and Craig dishes on what its like to live with Matt!</p>"
+          "publishedAt": 1392954981
           "duration": 4442
         ,
           "uid": 35961360
@@ -3179,6 +3305,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Jennette McCurdy"
           "episodeSummary": "<p>Jennette McCurdy comes on the show to talk about her time as an accidental country music artist, what she wants to do after <em>Sam &amp; Cat</em>, and what movie inspired her to get into acting! Also, Matt talks about <em>Frasier</em> and Chris isnt good at parties.</p>"
+          "publishedAt": 1392835591
           "duration": 4710
         ,
           "uid": 35880769
@@ -3186,6 +3313,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Live at SF Sketchfest 2014"
           "episodeSummary": "<p>The Nerdist returns to SF with special guest Tom Lenk (Buffy, Angel, Much Ado About Nothing)! Tom and Jonah bond over their love of Beaches, Matt talks about <em>Fraiser</em> and Chris tries to keep the podcast on track!</p>"
+          "publishedAt": 1392745627
           "duration": 5587
         ,
           "uid": 35832270
@@ -3193,6 +3321,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Morgan Murphy"
           "episodeSummary": "<p>Morgan Murphy stops by the show! She and Chris go in deep about coming up in the LA comedy scene together, performing comedy in front of your idols and her new special, <em>Irish Goodbye</em>, available on Netflix!</p>"
+          "publishedAt": 1392367514
           "duration": 5159
         ,
           "uid": 35795804
@@ -3200,6 +3329,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Topher Grace"
           "episodeSummary": "<p>Topher Grace is on the podcast! He sits down with Chris and Jonah to talk about his re-cut of <em>Star Wars</em>, being better at life in person than in social media, and his new website CerealPrize.com!</p>"
+          "publishedAt": 1392195600
           "duration": 4419
         ,
           "uid": 35726105
@@ -3207,6 +3337,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Robert Kirkman Returns"
           "episodeSummary": "<p>Robert Kirkman returns to the podcast! He talks about reading comics on the toilet, The Walking Dead Escape obstacle course and what he has planned for the future of The Walking Dead, both comic and TV show!</p>"
+          "publishedAt": 1392053059
           "duration": 4714
         ,
           "uid": 35684663
@@ -3214,6 +3345,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Joel Kinnaman"
           "episodeSummary": "<p>The new Robocop Joel Kinnaman hangs out with Chris to talk about being in the Robocop suit for 14 hours a day, moving from Sweden to a small town in Texas and how action movies have changed over the years!</p>"
+          "publishedAt": 1391763600
           "duration": 4402
         ,
           "uid": 35643543
@@ -3221,6 +3353,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "B.J. Novak"
           "episodeSummary": "<p>B.J. Novak hangs about with the guys to reminisce about their days of doing open mics together, his time at the Harvard Lampoon and what inspired him to write a book of short stories!</p>"
+          "publishedAt": 1391594400
           "duration": 5529
         ,
           "uid": 35593404
@@ -3228,6 +3361,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Broken Bells"
           "episodeSummary": "<p>The amazing duo James Mercer (The Shin) and Brian Burton (Danger Mouse) that make up Broken Bells invite Chris and Jonah to their studio to talk! They discuss their process for coming up with songs, Brian talks about how he started producing albums for other artists and their upcoming album <em>After the Disco</em>, out February 4th!</p>"
+          "publishedAt": 1391418000
           "duration": 4845
         ,
           "uid": 35565236
@@ -3235,6 +3369,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Paul Williams Returns"
           "episodeSummary": "<p>The amazing Paul Williams returns to the podcast! He and Chris sit down at ASCAP to talk about his upcoming book about addiction called <em>Gratitude and Trust</em>, being the president of ASCAP and he sings a song just for Chris!</p>"
+          "publishedAt": 1391158800
           "duration": 4258
         ,
           "uid": 35531041
@@ -3242,6 +3377,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Work It Out"
           "episodeSummary": "<p>The guys sit down for another somewhat serious hostful. Chris and Jonah talk out some problems they have been having and Matt mediates!</p>"
+          "publishedAt": 1390985079
           "duration": 4564
         ,
           "uid": 35469834
@@ -3249,6 +3385,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Christina Ricci"
           "episodeSummary": "<p>Christina Ricci sits down with Chris to talk about how different it was being a child actor when she was young, being an unintentional meme generator, and the different challenges woman have to go through in the media!</p>"
+          "publishedAt": 1390813200
           "duration": 4829
         ,
           "uid": 35448390
@@ -3256,6 +3393,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Jon Daly"
           "episodeSummary": "<p>The hilarious Jon Daly hangs out with Chris and Jonah to talk about his many different stand up and sketch characters, Sappity Tappity the rollerskating Christmas tree, and his new show on Amazon <em>Betas</em>!</p>"
+          "publishedAt": 1390557600
           "duration": 4212
         ,
           "uid": 35407371
@@ -3263,6 +3401,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Aaron Eckhart"
           "episodeSummary": "<p>Aaron Eckhart sits down with Chris to talk about the best way to start conversations with women, practicing for his roles in front of his dog and his new movie <em>I, Frankenstein</em>; out Friday January 24th!</p>"
+          "publishedAt": 1390468447
           "duration": 3731
         ,
           "uid": 35364624
@@ -3270,6 +3409,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "V Cards"
           "episodeSummary": "<p>The hostful goodness is continuing! The guys sit down to chat and end up talking about all things love. Their first loves, first heartbreaks and more!</p>"
+          "publishedAt": 1390255076
           "duration": 4298
         ,
           "uid": 35338410
@@ -3277,6 +3417,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Neal Brennan"
           "episodeSummary": "<p>Neal Brennan comes on The Nerdist to talk about his days on <em>Singled Out</em> with Chris, falling into the comedy scene and he tells the story of how he and Dave Chappelle ended up writing <em>Half Baked</em>!</p>"
+          "publishedAt": 1389952800
           "duration": 5651
         ,
           "uid": 35319063
@@ -3284,6 +3425,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Richard Madden"
           "episodeSummary": "<p>The charming Richard Madden sits down with Chris! They talk about his new role on Discovery Channel's <em>Klondike</em>, being naked onstage, growing up in Scotland, and, of course, his character of Robb Stark on <em>Game of Thrones</em>!</p>"
+          "publishedAt": 1389780000
           "duration": 4038
         ,
           "uid": 35272449
@@ -3291,6 +3433,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Nick Kroll returns again!"
           "episodeSummary": "<p>Nick Kroll really just can't get enough of the podcast and returns for a third time! He, Chris and Jonah talk about how he prepared for the James Franco roast, being your own worst critic and his new season of <em>Kroll Show</em>!</p>"
+          "publishedAt": 1389648337
           "duration": 3558
         ,
           "uid": 35236630
@@ -3298,6 +3441,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Dance of the Jedi"
           "episodeSummary": "<p>The guys get together for some more hostful goodness! They talk about what they did over the holidays, Matt went to an autograph convention and Jonah is the happiest one in the group!</p>"
+          "publishedAt": 1389344400
           "duration": 3582
         ,
           "uid": 35207261
@@ -3305,6 +3449,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Jim Norton"
           "episodeSummary": "<p>Comedian Jim Norton hangs out on the show to talk about being an \"offensive\" comedian and dealing with death threats, internet trolls, his theories on why people even get offended and he and Chris' mutual love of chess!</p>"
+          "publishedAt": 1389175200
           "duration": 4214
         ,
           "uid": 35175959
@@ -3312,6 +3457,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Brody Stevens"
           "episodeSummary": "<p>The eccentric and hilarious Brody Stevens sits down with Chris and Jonah to talk about his life since his mental breakdown, how his career has changed, Zach Galifianakis, working on <em>The Best Damn Sports Show Period</em>, <em>Chelsea Lately</em>, and <em>2midnight</em>, Donnie Wahlberg, Justin Bieber, pranks, stress, and his show <em>Brody Stevens: Enjoy It</em> on Comedy Central!</p>"
+          "publishedAt": 1389050011
           "duration": 5606
         ,
           "uid": 35106764
@@ -3319,6 +3465,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Honestly 2013"
           "episodeSummary": "<p>It's some hostful goodness to send off 2013! Chris, Matt, Jonah and Chloe talk about the best and worst of their year, what they learned and what they have planned for the new year!</p>"
+          "publishedAt": 1388863817
           "duration": 6997
         ,
           "uid": 35068006
@@ -3326,6 +3473,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Jerry Stahl"
           "episodeSummary": "<p>The very interesting and insightful Jerry Stahl stops by the show to talk about being addicted to heroin, using life experiences for creative works and what really makes a person positive or negative!</p> <p><a href=\"http://www.amazon.com/Happy-Mutant-Baby-Pills-Novel/dp/0061990507/ref=sr_1_1?ie=UTF8&amp;qid=1387616302&amp;sr=8-1&amp;keywords=happy+baby+mutant+pills\"><em></em></a></p>"
+          "publishedAt": 1388396775
           "duration": null
         ,
           "uid": 34963889
@@ -3333,6 +3481,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Kathryn Hahn"
           "episodeSummary": "<p>Kathryn Hahn sits down with Chris and Jonah to make up street names, where to find the best gumbo at Disneyland and her new movie <em>The Secret Life of Walter Mitty, </em>out in theaters today!</p>"
+          "publishedAt": 1388142000
           "duration": 4581
         ,
           "uid": 34941726
@@ -3340,6 +3489,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Moby"
           "episodeSummary": "<p>Moby sits down with Chris and Jonah to talk about becoming sober, inter-genre overlap in the music industry and they get into a deep conversation about human cognition!</p>"
+          "publishedAt": 1387962000
           "duration": 4773
         ,
           "uid": 34904154
@@ -3347,6 +3497,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": false
           "episodeTitle": "Jon Lovitz"
           "episodeSummary": "<p>Jon Lovitz is on the show to talk about his first time working at the Groundlings, how his career path led him to SNL and the loss of his friend Phil Hartmann and how to deal with losing people who are close to you.</p>"
+          "publishedAt": 1387791000
           "duration": 5492
         ,
           "uid": 34866207
@@ -3354,6 +3505,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Will Forte"
           "episodeSummary": "<p>Will Forte joins Chris to bond over being UCLA alumni, his decision to leave SNL, the one character he never got to do and his new movie <em>Nebraska</em>, out in theaters now!</p>"
+          "publishedAt": 1387528920
           "duration": 4805
         ,
           "uid": 34855947
@@ -3361,6 +3513,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Laina Morris"
           "episodeSummary": "<p>The Overly Attached Girlfriend, Laina Morris, hangs out on the podcast to talk about being from Texas, how she became the Overly Attached Girlfriend, and her plans for the future!</p>"
+          "publishedAt": 1387357200
           "duration": 5304
         ,
           "uid": 34842056
@@ -3368,6 +3521,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Taran Killam"
           "episodeSummary": "<p>The awesome Taran Killam comes on the podcast to reminisce about buying comic books as kids, auditioning for SNL and his new comic book <em>The Illegitimates</em>!</p>"
+          "publishedAt": 1387298699
           "duration": 4365
         ,
           "uid": 34798578
@@ -3375,6 +3529,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Brendon Small"
           "episodeSummary": "<p>The hilarious and musically talented Brendon Small hangs out with the guys at Swinghouse Studios to talk and play guitar! They talk about Brendon's new album <em>Galaktikon</em>, metal operas and guitars!</p>"
+          "publishedAt": 1387229055
           "duration": 4441
         ,
           "uid": 34677979
@@ -3389,6 +3544,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Dick Costolo"
           "episodeSummary": "<p>Chris storms Twitter HQ (or \"Bird Palace\" as he calls it) for a super fun one-on-one with Dick Costolo: computer scientist, former improv comedian and current CEO of Twitter!</p>"
+          "publishedAt": 1386968931
           "duration": 4289
         ,
           "uid": 34600366
@@ -3396,6 +3552,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Lindi Ortega"
           "episodeSummary": "<p>Chris sits down with the lovely Linda Ortega to talk about her most recent tour, her dream to be a tornado chaser and she plays a song just for the podcast!</p>"
+          "publishedAt": 1386797268
           "duration": 2467
         ,
           "uid": 34500437
@@ -3403,6 +3560,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Impromptu Hostful"
           "episodeSummary": "<p>Chris tricks Matt and Jonah into doing a hostful! Jonah talks about visiting one of his favorite record labels, Bruce Gutter joined Jonah during his stand up in San Francisco, and Chris and Matt talk about the writers room on <em>@midnight</em>!</p>"
+          "publishedAt": 1386713084
           "duration": 2747
         ,
           "uid": 34437551
@@ -3410,6 +3568,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Christopher Lloyd"
           "episodeSummary": "<p>The legendary Christopher Lloyd is on the Nerdist Podcast! He talks about his early roles in <em>One Flew Over the Cuckoo's Nest</em> and <em>Taxi</em>, fan reaction, meeting Orson Welles, his love of the theater and different roles he's played, and, of course, <em>Back to the Future</em>! Plus stories about Huey Lewis, Andy Kaufman, and lots more....</p>"
+          "publishedAt": 1386565200
           "duration": 4364
         ,
           "uid": 34304206
@@ -3417,6 +3576,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Chris Jericho Returns"
           "episodeSummary": "<p>Chris Jericho returns to the podcast to talk about all his favorite tv shows, how he changed his persona in the wrestling world and he came up with the idea for his web series, <em>But Im Chris Jericho</em>!</p>"
+          "publishedAt": 1386360657
           "duration": 3997
         ,
           "uid": 34142244
@@ -3424,6 +3584,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Thomas Dolby"
           "episodeSummary": "<p>The talented Thomas Dolby sits down with the guys to talk about his recent interactive music and film tour, the early days of creating music with synthesizers and his influence on cell phone ringtones!</p>"
+          "publishedAt": 1386186692
           "duration": 4291
         ,
           "uid": 34001925
@@ -3431,6 +3592,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Anamanaguchi"
           "episodeSummary": "<p>The band behind the Nerdist theme song are finally on the podcast! The guys of Anamanguchi hang out to discuss their party days in the NYC fashion scene, sending a pizza into space and they all create a generic 90s song!</p>"
+          "publishedAt": 1385964600
           "duration": 4505
         ,
           "uid": 33951765
@@ -3438,6 +3600,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Chris Hadfield"
           "episodeSummary": "<p>Commander Chris Hadfield discusses all things space with Chris and Matt! He talks about living on the International Space Station for 6 months, how he started using social media to promote space programs, and making music videos in space!</p>"
+          "publishedAt": 1385714277
           "duration": 4023
         ,
           "uid": 33755286
@@ -3445,6 +3608,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "explicit": true
           "episodeTitle": "Sasha Grey"
           "episodeSummary": "<p>Sasha Grey sits down with Chris to talk about transitioning into an acting career, how being active in social media helped her career and her new book, The Juliette Society!</p> <p><a href=\"http://www.amazon.com/The-Juliette-Society-Sasha-Grey/dp/145559945X/ref=sr_1_1?ie=UTF8&amp;qid=1385087828&amp;sr=8-1&amp;keywords=juliette+society\"><em></em></a></p>"
+          "publishedAt": 1385452860
           "duration": 3597
         ]
       ,
@@ -3462,6 +3626,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Box Set Illustrates Clifford Jordan's Impeccable Taste In Musicians"
           "episodeSummary": "Starting in the late 1960s, the jazz saxophonist produced a series of recordings that came out on the musicians-owned Strata-East label. Those seven albums are now collected in a box set."
           "duration": 378
+          "publishedAt": 1394933602
         ,
           "uid": 36587667
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/289641187/npr_289641187.mp3"
@@ -3469,6 +3634,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "A Poetry Reading: 'To My Oldest Friend, Whose Silence Is Like A Death'"
           "episodeSummary": "<em>Fresh Air</em>'s classical music critic Lloyd Schwartz recently published a poem about friendship and loss on Poets.org."
           "duration": 243
+          "publishedAt": 1394847210
         ,
           "uid": 36587668
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/289641184/npr_289641184.mp3"
@@ -3476,6 +3642,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Wes Anderson: 'We Made A Pastiche' Of Eastern Europe's Greatest Hits"
           "episodeSummary": "<em>The Grand Budapest Hotel</em> takes place in the fictional European country of Zubrowka on the eve of war. Anderson shot much of the film in Germany, drawing inspiration from the surrounding landscape."
           "duration": 2020
+          "publishedAt": 1394847200
         ,
           "uid": 36560134
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/289231070/npr_289231070.mp3"
@@ -3483,6 +3650,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Angel Olsen: A Voice Of Confounding Power"
           "episodeSummary": "Olsen has often been called a folk singer, but Ken Tucker says her new album — her first with a backing band — takes her music into an unclassifiable realm."
           "duration": 437
+          "publishedAt": 1394760802
         ,
           "uid": 36560136
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/289231035/npr_289231035.mp3"
@@ -3490,6 +3658,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "For Working Moms, Key To Balance May Lie In Elusive Leisure Time"
           "episodeSummary": "If waiting for help when your car breaks down doesn't strike you as a leisurely activity, it may be time to reconsider. A new book looks at time management challenges of being a working parent."
           "duration": 2272
+          "publishedAt": 1394674414
         ,
           "uid": 36531483
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/288806016/npr_288806016.mp3"
@@ -3497,6 +3666,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "'Blood Will Out' Reveals Secrets Of A Murderous Master Manipulator"
           "episodeSummary": "Author Walter Kirn thought he was befriending an eccentric Rockefeller, but his pal turned out to be an impostor wanted for murder. Kirn's new book explores the depths of that deception."
           "duration": 2604
+          "publishedAt": 1394674410
         ,
           "uid": 36452183
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/287919186/npr_287919186.mp3"
@@ -3504,6 +3674,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Fresh Air Weekend: WWII Filmmakers, Kevin Young And Solitary Confinement"
           "episodeSummary": "A look at how the military and Hollywood teamed up during World War II; poet Kevin Young says his new book has a blues sensibility; and how California convicts organized a statewide hunger strike."
           "duration": 2870
+          "publishedAt": 1394674402
         ,
           "uid": 36440413
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/287484339/npr_287484339.mp3"
@@ -3511,6 +3682,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "'Grand Budapest Hotel': Kitsch, Cameos And A Gloriously Stylized Europe"
           "episodeSummary": "Wes Anderson's new feature takes place at a resort hotel, between World Wars I and II. <em>Fresh Air</em>'s critic says the visuals are so witty they transcend camp, but the dialogue isn't quite at that level."
           "duration": 500
+          "publishedAt": 1394588019
         ,
           "uid": 36440414
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/287484336/npr_287484336.mp3"
@@ -3518,6 +3690,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Fresh Air Remembers Surgeon And 'How We Die' Author Sherwin Nuland"
           "episodeSummary": "Nuland's book won a National Book Award and impacted the national debate about end-of-life care. He died on Monday at 83. Nuland spoke to Fresh Air in 1994."
           "duration": 769
+          "publishedAt": 1394588009
         ,
           "uid": 36440415
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/287484333/npr_287484333.mp3"
@@ -3525,6 +3698,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "'Americanah' Author Explains 'Learning' To Be Black In The U.S."
           "episodeSummary": "When Chimamanda Ngozi Adichie moved from Nigeria to the U.S., she was suddenly confronted with what it meant to be a person of color in America. Her novel explores race in contemporary America."
           "duration": 1622
+          "publishedAt": 1394501601
         ,
           "uid": 36418932
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/287032180/npr_287032180.mp3"
@@ -3532,6 +3706,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Pharrell Williams: Just Exhilaratingly Happy"
           "episodeSummary": "To hear<em> G I R L</em>, you'd think Pharrell's world consisted of grooving on catchy beats and flirting with women. It's a lightweight image that draws gravitas from his prolific work ethic."
           "duration": 422
+          "publishedAt": 1394332402
         ,
           "uid": 36418933
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/287032174/npr_287032174.mp3"
@@ -3539,6 +3714,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "How 4 Inmates Launched A Statewide Hunger Strike From Solitary"
           "episodeSummary": "The California convicts overcame the extreme isolation of their imprisonment to organize a 30,000-prisoner-strong movement. Their goal? To end long-term incarceration in solitary confinement."
           "duration": 2356
+          "publishedAt": 1394246020
         ,
           "uid": 36370142
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/286494041/npr_286494041.mp3"
@@ -3546,6 +3722,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "'Schmuck' Revisits The Golden Age Of Radio, And A Bygone Manhattan"
           "episodeSummary": "Ross Klavan's novel follows two radio sidekicks in midcentury New York: golden-voiced straight man Ted Fox, who has an eye for a good-looking dame, and funnyman Jerry Elkin, a veteran of World War II."
           "duration": 381
+          "publishedAt": 1394246014
         ,
           "uid": 36370143
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/286493117/npr_286493117.mp3"
@@ -3553,6 +3730,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "The Case For Tammany Hall Being On The Right Side Of History"
           "episodeSummary": "In a new book, Terry Golway takes a sympathetic view of Manhattan's infamous political machine. He says, \"Tammany Hall was there for the poor immigrant who was otherwise friendless in New York.\""
           "duration": 2363
+          "publishedAt": 1394246006
         ,
           "uid": 36329701
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/285966275/npr_285966275.mp3"
@@ -3560,6 +3738,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "By The Time Your Car Goes Driverless, You Won't Know The Difference"
           "episodeSummary": "The once-futuristic concept is closer than ever to becoming a reality. Parallel parking? Let the car find the perfect approach. Squeezing into a tight space? Hop out and use your smartphone."
           "duration": 426
+          "publishedAt": 1394159610
         ,
           "uid": 36329702
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/285966257/npr_285966257.mp3"
@@ -3567,6 +3746,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Fresh Air Remembers Literary Biographer Justin Kaplan"
           "episodeSummary": "Kaplan died Sunday at 88. His biography of Mark Twain won a National Book Award and a Pulitzer Prize. He also edited two editions of <em>Bartlett's Familiar Quotations</em>. Kaplan spoke to Fresh Air in 1992."
           "duration": 458
+          "publishedAt": 1394159601
         ,
           "uid": 36329703
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/285966231/npr_285966231.mp3"
@@ -3574,6 +3754,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Kevin Young On Blues, Poetry And 'Laughing To Keep From Crying'"
           "episodeSummary": "The poet describes his new book — about the death of his father and the birth of his son — as having a blues sensibility. \"There are moments of humor even in the sorrow,\" he says."
           "duration": 1831
+          "publishedAt": 1394073092
         ,
           "uid": 36295920
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/285475592/npr_285475592.mp3"
@@ -3581,6 +3762,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Chuck Mead: Gleefully Sinister Country Serenades"
           "episodeSummary": "Mead hooks the listener, eager to show us the bleak side of what seemed like a bright scenario. That's the way he operates during much of <em>Free State Serenade</em>."
           "duration": 448
+          "publishedAt": 1394073083
         ,
           "uid": 36295921
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/285475580/npr_285475580.mp3"
@@ -3588,6 +3770,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "During World War II, Even Filmmakers Reported For Duty"
           "episodeSummary": "A new book looks at how the military and Hollywood directors teamed up during the war. The films they made helped show Americans what was at stake, and served as evidence during the Nuremberg Trials."
           "duration": 2278
+          "publishedAt": 1393986815
         ,
           "uid": 36241418
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/284574846/npr_284574846.mp3"
@@ -3595,6 +3778,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Fresh Air Weekend: The Cosmos, Harold Ramis, And Protecting Your Data Online"
           "episodeSummary": "Astrophysicist Neil deGrasse Tyson explains why the cosmos shouldn't make you feel small. Critic John Powers remembers Harold Ramis. And if you think you're anonymous online, think again."
           "duration": 2867
+          "publishedAt": 1393986810
         ,
           "uid": 36227146
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/284145869/npr_284145869.mp3"
@@ -3602,6 +3786,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Liam Neeson's Action Chops Take Flight In 'Non-Stop'"
           "episodeSummary": "Neeson became a bankable action hero in 2008 after the thriller <em>Taken</em>. Now almost 62, he's still getting out of tight corners with his fists. His new film unfolds on a transatlantic flight."
           "duration": 481
+          "publishedAt": 1393986803
         ,
           "uid": 36227008
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/284145866/npr_284145866.mp3"
@@ -3609,6 +3794,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "A New 'Testament' Told From Mary's Point Of View"
           "episodeSummary": "In <em>The Testament of Mary,</em> Colm Toibin imagines Mary's life 20 years after her son's crucifixion, what she might have done to ease her son's suffering. (Originally broadcast on Nov. 28, 2012.)"
           "duration": 2374
+          "publishedAt": 1393900410
         ,
           "uid": 36190858
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/283681604/npr_283681604.mp3"
@@ -3616,6 +3802,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Remembering Harold Ramis, Master Of The 'Smart Dumb-Movie'"
           "episodeSummary": "Best known for<em> Animal House,</em> <em>Ghostbusters </em>and <em>Groundhog Day, </em>Ramis died Monday at 69. Critic John Powers says Ramis was like a favorite uncle who spices up the family reunion by spiking the punch."
           "duration": 432
+          "publishedAt": 1393900401
         ,
           "uid": 36190859
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/283681563/npr_283681563.mp3"
@@ -3623,6 +3810,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Neil DeGrasse Tyson Explains Why The Cosmos Shouldn't Make You Feel Small"
           "episodeSummary": "The astrophysicist says that participating in a \"great unfolding of a cosmic story\" should make us feel large, not small. This spring, Tyson hosts a TV series called <em>Cosmos: A Space-Time Odyssey.</em>"
           "duration": 2314
+          "publishedAt": 1393727604
         ,
           "uid": 36167076
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/283167577/npr_283167577.mp3"
@@ -3630,6 +3818,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "These Stories Consider Solitude, With Echoes Of Emily Dickinson"
           "episodeSummary": "It's been 15 years since acclaimed writer Lorrie Moore has brought out a new short story collection. <em>Bark</em> has some clunkers and some keepers, but critic Maureen Corrigan says it was worth the wait."
           "duration": 319
+          "publishedAt": 1393641213
         ,
           "uid": 36167077
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/283167572/npr_283167572.mp3"
@@ -3637,6 +3826,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "In Benghazi, U.S. Intelligence Wasn't Focused On 'Homegrown Militants'"
           "episodeSummary": "<em>New York Times</em> correspondent David Kirkpatrick spent months on the ground in Benghazi, Libya, trying to get to the bottom of the deadly Sept. 11, 2012 attack on the U.S. Consulate."
           "duration": 2329
+          "publishedAt": 1393641203
         ,
           "uid": 36141981
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/282683776/npr_282683776.mp3"
@@ -3644,6 +3834,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Still 'Out To Lunch' 50 Years Later"
           "episodeSummary": "Eric Dolphy's creativity was exploding early in 1964, and he was finding more players who could keep up. <em>Out to Lunch</em> is free and focused, dissonant and catchy, wide open and swinging all at once."
           "duration": 508
+          "publishedAt": 1393554816
         ,
           "uid": 36141982
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/282683752/npr_282683752.mp3"
@@ -3651,6 +3842,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Harold Ramis On Working At 'Playboy' And Writing 'Animal House'"
           "episodeSummary": "The comedy actor, writer and director had co-written and planned to star in the long-awaited <em>Ghostbusters III — </em>but did not get the chance. He died Monday in Chicago at age 69."
           "duration": 621
+          "publishedAt": 1393554802
         ,
           "uid": 36141983
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/282683749/npr_282683749.mp3"
@@ -3658,6 +3850,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "During World War I, Germany Unleashed 'Terrorist Cell In America'"
           "episodeSummary": "In <em>Dark Invasion</em>, Howard Blum explores the campaign of sabotage that Germany inflicted on an unsuspecting U.S. As ships and factories blew up, \"no one really suspected a spy network,\" he says."
           "duration": 1632
+          "publishedAt": 1393468561
         ,
           "uid": 36118967
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/282215980/npr_282215980.mp3"
@@ -3665,6 +3858,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Vertical Scratchers: Slashed Chords, Fractured Poetry"
           "episodeSummary": "<em>Daughter of Everything</em> is a superb pop album with one foot in the past and another in the future."
           "duration": 451
+          "publishedAt": 1393468552
         ,
           "uid": 36118968
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/282215959/npr_282215959.mp3"
@@ -3672,6 +3866,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "If You Think You're Anonymous Online, Think Again"
           "episodeSummary": "In <em>Dragnet Nation,</em> Julia Angwin describes an oppressive blanket of electronic data surveillance.<em> </em>\"There's a price you pay for living in the modern world,\" she says. \"You have to share your data.\""
           "duration": 2294
+          "publishedAt": 1393382021
         ,
           "uid": 36073075
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/281351664/npr_281351664.mp3"
@@ -3679,6 +3874,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Fresh Air Weekend: David O. Russell, 'Last Of The Unjust,' And 'Sonic Wonders'"
           "episodeSummary": "At last, Russell is making the films \"he was meant to make.\" For a rabbi who worked with the Nazis, is judgment \"unjust\"? And we follow one man's quest to find the \"sonic wonders of the world.\""
           "duration": 2874
+          "publishedAt": 1393382015
         ,
           "uid": 36057550
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/280927608/npr_280927608.mp3"
@@ -3686,6 +3882,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "'Wind Rises' Is Exquisite, And Likely To Be Hayao Miyazaki's Last"
           "episodeSummary": "The new film from the acclaimed Japanese animator spans 30 years and centers on a young man who dreams of designing the perfect airplane in the early 1930s. <em>(Recommended)</em>"
           "duration": 421
+          "publishedAt": 1393382007
         ,
           "uid": 36057551
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/280927605/npr_280927605.mp3"
@@ -3693,6 +3890,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Matthew McConaughey, Getting Serious Again"
           "episodeSummary": "The leading man known for his good looks and charm has lately been taking on more serious roles in films such as <em>Bernie, Magic Mike</em> and <em>Mud.</em> We'll listen back to excerpts from an April 2013 interview."
           "duration": 1246
+          "publishedAt": 1393295609
         ,
           "uid": 36057552
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/280927602/npr_280927602.mp3"
@@ -3700,6 +3898,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Director Alexander Payne On Mining Every Film For Comic Potential"
           "episodeSummary": "Payne says he first read <em>Nebraska</em> — about a man who is showing signs of dementia — as a comedy. We'll listen back to an interview with Payne originally broadcast on Dec. 2, 2013."
           "duration": 1405
+          "publishedAt": 1393295600
         ,
           "uid": 36002892
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/280434363/npr_280434363.mp3"
@@ -3707,6 +3906,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "At Last, David O. Russell Is Making The Films He Was Meant To Make"
           "episodeSummary": "David O. Russell, director of <em>American Hustle</em> and <em>Silver Linings Playbook,</em> first spoke with Terry Gross back in 1994. On Thursday, he tells her that after 20 years, he's finally met his aspirations."
           "duration": 2686
+          "publishedAt": 1393122803
         ,
           "uid": 35986417
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/279869403/npr_279869403.mp3"
@@ -3714,6 +3914,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "For A Rabbi Who Worked With The Nazis, Is Judgment 'Unjust'?"
           "episodeSummary": "Claude Lanzmann's documentary profiles a Viennese rabbi put to work in a Czech concentration camp. Although Benjamin Murmelstein was himself not a free man, he was despised by fellow Jewish prisoners."
           "duration": 412
+          "publishedAt": 1393036526
         ,
           "uid": 35986418
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/279869146/npr_279869146.mp3"
@@ -3721,6 +3922,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "One Man's Quest To Find The 'Sonic Wonders Of The World'"
           "episodeSummary": "Acoustic engineer Trevor Cox has traveled around the globe to hear whispering arches and singing sand dunes. Closer to home, he can also explain why your singing sounds better in the shower."
           "duration": 2275
+          "publishedAt": 1393036520
         ,
           "uid": 35970600
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/279326924/npr_279326924.mp3"
@@ -3728,6 +3930,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "With Humor And A Nod To History, Fallon Takes Over 'The Tonight Show'"
           "episodeSummary": "On Monday night, Jimmy Fallon paid homage to 60 years of <em>Tonight Show </em>history while claiming his own place in line. \"I just want to do the best I can and take care of the show for a while,\" he said. \"If you guys let me stick around long enough maybe I'll get the hang of it.\""
           "duration": 484
+          "publishedAt": 1393036513
         ,
           "uid": 35970601
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/279326921/npr_279326921.mp3"
@@ -3735,6 +3938,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Teens Rehearse For Adulthood In Wolitzer's 'Interestings'"
           "episodeSummary": "Meg Wolitzer's novel is about lifelong friendship tinged with jealousy. It begins at a summer camp in 1974 and follows a group of friends through middle age. Wolitzer says her teen years were a rehearsal for her adult life and that today she is \"different\" but \"in the same shell.\""
           "duration": 2237
+          "publishedAt": 1392950000
         ,
           "uid": 35962796
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/279183907/npr_279183907.mp3"
@@ -3742,6 +3946,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "In 'Whole Gritty City,' Marching Bands Vie For Coveted Mardi Gras Spots"
           "episodeSummary": "\"New Orleans buries too many of its young,\" Wynton Marsalis says in the documentary's introduction.<em> The Whole Gritty City,</em> airing Saturday on CBS, follows young students who take refuge in New Orleans marching bands."
           "duration": 527
+          "publishedAt": 1392863948
         ,
           "uid": 35962797
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/279182562/npr_279182562.mp3"
@@ -3749,6 +3954,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "A Closer Look At How Corporations Influence Congress"
           "episodeSummary": "Eric Lipton, an investigative reporter for <em>The New York Times</em>, has been writing about how corporations work in opaque ways to shape debates. He also explains the revolving door between Congress and lobby groups, and how non-profit think tanks aren't always what they seem."
           "duration": 2289
+          "publishedAt": 1392863939
         ,
           "uid": 35950125
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/278771929/npr_278771929.mp3"
@@ -3756,6 +3962,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Don't Know What To Do With Your Life? Neither Did Thoreau"
           "episodeSummary": "A new biography reveals that young Thoreau took quite a few detours on his path to <em>Walden</em>. A gossipy young man who loved eating popcorn, ice skating and listening to his music box, schoolmates and neighbors found him standoffish and regarded his fascination with plants and Indian relics as downright odd."
           "duration": 362
+          "publishedAt": 1392777210
         ,
           "uid": 35950126
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/278771888/npr_278771888.mp3"
@@ -3763,6 +3970,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "In 'Passage,' Caro Mines LBJ's Changing Political Roles"
           "episodeSummary": "The fourth volume in Robert Caro's monumental biography of Lyndon Johnson is <em>The Passage of Power;</em> it explores the period between 1958 and 1964 during which Johnson went from powerful Senate majority leader to powerless vice president to — suddenly — president of the United States. <em>Originally broadcast on May 13, 2013.</em>"
           "duration": 2236
+          "publishedAt": 1392777201
         ,
           "uid": 35908898
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/277649474/npr_277649474.mp3"
@@ -3770,6 +3978,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Fresh Air Weekend: 'Extreme Medicine,' Lake Street Dive, 'When We Get Home'"
           "episodeSummary": "Dr. Kevin Fong practices \"extreme medicine\" from deep sea to outer space. Lake Street Dive comes out with a new album called <em>Bad Self Portraits. </em>And a military couple describes their long recovery in <em>Plenty of Time When We Get Home.</em>"
           "duration": 2848
+          "publishedAt": 1392747586
         ,
           "uid": 35893564
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/277118708/npr_277118708.mp3"
@@ -3777,6 +3986,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "At 77, Robert Redford Goes Back To His Roots"
           "episodeSummary": "Redford says filming <em>All Is Lost</em> was a \"pure cinematic experience — the way films used to be.\" He talks with <em>Fresh Air</em>'s Terry Gross about how it's been \"sort of weird\" being known for his good looks, and about how he nearly wasn't cast in <em>Butch Cassidy and the Sundance Kid</em>. (<em>Originally broadcast on Dec. 12, 2013.)</em>"
           "duration": 2661
+          "publishedAt": 1392747578
         ,
           "uid": 35875547
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/276620087/npr_276620087.mp3"
@@ -3784,6 +3994,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "In 'Whole Gritty City,' Marching Bands Vie For Coveted Mardi Gras Spots"
           "episodeSummary": "\"New Orleans buries too many of its young,\" Wynton Marsalis says in the documentary's introduction.<em> The Whole Gritty City,</em> airing Saturday on CBS, follows young students who take refuge in New Orleans marching bands."
           "duration": 527
+          "publishedAt": 1392690812
         ,
           "uid": 35875548
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/276620084/npr_276620084.mp3"
@@ -3791,6 +4002,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "A Closer Look At How Corporations Influence Congress"
           "episodeSummary": "Eric Lipton, an investigative reporter for <em>The New York Times</em>, has been writing about how corporations work in opaque ways to shape debates. He also explains the revolving door between Congress and lobby groups, and how non-profit think tanks aren't always what they seem."
           "duration": 2289
+          "publishedAt": 1392690803
         ,
           "uid": 35829278
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/275589615/npr_275589615.mp3"
@@ -3798,6 +4010,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "In Session: Frank Wess' 'Magic 201' Offers One Last Lesson"
           "episodeSummary": "There's something tender and specific about the ways elders like Frank Wess shaped their notes."
           "duration": 407
+          "publishedAt": 1392518002
         ,
           "uid": 35829279
           "mediaUrl": "http://podcastdownload.npr.org/anon.npr-podcasts/podcast/13/275589610/npr_275589610.mp3"
@@ -3805,6 +4018,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Practicing 'Extreme Medicine,' From Deep Sea To Outer Space"
           "episodeSummary": "In his new book, Dr. Kevin Fong explores how humans survive extremes of heat, cold, outer space and deep sea. \"We're still exploring the human body and what medicine can do in the same way that the great explorers of the 20th century and every age before them explored the world,\" he says."
           "duration": 2306
+          "publishedAt": 1392431605
           ]
         ,
         "id": 2027
@@ -3821,6 +4035,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #447 – March 11th, 2014"
           "episodeSummary": "<p> Google's Summer of Code, Test-Driven Rails Part 2, putting the Can in CanCan, building your first Ruby gem, and a Ruby Heroes reminder. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/483-episode-447-march-11th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_445&amp;utm_campaign=sponsor_page\">Sponsored by Top Ruby Jobs</a> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_445&amp;utm_campaign=sponsor_page\"> </a> <a href=\"http://weblog.rubyonrails.org/2014/3/7/google-summer-of-code-2014/\">Google Summer of Code: Rails</a> Rails has been accepted into the Google Summer of Code 2014. The rules state that you have to be at least 18 years old to participate before April 21st, 2014, that you have to be a full or part-time student, and that you have to be passionate about improving Rails. If you’re accepted, you’ll actually be paid $5500 over the course of 3 months to complete your proposed project to improve Rails. <a href=\"http://weblog.rubyonrails.org/2014/3/7/google-summer-of-code-2014/\"> </a> <a href=\"http://karolgalanciak.com/blog/2014/03/03/test-driven-rails-part-2/\">Test-Driven Rails Part 2</a> We recently announced part 1 of a blog series by Karol Galanciak called Test-Driven Rails. Part 2 is a continuation of that, describing a popular use case for writing tests: implementing a user registration system. The focus is on writing acceptance tests using Capybara, or in other words making sure the feature works from the user’s perspective. This post is a great illustration of making decisions in your application with test-driven and behavior-driven development. <a href=\"http://karolgalanciak.com/blog/2014/03/03/test-driven-rails-part-2/\"> </a> <a href=\"https://mojolingo.com/blog/2014/putting-the-can-in-cancan/\">Putting the Can in CanCan</a> When you need an authorization solution for a Rails app, you might think of CanCan by Ryan Bates. Since Ryan has been taking a break recently, Bryan Rite from MojoLingo forked the gem into a new one called CanCanCan. The gem doesn’t change the CanCan namespace at all so it’s a drop-in replacement except for the Gemfile change. Version 1.7.0 was released recently with strong_parameters support, multiple abilities with associations, and a bunch of overdue bug fixes. <a href=\"https://mojolingo.com/blog/2014/putting-the-can-in-cancan/\"> </a> <a href=\"http://quickleft.com/blog/step-by-step-guide-to-building-your-first-ruby-gem\">Building Your First Ruby Gem</a> Building your first Ruby gem may seem like a daunting task, but it's actually not so bad. Matt Huggins has written a step-by-step guide to building your first Ruby gem. There’s even a video tutorial and source code for his examples. If you’re interested in learning how to write a gem, this is the blog post for you. <a href=\"http://quickleft.com/blog/step-by-step-guide-to-building-your-first-ruby-gem\"> </a> <a href=\"http://rubyheroes.com\">Another Ruby Heroes Reminder</a> Ruby Heroes are being awarded at Rails Conf, which is taking place April 22nd through the 25th. So, now is the time to nominate your unsung heroes who are busy producing educational content, developing plugins and gems, contributing to open-source projects, or putting on events to help developers learn and grow. <a href=\"http://rubyheroes.com\"> </a> <a href=\"http://ruby5.envylabs.com\">Thank You for Listening to Ruby5</a> <p>Ruby5 is released Tuesday and Friday mornings. To stay informed about and active with this podcast, we encourage you to do one of the following:</p> Follow <a href=\"http://twitter.com/envylabs\">Envy Labs</a> on Twitter Or, subscribe with <a href=\"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=327234205\">iTunes</a> or <a href=\"http://feeds.feedburner.com/Ruby5\">RSS</a> <a href=\"http://ruby5.envylabs.com\"> </a>"
           "duration": 296
+          "publishedAt": 1394811169
         ,
           "uid": 36426782
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/AbgHm7hTI34/446-ruby5.mp3"
@@ -3828,6 +4043,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #446 - March 7th, 2014"
           "episodeSummary": "<p> Running your own CI with Drone and Docker, building web-based RubyMotion apps with Under OS, funding for the Hello Ruby book, rubygems.org operating costs, Rails 4 assets on Heroku, and turning your text on its head with flippit all in this episode of the Ruby5. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/482-episode-446-march-7th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">This episode is sponsored by New Relic</a> New Relic is _the_ all-in-one web performance analytics product. It lets you manage and monitor web application performance, from the browser down to the line of code. With Real User Monitoring, New Relic users can see browser response times by geographical location of the user, or by browser type. <a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\"> </a> <a href=\"http://jipiboily.com/2014/from-zero-to-fully-working-ci-server-in-less-than-10-minutes-with-drone-docker\">Drone &amp; Docker</a> Hate Jenkins but want to run your own CI server? This blog post from Jean-Philippe Boily will walk you through setting one up with Drone and Docker! <a href=\"http://jipiboily.com/2014/from-zero-to-fully-working-ci-server-in-less-than-10-minutes-with-drone-docker\"> </a> <a href=\"http://under-os.com/\">Under OS</a> Building html based applications for iOS has never been easier thanks to this new platform built on top of RubyMotion. <a href=\"http://under-os.com/\"> </a> <a href=\"https://www.kickstarter.com/projects/lindaliukas/hello-ruby\">Hello Ruby Book Funded</a> The Hello Ruby book project was successfully funded on February 22. <a href=\"https://www.kickstarter.com/projects/lindaliukas/hello-ruby\"> </a> <a href=\"https://news.ycombinator.com/item?id=7344503\">RubyGems.org Costs</a> Ever wonder how much it costs to run rubygems.org? <a href=\"https://news.ycombinator.com/item?id=7344503\"> </a> <a href=\"https://devcenter.heroku.com/articles/rails-4-asset-pipeline\">Rails 4 Assets on Heroku</a> This article contains information needed to run the asset pipeline in Rails version 4 and above on Heroku. <a href=\"https://devcenter.heroku.com/articles/rails-4-asset-pipeline\"> </a> <a href=\"http://www.flippit.us/\">Flippit</a> Tired of all your text being rightside-up? The flippit service and gem from Rocketeer Jonathan Jackson makes it easier than ever to turn your world upside down! <a href=\"http://www.flippit.us/\"> </a>"
           "duration": 315
+          "publishedAt": 1394550869
         ,
           "uid": 36315881
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/7wIYGrJcI28/445-ruby5.mp3"
@@ -3835,6 +4051,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #445 – March 4th, 2014"
           "episodeSummary": "<p> It's pattern-mania this week with: interactors, adapters and components-based architectures. Omniref allows us to take a step back to look at dependencies between popular Ruby libraries and we learn about RubyMotion gotchas for Rails developers. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/481-episode-445-march-4th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_445&amp;utm_campaign=sponsor_page\">Sponsored by Top Ruby Jobs</a> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_445&amp;utm_campaign=sponsor_page\"> </a> <a href=\"http://eng.joingrouper.com/blog/2014/03/03/rails-the-missing-parts-interactors\">Interactors</a> Yesterday, the team over at Grouper released the first part of a blog series they call Rails, the Missing Parts. In part one, they talk about using Interactors in your Rails application to detangle your ActiveRecord objects and business rules from your controllers. They have the benefit of encapsulating your business rules and model interactions in one, more easily testable place. And, they have the side benefit of allowing you compose new service objects with others to make more intricate interactions. I think it’s interesting to mention that David Heinemeier Hansson jumped into the Hacker News discussion to point out that this is a good practice, only when it needs to be done. It’s overkill to do it always, but if you’ve got a sign up form or something that manages multiple models, then maybe it makes sense. <a href=\"http://eng.joingrouper.com/blog/2014/03/03/rails-the-missing-parts-interactors\"> </a> <a href=\"http://www.youtube.com/watch?v=-54SDanDC00\">Component-based Architecture in Ruby and Rails</a> Speaking of Interactors or Service classes, there is a talk from Stephan Hagemann at MountainWest RubyConf 2013 that is a great overview on component-based architectures in Ruby and Rails. He shows with simple examples how you can extract self-contained business logic into modules, gems, engines, etc. He doesn’t actually use these as external gems. His central point seems to be that it’s easier to think about modules — even if you don’t fully extract them — when they have their own namespace. I tend to agree with him: clear naming tends to make it easier to see the edges of a class’s responsibility. As he demonstrates, the fact that a Rails app originally defines no namespaces sort of encourages a hodge podge mentality where responsibilities are mixed and it’s not clear what’s in charge of what exactly. Stephan shows how to create the gem structure without the need to run gem build or actually publish the gem itself. Instead it all stays within the Rails app despite. So he gets the benefits of a distinct interface and he can add the gem to the Gemfile using a local path. Ditto for mountable Rails engines. <a href=\"http://www.youtube.com/watch?v=-54SDanDC00\"> </a> <a href=\"http://blog.thefrontiergroup.com.au/2014/02/reflecting-on-rubymotion-experiences-p1/\">Reflecting on RubyMotion Experiences</a> Last week, Jordan Maguire put together an article on his experiences using RubyMotion where he reflected on The Frontier Group’s 3000 or so collective hours of using it. It’s one part in what may become a series on how to work with RubyMotion from the perspective of a Ruby on Rails developer. In this article, he touches on quite a lot, but I appreciated the “don’t think of controllers in Rails when you’re working with controllers in Cocoa Touch,” “state and persistence are drastically different in a client application,” and most amusingly, the observation that “Obj-C looks like the syntax was derived at random from a bag of broken glass, barbed wire, and salt.”. Even though you’re working in Ruby at the end of the day you’re building Objective-C applications. As such, you should know Objective-C at least enough to be able to convert Objective-C code to RubyMotion. <a href=\"http://blog.thefrontiergroup.com.au/2014/02/reflecting-on-rubymotion-experiences-p1/\"> </a> <a href=\"http://monkeyandcrow.com/blog/reading_rails_the_adapter_pattern/\">Reading Rails: The Adapter Pattern</a> Last week Adam Sanderson wrote up a blog post about how adapters are used for the MultiJSON gem, ActiveRecord and even the DateTime and Time classes. Quite a few people will find inspiration looking at ActiveRecord’s AbstractAdapter. It contains the basic database functionality while the MysqlAdapter for instance inherits from it and includes more stuff specific to MySQL databases, and the chain goes on all the way down to PostgreSQL. These patterns are very handy when building an adapter for external APIs for instance. Not to mention give you the ability to make a testing adapter that makes no network calls. Sounds like a fun read. The last example in the post is the way Rails (through ActiveSupport) basically patches DateTime to play nice with the Time class by adding a consistent #to_i method to it. As with any foray into Rails source code, you’re likely to pick up some nifty trick or discover some impressive hacks along the way. <a href=\"http://monkeyandcrow.com/blog/reading_rails_the_adapter_pattern/\"> </a> <a href=\"http://www.omniref.com/blog/blog/2014/02/18/whats-relevant-in-the-ruby-universe/\">What's Relevant in the Ruby Universe?</a> Last month, Omniref released a major update to their Ruby source code indexing system, adding cross library reference inference and inline documentation from included modules, among other things. Omniref is a bit like a Ruby documentation and source code search engine that spans across Rubygems. It was created by Tim Robertson and Montana Low and you can think of it a bit like the Google of Ruby code, but more focused and intelligent on the search results. Because the context is strictly Ruby and Rubygems, they can cross link, show related libraries, dependent libraries, syntax highlighting, documentation, and more. It’s pretty amazing that they can inline function documentation between Rubygems (for example how ActiveModel provides to_key for ActiveRecord objects), showing the original function and documentation. <a href=\"http://www.omniref.com/blog/blog/2014/02/18/whats-relevant-in-the-ruby-universe/\"> </a> <a href=\"http://ruby5.envylabs.com\">Thank You for Listening to Ruby5</a> <p>Ruby5 is released Tuesday and Friday mornings. To stay informed about and active with this podcast, we encourage you to do one of the following:</p> Follow <a href=\"http://twitter.com/envylabs\">Envy Labs</a> on Twitter Or, subscribe with <a href=\"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=327234205\">iTunes</a> or <a href=\"http://feeds.feedburner.com/Ruby5\">RSS</a> <a href=\"http://ruby5.envylabs.com\"> </a>"
           "duration": 415
+          "publishedAt": 1394202344
         ,
           "uid": 36212907
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/lCwkV780TSY/444-ruby5.mp3"
@@ -3842,6 +4059,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #444 – February 28th, 2014"
           "episodeSummary": "<p> ActiveRecord Heatmaps, Atom Editor, Ruby Gotchas and Ruby Tempfiles. Guest hosts Karle Durante and Ken Collins <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/480-episode-444-february-28th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://newrelic.com/\">Sponsored by New Relic</a> New Relic recently posted about Optimizing Your Global Digital Marketing with New Relic <a href=\"http://newrelic.com/\"> </a> <a href=\"https://github.com/blotto/thermometer\">Thermometer</a> The Thermometer gem helps you build heat maps of your activerecord associations <a href=\"https://github.com/blotto/thermometer\"> </a> <a href=\"http://atom.io\">Atom Editor</a> Github has released the atom editor. A hackable text editor for the 21st Century <a href=\"http://atom.io\"> </a> <a href=\"https://github.com/RailsApps/rails-omniauth\">Rails 4.1 starter app with OmniAuth</a> Daniel Kehoe has released an example application showing how to set up authentication using OmniAuth with Rails 4.1 <a href=\"https://github.com/RailsApps/rails-omniauth\"> </a> <a href=\"http://blog.elpassion.com/ruby-gotchas\">Ruby Gotchas that will come back to haunt you</a> Karol Sarnacki wrote a blog listing popular Ruby gotchas and curiosities that developers should be aware of. <a href=\"http://blog.elpassion.com/ruby-gotchas\"> </a> <a href=\"http://viget.com/extend/make-remote-files-local-with-ruby-tempfile\">Make Remote Files Local with Ruby Tempfile</a> We live in the age of remote resources. It's pretty rare to store uploaded files on the same machine as your server process. File storage these days is almost completely remote Using file storage services like S3 is awesome, but not having your files accessible locally can complicate the performance of file-oriented operations. <a href=\"http://viget.com/extend/make-remote-files-local-with-ruby-tempfile\"> </a>"
           "duration": 390
+          "publishedAt": 1393949713
         ,
           "uid": 36131797
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/mjvPzVRIzqY/443-ruby5.mp3"
@@ -3849,6 +4067,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #443 – February 25th, 2014"
           "episodeSummary": "<p> In this episode we cover new Rubies and rSpec, Ruby’s Demise, AdequateRecord, and a Ruby Heroes reminder. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/479-episode-443-february-25th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_443&amp;utm_campaign=sponsor_page\">Sponsored by TopRubyJobs</a> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_443&amp;utm_campaign=sponsor_page\"> </a> <a href=\"http://myronmars.to/n/dev-blog/2014/02/rspec-2-99-and-3-0-beta-2-have-been-released\">RSpec 2.99 and 3.0 beta 2</a> Late last week Myron Marston and the RSpec team released versions 3.0.0beta2 and 2.99.0.beta2. <a href=\"http://myronmars.to/n/dev-blog/2014/02/rspec-2-99-and-3-0-beta-2-have-been-released\"> </a> <a href=\"https://www.ruby-lang.org/en/news/2014/02/24/ruby-2-1-1-is-released/\">Ruby is Legal (2.1.1)</a> Our Ruby is all grown up. Yesterday was ruby's 21st birthday. To celebrate they released version 2.1.1 along with patch releases for 2.0.0 and 1.9.3 <a href=\"https://www.ruby-lang.org/en/news/2014/02/24/ruby-2-1-1-is-released/\"> </a> <a href=\"http://devblog.avdi.org/2014/02/23/rumors-of-rubys-demise/\">Rumors of Ruby’s Demise</a> Avdi Grimm wrote a blog post about the 'Rumors of Ruby's Demise' where he talks about the hype around other languages, specially ones with built-in support for concurrency like Erlang or Scala, and how some people in the community see that as sort of a threat to Ruby. <a href=\"http://devblog.avdi.org/2014/02/23/rumors-of-rubys-demise/\"> </a> <a href=\"http://tenderlovemaking.com/2014/02/19/adequaterecord-pro-like-activerecord.html\">AdequateRecord</a> Last week Aaron Paterson released a fork of ActiveRecord that can handle twice as many requests per second. <a href=\"http://tenderlovemaking.com/2014/02/19/adequaterecord-pro-like-activerecord.html\"> </a> <a href=\"http://rubyheroes.com/\">Ruby Heroes</a> Please take a moment to nominate someone that's significantly contributed to our community this past year for a Ruby Hero Award. The awards with be given at RailsConf in Chicago. <a href=\"http://rubyheroes.com/\"> </a> <a href=\"http://ruby5.envylabs.com\">Thank You for Listening to Ruby5</a> <p>Ruby5 is released Tuesday and Friday mornings. To stay informed about and active with this podcast, we encourage you to do one of the following:</p> Follow <a href=\"http://twitter.com/envylabs\">Envy Labs</a> on Twitter Or, subscribe with <a href=\"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=327234205\">iTunes</a> or <a href=\"http://feeds.feedburner.com/Ruby5\">RSS</a> <a href=\"http://ruby5.envylabs.com\"> </a>"
           "duration": 387
+          "publishedAt": 1393617997
         ,
           "uid": 36001535
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/WucTkQbwJD8/442-ruby5.mp3"
@@ -3856,6 +4075,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #442 – February 21st, 2014"
           "episodeSummary": "<p> We will miss you Jim Weirich. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/478-episode-442-february-21st-2014\">Listen to this episode on Ruby5</a></p>"
           "duration": 217
+          "publishedAt": 1393350738
         ,
           "uid": 35962626
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/HMbtI2iwfsw/441-ruby5.mp3"
@@ -3863,6 +4083,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #441 - February 18th, 2014"
           "episodeSummary": "<p> In this episode we cover mruby 1.0, Hound CI, ActiveIntegration, Rails Flash Partials, Inch, Inheritable Aliases, and a big Rails for Zombies update. Put down your brains and your entrails. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/477-episode-441-february-18th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_437&amp;utm_campaign=sponsor_page\">Sponsored by TopRubyJobs</a> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_437&amp;utm_campaign=sponsor_page\"> </a> <a href=\"http://www.mruby.org/\">mruby 1.0 Released!</a> Earlier this month mruby 1.0 was released. This is a lightweight implementation of the Ruby language which can be linked and embedded within an application. You can also compile Ruby programs into compiled byte code. <a href=\"http://www.mruby.org/\"> </a> <a href=\"http://houndci.com\">Hound CI</a> Scott Albertson from Thoughtbot just released Hound CI, which is a service that reviews GitHub pull requests for style guide violations. It provides guidelines for things like git workflow, code formatting, naming, organization, and language-specific conventions for languages like Sass, Ruby, Coffeescript, Objective-C, and Python. AND it even includes some Rails development conventions for HTML, routing, background jobs, and testing. <a href=\"http://houndci.com\"> </a> <a href=\"http://devblog.orgsync.com/confidently-manage-business-logic-activeinteraction/\">Confidently Manage Business Logic with ActiveInteraction</a> OrgSync recently released version 1.0 of their gem ActiveInteraction, which helps manage application specific business logic. It's a unique way to help you keep business logic out of your models and controllers. <a href=\"http://devblog.orgsync.com/confidently-manage-business-logic-activeinteraction/\"> </a> <a href=\"http://www.youtube.com/watch?v=rSlDEvtk6lA\">Rails Flash Partials</a> Zack Siri from Codemy wrote to us about another screencast he’s created, this time it’s about Rails Flash Partials. Setting up flash messages in Rails is really simple, but it can become more complex as your application grows. Rails partials are great for keeping your code DRY, and flash messages are no exception. <a href=\"http://www.youtube.com/watch?v=rSlDEvtk6lA\"> </a> <a href=\"http://trivelop.de/inch/\">Inch</a> So there’s lots of libraries to help you rate your code, based on complexity, code coverage and so on and so on.. But this week I found a library that will grade how well your code is documented called Inch, by René Föhring. Check it out next time you need to beef up your documentation on a project. <a href=\"http://trivelop.de/inch/\"> </a> <a href=\"http://theinternate.com/2014/02/14/inheritable-aliases-in-ruby.html\">Inheritable Aliases in Ruby</a> Ruby’s method aliases are pretty handy, but if you method_alias in a class and then extend from that class, it won’t work. One way to solve this is by using the Forwardable module and its def_delegator method that are included in the Ruby standard library. However, a better solution is outlined in Nate Smith’s blog post, in which he describes writing a custom inheritable_alias method. <a href=\"http://theinternate.com/2014/02/14/inheritable-aliases-in-ruby.html\"> </a> <a href=\"http://railsforzombies.org\">Rails for Zombies Updated!</a> Over on Code School we just updated the original Rails for Zombies to be compatible with Rails 4 and Ruby 2. We made a massive improvement to the videos as well, so if you know anyone that needs to get started with Ruby on Rails, you know where to send em. <a href=\"http://railsforzombies.org\"> </a> <a href=\"http://ruby5.envylabs.com\">Thank You for Listening to Ruby5</a> <p>Ruby5 is released Tuesday and Friday mornings. To stay informed about and active with this podcast, we encourage you to do one of the following:</p> Follow <a href=\"http://twitter.com/envylabs\">Envy Labs</a> on Twitter Or, subscribe with <a href=\"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=327234205\">iTunes</a> or <a href=\"http://feeds.feedburner.com/Ruby5\">RSS</a> <a href=\"http://ruby5.envylabs.com\"> </a>"
           "duration": 388
+          "publishedAt": 1392943127
         ,
           "uid": 35886188
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/ygSfglkhI8w/440-ruby5.mp3"
@@ -3870,6 +4091,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #440 – February 14th, 2014"
           "episodeSummary": "<p> PostgreSQL! Such wow! Much gitsh! Ask Ruby, maybe not? R u an activity feed? Hakiri amaze on the Doge 5! <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/476-episode-440-february-14th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">Sponsored by New Relic</a> New Relic is _the_ all-in-one web performance analytics product. It lets you manage and monitor web application performance, from the browser down to the line of code. With Real User Monitoring, New Relic users can see browser response times by geographical location of the user, or by browser type. <a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\"> </a> <a href=\"http://www.amberbit.com/blog/2014/2/4/postgresql-awesomeness-for-rails-developers/\">PostgreSQL Awesomeness</a> Dig a little deeper into that database you’re most likely running. Hubert Lepicki has a nice overview of what makes PostgreSQL so nice for Rails development. <a href=\"http://www.amberbit.com/blog/2014/2/4/postgresql-awesomeness-for-rails-developers/\"> </a> <a href=\"https://github.com/thoughtbot/gitsh\">gitsh</a> Thoughtbot brings you an interactive shell for git. Why did they do this? Why not! It’s a simple tool, but effective. Save some typing and get some nice features for interacting with git. <a href=\"https://github.com/thoughtbot/gitsh\"> </a> <a href=\"http://patshaughnessy.net/2014/2/10/use-an-ask-dont-tell-policy-with-ruby\">Ask Ruby or maybe not?</a> Pat Shaughnessy has a great post up on being more functional with your Ruby code. Be sure to follow the link to Dave Thomas’ clarifying post as well. <a href=\"http://patshaughnessy.net/2014/2/10/use-an-ask-dont-tell-policy-with-ruby\"> </a> <a href=\"http://blog.givegab.com/post/75043413459/using-enumerations-to-make-a-faster-activity-feed-in\">Enumerate your activity feed</a> The GiveGab team gives a high-level description of how they implemented their activity feed. Follow the pointers for more details on this sticky problem. <a href=\"http://blog.givegab.com/post/75043413459/using-enumerations-to-make-a-faster-activity-feed-in\"> </a> <a href=\"https://hakiri.io/facets\">Hakiri Facets</a> Hakiri launched a free service this week that scans your Gemfile.lock and reports known CVE vulnerabilities. <a href=\"https://hakiri.io/facets\"> </a>"
           "duration": 311
+          "publishedAt": 1392749006
         ,
           "uid": 35812788
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/LycwZksiJSU/439-ruby5.mp3"
@@ -3877,6 +4099,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #439 - February 11th, 2014"
           "episodeSummary": "<p> In this episode we cover Structuring Sinatrap Apps, REST clients with ActiveRestClient, supporting 12-Factor App with ENV_BANG using Foreman to manage services and a new DSL for creating objects with MooseX. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/475-episode-439-february-11th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_437&amp;utm_campaign=sponsor_page\">Sponsored by TopRubyJobs</a> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_437&amp;utm_campaign=sponsor_page\"> </a> <a href=\"http://blog.sourcing.io/structuring-sinatra\">Structuring Sinatra Apps with Trevi</a> Last week, Alex MacCaw posted an article on the Sourcing.io blog which focused on a very opinionated way to develop and structure Sinatra applications. He’s even released a companion gem called Trevi that bundles all of this knowledge up and helps you follow along. <a href=\"http://blog.sourcing.io/structuring-sinatra\"> </a> <a href=\"https://github.com/whichdigital/active-rest-client\">ActiveRestClient</a> ActiveRestClient is a gem is for accessing REST services in an ActiveRecord style. It aims to be a more flexible alternative to ActiveResource. It allows things like setting different endpoints for different REST actions and has additional features like built-in caching. <a href=\"https://github.com/whichdigital/active-rest-client\"> </a> <a href=\"https://github.com/jcamenisch/ENV_BANG/\">ENV!</a> ENV! is a variant for supporting 12-Factor Apps similar to dotenv, but which provides a bit more friendly onboarding experience to a new application. Where dotenv just loads whatever is in your .env file into ENV, ENV! will fail loudly if required variables are undefined or missing and gives you the opportunity to provide helpful messages in that case. <a href=\"https://github.com/jcamenisch/ENV_BANG/\"> </a> <a href=\"http://mauricio.github.io/2014/02/09/foreman-and-environment-variables.html\">Using Foreman to Manage services</a> Maurício Linhares published an article last week detailing how to use Foreman to isolate and manage application development on OS X machines. He points out that while installing Postgres, for example, is a good thing, you don’t necessarily need it running all the time. The same is true for other application dependencies, like Redis. <a href=\"http://mauricio.github.io/2014/02/09/foreman-and-environment-variables.html\"> </a> <a href=\"https://github.com/peczenyj/MooseX\">MooseX</a> MooseX is a DSL that helps to make Object Oriented programming in Ruby easier, more consistent, and less tedious. The gem is maintained by Tiago Peczenyj and it's based on Perl's Moose and Moo, two very popular modules in the Perl community. With MooseX you can think more about what you want to do and less about the mechanics of OOP. <a href=\"https://github.com/peczenyj/MooseX\"> </a> <a href=\"http://rubyheroes.com\">RubyHeroes</a> The nominations are open for Ruby Heroes 2014. Head on over to rubyheroes.com, armed with the GitHub usernames of people who have made this past last year a pleasure for you to be in the Ruby community. <a href=\"http://rubyheroes.com\"> </a> <a href=\"http://ruby5.envylabs.com\">Thank You for Listening to Ruby5</a> <p>Ruby5 is released Tuesday and Friday mornings. To stay informed about and active with this podcast, we encourage you to do one of the following:</p> Follow <a href=\"http://twitter.com/envylabs\">Envy Labs</a> on Twitter Or, subscribe with <a href=\"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=327234205\">iTunes</a> or <a href=\"http://feeds.feedburner.com/Ruby5\">RSS</a> <a href=\"http://ruby5.envylabs.com\"> </a>"
           "duration": 444
+          "publishedAt": 1392392485
         ,
           "uid": 35731029
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/rMpRtpUsbIg/438-ruby5.mp3"
@@ -3884,6 +4107,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #438 - February 7th, 2014"
           "episodeSummary": "<p> We learn about Recursion a list of deprecated stuff in Ruby and the value of Rails worst practices <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/474-episode-438-february-7th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://erniemiller.org/2014/02/05/7-lines-every-gems-rakefile-should-have\">7 Lines Every Gem's Rakefile Should Have</a> Ernie Miller published a post showing you how to create a rake console task to load irb and require your gem so you can have a console to play around with it <a href=\"http://erniemiller.org/2014/02/05/7-lines-every-gems-rakefile-should-have\"> </a> <a href=\"http://blog.envylabs.com/post/75521798481/token-based-authentication-in-rails\">Token Based Authentication in Rails</a> using authenticate_or_request_with_http_token for token based API authentication <a href=\"http://blog.envylabs.com/post/75521798481/token-based-authentication-in-rails\"> </a> <a href=\"http://batsov.com/articles/2014/02/05/a-list-of-deprecated-stuff-in-ruby/\">A List of Deprecated Stuff in Ruby</a> Bozhidar Batsov went through the the code built a list of decrecated stuff in Ruby <a href=\"http://batsov.com/articles/2014/02/05/a-list-of-deprecated-stuff-in-ruby/\"> </a> <a href=\"http://dmcca.be/2014/02/02/the-value-of-rails-worst-practices.html\">The value of Rails worst practices</a> When interviewing potential Rails developers, Devin found that the quickest way to gauge the experience of a potential hire is to show them some shockingly bad Rails code and ask them what they see <a href=\"http://dmcca.be/2014/02/02/the-value-of-rails-worst-practices.html\"> </a> <a href=\"http://blog.newrelic.com/2014/02/05/infographic-browser-wars-find-dominates-year/\">Sponsored by NewRelic</a> Using their Real User Monitoring feature, they've once again culled the average browser speeds experienced by end users of nearly 3 million application instances and the data doesn’t lie. <a href=\"http://blog.newrelic.com/2014/02/05/infographic-browser-wars-find-dominates-year/\"> </a> <a href=\"http://www.youtube.com/watch?v=S4HqTYdIm9A&amp;feature=youtu.be\">Recursion</a> Dave Bock was recently on the Ruby Hangout and gave a great presentation on recursion for ruby developers. <a href=\"http://www.youtube.com/watch?v=S4HqTYdIm9A&amp;feature=youtu.be\"> </a>"
           "duration": 288
+          "publishedAt": 1392117655
         ,
           "uid": 35671062
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/O9a87l0oPno/437-ruby5.mp3"
@@ -3891,6 +4115,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #437 - February 4th, 2014"
           "episodeSummary": "<p> Token Based Authentication, Recommundle, git_pretty_accept, PStore, Practicing Ruby, and RailsBricks 2 all in this episode of the Ruby5! <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/473-episode-437-february-4th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_437&amp;utm_campaign=sponsor_page\">Sponsored by Top Ruby Jobs</a> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_437&amp;utm_campaign=sponsor_page\"> </a> <a href=\"http://blog.envylabs.com/post/75521798481/token-based-authentication-in-rails\">Token Based Authentication in Rails</a> This week our very own Carlos Souza wrote up a blog post about how to use Token Based Authentication in your Rails app. <a href=\"http://blog.envylabs.com/post/75521798481/token-based-authentication-in-rails\"> </a> <a href=\"http://recommundle.com/\">Recommundle</a> Chris Tonkinson released recommundle, a recommendation engine for Gemfiles. You upload your project's gemfile and it recommends gems that it thinks you might be interested in checking out. <a href=\"http://recommundle.com/\"> </a> <a href=\"http://tech.lovewithfood.com/blog/2014/01/19/git%C2%ADpretty%C2%ADaccept%C2%ADaccept%C2%ADpull%C2%ADrequests%C2%ADthe%C2%ADpretty%C2%ADway\">git_pretty_accept</a> George Mendoza released the git_pretty_accept gem this week which automates his teams preferred method of accepting github pull requests in their project to keep their history readable. <a href=\"http://tech.lovewithfood.com/blog/2014/01/19/git%C2%ADpretty%C2%ADaccept%C2%ADaccept%C2%ADpull%C2%ADrequests%C2%ADthe%C2%ADpretty%C2%ADway\"> </a> <a href=\"http://robm.me.uk/ruby/2014/01/25/pstore.html\">Persisting data in Ruby with PStore</a> Rob Miller wrote up a blog post about how to persist data in ruby in situations where using a database might seem like overkill. <a href=\"http://robm.me.uk/ruby/2014/01/25/pstore.html\"> </a> <a href=\"https://practicingruby.com/\">Practicing Ruby journal moves to open-access</a> This week Gregory Brown of Prawn fame announced that he's giving open access to 68 articles from the Practicing Ruby journal. <a href=\"https://practicingruby.com/\"> </a> <a href=\"http://www.railsbricks.net/\">RailsBricks 2</a> Nico Schuele dropped us an email to let us know about RailsBricks 2. This new version is 100% in Ruby, doesn’t have anymore bash commands, and includes a test framework. <a href=\"http://www.railsbricks.net/\"> </a>"
           "duration": 314
+          "publishedAt": 1391776368
         ,
           "uid": 35595906
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/3H4GfR1SxRs/436-ruby5.mp3"
@@ -3898,6 +4123,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #436 - January 31st, 2014"
           "episodeSummary": "<p> Weekly Elixir news, control your AR Drone with Argus, use STI with an hstore, learning about Rails validators, sparklines in Ruby, and readme searching with HandCooler all in this episode of the Ruby5! <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/472-episode-436-january-31st-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">This episode is sponsored by New Relic</a> New Relic is _the_ all-in-one web performance analytics product. It lets you manage and monitor web application performance, from the browser down to the line of code. With Real User Monitoring, New Relic users can see browser response times by geographical location of the user, or by browser type. <a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\"> </a> <a href=\"http://elixir-fountain.com\">Elixir Fountain</a> Keeping up with what's going on in the Elixir community has never been easier. The Elixir Fountain weekly mailing list has you covered. <a href=\"http://elixir-fountain.com\"> </a> <a href=\"https://github.com/jimweirich/argus\">Argus</a> Have a Parrot AR Drone and a command line? The Argus gem let's you control your quadracopter in Ruby! <a href=\"https://github.com/jimweirich/argus\"> </a> <a href=\"http://www.devmynd.com/blog/2013-3-single-table-inheritance-hstore-lovely-combination\">STI + Hstore</a> Have a better STI experience in Rails by leveraging the Postgres Hstore with hstore_accessor. <a href=\"http://www.devmynd.com/blog/2013-3-single-table-inheritance-hstore-lovely-combination\"> </a> <a href=\"http://monkeyandcrow.com/blog/reading_rails_errors_and_validators/\">Rails Errors and Validators</a> Learn the in's and out's of how Rails validators work with this detailed blog post. <a href=\"http://monkeyandcrow.com/blog/reading_rails_errors_and_validators/\"> </a> <a href=\"https://github.com/rrrene/sparkr\">Sparkr</a> All the goodness of Spark now in your Ruby CLI! <a href=\"https://github.com/rrrene/sparkr\"> </a> <a href=\"http://sanemat.github.io/hand_cooler/#/\">HandCooler</a> Finding that gem readme has never been easier! <a href=\"http://sanemat.github.io/hand_cooler/#/\"> </a>"
           "duration": 299
+          "publishedAt": 1391534327
         ,
           "uid": 35594215
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/QtPf0Qgx4NA/435-ruby5.mp3"
@@ -3905,6 +4131,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #435 - January 28, 2014"
           "episodeSummary": "<p> We destroy Rake with Thor, sit back for a Mina to go over Lite Config, hit some Rubygem Development Tips, and share a Weekly dose of Vim on this episode of Ruby5. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/471-episode-435-january-28-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_435&amp;utm_campaign=sponsor_page\">Sponsored by Top Ruby Jobs</a> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. <a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_435&amp;utm_campaign=sponsor_page\"> </a> <a href=\"https://github.com/gtd/lite_config\">Configure Rails with YAML with Lite Config</a> Last week, Gabe da Silveira released lite_config, a small, environment-aware, YAML configuration manager for Rails applications. It provides conveniences like lazy loading your config/ YAML files, indifferent access to keys, automatic scoping to your currently-running Rails environment, and the ability to locally override these settings. <a href=\"https://github.com/gtd/lite_config\"> </a> <a href=\"http://codecrate.com/2014/01/replace-rake-with-thor.html\">Replace Rake with Thor</a> Thor is incredibly useful and gives you an easy way to create Ruby-based command line applications. Did you know that Thor has extensions available? And your Thor calls can be testable? Check out Ryan Sonnek's recent post for details. <a href=\"http://codecrate.com/2014/01/replace-rake-with-thor.html\"> </a> <a href=\"http://dev.mikamai.com/post/74159739828/6-tips-for-full-stack-open-source-rubygems-development\">6 Tips for Full Stack Open Source RubyGems Development</a> Last week, Giovanni Intini posted an article on the Mikamai blog covering 6 tips for open source Rubygem development. The cover considerations you should make when creating your gems as well as service available to help you track and maintain them. <a href=\"http://dev.mikamai.com/post/74159739828/6-tips-for-full-stack-open-source-rubygems-development\"> </a> <a href=\"http://www.youtube.com/watch?v=W2Lt1Hjz2vw\">Mina Deployment for Rails</a> Sakchai Siripanyawuth wrote to us this week about a two part video on Rails deployment with Mina, part of a series called DevOps for Developers. Mina is a deployment manager, like Capistrano or Vlad, and works over SSH. Check out the videos for more info. <a href=\"http://www.youtube.com/watch?v=W2Lt1Hjz2vw\"> </a> <a href=\"http://www.vimweekly.com/\">Vim Weekly</a> Vim Weekly is a new mailing list (old school, right? Like Vim!) that sends out just five new Vim tips per week. If you're already somewhat familiar with Vim and are looking to hone your skills, these bite size tips may be just what you need. <a href=\"http://www.vimweekly.com/\"> </a>"
           "duration": 320
+          "publishedAt": 1391177876
         ,
           "uid": 35594216
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/N3lJgcsAe6Y/434-ruby5.mp3"
@@ -3912,6 +4139,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #434 - January 24th, 2014"
           "episodeSummary": "<p> Command line fuzzy finding, workers in go, consolidating your docsites, interviewing front-end developers, tracking upcoming ruby conferences, and a long-awaited update to PhantomJS all in this episode of the Ruby5! <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/470-episode-434-january-24th-2014\">Listen to this episode on Ruby5</a></p> <a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">This episode is sponsored by New Relic</a> New Relic is _the_ all-in-one web performance analytics product. It lets you manage and monitor web application performance, from the browser down to the line of code. With Real User Monitoring, New Relic users can see browser response times by geographical location of the user, or by browser type. <a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\"> </a> <a href=\"https://github.com/garybernhardt/selecta\">Selecta</a> Selecta is an open source fuzzy text finder for the command line. It is easy to work with an integrate into your existing workflows! <a href=\"https://github.com/garybernhardt/selecta\"> </a> <a href=\"http://www.goworker.org/\">Goworker</a> Have slow Ruby workers? Goworker is compatible with resque and might process your background tasks much faster than your existing Ruby workers. <a href=\"http://www.goworker.org/\"> </a> <a href=\"http://devdocs.io/\">DevDocs</a> DevDocs combines multiple API documentations in a fast, organized, and searchable interface. <a href=\"http://devdocs.io/\"> </a> <a href=\"https://github.com/darcyclarke/Front-end-Developer-Interview-Questions\">Front-end Job Interview Questions</a> A list of helpful front-end related questions you can use to interview potential candidates. <a href=\"https://github.com/darcyclarke/Front-end-Developer-Interview-Questions\"> </a> <a href=\"http://rubyconferences.org\">rubyconferences.org</a> Wondering what conferences are coming up in the Ruby community? The recently launched rubyconferences.org site has all the details! <a href=\"http://rubyconferences.org\"> </a> <a href=\"https://groups.google.com/forum/#!topic/phantomjs/0GkXtTO6l4Q\">PhantomJS Update</a> PhantomJS got an update that removes those pesky CoreText performance warnings in your log. Brew update today and all that ugliness will go away! <a href=\"https://groups.google.com/forum/#!topic/phantomjs/0GkXtTO6l4Q\"> </a>"
           "duration": 301
+          "publishedAt": 1390978344
         ,
           "uid": 35366662
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/l1K-7bBnMIo/433-ruby5.mp3"
@@ -3919,6 +4147,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #433 - January 17, 2014"
           "episodeSummary": "<p> ActiveSupport Notifications, RailsBricks, DotEnv, Builder, Decorator, Chain of Responsibility, and null object patterns <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/469-episode-433-january-17-2014\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://newrelic.com/\">NewRelic</a></em> <br> NewRelic recently posted about what Nonlinear Dynamics Teach Us About App Stability </p> <p> <em><a href=\"http://technology.customink.com/blog/2013/12/19/instrumenting-your-code-with-activesupport-notifications\">Instrumenting Your Code With ActiveSupport Notifications</a></em> <br> We've been having hack lunches at CustomInk | Tech to level up our rails knowledge. Find out what we learned about ActiveSupport Notifications </p> <p> <em><a href=\"http://www.railsbricks.net\">RailsBricks</a></em> <br> RailsBricks will setup Bootstrap 3, Font Awesome, Devise, Kaminari and build out the basic models and views for those gems </p> <p> <em><a href=\"http://myronmars.to/n/dev-blog/2014/01/new-in-rspec-3-composable-matchers\">Composable Matchers in RSpec 3.0</a></em> <br> One of RSpec 3’s big new features is composable matchers. This feature will help make your tests more powerful with less brittle expectations </p> <p> <em><a href=\"https://github.com/bkeepers/dotenv\">DotEnv</a></em> <br> One of the tenets of a Twelve-Factor App is to store configuration in env vars. They are easy to change between deploys without changing any code; and unlike config files, there is little chance of them being checked into the code repo accidentally. </p> <p> <em><a href=\"http://robots.thoughtbot.com/code-show-and-tell-polymorphic-finder\">Code Show and Tell: PolymorphicFinder</a></em> <br> You just need a quick refactor to use the Builder, Decorator, Chain of Responsibility, and null object pattern </p> <p> <em><a href=\"http://www.youtube.com/watch?v=vRUUlgXAUUI\">We're NASA and We Know It (Mars Curiosity) Song</a></em> <br> Thank you for listening to Ruby5. Be sure to tune in every Tuesday and Friday for the latest news in the Ruby and Rails community. </p>"
           "duration": 368
+          "publishedAt": 1390607292
         ,
           "uid": 35329039
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/0GvGAQ4ohW0/432-ruby5.mp3"
@@ -3926,6 +4155,8 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #432 - January 14, 2014"
           "episodeSummary": "<p> We Brag about our Backend, shed some Light on Test Driven Rails, avoid the DBeater, pout over Ruby 1.9's end of life on this HAIKU edition of Ruby5. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/468-episode-432-january-14-2014\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_432&amp;utm_campaign=sponsor_page\">This episode is sponsored by Top Ruby Jobs</a></em> <br> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. </p> <p> <em><a href=\"https://github.com/existentialmutt/lt-ruby\">Light Table Ruby</a></em> <br> Rafe Rosen just released a new plugin for the recently-open-sourced Light Table IDE last week that adds full page, selection, or single line Ruby code execution. You can use this to quickly execute or demonstrate some code without leaving your Ruby files. </p> <p> <em><a href=\"http://karolgalanciak.com/blog/2014/01/04/test-driven-rails-part-1/\">Test Driven Rails Part 1</a></em> <br> Last week, Karol Galanciak posted the first article in a series on Test Driven Rails. The series is intending to cover how, when, and what to test when developing a Rails application. This first part is mostly theoretical, and Part 2 will take the topics discussed and apply them to application development. </p> <p> <em><a href=\"http://codebrag.com/\">Code Reviews with Codebrag</a></em> <br> Code reviews are sometimes hard to do, and do consistently. Codebrag is a downloadable Ruby application that you can install and run on your own servers to watch your repositories and give you a simple interface for reviewing your code. Version 1 is free, and will be forever, so check it out. </p> <p> <em><a href=\"http://www.indiegogo.com/projects/dbeater/\">XML-based DB Migrations with DBeater</a></em> <br> DBeater is a yet-to-be-backed, crowdfunded project on Indiegogo which will become a Ruby gem that will allow you to migrate and version your database. It's backend agnostic, but uses XML instead of Ruby for it's definition files. We can't all be perfect, eh? </p> <p> <em><a href=\"http://instructure.github.io/blog/2014/01/07/faster-ruby-i18n-backend-written-in-c/\">Faster I18n Backend for Ruby Written in C</a></em> <br> i18nema is a new I18n translation library which uses C underpinnings to ease some of the garbage collection / Ruby object generation pain in current I18n libraries. It should be faster and more memory efficient, albeit not something you likely want to talk too much about at work. </p> <p> <em><a href=\"https://www.ruby-lang.org/en/news/2014/01/10/ruby-1-9-3-will-end-on-2015/\">Ruby 1.9.3 End of Life</a></em> <br> The Ruby core team announced late last week that support for Ruby 1.9 will be ending. Active development will cease in about a month, followed by a year of security fix support, and all support will end in February of 2015. Time to migrate to Ruby 2.1! </p>"
           "duration": 375
+          "publishedAt": 1389965751
+
         ,
           "uid": 35276929
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/O6UnBFX_Cog/431-ruby5.mp3"
@@ -3933,6 +4164,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #431 – January 10th, 2013"
           "episodeSummary": "<p> Another Ruby5! Analyze your githubs with AccessList and hammerspace enumerable into submission using Sneakers. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/467-episode-431-january-10th-2013\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">This episode is sponsored by New Relic</a></em> <br> New Relic is _the_ all-in-one web performance analytics product. It lets you manage and monitor web application performance, from the browser down to the line of code. With Real User Monitoring, New Relic users can see browser response times by geographical location of the user, or by browser type. </p> <p> <em><a href=\"https://github.com/blog/1672-introducing-github-traffic-analytics\">Github Traffic Analytics</a></em> <br> Traffic analytics for your Github repos! It's about time. Now you can see number of views, unique visitors, and other useful data. </p> <p> <em><a href=\"http://about.ckundo.com/access_lint/\">AccessLint</a></em> <br> How accessible is your site? Cameron Cundiff's AccessLint gem makes it easy to find out. </p> <p> <em><a href=\"http://nerds.airbnb.com/hammerspace-persistent-concurrent-off-heap-storage\">Hammerspace</a></em> <br> App response times climbing? Clearly you need persistent, concurrently-available, off-heap storage of strings! Well, Airbnb did at least. And if it worked for them it can work for you too. </p> <p> <em><a href=\"http://jondot.github.io/sneakers/\">Sneakers</a></em> <br> Performance background processing for Ruby using RabbitMQ. Like a boss! </p> <p> <em><a href=\"http://blog.arkency.com/2014/01/ruby-to-enum-for-enumerator\">Stop including Enumerable, return Enumerator instead</a></em> <br> Robert Pankowecki has written a blog post asking us all to please stop including Enumerable and use an Enumerator instead. Please. Stop. </p>"
           "duration": 365
+          "publishedAt": 1389715856
         ,
           "uid": 35217404
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/wUWZ1IV3-7o/430-ruby5.mp3"
@@ -3940,6 +4172,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #430 - January 7th, 2014"
           "episodeSummary": "<p> Test Driving a JSON API in Rails, Jubilee for Vert.x, Exception#cause, Hulse, Caching an API <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/466-episode-430-january-7th-2014\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_427&amp;utm_campaign=sponsor_page\">This episode is sponsored by Top Ruby Jobs</a></em> <br> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. </p> <p> <em><a href=\"http://www.commandercoriander.net/blog/2014/01/04/test-driving-a-json-api-in-rails\">Test Driving a JSON API in Rails</a></em> <br> Eno Compton wrote a blog post on \"Test Driving a JSON API in Rails\" where he touches on some pretty relevant details that tend to be overlooked by most developers. </p> <p> <em><a href=\"http://isaiah.github.io/jubilee/\">Jubilee for Vert.x</a></em> <br> Jubilee is a rack server that uses the best features of Vert.x 2.0 such as Event bus, Shared data and Clustering. </p> <p> <em><a href=\"http://blog.bugsnag.com/2014/01/03/ruby-2-1-exception-causes/\">Ruby 2.1 Exception#cause</a></em> <br> The folks at Bugsnag wrote a blog post describing Ruby 2.1's Exception#cause feature which allows access to the root cause of an exception in cases where multiple exceptions are raised. </p> <p> <em><a href=\"https://github.com/dwillis/hulse\">Hulse</a></em> <br> Hulse, by Derek Willis, is a Ruby wrapper for House and Senate roll call votes. It parses Congressional vote data from the official House of Representatives and Senate websites. </p> <p> <em><a href=\"http://www.rubytapas.com/episodes/66-Caching-an-API?filter=free\">Free Ruby Tapas on Caching an API</a></em> <br> Avdi Grimm has just freed up another episode from the Ruby Tapas archives on Caching an API. He talks about building a caching layer over an HTTP API. </p>"
           "duration": 345
+          "publishedAt": 1389370292
         ,
           "uid": 35160104
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/BxgstX-GLo4/429-ruby5.mp3"
@@ -3947,6 +4180,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #429 - January 3rd, 2014"
           "episodeSummary": "<p> Writing a Ruby compiler, the Omega universe simulator, RubyGems 2.2.0, debugging with HTTP clients, detecting similarities in images, and the Lotus web framework all in this episode of the Ruby5! <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/465-episode-429-january-3rd-2014\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">This episode is sponsored by New Relic</a></em> <br> New Relic is _the_ all-in-one web performance analytics product. It lets you manage and monitor web application performance, from the browser down to the line of code. With Real User Monitoring, New Relic users can see browser response times by geographical location of the user, or by browser type. </p> <p> <em><a href=\"http://www.hokstad.com/compiler/\">Writing a Compiler in Ruby from the Bottom Up</a></em> <br> Ever wondered just what goes into writing a compiler? This long running series of blog posts from Vidar Hokstad will take you on a whirlwind tour! </p> <p> <em><a href=\"https://github.com/movitto/omega\">The Omega Simulation Framework</a></em> <br> The Omega universe simulation framework lets you create your very own game universe in the cloud! </p> <p> <em><a href=\"http://blog.rubygems.org/2013/12/26/2.2.0-released.html\">RubyGems 2.2.0 Released</a></em> <br> Happy Festivus, we got a new RubyGems! </p> <p> <em><a href=\"http://devblog.avdi.org/2013/12/29/debugging-an-http-client-library/\">Debugging an HTTP Client Library</a></em> <br> Avdi gets to the bottom of an HTTP client. </p> <p> <em><a href=\"http://www.amberbit.com/blog/2013/12/20/similar-images-detection-in-ruby-with-phash/\">Detect Similar Images</a></em> <br> Check out part 1 of a series on detecting similar images. </p> <p> <em><a href=\"http://lucaguidi.com/2014/01/01/announcing-lotus.html\">Lotus</a></em> <br> Lotus is a new full-stack web application framework for Ruby. </p>"
           "duration": 327
+          "publishedAt": 1389100489
         ,
           "uid": 34905332
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/bIuu9amxszc/428-ruby5.mp3"
@@ -3954,6 +4188,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #428 – December 20th, 2013"
           "episodeSummary": "<p> Today only! Some Rails 4.1 tidbits, dependency injection drama, a Rails engine for the Dashing framework, and some free tapas from Avdi. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/464-episode-428-december-20th-2013\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">This episode is sponsored by New Relic</a></em> <br> New Relic is _the_ all-in-one web performance analytics product. It lets you manage and monitor web application performance, from the browser down to the line of code. With Real User Monitoring, New Relic users can see browser response times by geographical location of the user, or by browser type. </p> <p> <em><a href=\"http://weblog.rubyonrails.org/2013/12/18/Rails-4-1-beta1/\">Rails 4.1 beta</a></em> <br> Rails 4.1 beta is out! A nice summary here: <a href=\"http:\"></a>http://coherence.io/blog/2013/12/17/whats-new-in-rails-4-1.html </p> <p> <em><a href=\"http://edgeguides.rubyonrails.org/4_1_release_notes.html#config-secrets-yml\">secrets.yml</a></em> <br> Rails 4.1 has a secret! It’s a new config file called secrets.yml intended to hold your sensitive bits out of the gits. </p> <p> <em><a href=\"http://solnic.eu/2013/12/17/the-world-needs-another-post-about-dependency-injection-in-ruby.html\">Another post about Dependency Injection</a></em> <br> Piotr Solnica adds his own thoughts on DI, and uses a short example of how he practices DI in his own code. </p> <p> <em><a href=\"http://www.rubytapas.com/episodes/64-Yield-or-Enumerate\">Yield or Enumerate</a></em> <br> Avdi Grimm is giving it away! He’s posted another of his brief Ruby Tapas episodes on his site for free. Yield or Enumerate will show you how many of Ruby’s iteration methods return an Enumerator object if not given a block and what you can do with it. </p> <p> <em><a href=\"https://github.com/gottfrois/dashing-rails\">dashing-rails</a></em> <br> Dash away, dash away, dash away all! Take a peek at dashing-rails, a Rails Engine for Shopify’s Dashing framework. So handsome. </p>"
           "duration": 373
+          "publishedAt": 1388758664
         ,
           "uid": 34856279
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/mDvglH6rSuU/427-ruby5.mp3"
@@ -3961,6 +4196,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #427 - December 17th, 2013"
           "episodeSummary": "<p> rails-assets.org, Rails Database Info, Callbacks Extraction, Shutterbug, A Deeper Look at Ruby’s Enumerable, Prawn 0.13.0 <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/463-episode-427-december-17th-2013\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_427&amp;utm_campaign=sponsor_page\">This episode is sponsored by Top Ruby Jobs</a></em> <br> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. </p> <p> <em><a href=\"http://rails-assets.org\">rails-assets.org</a></em> <br> The team at monterail created a gem host that automatically converts packaged bower components into ruby gems. </p> <p> <em><a href=\"https://github.com/vlado/rails_db_info\">Rails Database Info</a></em> <br> Vlado Cingel sent us a gem over the weekend called Rails database info. This gem adds an html endpoint to your Rails application which will give you a quick display of your database schema and contents for reference. </p> <p> <em><a href=\"http://sharkzp.github.io/blog/2013/12/16/callbacks-extraction/\">Callbacks Extraction</a></em> <br> Alex Topalov wrote about how to refactor your app away from callbacks to small easy to understand ruby objects. He does this by moving the callbacks out of their domain classes and into a unitary class. </p> <p> <em><a href=\"https://github.com/concord-consortium/shutterbug\">Shutterbug</a></em> <br> Shutterbug is a rack service that sends a JavaScript library to the browser, then makes it simple to send HTML fragments back to the server, which can generate images using PhantomJS. </p> <p> <em><a href=\"http://rubylove.io/ruby/core/2013/12/14/a-deeper-look-at-rubys-enumerable-1/\">A Deeper Look at Ruby’s Enumerable</a></em> <br> This week the ruby love blog gave some love to some helpful enumerable methods that we might tend to forget about. Methods like any?, all?, none? and each_cons. </p> <p> <em><a href=\"http://elmcitycraftworks.org/post/70158932822/prawn-0-13-0-has-been-released-and-1-0-is-finally-on\">Prawn 0.13.0</a></em> <br> This week the prawn gem got it’s first official release in 2 years. It’s now at version 0.13.0. There’s lots of new features, bug fixes, and breaking changes so be sure to read the change log before attempting to upgrade. </p>"
           "duration": 336
+          "publishedAt": 1387561882
         ,
           "uid": 34754044
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/v5e5RqNWeQE/426-ruby5.mp3"
@@ -3968,6 +4204,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #426 - December 13th, 2013"
           "episodeSummary": "<p> thoughtbot open source issues now on Stack Overflow, verifying doubles in RSpec 3, interactive mockups with Stagehand, bundler is stayin' alive (for the time being), and updates to the roar gem all in this episode of the Ruby5! <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/462-episode-426-december-13th-2013\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">This episode is sponsored by New Relic</a></em> <br> New Relic is _the_ all-in-one web performance analytics product. It lets you manage and monitor web application performance, from the browser down to the line of code. With Real User Monitoring, New Relic users can see browser response times by geographical location of the user, or by browser type. </p> <p> <em><a href=\"http://robots.thoughtbot.com/moving-open-source-project-mailing-lists-to-stack-overflow/\">thoughtbot on Stack Overflow</a></em> <br> thoughtbot is moving away from mailing lists and towards Stack Overflow posts instead. Check out their blog post explaining why. </p> <p> <em><a href=\"http://rhnh.net/2013/12/10/new-in-rspec-3-verifying-doubles\">New in RSpec 3: Verifying Doubles</a></em> <br> Add a little dose of reality to your RSpec doubles. </p> <p> <em><a href=\"http://camerond.github.io/stagehand/\">Stagehand</a></em> <br> Easily make interactive mockups with the Stagehand gem. </p> <p> <em><a href=\"http://andre.arko.net/2013/12/07/the-rumors-of-bundlers-death-have-been-greatly-exaggerated/\">Bundler Not Dead Yet</a></em> <br> The rumors of Bundler's death have been greatly exaggerated. </p> <p> <em><a href=\"https://github.com/apotonick/roar\">roar</a></em> <br> The roar just has received some love lately, including a brand-new and very well-written README. </p>"
           "duration": 315
+          "publishedAt": 1387299447
         ,
           "uid": 34626129
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/NjTpaDhL6BI/425-ruby5.mp3"
@@ -3975,6 +4212,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #425 - December 10th, 2013"
           "episodeSummary": "<p> ActionParameter, Purgatory, Promise.rb, Sharing Rails sessions, JRuby 1.7.9 <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/461-episode-425-december-10th-2013\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_423&amp;utm_campaign=sponsor_page\">This episode is sponsored by Top Ruby Jobs</a></em> <br> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. </p> <p> <em><a href=\"https://github.com/edelpero/action_parameter\">ActionParameter v0.0.2</a></em> <br> Ezequiel Delpero released a new version of ActionParameter. The gem helps you move all your parameter's logic from controllers into it's own class. This way you'll keep your controllers dry and they'll be easier to test. </p> <p> <em><a href=\"http://www.financeit.ca/developit/blog/2013/12/06/introducing-purgatory/\">Purgatory</a></em> <br> Purgatory is a Rails gem that allows you to save changes to an ActiveRecord model so that they can be applied at a later time. </p> <p> <em><a href=\"https://github.com/lgierth/promise.rb\">Promise.rb</a></em> <br> Promise.rb is a Ruby implementation of the Promises/A+ spec. </p> <p> <em><a href=\"http://matt.aimonetti.net/posts/2013/11/30/sharing-rails-sessions-with-non-ruby-apps/\">Sharing Rails Sessions With Non-Ruby Apps</a></em> <br> Matt Aimonetti wrote a blog post describing the problem he ran into with sharing Rails sessions with another application written in Go, and how he managed to get around it. </p> <p> <em><a href=\"http://jruby.org/2013/12/06/jruby-1-7-9.html\">JRuby 1.7.9</a></em> <br> JRuby 1.7.9 was released. This release includes a total of 36 issues fixed since the last release, including some Windows specific bugs and some encoding issues. There's lots of improvements to the Enumerable module as well. </p>"
           "duration": 364
+          "publishedAt": 1386956282
         ,
           "uid": 34495931
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/kFPblWtSf2k/424-ruby5.mp3"
@@ -3982,6 +4220,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #424 - December 6th, 2013"
           "episodeSummary": "<p> What does Spring have to do with Rails 4.1, Rails security news, a few cool tips like pundit, pry rescue and RASK, good advice for upgrading to capistrano 3, and the plan to sunset bundler all in this RubyLoco-powered Ruby5. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/460-episode-424-december-6th-2013\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://www.newrelic.com/index.html?utm_source=RBY5&amp;utm_medium=banner&amp;utm_content=&amp;utm_campaign=RPM&amp;utm_term=0&amp;mpc=BA-RBY5-RPM-EN-0-0-0\">This episode is sponsored by New Relic</a></em> <br> Now you can experience powerful end-to-end mobile app monitoring from New Relic. Monitor your native mobile apps from the device to the network through the backend all the way to your end user's device with our new User Interaction Traces. Get method-level visibility for the code that makes up every interaction in your mobile app. </p> <p> <em><a href=\"https://github.com/rails/rails/commit/6f72a6b53afda51a73af69194ed0060ea5048fa9\">Spring</a></em> <br> Spring... the rails application preloader. It speeds up development by keeping your application running in the background so you don't need to boot it every time you run a test, rake task or migration. You can use it right now, and its being baked into Rails 4.1. </p> <p> <em><a href=\"http://weblog.rubyonrails.org/2013/12/3/Rails3216and402havebeenreleased/\">Rails Security Update</a></em> <br> The rails team has released 3.2.16 and 4.0.2 with important security fixes. There are 6 security fixes in these releases including multiple cross site scripting vulnerabilities and a potential denial of service attack. </p> <p> <em><a href=\"http://www.confreaks.com/videos/2864-rubyconf2013-repl-driven-development-with-pry\">Pry Rescue</a></em> <br> This is a link to Conrad Irwin's talk on PRY from this year's RubyConf. He discussed pry-rescue which stops your test suite and drops into a pry session if one of your tests fails. You can play the lines of code, edit and fix the test, then resume your suite. its sweet! </p> <p> <em><a href=\"https://github.com/elabs/pundit\">pundit</a></em> <br> If you're using CanCan and are lamenting the size of your ability file, check out pundit. It organizes permissions a little differently, creating one policy file per model. </p> <p> <em><a href=\"https://github.com/bokmann/RASK\">RASK</a></em> <br> RASK, the Rake Application Starter Kit, is one-stop-shoping for a project shell for your rake tasks in which you'll feel right at home. There's a directory structure for your code, tests, logs, configuration, and such, there's a bootstrap which automatically loads your configuration, there's support for environment-specific stuff run by an environment-variable of your choosing, etc. If you find yourself writing back office automation tasks, try giving this a spin. </p> <p> <em><a href=\"https://github.com/jruby/jruby/issues/1146#issuecomment-29714318\">Death of Bundler</a></em> <br> Eric Hodel was commenting on a JRuby issue and revealed that Bundler is scheduled to die in under two years time, because all of its core features are going to be baked into RubyGems. Ultimately, this is a good thing, but it'll be sad to see an old friend fade away. </p> <p> <em><a href=\"https://semaphoreapp.com/blog/2013/11/26/capistrano-3-upgrade-guide.html\">Cap 3 Guide</a></em> <br> Darko Fabijan wrote a blog post about the work he did to upgrade semaphore. He parsed through the scattered documentation and talks about some of the things you'll have to change when moving from Cap3 to Cap 3. </p>"
           "duration": 408
+          "publishedAt": 1386681808
         ,
           "uid": 34389397
           "mediaUrl": "http://feedproxy.google.com/~r/Ruby5/~5/HB6MC2dI8p8/423-ruby5.mp3"
@@ -3989,6 +4228,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "episodeTitle": "Episode #423 – December 3rd, 2013"
           "episodeSummary": "<p> This week we watch, lint, memoize, error handle, say hello to and write more idiomatic Ruby. <br></p> <p><a href=\"http://ruby5.envylabs.com/episodes/459-episode-423-december-3rd-2013\">Listen to this episode on Ruby5</a></p> <p> <em><a href=\"http://toprubyjobs.com/?utm_source=ruby5&amp;utm_medium=podcast&amp;utm_content=ruby5_423&amp;utm_campaign=sponsor_page\">This episode is sponsored by Top Ruby Jobs</a></em> <br> If you're looking for a top Ruby job or for top Ruby talent, then you should check out Top Ruby Jobs. Top Ruby Jobs is a website dedicated to the best jobs available in the Ruby community. </p> <p> <em><a href=\"http://www.confreaks.com/events/rubyconf2013\">RubyConf 2013 Talks</a></em> <br> If you missed out on RubyConf 2013 in Miami a few weeks ago, you’ll be happy to know Confreaks just released the first batch of recorded talks from the conference. I would definitely make time for Object management on Ruby 2.1 by Koichi Sasada who I mentioned on the show recently for his work on the Ruby 2.1 generational garbage compiler. In a less Ruby-centric way, you have to watch Nell Shamrell’s Harnessing the True Power of Regular Expressions in Ruby. Keep an eye on Confreaks since there are many more talks to come. </p> <p> <em><a href=\"https://github.com/YorickPeterse/ruby-lint\">ruby-lint</a></em> <br> Ruby Lint is a linter and static code analysis tool for Ruby. Just like JSHint and other linting tools, it focuses on logic­related errors, rather than semantic errors that are displayed in standard Ruby output. So, if you are trying to use a variable that you haven’t defined, it’ll tell you, instead of outputting a no method error. Ruby Lint tackles undefined methods/variables, unused variables/method arguments and more. </p> <p> <em><a href=\"http://gavinmiller.io/2013/advanced-memoization-in-ruby/\">Advanced Memoization</a></em> <br> This week, Gavin Miller published a new blog post on memoization covering more advanced memoization patterns. In this post, Gavin shows how to memoize more complex methods like those which have conditionals inside of them or even methods that receive arguments. It’s a quick and useful read, and memoization might allow you to tackle some low-hanging performance fruits in your Ruby applications. </p> <p> <em><a href=\"https://github.com/samg/timetrap\">Timetrap</a></em> <br> Sam Goldstein just created a neat little gem called Timetrap, a simple tool to help you track time right on the command line. Once you install the gem on your machine, Timetrap will keep track of a list of timesheets. Each timesheet has many entries, and you can check in-and-out of a timesheet as you need to. After you’ve created some entries in your timesheet, you can display the entries, showing information like the date, time in and out, duration, and notes, all right there in your console. Timetrap has built-in support for 6 output formats, including text, csv, ical, json, and ids. There’s even an interface for writing custom formats. </p> <p> <em><a href=\"https://github.com/schneems/sprockets_better_errors\">Better Sprockets Errors</a></em> <br> Richard Schneeman recently created a gem called Better Sprockets Errors. Its very simple purpose is to raise exceptions in development when you attempt to include assets that have not been white-listed for precompilation. Check out the project's README for links to pull requests on the Sprockets repo. </p> <p> <em><a href=\"http://rubylove.io/howto/2013/11/23/idomatic-ruby-1/\">Idiomatic Ruby</a></em> <br> I recently read a new post on the Ruby Love blog about idiomatic Ruby. This post walks through a great refactoring exercise, showing how you can write more Ruby-esque code -- for example, iterating through an enumerable using `.map` instead of `.each`, returning a result with `send`, and cleaning up conditionals using a ternary operator. </p> <p> <em><a href=\"http://konichiwaruby.tumblr.com/post/68689348383/say-hi-to-ruby-she-is-one-of-the-best-little\">Hello Ruby</a></em> <br> Linda Liukas — one of the Rails Girls co-founders — is putting together an illustrated children's book about Ruby. She’s writing the story of a little girl (Ruby) and a robot (the computer) to represent and explains some basic Ruby and programming concepts. It doesn't look like the book is anywhere near ready yet but Linda is publishing excerpts on her blog, and you can sign up to be notified about this lovely little project. </p>"
           "duration": 388
+          "publishedAt": 1386341651
         ]
       ,
         "id": 11463

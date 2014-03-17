@@ -9,6 +9,7 @@ define ["app", "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl",
         nowPlayingRegion: "#now-playing-region"
         playlistRegion: "#playlist-region"
     )
+
     View.Track = Marionette.ItemView.extend(
       tagName: "tr"
       className: "playlist-item"
@@ -27,8 +28,8 @@ define ["app", "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl",
           setTimeout (->
             $view.toggleClass cssClass
           ), 300
-
     )
+
     View.Tracks = Marionette.CompositeView.extend(
       tagName: "table"
       className: "playlist"
@@ -55,7 +56,6 @@ define ["app", "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl",
           setTimeout (->
             $view.toggleClass cssClass
           ), 300
-
     )
 
   Swabcast.EpisodesApp.Playlist.View

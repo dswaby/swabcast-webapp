@@ -1,7 +1,6 @@
-(function() {
-  requirejs.config({
-    baseUrl: "assets/js",
-    urlArgs: 'cb=' + Math.random(),
+
+requirejs.config({
+    baseUrl: "./../app/assets/js",
     paths: {
       backbone: "vendor/backbone",
       localstorage: "vendor/backbone.localstorage",
@@ -44,22 +43,17 @@
       "vendor/foundation.fastclick": {
         deps: ["jquery", "foundation"]
       }
-    },
-    name: "main",
-    out: "main.min.js"
-  });
+    }
+});
 
-  require(["app"], function(Swabcast) {
-    return Swabcast.start();
-  });
+require([
+//files being tested
+"app"
+],
+function(Swabcast) {
+    if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+    else { mocha.run(); }
 
-  requirejs(["jquery", "foundation", "vendor/foundation.offcanvas", "vendor/foundation.reveal", "vendor/foundation.fastclick"], function($) {
-    (function($, window, undefined_) {
-      var $doc, Modernizr;
-      $doc = $(document);
-      Modernizr = window.Modernizr;
-      return $(document).foundation();
-    })($, window);
-  });
+});
 
-}).call(this);
+

@@ -59,9 +59,18 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
       serializeData: ->
         buttonText: @buttonText
 
+      onBeforeClose: ->
+        @$el.transition
+          perspective: "100px"
+          rotate3d: "1,1,0,180deg"
+
+
       navigateToLibrary: ->
+        @$el.transition
+          perspective: "100px"
+          rotate3d: "1,1,0,180deg"
         Swabcast.trigger "episodes:library"
-        @el.close
+        @close()
     )
 
 
