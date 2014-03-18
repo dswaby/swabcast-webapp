@@ -24,6 +24,23 @@
                   collection: tracks
                 });
               }
+              playlistTracks.listenTo(Playlist, "playlist:enqueue", function(model) {
+                var newTrack;
+                if (tracks.length !== 0) {
+                  newTrack = model;
+                  tracks.add(newTrack);
+                  console.log("Holy Fuck it worked, adding model", newTrack);
+                }
+                if (tracks.length === 1) {
+                  newTrack = tracks.at(0);
+                  if (tracks.at(0) === newTrack) {
+                    Swabcast.commands.execute("player:setepisode", newTrack);
+                  }
+                  if (!tracks.nowPlaying) {
+                    return tracks.nowPlaying = newTrack;
+                  }
+                }
+              });
               playlistTracks.on("itemview:episode:delete", function(childView, model) {
                 var modelUid;
                 if (typeof tracks.at(1) === "undefined" && tracks.length === 1) {
@@ -36,19 +53,6 @@
                 modelUid = model.get("uid");
                 model.destroy();
                 return Swabcast.EpisodesApp.List.trigger("episode:removefromqueue", modelUid);
-              });
-              playlistTracks.listenTo(Playlist, "playlist:enqueue", function(model) {
-                var newTrack;
-                playlistTracks.add(model);
-                if (tracks.length === 1) {
-                  newTrack = tracks.at(0);
-                  if (tracks.at(0) === newTrack) {
-                    Swabcast.commands.execute("player:setepisode", newTrack);
-                  }
-                  if (!tracks.nowPlaying) {
-                    return tracks.nowPlaying = newTrack;
-                  }
-                }
               });
               playlistLayout.on("show", function() {
                 return playlistLayout.playlistRegion.show(playlistTracks);

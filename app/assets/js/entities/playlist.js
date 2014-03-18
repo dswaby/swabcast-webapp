@@ -101,7 +101,7 @@
               tracks.add(newTrack);
               newTrack.save();
               Swabcast.trigger("playlist:enqueue", newTrack);
-              return defer.resolve("success");
+              return defer.resolve(newTrack);
             } else {
               return defer.resolve("fail");
             }

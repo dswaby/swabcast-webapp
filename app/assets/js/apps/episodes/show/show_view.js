@@ -47,11 +47,11 @@
             addToPlaylist = Swabcast.request("playlist:addtoqueue", this.model);
             episodeElement = this.$el;
             $.when(addToPlaylist).done(function(apiResponse) {
-              if (apiResponse === "fail") {
-                console.log("I dun goofed");
+              if (typeof apiResponse === "string") {
+                console.log("we dun goofed");
               }
-              if (apiResponse === "success") {
-                console.log("holy fuck it worked");
+              if (typeof apiResponse === "object") {
+                Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.apiResponse);
                 return episodeElement.fadeOut("slow", function() {
                   return $(this).fadeIn("slow");
                 });
@@ -107,11 +107,11 @@
             addToPlaylist = Swabcast.request("playlist:addtoqueue", this.model);
             episodeElement = this.$el;
             $.when(addToPlaylist).done(function(apiResponse) {
-              if (apiResponse === "fail") {
+              if (typeof apiResponse === "string") {
                 console.log("we dun goofed");
               }
-              if (apiResponse === "success") {
-                console.log("holy fuck it worked");
+              if (typeof apiResponse === "object") {
+                Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.apiResponse);
               }
               return episodeElement.fadeOut("slow", function() {
                 return $(this).fadeIn("slow");

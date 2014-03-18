@@ -22,6 +22,16 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             else
               playlistTracks = new View.Tracks(collection: tracks)
 
+            playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
+              if tracks.length isnt 0
+                newTrack = model
+                tracks.add newTrack
+                console.log("Holy Fuck it worked, adding model", newTrack)
+
+              if tracks.length == 1
+                newTrack = tracks.at(0)
+                Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
+                tracks.nowPlaying = newTrack  unless tracks.nowPlaying
 
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
 
@@ -35,13 +45,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               modelUid = model.get("uid")
               model.destroy()
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
-
-            playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
-              playlistTracks.add model
-              if tracks.length == 1
-                newTrack = tracks.at(0)
-                Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
-                tracks.nowPlaying = newTrack  unless tracks.nowPlaying
 
             playlistLayout.on "show", ->
               playlistLayout.playlistRegion.show playlistTracks

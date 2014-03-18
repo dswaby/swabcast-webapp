@@ -90,7 +90,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
             tracks.add newTrack
             newTrack.save()
             Swabcast.trigger "playlist:enqueue", newTrack
-            defer.resolve "success"
+            defer.resolve newTrack
           else
             defer.resolve "fail"
         defer.promise()
@@ -110,15 +110,6 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
             defer.resolve `undefined`
 
         defer.promise()
-        # $.when(promise).done (playlist) ->
-        #   episodes = playlist.get("episodes")
-        #   if not episodes.length
-        #     return promise
-
-        #   promise = Entities.Feed.getEpisodeEntity(playlist.episodes[0])
-
-        # promise
-
 
       #has to be a more efficient way of doing this
       updatePlaylistOrder: ->

@@ -48,7 +48,8 @@ requirejs.config({
 
 require([
 //files being tested
-"app"
+"app",
+"entities/feed"
 ],
 function(Swabcast) {
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
