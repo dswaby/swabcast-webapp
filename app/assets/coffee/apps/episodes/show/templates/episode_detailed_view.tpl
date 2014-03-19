@@ -1,3 +1,4 @@
+<!-- episode_detailed_view -->
 <br /><br />
 <div class="panel">
     <div>
@@ -11,7 +12,7 @@
     <div class="large-6 columns">
         <h2><%= episodeParent %></h2>
 
-        <img src=./assets/img/<%= albumArt %> alt="" class="library" style="float:left; max-width:275px">
+        <img src=./assets/img/<%= albumArt %> alt="" class="library-image" style="float:left;">
     </div>
     <div class="large-6 columns">
         <a href="<%= typeof(feedUrl)!== 'undefined' ?  feedUrl : '' %>"><h6><%= typeof(feedUrl)!== 'undefined' ?  feedUrl : '' %></h6></a>

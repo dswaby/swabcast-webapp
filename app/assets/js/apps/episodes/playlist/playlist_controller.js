@@ -14,6 +14,9 @@
               if (typeof tracks.at(0) !== "undefined") {
                 this.nowPlaying = tracks.at(0);
               }
+              if (this.nowPlaying) {
+                Swabcast.commands.execute("player:setepisode", this.nowPlaying);
+              }
               playlistTracks = void 0;
               if (extendedView) {
                 playlistTracks = new View.TracksExtended({
@@ -29,15 +32,14 @@
                 if (tracks.length !== 0) {
                   newTrack = model;
                   tracks.add(newTrack);
-                  console.log("Holy Fuck it worked, adding model", newTrack);
-                }
-                if (tracks.length === 1) {
-                  newTrack = tracks.at(0);
-                  if (tracks.at(0) === newTrack) {
-                    Swabcast.commands.execute("player:setepisode", newTrack);
-                  }
-                  if (!tracks.nowPlaying) {
-                    return tracks.nowPlaying = newTrack;
+                  if (tracks.length === 1) {
+                    newTrack = tracks.at(0);
+                    if (tracks.at(0) === newTrack) {
+                      Swabcast.commands.execute("player:setepisode", newTrack);
+                    }
+                    if (!tracks.nowPlaying) {
+                      return tracks.nowPlaying = newTrack;
+                    }
                   }
                 }
               });
@@ -67,6 +69,10 @@
                 var backButton, winheight;
                 backButton = new CommonViews.NavHelper({
                   buttonText: "Back to subscriptions"
+                });
+                backButton.on("click button.js-library-back", function() {
+                  console.log("triggering episodes:playlist to show playlist in sidebar");
+                  return Swabcast.trigger("episodes:playlist");
                 });
                 Swabcast.navHelperRegion.show(backButton);
                 return winheight = $(window).height() - 75;

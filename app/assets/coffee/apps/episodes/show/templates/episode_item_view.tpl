@@ -1,6 +1,8 @@
 <!-- episode_item_view.tpl -->
 <td style="width:40px;">
-    <a class="js-enqueue"><%= publishedAt %></a>
+    <a class="js-enqueue">
+    <%= publishedAt %>
+    </a>
 </td>
 <td class="js-view-detail">
     <a style="margin-left:5px;font-size:14px" ><%= episodeTitle %></a>

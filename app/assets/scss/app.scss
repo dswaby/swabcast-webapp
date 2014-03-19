@@ -13,11 +13,24 @@
   background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9)) !important;
 }
 
+.big-big-ico {
+  font-size: 144px;
+}
 
-//custom styles
-// .selected li {
-//   background-color: #ffffff;
-// }
+.danger-zone {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+/***************************************************************************************************
+    styles for feed detailed view  **********************************************
+***************************************************************************************************/
 
 .feed-head {
   padding: 20px;
@@ -50,7 +63,6 @@
 }
 
 .playlist {
-  // width: 100%;
   top:0;
 }
 
@@ -92,6 +104,8 @@
   font-weight: normal;
   font-style: normal;
 }
+
+// Icons used
 .fi-alert:before,
 .fi-arrow-left:before,
 .fi-star:before,
@@ -117,6 +131,10 @@
 .fi-indent-more:before,
 .fi-info:before,
 .fi-widget:before,
+.fi-social-twitter:before,
+.fi-social-linkedin:before,
+.fi-social-github:before,
+.fi-social-stack-overflow:before,
 .fi-zoom-out:before {
   font-family: "foundation-icons";
   font-style: normal;
@@ -128,6 +146,9 @@
   display: inline-block;
   text-decoration: inherit;
 }
+.fi-social-github:before { content: "\f1c9"; }
+.fi-social-linkedin:before { content: "\f1d0"; }
+.fi-social-stack-overflow:before { content: "\f1df"; }
 .fi-star:before { content: "\f1ee"; }
 .fi-play:before { content: "\f198"; }
 .fi-plus:before { content: "\f199"; }
@@ -163,7 +184,10 @@
 
 }
 
-//static player bar at bottom of screen
+/***************************************************************************************************
+    styles for static player bar at bottom of screen  **********************************************
+***************************************************************************************************/
+
 #player {
     position: fixed;
     height: 75px;
@@ -212,7 +236,7 @@
   height:60px;
   position:fixed;
   bottom:0;
-
+  right: 16px;
 }
 .unHidden {
     display: block;

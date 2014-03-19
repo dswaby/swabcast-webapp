@@ -49,7 +49,8 @@
     "grunt-contrib-requirejs": "~0.4.3",
     "intern-geezer": "~1.5.0",
     "mocha": "~1.18.0",
-    "grunt-shell": "~0.6.4"
+    "grunt-shell": "~0.6.4",
+    "grunt-newer": "~0.7.0"
   },
   "engines": {
     "node": ">=0.8.0"

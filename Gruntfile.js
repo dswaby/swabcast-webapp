@@ -37,16 +37,18 @@ module.exports = function (grunt) {
                 files: ['<%= swabstack.app %>/assets/js/**/*.js'],
                 tasks: ['copy:vendorjs']
             },
-
+            indextemplate: {
+                files: ['<%= swabstack.app %>/index.html'],
+                tasks: ['targethtml:app']
+            },
             livereload: {
                 files: [
 
                     '<%= swabstack.app %>/index.html',
                     '{.tmp,<%= swabstack.app %>}/assets/css/{,**/}*.css',
                     '{.tmp,<%= swabstack.app %>}/assets/js/{,**/}*.js',
-                    '{.tmp,<%= swabstack.app %>}/assets/**/templates/{,**/}*.tpl',
+                    '{.tmp,<%= swabstack.app %>}/assets/**/templates/{,**/}*.tpl'
                 ],
-
                 options: {
                     livereload: true
                 }

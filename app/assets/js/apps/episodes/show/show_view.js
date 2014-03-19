@@ -1,6 +1,7 @@
 (function() {
   define(["app", "tpl!apps/episodes/show/templates/episode_detailed_view.tpl", "tpl!apps/episodes/show/templates/missing_episode.tpl", "tpl!apps/episodes/show/templates/feature_not_implemented.tpl", "tpl!apps/episodes/show/templates/feed_detailed.tpl", "tpl!apps/episodes/show/templates/feed_episodes.tpl", "tpl!apps/episodes/show/templates/episode_item_view.tpl"], function(Swabcast, episodeDetailedTpl, missingTpl, featureNotImplemented, feedDetailedTpl, feedEpisodesTpl, episodeItemViewTpl) {
     Swabcast.module("EpisodesApp.Show.View", function(View, Swabcast, Backbone, Marionette, $, _) {
+      View.Month = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
       View.FeatureNotImplemented = Marionette.ItemView.extend({
         template: featureNotImplemented,
         events: {
@@ -49,6 +50,11 @@
             $.when(addToPlaylist).done(function(apiResponse) {
               if (typeof apiResponse === "string") {
                 console.log("we dun goofed");
+                episodeElement.toggleClass("danger-zone").fadeIn(400, function() {
+                  return setTimeout((function() {
+                    return $(this).toggleClass("danger-zone");
+                  }), 300);
+                });
               }
               if (typeof apiResponse === "object") {
                 Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.apiResponse);
@@ -84,6 +90,13 @@
           "click td.js-view-detail": "showClicked",
           "click a.js-preview-audio": "previewAudio"
         },
+        initialize: function() {
+          this.published = new Date(this.model.get("publishedAt"));
+          this.publishedMonth = View.Month[this.published.getMonth()];
+          this.publishedDay = this.published.getDay();
+          console.log(this.publishedMonth);
+          return console.log(this.publishedDay);
+        },
         destroyTrackView: function(e) {
           e.preventDefault();
           e.stopPropagation();
@@ -109,13 +122,18 @@
             $.when(addToPlaylist).done(function(apiResponse) {
               if (typeof apiResponse === "string") {
                 console.log("we dun goofed");
+                episodeElement.toggleClass("danger-zone").fadeIn(400, function() {
+                  return setTimeout((function() {
+                    return $(this).toggleClass("danger-zone");
+                  }), 300);
+                });
               }
               if (typeof apiResponse === "object") {
                 Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.apiResponse);
+                return episodeElement.fadeOut("slow", function() {
+                  return $(this).fadeIn("slow");
+                });
               }
-              return episodeElement.fadeOut("slow", function() {
-                return $(this).fadeIn("slow");
-              });
             });
             return this.trigger("dialog:close");
           }

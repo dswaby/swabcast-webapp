@@ -8,6 +8,8 @@ define ["app",
 (Swabcast, episodeDetailedTpl, missingTpl, featureNotImplemented, feedDetailedTpl, feedEpisodesTpl, episodeItemViewTpl) ->
   Swabcast.module "EpisodesApp.Show.View", (View, Swabcast, Backbone, Marionette, $, _) ->
 
+    View.Month = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]
+
     View.FeatureNotImplemented = Marionette.ItemView.extend(
       template: featureNotImplemented
       events:
@@ -56,6 +58,11 @@ define ["app",
             if typeof apiResponse == "string"
               # TODO - trigger error alert
               console.log("we dun goofed")
+              # toggle show error
+              episodeElement.toggleClass("danger-zone").fadeIn 400, ->
+                setTimeout (->
+                  $(this).toggleClass "danger-zone"
+                ), 300
             if typeof apiResponse == "object"
               # send model to playlist to update view
               Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @apiResponse
@@ -89,6 +96,14 @@ define ["app",
         "click td.js-view-detail": "showClicked"
         "click a.js-preview-audio": "previewAudio"
 
+      initialize: ->
+        @published = new Date(@model.get("publishedAt"))
+        @publishedMonth = View.Month[@published.getMonth()]
+        @publishedDay = @published.getDay()
+        console.log(@publishedMonth)
+        console.log(@publishedDay)
+
+
       destroyTrackView: (e) ->
         e.preventDefault()
         e.stopPropagation()
@@ -116,12 +131,17 @@ define ["app",
             if typeof apiResponse == "string"
               # TODO - trigger error alert
               console.log("we dun goofed")
+              episodeElement.toggleClass("danger-zone").fadeIn 400, ->
+                setTimeout (->
+                  $(this).toggleClass "danger-zone"
+                ), 300
             if typeof apiResponse == "object"
               # send model to playlist to update view
               Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @apiResponse
               # TODO - trigger success alert
-            episodeElement.fadeOut "slow", ->
-              $(this).fadeIn "slow"
+              episodeElement.fadeOut "slow", ->
+                $(this).fadeIn "slow"
+
           @trigger "dialog:close"
 
       previewAudio: (e)->

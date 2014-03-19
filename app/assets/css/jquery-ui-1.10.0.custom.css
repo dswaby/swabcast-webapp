@@ -93,9 +93,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 150%;
   height: 600%;
   z-index: 602;
+    /* Blur and de-color */
+  -webkit-filter: blur(5px) grayscale(50%);
+
+  /* Recede */
+
 }
 
 /*

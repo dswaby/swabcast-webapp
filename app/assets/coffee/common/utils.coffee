@@ -1,24 +1,29 @@
-Swabcast.module "Utils", (Utils, Swabcast, Backbone, Marionette, $, _) ->
+define ["app"], (Swabcast) ->
 
-  # nested model reference
-  # https://gist.github.com/geddski/1610397
-  Utils.Helpers = nestCollection: (model, attributeName, nestedCollection) ->
+  Swabcast.module "Common.Utils", (Utils, Swabcast, Backbone, Marionette, $, _) ->
 
-    #setup nested references
-    i = 0
+    # nested model reference
+    # https://gist.github.com/geddski/1610397
+    Utils.Helpers =
+      nestCollection: (model, attributeName, nestedCollection) ->
 
-    while i < nestedCollection.length
-      model.attributes[attributeName][i] = nestedCollection.at(i).attributes
-      i++
+        #setup nested references
+        i = 0
 
-    #create empty arrays if none
-    nestedCollection.bind "add", (initiative) ->
-      model.attributes[attributeName] = []  unless model.get(attributeName)
-      model.get(attributeName).push initiative.attributes
+        while i < nestedCollection.length
+          model.attributes[attributeName][i] = nestedCollection.at(i).attributes
+          i++
 
-    nestedCollection.bind "remove", (initiative) ->
-      updateObj = {}
-      updateObj[attributeName] = _.without(model.get(attributeName), initiative.attributes)
-      model.set updateObj
+        #create empty arrays if none
+        nestedCollection.bind "add", (initiative) ->
+          model.attributes[attributeName] = []  unless model.get(attributeName)
+          model.get(attributeName).push initiative.attributes
 
-    nestedCollection
+        nestedCollection.bind "remove", (initiative) ->
+          updateObj = {}
+          updateObj[attributeName] = _.without(model.get(attributeName), initiative.attributes)
+          model.set updateObj
+
+        nestedCollection
+
+  Swabcast.Common.Utils
