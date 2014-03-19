@@ -22,7 +22,7 @@ define ["app"], (Swabcast) ->
       # "playlist:mainview"
       showPlaylistMain: ->
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showPlayistMain()
+          EpisodesApp.Playlist.Controller.showPlaylistMain()
 
       # "episodes:library"
       showLibrary: ->
@@ -81,7 +81,7 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showPlayistMain()
+          EpisodesApp.Playlist.Controller.showPlaylistMain()
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
 

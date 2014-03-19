@@ -94,14 +94,35 @@ define ["app",
         "click td.js-view-detail": "showClicked"
         "click a.js-preview-audio": "previewAudio"
 
+      onBeforeRender: ->
+
       initialize: ->
-        @month = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]
-        timeString = @model.get("publishedAt")
-        @published = new Date(timeString)
-        @publishedMonth = @month[@published.getMonth()]
-        @publishedDay = @published.getDay()
-        console.log(@publishedMonth)
-        console.log(@publishedDay)
+
+      templateHelpers:
+        month: [
+          "Jan"
+          "Feb"
+          "Mar"
+          "Apr"
+          "May"
+          "June"
+          "July"
+          "Aug"
+          "Sept"
+          "Oct"
+          "Nov"
+          "Dec"
+        ]
+        createDate: (ms) ->
+          return new Date(ms)
+
+        getPublishedDay: (ms) ->
+          e = @createDate(ms)
+          e.getDay()
+
+        getPublishedMonth: (ms) ->
+          e = @createDate(ms)
+          @month[e.getMonth()]
 
 
       destroyTrackView: (e) ->

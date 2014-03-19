@@ -59,6 +59,29 @@
   overflow: hidden;
 }
 
+.table-date h5{
+    font-size: x-large !important;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #444444;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-left: 8px !important;
+    padding-top: 23px;
+    margin-bottom: 0;
+}
+
+.table-date p{
+  font-size: x-large !important;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.6;
+  margin-left: 12px !important;
+  color:#14B9E8;
+  margin-bottom: 0 !important;
+
+}
+
 .feed-color {
   color: #14b9e8 !important;
 }

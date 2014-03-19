@@ -28,7 +28,7 @@
         },
         showPlaylistMain: function() {
           return require(["apps/episodes/playlist/playlist_controller"], function() {
-            return EpisodesApp.Playlist.Controller.showPlayistMain();
+            return EpisodesApp.Playlist.Controller.showPlaylistMain();
           });
         },
         showLibrary: function() {
@@ -96,7 +96,7 @@
             return EpisodesApp.Nav.Controller.showNav();
           });
           require(["apps/episodes/playlist/playlist_controller"], function() {
-            return EpisodesApp.Playlist.Controller.showPlayistMain();
+            return EpisodesApp.Playlist.Controller.showPlaylistMain();
           });
           return require(["apps/episodes/player/player_controller"], function() {
             return EpisodesApp.Player.Controller.showControls();

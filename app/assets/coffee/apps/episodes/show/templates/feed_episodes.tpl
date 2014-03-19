@@ -1,7 +1,7 @@
 <!-- feed_episodes.tpl -->
 <div id="feed-head" class="row">
     <div id="color-wrapper" class="feed-head">
-        <div class="large-6 small-6 columns">
+        <div class="large-3 small-3 columns">
             <img src=./assets/img/<%= albumArt %> alt="" class="library-image">
             <% if (typeof(feedUrl) !== "undefined") { %>
                 <a href="<%= feedUrl %>"><h6>HomePage</h6></a>

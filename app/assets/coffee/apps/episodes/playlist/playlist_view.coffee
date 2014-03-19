@@ -34,7 +34,7 @@ define ["app",
 
     View.Tracks = Marionette.CompositeView.extend(
       tagName: "table"
-      className: "playlist"
+      className: "large-8 small-12 columns"
       template: playlistTpl
       itemView: View.Track
       initialize: ->
@@ -81,7 +81,7 @@ define ["app",
 
     View.TracksExtended = Marionette.CompositeView.extend(
       tagName: "table"
-      className: "playlist"
+      className: "large-8 small-12 columns"
       template: playlistTpl
       itemView: View.TrackExtended
       initialize: ->

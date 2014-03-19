@@ -1,5 +1,5 @@
 (function() {
-  define(["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl"], function(Swabcast, loadingView, notificationView, navHelper) {
+  define(["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl", "transit"], function(Swabcast, loadingView, notificationView, navHelper) {
     Swabcast.module("Common.Views", function(Views, Swabcast, Backbone, Marionette, $, _) {
       Views.Loading = Marionette.ItemView.extend({
         template: loadingView,
@@ -40,7 +40,9 @@
           options = options || {};
           return this.buttonText = options.buttonText || "Back";
         },
-        onRender: function() {},
+        onRender: function() {
+          return this.$el.fadeIn('slow');
+        },
         serializeData: function() {
           return {
             buttonText: this.buttonText
@@ -53,10 +55,6 @@
           });
         },
         navigateToLibrary: function() {
-          this.$el.transition({
-            perspective: "100px",
-            rotate3d: "1,1,0,180deg"
-          });
           Swabcast.trigger("episodes:library");
           return this.close();
         }

@@ -5,35 +5,36 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl", "tpl!common/templ
 
     )
 
-    View.NavHelper = Marionette.ItemView.extend(
-      template: navHelper
-      events:
-        "click js-library-back": "navigateToLibrary"
+    # View.NavHelper = Marionette.ItemView.extend(
+    #   template: navHelper
+    #   events:
+    #     "click js-library-back": "navigateToLibrary"
 
-      initialize: (options) ->
-        options = options or {}
-        @buttonText = options.buttonText or "Back"
+    #   initialize: (options) ->
+    #     options = options or {}
+    #     @buttonText = options.buttonText or "Back"
 
-      onRender: ->
-        @$el.transition
-          x: 0
-          , 500, "ease"
+    #   onRender: ->
+    #     console.log("EL", @$el)
+    #     @$el.transition
+    #       y: 60
+    #       , 10000, "snap"
 
-      serializeData: ->
-        buttonText: @buttonText
+    #   serializeData: ->
+    #     buttonText: @buttonText
 
-      onBeforeClose: ->
-        @$el.transition
-          perspective: "100px"
-          rotate3d: "1,1,0,180deg"
+    #   onBeforeClose: ->
+    #     @$el.transition
+    #       perspective: "100px"
+    #       rotate3d: "1,1,0,180deg"
 
-      navigateToLibrary: ->
-        @$el.transition
-          perspective: "100px"
-          rotate3d: "1,1,0,180deg"
-        Swabcast.trigger "episodes:library"
-        @close()
-    )
+    #   navigateToLibrary: ->
+    #     @$el.transition
+    #       perspective: "100px"
+    #       rotate3d: "1,1,0,180deg"
+    #     Swabcast.trigger "episodes:library"
+    #     @close()
+    # )
 
     View.Nav = Marionette.ItemView.extend(
       template: navTpl

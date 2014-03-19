@@ -52,7 +52,8 @@ require([
   //files being tested
   "app",
   "./../../../test/spec/feed",
-  "./../../../test/spec/playlist"
+  "./../../../test/spec/playlist",
+  "./../../../test/spec/player"
 
 ],
 function(Swabcast) {

@@ -89,15 +89,23 @@
           "click td.js-view-detail": "showClicked",
           "click a.js-preview-audio": "previewAudio"
         },
-        initialize: function() {
-          var timeString;
-          this.month = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
-          timeString = this.model.get("publishedAt");
-          this.published = new Date(timeString);
-          this.publishedMonth = this.month[this.published.getMonth()];
-          this.publishedDay = this.published.getDay();
-          console.log(this.publishedMonth);
-          return console.log(this.publishedDay);
+        onBeforeRender: function() {},
+        initialize: function() {},
+        templateHelpers: {
+          month: ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+          createDate: function(ms) {
+            return new Date(ms);
+          },
+          getPublishedDay: function(ms) {
+            var e;
+            e = this.createDate(ms);
+            return e.getDay();
+          },
+          getPublishedMonth: function(ms) {
+            var e;
+            e = this.createDate(ms);
+            return this.month[e.getMonth()];
+          }
         },
         destroyTrackView: function(e) {
           e.preventDefault();

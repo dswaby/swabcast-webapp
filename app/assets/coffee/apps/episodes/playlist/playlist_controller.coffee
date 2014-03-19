@@ -14,7 +14,9 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
 
             #nowplaying responsible for managing current episode to be in the player box
             #on change, triggers events and sends episode model to player and playersavedata
+            console.log("on load")
             @nowPlaying = (tracks.at(0))  unless typeof tracks.at(0) is "undefined"
+            console.log(@nowPlaying)
             if @nowPlaying
               Swabcast.commands.execute "player:setepisode", @nowPlaying
 
@@ -32,10 +34,10 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                 newTrack = model
                 tracks.add newTrack
 
-                if tracks.length == 1
-                  newTrack = tracks.at(0)
-                  Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
-                  tracks.nowPlaying = newTrack  unless tracks.nowPlaying
+              if tracks.length == 1
+                newTrack = tracks.at(0)
+                Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
+                tracks.nowPlaying = newTrack  unless tracks.nowPlaying
 
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
 
@@ -74,7 +76,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
           else
             Swabcast.sideBarRegion.show playlistLayout
 
-      showPlayistMain: ->
+      showPlaylistMain: ->
         console.log("show extendedView")
         opt = true
         @showTracks (opt)

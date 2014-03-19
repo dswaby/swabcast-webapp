@@ -1,4 +1,4 @@
-define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl"], (Swabcast, loadingView, notificationView, navHelper) ->
+define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl", "transit"], (Swabcast, loadingView, notificationView, navHelper) ->
   Swabcast.module "Common.Views", (Views, Swabcast, Backbone, Marionette, $, _) ->
     # View for displing animated spinner gif when loading next view
     Views.Loading = Marionette.ItemView.extend(
@@ -38,9 +38,10 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
         @buttonText = options.buttonText or "Back"
 
       onRender: ->
-        # @$el.transition
-        #   y: 0
-        #   , 500, "ease"
+        @$el.fadeIn('slow')
+        #   y: 500
+        #   easing:'snap',
+        #   duration: 20000
 
       serializeData: ->
         buttonText: @buttonText
@@ -51,9 +52,6 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
           rotate3d: "1,1,0,180deg"
 
       navigateToLibrary: ->
-        @$el.transition
-          perspective: "100px"
-          rotate3d: "1,1,0,180deg"
         Swabcast.trigger "episodes:library"
         @close()
     )
