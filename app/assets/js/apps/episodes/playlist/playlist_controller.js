@@ -11,13 +11,12 @@
             $.when(fetchingPlaylist).done(function(tracks) {
               var playlistTracks, self;
               self = this;
-              console.log("on load");
               if (typeof tracks.at(0) !== "undefined") {
                 this.nowPlaying = tracks.at(0);
               }
-              console.log(this.nowPlaying);
               if (this.nowPlaying) {
                 Swabcast.commands.execute("player:setepisode", this.nowPlaying);
+                console.log("\"player:setepisode\"triggered");
               }
               playlistTracks = void 0;
               if (extendedView) {
@@ -35,6 +34,7 @@
                   newTrack = model;
                   tracks.add(newTrack);
                 }
+                console.log(tracks.length);
                 if (tracks.length === 1) {
                   newTrack = tracks.at(0);
                   if (tracks.at(0) === newTrack) {

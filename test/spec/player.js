@@ -2,12 +2,14 @@
   define(["app", "./../../app/assets/bower_components/chai/chai", "apps/episodes/player/player_controller"], function(Swabcast, chai) {
     var should;
     should = chai.should;
-    describe("Player", function() {
-      it("expect default \"urlRoot\" property to equal \"/feeds\"", function() {
+    describe("Player Controller", function() {
+      it("expect disabled icons on initialization", function() {
         var player;
         player = new Swabcast.Entities.Feed();
         expect(feeds.urlRoot).to.equal("feeds");
       });
+      it("audio.state should be disabled", function() {});
+      it("if in disabled state, should updates player controls and preview view when onPlayerSetEpisode() is triggered", function() {});
       return it("expect \"albumArt\" property to have a default image of \"default.jpg\" ", function() {
         var feeds;
         feeds = new Swabcast.Entities.Feed();

@@ -14,11 +14,10 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
 
             #nowplaying responsible for managing current episode to be in the player box
             #on change, triggers events and sends episode model to player and playersavedata
-            console.log("on load")
             @nowPlaying = (tracks.at(0))  unless typeof tracks.at(0) is "undefined"
-            console.log(@nowPlaying)
             if @nowPlaying
               Swabcast.commands.execute "player:setepisode", @nowPlaying
+              console.log("\"player:setepisode\"triggered")
 
             playlistTracks = undefined
 
@@ -27,12 +26,13 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             else
               playlistTracks = new View.Tracks(collection: tracks)
 
-            #
 
             playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
               if tracks.length isnt 0
                 newTrack = model
                 tracks.add newTrack
+
+              console.log(tracks.length)
 
               if tracks.length == 1
                 newTrack = tracks.at(0)
