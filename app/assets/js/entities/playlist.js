@@ -4,7 +4,12 @@
       var API, initializePlaylist, playlist;
       Entities.QueuedEpisode = Entities.Episode.extend({
         urlRoot: "playlist",
-        order: 0
+        order: 0,
+        validate: function(attrs) {
+          if (!attrs.uid) {
+            return "must have valid uid property";
+          }
+        }
       });
       Entities.configureStorage(Entities.QueuedEpisode);
       Entities.Playlist = Backbone.Collection.extend({

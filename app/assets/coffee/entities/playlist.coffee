@@ -3,7 +3,9 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
 
     Entities.QueuedEpisode = Entities.Episode.extend(
       urlRoot: "playlist"
-      order: 0
+      order: 0,
+      validate: (attrs) ->
+        "must have valid uid property"  unless attrs.uid
     )
 
     Entities.configureStorage Entities.QueuedEpisode
