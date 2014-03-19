@@ -11,7 +11,9 @@ requirejs.config({
       tpl: "vendor/tpl",
       json2: "vendor/json2",
       foundation: "vendor/foundation",
-      transit: "vendor/jquery.transit"
+      transit: "vendor/jquery.transit",
+      chai: "../app/assets/bower_components/chai/chai",
+      mocha: "../app/assets/bower_components/mocha/mocha"
     },
     shim: {
       underscore: {
@@ -47,9 +49,11 @@ requirejs.config({
 });
 
 require([
-//files being tested
-"app",
-"entities/feed"
+  //files being tested
+  "app",
+  "./../../../test/spec/feed"
+  // "./../../../test/spec/playlist"
+
 ],
 function(Swabcast) {
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }

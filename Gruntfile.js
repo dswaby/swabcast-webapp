@@ -29,6 +29,10 @@ module.exports = function (grunt) {
                 files: ['<%= swabstack.app %>/assets/coffee/{,**/}*.coffee'],
                 tasks: ['coffee:glob_to_multiple']
             },
+            tests: {
+                files: ['<%= swabstack.test %>/coffee/*.coffee'],
+                tasks: ['coffee:testcoffee']
+            },
             templates: {
                 files: ['<%= swabstack.app %>}/assets/**/templates/{,**/}*.tpl'],
                 tasks: ['copy:templates']
@@ -110,13 +114,13 @@ module.exports = function (grunt) {
                 dest: '<%= swabstack.app %>/assets/js/',
                 ext: '.js'
             },
-            jasmine_tests: {
+            testcoffee: {
                 expand: true,
-                flatten: false,
+                flatten: true,
                 bare: true,
-                cwd: '<%= swabstack.app %>/test/',
-                src: ['spec/SwabcastSpec.coffee', 'SpecRunner.coffee'],
-                dest: '<%= swabstack.app %>/test/',
+                cwd: './',
+                src: ['test/coffee/*.coffee'],
+                dest: 'test/spec/',
                 ext: '.js'
             }
         },
@@ -136,6 +140,14 @@ module.exports = function (grunt) {
                     cwd: '<%= swabstack.app %>/assets/coffee/',
                     src: ['**/*.js'],
                     dest: '<%= swabstack.app %>/assets/js/'
+                }]
+            },
+            docs: {
+                files: [{
+                    expand: true,
+                    cwd: './',
+                    src: ['docs/***'],
+                    dest: '<%= swabstack.dist %>/'
                 }]
             },
             // tests: {
@@ -241,6 +253,17 @@ grunt.registerTask('build', [
     'copy:components',
     'copy:assets',
     'copy:requireBuilt',
+    ]);
+
+grunt.registerTask('test', [
+    'coffee:testcoffee',
+    'connect:testserver',
+    'watch:tests'
+    ]);
+
+grunt.registerTask('docs', [
+    'docco',
+    'copy:docs'
     ]);
 
 };
