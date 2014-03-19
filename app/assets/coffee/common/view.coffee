@@ -31,16 +31,16 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
     Views.NavHelper = Marionette.ItemView.extend(
       template: navHelper
       events:
-        "click js-library-back": "navigateToLibrary"
+        "click a.js-library-back": "navigateToLibrary"
 
       initialize: (options) ->
         options = options or {}
         @buttonText = options.buttonText or "Back"
 
       onRender: ->
-        @$el.transition
-          y: 0
-          , 500, "ease"
+        # @$el.transition
+        #   y: 0
+        #   , 500, "ease"
 
       serializeData: ->
         buttonText: @buttonText

@@ -9,7 +9,7 @@
             backButton = new CommonViews.NavHelper({
               buttonText: "Back to subscriptions"
             });
-            return Swabcast.navRegion.attachView(backButton);
+            return Swabcast.navHelperRegion.show(backButton);
           });
           aboutApp = new View.AboutApp();
           return Swabcast.libraryRegion.show(aboutApp);
@@ -21,7 +21,7 @@
             backButton = new CommonViews.NavHelper({
               buttonText: "Back to subscriptions"
             });
-            return Swabcast.navRegion.attachView(backButton);
+            return Swabcast.navHelperRegion.show(backButton);
           });
           aboutMe = new View.AboutMe();
           return Swabcast.libraryRegion.show(aboutMe);

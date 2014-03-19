@@ -1,8 +1,38 @@
-define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTpl) ->
+define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl", "tpl!common/templates/nav_helper.tpl"], (Swabcast, navTpl, navHelper) ->
   Swabcast.module "EpisodesApp.Nav.View", (View, Swabcast, Backbone, Marionette, $, _) ->
 
     View.Layout = Marionette.Layout.extend(
 
+    )
+
+    View.NavHelper = Marionette.ItemView.extend(
+      template: navHelper
+      events:
+        "click js-library-back": "navigateToLibrary"
+
+      initialize: (options) ->
+        options = options or {}
+        @buttonText = options.buttonText or "Back"
+
+      onRender: ->
+        @$el.transition
+          x: 0
+          , 500, "ease"
+
+      serializeData: ->
+        buttonText: @buttonText
+
+      onBeforeClose: ->
+        @$el.transition
+          perspective: "100px"
+          rotate3d: "1,1,0,180deg"
+
+      navigateToLibrary: ->
+        @$el.transition
+          perspective: "100px"
+          rotate3d: "1,1,0,180deg"
+        Swabcast.trigger "episodes:library"
+        @close()
     )
 
     View.Nav = Marionette.ItemView.extend(
@@ -13,6 +43,7 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTp
         "click li.js-not-implemented": "notImplemented"
         "click li.js-static-me": "showAboutMe"
         "click li.js-static-app": "showAboutApp"
+        "click li.js-library-view": "showLibrary"
 
 
       showPlaylist: (e) ->
@@ -34,6 +65,9 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl"], (Swabcast, navTp
       notImplemented: (e) ->
         console.log("not implemented yet :(")
         Swabcast.trigger "feature:not:implemented"
+
+      showLibrary: ->
+        Swabcast.trigger "episodes:library"
 
     )
 

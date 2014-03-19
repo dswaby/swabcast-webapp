@@ -11,6 +11,7 @@ define ["app", "apps/episodes/static/static_view"], (Swabcast, View) ->
         aboutApp = new View.AboutApp()
         Swabcast.libraryRegion.show aboutApp
 
+
       showAboutMe: ->
         require ["common/view"], (CommonViews) ->
           backButton = new CommonViews.NavHelper(

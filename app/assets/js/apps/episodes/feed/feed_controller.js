@@ -55,7 +55,7 @@
             backButton = new CommonViews.NavHelper({
               buttonText: "Back to subscriptions"
             });
-            return Swabcast.navRegion.attachView(backButton);
+            return Swabcast.navHelperRegion.show(backButton);
           });
           return Swabcast.libraryRegion.show(view);
         },
@@ -70,7 +70,7 @@
             backButton = new CommonViews.NavHelper({
               buttonText: "Back to subscriptions"
             });
-            Swabcast.navRegion.attachView(backButton);
+            Swabcast.navHelperRegion.show(backButton);
           });
           return require(["entities/feed"], function() {
             var fetchingFeed;
