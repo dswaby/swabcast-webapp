@@ -6,7 +6,7 @@ define ["app",
   expect = chai.expect;
   describe "Feeds", ->
     describe "Feed Model", ->
-      it "expect default \"urlRoot\" property to equal \"/api/samples\"", ->
+      it "expect default \"urlRoot\" property to equal \"/feeds\"", ->
 
         feeds = new Swabcast.Entities.Feed()
         expect(feeds.urlRoot).to.equal("feeds")
@@ -14,7 +14,7 @@ define ["app",
 
       it "expect \"albumArt\" property to have a default image of \"default.jpg\" ", ->
         feeds = new Swabcast.Entities.Feed()
-        expect(feeds.albumArt).to.equal "default.jpg"
+        expect(feeds.get("albumArt")).to.equal "default.jpg"
         return
     return
 

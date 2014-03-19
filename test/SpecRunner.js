@@ -51,8 +51,8 @@ requirejs.config({
 require([
   //files being tested
   "app",
-  "./../../../test/spec/feed"
-  // "./../../../test/spec/playlist"
+  "./../../../test/spec/feed",
+  "./../../../test/spec/playlist"
 
 ],
 function(Swabcast) {
