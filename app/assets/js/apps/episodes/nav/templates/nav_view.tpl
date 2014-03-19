@@ -15,7 +15,7 @@
     <li>
       <a><label>App Navigation</label></a>
     </li>
-    <li class="active left-off-canvas-toggle">
+    <li class="active left-off-canvas-toggle js-library-view">
       <a href="#"><i class="fi-rss"></i>&nbsp Subscribed Feeds</a>
     </li>
     <li class="left-off-canvas-toggle js-not-implemented">

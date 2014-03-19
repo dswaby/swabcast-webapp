@@ -8,8 +8,6 @@ define ["app",
 (Swabcast, episodeDetailedTpl, missingTpl, featureNotImplemented, feedDetailedTpl, feedEpisodesTpl, episodeItemViewTpl) ->
   Swabcast.module "EpisodesApp.Show.View", (View, Swabcast, Backbone, Marionette, $, _) ->
 
-    View.Month = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]
-
     View.FeatureNotImplemented = Marionette.ItemView.extend(
       template: featureNotImplemented
       events:
@@ -97,8 +95,10 @@ define ["app",
         "click a.js-preview-audio": "previewAudio"
 
       initialize: ->
-        @published = new Date(@model.get("publishedAt"))
-        @publishedMonth = View.Month[@published.getMonth()]
+        @month = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"]
+        timeString = @model.get("publishedAt")
+        @published = new Date(timeString)
+        @publishedMonth = @month[@published.getMonth()]
         @publishedDay = @published.getDay()
         console.log(@publishedMonth)
         console.log(@publishedDay)

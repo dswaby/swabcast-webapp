@@ -4,14 +4,13 @@ define ["marionette", "jquery-ui", "transit"], (Marionette) ->
       $('body').addClass("locked")
       @listenTo view, "dialog:close", @closeDialog
       self = this
-      dialogHeight = @winHeight()
       dialogWidth = @winWidth()
       @$el.dialog
         modal: true
         title: view.title
-        height: @winHeight()
+        height: $(window).height() * 0.70
         # maxHeight: winHeight
-        width: @winWidth()
+        width: dialogWidth
         position: at: "center top"
         resizable: false
         close: (e, ui) ->
@@ -30,12 +29,5 @@ define ["marionette", "jquery-ui", "transit"], (Marionette) ->
       if (currentWindowWidth <= 320)
         return currentWindowWidth *0.90
       return currentWindowWidth * 0.80
-
-    winHeight: ->
-      currentWindowHeight
-      currentWindowHeight = $(window).height()
-      if (currentWindowHeight <= 480)
-        return currentWindowHeight *0.70
-      return "auto"
   )
   Marionette.Region.Dialog

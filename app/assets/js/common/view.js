@@ -34,11 +34,16 @@
       return Views.NavHelper = Marionette.ItemView.extend({
         template: navHelper,
         events: {
-          "click button.js-library-back": "navigateToLibrary"
+          "click js-library-back": "navigateToLibrary"
         },
         initialize: function(options) {
           options = options || {};
           return this.buttonText = options.buttonText || "Back";
+        },
+        onRender: function() {
+          return this.$el.transition({
+            y: 0
+          }, 500, "ease");
         },
         serializeData: function() {
           return {

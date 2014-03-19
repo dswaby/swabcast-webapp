@@ -17,6 +17,8 @@
   font-size: 144px;
 }
 
+
+
 .danger-zone {
   color: #a94442;
   background-color: #f2dede;
@@ -27,6 +29,19 @@
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
+}
+
+.nav-helper-overlay {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  background-color: #fafafa;
+  color: black;
+  z-index: 700;
+  box-shadow: 0 0 8px #888888;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  cursor: default;
 }
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
@@ -48,6 +63,10 @@
   //background: #4B4B4B -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(71, 69, 69)), to(#3D3B3B)) !important;
   background: #fff;
   padding-top:12px;
+}
+
+.fancy-font {
+  font-family: 'Oswald', sans-serif;
 }
 
 .not-found {
@@ -227,6 +246,14 @@
     left: 0;
     width: 60px;
     height: 60px;
+}
+
+
+
+.offcanvas-inner-shadow-left {
+    -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
+    -moz-box-shadow:    4px 0px 10px 0px rgba(50, 50, 50, 0.64);
+    box-shadow:         4px 0px 10px 0px rgba(50, 50, 50, 0.64);
 }
 #player-fill-right{
 }

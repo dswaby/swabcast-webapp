@@ -1,7 +1,6 @@
 (function() {
   define(["app", "tpl!apps/episodes/show/templates/episode_detailed_view.tpl", "tpl!apps/episodes/show/templates/missing_episode.tpl", "tpl!apps/episodes/show/templates/feature_not_implemented.tpl", "tpl!apps/episodes/show/templates/feed_detailed.tpl", "tpl!apps/episodes/show/templates/feed_episodes.tpl", "tpl!apps/episodes/show/templates/episode_item_view.tpl"], function(Swabcast, episodeDetailedTpl, missingTpl, featureNotImplemented, feedDetailedTpl, feedEpisodesTpl, episodeItemViewTpl) {
     Swabcast.module("EpisodesApp.Show.View", function(View, Swabcast, Backbone, Marionette, $, _) {
-      View.Month = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
       View.FeatureNotImplemented = Marionette.ItemView.extend({
         template: featureNotImplemented,
         events: {
@@ -91,8 +90,11 @@
           "click a.js-preview-audio": "previewAudio"
         },
         initialize: function() {
-          this.published = new Date(this.model.get("publishedAt"));
-          this.publishedMonth = View.Month[this.published.getMonth()];
+          var timeString;
+          this.month = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+          timeString = this.model.get("publishedAt");
+          this.published = new Date(timeString);
+          this.publishedMonth = this.month[this.published.getMonth()];
           this.publishedDay = this.published.getDay();
           console.log(this.publishedMonth);
           return console.log(this.publishedDay);

@@ -24,7 +24,6 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/playlist/playlist_controller"], ->
           EpisodesApp.Playlist.Controller.showPlayistMain()
 
-
       # "episodes:library"
       showLibrary: ->
         require ["apps/episodes/feed/feed_controller"], ->
