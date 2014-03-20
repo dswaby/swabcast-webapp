@@ -1,48 +1,42 @@
-> This is a personal project/ proof of concept/ learning project
-
-Goals
-=====
-> so i recently found a site that does many of the things I hope to achieve in this app
->
-> see [player.fm](http://player.fm)
-> however, it is a rather poor implementation and lacks a decent implementation of a mobile web version,
-> it does however have native apps for Android and iOS
-
-
-**Primary Goal**
-Create a native feeling web application for managing podcasts
-
-*	individual user accounts
-*	be able to search, add, and sync podcast subscriptions
-*	be able to manually add feeds via xml or atom feed url
-*	be able to create playlists, listen to episodes, mark played/archive listened to episodes
-*	make use offline storage/indexDb
-*	be able to sync episode current position
-*	load optimized version via bookmark on iOS, see [forecast.io] [forecast] on iPhone
+Swabcast
+========
 
 
 
-
-[forecast]: http://forecast.io/  "Forecast.io"
-
-My focus here is on the UI and mobile web experience
-
-Assumptions
-===========
-> subject to change
-* Using Asp.net MVC 4 or in Ruby possibly using Sinatra or Padrino
-* RESTful
-* JS is AMD
-* Tested, optimized
-* Using mongodb to store user subscriptions and feed data in corresponding MongoDocs
-	(ie episodes data,played episodes, episodes in playlists, archived/hidden episodes, last played position/completed)
-* Using either websockets/ nodejs/ long polling to update episode positions
-* Parse XML/Atom feeds
-* Create repository for storing, updating, retrieving and adding XML feed data
+  -  Bugs/In Prog
+      * Playlist tracks added not rendering until refresh
+      * Smooth transitions currently not soo smooth
+      * Disabling buttons that
+      * Fix strange issue with new Date(milliseconds) where all dates
+        set, regardless of ms passed in (typeof number), return Jan 5 1970
+      * Styling BIG TIME, looking into [Topcoat][http://topcoat.io/topcoat/]
+        consistent and minimal
 
 
 
-List of Related Repos To Reference/Research or use for inspiration
-------------------------------------------------------------------
+    Working
+      * AMD w/requirejs
+      * Mocha BDD Tests
+      * Audio Player Queueing
+      * r.js optimizer
+      * Grunt configuration
+      * Express server and mongo config, API
+      * Seperation of concerns using Marionette.js Modules
+      * documentation generated with docco
 
-* https://github.com/davatron5000/TimeJump
+    Todo
+      * Mocha TDD tests
+      * Triggering Play now functionality in
+      * Track removal, upnext on end of episode
+      * Remove Audio preload
+      * disable buttons
+      * parsing collections from api calls so they create models correctly
+      *
+
+    Further plans
+      * implement passport authentication and user registration
+      * write rss scraper for periodically checking feeds and adding to collections as
+        they come in, taken into consideration when creating mongo schema
+      * sync time in current epiosode through webworker or setTimeout loop
+      * Feed browser and management of subscriptions
+      * Storing file data in indexedDB
