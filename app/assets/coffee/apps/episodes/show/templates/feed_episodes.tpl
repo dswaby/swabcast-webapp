@@ -1,21 +1,23 @@
 <!-- feed_episodes.tpl -->
 <div id="feed-head" class="row">
     <div id="color-wrapper" class="feed-head">
-        <div class="large-3 small-3 columns">
+        <div class="large-9 small-12 columns">
+        <a href="<%= feedUrl %>"><h2 style="color:#fff"><%= subscriptionTitle %></h2></a>
             <img src=./assets/img/<%= albumArt %> alt="" class="library-image">
             <% if (typeof(feedUrl) !== "undefined") { %>
-                <a href="<%= feedUrl %>"><h6>HomePage</h6></a>
+                <a href="<%= feedUrl %>"><h6>Visit Feed HomePage</h6></a>
             <% } %>
 
-        </div>
-        <div class="large-6 small-6 columns">
-            <a href="<%= feedUrl %>"><h2 style="color:#fff"><%= subscriptionTitle %></h2></a>
-            <br />
-            <p style="color:#fff"><%= summary %></p>
-            <br />
+
             <% if (typeof(authors) !== "undefined") { %>
-            <h6 class="subheader" style="color:#fff"><%= authors %></h6>
+                <h6 class="subheader" style="color:#fff"><%= authors %></h6>
             <% } %>
+            <br />
+            <div style="width:85%; overflow:auto;float:left;">
+                <p style="color:#fff;font-size:11px;"><%= summary %></p>
+            <br />
+
+            </div>
         </div>
     </div>
 </div>

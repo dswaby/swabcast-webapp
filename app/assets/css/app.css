@@ -4294,34 +4294,35 @@ table tfoot tr td {
 
 /* line 119, ../scss/app.scss */
 .library-image {
-  max-width: 100%;
+  max-width: 25%;
   padding: 5px;
+  float: left;
 }
 
-/* line 124, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 .cover-art-block {
   padding: 0 !important;
 }
 
-/* line 127, ../scss/app.scss */
+/* line 128, ../scss/app.scss */
 .icon-closure {
   font-size: 30px;
   margin-right: 5px;
   max-width: 30px;
 }
 
-/* line 133, ../scss/app.scss */
+/* line 134, ../scss/app.scss */
 .dialog-fixed-bottom {
   position: absolute;
   bottom: 0;
 }
 
-/* line 138, ../scss/app.scss */
+/* line 139, ../scss/app.scss */
 #page-main {
   padding: 0 !important;
 }
 
-/* line 142, ../scss/app.scss */
+/* line 143, ../scss/app.scss */
 .panel {
   overflow: auto;
 }
@@ -4334,7 +4335,7 @@ table tfoot tr td {
   font-style: normal;
 }
 
-/* line 188, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 .fi-alert:before,
 .fi-arrow-left:before,
 .fi-star:before,
@@ -4376,147 +4377,147 @@ table tfoot tr td {
   text-decoration: inherit;
 }
 
-/* line 199, ../scss/app.scss */
+/* line 200, ../scss/app.scss */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 200, ../scss/app.scss */
+/* line 201, ../scss/app.scss */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 201, ../scss/app.scss */
+/* line 202, ../scss/app.scss */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 202, ../scss/app.scss */
+/* line 203, ../scss/app.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 203, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 204, ../scss/app.scss */
+/* line 205, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 205, ../scss/app.scss */
+/* line 206, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 206, ../scss/app.scss */
+/* line 207, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 207, ../scss/app.scss */
+/* line 208, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 208, ../scss/app.scss */
+/* line 209, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 209, ../scss/app.scss */
+/* line 210, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 210, ../scss/app.scss */
+/* line 211, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 211, ../scss/app.scss */
+/* line 212, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 212, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 213, ../scss/app.scss */
+/* line 214, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 214, ../scss/app.scss */
+/* line 215, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 215, ../scss/app.scss */
+/* line 216, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 216, ../scss/app.scss */
+/* line 217, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 217, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 218, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 219, ../scss/app.scss */
+/* line 220, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 220, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 221, ../scss/app.scss */
+/* line 222, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 222, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 223, ../scss/app.scss */
+/* line 224, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 224, ../scss/app.scss */
+/* line 225, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 225, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 226, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 230, ../scss/app.scss */
+/* line 231, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
@@ -4526,7 +4527,7 @@ table tfoot tr td {
 /***************************************************************************************************
     styles for static player bar at bottom of screen  **********************************************
 ***************************************************************************************************/
-/* line 241, ../scss/app.scss */
+/* line 242, ../scss/app.scss */
 #player {
   position: fixed;
   height: 75px;
@@ -4540,12 +4541,12 @@ table tfoot tr td {
   cursor: default;
 }
 
-/* line 256, ../scss/app.scss */
+/* line 257, ../scss/app.scss */
 .player-preview {
   margin-left: 80px;
 }
 
-/* line 272, ../scss/app.scss */
+/* line 273, ../scss/app.scss */
 #player-art {
   background-color: transparent;
   display: block;
@@ -4556,14 +4557,14 @@ table tfoot tr td {
   height: 60px;
 }
 
-/* line 284, ../scss/app.scss */
+/* line 285, ../scss/app.scss */
 .offcanvas-inner-shadow-left {
   -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   -moz-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
 }
 
-/* line 293, ../scss/app.scss */
+/* line 294, ../scss/app.scss */
 #controls-wrapper {
   height: 60px;
   position: fixed;
@@ -4571,17 +4572,17 @@ table tfoot tr td {
   right: 16px;
 }
 
-/* line 299, ../scss/app.scss */
+/* line 300, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 303, ../scss/app.scss */
+/* line 304, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 307, ../scss/app.scss */
+/* line 308, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;
