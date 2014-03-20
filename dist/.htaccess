@@ -1,5 +1,6 @@
 # BEGIN EXPIRES
 <IfModule mod_expires.c>
+    AddType text/cache-manifest manifest
     ExpiresActive On
     ExpiresDefault "access plus 10 days"
     ExpiresByType text/css "access plus 1 week"

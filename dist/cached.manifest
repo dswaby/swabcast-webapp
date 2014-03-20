@@ -6,7 +6,7 @@ CACHE:
 index.html
 require_main_built.js
 js/
-css/images/
+css/combined.min.css
 assets/img/
 
 NETWORK:
