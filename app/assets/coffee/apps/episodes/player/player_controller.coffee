@@ -14,15 +14,16 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
             self.updateAudio()
 
           @updateAudio = (sourceUrl) ->
-            sourceUrl = sourceUrl or null
-            self.audioPlayer.resetAudio()
-            if playerData.get("currentPosition") isnt 0 and typeof playerData.get("currentPosition") is "number"
-              self.audioPlayer.setAudioSource sourceUrl
-              self.audioPlayer.setPosition = playerData.get("currentPosition")
-            else
-              self.audioPlayer.setAudioSource sourceUrl
-              self.audioPlayer.setPosition = 0
-            self.audioPlayer.audio.load()
+            if sourceUrl != ""
+              self.audioPlayer.resetAudio()
+              if playerData.get("currentPosition") isnt 0 and typeof playerData.get("currentPosition") is "number"
+                self.audioPlayer.setAudioSource sourceUrl
+                self.audioPlayer.setPosition = playerData.get("currentPosition")
+              else
+                self.audioPlayer.setAudioSource sourceUrl
+                self.audioPlayer.setPosition = 0
+              self.audioPlayer.audio.load()
+
 
           @removeCurrentAudio = ->
             self.audioPlayer.clearAudio()
@@ -61,7 +62,7 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
               @audio.src = ""
 
             play: ->
-              @audio.play()  if @state is "ready"
+              @audio.play() if @state is "ready"
               @state = "playing"
 
             pause: ->
@@ -85,11 +86,11 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
             setPosition: (time) ->
               @audio.currentTime = time  if typeof episodePosition is "number"
 
-            skipback: ->
-              if (@state is "ready" or @state is "playing") and @audio.currentTime > 45
-                @audio.pause()
-                @audio.currentTime = (@audio.currentTime - 45)
-                @audio.play()
+            # skipback: ->
+            #   if (@state is "ready" or @state is "playing") and @audio.currentTime > 45
+            #     @audio.pause()
+            #     @audio.currentTime = (@audio.currentTime - 45)
+            #     @audio.play()
 
             skipahead: ->
               self = this
@@ -100,6 +101,12 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
 
             currentMediaUrl: ->
               @audio.src
+
+            setAudioOptions: (opts) ->
+              if opts.preload
+                @audio.preload = true
+              if opts.autoplay
+                @audio.autoplay = true
 
           @initializePlayer()
           @playerControls = new View.Player(model: playerData)
@@ -134,6 +141,7 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
           Swabcast.commands.setHandlers
 
             "player:empty": ->
+              console.log("player:empty")
               self.playerControls.model.destroy()
               self.playerControls.model = self.defaultPlayerState()
               self.updateAudio()
@@ -141,24 +149,30 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
               playerData.save()
 
             "player:playnow": (episodeModel) ->
+              console.log("player:playnow", episodeModel)
+              options.preload = true
               self.playerControls.model.destroy()
               self.newPlayerData episodeModel
               self.updateAudio()
+              self.setAudioOptions(options)
               self.audioPlayer.play()
               self.playerControls.render()
               playerData.save()
 
             "player:setepisode": (episodeModel) ->
+              console.log("player:setepisode", episodeModel)
+              options.preload = false
               self.playerControls.model.destroy()
               self.playerControls.model = self.newPlayerData(episodeModel)
               self.updateAudio episodeModel.get("mediaUrl")
               self.playerControls.render()
               playerData.save()
 
-            "playlist:updatenowplaying": (nextInPlaylist) ->
+            "playlist:updatenowplaying": (episodeModel) ->
+              console.log("playlist:updatenowplaying", episodeModel)
               self.playerControls.model.destroy()
-              self.playerControls.model = self.newPlayerData(nextInPlaylist)
-              self.updateAudio nextInPlaylist.get("mediaUrl")
+              self.playerControls.model = self.newPlayerData(episodeModel)
+              self.updateAudio episodeModel.get("mediaUrl")
               self.playerControls.render()
               playerData.save()
 

@@ -234,14 +234,18 @@ module.exports = function (grunt) {
 
 
 grunt.registerTask('default', [
+    'dev',
+    'connect:testserver',
+    'express:dev',
+    'watch'
+    ]);
+
+grunt.registerTask('dev', [
     'copy:vendorjs',
     'copy:templates', // when starting, copy any templates that may have been added
     'compass:app',
     'coffee', //compile any coffescript files that may have changed
-    'targethtml:app',
-    'connect:testserver',
-    'express:dev',
-    'watch'
+    'targethtml:app'
     ]);
 
 grunt.registerTask('build', [

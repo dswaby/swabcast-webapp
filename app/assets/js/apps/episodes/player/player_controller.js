@@ -14,16 +14,17 @@
               return self.updateAudio();
             };
             this.updateAudio = function(sourceUrl) {
-              sourceUrl = sourceUrl || null;
-              self.audioPlayer.resetAudio();
-              if (playerData.get("currentPosition") !== 0 && typeof playerData.get("currentPosition") === "number") {
-                self.audioPlayer.setAudioSource(sourceUrl);
-                self.audioPlayer.setPosition = playerData.get("currentPosition");
-              } else {
-                self.audioPlayer.setAudioSource(sourceUrl);
-                self.audioPlayer.setPosition = 0;
+              if (sourceUrl !== "") {
+                self.audioPlayer.resetAudio();
+                if (playerData.get("currentPosition") !== 0 && typeof playerData.get("currentPosition") === "number") {
+                  self.audioPlayer.setAudioSource(sourceUrl);
+                  self.audioPlayer.setPosition = playerData.get("currentPosition");
+                } else {
+                  self.audioPlayer.setAudioSource(sourceUrl);
+                  self.audioPlayer.setPosition = 0;
+                }
+                return self.audioPlayer.audio.load();
               }
-              return self.audioPlayer.audio.load();
             };
             this.removeCurrentAudio = function() {
               return self.audioPlayer.clearAudio();
@@ -95,13 +96,6 @@
                   return this.audio.currentTime = time;
                 }
               },
-              skipback: function() {
-                if ((this.state === "ready" || this.state === "playing") && this.audio.currentTime > 45) {
-                  this.audio.pause();
-                  this.audio.currentTime = this.audio.currentTime - 45;
-                  return this.audio.play();
-                }
-              },
               skipahead: function() {
                 self = this;
                 if ((self.state === "ready" || self.state === "playing") && self.audio.currentTime + 45 <= self.audio.duration) {
@@ -112,6 +106,14 @@
               },
               currentMediaUrl: function() {
                 return this.audio.src;
+              },
+              setAudioOptions: function(opts) {
+                if (opts.preload) {
+                  this.audio.preload = true;
+                }
+                if (opts.autoplay) {
+                  return this.audio.autoplay = true;
+                }
               }
             };
             this.initializePlayer();
@@ -151,6 +153,7 @@
             });
             Swabcast.commands.setHandlers({
               "player:empty": function() {
+                console.log("player:empty");
                 self.playerControls.model.destroy();
                 self.playerControls.model = self.defaultPlayerState();
                 self.updateAudio();
@@ -158,24 +161,30 @@
                 return playerData.save();
               },
               "player:playnow": function(episodeModel) {
+                console.log("player:playnow", episodeModel);
+                options.preload = true;
                 self.playerControls.model.destroy();
                 self.newPlayerData(episodeModel);
                 self.updateAudio();
+                self.setAudioOptions(options);
                 self.audioPlayer.play();
                 self.playerControls.render();
                 return playerData.save();
               },
               "player:setepisode": function(episodeModel) {
+                console.log("player:setepisode", episodeModel);
+                options.preload = false;
                 self.playerControls.model.destroy();
                 self.playerControls.model = self.newPlayerData(episodeModel);
                 self.updateAudio(episodeModel.get("mediaUrl"));
                 self.playerControls.render();
                 return playerData.save();
               },
-              "playlist:updatenowplaying": function(nextInPlaylist) {
+              "playlist:updatenowplaying": function(episodeModel) {
+                console.log("playlist:updatenowplaying", episodeModel);
                 self.playerControls.model.destroy();
-                self.playerControls.model = self.newPlayerData(nextInPlaylist);
-                self.updateAudio(nextInPlaylist.get("mediaUrl"));
+                self.playerControls.model = self.newPlayerData(episodeModel);
+                self.updateAudio(episodeModel.get("mediaUrl"));
                 self.playerControls.render();
                 return playerData.save();
               }

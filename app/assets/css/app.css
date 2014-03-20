@@ -4675,8 +4675,8 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 }
 
 /* line 54, ../scss/app.scss */
-.nav-helper-icon p {
-  font-size: 30px !important;
+.nav-helper-icon a {
+  font-size: 40px !important;
   color: #fff !important;
 }
 

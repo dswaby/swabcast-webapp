@@ -28,7 +28,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
 
 
             playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
-              if tracks.length isnt 0
+              if tracks.length is 0
                 newTrack = model
                 tracks.add newTrack
 

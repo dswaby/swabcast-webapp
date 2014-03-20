@@ -30,7 +30,7 @@
               }
               playlistTracks.listenTo(Playlist, "playlist:enqueue", function(model) {
                 var newTrack;
-                if (tracks.length !== 0) {
+                if (tracks.length === 0) {
                   newTrack = model;
                   tracks.add(newTrack);
                 }
