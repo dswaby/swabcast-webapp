@@ -7,6 +7,7 @@
 @import "../bower_components/foundation/scss/foundation/components/reveal";
 @import "../bower_components/foundation/scss/foundation/components/tables";
 @import "../bower_components/foundation/scss/foundation/components/alert-boxes";
+@import "../bower_components/foundation/scss/foundation/components/button-groups";
 
 
 .off-canvas-wrap {
@@ -36,16 +37,23 @@
   height: 50px;
   width: 100%;
   top: 0;
-  background-color: #fafafa;
+  background-color: #333333;
   color: black;
-  z-index: 700;
+  z-index: 571;
   box-shadow: 0 0 8px #888888;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   cursor: default;
 }
 
-.nav-helper-icon {
-  margin-left: 30%;
+.nav-helper-icon i{
+  margin-left: 30% !important;
+  font-size: -webkit-xxx-large !important;
+  color: #fff !important;
+}
+
+.nav-helper-icon a{
+  font-size:40px !important;
+  color: #fff !important;
 }
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
@@ -241,9 +249,9 @@
 
 #player {
     position: fixed;
-    height: 75px;
+    height: 60px;
     width:100%;
-    //min-width: 850px;
+    min-width: 340px;
     bottom: 0;
     background-color: #fafafa;
     color: black;
@@ -253,11 +261,13 @@
     cursor: default;
 }
 #player-fill-left{
+  height:100%;
+  width:75%;
 }
 .player-preview{
-    // position: fixed;
+    position: fixed;
     // top: 15px;
-    margin-left: 80px;
+    left: 63px;
     // bottom: 0;
     // font-weight: bold;
     // font-size: 18px;

@@ -14,7 +14,7 @@
             <% } %>
             <br />
             <div style="width:85%; overflow:auto;float:left;">
-                <p style="color:#fff;font-size:11px;"><%= summary %></p>
+                <p style="color:#fff;"><%= summary %></p>
             <br />
 
             </div>

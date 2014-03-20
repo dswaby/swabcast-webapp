@@ -1,6 +1,6 @@
 <div id="nav-helper" class="nav-helper-overlay">
-  <a href="#" class="js-library-back">
-    <i class="fi-arrow-left nav-helper-icon" style="font-size:30px;"></i> &nbsp &nbsp
+  <a href="#" class="js-library-back nav-helper-icon">
+    <i class="fi-arrow-left"></i> &nbsp &nbsp
   Back
   </a>
 </div>

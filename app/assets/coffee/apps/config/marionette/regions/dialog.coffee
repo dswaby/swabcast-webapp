@@ -28,6 +28,15 @@ define ["marionette", "jquery-ui", "transit"], (Marionette) ->
       currentWindowWidth = $(window).width()
       if (currentWindowWidth <= 320)
         return currentWindowWidth *0.90
-      return currentWindowWidth * 0.80
+      else
+        return "auto"
+
+      winHeight: ->
+        height
+        height = $(window).height()
+        if (height <= 640)
+          return height * 0.78
+        else
+          return "auto"
   )
   Marionette.Region.Dialog

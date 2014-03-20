@@ -26,9 +26,9 @@ define ["app",
     View.EpisodeDetail = Marionette.ItemView.extend(
       template: episodeDetailedTpl
       events:
-        "click button.dismiss": "closeDialog"
+        "click a.dismiss": "closeDialog"
         "click a.js-edit": "editClicked"
-        "click button.js-enqueue": "queueEpisode"
+        "click a.js-enqueue": "queueEpisode"
 
       initialize: ->
         @title = @model.get("subscriptionTitle")

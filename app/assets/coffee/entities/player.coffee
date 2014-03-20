@@ -40,15 +40,15 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
         console.log "playerdata:reset triggered"
 
     Swabcast.reqres.setHandler "player:savedata", ->
+      console.log("player:savedata")
       API.getPlayer()
 
     Swabcast.commands.setHandler "playerdata:remove", ->
+      console.log("playerdata:remove")
       API.playerReset()
 
     Swabcast.commands.setHandler "playerdata:add", (episodeModel) ->
+      console.log("playerdata:add, (episodeModel)", episodeModel)
       API.updateSaveData episodeModel
-
-
-
 
   return

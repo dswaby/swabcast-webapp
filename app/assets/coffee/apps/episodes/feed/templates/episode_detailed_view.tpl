@@ -1,22 +1,34 @@
+<!-- episode_detailed_view -->
 <br /><br />
 <div class="panel">
-    <button class="button js-show-list">
-        <i class="icon-arrow-left"></i>Back
-    </button>
-    <button class="button js-enqueue">
-        <i class="icon-plus-sign"></i>Queue
-    </button>
-    <div class="row">
-        <div class="span2">
-            <img src=./assets/img/<%= albumArt %> alt="" class="library" style="max-width:300px">
-            <h2><%= episodeParent %></h2>
-        </div>
-        <div class="span8">
-            <a href="<%= feedUrl %>"><h6><%= feedUrl %></h6></a>
-            <h4><%= episodeTitle %></h4>
-            <p><%= episodeSummary %></p>
-        </div>
-        <div>
-        </div>
+    <div style="width:100%">
+        <ul class="button-group">
+          <li><a href="#" class="button dismiss"> <i class="icon-arrow-left"></i>Close</a></li>
+          <!-- Add To Playlist -->
+          <li><a href="#" class="button js-enqueue"><i class="icon-plus-sign"></i>Queue</a></li>
+          <!-- Mark Played/Archive -->
+          <li><a href="#" class="button js-archive"><i class="icon-plus-sign"></i>Archive</a></li>
+        </ul>
     </div>
+
+    <div class="large-9 small-12 columns">
+
+        <img src=./assets/img/<%= albumArt %> alt="" class="library-image">
+        <% if (typeof(feedUrl) !== "undefined") { %>
+            <h6><a href="<%= feedUrl %>">Homepage</a><h6>
+        <% } %>
+        <% if (typeof(episodeSummary) != "undefined") { %>
+            <p><%= episodeSummary %></p>
+        <% } %>
+        <% if (typeof(episodeSummary) === "undefined") { %>
+            <p></p>
+        <% } %>
+
+    </div>
+</div>
+
+<div>
+    <button class="button play-now">
+        <i class="icon-play"></i>Play Now
+    </button>
 </div>

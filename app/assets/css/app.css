@@ -4168,53 +4168,522 @@ table tfoot tr td {
   color: #4f4f4f;
 }
 
-/* line 12, ../scss/app.scss */
+/* line 201, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button, .button {
+  border-style: solid;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+  background-color: #008cba;
+  border-color: #007095;
+  color: white;
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #007095;
+}
+/* line 157, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button:hover, button:focus, .button:hover, .button:focus {
+  color: white;
+}
+/* line 209, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.secondary, .button.secondary {
+  background-color: #e7e7e7;
+  border-color: #b9b9b9;
+  color: #333333;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+  background-color: #b9b9b9;
+}
+/* line 152, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+  color: #333333;
+}
+/* line 210, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.success, .button.success {
+  background-color: #43ac6a;
+  border-color: #368a55;
+  color: white;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+  background-color: #368a55;
+}
+/* line 157, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+  color: white;
+}
+/* line 211, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.alert, .button.alert {
+  background-color: #f04124;
+  border-color: #cf2a0e;
+  color: white;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+  background-color: #cf2a0e;
+}
+/* line 157, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+  color: white;
+}
+/* line 213, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.large, .button.large {
+  padding-top: 1.125rem;
+  padding-right: 2.25rem;
+  padding-bottom: 1.1875rem;
+  padding-left: 2.25rem;
+  font-size: 1.25rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+}
+/* line 214, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.small, .button.small {
+  padding-top: 0.875rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.75rem;
+  font-size: 0.8125rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+}
+/* line 215, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.tiny, .button.tiny {
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  font-size: 0.6875rem;
+  /*     @else                            { font-size: $padding - rem-calc(2); } */
+}
+/* line 216, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.expand, .button.expand {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+/* line 218, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.left-align, .button.left-align {
+  text-align: left;
+  text-indent: 0.75rem;
+}
+/* line 219, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.right-align, .button.right-align {
+  text-align: right;
+  padding-right: 0.75rem;
+}
+/* line 221, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.radius, .button.radius {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 222, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.round, .button.round {
+  -webkit-border-radius: 1000px;
+  border-radius: 1000px;
+}
+/* line 224, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled, button[disabled], .button.disabled, .button[disabled] {
+  background-color: #008cba;
+  border-color: #007095;
+  color: white;
+  cursor: default;
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+  background-color: #007095;
+}
+/* line 157, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+  color: white;
+}
+/* line 170, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+  background-color: #008cba;
+}
+/* line 225, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
+  background-color: #e7e7e7;
+  border-color: #b9b9b9;
+  color: #333333;
+  cursor: default;
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+  background-color: #b9b9b9;
+}
+/* line 152, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+  color: #333333;
+}
+/* line 170, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+  background-color: #e7e7e7;
+}
+/* line 226, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
+  background-color: #43ac6a;
+  border-color: #368a55;
+  color: white;
+  cursor: default;
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+  background-color: #368a55;
+}
+/* line 157, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+  color: white;
+}
+/* line 170, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+  background-color: #43ac6a;
+}
+/* line 227, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
+  background-color: #f04124;
+  border-color: #cf2a0e;
+  color: white;
+  cursor: default;
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+  background-color: #cf2a0e;
+}
+/* line 157, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+  color: white;
+}
+/* line 170, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+  background-color: #f04124;
+}
+
+@media only screen and (min-width: 40.063em) {
+  /* line 232, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
+  button, .button {
+    display: inline-block;
+  }
+}
+/* line 91, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group {
+  list-style: none;
+  margin: 0;
+  left: 0;
+  *zoom: 1;
+}
+/* line 145, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.button-group:before, .button-group:after {
+  content: " ";
+  display: table;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.button-group:after {
+  clear: both;
+}
+/* line 93, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group li {
+  margin: 0;
+  float: left;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group li > button, .button-group li .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group li:first-child button, .button-group li:first-child .button {
+  border-left: 0;
+}
+/* line 56, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group li:first-child {
+  margin-left: 0;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.radius > * > button, .button-group.radius > * .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.radius > *:first-child button, .button-group.radius > *:first-child .button {
+  border-left: 0;
+}
+/* line 74, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.radius > *:first-child, .button-group.radius > *:first-child > a, .button-group.radius > *:first-child > button, .button-group.radius > *:first-child > .button {
+  -moz-border-radius-bottomleft: 3px;
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+/* line 78, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.radius > *:last-child, .button-group.radius > *:last-child > a, .button-group.radius > *:last-child > button, .button-group.radius > *:last-child > .button {
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.round > * > button, .button-group.round > * .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.round > *:first-child button, .button-group.round > *:first-child .button {
+  border-left: 0;
+}
+/* line 74, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.round > *:first-child, .button-group.round > *:first-child > a, .button-group.round > *:first-child > button, .button-group.round > *:first-child > .button {
+  -moz-border-radius-bottomleft: 1000px;
+  -moz-border-radius-topleft: 1000px;
+  -webkit-border-bottom-left-radius: 1000px;
+  -webkit-border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+  border-top-left-radius: 1000px;
+}
+/* line 78, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.round > *:last-child, .button-group.round > *:last-child > a, .button-group.round > *:last-child > button, .button-group.round > *:last-child > .button {
+  -moz-border-radius-bottomright: 1000px;
+  -moz-border-radius-topright: 1000px;
+  -webkit-border-bottom-right-radius: 1000px;
+  -webkit-border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+  border-top-right-radius: 1000px;
+}
+/* line 99, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-2 li {
+  width: 50%;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-2 li > button, .button-group.even-2 li .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-2 li:first-child button, .button-group.even-2 li:first-child .button {
+  border-left: 0;
+}
+/* line 84, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-2 li button, .button-group.even-2 li .button {
+  width: 100%;
+}
+/* line 99, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-3 li {
+  width: 33.33333%;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-3 li > button, .button-group.even-3 li .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-3 li:first-child button, .button-group.even-3 li:first-child .button {
+  border-left: 0;
+}
+/* line 84, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-3 li button, .button-group.even-3 li .button {
+  width: 100%;
+}
+/* line 99, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-4 li {
+  width: 25%;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-4 li > button, .button-group.even-4 li .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-4 li:first-child button, .button-group.even-4 li:first-child .button {
+  border-left: 0;
+}
+/* line 84, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-4 li button, .button-group.even-4 li .button {
+  width: 100%;
+}
+/* line 99, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-5 li {
+  width: 20%;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-5 li > button, .button-group.even-5 li .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-5 li:first-child button, .button-group.even-5 li:first-child .button {
+  border-left: 0;
+}
+/* line 84, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-5 li button, .button-group.even-5 li .button {
+  width: 100%;
+}
+/* line 99, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-6 li {
+  width: 16.66667%;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-6 li > button, .button-group.even-6 li .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-6 li:first-child button, .button-group.even-6 li:first-child .button {
+  border-left: 0;
+}
+/* line 84, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-6 li button, .button-group.even-6 li .button {
+  width: 100%;
+}
+/* line 99, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-7 li {
+  width: 14.28571%;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-7 li > button, .button-group.even-7 li .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-7 li:first-child button, .button-group.even-7 li:first-child .button {
+  border-left: 0;
+}
+/* line 84, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-7 li button, .button-group.even-7 li .button {
+  width: 100%;
+}
+/* line 99, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-8 li {
+  width: 12.5%;
+}
+/* line 40, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-8 li > button, .button-group.even-8 li .button {
+  border-left: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/* line 46, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-8 li:first-child button, .button-group.even-8 li:first-child .button {
+  border-left: 0;
+}
+/* line 84, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-group.even-8 li button, .button-group.even-8 li .button {
+  width: 100%;
+}
+
+/* line 103, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-bar {
+  *zoom: 1;
+}
+/* line 145, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.button-bar:before, .button-bar:after {
+  content: " ";
+  display: table;
+}
+/* line 146, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.button-bar:after {
+  clear: both;
+}
+/* line 105, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-bar .button-group {
+  float: left;
+  margin-right: 0.625rem;
+}
+/* line 33, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
+.button-bar .button-group div {
+  overflow: hidden;
+}
+
+/* line 13, ../scss/app.scss */
 .off-canvas-wrap {
   background: #ece9e9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#ece9e9)) !important;
 }
 
-/* line 16, ../scss/app.scss */
+/* line 17, ../scss/app.scss */
 .big-big-ico {
   font-size: 144px;
 }
 
-/* line 22, ../scss/app.scss */
+/* line 23, ../scss/app.scss */
 .danger-zone {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
 
-/* line 28, ../scss/app.scss */
+/* line 29, ../scss/app.scss */
 .success {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 
-/* line 34, ../scss/app.scss */
+/* line 35, ../scss/app.scss */
 .nav-helper-overlay {
   position: fixed;
   height: 50px;
   width: 100%;
   top: 0;
-  background-color: #fafafa;
+  background-color: #333333;
   color: black;
-  z-index: 700;
+  z-index: 571;
   box-shadow: 0 0 8px #888888;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   cursor: default;
 }
 
-/* line 47, ../scss/app.scss */
-.nav-helper-icon {
-  margin-left: 30%;
+/* line 48, ../scss/app.scss */
+.nav-helper-icon i {
+  margin-left: 30% !important;
+  font-size: -webkit-xxx-large !important;
+  color: #fff !important;
+}
+
+/* line 54, ../scss/app.scss */
+.nav-helper-icon p {
+  font-size: 30px !important;
+  color: #fff !important;
 }
 
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
-/* line 54, ../scss/app.scss */
+/* line 62, ../scss/app.scss */
 .feed-head {
   padding: 20px;
   position: relative;
@@ -4223,7 +4692,7 @@ table tfoot tr td {
   overflow: hidden;
 }
 
-/* line 62, ../scss/app.scss */
+/* line 70, ../scss/app.scss */
 .table-date h5 {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4237,7 +4706,7 @@ table tfoot tr td {
   margin-bottom: 0;
 }
 
-/* line 75, ../scss/app.scss */
+/* line 83, ../scss/app.scss */
 .table-date p {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4247,44 +4716,44 @@ table tfoot tr td {
   margin-bottom: 0 !important;
 }
 
-/* line 85, ../scss/app.scss */
+/* line 93, ../scss/app.scss */
 .feed-color {
   color: #14b9e8 !important;
 }
 
-/* line 89, ../scss/app.scss */
+/* line 97, ../scss/app.scss */
 .feed-list {
   background: #fff;
   padding-top: 12px;
 }
 
-/* line 95, ../scss/app.scss */
+/* line 103, ../scss/app.scss */
 .fancy-font {
   font-family: 'Oswald', sans-serif;
 }
 
-/* line 99, ../scss/app.scss */
+/* line 107, ../scss/app.scss */
 .not-found {
   margin-left: 10px;
 }
 
-/* line 103, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 .episodes-table-wrapper {
   height: 100%;
   overflow: auto;
 }
 
-/* line 107, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .locked {
   overflow: hidden;
 }
 
-/* line 111, ../scss/app.scss */
+/* line 119, ../scss/app.scss */
 .playlist {
   top: 0;
 }
 
-/* line 115, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 .playlist-sidebar {
   background: #F4F4F4;
   min-height: 550px;
@@ -4292,37 +4761,37 @@ table tfoot tr td {
   margin-right: 10px;
 }
 
-/* line 119, ../scss/app.scss */
+/* line 127, ../scss/app.scss */
 .library-image {
   max-width: 25%;
   padding: 5px;
   float: left;
 }
 
-/* line 125, ../scss/app.scss */
+/* line 133, ../scss/app.scss */
 .cover-art-block {
   padding: 0 !important;
 }
 
-/* line 128, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 .icon-closure {
   font-size: 30px;
   margin-right: 5px;
   max-width: 30px;
 }
 
-/* line 134, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 .dialog-fixed-bottom {
   position: absolute;
   bottom: 0;
 }
 
-/* line 139, ../scss/app.scss */
+/* line 147, ../scss/app.scss */
 #page-main {
   padding: 0 !important;
 }
 
-/* line 143, ../scss/app.scss */
+/* line 151, ../scss/app.scss */
 .panel {
   overflow: auto;
 }
@@ -4335,7 +4804,7 @@ table tfoot tr td {
   font-style: normal;
 }
 
-/* line 189, ../scss/app.scss */
+/* line 197, ../scss/app.scss */
 .fi-alert:before,
 .fi-arrow-left:before,
 .fi-star:before,
@@ -4377,147 +4846,147 @@ table tfoot tr td {
   text-decoration: inherit;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 208, ../scss/app.scss */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 201, ../scss/app.scss */
+/* line 209, ../scss/app.scss */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 202, ../scss/app.scss */
+/* line 210, ../scss/app.scss */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 203, ../scss/app.scss */
+/* line 211, ../scss/app.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 204, ../scss/app.scss */
+/* line 212, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 205, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 206, ../scss/app.scss */
+/* line 214, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 207, ../scss/app.scss */
+/* line 215, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 208, ../scss/app.scss */
+/* line 216, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 209, ../scss/app.scss */
+/* line 217, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 210, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 211, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 212, ../scss/app.scss */
+/* line 220, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 213, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 214, ../scss/app.scss */
+/* line 222, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 215, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 216, ../scss/app.scss */
+/* line 224, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 217, ../scss/app.scss */
+/* line 225, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 218, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 219, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 220, ../scss/app.scss */
+/* line 228, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 221, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 222, ../scss/app.scss */
+/* line 230, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 223, ../scss/app.scss */
+/* line 231, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 224, ../scss/app.scss */
+/* line 232, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 225, ../scss/app.scss */
+/* line 233, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 226, ../scss/app.scss */
+/* line 234, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 227, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 231, ../scss/app.scss */
+/* line 239, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
@@ -4527,11 +4996,12 @@ table tfoot tr td {
 /***************************************************************************************************
     styles for static player bar at bottom of screen  **********************************************
 ***************************************************************************************************/
-/* line 242, ../scss/app.scss */
+/* line 250, ../scss/app.scss */
 #player {
   position: fixed;
-  height: 75px;
+  height: 60px;
   width: 100%;
+  min-width: 340px;
   bottom: 0;
   background-color: #fafafa;
   color: black;
@@ -4541,12 +5011,19 @@ table tfoot tr td {
   cursor: default;
 }
 
-/* line 257, ../scss/app.scss */
-.player-preview {
-  margin-left: 80px;
+/* line 263, ../scss/app.scss */
+#player-fill-left {
+  height: 100%;
+  width: 75%;
 }
 
-/* line 273, ../scss/app.scss */
+/* line 267, ../scss/app.scss */
+.player-preview {
+  position: fixed;
+  left: 63px;
+}
+
+/* line 283, ../scss/app.scss */
 #player-art {
   background-color: transparent;
   display: block;
@@ -4557,14 +5034,14 @@ table tfoot tr td {
   height: 60px;
 }
 
-/* line 285, ../scss/app.scss */
+/* line 295, ../scss/app.scss */
 .offcanvas-inner-shadow-left {
   -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   -moz-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
 }
 
-/* line 294, ../scss/app.scss */
+/* line 304, ../scss/app.scss */
 #controls-wrapper {
   height: 60px;
   position: fixed;
@@ -4572,17 +5049,17 @@ table tfoot tr td {
   right: 16px;
 }
 
-/* line 300, ../scss/app.scss */
+/* line 310, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 304, ../scss/app.scss */
+/* line 314, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 308, ../scss/app.scss */
+/* line 318, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;

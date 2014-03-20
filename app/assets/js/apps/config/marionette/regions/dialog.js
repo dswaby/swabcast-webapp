@@ -33,8 +33,21 @@
         currentWindowWidth = $(window).width();
         if (currentWindowWidth <= 320) {
           return currentWindowWidth * 0.90;
+        } else {
+          return "auto";
         }
-        return currentWindowWidth * 0.80;
+        return {
+          winHeight: function() {
+            height;
+            var height;
+            height = $(window).height();
+            if (height <= 640) {
+              return height * 0.78;
+            } else {
+              return "auto";
+            }
+          }
+        };
       }
     });
     return Marionette.Region.Dialog;

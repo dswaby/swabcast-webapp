@@ -130,10 +130,6 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
           @playerControls.on "episode:skipahead", ->
             self.audioPlayer.skipahead()
 
-          @playerControls.on "episode:previous", ->
-
-          @playerControls.on "episode:next", ->
-
           # TODO - this should be seperated as an API
           Swabcast.commands.setHandlers
 

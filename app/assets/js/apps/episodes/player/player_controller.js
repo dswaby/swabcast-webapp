@@ -149,8 +149,6 @@
             this.playerControls.on("episode:skipahead", function() {
               return self.audioPlayer.skipahead();
             });
-            this.playerControls.on("episode:previous", function() {});
-            this.playerControls.on("episode:next", function() {});
             Swabcast.commands.setHandlers({
               "player:empty": function() {
                 self.playerControls.model.destroy();

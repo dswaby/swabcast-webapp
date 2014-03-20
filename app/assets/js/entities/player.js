@@ -52,12 +52,15 @@
         }
       };
       Swabcast.reqres.setHandler("player:savedata", function() {
+        console.log("player:savedata");
         return API.getPlayer();
       });
       Swabcast.commands.setHandler("playerdata:remove", function() {
+        console.log("playerdata:remove");
         return API.playerReset();
       });
       return Swabcast.commands.setHandler("playerdata:add", function(episodeModel) {
+        console.log("playerdata:add, (episodeModel)", episodeModel);
         return API.updateSaveData(episodeModel);
       });
     });

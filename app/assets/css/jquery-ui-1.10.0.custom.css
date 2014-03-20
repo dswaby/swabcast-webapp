@@ -913,7 +913,7 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
  */
 .ui-dialog {
   position: absolute;
-  margin-top: 30px;
+  margin-top: 30px !important;
   top: 0;
   left: 0;
   padding: .2em;

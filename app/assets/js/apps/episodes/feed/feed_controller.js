@@ -37,6 +37,7 @@
           view = new ShowView.EpisodeDetail({
             model: model
           });
+          view.title = model.get("episodeTitle");
           view.on("episodes:list", function() {
             return view.trigger("view:close");
           });

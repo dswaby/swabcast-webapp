@@ -28,6 +28,7 @@ define ["app", "apps/episodes/feed/feed_view",
           feedUrl: model.parent.get("feedUrl")
 
         view = new ShowView.EpisodeDetail(model: model)
+        view.title = model.get("episodeTitle")
         view.on "episodes:list", ->
           view.trigger "view:close"
 

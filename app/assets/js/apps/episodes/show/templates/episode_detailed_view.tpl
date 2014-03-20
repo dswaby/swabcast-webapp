@@ -1,17 +1,34 @@
-<!-- episode_detailed_view -->
+<!-- show template episode_detailed_view -->
 <br /><br />
 <div class="panel">
+    <div style="width:100%">
+    <ul class="button-group">
+      <li><a href="#" class="button dismiss"> <i class="icon-arrow-left"></i>Close</a></li>
+      <!-- Add To Playlist -->
+      <li><a href="#" class="button js-enqueue"><i class="icon-plus-sign"></i>Queue</a></li>
+      <!-- Mark Played/Archive -->
+      <li><a href="#" class="button js-archive"><i class="icon-plus-sign"></i>Archive</a></li>
+    </ul>
+        <!-- button class="button dismiss">
+            <i class="icon-arrow-left"></i>Close
+        </button> -->
+        <!-- <button class="button js-enqueue">
+            <i class="icon-plus-sign"></i>Queue
+        </button> -->
+        <!-- <button class="button js-enqueue">
+            <i class="icon-plus-sign"></i>Archive
+        </button> -->
+        <!-- <button class="button js-enqueue">
+            <i class="icon-plus-sign"></i>Mark Played
+        </button> -->
+    </div>
 
-    <div class="large-3 small-3 columns">
+    <div class="large-9 small-12 columns">
 
-        <img src=./assets/img/<%= albumArt %> alt="" class="library-image" style="float:left;">
+        <img src=./assets/img/<%= albumArt %> alt="" class="library-image">
         <% if (typeof(feedUrl) !== "undefined") { %>
             <h6><a href="<%= feedUrl %>">Homepage</a><h6>
         <% } %>
-    </div>
-    <div class="large-9 small-8 columns">
-        <h4 class="fancy-font"><%= episodeTitle %></h4>
-
         <% if (typeof(episodeSummary) != "undefined") { %>
             <p><%= episodeSummary %></p>
         <% } %>
@@ -22,11 +39,8 @@
     </div>
 </div>
 
-<div style="bottom: 4px;">
-    <button class="button dismiss">
-        <i class="icon-arrow-left"></i>Close
-    </button>
-    <button class="button js-enqueue">
-        <i class="icon-plus-sign"></i>Queue
+<div style="width: 100%;">
+    <button class="button play-now">
+        <i class="icon-play"></i>Play Now
     </button>
 </div>
