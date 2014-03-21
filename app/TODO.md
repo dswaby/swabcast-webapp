@@ -1,8 +1,6 @@
 Swabcast
 ========
 
-
-
   -  Bugs/In Prog
       * Playlist tracks added not rendering until refresh
       * Smooth transitions currently not soo smooth

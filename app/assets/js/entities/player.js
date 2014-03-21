@@ -26,7 +26,7 @@
           playerSaveData = void 0;
           promise = void 0;
           playerSaveData = new Swabcast.Entities.Episode({
-            id: 0
+            id: 1
           });
           defer = $.Deferred();
           setTimeout((function() {
@@ -46,7 +46,7 @@
           var playerSaveData;
           playerSaveData = void 0;
           playerSaveData = new Swabcast.Entities.Episode({
-            id: 0
+            id: 1
           });
           return console.log("playerdata:reset triggered");
         }

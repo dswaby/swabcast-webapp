@@ -150,15 +150,6 @@ module.exports = function (grunt) {
                     dest: '<%= swabstack.dist %>/'
                 }]
             },
-            // tests: {
-            //     files: [{
-            //         expand: true,
-            //         cwd: '<%= swabstack.app %>/assets/js/',
-            //         src: ['**/*.js'],
-            //         dest: '<%= swabstack.test %>/scripts/js/'
-            //     }]
-
-            // },
             assets: {
                 files: [{
                     expand: true,
@@ -205,6 +196,12 @@ module.exports = function (grunt) {
             options: {
               output: './docs/Javascript/'
             }
+          },
+          server: {
+            src: ['server/app.js'],
+            options: {
+              output: './docs/Server/'
+            }
           }
         },
         shell: {
@@ -233,7 +230,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
 
 
-grunt.registerTask('default', [
+grunt.registerTask('a', [
     'dev',
     'connect:testserver',
     'express:dev',

@@ -12,12 +12,12 @@ define ["app"], (Swabcast) ->
       showPageMedia: ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
+        require ["apps/episodes/player/player_controller"], ->
+          EpisodesApp.Player.Controller.showControls()
         require ["apps/episodes/playlist/playlist_controller"], ->
           EpisodesApp.Playlist.Controller.showTracks()
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeeds()
-        require ["apps/episodes/player/player_controller"], ->
-          EpisodesApp.Player.Controller.showControls()
 
       # "playlist:mainview"
       showPlaylistMain: ->

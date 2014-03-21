@@ -1,15 +1,14 @@
 define ["app",
   "./../../app/assets/bower_components/chai/chai",
+  "entities/player",
   "apps/episodes/player/player_controller"
-
   ], (Swabcast, chai) ->
   #feeds = require("app","entities/feed")
-  expect = chai.expect;
+  expect = chai.expect
   describe "Player Controller", ->
     it "expect disabled icons on initialization", ->
 
       player = new Swabcast.Entities.Feed()
-      expect(feeds.urlRoot).to.equal("feeds")
       return
 
     #test views

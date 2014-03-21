@@ -16,14 +16,14 @@
           require(["apps/episodes/nav/nav_controller"], function() {
             return EpisodesApp.Nav.Controller.showNav();
           });
+          require(["apps/episodes/player/player_controller"], function() {
+            return EpisodesApp.Player.Controller.showControls();
+          });
           require(["apps/episodes/playlist/playlist_controller"], function() {
             return EpisodesApp.Playlist.Controller.showTracks();
           });
-          require(["apps/episodes/feed/feed_controller"], function() {
+          return require(["apps/episodes/feed/feed_controller"], function() {
             return EpisodesApp.Feed.Controller.showFeeds();
-          });
-          return require(["apps/episodes/player/player_controller"], function() {
-            return EpisodesApp.Player.Controller.showControls();
           });
         },
         showPlaylistMain: function() {

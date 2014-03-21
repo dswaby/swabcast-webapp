@@ -1,4 +1,5 @@
 swabcast
 ========
 
-current preview can be found @ [http://swa.by/staging/](http://swa.by/staging/)
+app dist preview [http://swa.by/staging/](http://app.swa.by/)
+generated source docs [http://swa.by/staging/](http://app.swa.by/tests/)

@@ -51,6 +51,7 @@ requirejs.config({
 require([
   //files being tested
   "app",
+  "./../../../test/spec/entitiesTestSuite",
   "./../../../test/spec/feed",
   "./../../../test/spec/playlist",
   "./../../../test/spec/player"
@@ -59,7 +60,6 @@ require([
 function(Swabcast) {
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
     else { mocha.run(); }
-
 });
 
 

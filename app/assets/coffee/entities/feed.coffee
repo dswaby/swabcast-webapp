@@ -3692,7 +3692,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "subscriptionTitle": "Accidental Tech Podcast"
         "feedUrl": "http://atp.fm/episodes?format=rss"
         "summary": "Three nerds discussing tech, Apple, programming, and loosely related matters."
-        "albumArt": "ATP.jpg"
+        "albumArt": "accidentalTechPodcast.jpg"
         "episodes": [
           "uid": 36411543
           "mediaUrl": "http://traffic.libsyn.com/atpfm/atp55.mp3"

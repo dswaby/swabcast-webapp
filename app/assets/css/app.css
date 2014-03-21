@@ -4668,22 +4668,29 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 }
 
 /* line 48, ../scss/app.scss */
-.nav-helper-icon i {
+.nav-helper i {
   margin-left: 30% !important;
   font-size: -webkit-xxx-large !important;
   color: #fff !important;
 }
 
 /* line 54, ../scss/app.scss */
-.nav-helper-icon a {
-  font-size: 40px !important;
+.nav-helper a {
+  color: #fff !important;
+}
+
+/* line 58, ../scss/app.scss */
+.nav-helper p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-size: 35px !important;
   color: #fff !important;
 }
 
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
-/* line 62, ../scss/app.scss */
+/* line 68, ../scss/app.scss */
 .feed-head {
   padding: 20px;
   position: relative;
@@ -4692,7 +4699,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   overflow: hidden;
 }
 
-/* line 70, ../scss/app.scss */
+/* line 76, ../scss/app.scss */
 .table-date h5 {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4706,7 +4713,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-bottom: 0;
 }
 
-/* line 83, ../scss/app.scss */
+/* line 89, ../scss/app.scss */
 .table-date p {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4716,44 +4723,44 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-bottom: 0 !important;
 }
 
-/* line 93, ../scss/app.scss */
+/* line 99, ../scss/app.scss */
 .feed-color {
   color: #14b9e8 !important;
 }
 
-/* line 97, ../scss/app.scss */
+/* line 103, ../scss/app.scss */
 .feed-list {
   background: #fff;
   padding-top: 12px;
 }
 
-/* line 103, ../scss/app.scss */
+/* line 109, ../scss/app.scss */
 .fancy-font {
   font-family: 'Oswald', sans-serif;
 }
 
-/* line 107, ../scss/app.scss */
+/* line 113, ../scss/app.scss */
 .not-found {
   margin-left: 10px;
 }
 
-/* line 111, ../scss/app.scss */
+/* line 117, ../scss/app.scss */
 .episodes-table-wrapper {
   height: 100%;
   overflow: auto;
 }
 
-/* line 115, ../scss/app.scss */
+/* line 121, ../scss/app.scss */
 .locked {
   overflow: hidden;
 }
 
-/* line 119, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 .playlist {
   top: 0;
 }
 
-/* line 123, ../scss/app.scss */
+/* line 129, ../scss/app.scss */
 .playlist-sidebar {
   background: #F4F4F4;
   min-height: 550px;
@@ -4761,37 +4768,37 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-right: 10px;
 }
 
-/* line 127, ../scss/app.scss */
+/* line 133, ../scss/app.scss */
 .library-image {
   max-width: 25%;
   padding: 5px;
   float: left;
 }
 
-/* line 133, ../scss/app.scss */
+/* line 139, ../scss/app.scss */
 .cover-art-block {
   padding: 0 !important;
 }
 
-/* line 136, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 .icon-closure {
   font-size: 30px;
   margin-right: 5px;
   max-width: 30px;
 }
 
-/* line 142, ../scss/app.scss */
+/* line 148, ../scss/app.scss */
 .dialog-fixed-bottom {
   position: absolute;
   bottom: 0;
 }
 
-/* line 147, ../scss/app.scss */
+/* line 153, ../scss/app.scss */
 #page-main {
   padding: 0 !important;
 }
 
-/* line 151, ../scss/app.scss */
+/* line 157, ../scss/app.scss */
 .panel {
   overflow: auto;
 }
@@ -4804,7 +4811,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   font-style: normal;
 }
 
-/* line 197, ../scss/app.scss */
+/* line 203, ../scss/app.scss */
 .fi-alert:before,
 .fi-arrow-left:before,
 .fi-star:before,
@@ -4846,147 +4853,147 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   text-decoration: inherit;
 }
 
-/* line 208, ../scss/app.scss */
+/* line 214, ../scss/app.scss */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 209, ../scss/app.scss */
+/* line 215, ../scss/app.scss */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 210, ../scss/app.scss */
+/* line 216, ../scss/app.scss */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 211, ../scss/app.scss */
+/* line 217, ../scss/app.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 212, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 213, ../scss/app.scss */
+/* line 219, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 214, ../scss/app.scss */
+/* line 220, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 215, ../scss/app.scss */
+/* line 221, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 216, ../scss/app.scss */
+/* line 222, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 217, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 218, ../scss/app.scss */
+/* line 224, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 219, ../scss/app.scss */
+/* line 225, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 220, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 221, ../scss/app.scss */
+/* line 227, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 222, ../scss/app.scss */
+/* line 228, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 223, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 224, ../scss/app.scss */
+/* line 230, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 225, ../scss/app.scss */
+/* line 231, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 226, ../scss/app.scss */
+/* line 232, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 227, ../scss/app.scss */
+/* line 233, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 228, ../scss/app.scss */
+/* line 234, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 229, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 230, ../scss/app.scss */
+/* line 236, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 231, ../scss/app.scss */
+/* line 237, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 232, ../scss/app.scss */
+/* line 238, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 233, ../scss/app.scss */
+/* line 239, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 234, ../scss/app.scss */
+/* line 240, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 235, ../scss/app.scss */
+/* line 241, ../scss/app.scss */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 239, ../scss/app.scss */
+/* line 245, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
@@ -4996,7 +5003,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 /***************************************************************************************************
     styles for static player bar at bottom of screen  **********************************************
 ***************************************************************************************************/
-/* line 250, ../scss/app.scss */
+/* line 256, ../scss/app.scss */
 #player {
   position: fixed;
   height: 60px;
@@ -5011,19 +5018,19 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   cursor: default;
 }
 
-/* line 263, ../scss/app.scss */
+/* line 269, ../scss/app.scss */
 #player-fill-left {
   height: 100%;
   width: 75%;
 }
 
-/* line 267, ../scss/app.scss */
+/* line 273, ../scss/app.scss */
 .player-preview {
   position: fixed;
   left: 63px;
 }
 
-/* line 283, ../scss/app.scss */
+/* line 289, ../scss/app.scss */
 #player-art {
   background-color: transparent;
   display: block;
@@ -5034,14 +5041,14 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   height: 60px;
 }
 
-/* line 295, ../scss/app.scss */
+/* line 301, ../scss/app.scss */
 .offcanvas-inner-shadow-left {
   -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   -moz-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
 }
 
-/* line 304, ../scss/app.scss */
+/* line 310, ../scss/app.scss */
 #controls-wrapper {
   height: 60px;
   position: fixed;
@@ -5049,17 +5056,17 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   right: 16px;
 }
 
-/* line 310, ../scss/app.scss */
+/* line 316, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 314, ../scss/app.scss */
+/* line 320, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 318, ../scss/app.scss */
+/* line 324, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;

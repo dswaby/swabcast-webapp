@@ -3,7 +3,7 @@
     <a class="left-off-canvas-toggle menu-icon"><span></span></a>
   </section>
   <section class="middle tab-bar-section">
-    <p class="title"><img src="./assets/img/swabcast_icon.svg" style="display:inline;height:40px;width:40px;" /></p>
+    <p class="title"><img src="./assets/img/swabcast_40x40.png" style="display:inline;height:40px;width:40px;" /></p>
   </section>
   <section class="right-small">
     <a class="right-off-canvas-toggle menu-icon"><span></span></a>

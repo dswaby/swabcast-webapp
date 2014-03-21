@@ -20,7 +20,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
         defer = undefined
         playerSaveData = undefined
         promise = undefined
-        playerSaveData = new Swabcast.Entities.Episode(id: 0)
+        playerSaveData = new Swabcast.Entities.Episode(id: 1)
         defer = $.Deferred()
         setTimeout (->
           playerSaveData.fetch
@@ -36,7 +36,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
 
       playerReset: ->
         playerSaveData = undefined
-        playerSaveData = new Swabcast.Entities.Episode(id: 0)
+        playerSaveData = new Swabcast.Entities.Episode(id: 1)
         console.log "playerdata:reset triggered"
 
     Swabcast.reqres.setHandler "player:savedata", ->
