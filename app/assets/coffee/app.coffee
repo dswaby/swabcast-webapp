@@ -28,8 +28,8 @@ define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/mari
         if Swabcast.getCurrentRoute() is ""
           Swabcast.navigate "library"
           Swabcast.trigger "media:all"
-        if Swabcast.getCurrentRoute() is "library"
-          Swabcast.trigger "media:all"
+        # if Swabcast.getCurrentRoute() is "library"
+        #   Swabcast.trigger "media:all"
         # if Swabcast.getCurrentRoute() is "feed"
         #   Swabcast.trigger("feedid:episodeslist")
         if Swabcast.getCurrentRoute() is "playlist"

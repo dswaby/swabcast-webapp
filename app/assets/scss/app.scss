@@ -4,9 +4,9 @@
 @import "../bower_components/foundation/scss/foundation/components/grid";
 @import "../bower_components/foundation/scss/foundation/components/type";
 @import "../bower_components/foundation/scss/foundation/components/visibility";
-@import "../bower_components/foundation/scss/foundation/components/reveal";
+// @import "../bower_components/foundation/scss/foundation/components/thumbs";
 @import "../bower_components/foundation/scss/foundation/components/tables";
-@import "../bower_components/foundation/scss/foundation/components/alert-boxes";
+// @import "../bower_components/foundation/scss/foundation/components/alert-boxes";
 @import "../bower_components/foundation/scss/foundation/components/button-groups";
 
 
@@ -18,7 +18,9 @@
   font-size: 144px;
 }
 
-
+.playlist-row {
+  width:100%;
+}
 
 .danger-zone {
   color: #a94442;
@@ -30,6 +32,10 @@
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
+}
+
+.main-view {
+  margin-bottom: 70px;
 }
 
 .nav-helper-overlay {
@@ -60,7 +66,28 @@
   margin-bottom: 0 !important;
   font-size:35px !important;
   color: #fff !important;
+  line-height: 1 !important;
 }
+
+.sidebar-tab-content {
+  color: #fff;
+  margin-left:40px;
+
+}
+
+.sidebar-tab {
+  margin-left: 40px;
+}
+.sidebar-tab a{
+  color: #000;
+}
+.sidebar-tab p{
+  color: #000;
+}
+.tabs dd.active a {
+  color: #000;
+}
+
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
@@ -136,6 +163,15 @@
   float: left;
 }
 
+.library-title {
+  height:25px;
+  overflow: auto;
+}
+
+.library-title h5{
+  font-family: 'Oswald', sans-serif !important;
+}
+
 .cover-art-block {
   padding:0 !important;
 }
@@ -146,7 +182,7 @@
 }
 
 .dialog-fixed-bottom {
-  position: absolute;
+  position: relative;
   bottom:0;
 }
 
@@ -156,89 +192,8 @@
 
 .panel {
   overflow: auto;
+  width: 100%;
 }
-
-//FOUNDATION ICONS
-@font-face {
-  font-family: "foundation-icons";
-  src: url("foundation-icons.eot");
-  src: url("foundation-icons.eot?#iefix") format("embedded-opentype"),
-       url("foundation-icons.woff") format("woff"),
-       url("foundation-icons.ttf") format("truetype"),
-       url("foundation-icons.svg#fontcustom") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-// Icons used
-.fi-alert:before,
-.fi-arrow-left:before,
-.fi-star:before,
-.fi-arrow-up:before,
-.fi-skull:before,
-.fi-torso-business:before,
-.fi-plus:before,
-.fi-play:before,
-.fi-previous:before,
-.fi-pause:before,
-.fi-rss:before,
-.fi-x-circle:before,
-.fi-fast-forward:before,
-.fi-social-apple:before,
-.fi-rewind-ten:before,
-.fi-rewind:before,
-.fi-x:before,
-.fi-refresh:before,
-.fi-social-google-plus:before,
-.fi-trash:before,
-.fi-eye:before,
-.fi-page-multiple:before,
-.fi-indent-more:before,
-.fi-info:before,
-.fi-widget:before,
-.fi-social-twitter:before,
-.fi-social-linkedin:before,
-.fi-social-github:before,
-.fi-social-stack-overflow:before,
-.fi-zoom-out:before {
-  font-family: "foundation-icons";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  text-decoration: inherit;
-}
-.fi-social-github:before { content: "\f1c9"; }
-.fi-social-linkedin:before { content: "\f1d0"; }
-.fi-social-stack-overflow:before { content: "\f1df"; }
-.fi-star:before { content: "\f1ee"; }
-.fi-play:before { content: "\f198"; }
-.fi-plus:before { content: "\f199"; }
-.fi-trash:before { content: "\f204"; }
-.fi-previous:before { content: "\f19c"; }
-.fi-rss:before { content: "\f1aa"; }
-.fi-x-circle:before { content: "\f216"; }
-.fi-fast-forward:before { content: "\f148"; }
-.fi-x:before { content: "\f217"; }
-.fi-social-apple:before { content: "\f1b8"; }
-.fi-pause:before { content: "\f191"; }
-.fi-social-google-plus:before { content: "\f1ca"; }
-.fi-rewind-ten:before { content: "\f1a8"; }
-.fi-rewind:before { content: "\f1a9"; }
-.fi-refresh:before { content: "\f1a5"; }
-.fi-indent-more:before { content: "\f15d"; }
-.fi-eye:before { content: "\f147"; }
-.fi-page-multiple:before { content: "\f18a"; }
-.fi-torso-business:before { content: "\f1fc"; }
-.fi-skull:before { content: "\f1b3"; }
-.fi-alert:before { content: "\f101"; }
-.fi-arrow-up:before { content: "\f10c"; }
-.fi-info:before { content: "\f15e"; }
-.fi-widget:before { content: "\f214"; }
-.fi-arrow-left:before { content: "\f10a"; }
 
 
 
@@ -248,6 +203,37 @@
   table-border-color: #ddd;
 
 }
+// Media Queries
+// #sidebar ul li a {
+//   color: #900;
+//   text-decoration: none;
+//   padding: 3px 0;
+//   display: block;
+// }
+
+// @media all and (min-width: 1001px) {
+//   #sidebar ul li a:after {
+//     content: " (" attr(data-email) ")";
+//     font-size: 11px;
+//     font-style: italic;
+//     color: #666;
+//   }
+// }
+
+// @media all and (max-width: 1000px) and (min-width: 700px) {
+//   #sidebar ul li a:before {
+//     content: "Email: ";
+//     font-style: italic;
+//     color: #666;
+//   }
+// }
+
+// @media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
+//   #sidebar ul li a {
+//     padding-left: 21px;
+//     background: url(../images/email.png) left center no-repeat;
+//   }
+// }
 
 /***************************************************************************************************
     styles for static player bar at bottom of screen  **********************************************
@@ -278,6 +264,10 @@
     // font-weight: bold;
     // font-size: 18px;
 }
+.album-preview {
+  width: 60px;
+    height: 60px;
+}
 #album-preview {
     // position: fixed;
     // //left: 7px;
@@ -286,7 +276,7 @@
     // width: 80px;
     // height: 80px;
 }
-#player-art {
+.player-art {
     background-color: transparent;
     display: block;
     position: fixed;
@@ -295,7 +285,40 @@
     width: 60px;
     height: 60px;
 }
+#controls-wrapper {
+  height:60px;
+  position:fixed;
+  bottom:0;
+  right: 16px;
+}
 
+#feeditems-collection {
+  margin-bottom:80px !important;
+}
+
+@media all and (min-width: 1001px) {
+  #player {
+    height: 85px;
+  }
+  .album-preview {
+    height: 85px;
+    width: 85px;
+  }
+}
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  #player {
+    height: 85px;
+  }
+  .player-art {
+    height: 85px;
+    width: 85px;
+  }
+
+  #feeditems-collection {
+    padding-left:80px;
+    padding-right:80px;
+  }
+}
 
 
 .offcanvas-inner-shadow-left {
@@ -307,12 +330,7 @@
 }
 #player-main{
 }
-#controls-wrapper {
-  height:60px;
-  position:fixed;
-  bottom:0;
-  right: 16px;
-}
+
 .unHidden {
     display: block;
 
@@ -325,6 +343,96 @@
   height:200px;
   overflow:auto;
 }
+
+//FOUNDATION ICONS
+@font-face {
+  font-family: "foundation-icons";
+  src: url("foundation-icons.eot");
+  src: url("foundation-icons.eot?#iefix") format("embedded-opentype"),
+       url("foundation-icons.woff") format("woff"),
+       url("foundation-icons.ttf") format("truetype"),
+       url("foundation-icons.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Icons used
+.fi-arrow-right:before,
+.fi-archive:before,
+.fi-alert:before,
+.fi-page-delete:before,
+.fi-arrow-left:before,
+.fi-star:before,
+.fi-arrow-up:before,
+.fi-skull:before,
+.fi-torso-business:before,
+.fi-plus:before,
+.fi-play:before,
+.fi-previous:before,
+.fi-pause:before,
+.fi-rss:before,
+.fi-x-circle:before,
+.fi-fast-forward:before,
+.fi-social-apple:before,
+.fi-rewind-ten:before,
+.fi-rewind:before,
+.fi-x:before,
+.fi-refresh:before,
+.fi-social-google-plus:before,
+.fi-trash:before,
+.fi-eye:before,
+.fi-page-multiple:before,
+.fi-indent-more:before,
+.fi-info:before,
+.fi-widget:before,
+.fi-social-twitter:before,
+.fi-social-linkedin:before,
+.fi-social-github:before,
+.fi-social-stack-overflow:before,
+.fi-social-facebook:before,
+.fi-zoom-out:before {
+  font-family: "foundation-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+.fi-social-github:before { content: "\f1c9"; }
+.fi-arrow-right:before { content: "\f10b"; }
+.fi-social-linkedin:before { content: "\f1d0"; }
+.fi-social-stack-overflow:before { content: "\f1df"; }
+.fi-star:before { content: "\f1ee"; }
+.fi-play:before { content: "\f198"; }
+.fi-plus:before { content: "\f199"; }
+.fi-trash:before { content: "\f204"; }
+.fi-previous:before { content: "\f19c"; }
+.fi-rss:before { content: "\f1aa"; }
+.fi-x-circle:before { content: "\f216"; }
+.fi-fast-forward:before { content: "\f148"; }
+.fi-x:before { content: "\f217"; }
+.fi-social-apple:before { content: "\f1b8"; }
+.fi-pause:before { content: "\f191"; }
+.fi-social-google-plus:before { content: "\f1ca"; }
+.fi-rewind-ten:before { content: "\f1a8"; }
+.fi-rewind:before { content: "\f1a9"; }
+.fi-refresh:before { content: "\f1a5"; }
+.fi-indent-more:before { content: "\f15d"; }
+.fi-eye:before { content: "\f147"; }
+.fi-page-multiple:before { content: "\f18a"; }
+.fi-torso-business:before { content: "\f1fc"; }
+.fi-skull:before { content: "\f1b3"; }
+.fi-alert:before { content: "\f101"; }
+.fi-arrow-up:before { content: "\f10c"; }
+.fi-info:before { content: "\f15e"; }
+.fi-widget:before { content: "\f214"; }
+.fi-arrow-left:before { content: "\f10a"; }
+.fi-page-delete:before { content: "\f182"; }
+.fi-social-facebook:before { content: "\f1c4"; }
+.fi-archive:before { content: "\f108"; }
 
 
 $include-html-table-classes: $include-html-classes !default;

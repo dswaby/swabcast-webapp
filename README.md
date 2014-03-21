@@ -5,6 +5,34 @@ app dist preview [http://app.swa.by/](http://app.swa.by/)
 generated source docs [http://app.swa.by/docs/](http://app.swa.by/docs/)
 tests [http://swa.by/test/](http://app.swa.by/test/)
 
+Used in this project
+--------------------
+  * development
+    * Grunt
+    * Coffeescript
+    * requirejs
+
+  * app
+    * jquery, jquery-ui, transit.jquery
+    * AMD with requirejs
+    * almond.js - require.js shim
+    * r.js optimizer
+    * backbone.js
+    * marionette.js
+    * foundation CSS/ fastclick
+
+  * Server
+    * node.js
+    * express.js framework
+    * mongodb
+    * mongoose
+
+
+  * Testing
+    * phantomjs-mocha
+    * mocha
+    * chai
+
 ASSUMPTIONS
 -----------
 > * GET /api/subscribed/   will return json representation of a users subscribed feeds
@@ -50,31 +78,3 @@ Further plans
   * Feed browser and management of subscriptions
   * Storing file data in indexedDB
 
-Used in this project
---------------------
-
-  * development
-    * Grunt
-    * Coffeescript
-    * requirejs
-
-  * app
-    * jquery, jquery-ui, transit.jquery
-    * AMD with requirejs
-    * almond.js - require.js shim
-    * r.js optimizer
-    * backbone.js
-    * marionette.js
-    * foundation CSS/ fastclick
-
-  * Server
-    * node.js
-    * express.js framework
-    * mongodb
-    * mongoose
-
-
-  * Testing
-    * phantomjs-mocha
-    * mocha
-    * chai

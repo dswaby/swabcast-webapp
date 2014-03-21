@@ -32,7 +32,7 @@
       });
       View.Tracks = Marionette.CompositeView.extend({
         tagName: "table",
-        className: "large-8 small-12 columns",
+        className: "playlist-row",
         template: playlistTpl,
         itemView: View.Track,
         initialize: function() {
@@ -46,6 +46,9 @@
           return this.appendHtml = function(collectionView, itemView, index) {
             return collectionView.$el.append(itemView.el);
           };
+        },
+        onPlaylistEnqueue: function(model) {
+          return console.log(model);
         },
         onItemviewEpisodeDelete: function() {
           return this.$el.fadeOut("slow", function() {
@@ -86,7 +89,7 @@
       });
       return View.TracksExtended = Marionette.CompositeView.extend({
         tagName: "table",
-        className: "large-8 small-12 columns",
+        className: "large-8 small-12 columns main-view",
         template: playlistTpl,
         itemView: View.TrackExtended,
         initialize: function() {

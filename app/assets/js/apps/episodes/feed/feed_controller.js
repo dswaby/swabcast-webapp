@@ -7,7 +7,7 @@
             var loadingView;
             loadingView = new CommonViews.Loading({
               title: "Artificialy delaying this response",
-              message: "This is the view that will show if waiting for data"
+              message: "This is the view that is fucked"
             });
             return Swabcast.libraryRegion.show(loadingView);
           });

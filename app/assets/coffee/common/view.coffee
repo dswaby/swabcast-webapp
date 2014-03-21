@@ -1,5 +1,7 @@
 define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl", "transit"], (Swabcast, loadingView, notificationView, navHelper) ->
   Swabcast.module "Common.Views", (Views, Swabcast, Backbone, Marionette, $, _) ->
+
+
     # View for displing animated spinner gif when loading next view
     Views.Loading = Marionette.ItemView.extend(
       template: loadingView
@@ -37,8 +39,11 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
         options = options or {}
         @buttonText = options.buttonText or "Back"
 
+      onBeforeRender: ->
+        # console.log(@$el)
       onRender: ->
-        @$el.fadeIn('slow')
+        # @$el.slideDown 200000, ->
+        #   console.log("slideUp")
         #   y: 500
         #   easing:'snap',
         #   duration: 20000
@@ -47,14 +52,40 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
         buttonText: @buttonText
 
       onBeforeClose: ->
-        @$el.transition
-          perspective: "100px"
-          rotate3d: "1,1,0,180deg"
+        @$el.slideUp 20000, ->
+        # console.log("penis ", $@el)
+          # console.log("slideUp")
 
       navigateToLibrary: ->
         Swabcast.trigger "episodes:library"
         @close()
     )
 
+    Views.NavPlaylistHelper = Marionette.ItemView.extend(
+      template: navHelper
+      events:
+        "click div .js-library-back": "navigateToLibrary"
 
+      initialize: (options) ->
+        options = options or {}
+        @buttonText = options.buttonText or "Back"
+
+
+      onRender: ->
+
+        #   y: 500
+        #   easing:'snap',
+        #   duration: 20000
+
+      serializeData: ->
+        buttonText: @buttonText
+
+      onBeforeClose: ->
+        # @$el.slideUp "slow"
+
+      navigateToLibrary: ->
+        Swabcast.trigger "episodes:library"
+        Swabcast.trigger "episodes:playlist"
+        @close()
+    )
   Swabcast.Common.Views

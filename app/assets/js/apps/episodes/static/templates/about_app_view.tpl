@@ -39,3 +39,15 @@
     <li>chai</li>
   </ul>
 </div>
+<h3>Contact</h3>
+<div class="large-8 small-12 columns">
+  <a href=""><i class="fi-social-github big-big-ico"></i></a>
+
+  <a href=""><i class="fi-social-linkedin big-big-ico"></i></a>
+  <a href=""><i class="fi-social-stack-overflow big-big-ico"></i></a>
+  <a href=""><i class="fi-social-google-plus big-big-ico"></i></a>
+  <a href=""><i class="fi-social-twitter big-big-ico"></i></a>
+  <a href=""><i class="fi-social-facebook big-big-ico"></i></a>
+
+</div>
+<div class="large-12 small-12 columns" style="margin-bottom:70px;"></div>

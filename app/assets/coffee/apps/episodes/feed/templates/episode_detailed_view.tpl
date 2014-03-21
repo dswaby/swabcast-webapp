@@ -28,7 +28,7 @@
 </div>
 
 <div>
-    <button class="button play-now">
+    <button class="button js-play-now">
         <i class="icon-play"></i>Play Now
     </button>
 </div>

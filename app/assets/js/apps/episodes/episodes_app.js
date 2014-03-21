@@ -13,22 +13,28 @@
       });
       API = {
         showPageMedia: function() {
+          var options;
+          options = false;
           require(["apps/episodes/nav/nav_controller"], function() {
+            console.log("showPageMedia");
             return EpisodesApp.Nav.Controller.showNav();
           });
           require(["apps/episodes/player/player_controller"], function() {
             return EpisodesApp.Player.Controller.showControls();
           });
           require(["apps/episodes/playlist/playlist_controller"], function() {
-            return EpisodesApp.Playlist.Controller.showTracks();
+            return EpisodesApp.Playlist.Controller.showTracks(options);
           });
           return require(["apps/episodes/feed/feed_controller"], function() {
             return EpisodesApp.Feed.Controller.showFeeds();
           });
         },
         showPlaylistMain: function() {
+          var options;
+          options = true;
           return require(["apps/episodes/playlist/playlist_controller"], function() {
-            return EpisodesApp.Playlist.Controller.showPlaylistMain();
+            console.log("showPlaylistMain");
+            return EpisodesApp.Playlist.Controller.showTracks(options);
           });
         },
         showLibrary: function() {
@@ -59,6 +65,7 @@
         },
         showPlaylist: function() {
           return require(["apps/episodes/playlist/playlist_controller"], function() {
+            console.log("showPlaylist");
             return EpisodesApp.Playlist.Controller.showTracks();
           });
         },
@@ -82,6 +89,7 @@
             return EpisodesApp.Nav.Controller.showNav();
           });
           require(["apps/episodes/playlist/playlist_controller"], function() {
+            console.log("showFeedEpisodesOnLoad");
             return EpisodesApp.Playlist.Controller.showTracks();
           });
           require(["apps/episodes/player/player_controller"], function() {
@@ -92,11 +100,14 @@
           });
         },
         showPlaylistOnLoad: function() {
+          var options;
+          options = true;
           require(["apps/episodes/nav/nav_controller"], function() {
             return EpisodesApp.Nav.Controller.showNav();
           });
           require(["apps/episodes/playlist/playlist_controller"], function() {
-            return EpisodesApp.Playlist.Controller.showPlaylistMain();
+            console.log("showPlaylistOnLoad");
+            return EpisodesApp.Playlist.Controller.showTracks(options);
           });
           return require(["apps/episodes/player/player_controller"], function() {
             return EpisodesApp.Player.Controller.showControls();

@@ -1,6 +1,5 @@
 define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
-
     Entities.QueuedEpisode = Entities.Episode.extend(
       urlRoot: "playlist"
       order: 0,
@@ -13,7 +12,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
     Entities.Playlist = Backbone.Collection.extend(
       url: "playlist"
       model: Entities.QueuedEpisode
-      comparator: "id"
+      comparator: "order"
     )
     Entities.configureStorage Entities.Playlist
 
@@ -34,23 +33,22 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
 
             error: ->
               defer.resolve `undefined`
-
         ), 100
         defer.promise()
 
-      getPlaylistEntities: ->
-        episodes = new Entities.Playlist()
-        defer = $.Deferred()
-        episodes.fetch success: (data) ->
-          defer.resolve data
+      # getPlaylistEntities: ->
+      #   episodes = new Entities.Playlist()
+      #   defer = $.Deferred()
+      #   episodes.fetch success: (data) ->
+      #     defer.resolve data
 
-        promise = defer.promise()
-        $.when(promise).done (episodes) ->
-          if episodes.length is 0
-            models = initializeEpisodes()
-            episodes.reset models
+      #   promise = defer.promise()
+      #   $.when(promise).done (episodes) ->
+      #     if episodes.length is 0
+      #       models = initializeEpisodes()
+      #       episodes.reset models
 
-        promise
+      #   promise
 
       getPlaylistEntities: ->
         queuedTracks = new Entities.Playlist()
@@ -91,6 +89,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
             )
             tracks.add newTrack
             newTrack.save()
+            console.log(newTrack)
             Swabcast.trigger "playlist:enqueue", newTrack
             defer.resolve newTrack
           else
@@ -107,10 +106,9 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
           if episodes.length
             defer.resolve episodes[0]
           else
-            defer.resolve 'undefined'
+            defer.resolve "undefined"
         error: ->
-            defer.resolve `undefined`
-
+            defer.resolve "undefined"
         defer.promise()
 
       #has to be a more efficient way of doing this
@@ -131,7 +129,6 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
             t.save()
             console.log t
 
-
     Swabcast.reqres.setHandler "entities:playlist", ->
       API.getPlaylistEntities()
 
@@ -146,6 +143,22 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
 
     Swabcast.reqres.setHandler "playlist:addtoqueue", (model) ->
       API.addToPlaylist model
+
+    # here the episode is being sent to the player controller
+    # since the playlist doesnt need to be loaded
+    # and this needs to be run only once
+    # im doing this from the playlist entity
+    episodeToSet = API.getPlaylistEntities()
+    console.log("on load")
+
+    $.when(episodeToSet).done (episodes) ->
+      console.log("episodes", episodes.models[0])
+      playerEpisode
+      if episodes.at(0)
+        playerEpisode = episodes.models[0]
+      require ["apps/episodes/player/player_controller"], (playerEpisode) ->
+        Swabcast.commands.execute "player:setepisode", playerEpisode
+        # console.log("setting first episode in playlist", episodes.at.(0))
 
 
   return

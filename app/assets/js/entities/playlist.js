@@ -1,7 +1,7 @@
 (function() {
   define(["app", "apps/config/storage/localstorage", "entities/feed"], function(Swabcast) {
     Swabcast.module("Entities", function(Entities, Swabcast, Backbone, Marionette, $, _) {
-      var API, initializePlaylist, playlist;
+      var API, episodeToSet, initializePlaylist, playlist;
       Entities.QueuedEpisode = Entities.Episode.extend({
         urlRoot: "playlist",
         order: 0,
@@ -15,7 +15,7 @@
       Entities.Playlist = Backbone.Collection.extend({
         url: "playlist",
         model: Entities.QueuedEpisode,
-        comparator: "id"
+        comparator: "order"
       });
       Entities.configureStorage(Entities.Playlist);
       playlist = void 0;
@@ -42,25 +42,6 @@
             });
           }), 100);
           return defer.promise();
-        },
-        getPlaylistEntities: function() {
-          var defer, episodes, promise;
-          episodes = new Entities.Playlist();
-          defer = $.Deferred();
-          episodes.fetch({
-            success: function(data) {
-              return defer.resolve(data);
-            }
-          });
-          promise = defer.promise();
-          $.when(promise).done(function(episodes) {
-            var models;
-            if (episodes.length === 0) {
-              models = initializeEpisodes();
-              return episodes.reset(models);
-            }
-          });
-          return promise;
         },
         getPlaylistEntities: function() {
           var defer, promise, queuedTracks;
@@ -105,6 +86,7 @@
               });
               tracks.add(newTrack);
               newTrack.save();
+              console.log(newTrack);
               Swabcast.trigger("playlist:enqueue", newTrack);
               return defer.resolve(newTrack);
             } else {
@@ -125,11 +107,11 @@
               if (episodes.length) {
                 return defer.resolve(episodes[0]);
               } else {
-                return defer.resolve('undefined');
+                return defer.resolve("undefined");
               }
             },
             error: function() {
-              return defer.resolve(undefined);
+              return defer.resolve("undefined");
             }
           });
           return defer.promise();
@@ -167,8 +149,21 @@
       Swabcast.reqres.setHandler("playlist:first", function() {
         return API.firstInPlaylist();
       });
-      return Swabcast.reqres.setHandler("playlist:addtoqueue", function(model) {
+      Swabcast.reqres.setHandler("playlist:addtoqueue", function(model) {
         return API.addToPlaylist(model);
+      });
+      episodeToSet = API.getPlaylistEntities();
+      console.log("on load");
+      return $.when(episodeToSet).done(function(episodes) {
+        var playerEpisode;
+        console.log("episodes", episodes.models[0]);
+        playerEpisode;
+        if (episodes.at(0)) {
+          playerEpisode = episodes.models[0];
+        }
+        return require(["apps/episodes/player/player_controller"], function(playerEpisode) {
+          return Swabcast.commands.execute("player:setepisode", playerEpisode);
+        });
       });
     });
   });

@@ -31,6 +31,7 @@
             };
             this.newPlayerData = function(newModelData) {
               var newPlayerData;
+              console.log("model data", newModelData);
               newPlayerData = new Swabcast.Entities.Episode({
                 albumArt: newModelData.get("albumArt"),
                 mediaUrl: newModelData.get("mediaUrl"),
@@ -160,7 +161,7 @@
                 sourceUrl = "";
                 self.playerControls.model.destroy();
                 self.playerControls.model = self.defaultPlayerState();
-                self.updateAudio(sourceUrl(options));
+                self.updateAudio(sourceUrl);
                 self.playerControls.render();
                 return playerData.save();
               },

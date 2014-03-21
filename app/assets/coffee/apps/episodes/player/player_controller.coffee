@@ -32,6 +32,7 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
             self.audioPlayer.clearAudio()
 
           @newPlayerData = (newModelData) ->
+            console.log("model data",newModelData)
             newPlayerData = new Swabcast.Entities.Episode(
               albumArt: newModelData.get("albumArt")
               mediaUrl: newModelData.get("mediaUrl")
@@ -149,7 +150,7 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
               # player commands
               self.playerControls.model.destroy()
               self.playerControls.model = self.defaultPlayerState()
-              self.updateAudio sourceUrl options
+              self.updateAudio sourceUrl
               self.playerControls.render()
               playerData.save()
 

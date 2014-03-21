@@ -214,6 +214,16 @@ module.exports = function (grunt) {
                     }
                 }
             }
+        },
+        bgShell: {
+          connectMongo: {
+            cmd: 'mongod', // or function(){return 'ls -la'}
+            execOpts: {
+              cwd: 'app'
+            },
+            stdout: true,
+            bg: true
+          }
         }
     });
 
@@ -228,6 +238,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-docco');
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-bg-shell');
 
 //registered task 'a' so i dont have to scroll down when running from the sublime grunt plugin
 //same as default
@@ -254,13 +265,13 @@ grunt.registerTask('dev', [
     ]);
 
 grunt.registerTask('build', [
-    'shell',
-    'targethtml:dist',
     'copy:templates', // when starting, copy any templates that may have been added
-    'compass:app',
-    'cssmin',
     'copy:components',
     'copy:assets',
+    'shell:buildRequire',
+    'targethtml:dist',
+    'compass:app',
+    'cssmin',
     'copy:requireBuilt',
     ]);
 

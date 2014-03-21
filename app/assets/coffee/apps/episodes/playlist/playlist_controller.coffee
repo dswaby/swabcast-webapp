@@ -15,28 +15,34 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             #nowplaying responsible for managing current episode to be in the player box
             #on change, triggers events and sends episode model to player and playersavedata
             @nowPlaying = (tracks.at(0))  unless typeof tracks.at(0) is "undefined"
-            if @nowPlaying
-              Swabcast.commands.execute "player:setepisode", @nowPlaying
-              console.log("\"player:setepisode\"triggered")
+            # if @nowPlaying
+            #   Swabcast.commands.execute "player:setepisode", @nowPlaying
+            #   console.log("\"player:setepisode\"triggered")
 
             playlistTracks = undefined
 
             if (extendedView)
+              console.log("showing extended view")
               playlistTracks = new View.TracksExtended(collection: tracks)
             else
+              console.log("showing regular view")
               playlistTracks = new View.Tracks(collection: tracks)
 
 
             playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
-              if tracks.length is 0
-                newTrack = model
-                tracks.add newTrack
+              console.log("playlist:enqueue recieved", model)
 
+              newTrack = model
+              tracks.add newTrack
+              playlistTracks.render()
+              if tracks.length is 0
+                Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
               console.log(tracks.length)
 
-              if tracks.length == 1
-                newTrack = tracks.at(0)
-                Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
+              if tracks.length == 0
+                newTrack = model
+                tracks.add newTrack
+                playlistTracks.render()
                 tracks.nowPlaying = newTrack  unless tracks.nowPlaying
 
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
@@ -53,6 +59,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
             playlistLayout.on "show", ->
+              console.log("Yoink")
               playlistLayout.playlistRegion.show playlistTracks
 
             playlistTracks.on "playlist:update", (childView, model) ->
@@ -66,7 +73,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                 buttonText: "Back to subscriptions"
               )
               backButton.on("click button.js-library-back", ->
-                console.log("triggering episodes:playlist to show playlist in sidebar")
                 Swabcast.trigger "episodes:playlist"
               )
               Swabcast.navHelperRegion.show backButton
@@ -76,10 +82,11 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
           else
             Swabcast.sideBarRegion.show playlistLayout
 
-      showPlaylistMain: ->
-        console.log("show extendedView")
-        opt = true
-        @showTracks (opt)
+
+      # showPlaylistMain: ->
+      #   console.log("show extendedView")
+      #   opt = true
+      #   @showTracks (opt)
 
 
   Swabcast.EpisodesApp.Playlist.Controller

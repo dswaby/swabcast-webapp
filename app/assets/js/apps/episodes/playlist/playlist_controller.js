@@ -14,32 +14,34 @@
               if (typeof tracks.at(0) !== "undefined") {
                 this.nowPlaying = tracks.at(0);
               }
-              if (this.nowPlaying) {
-                Swabcast.commands.execute("player:setepisode", this.nowPlaying);
-                console.log("\"player:setepisode\"triggered");
-              }
               playlistTracks = void 0;
               if (extendedView) {
+                console.log("showing extended view");
                 playlistTracks = new View.TracksExtended({
                   collection: tracks
                 });
               } else {
+                console.log("showing regular view");
                 playlistTracks = new View.Tracks({
                   collection: tracks
                 });
               }
               playlistTracks.listenTo(Playlist, "playlist:enqueue", function(model) {
                 var newTrack;
+                console.log("playlist:enqueue recieved", model);
+                newTrack = model;
+                tracks.add(newTrack);
+                playlistTracks.render();
                 if (tracks.length === 0) {
-                  newTrack = model;
-                  tracks.add(newTrack);
-                }
-                console.log(tracks.length);
-                if (tracks.length === 1) {
-                  newTrack = tracks.at(0);
                   if (tracks.at(0) === newTrack) {
                     Swabcast.commands.execute("player:setepisode", newTrack);
                   }
+                }
+                console.log(tracks.length);
+                if (tracks.length === 0) {
+                  newTrack = model;
+                  tracks.add(newTrack);
+                  playlistTracks.render();
                   if (!tracks.nowPlaying) {
                     return tracks.nowPlaying = newTrack;
                   }
@@ -59,6 +61,7 @@
                 return Swabcast.EpisodesApp.List.trigger("episode:removefromqueue", modelUid);
               });
               playlistLayout.on("show", function() {
+                console.log("Yoink");
                 return playlistLayout.playlistRegion.show(playlistTracks);
               });
               return playlistTracks.on("playlist:update", function(childView, model) {
@@ -73,7 +76,6 @@
                   buttonText: "Back to subscriptions"
                 });
                 backButton.on("click button.js-library-back", function() {
-                  console.log("triggering episodes:playlist to show playlist in sidebar");
                   return Swabcast.trigger("episodes:playlist");
                 });
                 Swabcast.navHelperRegion.show(backButton);
@@ -84,12 +86,6 @@
               return Swabcast.sideBarRegion.show(playlistLayout);
             }
           });
-        },
-        showPlaylistMain: function() {
-          var opt;
-          console.log("show extendedView");
-          opt = true;
-          return this.showTracks(opt);
         }
       };
     });

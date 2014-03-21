@@ -8,9 +8,10 @@ define ["app", "apps/episodes/feed/feed_view",
         require ["common/view"], (CommonViews) ->
           loadingView = new CommonViews.Loading(
             title: "Artificialy delaying this response"
-            message: "This is the view that will show if waiting for data"
+            message: "This is the view that is fucked"
           )
           Swabcast.libraryRegion.show loadingView
+
         require ["entities/feed"], ->
           fetchingLibrary = Swabcast.request("entities:library")
           feedLayout = new View.Layout()

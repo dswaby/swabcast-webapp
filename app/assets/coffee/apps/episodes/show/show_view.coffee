@@ -143,7 +143,6 @@ define ["app",
           @model.set enqueue: true
           @model.save()
 
-          # send to api to check if exists otherwise will add
           addToPlaylist = Swabcast.request("playlist:addtoqueue", @model)
           episodeElement = @$el
           $.when(addToPlaylist).done (apiResponse) ->

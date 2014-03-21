@@ -30,9 +30,6 @@
             Swabcast.navigate("library");
             Swabcast.trigger("media:all");
           }
-          if (Swabcast.getCurrentRoute() === "library") {
-            Swabcast.trigger("media:all");
-          }
           if (Swabcast.getCurrentRoute() === "playlist") {
             Swabcast.trigger("media:all");
             console.log("playlist triggered");

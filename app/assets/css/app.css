@@ -2994,15 +2994,15 @@ meta.foundation-mq-topbar {
   -webkit-backface-visibility: hidden;
   background: #333333;
   color: white;
-  height: 2.8125rem;
-  line-height: 2.8125rem;
+  height: 55px;
+  line-height: 55px;
   position: relative;
 }
 /* line 155, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4, .tab-bar h5, .tab-bar h6 {
   color: white;
   font-weight: bold;
-  line-height: 2.8125rem;
+  line-height: 55px;
   margin: 0;
 }
 /* line 161, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
@@ -3012,8 +3012,8 @@ meta.foundation-mq-topbar {
 
 /* line 274, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .left-small {
-  width: 2.8125rem;
-  height: 2.8125rem;
+  width: 55px;
+  height: 55px;
   position: absolute;
   top: 0;
   border-right: solid 1px #1a1a1a;
@@ -3022,8 +3022,8 @@ meta.foundation-mq-topbar {
 
 /* line 275, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .right-small {
-  width: 2.8125rem;
-  height: 2.8125rem;
+  width: 55px;
+  height: 55px;
   position: absolute;
   top: 0;
   border-left: solid 1px #1a1a1a;
@@ -3035,7 +3035,7 @@ meta.foundation-mq-topbar {
   padding: 0 0.625rem;
   position: absolute;
   text-align: center;
-  height: 2.8125rem;
+  height: 55px;
   top: 0;
 }
 @media only screen and (min-width: 40.063em) {
@@ -3047,24 +3047,24 @@ meta.foundation-mq-topbar {
 /* line 192, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .tab-bar-section.left {
   left: 0;
-  right: 2.8125rem;
+  right: 55px;
 }
 /* line 196, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .tab-bar-section.right {
-  left: 2.8125rem;
+  left: 55px;
   right: 0;
 }
 /* line 200, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .tab-bar-section.middle {
-  left: 2.8125rem;
-  right: 2.8125rem;
+  left: 55px;
+  right: 55px;
 }
 
 /* line 281, ../bower_components/foundation/scss/foundation/components/_offcanvas.scss */
 .tab-bar .menu-icon {
   text-indent: 2.1875rem;
-  width: 2.8125rem;
-  height: 2.8125rem;
+  width: 55px;
+  height: 55px;
   display: block;
   line-height: 2.0625rem;
   padding: 0;
@@ -3898,162 +3898,6 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 156, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-.reveal-modal-bg {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: black;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 99;
-  display: none;
-  top: 0;
-  left: 0;
-}
-
-/* line 158, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-dialog, .reveal-modal {
-  visibility: hidden;
-  display: none;
-  position: absolute;
-  z-index: 99;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  background-color: white;
-  padding: 1.25rem;
-  border: solid 1px #666666;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-@media only screen and (max-width: 40em) {
-  /* line 158, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog, .reveal-modal {
-    height: 100vh;
-    min-height: 100vh;
-  }
-}
-@media only screen and (min-width: 40.063em) {
-  /* line 158, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog, .reveal-modal {
-    left: 50%;
-  }
-}
-/* line 83, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-dialog .column,
-dialog .columns, .reveal-modal .column,
-.reveal-modal .columns {
-  min-width: 0;
-}
-/* line 86, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-dialog > :first-child, .reveal-modal > :first-child {
-  margin-top: 0;
-}
-/* line 87, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-dialog > :last-child, .reveal-modal > :last-child {
-  margin-bottom: 0;
-}
-@media only screen and (min-width: 40.063em) {
-  /* line 158, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog, .reveal-modal {
-    margin-left: -40%;
-    width: 80%;
-  }
-}
-@media only screen and (min-width: 40.063em) {
-  /* line 158, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog, .reveal-modal {
-    top: 6.25rem;
-  }
-}
-/* line 162, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-dialog .close-reveal-modal, .reveal-modal .close-reveal-modal {
-  font-size: 2.5rem;
-  line-height: 1;
-  position: absolute;
-  top: 0.5rem;
-  right: 0.6875rem;
-  color: #aaaaaa;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* line 165, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-dialog[open] {
-  display: block;
-  visibility: visible;
-}
-
-@media only screen and (min-width: 40.063em) {
-  /* line 172, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog, .reveal-modal {
-    padding: 1.875rem;
-  }
-  /* line 183, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog.full, .reveal-modal.full {
-    top: 0;
-    left: 0;
-    height: 100vh;
-    min-height: 100vh;
-    margin-left: 0 !important;
-  }
-}
-@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
-  /* line 172, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog, .reveal-modal {
-    top: 6.25rem;
-  }
-}
-@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
-  /* line 175, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog.tiny, .reveal-modal.tiny {
-    margin-left: -15%;
-    width: 30%;
-  }
-}
-@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
-  /* line 176, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog.small, .reveal-modal.small {
-    margin-left: -20%;
-    width: 40%;
-  }
-}
-@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
-  /* line 177, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog.medium, .reveal-modal.medium {
-    margin-left: -30%;
-    width: 60%;
-  }
-}
-@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
-  /* line 178, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog.large, .reveal-modal.large {
-    margin-left: -35%;
-    width: 70%;
-  }
-}
-@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
-  /* line 179, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog.xlarge, .reveal-modal.xlarge {
-    margin-left: -47.5%;
-    width: 95%;
-  }
-}
-
-@media only screen and (min-width: 40.063em) and (min-width: 40.063em) {
-  /* line 183, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog.full, .reveal-modal.full {
-    margin-left: -50vw;
-    width: 100vw;
-  }
-}
-
-@media print {
-  /* line 196, ../bower_components/foundation/scss/foundation/components/_reveal.scss */
-  dialog, .reveal-modal {
-    background: #fff !important;
-  }
-}
 /* line 93, ../bower_components/foundation/scss/foundation/components/_tables.scss */
 table {
   background: white;
@@ -4095,77 +3939,6 @@ table tr td,
 table tfoot tr td {
   display: table-cell;
   line-height: 1.125rem;
-}
-
-/* line 106, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box {
-  border-style: solid;
-  border-width: 1px;
-  display: block;
-  font-weight: normal;
-  margin-bottom: 1.25rem;
-  position: relative;
-  padding: 0.875rem 1.5rem 0.875rem 0.875rem;
-  font-size: 0.8125rem;
-  background-color: #008cba;
-  border-color: #0078a0;
-  color: white;
-}
-/* line 109, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box .close {
-  font-size: 1.375rem;
-  padding: 9px 6px 4px;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  margin-top: -0.6875rem;
-  right: 0.25rem;
-  color: #333333;
-  opacity: 0.3;
-}
-/* line 91, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box .close:hover, .alert-box .close:focus {
-  opacity: 0.5;
-}
-/* line 111, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box.radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-/* line 112, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box.round {
-  -webkit-border-radius: 1000px;
-  border-radius: 1000px;
-}
-/* line 114, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box.success {
-  background-color: #43ac6a;
-  border-color: #3a945b;
-  color: white;
-}
-/* line 115, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box.alert {
-  background-color: #f04124;
-  border-color: #de2d0f;
-  color: white;
-}
-/* line 116, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box.secondary {
-  background-color: #e7e7e7;
-  border-color: #c7c7c7;
-  color: #4f4f4f;
-}
-/* line 117, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box.warning {
-  background-color: #f08a24;
-  border-color: #de770f;
-  color: white;
-}
-/* line 118, ../bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
-.alert-box.info {
-  background-color: #a0d3e8;
-  border-color: #74bfdd;
-  color: #4f4f4f;
 }
 
 /* line 201, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
@@ -4639,21 +4412,31 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   font-size: 144px;
 }
 
-/* line 23, ../scss/app.scss */
+/* line 21, ../scss/app.scss */
+.playlist-row {
+  width: 100%;
+}
+
+/* line 25, ../scss/app.scss */
 .danger-zone {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
 
-/* line 29, ../scss/app.scss */
+/* line 31, ../scss/app.scss */
 .success {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 
-/* line 35, ../scss/app.scss */
+/* line 37, ../scss/app.scss */
+.main-view {
+  margin-bottom: 70px;
+}
+
+/* line 41, ../scss/app.scss */
 .nav-helper-overlay {
   position: fixed;
   height: 55px;
@@ -4667,30 +4450,57 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   cursor: default;
 }
 
-/* line 48, ../scss/app.scss */
+/* line 54, ../scss/app.scss */
 .nav-helper i {
   margin-left: 30% !important;
   font-size: -webkit-xxx-large !important;
   color: #fff !important;
 }
 
-/* line 54, ../scss/app.scss */
+/* line 60, ../scss/app.scss */
 .nav-helper a {
   color: #fff !important;
 }
 
-/* line 58, ../scss/app.scss */
+/* line 64, ../scss/app.scss */
 .nav-helper p {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   font-size: 35px !important;
   color: #fff !important;
+  line-height: 1 !important;
+}
+
+/* line 72, ../scss/app.scss */
+.sidebar-tab-content {
+  color: #fff;
+  margin-left: 40px;
+}
+
+/* line 78, ../scss/app.scss */
+.sidebar-tab {
+  margin-left: 40px;
+}
+
+/* line 81, ../scss/app.scss */
+.sidebar-tab a {
+  color: #000;
+}
+
+/* line 84, ../scss/app.scss */
+.sidebar-tab p {
+  color: #000;
+}
+
+/* line 87, ../scss/app.scss */
+.tabs dd.active a {
+  color: #000;
 }
 
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
-/* line 68, ../scss/app.scss */
+/* line 95, ../scss/app.scss */
 .feed-head {
   padding: 20px;
   position: relative;
@@ -4699,7 +4509,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   overflow: hidden;
 }
 
-/* line 76, ../scss/app.scss */
+/* line 103, ../scss/app.scss */
 .table-date h5 {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4713,7 +4523,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-bottom: 0;
 }
 
-/* line 89, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 .table-date p {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4723,44 +4533,44 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-bottom: 0 !important;
 }
 
-/* line 99, ../scss/app.scss */
+/* line 126, ../scss/app.scss */
 .feed-color {
   color: #14b9e8 !important;
 }
 
-/* line 103, ../scss/app.scss */
+/* line 130, ../scss/app.scss */
 .feed-list {
   background: #fff;
   padding-top: 12px;
 }
 
-/* line 109, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 .fancy-font {
   font-family: 'Oswald', sans-serif;
 }
 
-/* line 113, ../scss/app.scss */
+/* line 140, ../scss/app.scss */
 .not-found {
   margin-left: 10px;
 }
 
-/* line 117, ../scss/app.scss */
+/* line 144, ../scss/app.scss */
 .episodes-table-wrapper {
   height: 100%;
   overflow: auto;
 }
 
-/* line 121, ../scss/app.scss */
+/* line 148, ../scss/app.scss */
 .locked {
   overflow: hidden;
 }
 
-/* line 125, ../scss/app.scss */
+/* line 152, ../scss/app.scss */
 .playlist {
   top: 0;
 }
 
-/* line 129, ../scss/app.scss */
+/* line 156, ../scss/app.scss */
 .playlist-sidebar {
   background: #F4F4F4;
   min-height: 550px;
@@ -4768,38 +4578,170 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-right: 10px;
 }
 
-/* line 133, ../scss/app.scss */
+/* line 160, ../scss/app.scss */
 .library-image {
   max-width: 25%;
   padding: 5px;
   float: left;
 }
 
-/* line 139, ../scss/app.scss */
+/* line 166, ../scss/app.scss */
+.library-title {
+  height: 25px;
+  overflow: auto;
+}
+
+/* line 171, ../scss/app.scss */
+.library-title h5 {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+/* line 175, ../scss/app.scss */
 .cover-art-block {
   padding: 0 !important;
 }
 
-/* line 142, ../scss/app.scss */
+/* line 178, ../scss/app.scss */
 .icon-closure {
   font-size: 30px;
   margin-right: 5px;
   max-width: 30px;
 }
 
-/* line 148, ../scss/app.scss */
+/* line 184, ../scss/app.scss */
 .dialog-fixed-bottom {
-  position: absolute;
+  position: relative;
   bottom: 0;
 }
 
-/* line 153, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 #page-main {
   padding: 0 !important;
 }
 
-/* line 157, ../scss/app.scss */
+/* line 193, ../scss/app.scss */
 .panel {
+  overflow: auto;
+  width: 100%;
+}
+
+/* line 200, ../scss/app.scss */
+.playlist {
+  table-border-style: solid;
+  table-border-size: 3 px;
+  table-border-color: #ddd;
+}
+
+/***************************************************************************************************
+    styles for static player bar at bottom of screen  **********************************************
+***************************************************************************************************/
+/* line 242, ../scss/app.scss */
+#player {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  min-width: 340px;
+  bottom: 0;
+  background-color: #fafafa;
+  color: black;
+  z-index: 601;
+  box-shadow: 0 0 8px #888888;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  cursor: default;
+}
+
+/* line 255, ../scss/app.scss */
+#player-fill-left {
+  height: 100%;
+  width: 75%;
+}
+
+/* line 259, ../scss/app.scss */
+.player-preview {
+  position: fixed;
+  left: 63px;
+}
+
+/* line 267, ../scss/app.scss */
+.album-preview {
+  width: 60px;
+  height: 60px;
+}
+
+/* line 279, ../scss/app.scss */
+.player-art {
+  background-color: transparent;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+
+/* line 288, ../scss/app.scss */
+#controls-wrapper {
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 16px;
+}
+
+/* line 295, ../scss/app.scss */
+#feeditems-collection {
+  margin-bottom: 80px !important;
+}
+
+@media all and (min-width: 1001px) {
+  /* line 300, ../scss/app.scss */
+  #player {
+    height: 85px;
+  }
+
+  /* line 303, ../scss/app.scss */
+  .album-preview {
+    height: 85px;
+    width: 85px;
+  }
+}
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  /* line 309, ../scss/app.scss */
+  #player {
+    height: 85px;
+  }
+
+  /* line 312, ../scss/app.scss */
+  .player-art {
+    height: 85px;
+    width: 85px;
+  }
+
+  /* line 317, ../scss/app.scss */
+  #feeditems-collection {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+/* line 324, ../scss/app.scss */
+.offcanvas-inner-shadow-left {
+  -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
+  -moz-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
+  box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
+}
+
+/* line 334, ../scss/app.scss */
+.unHidden {
+  display: block;
+}
+
+/* line 338, ../scss/app.scss */
+.Hidden {
+  display: none;
+}
+
+/* line 342, ../scss/app.scss */
+.episodes-list {
+  height: 200px;
   overflow: auto;
 }
 
@@ -4811,8 +4753,11 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   font-style: normal;
 }
 
-/* line 203, ../scss/app.scss */
+/* line 393, ../scss/app.scss */
+.fi-arrow-right:before,
+.fi-archive:before,
 .fi-alert:before,
+.fi-page-delete:before,
 .fi-arrow-left:before,
 .fi-star:before,
 .fi-arrow-up:before,
@@ -4841,6 +4786,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 .fi-social-linkedin:before,
 .fi-social-github:before,
 .fi-social-stack-overflow:before,
+.fi-social-facebook:before,
 .fi-zoom-out:before {
   font-family: "foundation-icons";
   font-style: normal;
@@ -4853,221 +4799,162 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   text-decoration: inherit;
 }
 
-/* line 214, ../scss/app.scss */
+/* line 404, ../scss/app.scss */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 215, ../scss/app.scss */
+/* line 405, ../scss/app.scss */
+.fi-arrow-right:before {
+  content: "\f10b";
+}
+
+/* line 406, ../scss/app.scss */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 216, ../scss/app.scss */
+/* line 407, ../scss/app.scss */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 217, ../scss/app.scss */
+/* line 408, ../scss/app.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 218, ../scss/app.scss */
+/* line 409, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 219, ../scss/app.scss */
+/* line 410, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 220, ../scss/app.scss */
+/* line 411, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 221, ../scss/app.scss */
+/* line 412, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 222, ../scss/app.scss */
+/* line 413, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 223, ../scss/app.scss */
+/* line 414, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 224, ../scss/app.scss */
+/* line 415, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 225, ../scss/app.scss */
+/* line 416, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 226, ../scss/app.scss */
+/* line 417, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 227, ../scss/app.scss */
+/* line 418, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 228, ../scss/app.scss */
+/* line 419, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 229, ../scss/app.scss */
+/* line 420, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 230, ../scss/app.scss */
+/* line 421, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 231, ../scss/app.scss */
+/* line 422, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 232, ../scss/app.scss */
+/* line 423, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 233, ../scss/app.scss */
+/* line 424, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 234, ../scss/app.scss */
+/* line 425, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 235, ../scss/app.scss */
+/* line 426, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 236, ../scss/app.scss */
+/* line 427, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 237, ../scss/app.scss */
+/* line 428, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 238, ../scss/app.scss */
+/* line 429, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 239, ../scss/app.scss */
+/* line 430, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 240, ../scss/app.scss */
+/* line 431, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 241, ../scss/app.scss */
+/* line 432, ../scss/app.scss */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 245, ../scss/app.scss */
-.playlist {
-  table-border-style: solid;
-  table-border-size: 3 px;
-  table-border-color: #ddd;
+/* line 433, ../scss/app.scss */
+.fi-page-delete:before {
+  content: "\f182";
 }
 
-/***************************************************************************************************
-    styles for static player bar at bottom of screen  **********************************************
-***************************************************************************************************/
-/* line 256, ../scss/app.scss */
-#player {
-  position: fixed;
-  height: 60px;
-  width: 100%;
-  min-width: 340px;
-  bottom: 0;
-  background-color: #fafafa;
-  color: black;
-  z-index: 601;
-  box-shadow: 0 0 8px #888888;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  cursor: default;
+/* line 434, ../scss/app.scss */
+.fi-social-facebook:before {
+  content: "\f1c4";
 }
 
-/* line 269, ../scss/app.scss */
-#player-fill-left {
-  height: 100%;
-  width: 75%;
-}
-
-/* line 273, ../scss/app.scss */
-.player-preview {
-  position: fixed;
-  left: 63px;
-}
-
-/* line 289, ../scss/app.scss */
-#player-art {
-  background-color: transparent;
-  display: block;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-}
-
-/* line 301, ../scss/app.scss */
-.offcanvas-inner-shadow-left {
-  -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
-  -moz-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
-  box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
-}
-
-/* line 310, ../scss/app.scss */
-#controls-wrapper {
-  height: 60px;
-  position: fixed;
-  bottom: 0;
-  right: 16px;
-}
-
-/* line 316, ../scss/app.scss */
-.unHidden {
-  display: block;
-}
-
-/* line 320, ../scss/app.scss */
-.Hidden {
-  display: none;
-}
-
-/* line 324, ../scss/app.scss */
-.episodes-list {
-  height: 200px;
-  overflow: auto;
+/* line 435, ../scss/app.scss */
+.fi-archive:before {
+  content: "\f108";
 }

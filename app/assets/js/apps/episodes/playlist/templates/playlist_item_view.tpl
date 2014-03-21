@@ -1,13 +1,11 @@
 <!-- playlist_item_view.tpl -->
-<td>
-    <img src=./assets/img/<%= albumArt %> alt="" height="75px" width="75px" />
+<td class="js-episode-detail" style="padding:0;width:65px;height:65px;">
+    <img src=./assets/img/<%= albumArt %> alt="" style="height:65px;width:65px;" />
 </td>
-
-<td>
+<td class="js-episode-detail">
     <a class="js-"><i class="icon-circle-arrow-up"></i></a>
-    <a href="<%= mediaUrl %>" ><%= episodeTitle %></a> <br />
+    <a href="<%= feedUrl %>" ><%= episodeTitle %></a> <br />
 </td>
-
-<td>
+<td class="js-episode-detail">
     <a href="#" class="js-top-of-queue"><i style="font-size:20px" class="fi-arrow-up"></i></a>
 </td>

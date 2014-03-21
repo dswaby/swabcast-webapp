@@ -31,7 +31,7 @@
           };
         }
       });
-      return Views.NavHelper = Marionette.ItemView.extend({
+      Views.NavHelper = Marionette.ItemView.extend({
         template: navHelper,
         events: {
           "click a.js-library-back": "navigateToLibrary"
@@ -40,22 +40,40 @@
           options = options || {};
           return this.buttonText = options.buttonText || "Back";
         },
-        onRender: function() {
-          return this.$el.fadeIn('slow');
-        },
+        onBeforeRender: function() {},
+        onRender: function() {},
         serializeData: function() {
           return {
             buttonText: this.buttonText
           };
         },
         onBeforeClose: function() {
-          return this.$el.transition({
-            perspective: "100px",
-            rotate3d: "1,1,0,180deg"
-          });
+          return this.$el.slideUp(20000, function() {});
         },
         navigateToLibrary: function() {
           Swabcast.trigger("episodes:library");
+          return this.close();
+        }
+      });
+      return Views.NavPlaylistHelper = Marionette.ItemView.extend({
+        template: navHelper,
+        events: {
+          "click div .js-library-back": "navigateToLibrary"
+        },
+        initialize: function(options) {
+          options = options || {};
+          return this.buttonText = options.buttonText || "Back";
+        },
+        onRender: function() {},
+        serializeData: function() {
+          return {
+            buttonText: this.buttonText
+          };
+        },
+        onBeforeClose: function() {},
+        navigateToLibrary: function() {
+          Swabcast.trigger("episodes:library");
+          Swabcast.trigger("episodes:playlist");
           return this.close();
         }
       });

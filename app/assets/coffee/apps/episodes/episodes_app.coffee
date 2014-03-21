@@ -10,19 +10,23 @@ define ["app"], (Swabcast) ->
     API =
       # "media:all"
       showPageMedia: ->
+        options = false
         require ["apps/episodes/nav/nav_controller"], ->
+          console.log("showPageMedia")
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks()
+          EpisodesApp.Playlist.Controller.showTracks options
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeeds()
 
       # "playlist:mainview"
       showPlaylistMain: ->
+        options = true
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showPlaylistMain()
+          console.log("showPlaylistMain")
+          EpisodesApp.Playlist.Controller.showTracks options
 
       # "episodes:library"
       showLibrary: ->
@@ -53,6 +57,7 @@ define ["app"], (Swabcast) ->
 
       showPlaylist: ->
         require ["apps/episodes/playlist/playlist_controller"], ->
+          console.log("showPlaylist")
           EpisodesApp.Playlist.Controller.showTracks()
 
       showEpisodeDetails: (model) ->
@@ -71,6 +76,7 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
+          console.log("showFeedEpisodesOnLoad")
           EpisodesApp.Playlist.Controller.showTracks()
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
@@ -78,10 +84,12 @@ define ["app"], (Swabcast) ->
           EpisodesApp.Feed.Controller.showFeedEpisodesById id
 
       showPlaylistOnLoad: ->
+        options = true
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showPlaylistMain()
+          console.log("showPlaylistOnLoad")
+          EpisodesApp.Playlist.Controller.showTracks options
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
 

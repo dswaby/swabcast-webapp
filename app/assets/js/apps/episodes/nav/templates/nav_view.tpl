@@ -1,4 +1,4 @@
-<nav class="tab-bar">
+<nav id="tab-bar" class="tab-bar">
   <section class="left-small">
     <a class="left-off-canvas-toggle menu-icon"><span></span></a>
   </section>
@@ -24,26 +24,32 @@
     <li class="left-off-canvas-toggle js-playlist">
       <a href=""><i class="fi-indent-more"></i> &nbsp Manage Playlist</a>
     </li>
+    <li class="left-off-canvas-toggle js-static-app">
+      <a href="#"><i class="fi-info"></i>&nbsp About App</a>
+    </li>
+    <li class="left-off-canvas-toggle js-static-me">
+      <a href="#"><i class="fi-torso-business"></i>&nbsp Contact</a>
+    </li>
+    <li class="js-reset-local">
+      <a><i class="fi-page-delete"></i>&nbsp Reset Local Storage</a>
+    </li>
+    <li class="right-off-canvas-toggle left-off-canvas-toggle js-not-implemented">
+      <a href="#"><i class="fi-widget"></i>&nbsp Settings</a>
+    </li>
+    <li class="">
+      <a class="left-off-canvas-toggle"><i class="fi-arrow-right"></i>&nbspClose This</a>
+    </li>
   </ul>
 </aside>
 
 <aside class="right-off-canvas-menu">
   <ul id="offcanvas-nav-right" class="off-canvas-list">
     <li><label>App Settings</label></li>
-    <li class="js-reset-local">
-      <a>Reset Local Storage</a>
-    </li>
-    <li class="right-off-canvas-toggle js-not-implemented">
-      <a href="#"><i class="fi-widget"></i>&nbsp Settings</a>
-    </li>
     <li class="right-off-canvas-toggle js-static-app">
-      <a href="#"><i class="fi-info"></i>&nbsp About App</a>
-    </li>
-    <li class="right-off-canvas-toggle js-static-me">
-      <a href="#"><i class="fi-torso-business"></i>&nbsp About Me</a>
+      <a href="#"><i class="fi-info"></i>Preload audio data</a>
     </li>
     <li>
-      <a class="right-off-canvas-toggle">Exit</a>
+      <a class="right-off-canvas-toggle">Close</a>
     </li>
   </ul>
 </aside>

@@ -34,7 +34,7 @@ define ["app",
 
     View.Tracks = Marionette.CompositeView.extend(
       tagName: "table"
-      className: "large-8 small-12 columns"
+      className: "playlist-row"
       template: playlistTpl
       itemView: View.Track
       initialize: ->
@@ -46,6 +46,8 @@ define ["app",
         @appendHtml = (collectionView, itemView, index) ->
           collectionView.$el.append itemView.el
 
+      onPlaylistEnqueue: (model) ->
+        console.log(model)
       onItemviewEpisodeDelete: ->
         @$el.fadeOut "slow", ->
           $(this).fadeIn "slow"
@@ -81,7 +83,7 @@ define ["app",
 
     View.TracksExtended = Marionette.CompositeView.extend(
       tagName: "table"
-      className: "large-8 small-12 columns"
+      className: "large-8 small-12 columns main-view"
       template: playlistTpl
       itemView: View.TrackExtended
       initialize: ->

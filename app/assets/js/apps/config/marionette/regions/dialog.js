@@ -2,20 +2,22 @@
   define(["marionette", "jquery-ui", "transit"], function(Marionette) {
     Marionette.Region.Dialog = Marionette.Region.extend({
       onShow: function(view) {
-        var dialogWidth, self;
+        var dialogHeight, dialogWidth, self;
         $('body').addClass("locked");
         this.listenTo(view, "dialog:close", this.closeDialog);
         self = this;
         dialogWidth = this.winWidth();
+        dialogHeight = this.winHeight();
+        console.log(dialogWidth);
         return this.$el.dialog({
           modal: true,
           title: view.title,
-          height: $(window).height() * 0.70,
+          height: dialogHeight,
           width: dialogWidth,
           position: {
             at: "center top"
           },
-          resizable: true,
+          resizable: false,
           close: function(e, ui) {
             return self.closeDialog();
           }
@@ -31,23 +33,21 @@
         currentWindowWidth;
         var currentWindowWidth;
         currentWindowWidth = $(window).width();
-        if (currentWindowWidth <= 320) {
-          return currentWindowWidth * 0.90;
+        if (currentWindowWidth <= 640) {
+          return (currentWindowWidth * 0.90).toFixed();
         } else {
-          return "auto";
+          return (currentWindowWidth * 0.62).toFixed();
         }
-        return {
-          winHeight: function() {
-            height;
-            var height;
-            height = $(window).height();
-            if (height <= 640) {
-              return height * 0.78;
-            } else {
-              return "auto";
-            }
-          }
-        };
+      },
+      winHeight: function() {
+        height;
+        var height;
+        height = $(window).height();
+        if (height <= 800) {
+          return (height * 0.85).toFixed();
+        } else {
+          return (height * 0.42).toFixed();
+        }
       }
     });
     return Marionette.Region.Dialog;
