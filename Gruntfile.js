@@ -229,8 +229,16 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-shell');
 
-
+//registered task 'a' so i dont have to scroll down when running from the sublime grunt plugin
+//same as default
 grunt.registerTask('a', [
+    'dev',
+    'connect:testserver',
+    'express:dev',
+    'watch'
+    ]);
+
+grunt.registerTask('default', [
     'dev',
     'connect:testserver',
     'express:dev',
