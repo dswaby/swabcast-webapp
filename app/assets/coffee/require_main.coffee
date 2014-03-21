@@ -1,6 +1,6 @@
 requirejs.config
   baseUrl: "assets/js"
-  urlArgs: 'cb=' + Math.random()
+  # urlArgs: 'cb=' + Math.random()
 
   paths:
     backbone: "vendor/backbone"
@@ -64,7 +64,6 @@ requirejs [
   "jquery"
   "foundation"
   "vendor/foundation.offcanvas"
-  "vendor/foundation.reveal"
   "vendor/foundation.fastclick"
 ], ($) ->
 

@@ -1,7 +1,6 @@
 (function() {
   requirejs.config({
     baseUrl: "assets/js",
-    urlArgs: 'cb=' + Math.random(),
     paths: {
       backbone: "vendor/backbone",
       localstorage: "vendor/backbone.localstorage",
@@ -53,7 +52,7 @@
     return Swabcast.start();
   });
 
-  requirejs(["jquery", "foundation", "vendor/foundation.offcanvas", "vendor/foundation.reveal", "vendor/foundation.fastclick"], function($) {
+  requirejs(["jquery", "foundation", "vendor/foundation.offcanvas", "vendor/foundation.fastclick"], function($) {
     (function($, window, undefined_) {
       var $doc, Modernizr;
       $doc = $(document);

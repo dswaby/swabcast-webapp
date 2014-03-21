@@ -4656,7 +4656,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 /* line 35, ../scss/app.scss */
 .nav-helper-overlay {
   position: fixed;
-  height: 50px;
+  height: 55px;
   width: 100%;
   top: 0;
   background-color: #333333;
