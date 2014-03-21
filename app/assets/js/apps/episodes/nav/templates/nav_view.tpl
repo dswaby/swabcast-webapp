@@ -22,7 +22,7 @@
       <a href=""><i class="fi-plus"></i>&nbsp Add Subscriptions</a>
     </li>
     <li class="left-off-canvas-toggle js-playlist">
-      <a href=""><i class="fi-indent-more"></i> &nbsp Playlist</a>
+      <a href=""><i class="fi-indent-more"></i> &nbsp Manage Playlist</a>
     </li>
   </ul>
 </aside>
