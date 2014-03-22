@@ -63,10 +63,9 @@
           return EpisodesApp.Edit.Controller.editEpisode(id);
         },
         showPlaylist: function() {
-          var options;
-          options = false;
+          console.log("calling in app mediator");
           return require(["apps/episodes/playlist/playlist_controller"], function() {
-            return EpisodesApp.Playlist.Controller.showTracks(options);
+            return EpisodesApp.Playlist.Controller.showTracks();
           });
         },
         showEpisodeDetails: function(model) {
@@ -137,6 +136,7 @@
         return API.editEpisode(id);
       });
       Swabcast.on("episodes:playlist", function() {
+        console.log("show side view recieved");
         return API.showPlaylist();
       });
       Swabcast.on("episode:details", function(model) {

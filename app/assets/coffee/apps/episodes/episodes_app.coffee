@@ -55,9 +55,9 @@ define ["app"], (Swabcast) ->
         EpisodesApp.Edit.Controller.editEpisode id
 
       showPlaylist: ->
-        options = false
+        console.log("calling in app mediator")
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks options
+          EpisodesApp.Playlist.Controller.showTracks()
 
       showEpisodeDetails: (model) ->
         require ["apps/episodes/feed/feed_controller"], ->
@@ -115,6 +115,7 @@ define ["app"], (Swabcast) ->
       API.editEpisode id
 
     Swabcast.on "episodes:playlist", ->
+      console.log("show side view recieved")
       API.showPlaylist()
 
     Swabcast.on "episode:details", (model) ->

@@ -5,10 +5,10 @@
         <ul>
           <!-- <li><a href="#" class="dismiss"> <i class="icon-arrow-left"></i>Close</a></li> -->
           <!-- Add To Playlist -->
-          <li><a href="#" class="button js-enqueue"><i class="icon-plus-sign"></i>Queue</a></li>
+          <li><a href="#" class="js-enqueue"><i class="fi-plus"></i>&nbsp Queue</a></li>
           <!-- Mark Played/Archive -->
-          <li><a href="#" class="js-archive"><i class="fi-archive"></i>Archive</a></li>
-          <li><a href="#" class="js-favorite"><i class="fi-star"></i>Favorite</a></li>
+          <li><a href="#" class="js-archive"><i class="fi-archive"></i>&nbsp Archive</a></li>
+          <li><a href="#" class="js-favorite"><i class="fi-star"></i>&nbsp Favorite</a></li>
         </ul>
         <!-- button class="button dismiss">
             <i class="icon-arrow-left"></i>Close

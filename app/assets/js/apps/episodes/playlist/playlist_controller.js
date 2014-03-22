@@ -20,12 +20,10 @@
               }
               playlistTracks = void 0;
               if (extendedView) {
-                console.log("showing extended view");
                 playlistTracks = new View.TracksExtended({
                   collection: tracks
                 });
               } else {
-                console.log("showing regular view");
                 playlistTracks = new View.Tracks({
                   collection: tracks
                 });
@@ -49,8 +47,6 @@
                 addingTrack = Swabcast.request("playlist:addtoqueue", model);
                 return $.when(addingTrack).done(function(apiResponse) {
                   var newTrack;
-                  console.log("@apiResponse", apiResponse);
-                  console.log("apiResponse", apiResponse);
                   if (typeof apiResponse === "string") {
                     console.log("we dun goofed");
                     this.$el.toggleClass("danger-zone").fadeIn(400, function() {
@@ -97,11 +93,8 @@
               Swabcast.sideBarRegion.close();
               require(["common/view"], function(CommonViews) {
                 var backButton, winheight;
-                backButton = new CommonViews.NavHelper({
+                backButton = new CommonViews.NavPlaylistHelper({
                   buttonText: "Back to subscriptions"
-                });
-                backButton.on("click button.js-library-back", function() {
-                  return Swabcast.trigger("episodes:playlist");
                 });
                 Swabcast.navHelperRegion.show(backButton);
                 return winheight = $(window).height() - 75;

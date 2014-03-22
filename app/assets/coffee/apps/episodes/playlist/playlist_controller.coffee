@@ -22,10 +22,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             playlistTracks = undefined
 
             if (extendedView)
-              console.log("showing extended view")
               playlistTracks = new View.TracksExtended(collection: tracks)
             else
-              console.log("showing regular view")
               playlistTracks = new View.Tracks(collection: tracks)
 
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
@@ -49,8 +47,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               console.log("model recieved in playlist:enqueue", model)
               addingTrack = Swabcast.request "playlist:addtoqueue", model
               $.when(addingTrack).done (apiResponse) ->
-                console.log("@apiResponse", apiResponse)
-                console.log("apiResponse", apiResponse)
 
                 if typeof apiResponse == "string"
                   # TODO - trigger error alert
@@ -95,11 +91,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             # TODO - do this better
             Swabcast.sideBarRegion.close()
             require ["common/view"], (CommonViews) ->
-              backButton = new CommonViews.NavHelper(
+              backButton = new CommonViews.NavPlaylistHelper(
                 buttonText: "Back to subscriptions"
-              )
-              backButton.on("click button.js-library-back", ->
-                Swabcast.trigger "episodes:playlist"
               )
               Swabcast.navHelperRegion.show backButton
               # set the view to window height, this feels a little hack
