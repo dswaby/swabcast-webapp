@@ -27,9 +27,9 @@
     <li class="left-off-canvas-toggle js-static-app">
       <a href="#"><i class="fi-info"></i>&nbsp About App</a>
     </li>
-    <li class="left-off-canvas-toggle js-static-me">
+<!--     <li class="left-off-canvas-toggle js-static-me">
       <a href="#"><i class="fi-torso-business"></i>&nbsp Contact</a>
-    </li>
+    </li> -->
     <li class="js-reset-local">
       <a><i class="fi-page-delete"></i>&nbsp Reset Local Storage</a>
     </li>

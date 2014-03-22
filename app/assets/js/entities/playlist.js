@@ -77,15 +77,14 @@
               newTrack = new Swabcast.Entities.QueuedEpisode({
                 uid: model.get("uid") || null,
                 albumArt: model.parent.get("albumArt") || "default.jpg",
-                episodeTitle: model.get("episodeTitle") || "",
-                feedUrl: model.parent.get("feedUrl") || "",
-                episodeParent: model.parent.get("subscriptionTitle") || "",
+                episodeTitle: model.get("episodeTitle") || " ",
+                feedUrl: model.parent.get("feedUrl") || " ",
+                episodeParent: model.parent.get("subscriptionTitle") || " ",
                 mediaUrl: model.get("mediaUrl") || null,
                 enqueue: true,
                 order: highestOrder || 1
               });
               tracks.add(newTrack);
-              newTrack.save();
               console.log("new track in playlist entity", newTrack);
               return defer.resolve(newTrack);
             } else {

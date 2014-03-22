@@ -14,6 +14,10 @@
               if (typeof tracks.at(0) !== "undefined") {
                 this.nowPlaying = tracks.at(0);
               }
+              if (this.nowPlaying) {
+                Swabcast.commands.execute("player:setepisode", this.nowPlaying);
+                console.log("\"player:setepisode\"triggered");
+              }
               playlistTracks = void 0;
               if (extendedView) {
                 console.log("showing extended view");
@@ -59,7 +63,16 @@
                     console.log("we are in the green!");
                     newTrack = _.clone(apiResponse);
                     console.log("cloned newTrack", newTrack);
-                    newTrack = new Swabcast.Entities.QueuedEpisode(_.clone(apiResponse));
+                    newTrack = new Swabcast.Entities.QueuedEpisode({
+                      uid: apiResponse.get("uid") || null,
+                      albumArt: apiResponse.get("albumArt") || apiResponse.parent.get("albumArt"),
+                      episodeTitle: apiResponse.get("episodeTitle") || null,
+                      episodeParent: apiResponse.get("episodeParent") || apiResponse.parent.get("subscriptionTitle"),
+                      feedUrl: apiResponse.get("feedUrl") || " ",
+                      mediaUrl: apiResponse.get("mediaUrl") || null,
+                      enqueue: true,
+                      order: apiResponse.get("order")
+                    });
                     tracks.add(newTrack);
                     newTrack.save();
                     if (tracks.at(0) === newTrack) {

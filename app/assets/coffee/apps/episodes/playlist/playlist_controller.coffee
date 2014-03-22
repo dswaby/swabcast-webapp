@@ -15,9 +15,9 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             #nowplaying responsible for managing current episode to be in the player box
             #on change, triggers events and sends episode model to player and playersavedata
             @nowPlaying = (tracks.at(0))  unless typeof tracks.at(0) is "undefined"
-            # if @nowPlaying
-            #   Swabcast.commands.execute "player:setepisode", @nowPlaying
-            #   console.log("\"player:setepisode\"triggered")
+            if @nowPlaying
+              Swabcast.commands.execute "player:setepisode", @nowPlaying
+              console.log("\"player:setepisode\"triggered")
 
             playlistTracks = undefined
 
@@ -67,16 +67,16 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                   newTrack = _.clone(apiResponse)
                   console.log("cloned newTrack", newTrack)
                   #TODO decouple the seperate models
-                  newTrack = new Swabcast.Entities.QueuedEpisode( _.clone(apiResponse) )
-                  #   uid: apiResponse.get("uid") or null
-                  #   albumArt: apiResponse.parent.get("albumArt") or null
-                  #   episodeTitle: apiResponse.get("episodeTitle") or null
-                  #   feedUrl: apiResponse.parent.get("feedUrl") or null
-                  #   episodeParent: apiResponse.parent.get("subscriptionTitle") or null
-                  #   mediaUrl: apiResponse.get("mediaUrl") or null
-                  #   enqueue: true
-                  #   order: highestOrder or 1
-                  # )
+                  newTrack = new Swabcast.Entities.QueuedEpisode(
+                    uid: apiResponse.get("uid") or null
+                    albumArt: apiResponse.get("albumArt") or apiResponse.parent.get("albumArt")
+                    episodeTitle: apiResponse.get("episodeTitle") or null
+                    episodeParent: apiResponse.get("episodeParent") or apiResponse.parent.get("subscriptionTitle")
+                    feedUrl: apiResponse.get("feedUrl") or " "
+                    mediaUrl: apiResponse.get("mediaUrl") or null
+                    enqueue: true
+                    order: apiResponse.get("order")
+                  )
 
                   tracks.add newTrack
                   newTrack.save()
@@ -107,12 +107,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             Swabcast.libraryRegion.show playlistLayout
           else
             Swabcast.sideBarRegion.show playlistLayout
-
-
-      # showPlaylistMain: ->
-      #   console.log("show extendedView")
-      #   opt = true
-      #   @showTracks (opt)
 
 
   Swabcast.EpisodesApp.Playlist.Controller

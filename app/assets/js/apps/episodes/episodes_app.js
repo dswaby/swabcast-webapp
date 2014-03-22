@@ -33,7 +33,6 @@
           var options;
           options = true;
           return require(["apps/episodes/playlist/playlist_controller"], function() {
-            console.log("showPlaylistMain");
             return EpisodesApp.Playlist.Controller.showTracks(options);
           });
         },
@@ -64,9 +63,10 @@
           return EpisodesApp.Edit.Controller.editEpisode(id);
         },
         showPlaylist: function() {
+          var options;
+          options = false;
           return require(["apps/episodes/playlist/playlist_controller"], function() {
-            console.log("showPlaylist");
-            return EpisodesApp.Playlist.Controller.showTracks();
+            return EpisodesApp.Playlist.Controller.showTracks(options);
           });
         },
         showEpisodeDetails: function(model) {
@@ -89,7 +89,6 @@
             return EpisodesApp.Nav.Controller.showNav();
           });
           require(["apps/episodes/playlist/playlist_controller"], function() {
-            console.log("showFeedEpisodesOnLoad");
             return EpisodesApp.Playlist.Controller.showTracks();
           });
           require(["apps/episodes/player/player_controller"], function() {
@@ -106,7 +105,6 @@
             return EpisodesApp.Nav.Controller.showNav();
           });
           require(["apps/episodes/playlist/playlist_controller"], function() {
-            console.log("showPlaylistOnLoad");
             return EpisodesApp.Playlist.Controller.showTracks(options);
           });
           return require(["apps/episodes/player/player_controller"], function() {

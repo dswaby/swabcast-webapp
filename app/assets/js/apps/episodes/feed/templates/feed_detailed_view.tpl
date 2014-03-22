@@ -7,7 +7,9 @@
                 <h2><%= episodeParent %></h2>
             </div>
             <div class="span8">
-            <a href="<%= feedUrl %>"><h6><%= feedUrl %></h6></a>
+            <% if (typeof(feedUrl) !== "undefined") { %>
+                <h6><a href="<%= feedUrl %>">Homepage</a><h6>
+            <% } %>
                 <h4><%= episodeTitle %></h4>
 
                 <p><%= episodeSummary %></p>

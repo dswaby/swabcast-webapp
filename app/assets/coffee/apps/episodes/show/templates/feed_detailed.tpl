@@ -7,8 +7,11 @@
                 <img src=./assets/img/<%= albumArt %> alt="" class="library">
             </div>
             <div class="large-6 columns">
+                <% if (typeof(feedUrl) !== "undefined") { %>
                 <a href="<%= feedUrl %>"><h2><%= subscriptionTitle %></h2>
-                <a href="<%= feedUrl %>"><h6><%= feedUrl %></h6></a>
+
+                    <h6><a href="<%= feedUrl %>">Homepage</a><h6>
+                <% } %>
                 <p><%= summary %></p>
                 <button class="button js-back-button">
                     <i class="icon-arrow-left"></i>

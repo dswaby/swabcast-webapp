@@ -66,15 +66,19 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
             newTrack = new Swabcast.Entities.QueuedEpisode(
               uid: model.get("uid") or null
               albumArt: model.parent.get("albumArt") or "default.jpg"
-              episodeTitle: model.get("episodeTitle") or ""
-              feedUrl: model.parent.get("feedUrl") or ""
-              episodeParent: model.parent.get("subscriptionTitle") or ""
+              episodeTitle: model.get("episodeTitle") or " "
+              feedUrl: model.parent.get("feedUrl") or " "
+              episodeParent: model.parent.get("subscriptionTitle") or " "
               mediaUrl: model.get("mediaUrl") or null
               enqueue: true
               order: highestOrder or 1
             )
             tracks.add newTrack
-            newTrack.save()
+
+            # TODO should be saved here
+            # instead of sending to view and then saving
+            # newTrack.save()
+
             ####################################
             # DEBUGGING ONLY -- REMOVE THIS
             ####################################
@@ -84,21 +88,6 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
           else
             defer.resolve "fail"
         defer.promise()
-
-
-      # firstInPlaylist: ->
-      #   queuedTracks = new Entities.Playlist()
-      #   defer = $.Deferred()
-      #   queuedTracks.fetch
-      #   success: (playlist) ->
-      #     episodes = playlist.get("episodes")
-      #     if episodes.length
-      #       defer.resolve episodes[0]
-      #     else
-      #       defer.resolve "undefined"
-      #   error: ->
-      #       defer.resolve "undefined"
-      #   defer.promise()
 
       #has to be a more efficient way of doing this
       updatePlaylistOrder: ->

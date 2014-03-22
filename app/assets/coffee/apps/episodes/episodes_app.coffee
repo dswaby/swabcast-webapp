@@ -25,7 +25,6 @@ define ["app"], (Swabcast) ->
       showPlaylistMain: ->
         options = true
         require ["apps/episodes/playlist/playlist_controller"], ->
-          console.log("showPlaylistMain")
           EpisodesApp.Playlist.Controller.showTracks options
 
       # "episodes:library"
@@ -56,9 +55,9 @@ define ["app"], (Swabcast) ->
         EpisodesApp.Edit.Controller.editEpisode id
 
       showPlaylist: ->
+        options = false
         require ["apps/episodes/playlist/playlist_controller"], ->
-          console.log("showPlaylist")
-          EpisodesApp.Playlist.Controller.showTracks()
+          EpisodesApp.Playlist.Controller.showTracks options
 
       showEpisodeDetails: (model) ->
         require ["apps/episodes/feed/feed_controller"], ->
@@ -76,7 +75,6 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          console.log("showFeedEpisodesOnLoad")
           EpisodesApp.Playlist.Controller.showTracks()
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
@@ -88,7 +86,6 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          console.log("showPlaylistOnLoad")
           EpisodesApp.Playlist.Controller.showTracks options
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
