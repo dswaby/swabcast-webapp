@@ -21,7 +21,8 @@
         events: {
           "click a.dismiss": "closeDialog",
           "click a.js-edit": "editClicked",
-          "click a.js-enqueue": "queueEpisode"
+          "click td.js-enqueue": "queueEpisode",
+          "click td.js-archive": "archiveEpisode"
         },
         initialize: function() {
           return this.title = this.model.get("subscriptionTitle");
@@ -37,7 +38,12 @@
         queueEpisode: function(e) {
           e.preventDefault();
           e.stopPropagation();
-          this.$el.addClass("disabled");
+          return this.$el.addClass("disabled");
+        },
+        archiveEpisode: function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log("mark episode as archived");
           if (this.model.get("enqueue") === false) {
             Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.model);
             this.model.set("enqueue", true);

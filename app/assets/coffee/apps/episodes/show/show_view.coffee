@@ -28,7 +28,8 @@ define ["app",
       events:
         "click a.dismiss": "closeDialog"
         "click a.js-edit": "editClicked"
-        "click a.js-enqueue": "queueEpisode"
+        "click td.js-enqueue": "queueEpisode"
+        "click td.js-archive": "archiveEpisode"
 
       initialize: ->
         @title = @model.get("subscriptionTitle")
@@ -46,34 +47,16 @@ define ["app",
         e.stopPropagation()
         @$el.addClass "disabled"
 
+      archiveEpisode: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        console.log("mark episode as archived")
+
         if @model.get("enqueue") is false
           Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @model
           @model.set "enqueue", true
         @trigger "dialog:close"
     )
-
-          # send to api to check if exists otherwise will add
-    #       addToPlaylist = Swabcast.request("playlist:addtoqueue", @model)
-    #       episodeElement = @$el
-    #       $.when(addToPlaylist).done (apiResponse) ->
-    #         if typeof apiResponse == "string"
-    #           # TODO - trigger error alert
-    #           console.log("we dun goofed")
-    #           # toggle show error
-    #           episodeElement.toggleClass("danger-zone").fadeIn 400, ->
-    #             setTimeout (->
-    #               $(this).toggleClass "danger-zone"
-    #             ), 300
-    #         if typeof apiResponse == "object"
-    #           # send model to playlist to update view
-    #           Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @apiResponse
-    #           # TODO - trigger success alert
-    #           episodeElement.fadeOut "slow", ->
-    #             $(this).fadeIn "slow"
-    #     @trigger "dialog:close"
-    # )
-    # view for displaying summary page of feed
-    # episodes are not displayed in this view
     View.Feed = Marionette.ItemView.extend(
       template: feedDetailedTpl
       events:

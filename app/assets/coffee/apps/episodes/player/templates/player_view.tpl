@@ -6,7 +6,7 @@
 		<% } %>
         <div class="player-preview">
     <% if (typeof(title) != "undefined") { %>
-        <p style="height:100%;width:280px;overflow:auto;"><%= title %></p>
+        <p><%= title %></p>
         <% } %>
     </div>
 </div>

@@ -2,14 +2,30 @@
 <br /><br />
 <div class="panel">
     <div style="width:100%">
-        <ul>
+
           <!-- <li><a href="#" class="dismiss"> <i class="icon-arrow-left"></i>Close</a></li> -->
           <!-- Add To Playlist -->
-          <li><a href="#" class="js-enqueue"><i class="fi-plus"></i>&nbsp Queue</a></li>
-          <!-- Mark Played/Archive -->
-          <li><a href="#" class="js-archive"><i class="fi-archive"></i>&nbsp Archive</a></li>
-          <li><a href="#" class="js-favorite"><i class="fi-star"></i>&nbsp Favorite</a></li>
-        </ul>
+        <table width="225px;">
+            <tr>
+                <td class="js-enqueue">
+                    <a href="#" class="js-enqueue"><i class="fi-plus"></i></a>
+                    <br />
+                    <a href="#" class="js-enqueue">Queue</a>
+                </td>
+                <td>
+                    <a href="#" class="js-archive"><i class="fi-archive"></i> </a>
+                    <br />
+                    <a href="#" class="js-archive">Archive</a>
+                </td>
+                  <td>
+                    <a href="#" class="js-favorite"><i class="fi-star"></i></a>
+                    <br />
+                    <a href="#" class="js-favorite">Fav</a>
+                </td>
+
+            </tr>
+        </table>
+
         <!-- button class="button dismiss">
             <i class="icon-arrow-left"></i>Close
         </button> -->
