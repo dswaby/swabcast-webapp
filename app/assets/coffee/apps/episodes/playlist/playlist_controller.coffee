@@ -29,21 +29,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               playlistTracks = new View.Tracks(collection: tracks)
 
 
-            playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
-              console.log("playlist:enqueue recieved", model)
 
-              newTrack = model
-              tracks.add newTrack
-              playlistTracks.render()
-              if tracks.length is 0
-                Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
-              console.log(tracks.length)
-
-              if tracks.length == 0
-                newTrack = model
-                tracks.add newTrack
-                playlistTracks.render()
-                tracks.nowPlaying = newTrack  unless tracks.nowPlaying
 
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
 
@@ -58,8 +44,29 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               model.destroy()
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
+
+            #if not in playlist, copy attributes to playlistEpisode model
+            #TODO decouple the seperate models
+            unless inQueue
+              newTrack = new Swabcast.Entities.PlaylistEpisode(
+                uid: model.get("uid") or null
+                albumArt: model.parent.get("albumArt") or null
+                episodeTitle: model.get("episodeTitle") or null
+                feedUrl: model.parent.get("feedUrl") or null
+                episodeParent: model.parent.get("subscriptionTitle") or null
+                mediaUrl: model.get("mediaUrl") or null
+                enqueue: true
+                order: highestOrder or 1
+              )
+              tracks.add newTrack
+              newTrack.save()
+              Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
+              tracks.nowPlaying = newTrack  unless tracks.nowPlaying
+            else
+              console.log("maybe throw error?")
+
+
             playlistLayout.on "show", ->
-              console.log("Yoink")
               playlistLayout.playlistRegion.show playlistTracks
 
             playlistTracks.on "playlist:update", (childView, model) ->

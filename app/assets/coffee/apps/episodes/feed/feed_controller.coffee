@@ -50,8 +50,8 @@ define ["app", "apps/episodes/feed/feed_view",
       showFeedEpisodesById: (id) ->
         require ["common/view"], (CommonViews) ->
           loadingView = new CommonViews.Loading(
-            title: "Artificialy delaying this response"
-            message: "This is the view that will show if waiting for data"
+            title: "Finding Episode"
+            message: "Your data will load shortly"
           )
           Swabcast.libraryRegion.show loadingView
         #   return

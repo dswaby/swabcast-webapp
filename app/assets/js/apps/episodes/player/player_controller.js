@@ -168,7 +168,7 @@
               "player:playnow": function(episodeModel) {
                 var options, sourceUrl;
                 console.log("player:playnow", episodeModel);
-                sourceUrl = episodeModel.get("mediaUrl") || "";
+                sourceUrl = episodeModel.get("mediaUrl");
                 options = {};
                 options.preload = true;
                 self.playerControls.model.destroy();

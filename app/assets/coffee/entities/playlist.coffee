@@ -90,7 +90,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
             tracks.add newTrack
             newTrack.save()
             console.log(newTrack)
-            Swabcast.trigger "playlist:enqueue", newTrack
+            # Swabcast.trigger "playlist:enqueue", newTrack
             defer.resolve newTrack
           else
             defer.resolve "fail"
@@ -156,8 +156,8 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
       playerEpisode
       if episodes.at(0)
         playerEpisode = episodes.models[0]
-      require ["apps/episodes/player/player_controller"], (playerEpisode) ->
-        Swabcast.commands.execute "player:setepisode", playerEpisode
+      # require ["apps/episodes/player/player_controller"], (playerEpisode) ->
+        # Swabcast.commands.execute "player:setepisode", playerEpisode
         # console.log("setting first episode in playlist", episodes.at.(0))
 
 

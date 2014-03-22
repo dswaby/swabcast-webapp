@@ -157,7 +157,7 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
             "player:playnow": (episodeModel) ->
               console.log("player:playnow", episodeModel)
 
-              sourceUrl = episodeModel.get("mediaUrl") or ""
+              sourceUrl = episodeModel.get("mediaUrl")
 
               # audio options
               options = {}

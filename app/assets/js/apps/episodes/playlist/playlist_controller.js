@@ -9,7 +9,7 @@
             fetchingPlaylist = Swabcast.request("entities:playlist");
             playlistLayout = new View.Layout();
             $.when(fetchingPlaylist).done(function(tracks) {
-              var playlistTracks, self;
+              var newTrack, playlistTracks, self;
               self = this;
               if (typeof tracks.at(0) !== "undefined") {
                 this.nowPlaying = tracks.at(0);
@@ -26,27 +26,6 @@
                   collection: tracks
                 });
               }
-              playlistTracks.listenTo(Playlist, "playlist:enqueue", function(model) {
-                var newTrack;
-                console.log("playlist:enqueue recieved", model);
-                newTrack = model;
-                tracks.add(newTrack);
-                playlistTracks.render();
-                if (tracks.length === 0) {
-                  if (tracks.at(0) === newTrack) {
-                    Swabcast.commands.execute("player:setepisode", newTrack);
-                  }
-                }
-                console.log(tracks.length);
-                if (tracks.length === 0) {
-                  newTrack = model;
-                  tracks.add(newTrack);
-                  playlistTracks.render();
-                  if (!tracks.nowPlaying) {
-                    return tracks.nowPlaying = newTrack;
-                  }
-                }
-              });
               playlistTracks.on("itemview:episode:delete", function(childView, model) {
                 var modelUid;
                 if (typeof tracks.at(1) === "undefined" && tracks.length === 1) {
@@ -60,8 +39,29 @@
                 model.destroy();
                 return Swabcast.EpisodesApp.List.trigger("episode:removefromqueue", modelUid);
               });
+              if (!inQueue) {
+                newTrack = new Swabcast.Entities.PlaylistEpisode({
+                  uid: model.get("uid") || null,
+                  albumArt: model.parent.get("albumArt") || null,
+                  episodeTitle: model.get("episodeTitle") || null,
+                  feedUrl: model.parent.get("feedUrl") || null,
+                  episodeParent: model.parent.get("subscriptionTitle") || null,
+                  mediaUrl: model.get("mediaUrl") || null,
+                  enqueue: true,
+                  order: highestOrder || 1
+                });
+                tracks.add(newTrack);
+                newTrack.save();
+                if (tracks.at(0) === newTrack) {
+                  Swabcast.commands.execute("player:setepisode", newTrack);
+                }
+                if (!tracks.nowPlaying) {
+                  tracks.nowPlaying = newTrack;
+                }
+              } else {
+                console.log("maybe throw error?");
+              }
               playlistLayout.on("show", function() {
-                console.log("Yoink");
                 return playlistLayout.playlistRegion.show(playlistTracks);
               });
               return playlistTracks.on("playlist:update", function(childView, model) {

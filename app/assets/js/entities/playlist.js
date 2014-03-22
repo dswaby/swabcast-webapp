@@ -87,7 +87,6 @@
               tracks.add(newTrack);
               newTrack.save();
               console.log(newTrack);
-              Swabcast.trigger("playlist:enqueue", newTrack);
               return defer.resolve(newTrack);
             } else {
               return defer.resolve("fail");
@@ -159,11 +158,8 @@
         console.log("episodes", episodes.models[0]);
         playerEpisode;
         if (episodes.at(0)) {
-          playerEpisode = episodes.models[0];
+          return playerEpisode = episodes.models[0];
         }
-        return require(["apps/episodes/player/player_controller"], function(playerEpisode) {
-          return Swabcast.commands.execute("player:setepisode", playerEpisode);
-        });
       });
     });
   });

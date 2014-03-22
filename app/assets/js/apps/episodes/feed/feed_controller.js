@@ -64,8 +64,8 @@
           require(["common/view"], function(CommonViews) {
             var backButton, loadingView;
             loadingView = new CommonViews.Loading({
-              title: "Artificialy delaying this response",
-              message: "This is the view that will show if waiting for data"
+              title: "Finding Episode",
+              message: "Your data will load shortly"
             });
             Swabcast.libraryRegion.show(loadingView);
             backButton = new CommonViews.NavHelper({
