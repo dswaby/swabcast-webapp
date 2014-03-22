@@ -9,7 +9,7 @@
             fetchingPlaylist = Swabcast.request("entities:playlist");
             playlistLayout = new View.Layout();
             $.when(fetchingPlaylist).done(function(tracks) {
-              var newTrack, playlistTracks, self;
+              var playlistTracks, self;
               self = this;
               if (typeof tracks.at(0) !== "undefined") {
                 this.nowPlaying = tracks.at(0);
@@ -39,28 +39,40 @@
                 model.destroy();
                 return Swabcast.EpisodesApp.List.trigger("episode:removefromqueue", modelUid);
               });
-              if (!inQueue) {
-                newTrack = new Swabcast.Entities.PlaylistEpisode({
-                  uid: model.get("uid") || null,
-                  albumArt: model.parent.get("albumArt") || null,
-                  episodeTitle: model.get("episodeTitle") || null,
-                  feedUrl: model.parent.get("feedUrl") || null,
-                  episodeParent: model.parent.get("subscriptionTitle") || null,
-                  mediaUrl: model.get("mediaUrl") || null,
-                  enqueue: true,
-                  order: highestOrder || 1
+              playlistTracks.listenTo(Playlist, "playlist:enqueue", function(model) {
+                var addingTrack;
+                console.log("model recieved in playlist:enqueue", model);
+                addingTrack = Swabcast.request("playlist:addtoqueue", model);
+                return $.when(addingTrack).done(function(apiResponse) {
+                  var newTrack;
+                  console.log("@apiResponse", apiResponse);
+                  console.log("apiResponse", apiResponse);
+                  if (typeof apiResponse === "string") {
+                    console.log("we dun goofed");
+                    this.$el.toggleClass("danger-zone").fadeIn(400, function() {
+                      return setTimeout((function() {
+                        return $(this).toggleClass("danger-zone");
+                      }), 300);
+                    });
+                  }
+                  if (typeof apiResponse === "object") {
+                    console.log("we are in the green!");
+                    newTrack = _.clone(apiResponse);
+                    console.log("cloned newTrack", newTrack);
+                    newTrack = new Swabcast.Entities.QueuedEpisode(_.clone(apiResponse));
+                    tracks.add(newTrack);
+                    newTrack.save();
+                    if (tracks.at(0) === newTrack) {
+                      Swabcast.commands.execute("player:setepisode", newTrack);
+                    }
+                    if (!tracks.nowPlaying) {
+                      return tracks.nowPlaying = newTrack;
+                    }
+                  } else {
+                    throw Error("Error being returned from the playlist entity API, can not continue");
+                  }
                 });
-                tracks.add(newTrack);
-                newTrack.save();
-                if (tracks.at(0) === newTrack) {
-                  Swabcast.commands.execute("player:setepisode", newTrack);
-                }
-                if (!tracks.nowPlaying) {
-                  tracks.nowPlaying = newTrack;
-                }
-              } else {
-                console.log("maybe throw error?");
-              }
+              });
               playlistLayout.on("show", function() {
                 return playlistLayout.playlistRegion.show(playlistTracks);
               });

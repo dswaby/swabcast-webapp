@@ -28,9 +28,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               console.log("showing regular view")
               playlistTracks = new View.Tracks(collection: tracks)
 
-
-
-
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
 
               #if track that is about to be removed is at index 0
@@ -45,26 +42,48 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
 
-            #if not in playlist, copy attributes to playlistEpisode model
-            #TODO decouple the seperate models
-            unless inQueue
-              newTrack = new Swabcast.Entities.PlaylistEpisode(
-                uid: model.get("uid") or null
-                albumArt: model.parent.get("albumArt") or null
-                episodeTitle: model.get("episodeTitle") or null
-                feedUrl: model.parent.get("feedUrl") or null
-                episodeParent: model.parent.get("subscriptionTitle") or null
-                mediaUrl: model.get("mediaUrl") or null
-                enqueue: true
-                order: highestOrder or 1
-              )
-              tracks.add newTrack
-              newTrack.save()
-              Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
-              tracks.nowPlaying = newTrack  unless tracks.nowPlaying
-            else
-              console.log("maybe throw error?")
+            playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
+              ####################################
+              # DEBUGGING ONLY -- REMOVE THIS
+              ####################################
+              console.log("model recieved in playlist:enqueue", model)
+              addingTrack = Swabcast.request "playlist:addtoqueue", model
+              $.when(addingTrack).done (apiResponse) ->
+                console.log("@apiResponse", apiResponse)
+                console.log("apiResponse", apiResponse)
 
+                if typeof apiResponse == "string"
+                  # TODO - trigger error alert
+                  console.log("we dun goofed")
+
+                  @$el.toggleClass("danger-zone").fadeIn 400, ->
+                    setTimeout (->
+                      $(this).toggleClass "danger-zone"
+                    ), 300
+
+                if typeof apiResponse == "object"
+                  console.log("we are in the green!")
+                  # TODO - trigger success alert
+                  newTrack = _.clone(apiResponse)
+                  console.log("cloned newTrack", newTrack)
+                  #TODO decouple the seperate models
+                  newTrack = new Swabcast.Entities.QueuedEpisode( _.clone(apiResponse) )
+                  #   uid: apiResponse.get("uid") or null
+                  #   albumArt: apiResponse.parent.get("albumArt") or null
+                  #   episodeTitle: apiResponse.get("episodeTitle") or null
+                  #   feedUrl: apiResponse.parent.get("feedUrl") or null
+                  #   episodeParent: apiResponse.parent.get("subscriptionTitle") or null
+                  #   mediaUrl: apiResponse.get("mediaUrl") or null
+                  #   enqueue: true
+                  #   order: highestOrder or 1
+                  # )
+
+                  tracks.add newTrack
+                  newTrack.save()
+                  Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
+                  tracks.nowPlaying = newTrack  unless tracks.nowPlaying
+                else
+                  throw Error("Error being returned from the playlist entity API, can not continue")
 
             playlistLayout.on "show", ->
               playlistLayout.playlistRegion.show playlistTracks

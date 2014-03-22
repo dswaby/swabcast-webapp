@@ -35,33 +35,12 @@
           return this.trigger("dialog:close");
         },
         queueEpisode: function(e) {
-          var addToPlaylist, episodeElement;
           e.preventDefault();
           e.stopPropagation();
           this.$el.addClass("disabled");
           if (this.model.get("enqueue") === false) {
-            this.model.set({
-              enqueue: true
-            });
-            this.model.save();
-            addToPlaylist = Swabcast.request("playlist:addtoqueue", this.model);
-            episodeElement = this.$el;
-            $.when(addToPlaylist).done(function(apiResponse) {
-              if (typeof apiResponse === "string") {
-                console.log("we dun goofed");
-                episodeElement.toggleClass("danger-zone").fadeIn(400, function() {
-                  return setTimeout((function() {
-                    return $(this).toggleClass("danger-zone");
-                  }), 300);
-                });
-              }
-              if (typeof apiResponse === "object") {
-                Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.apiResponse);
-                return episodeElement.fadeOut("slow", function() {
-                  return $(this).fadeIn("slow");
-                });
-              }
-            });
+            Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.model);
+            this.model.set("enqueue", true);
           }
           return this.trigger("dialog:close");
         }
@@ -118,35 +97,14 @@
           return Swabcast.trigger("episode:details", this.model);
         },
         toggleQueue: function(e) {
-          var addToPlaylist, episodeElement;
           e.preventDefault();
           e.stopPropagation();
           this.$el.addClass("disabled");
           if (this.model.get("enqueue") === false) {
-            this.model.set({
-              enqueue: true
-            });
-            this.model.save();
-            addToPlaylist = Swabcast.request("playlist:addtoqueue", this.model);
-            episodeElement = this.$el;
-            $.when(addToPlaylist).done(function(apiResponse) {
-              if (typeof apiResponse === "string") {
-                console.log("we dun goofed");
-                episodeElement.toggleClass("danger-zone").fadeIn(400, function() {
-                  return setTimeout((function() {
-                    return $(this).toggleClass("danger-zone");
-                  }), 300);
-                });
-              }
-              if (typeof apiResponse === "object") {
-                Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.apiResponse);
-                return episodeElement.fadeOut("slow", function() {
-                  return $(this).fadeIn("slow");
-                });
-              }
-            });
-            return this.trigger("dialog:close");
+            Swabcast.EpisodesApp.Playlist.trigger("playlist:enqueue", this.model);
+            this.model.set("enqueue", true);
           }
+          return this.trigger("dialog:close");
         },
         previewAudio: function(e) {
           e.preventDefault();

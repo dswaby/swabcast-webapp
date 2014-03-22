@@ -36,20 +36,6 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
         ), 100
         defer.promise()
 
-      # getPlaylistEntities: ->
-      #   episodes = new Entities.Playlist()
-      #   defer = $.Deferred()
-      #   episodes.fetch success: (data) ->
-      #     defer.resolve data
-
-      #   promise = defer.promise()
-      #   $.when(promise).done (episodes) ->
-      #     if episodes.length is 0
-      #       models = initializeEpisodes()
-      #       episodes.reset models
-
-      #   promise
-
       getPlaylistEntities: ->
         queuedTracks = new Entities.Playlist()
         defer = $.Deferred()
@@ -79,17 +65,20 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
           unless inQueue
             newTrack = new Swabcast.Entities.QueuedEpisode(
               uid: model.get("uid") or null
-              albumArt: model.parent.get("albumArt") or null
-              episodeTitle: model.get("episodeTitle") or null
-              feedUrl: model.parent.get("feedUrl") or null
-              episodeParent: model.parent.get("subscriptionTitle") or null
+              albumArt: model.parent.get("albumArt") or "default.jpg"
+              episodeTitle: model.get("episodeTitle") or ""
+              feedUrl: model.parent.get("feedUrl") or ""
+              episodeParent: model.parent.get("subscriptionTitle") or ""
               mediaUrl: model.get("mediaUrl") or null
               enqueue: true
               order: highestOrder or 1
             )
             tracks.add newTrack
             newTrack.save()
-            console.log(newTrack)
+            ####################################
+            # DEBUGGING ONLY -- REMOVE THIS
+            ####################################
+            console.log("new track in playlist entity", newTrack)
             # Swabcast.trigger "playlist:enqueue", newTrack
             defer.resolve newTrack
           else
@@ -97,19 +86,19 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
         defer.promise()
 
 
-      firstInPlaylist: ->
-        queuedTracks = new Entities.Playlist()
-        defer = $.Deferred()
-        queuedTracks.fetch
-        success: (playlist) ->
-          episodes = playlist.get("episodes")
-          if episodes.length
-            defer.resolve episodes[0]
-          else
-            defer.resolve "undefined"
-        error: ->
-            defer.resolve "undefined"
-        defer.promise()
+      # firstInPlaylist: ->
+      #   queuedTracks = new Entities.Playlist()
+      #   defer = $.Deferred()
+      #   queuedTracks.fetch
+      #   success: (playlist) ->
+      #     episodes = playlist.get("episodes")
+      #     if episodes.length
+      #       defer.resolve episodes[0]
+      #     else
+      #       defer.resolve "undefined"
+      #   error: ->
+      #       defer.resolve "undefined"
+      #   defer.promise()
 
       #has to be a more efficient way of doing this
       updatePlaylistOrder: ->
@@ -138,8 +127,8 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
     Swabcast.reqres.setHandler "episode:playlist", ->
       API.getPlaylistEntities()
 
-    Swabcast.reqres.setHandler "playlist:first", ->
-      API.firstInPlaylist()
+    # Swabcast.reqres.setHandler "playlist:first", ->
+    #   API.firstInPlaylist()
 
     Swabcast.reqres.setHandler "playlist:addtoqueue", (model) ->
       API.addToPlaylist model

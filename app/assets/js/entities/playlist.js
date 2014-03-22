@@ -76,41 +76,20 @@
             if (!inQueue) {
               newTrack = new Swabcast.Entities.QueuedEpisode({
                 uid: model.get("uid") || null,
-                albumArt: model.parent.get("albumArt") || null,
-                episodeTitle: model.get("episodeTitle") || null,
-                feedUrl: model.parent.get("feedUrl") || null,
-                episodeParent: model.parent.get("subscriptionTitle") || null,
+                albumArt: model.parent.get("albumArt") || "default.jpg",
+                episodeTitle: model.get("episodeTitle") || "",
+                feedUrl: model.parent.get("feedUrl") || "",
+                episodeParent: model.parent.get("subscriptionTitle") || "",
                 mediaUrl: model.get("mediaUrl") || null,
                 enqueue: true,
                 order: highestOrder || 1
               });
               tracks.add(newTrack);
               newTrack.save();
-              console.log(newTrack);
+              console.log("new track in playlist entity", newTrack);
               return defer.resolve(newTrack);
             } else {
               return defer.resolve("fail");
-            }
-          });
-          return defer.promise();
-        },
-        firstInPlaylist: function() {
-          var defer, queuedTracks;
-          queuedTracks = new Entities.Playlist();
-          defer = $.Deferred();
-          queuedTracks.fetch;
-          ({
-            success: function(playlist) {
-              var episodes;
-              episodes = playlist.get("episodes");
-              if (episodes.length) {
-                return defer.resolve(episodes[0]);
-              } else {
-                return defer.resolve("undefined");
-              }
-            },
-            error: function() {
-              return defer.resolve("undefined");
             }
           });
           return defer.promise();
@@ -144,9 +123,6 @@
       });
       Swabcast.reqres.setHandler("episode:playlist", function() {
         return API.getPlaylistEntities();
-      });
-      Swabcast.reqres.setHandler("playlist:first", function() {
-        return API.firstInPlaylist();
       });
       Swabcast.reqres.setHandler("playlist:addtoqueue", function(model) {
         return API.addToPlaylist(model);

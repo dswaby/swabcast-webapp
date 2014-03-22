@@ -24,10 +24,6 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
               self.audioPlayer.setPosition = options.currentPosition
               self.audioPlayer.audio.load()
 
-          # @getDefaultOptions = ->
-          #   options = {}
-          #   options.currentPosition = playerData.get("currentPosition")
-
           @removeCurrentAudio = ->
             self.audioPlayer.clearAudio()
 
