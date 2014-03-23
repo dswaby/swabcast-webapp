@@ -1,0 +1,1840 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"butt",
+				"buttonText"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"con",
+				"configureStorage"
+			],
+			[
+				"t",
+				"transmit"
+			],
+			[
+				"model",
+				"models"
+			],
+			[
+				"mode",
+				"models"
+			],
+			[
+				"feed",
+				"Feeds"
+			],
+			[
+				"jasmine-ht",
+				"jasmine-html"
+			],
+			[
+				"jasm",
+				"jasmineEnv"
+			],
+			[
+				"jas",
+				"jasmine"
+			],
+			[
+				"win",
+				"winWidth"
+			],
+			[
+				"epi",
+				"episode"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"episo",
+				"episodes-list"
+			],
+			[
+				"episodes",
+				"EpisodesApp"
+			],
+			[
+				"dia",
+				"dialogRegion"
+			],
+			[
+				"pat",
+				"pathArray"
+			],
+			[
+				"enti",
+				"entities"
+			],
+			[
+				"showPl",
+				"showPlaylistView"
+			],
+			[
+				"track",
+				"tracklist"
+			],
+			[
+				"episod",
+				"episode"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"co",
+				"copy"
+			],
+			[
+				"req",
+				"requirejs"
+			],
+			[
+				"S",
+				"SwabcastSpec"
+			],
+			[
+				"defaul",
+				"defaultPlayerData"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"to",
+				"toEqual"
+			],
+			[
+				"l",
+				"log	log"
+			],
+			[
+				"def",
+				"defer"
+			],
+			[
+				"epis",
+				"episodes"
+			],
+			[
+				"retu",
+				"returnData"
+			],
+			[
+				"new",
+				"newplayerdata"
+			],
+			[
+				"nex",
+				"nextInQueue"
+			],
+			[
+				"next",
+				"nextinq"
+			],
+			[
+				"ep",
+				"episode"
+			],
+			[
+				"play",
+				"playlist"
+			],
+			[
+				"p",
+				"playlist"
+			],
+			[
+				"url",
+				"urlRoot"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"e",
+				"extend"
+			],
+			[
+				"jasmine",
+				"jasmine-html"
+			],
+			[
+				"b",
+				"body"
+			],
+			[
+				"load",
+				"loadNpmTasks"
+			],
+			[
+				"wod",
+				"WorldWideWidget"
+			],
+			[
+				"de",
+				"defaults"
+			],
+			[
+				"wor",
+				"worldwideUrl"
+			],
+			[
+				"w",
+				"worldwide"
+			],
+			[
+				"all",
+				"allRegionsUrl"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"is",
+				"isValid"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"form",
+				"form-box"
+			],
+			[
+				"lostIt",
+				"lostItemUrl"
+			],
+			[
+				"item",
+				"itemOne"
+			],
+			[
+				"los",
+				"lostItem"
+			],
+			[
+				"spal",
+				"splash-subhead"
+			],
+			[
+				"fa",
+				"fadeOut"
+			],
+			[
+				"ret",
+				"returnStates"
+			],
+			[
+				"coun",
+				"countryId"
+			],
+			[
+				"initia",
+				"initialize"
+			],
+			[
+				"Word",
+				"WorldWideWidget"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fad",
+				"fadeOut"
+			],
+			[
+				"wel",
+				"welcome-text"
+			],
+			[
+				"fade",
+				"fadeToggle"
+			],
+			[
+				"im",
+				"image"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"appl",
+				"Application"
+			],
+			[
+				"au",
+				"authToken"
+			],
+			[
+				"sub",
+				"subscription"
+			],
+			[
+				"Sub",
+				"Subscribed"
+			],
+			[
+				"cu",
+				"customRSS"
+			],
+			[
+				"pu",
+				"public1"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"main",
+				"mainView"
+			],
+			[
+				"dep",
+				"deploytemp"
+			],
+			[
+				"sass",
+				"sass-cache"
+			],
+			[
+				"pub",
+				"public2"
+			],
+			[
+				"showF",
+				"showFull"
+			],
+			[
+				"playlis",
+				"playlistLayout"
+			],
+			[
+				"border",
+				"table-border-style"
+			],
+			[
+				"reg",
+				"registerTask"
+			],
+			[
+				"num",
+				"numberOfEpisodes"
+			],
+			[
+				"Subsc",
+				"SubscriptionsApp"
+			],
+			[
+				"subs",
+				"subscription"
+			],
+			[
+				"coffe",
+				"coffeescript"
+			],
+			[
+				"subsct",
+				"subscription"
+			],
+			[
+				"subscr",
+				"subscription"
+			],
+			[
+				"liv",
+				"livereload"
+			],
+			[
+				"side",
+				"sidebar"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"pl",
+				"playerData"
+			],
+			[
+				"view",
+				"viewData"
+			],
+			[
+				"episode",
+				"episodeModel"
+			],
+			[
+				"pla",
+				"playerData"
+			],
+			[
+				"sour",
+				"sourcUrl"
+			],
+			[
+				"rese",
+				"resetAudio"
+			],
+			[
+				"aud",
+				"audio"
+			],
+			[
+				"cle",
+				"clearAudio"
+			],
+			[
+				"upd",
+				"updateData"
+			],
+			[
+				"defa",
+				"defaultPlayerData"
+			],
+			[
+				"default",
+				"defaultData"
+			],
+			[
+				"sy",
+				"syncData"
+			],
+			[
+				"albu",
+				"albumArt"
+			],
+			[
+				"curre",
+				"currentPosition"
+			],
+			[
+				"log",
+				"logAudioInfo"
+			],
+			[
+				"ar",
+				"arg1"
+			],
+			[
+				"set",
+				"setHandler"
+			],
+			[
+				"ex",
+				"execute"
+			],
+			[
+				"com",
+				"commands"
+			],
+			[
+				"fetc",
+				"fetchingPlaylist"
+			],
+			[
+				"EP",
+				"EpisodesApp"
+			],
+			[
+				"cur",
+				"currentModel"
+			],
+			[
+				"trac",
+				"tracks"
+			],
+			[
+				"now",
+				"nowPlaying"
+			],
+			[
+				"initial",
+				"initializePlayer"
+			],
+			[
+				"Pl",
+				"Player"
+			],
+			[
+				"getP",
+				"getPlayerData"
+			],
+			[
+				"defe",
+				"Deferred"
+			],
+			[
+				"save",
+				"saveData"
+			],
+			[
+				"sav",
+				"saveData"
+			],
+			[
+				"deb",
+				"debugging"
+			],
+			[
+				"up",
+				"updateState"
+			],
+			[
+				"players",
+				"playerSaveData"
+			],
+			[
+				"promi",
+				"promise"
+			],
+			[
+				"playerD",
+				"playerSaveData"
+			],
+			[
+				"initi",
+				"initializeSaveData"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "swabcast.sublime-project",
+			"settings":
+			{
+				"buffer_size": 241,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+			[
+				"cof",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"ch",
+				"ChangeQuotes"
+			],
+			[
+				"for",
+				"Format Code"
+			],
+			[
+				"form",
+				"Format Code"
+			],
+			[
+				"syn coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"chan",
+				"ChangeQuotes"
+			],
+			[
+				"quo",
+				"ChangeQuotes"
+			],
+			[
+				"coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"forma",
+				"Format Code"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"cha",
+				"ChangeQuotes"
+			],
+			[
+				"grun",
+				"Grunt"
+			],
+			[
+				"gru",
+				"Grunt"
+			],
+			[
+				"grunt",
+				"Grunt"
+			],
+			[
+				"gr",
+				"Grunt"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"clea",
+				"JSHint: Clear Annotations"
+			],
+			[
+				"jsh",
+				"JSHint: Set Linting Preferences"
+			],
+			[
+				"js",
+				"JSHint: Set Plugin Options"
+			],
+			[
+				"syn js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syn ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"c",
+				"ChangeQuotes"
+			],
+			[
+				"",
+				"ANF: New File"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"fo",
+				"Format Code"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"repos",
+				"Package Control: Add Repository"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"lnt",
+				"JSHint: Set Linting Preferences"
+			],
+			[
+				"syn j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jshin",
+				"JSHint"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"syn c",
+				"Set Syntax: C#"
+			],
+			[
+				"syn ",
+				"Set Syntax: C#"
+			],
+			[
+				"han",
+				"Set Syntax: HTML (Erlang)"
+			],
+			[
+				"syn co",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"prefere",
+				"Preferences: Settings - User"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"disa",
+				"Package Control: Discover Packages"
+			],
+			[
+				"prett",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"sy co",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"chg",
+				"ChangeQuotes"
+			],
+			[
+				"j",
+				"JSHint"
+			],
+			[
+				"syn jso",
+				"Set Syntax: JSON"
+			],
+			[
+				"add r",
+				"Package Control: Add Repository"
+			],
+			[
+				"previ",
+				"Strapdown.js Markdown: Preview in Sublime Text"
+			],
+			[
+				"preview",
+				"Strapdown.js Markdown: Preview in a browser"
+			],
+			[
+				"mar",
+				"Strapdown.js Markdown: Preview in Sublime Text"
+			],
+			[
+				"syn ht",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"sho",
+				"Snippet: hover"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"bh",
+				"BracketHighlighter: Toggle High Visibility Mode"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"defa",
+				"Preferences: Settings - Default"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"scop",
+				"Scope Hunter: Show Scope Under Cursor(s)"
+			],
+			[
+				"di",
+				"Package Control: Disable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"sy j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"fe",
+				"Fetch: File"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"disco",
+				"Package Control: Discover Packages"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"pref",
+				"Preferences: Settings - Default"
+			],
+			[
+				"sy",
+				"Set Syntax: HTML"
+			],
+			[
+				"sy ht",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"syt h",
+				"Set Syntax: HTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"to",
+				"View: Toggle Minimap"
+			],
+			[
+				"toggl",
+				"View: Toggle Minimap"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"syn bas",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"list ",
+				"Package Control: List Packages"
+			],
+			[
+				"ali",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 647.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/feed/feed_view.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/feed/feed_controller.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/static_feeds",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/entities/feed.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/entities/feed.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/docs/feed_view.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/docs/feed_controller.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/SpecRunner.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/common/views.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/dist/css/combined.min.css",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/bower_components/modernizr/feature-detects/css-objectfit.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/config.rb",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/docs/foundation.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/css/svgs/fi-arrows-out.svg",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/entities/playlist.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/playlist/playlist_controller.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/entities/player.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/scss/app.scss",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/common/view.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/common/modal.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/common/templates/notification_box.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/common/templates/notification_box.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/show/templates/feature_not_implemented.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/nav/templates/nav_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/list/list_controller.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/common/templates/loadingView.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/common/utils.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/css/svgs/fi-comment-quotes.svg",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/css/svgs/fi-comment.svg",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/episodes_app.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/list/templates/episode_list.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/list/templates/episode_list.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/show/templates/episode_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/feed/templates/episode_detailed_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/episodes_app.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/feed/templates/feed_detailed_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/show/templates/feed_detailed.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/show/templates/episode_item_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/show/templates/feed_episodes.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/feed/templates/feed_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/show/templates/episode_detailed_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/show/show_view.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/feed/templates/feed_detailed_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/show/templates/feed_detailed.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/docs/feed.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/feed/templates/episode_detailed_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/show/templates/episode_item_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/list/templates/episode_list_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/list/templates/episode_list_panel.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/list/templates/episode_list_layout.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/list/templates/episode_list_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/list/templates/episode_list_panel.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/list/templates/episode_list_layout.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/bower_components/foundation/js/foundation/foundation.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/bower_components/foundation/.bower.json",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/require_main.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/bower_components/foundation/scss/foundation/components/_type.scss",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast.sublime-project",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/scss/_settings.scss",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/.sass-cache/ace7585534c13bf6bda890d38ab9643d03879404/_settings.scssc",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/.sass-cache/bf5fc375420c6f36f18b39d0391ae07a2b2d475e/_settings.scssc",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/.sass-cache/ace7585534c13bf6bda890d38ab9643d03879404/_settings.scssc",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/TODO.md",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/.sass-cache/fbd8cc81de90acd8438b9eddb713855a8753e2d5/_type.scssc",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/app.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/dist/cached.manifest",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/config/marionette/regions/dialog.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/index-template.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/show/show_controller.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/subscriptions/show/show_controller.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/show/show_controller.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/subscriptions/show/show_controller.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/common/view.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/vendor/jquery.transmit.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/bower_components/jquery/src/traversing.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/require_main.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/docs/backbone.syphon.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/show/feed_episodes.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/docs/views.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/docs/view.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/app.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/css/app.css",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/tests/feed.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/Gruntfile.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/test/jasmine/spec/PlayerSpec.js",
+		"/Users/danny/Desktop/PlayerSpec.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/test/jasmine/spec/FeedSpec.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/test/jasmine/spec/SpecHelper.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/SpecRunner.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/SpecRunner.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/docs/SpecRunner.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/vendor/jasmine.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/docs/jasmine-html.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/lib/jasmine-1.3.1/jasmine.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/lib/jasmine-1.3.1/jasmine.css",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/docs/jasmine.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/css/jasmine.css",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/vendor/sinon/jasmine-sinon.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/bower_components/modernizr/feature-detects/css-backgroundposition-xy.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/server/app.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/intern/node_modules/dojo/tests/intern.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/tests/intern.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/Web Content/js/utils/collections.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/Web Content/js/utilstest/collections.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/.bin/intern-client",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/.bin/intern-runner",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/intern/bin/intern-runner.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/intern/bin/intern-client.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/feed/feed_view.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/apps/episodes/feed/templates/feed_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/grunt-express-server/test/server.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/intern/node_modules/wd/browser-scripts/safe-execute.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/vendor/foundation.fastclick.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/r.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/intern/node_modules/dojo/errors/RequestError.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/SpecRunner.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/test/jasmine/FeedSpec.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/test/FeedSpec.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/node_modules/grunt-requirejs/tasks/require.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/dist/require_main_built.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/js/vendor/backbone.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/css/svgs/fi-social-windows.svg",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/bower_components/jquery/src/css/swap.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/index.html",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/test/PlayerSpec.js",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/playlist/playlist_view.coffee",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/apps/episodes/playlist/templates/playlist_item_view.tpl",
+		"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee/require_test_config.coffee"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/coffee",
+			"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/",
+			"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/",
+			"/Volumes/HDD/SymLinks/Dropbox/swabcast/app/assets/mp3",
+			"<open folders>",
+			"/Users/danny/Desktop/marionetteApp/public/assets/js/apps,/Users/danny/Desktop/marionetteApp/public/assets/js/common,/Users/danny/Desktop/marionetteApp/public/assets/js/entities",
+			"<open folders>",
+			"",
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".fi-star",
+			"js-view-detail",
+			"authors",
+			"feed-head",
+			"$primary-color",
+			"$anchor-font-color",
+			"link",
+			"type",
+			"episodesummary",
+			"episode-summary",
+			"Montserrat",
+			"font",
+			"js-feed-details",
+			"FeedLibraryView",
+			"jasmine",
+			"foundation",
+			"\n        ",
+			"console.log",
+			"\"id\"",
+			"true        \n ",
+			"mp3\"\n",
+			"\"mediaUrl\": ",
+			"archived",
+			"albumArt",
+			"shoptalkshow",
+			"javascriptjabber",
+			"albumArt",
+			"nitch",
+			"albumArt",
+			"\"subscriptionTitle\":",
+			"\"subscriptionTitle\": \"J",
+			"ruby r",
+			"\"homeUrl\": \"ht",
+			"\"homeUrl\": ",
+			"\"_id\"",
+			"updatedAt",
+			"      updatedAt:",
+			"      subscriptionTitle: ",
+			"      feedUrl:",
+			"      homeUrl: ",
+			"homeUrl",
+			"homeUrl:",
+			"homeUrl: \"",
+			"_id: ",
+			"__id:",
+			"_id",
+			"i_d",
+			"        \n          \"uid\":",
+			"title: \"",
+			"        \n          \"uid\"",
+			"lookup: \"https://player.f",
+			"          duration:",
+			"          size: ",
+			"          publishedAt:",
+			"          id: ",
+			"          mediaUrl:",
+			"explicit:",
+			"episodeTitle:",
+			"episodeSummary: \"",
+			"albumArt: \"",
+			"episodes: [",
+			" {",
+			"}\n    {",
+			"}\n        {",
+			"{",
+			"homeUrl",
+			"\"homeUrl\":",
+			"   }]",
+			"\"homeUrl\":",
+			"\"homeUrl\": ",
+			"\"homeUrl\":",
+			" \"homeUrl\": ",
+			",}]",
+			"}]",
+			" }]",
+			"}]",
+			"]",
+			"}]",
+			"albumArt",
+			" false \"title\"",
+			"homeUrl",
+			"null \"episodeTitle\"",
+			" null \"title\": ",
+			"\"\n ",
+			"mp3\"\n   ",
+			"true \"episodeTitl",
+			"\"rawTitle\": ",
+			" \"url\": ",
+			"\"description\": ",
+			"\"title\"",
+			" \"mediaUrl\":",
+			"false \"episodeTitle\"",
+			" \"type\": \"episode\",",
+			"} {",
+			"albumArt",
+			"title:",
+			" \"authors\":",
+			"title:",
+			"title",
+			"title:",
+			"duration:",
+			"sequence:",
+			"episodes:",
+			"publishedAt:",
+			"description: \"",
+			"rawTitle:",
+			"episodeTitle",
+			" updatedAt: ",
+			"\"homeUrl\"",
+			"\"feedUrl\":",
+			"image\"mediaUrl",
+			"\"subscriptionTitle\"",
+			" home: ",
+			"author:",
+			"subscriptionTitle",
+			"updatedAt:",
+			"title:",
+			"rawTitle:",
+			"title: ",
+			"rawTitle:",
+			"explicit:",
+			"url:",
+			"id: ",
+			"}]",
+			"    \"nextEpisodesLookup\": \"",
+			"# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #\nSTART\n# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # ",
+			"    \n\n    ",
+			"\"stats\": {\n    },"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "swabcast.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 92.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.scope_viewer":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"project": "swabcast.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"feed",
+				"app/assets/coffee/apps/episodes/feed/feed_controller.coffee"
+			],
+			[
+				"missing_episode",
+				"app/assets/coffee/apps/episodes/show/templates/missing_episode.tpl"
+			],
+			[
+				"episode_item_view",
+				"app/assets/coffee/apps/episodes/show/templates/episode_item_view.tpl"
+			],
+			[
+				"sho",
+				"app/assets/coffee/apps/episodes/show/show_view.coffee"
+			],
+			[
+				"vi",
+				"app/assets/coffee/common/view.coffee"
+			],
+			[
+				"view",
+				"app/assets/coffee/common/views.coffee"
+			],
+			[
+				"common",
+				"app/assets/coffee/common/view.coffee"
+			],
+			[
+				"found",
+				"dist/css/foundation-icons.css"
+			],
+			[
+				"app",
+				"app/assets/scss/app.scss"
+			],
+			[
+				"playlistcon",
+				"app/assets/coffee/apps/episodes/playlist/playlist_controller.coffee"
+			],
+			[
+				"inde",
+				"app/index-template.html"
+			],
+			[
+				"app.co",
+				"app/assets/coffee/app.coffee"
+			],
+			[
+				"epis",
+				"app/assets/coffee/apps/episodes/episodes_app.coffee"
+			],
+			[
+				"commonvi",
+				"app/assets/coffee/common/views.coffee"
+			],
+			[
+				"load",
+				"app/assets/coffee/common/templates/loadingView.tpl"
+			],
+			[
+				"views",
+				"app/assets/coffee/common/views.coffee"
+			],
+			[
+				"loadingview",
+				"app/assets/coffee/common/templates/loadingView.tpl"
+			],
+			[
+				"_se",
+				"app/assets/scss/_settings.scss"
+			],
+			[
+				"show",
+				"app/assets/coffee/apps/episodes/show/show_view.coffee"
+			],
+			[
+				"episodeit",
+				"app/assets/coffee/apps/episodes/show/templates/episode_item_view.tpl"
+			],
+			[
+				"feedde",
+				"app/assets/coffee/apps/episodes/feed/templates/feed_detailed_view.tpl"
+			],
+			[
+				"episodeli",
+				"app/assets/coffee/apps/episodes/show/templates/episode_detailed_view.tpl"
+			],
+			[
+				"app.c",
+				"app/assets/coffee/app.coffee"
+			],
+			[
+				"feedcon",
+				"app/assets/coffee/apps/episodes/feed/feed_controller.coffee"
+			],
+			[
+				"sett",
+				"app/assets/scss/_settings.scss"
+			],
+			[
+				"settings.sc",
+				"app/assets/scss/_settings.scss"
+			],
+			[
+				"app.sc",
+				"app/assets/scss/app.scss"
+			],
+			[
+				"app.cof",
+				"app/assets/coffee/app.coffee"
+			],
+			[
+				"dial",
+				"app/assets/coffee/apps/config/marionette/regions/dialog.coffee"
+			],
+			[
+				"in",
+				"app/index-template.html"
+			],
+			[
+				"showv",
+				"app/assets/coffee/apps/episodes/show/show_view.coffee"
+			],
+			[
+				"playlist",
+				"app/assets/coffee/entities/playlist.coffee"
+			],
+			[
+				"requi",
+				"app/assets/coffee/require_main.coffee"
+			],
+			[
+				"requirem",
+				"app/assets/coffee/require_main.coffee"
+			],
+			[
+				"showfeed",
+				"app/assets/js/apps/episodes/show/feed_episodes.tpl"
+			],
+			[
+				"feed.c",
+				"app/assets/coffee/entities/feed.coffee"
+			],
+			[
+				"backbone.syphon",
+				"app/assets/docs/backbone.syphon.html"
+			],
+			[
+				"views.c",
+				"app/assets/coffee/common/views.coffee"
+			],
+			[
+				"app.coff",
+				"app/assets/coffee/app.coffee"
+			],
+			[
+				"apps/episodes/show/show_view",
+				"app/assets/coffee/apps/episodes/show/show_view.coffee"
+			],
+			[
+				"feedcontr",
+				"app/assets/coffee/apps/episodes/feed/feed_controller.coffee"
+			],
+			[
+				"spec",
+				"test/jasmine/spec/PlayerSpec.js"
+			],
+			[
+				"feed.co",
+				"app/assets/coffee/entities/feed.coffee"
+			],
+			[
+				"gr",
+				"Gruntfile.js"
+			],
+			[
+				"inter",
+				"tests/intern.js"
+			],
+			[
+				"feedview",
+				"app/assets/coffee/apps/episodes/feed/feed_view.coffee"
+			],
+			[
+				"feedc",
+				"app/assets/coffee/apps/episodes/feed/feed_controller.coffee"
+			],
+			[
+				"fee",
+				"app/assets/coffee/entities/feed.coffee"
+			],
+			[
+				"serv/ap",
+				"server/app.js"
+			],
+			[
+				"specrunn",
+				"app/assets/coffee/SpecRunner.coffee"
+			],
+			[
+				"specr",
+				"app/SpecRunner.html"
+			],
+			[
+				"spe",
+				"app/SpecRunner.html"
+			],
+			[
+				"requirete",
+				"app/assets/coffee/require_test_config.coffee"
+			],
+			[
+				"requirema",
+				"app/assets/coffee/require_main.coffee"
+			],
+			[
+				"req",
+				"app/assets/js/require_main.js"
+			],
+			[
+				"specru",
+				"app/SpecRunner.html"
+			],
+			[
+				"dialog",
+				"app/assets/coffee/apps/config/marionette/regions/dialog.coffee"
+			],
+			[
+				"episodeitemv",
+				"app/assets/coffee/apps/episodes/show/templates/episode_item_view.tpl"
+			],
+			[
+				"app.scs",
+				"app/assets/scss/app.scss"
+			],
+			[
+				"playli",
+				"app/assets/coffee/apps/episodes/playlist/playlist_controller.coffee"
+			],
+			[
+				"index",
+				"index-template.html"
+			],
+			[
+				"playlistcontr",
+				"app/assets/coffee/apps/episodes/playlist/playlist_controller.coffee"
+			],
+			[
+				"playlist.coff",
+				"app/assets/coffee/apps/episodes/playlist/playlist_view.coffee"
+			],
+			[
+				"play",
+				"app/assets/coffee/entities/playlist.coffee"
+			],
+			[
+				"test/",
+				"test/PlayerSpec.js"
+			],
+			[
+				"episisodesap",
+				"app/assets/coffee/apps/episodes/episodes_app.coffee"
+			],
+			[
+				"showvi",
+				"app/assets/coffee/apps/episodes/show/show_view.coffee"
+			],
+			[
+				"ser",
+				"server/app.js"
+			],
+			[
+				"feed.",
+				"app/assets/js/entities/feed.js"
+			],
+			[
+				"modern",
+				"dist/js/vendor/modernizr.js"
+			],
+			[
+				"grun",
+				"Gruntfile.js"
+			],
+			[
+				"showview",
+				"app/assets/coffee/apps/episodes/show/show_view.coffee"
+			],
+			[
+				"detail",
+				"app/assets/coffee/apps/episodes/show/templates/episode_detailed_view.tpl"
+			],
+			[
+				"modal",
+				"app/assets/coffee/common/modal.coffee"
+			],
+			[
+				"episodedet",
+				"app/assets/coffee/apps/episodes/show/templates/episode_detailed_view.tpl"
+			],
+			[
+				"deta",
+				"app/assets/coffee/apps/episodes/show/templates/feed_detailed.tpl"
+			],
+			[
+				"li",
+				"app/assets/coffee/apps/episodes/list/list_controller.coffee"
+			],
+			[
+				"playlist_layout",
+				"app/assets/coffee/apps/episodes/playlist/templates/playlist_layout.tpl"
+			],
+			[
+				"apps/episodes/playlist/playlist_view",
+				"app/assets/coffee/apps/episodes/playlist/playlist_view.coffee"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"feedv",
+				"assets/coffee/apps/episodes/feed/templates/feed_view.tpl"
+			],
+			[
+				"episodes",
+				"assets/coffee/apps/episodes/episodes_app.coffee"
+			],
+			[
+				"app.scss",
+				"assets/scss/app.scss"
+			],
+			[
+				"nav",
+				"assets/coffee/apps/episodes/nav/templates/nav_view.tpl"
+			],
+			[
+				"feeddet",
+				"app/assets/coffee/apps/episodes/show/templates/feed_detailed.tpl"
+			],
+			[
+				"app.css",
+				"app/assets/css/app.css"
+			],
+			[
+				"det",
+				"app/assets/coffee/apps/episodes/feed/templates/episode_detailed_view.tpl"
+			],
+			[
+				"feedepi",
+				"app/assets/js/apps/episodes/show/feed_episodes.tpl"
+			],
+			[
+				"_sett",
+				"app/assets/scss/_settings.scss"
+			],
+			[
+				"jquery-ui-1.10.0.custom.css",
+				"app/assets/css/jquery-ui-1.10.0.custom.css"
+			],
+			[
+				"detailed",
+				"app/assets/coffee/apps/episodes/show/templates/feed_detailed.tpl"
+			],
+			[
+				"playlist.tpl",
+				"app/assets/coffee/apps/episodes/playlist/templates/playlist_item_view.tpl"
+			],
+			[
+				"play.tpl",
+				"app/assets/coffee/apps/episodes/playlist/templates/playlist_item_view.tpl"
+			],
+			[
+				"playlistc",
+				"app/assets/coffee/apps/episodes/playlist/playlist_controller.coffee"
+			],
+			[
+				"playlisyi",
+				"app/assets/coffee/apps/episodes/playlist/templates/playlist_item_view.tpl"
+			],
+			[
+				"",
+				"app/assets/scss/app.scss"
+			],
+			[
+				"episi",
+				"app/assets/coffee/apps/episodes/show/templates/episode_item_view.tpl"
+			],
+			[
+				"playercon",
+				"app/assets/coffee/apps/episodes/player/player_controller.coffee"
+			],
+			[
+				"pla",
+				"app/assets/coffee/entities/player.coffee"
+			],
+			[
+				"playervi",
+				"app/assets/coffee/apps/episodes/player/player_view.coffee"
+			],
+			[
+				"episodeiote",
+				"app/assets/coffee/apps/episodes/show/templates/episode_item_view.tpl"
+			],
+			[
+				"feed_epi",
+				"app/assets/js/apps/episodes/show/feed_episodes.tpl"
+			],
+			[
+				"fea",
+				"app/assets/coffee/apps/episodes/show/templates/feature_not_implemented.tpl"
+			],
+			[
+				"playlis",
+				"app/assets/coffee/apps/episodes/playlist/playlist_controller.coffee"
+			],
+			[
+				"player.tp",
+				"app/assets/coffee/apps/episodes/player/templates/player_view.tpl"
+			],
+			[
+				"playtpl",
+				"app/assets/coffee/apps/episodes/playlist/templates/playlist_item_view.tpl"
+			],
+			[
+				"na",
+				"app/assets/coffee/apps/episodes/nav/templates/nav_view.tpl"
+			],
+			[
+				"plau",
+				"app/assets/coffee/apps/episodes/playlist/templates/playlist_layout.tpl"
+			],
+			[
+				"episode_item_",
+				"app/assets/coffee/apps/episodes/show/templates/episode_item_view.tpl"
+			],
+			[
+				"episode",
+				"app/assets/coffee/apps/episodes/episodes_app.coffee"
+			],
+			[
+				"episod",
+				"app/assets/coffee/apps/episodes/episodes_app.coffee"
+			],
+			[
+				"jquerycs",
+				"app/assets/css/jquery-ui-1.10.0.custom.css"
+			],
+			[
+				"feedviewt",
+				"app/assets/coffee/apps/episodes/feed/templates/feed_view.tpl"
+			],
+			[
+				"feat",
+				"app/assets/coffee/apps/episodes/show/templates/feature_not_implemented.tpl"
+			],
+			[
+				"buil",
+				"app/assets/coffee/build.js"
+			],
+			[
+				"jqu",
+				"dist/css/jquery-ui-1.10.0.custom.css"
+			],
+			[
+				"pl",
+				"app/assets/coffee/entities/playlist.coffee"
+			],
+			[
+				"notimp",
+				"app/assets/coffee/apps/episodes/show/templates/feature_not_implemented.tpl"
+			],
+			[
+				"feedcontro",
+				"app/assets/coffee/apps/episodes/feed/feed_controller.coffee"
+			],
+			[
+				"feeddetailedtpl",
+				"app/assets/coffee/apps/episodes/show/templates/feed_detailed.tpl"
+			],
+			[
+				"showcon",
+				"app/assets/coffee/apps/episodes/show/show_controller.coffee"
+			],
+			[
+				"episo",
+				"app/assets/coffee/apps/episodes/episodes_app.coffee"
+			],
+			[
+				"feedco",
+				"app/assets/coffee/apps/episodes/feed/feed_controller.coffee"
+			],
+			[
+				"episodesapp",
+				"app/assets/coffee/apps/episodes/episodes_app.coffee"
+			],
+			[
+				"apps/episodes/show/templates/feed_detailed.tpl",
+				"app/assets/coffee/apps/episodes/show/templates/feed_detailed.tpl"
+			],
+			[
+				"di",
+				"app/assets/coffee/apps/config/marionette/regions/dialog.coffee"
+			],
+			[
+				"apps/episodes/show/templates/missing_episode.tpl",
+				"app/assets/coffee/apps/episodes/show/templates/missing_episode.tpl"
+			],
+			[
+				"feed.coff",
+				"app/assets/coffee/entities/feed.coffee"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

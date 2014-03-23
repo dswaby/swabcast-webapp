@@ -8,3 +8,6 @@ app/assets/bower_components/*
 dist
 dist/*
 app/assets/foundation_icons/
+app/assets/js
+app/assets/js/
+app/assets/js/*
