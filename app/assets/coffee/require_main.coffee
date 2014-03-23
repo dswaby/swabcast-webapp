@@ -13,6 +13,7 @@ requirejs.config
     json2: "vendor/json2"
     foundation: "vendor/foundation"
     fastclick: "vendor/fastclick"
+    toastr: "./../bower_components/toastr/toastr.min"
     # transit: "vendor/jquery.transit"
 
 
@@ -38,6 +39,9 @@ requirejs.config
 
     fastclick:
       exports: ["FastClick"]
+
+    toastr:
+      deps: ["jquery"]
 
     localstorage: ["backbone"]
 
@@ -72,7 +76,6 @@ requirejs [
     $doc = $(document)
     Modernizr = window.Modernizr
     $(document).foundation()
-
   ) $, window
   return
 
