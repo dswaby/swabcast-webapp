@@ -80,8 +80,8 @@ define ["app",
         "click td.js-view-detail": "showClicked"
         "click a.js-preview-audio": "previewAudio"
 
-      onBeforeRender: ->
-
+      onRender: ->
+        window.scrollTo(0,0)
       initialize: ->
 
       templateHelpers:
