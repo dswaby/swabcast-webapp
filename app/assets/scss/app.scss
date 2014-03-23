@@ -7,7 +7,7 @@
 // @import "../bower_components/foundation/scss/foundation/components/thumbs";
 @import "../bower_components/foundation/scss/foundation/components/tables";
 // @import "../bower_components/foundation/scss/foundation/components/alert-boxes";
-// @import "../bower_components/foundation/scss/foundation/components/button-groups";
+@import "../bower_components/foundation/scss/foundation/components/button-groups";
 
 
 .off-canvas-wrap {
@@ -16,6 +16,19 @@
 
 .big-big-ico {
   font-size: 144px;
+}
+
+.loading {
+  text-align: left;
+  width: 200px;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loading img{
+  margin-bottom: 600px;
 }
 
 .playlist-row {
@@ -88,6 +101,14 @@
   color: #000;
 }
 
+.tab-bar-image img{
+  display:inline;
+  height:45px;
+  width:45px;
+  margin-top: 5px;
+}
+
+
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
@@ -120,7 +141,6 @@
   margin-left: 12px !important;
   color:#14B9E8;
   margin-bottom: 0 !important;
-
 }
 
 .feed-color {
@@ -300,6 +320,15 @@
     width: 60px;
     height: 60px;
 }
+
+.player-controls i{
+  font-size: 45px;
+  bottom:0;
+  padding-left:20px;
+  font-size: 35px;
+  padding-top:10px;
+}
+
 @media all and (max-width: 1000px) and (min-width: 700px) {
   #player {
     height: 85px;
