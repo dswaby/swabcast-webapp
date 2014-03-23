@@ -44,7 +44,8 @@ Used in this project
     * r.js optimizer
     * backbone.js
     * marionette.js
-    * foundation CSS/ fastclick
+    * foundation CSS/ offcanvas
+    * FastClick
 
   * Server
     * node.js
@@ -77,7 +78,7 @@ Bugs/In Prog
 Working
 -------
   * AMD w/requirejs
-  * Mocha BDD Tests
+  * Mocha BDD Test setup, lacking necessary coverage atm
   * Audio Player Queueing
   * r.js optimizer
   * Grunt configuration
