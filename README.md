@@ -1,34 +1,12 @@
 Swabcast
 ========
+> web app for playing audio feeds
 
-app dist preview [http://app.swa.by/](http://app.swa.by/)
-generated source docs [http://app.swa.by/docs/](http://app.swa.by/docs/)
-tests [http://swa.by/test/](http://app.swa.by/test/)
+###### [preview](http://app.swa.by/)
 
-Want to contribute?
--------------------
-This is a side project I have been working on I thought I would open source in case there is any interest.
-It is still in very early development, server hasn't been fleshed out and it still uses static assets I have hardcoded.  Contributions or suggestions for improvements are welcome!
+######  [generated source docs](http://app.swa.by/docs/)
 
-Requirements
-  * compass
-  * mongodb
-  * nodejs
-
-To install clone this repository, then from the repository folder run
-```shell
- [sudo] npm install && bower install
-```
-To generate the project files and run test server run
-```shell
-  grunt
-```
-To build the optimized version
-```shell
-  grunt build
-```
-
-
+###### [tests](http://app.swa.by/test/)
 
 Used in this project
 --------------------
@@ -53,7 +31,6 @@ Used in this project
     * mongodb
     * mongoose
 
-
   * Testing
     * phantomjs-mocha
     * mocha
@@ -65,6 +42,61 @@ ASSUMPTIONS
 > * GET /api/playlist      will return json representation of episodes a user has subscribed to
 > * GET /player            will check localstorage of browser for saved audio data
 
+Want to contribute?
+-------------------
+This is a side project I have been working on I thought I would open source in case there is any interest.
+It is still in very early development, server hasn't been fleshed out and it still uses static assets I have hardcoded.  Contributions or suggestions for improvements are welcome!
+
+Requirements
+  * [compass](http://compass-style.org/)
+  * [mongodb](http://www.mongodb.org/downloads)
+  * [nodejs](http://nodejs.org/)
+
+To install locally you'll need mocha-phantomjs for the test runner
+
+```npm install -g mocha-phantomjs```
+
+if you dont have phantomjs installed run ```npm install -g mocha-phantomjs phantomjs```
+
+clone this repository, then from the root directory run
+
+```[sudo] npm install && bower install```
+
+this will install all dependancies
+
+To generate the project files and run test server run
+
+`grunt`
+
+Here is a list of the grunt tasks
+```
+       compass  Compile Sass to CSS using Compass *
+        cssmin  Minify CSS *
+     requirejs  Build a RequireJS project. *
+       express  Start an express web server *
+       connect  Start a connect web server. *
+         watch  Run predefined tasks whenever watched files change.
+        coffee  Compile CoffeeScript files into JavaScript *
+          copy  Copy files. *
+         docco  Docco processor. *
+    targethtml  Produces html-output depending on grunt release version *
+         shell  Run shell commands *
+             a  Alias for "dev", "connect:testserver", "express:dev", "watch"
+                tasks.
+       default  Alias for "dev", "connect:testserver", "express:dev",
+                "shell:mocha-phantomjs", "watch" tasks.
+           dev  Alias for "copy:vendorjs", "copy:templates", "compass:app",
+                "coffee", "targethtml:app" tasks.
+         build  Alias for "copy:templates", "copy:components", "copy:assets",
+                "shell:buildRequire", "targethtml:dist", "compass:app",
+                "cssmin", "copy:requireBuilt" tasks.
+          test  Alias for "coffee:testcoffee", "connect:testserver",
+                "watch:tests" tasks.
+          docs  Alias for "docco", "copy:docs" tasks.
+```
+
+if you plan to contribute to this project, try to follow the style of [this](http://blog.sourcing.io/mvc-style-guide) post
+
 Bugs/In Prog
 ------------
   * Playlist tracks added not rendering until refresh
@@ -72,7 +104,6 @@ Bugs/In Prog
   * Disabling buttons that
   * Fix strange issue with new Date(milliseconds) where all dates
     set, regardless of ms passed in (typeof number), return Jan 5 1970
-  * Styling BIG TIME, looking into [Topcoat][http://topcoat.io/topcoat/]
     consistent and minimal
 
 Working
@@ -80,10 +111,8 @@ Working
   * AMD w/requirejs
   * Mocha BDD Test setup, lacking necessary coverage atm
   * Audio Player Queueing
-  * r.js optimizer
-  * Grunt configuration
-  * Express server and mongo config, API
-  * Seperation of concerns using Marionette.js Modules
+  * r.js optimized
+  * Express static server and mongo config, API
   * documentation generated with docco
 
 Todo
@@ -91,9 +120,8 @@ Todo
   * Mocha TDD tests
   * Triggering Play now functionality in
   * Track removal, upnext on end of episode
-  * Remove Audio preload
-  * disable buttons
-  * parsing collections from api calls so they create models correctly
+  * parsing collections returned from mongoose so models resolve correctly
+  correctly
 
 Further plans
 -------------
@@ -103,4 +131,3 @@ Further plans
   * sync time in current epiosode through webworker or setTimeout loop
   * Feed browser and management of subscriptions
   * Storing file data in indexedDB
-
