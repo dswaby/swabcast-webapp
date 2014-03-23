@@ -12,6 +12,7 @@ define ["marionette", "jquery-ui"], (Marionette) ->
         height: dialogHeight
         width: dialogWidth
         position: at: "center top"
+        draggable:false
         resizable: false
         close: (e, ui) ->
           self.closeDialog()
