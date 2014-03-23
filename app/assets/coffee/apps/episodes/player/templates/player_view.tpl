@@ -22,6 +22,7 @@
                         <i id="play-icon" class="fi-play"></i>
                         <i id="pause-icon" class="fi-pause Hidden"></i>
                     </a>
+                    <a:disabled href="#" class="js-player-forward player-controls"><i class="fi-rewind-ten"></i></a>
                 <% } %>
                 <!-- Media is ready -->
                 <% if (typeof(mediaUrl) != "undefined" && mediaUrl != "") { %>
@@ -30,6 +31,8 @@
                         <i id="play-icon" class="fi-play"></i>
                         <i id="pause-icon" class="fi-pause Hidden"></i>
                     </a>
+                    <a href="#" class="js-player-forward player-controls"><i class="fi-rewind-ten"></i></a>
+
                 <% } %>
             </div>
         </div>

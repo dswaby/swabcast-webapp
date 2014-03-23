@@ -99,12 +99,12 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
               else
                 console.log("could not skipback")
 
-            # skipahead: ->
-            #   self = this
-            #   if (self.state is "ready" or self.state is "playing") and self.audio.currentTime + 45 <= self.audio.duration
-            #     self.audio.pause()
-            #     self.audio.currentTime = (self.audio.currentTime + 45)
-            #     self.audio.play()
+            skipahead: ->
+              self = this
+              if (self.state is "ready" or self.state is "playing") and self.audio.currentTime + 10 <= self.audio.duration
+                self.audio.pause()
+                self.audio.currentTime = (self.audio.currentTime + 10)
+                self.audio.play()
 
             currentMediaUrl: ->
               @audio.src
