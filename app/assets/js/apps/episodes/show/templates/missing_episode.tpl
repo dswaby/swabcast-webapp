@@ -1,1 +1,0 @@
-<div class="alert alert-error">Sorry I cant find the episode your looking for</div>
