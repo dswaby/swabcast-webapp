@@ -19,7 +19,14 @@ To install clone this repository, then from the repository folder run
 ```shell
  [sudo] npm install && bower install
 ```
-
+To generate the project files and run test server run
+```shell
+  grunt
+```
+To build the optimized version
+```shell
+  grunt build
+```
 
 
 

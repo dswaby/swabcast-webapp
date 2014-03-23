@@ -13,3 +13,4 @@ app/assets/js
 app/assets/js/
 app/assets/js/*
 test/coffee/*
+app/index.html
