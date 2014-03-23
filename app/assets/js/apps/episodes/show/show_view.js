@@ -21,8 +21,8 @@
         events: {
           "click a.dismiss": "closeDialog",
           "click a.js-edit": "editClicked",
-          "click td.js-enqueue": "queueEpisode",
-          "click td.js-archive": "archiveEpisode"
+          "click td a.js-enqueue": "queueEpisode",
+          "click td a.js-archive": "archiveEpisode"
         },
         initialize: function() {
           return this.title = this.model.get("subscriptionTitle");

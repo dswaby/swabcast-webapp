@@ -1,17 +1,77 @@
 (function() {
-  define(["app", "./../../app/assets/bower_components/chai/chai", "entities/player", "apps/episodes/player/player_controller"], function(Swabcast, chai) {
-    var expect;
+  define(["app", "apps/episodes/player/player_view", "./../../app/assets/bower_components/chai/chai", "entities/player", "apps/episodes/player/player_controller"], function(Swabcast, View, chai) {
+    var expect, should;
     expect = chai.expect;
-    describe("Player Controller", function() {
-      it("expect disabled icons on initialization", function() {
-        var player;
-        player = new Swabcast.Entities.Feed();
+    should = chai.Should();
+    describe("Player", function() {
+      describe("Model", function() {
+        it("test1", function() {
+          var playerData;
+          playerData = new Swabcast.Entities.Episode();
+        });
+        it("test2", function() {});
+        it("test3", function() {});
+        return it("test4", function() {
+          var feeds;
+          feeds = new Swabcast.Entities.Episode();
+        });
       });
-      it("audio.state should be disabled", function() {});
-      it("if in disabled state, should updates player controls and preview view when onPlayerSetEpisode() is triggered", function() {});
-      return it("expect \"albumArt\" property to have a default image of \"default.jpg\" ", function() {
-        var feeds;
-        feeds = new Swabcast.Entities.Feed();
+      describe("View", function() {
+        it("expect playerView to be a div", function() {
+          var playerView;
+          playerView = new View.Player;
+          expect(playerView.$el[0].tagName).to.equal('DIV');
+        });
+        it("player views should take a an episode model", function() {
+          var playerData, playerView;
+          playerData = new Swabcast.Entities.Episode({
+            uid: "episode1-333",
+            albumArt: " ",
+            episodeTitle: "Episode1",
+            feedUrl: "http://episode1.test",
+            episodeParent: "Swabcast Playlist",
+            mediaUrl: "episode1.mp3",
+            enqueue: true,
+            order: 1
+          });
+          playerView = new View.Player({
+            model: playerData
+          });
+          expect(playerView.model).to.equal(playerData);
+        });
+        it("player views should take a an episode model", function() {
+          var playerData, playerView;
+          playerData = new Swabcast.Entities.Episode({
+            uid: "episode1-333",
+            albumArt: " ",
+            episodeTitle: "Episode1",
+            feedUrl: "http://episode1.test",
+            episodeParent: "Swabcast Playlist",
+            mediaUrl: "episode1.mp3",
+            enqueue: true,
+            order: 1
+          });
+          playerView = new View.Player({
+            model: playerData
+          });
+          console.log(playerView);
+        });
+        return it("test4", function() {
+          var feeds;
+          feeds = new Swabcast.Entities.Episode();
+        });
+      });
+      return describe("Controller", function() {
+        it("test1", function() {
+          var playerData;
+          playerData = new Swabcast.Entities.Episode();
+        });
+        it("test2", function() {});
+        it("test3", function() {});
+        return it("test4", function() {
+          var feeds;
+          feeds = new Swabcast.Entities.Episode();
+        });
       });
     });
   });

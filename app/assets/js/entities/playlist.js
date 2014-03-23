@@ -127,12 +127,11 @@
         return API.addToPlaylist(model);
       });
       episodeToSet = API.getPlaylistEntities();
-      console.log("on load");
       return $.when(episodeToSet).done(function(episodes) {
-        var playerEpisode;
-        console.log("episodes", episodes.models[0]);
         playerEpisode;
+        var playerEpisode;
         if (episodes.at(0)) {
+          console.log("episodes", episodes.models[0]);
           return playerEpisode = episodes.models[0];
         }
       });

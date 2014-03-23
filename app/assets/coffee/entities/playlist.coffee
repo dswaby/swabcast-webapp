@@ -74,10 +74,8 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
               order: highestOrder or 1
             )
             tracks.add newTrack
-
-            # TODO should be saved here
-            # instead of sending to view and then saving
-            # newTrack.save()
+            # tracks.save()
+            # TODO should be saved here and then notify view new data available
 
             ####################################
             # DEBUGGING ONLY -- REMOVE THIS
@@ -127,12 +125,11 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
     # and this needs to be run only once
     # im doing this from the playlist entity
     episodeToSet = API.getPlaylistEntities()
-    console.log("on load")
 
     $.when(episodeToSet).done (episodes) ->
-      console.log("episodes", episodes.models[0])
       playerEpisode
       if episodes.at(0)
+        console.log("episodes", episodes.models[0])
         playerEpisode = episodes.models[0]
       # require ["apps/episodes/player/player_controller"], (playerEpisode) ->
         # Swabcast.commands.execute "player:setepisode", playerEpisode

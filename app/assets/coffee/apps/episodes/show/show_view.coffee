@@ -28,8 +28,8 @@ define ["app",
       events:
         "click a.dismiss": "closeDialog"
         "click a.js-edit": "editClicked"
-        "click td.js-enqueue": "queueEpisode"
-        "click td.js-archive": "archiveEpisode"
+        "click td a.js-enqueue": "queueEpisode"
+        "click td a.js-archive": "archiveEpisode"
 
       initialize: ->
         @title = @model.get("subscriptionTitle")
