@@ -10,14 +10,15 @@ Want to contribute?
 This is a side project I have been working on I thought I would open source in case there is any interest.
 It is still in very early development, server hasn't been fleshed out and it still uses static assets I have hardcoded.  Contributions or suggestions for improvements are welcome!
 
-This project uses
-
+Requirements
   * compass
-  * the foundation gem
-    ``gem install foundation
   * mongodb
-  * nodejs  
+  * nodejs
 
+To install clone this repository, then from the repository folder run
+```shell
+ [sudo] npm install && bower install
+```
 
 
 
