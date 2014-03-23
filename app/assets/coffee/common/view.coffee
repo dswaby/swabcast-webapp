@@ -1,4 +1,4 @@
-define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl", "transit"], (Swabcast, loadingView, notificationView, navHelper) ->
+define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl"], (Swabcast, loadingView, notificationView, navHelper) ->
   Swabcast.module "Common.Views", (Views, Swabcast, Backbone, Marionette, $, _) ->
 
 
@@ -40,21 +40,13 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
         @buttonText = options.buttonText or "Back"
 
       onBeforeRender: ->
-        # console.log(@$el)
+
       onRender: ->
-        # @$el.slideDown 200000, ->
-        #   console.log("slideUp")
-        #   y: 500
-        #   easing:'snap',
-        #   duration: 20000
 
       serializeData: ->
         buttonText: @buttonText
 
       onBeforeClose: ->
-        @$el.slideUp 20000, ->
-        # console.log("penis ", $@el)
-          # console.log("slideUp")
 
       navigateToLibrary: ->
         Swabcast.trigger "episodes:library"
@@ -70,13 +62,6 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
         options = options or {}
         @buttonText = options.buttonText or "Back"
 
-
-      onRender: ->
-
-        #   y: 500
-        #   easing:'snap',
-        #   duration: 20000
-
       serializeData: ->
         buttonText: @buttonText
 
@@ -86,6 +71,7 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
       navigateToLibrary: ->
         Swabcast.trigger "episodes:library"
         Swabcast.trigger "episodes:playlist"
+        Swabcast.libraryRegion.close()
         @close()
     )
   Swabcast.Common.Views

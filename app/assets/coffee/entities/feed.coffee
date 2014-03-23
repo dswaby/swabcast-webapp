@@ -9,6 +9,8 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "enqueue": false
         "publishedAt": 0
     )
+    # TODO - validations
+
     Entities.configureStorage Entities.Episode
 
     Entities.Episodes = Backbone.Collection.extend(

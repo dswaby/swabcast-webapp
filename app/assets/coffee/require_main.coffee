@@ -12,7 +12,10 @@ requirejs.config
     tpl: "vendor/tpl"
     json2: "vendor/json2"
     foundation: "vendor/foundation"
-    transit: "vendor/jquery.transit"
+    fastclick: "vendor/fastclick"
+    # transit: "vendor/jquery.transit"
+
+
 
   #syphon: 'vendor/backbone.syphon',
   shim:
@@ -33,21 +36,19 @@ requirejs.config
 
     "jquery-ui": ["jquery"]
 
-    transit:
-      deps: ["jquery"]
+    fastclick:
+      exports: ["FastClick"]
 
-    #   'spin.jquery':['jquery'],
-    #   spin: ['spin.jquery'],
     localstorage: ["backbone"]
 
     "vendor/foundation.offcanvas":
       deps: ["jquery", "foundation"]
 
-    "vendor/foundation.reveal":
-      deps: ["jquery", "foundation"]
+    # "vendor/foundation.reveal":
+    #   deps: ["jquery", "foundation"]
 
-    "vendor/foundation.fastclick":
-      deps: ["jquery", "foundation"]
+    # "vendor/foundation.fastclick":
+    #   deps: ["jquery", "foundation"]
 
     # "reveal": ["foundation"]
 
@@ -64,7 +65,7 @@ requirejs [
   "jquery"
   "foundation"
   "vendor/foundation.offcanvas"
-  "vendor/foundation.fastclick"
+  "fastclick"
 ], ($) ->
 
   (($, window, undefined_) ->

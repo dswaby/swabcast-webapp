@@ -48,10 +48,10 @@ define ["app",
 
       onPlaylistEnqueue: (model) ->
         console.log(model)
+
       onItemviewEpisodeDelete: ->
         @$el.fadeOut "slow", ->
           $(this).fadeIn "slow"
-
 
       flash: (cssClass) ->
         $view = @$el

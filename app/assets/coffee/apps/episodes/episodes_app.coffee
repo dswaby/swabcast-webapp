@@ -9,17 +9,17 @@ define ["app"], (Swabcast) ->
     )
     API =
       # "media:all"
-      showPageMedia: ->
-        options = false
+      showPageMedia: (optTimeOut)->
+        optTimeOut = optTimeOut or 0
         require ["apps/episodes/nav/nav_controller"], ->
           console.log("showPageMedia")
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks options
+          EpisodesApp.Playlist.Controller.showTracks()
         require ["apps/episodes/feed/feed_controller"], ->
-          EpisodesApp.Feed.Controller.showFeeds()
+          EpisodesApp.Feed.Controller.showFeeds optTimeOut
 
       # "playlist:mainview"
       showPlaylistMain: ->
@@ -95,8 +95,8 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.notImplemented()
 
-    Swabcast.on "media:all", ->
-      API.showPageMedia()
+    Swabcast.on "media:all", (timeout) ->
+      API.showPageMedia timeout
 
     Swabcast.on "episodes:library", ->
       Swabcast.navigate "library"

@@ -1,4 +1,4 @@
-define ["marionette", "jquery-ui", "transit"], (Marionette) ->
+define ["marionette", "jquery-ui"], (Marionette) ->
   Marionette.Region.Dialog = Marionette.Region.extend(
     onShow: (view) ->
       $('body').addClass("locked")
@@ -6,18 +6,15 @@ define ["marionette", "jquery-ui", "transit"], (Marionette) ->
       self = this
       dialogWidth = @winWidth()
       dialogHeight = @winHeight()
-      console.log(dialogWidth)
       @$el.dialog
         modal: true
         title: view.title
         height: dialogHeight
-        # maxHeight: winHeight
         width: dialogWidth
         position: at: "center top"
         resizable: false
         close: (e, ui) ->
           self.closeDialog()
-
 
     closeDialog: ->
       @stopListening()

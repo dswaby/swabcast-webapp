@@ -85,24 +85,26 @@ define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
               @audio.load()
               @state = "disabled"
 
-            setAudioOptions: (options) ->
-
+            # setAudioOptions: (options) ->
 
             setPosition: (time) ->
               @audio.currentTime = time  if typeof episodePosition is "number"
 
             skipback: ->
-              if (@state is "ready" or @state is "playing") and @audio.currentTime > 45
+              console.log("skipping back from %s to %s", @audio.currentTime, @audio.currentTime - 10 )
+              if (@state is "ready" or @state is "playing") and @audio.currentTime > 10
                 @audio.pause()
-                @audio.currentTime = (@audio.currentTime - 45)
+                @audio.currentTime = (@audio.currentTime - 10)
                 @audio.play()
+              else
+                console.log("could not skipback")
 
-            skipahead: ->
-              self = this
-              if (self.state is "ready" or self.state is "playing") and self.audio.currentTime + 45 <= self.audio.duration
-                self.audio.pause()
-                self.audio.currentTime = (self.audio.currentTime + 45)
-                self.audio.play()
+            # skipahead: ->
+            #   self = this
+            #   if (self.state is "ready" or self.state is "playing") and self.audio.currentTime + 45 <= self.audio.duration
+            #     self.audio.pause()
+            #     self.audio.currentTime = (self.audio.currentTime + 45)
+            #     self.audio.play()
 
             currentMediaUrl: ->
               @audio.src
