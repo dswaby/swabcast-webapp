@@ -84,12 +84,12 @@ module.exports = function (grunt) {
         targethtml: {
             app: {
                 files: {
-                    '<%= swabstack.app %>/index.html': '<%= swabstack.app %>/index-template.html'
+                    '<%= swabstack.app %>/index.html': '<%= swabstack.app %>/swabcast.html'
                 }
             },
             dist: {
                 files: {
-                    './<%= swabstack.dist %>/index.html': '<%= swabstack.app %>/index-template.html'
+                    './<%= swabstack.dist %>/index.html': '<%= swabstack.app %>/swabcast.html'
                 }
             }
         },
@@ -238,7 +238,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-docco');
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-bg-shell');
 
 //registered task 'a' so i dont have to scroll down when running from the sublime grunt plugin
 //same as default

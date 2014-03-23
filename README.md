@@ -5,6 +5,23 @@ app dist preview [http://app.swa.by/](http://app.swa.by/)
 generated source docs [http://app.swa.by/docs/](http://app.swa.by/docs/)
 tests [http://swa.by/test/](http://app.swa.by/test/)
 
+Want to contribute?
+-------------------
+This is a side project I have been working on I thought I would open source in case there is any interest.
+It is still in very early development, server hasn't been fleshed out and it still uses static assets I have hardcoded.  Contributions or suggestions for improvements are welcome!
+
+This project uses
+
+  * compass
+  * the foundation gem
+    ``gem install foundation
+  * mongodb
+  * nodejs  
+
+
+
+
+
 Used in this project
 --------------------
   * development
