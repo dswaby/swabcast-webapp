@@ -54,7 +54,6 @@
           playerView = new View.Player({
             model: playerData
           });
-          console.log(playerView);
         });
         return it("test4", function() {
           var feeds;
