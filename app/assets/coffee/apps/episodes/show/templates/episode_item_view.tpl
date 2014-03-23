@@ -14,8 +14,8 @@
     <a class="feed-color"><i class="fi-eye"></i></a>
 </td>
 
-<td style="width:40px;">
+<td class="js-enqueue" style="width:40px;">
     <div class="icon-closure">
-        <a class="js-enqueue"><i class="fi-plus"></i></a>
+        <a><i class="fi-plus"></i></a>
     </div>
 </td>

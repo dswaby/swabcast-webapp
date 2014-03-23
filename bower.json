@@ -21,6 +21,6 @@
   "devDependencies": {},
   "directory": "bower_components",
   "resolutions": {
-    "jquery": ">= 2.1.0"
+    "jquery": ">=1.2"
   }
 }
