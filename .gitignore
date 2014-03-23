@@ -1,7 +1,10 @@
 docs/
 node_modules/
-test/lib/
-.sass-cache/
-app/assets/bower_components/
+.sass-cache
+.sass-cache/*
+app/assets/bower_components/*
 .sublime-grunt.cache
-dist/
+.swabcast.sublime-workspace
+dist
+dist/*
+app/assets/foundation_icons/
