@@ -195,8 +195,6 @@
   width: 100%;
 }
 
-
-
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
@@ -283,7 +281,10 @@
     position: fixed;
     // top: 15px;
     left: 63px;
-    bottom: 30px;
+    bottom: 0;
+    overflow: auto;
+    height: 60px;
+    max-width:50%;
     // font-weight: bold;
     // font-size: 18px;
 }
@@ -309,9 +310,8 @@
   }
   .player-preview{
     position: fixed;
-    // top: 15px;
+    height: 85px;
     left: 87px;
-    bottom: 45px;
     // font-weight: bold;
     // font-size: 18px;
 }
@@ -332,7 +332,9 @@
   .player-preview {
     position: fixed;
     left: 85px;
-    bottom: 45px;
+  }
+  .player-preview {
+    margin-top: 20px !important;
   }
 }
 

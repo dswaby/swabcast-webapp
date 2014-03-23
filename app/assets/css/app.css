@@ -4164,7 +4164,7 @@ table tfoot tr td {
   width: 100%;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 198, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
@@ -4174,7 +4174,7 @@ table tfoot tr td {
 /***************************************************************************************************
     styles for static player bar at bottom of screen  **********************************************
 ***************************************************************************************************/
-/* line 242, ../scss/app.scss */
+/* line 240, ../scss/app.scss */
 #player {
   position: fixed;
   height: 60px;
@@ -4189,19 +4189,19 @@ table tfoot tr td {
   cursor: default;
 }
 
-/* line 255, ../scss/app.scss */
+/* line 253, ../scss/app.scss */
 #player-fill-left {
   height: 100%;
   width: 75%;
 }
 
-/* line 259, ../scss/app.scss */
+/* line 257, ../scss/app.scss */
 .album-preview {
   width: 60px;
   height: 60px;
 }
 
-/* line 272, ../scss/app.scss */
+/* line 270, ../scss/app.scss */
 #controls-wrapper {
   height: 60px;
   position: fixed;
@@ -4209,24 +4209,27 @@ table tfoot tr td {
   right: 16px;
 }
 
-/* line 279, ../scss/app.scss */
+/* line 277, ../scss/app.scss */
 #feeditems-collection {
   margin-bottom: 80px !important;
 }
 
-/* line 282, ../scss/app.scss */
+/* line 280, ../scss/app.scss */
 .player-preview {
   position: fixed;
   left: 63px;
-  bottom: 30px;
+  bottom: 0;
+  overflow: auto;
+  height: 60px;
+  max-width: 50%;
 }
 
-/* line 290, ../scss/app.scss */
+/* line 291, ../scss/app.scss */
 .player-preview p {
   margin: 0 !important;
 }
 
-/* line 293, ../scss/app.scss */
+/* line 294, ../scss/app.scss */
 .player-art {
   background-color: transparent;
   display: block;
@@ -4238,22 +4241,22 @@ table tfoot tr td {
 }
 
 @media all and (max-width: 1000px) and (min-width: 700px) {
-  /* line 303, ../scss/app.scss */
+  /* line 304, ../scss/app.scss */
   #player {
     height: 85px;
   }
 
-  /* line 306, ../scss/app.scss */
+  /* line 307, ../scss/app.scss */
   .player-art {
     height: 85px;
     width: 85px;
   }
 
-  /* line 310, ../scss/app.scss */
+  /* line 311, ../scss/app.scss */
   .player-preview {
     position: fixed;
+    height: 85px;
     left: 87px;
-    bottom: 45px;
   }
 
   /* line 318, ../scss/app.scss */
@@ -4278,27 +4281,31 @@ table tfoot tr td {
   .player-preview {
     position: fixed;
     left: 85px;
-    bottom: 45px;
+  }
+
+  /* line 336, ../scss/app.scss */
+  .player-preview {
+    margin-top: 20px !important;
   }
 }
-/* line 340, ../scss/app.scss */
+/* line 342, ../scss/app.scss */
 .offcanvas-inner-shadow-left {
   -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   -moz-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
 }
 
-/* line 350, ../scss/app.scss */
+/* line 352, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 354, ../scss/app.scss */
+/* line 356, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 358, ../scss/app.scss */
+/* line 360, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;
@@ -4312,7 +4319,7 @@ table tfoot tr td {
   font-style: normal;
 }
 
-/* line 409, ../scss/app.scss */
+/* line 411, ../scss/app.scss */
 .fi-arrow-right:before,
 .fi-archive:before,
 .fi-alert:before,
@@ -4358,162 +4365,162 @@ table tfoot tr td {
   text-decoration: inherit;
 }
 
-/* line 420, ../scss/app.scss */
+/* line 422, ../scss/app.scss */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 421, ../scss/app.scss */
+/* line 423, ../scss/app.scss */
 .fi-arrow-right:before {
   content: "\f10b";
 }
 
-/* line 422, ../scss/app.scss */
+/* line 424, ../scss/app.scss */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 423, ../scss/app.scss */
+/* line 425, ../scss/app.scss */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 424, ../scss/app.scss */
+/* line 426, ../scss/app.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 425, ../scss/app.scss */
+/* line 427, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 426, ../scss/app.scss */
+/* line 428, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 427, ../scss/app.scss */
+/* line 429, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 428, ../scss/app.scss */
+/* line 430, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 429, ../scss/app.scss */
+/* line 431, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 430, ../scss/app.scss */
+/* line 432, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 431, ../scss/app.scss */
+/* line 433, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 432, ../scss/app.scss */
+/* line 434, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 433, ../scss/app.scss */
+/* line 435, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 434, ../scss/app.scss */
+/* line 436, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 435, ../scss/app.scss */
+/* line 437, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 436, ../scss/app.scss */
+/* line 438, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 437, ../scss/app.scss */
+/* line 439, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 438, ../scss/app.scss */
+/* line 440, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 439, ../scss/app.scss */
+/* line 441, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 440, ../scss/app.scss */
+/* line 442, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 441, ../scss/app.scss */
+/* line 443, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 442, ../scss/app.scss */
+/* line 444, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 443, ../scss/app.scss */
+/* line 445, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 444, ../scss/app.scss */
+/* line 446, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 445, ../scss/app.scss */
+/* line 447, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 446, ../scss/app.scss */
+/* line 448, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 447, ../scss/app.scss */
+/* line 449, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 448, ../scss/app.scss */
+/* line 450, ../scss/app.scss */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 449, ../scss/app.scss */
+/* line 451, ../scss/app.scss */
 .fi-page-delete:before {
   content: "\f182";
 }
 
-/* line 450, ../scss/app.scss */
+/* line 452, ../scss/app.scss */
 .fi-social-facebook:before {
   content: "\f1c4";
 }
 
-/* line 451, ../scss/app.scss */
+/* line 453, ../scss/app.scss */
 .fi-archive:before {
   content: "\f108";
 }
