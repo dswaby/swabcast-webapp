@@ -14,6 +14,10 @@ body, html {
   height: 100%;
 }
 
+td {
+  padding: 5px !important;
+}
+
 .inner-wrap {
   height:100%;
 }
@@ -141,7 +145,7 @@ body, html {
   padding: 20px;
   position: relative;
   background: #14b9e8 !important;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   overflow: hidden;
 }
 
@@ -218,7 +222,6 @@ body, html {
 
 .cover-art-block {
   padding:0 !important;
-  z-index: 8999;
 }
 .icon-closure {
   font-size:30px;

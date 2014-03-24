@@ -29,7 +29,9 @@ define ["marionette", "jquery-ui"], (Marionette) ->
       if (currentWindowWidth <= 640)
         return (currentWindowWidth *0.90).toFixed()
       else
-        return (currentWindowWidth * 0.62).toFixed()
+        if (currentWindowWidth <= 1001)
+          return (currentWindowWidth * 0.62).toFixed()
+        return (currentWindowWidth * 0.42).toFixed()
 
     winHeight: ->
       height
