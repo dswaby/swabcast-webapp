@@ -1,5 +1,5 @@
 #The player controller is responsible for the storing, retrieving and updating the currently playing episode data
-define ["app", "apps/episodes/player/player_view"], (Swabcast, View) ->
+define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
   Swabcast.module "EpisodesApp.Player", (Player, Swabcast, Backbone, Marionette, $, _) ->
     Player.Controller = showControls: ->
       require ["entities/player"], ->

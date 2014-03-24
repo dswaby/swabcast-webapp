@@ -7,7 +7,7 @@
 				"test/lib",
 				"node_modules",
 				"app/assets/foundation-icons",
-				"app/assets/bower_components",
+				// "app/assets/bower_components",
 				"docs/",
 				".sass-cache/",
 				"app/.sass-cache/",

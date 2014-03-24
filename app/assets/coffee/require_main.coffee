@@ -13,7 +13,7 @@ requirejs.config
     json2: "vendor/json2"
     foundation: "vendor/foundation"
     fastclick: "vendor/fastclick"
-    toastr: "./../bower_components/toastr/toastr.min"
+    toastr: "./../bower_components/toastr/toastr"
 
 
 
@@ -38,8 +38,9 @@ requirejs.config
     fastclick:
       exports: ["FastClick"]
 
-    toastr:
+    "./../bower_components/toastr/toastr":
       deps: ["jquery"]
+      exports: "toastr"
 
     localstorage: ["backbone"]
 
@@ -68,6 +69,7 @@ requirejs [
   "foundation"
   "vendor/foundation.offcanvas"
   "fastclick"
+  "toastr"
 ], ($) ->
 
   (($, window, undefined_) ->

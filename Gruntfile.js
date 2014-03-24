@@ -239,12 +239,6 @@ module.exports = function(grunt) {
 
     //registered task 'a' so i dont have to scroll down when running from the sublime grunt plugin
     //same as default
-    grunt.registerTask('a', [
-        'dev',
-        'connect:testserver',
-        'express:dev',
-        'watch'
-    ]);
 
     grunt.registerTask('default', [
         'dev',
@@ -254,34 +248,43 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('dev', [
-        'copy:vendorjs',
-        'copy:templates', // when starting, copy any templates that may have been added
-        'compass:app',
-        'coffee', //compile any coffescript files that may have changed
-        'targethtml:app'
-    ]);
+    grunt.task.registerTask('dev', 'subset of common development tasks used in other tasks', function(){
+        grunt.task.run( [
+            'copy:vendorjs',
+            'copy:templates', // when starting, copy any templates that may have been added
+            'compass:app',
+            'coffee', //compile any coffescript files that may have changed
+            'targethtml:app'
+        ]);
+    });
 
-    grunt.registerTask('build', [
-        'copy:templates', // when starting, copy any templates that may have been added
-        'copy:components',
-        'copy:assets',
-        'shell:buildRequire',
-        'targethtml:dist',
-        'compass:app',
-        'cssmin',
-        'copy:requireBuilt',
-    ]);
+    grunt.task.registerTask('test', 'for writing tests, only watches test folder and runs on change', function(){
+        grunt.task.run( [
+            'coffee:testcoffee',
+            'connect:testserver',
+            'shell:mocha-phantomjs',
+            'watch:tests'
+        ]);
+    });
 
-    grunt.registerTask('test', [
-        'coffee:testcoffee',
-        'connect:testserver',
-        'watch:tests'
-    ]);
+    grunt.task.registerTask('docs', 'generates docs from source and adds to dist/ ', function(){
+        grunt.task.run( [
+            'docco',
+            'copy:docs'
+        ]);
+    });
 
-    grunt.registerTask('docs', [
-        'docco',
-        'copy:docs'
-    ]);
+    grunt.task.registerTask('build', 'creates optimized distribution', function(){
+        grunt.task.run( [
+            'copy:templates',
+            'copy:components',
+            'copy:assets',
+            'shell:buildRequire',
+            'targethtml:dist',
+            'compass:app',
+            'cssmin',
+            'copy:requireBuilt'
+        ]);
+    });
 
 };

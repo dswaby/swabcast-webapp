@@ -107,7 +107,7 @@ define ["app",
           "Dec"
         ]
         createDate: (ms) ->
-          return new Date(ms)
+          return new Date()
 
         getPublishedDay: (ms) ->
           e = @createDate(ms)

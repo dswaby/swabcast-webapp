@@ -52,11 +52,17 @@ Requirements
   * [mongodb](http://www.mongodb.org/downloads)
   * [nodejs](http://nodejs.org/)
 
+
+
 To install locally you'll need mocha-phantomjs for the test runner
 
 ```npm install -g mocha-phantomjs```
 
 if you dont have phantomjs installed run ```npm install -g mocha-phantomjs phantomjs```
+
+Install the foundation gem
+
+```gem install foundation```
 
 clone this repository, then from the root directory run
 
