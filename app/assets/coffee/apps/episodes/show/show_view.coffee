@@ -154,6 +154,7 @@ define ["app",
     View.EpisodeList = Marionette.CompositeView.extend(
       className: "episodes-table-wrapper"
       tagname: "table"
+      id: "episodes-table-wrapper"
       template: feedEpisodesTpl
       itemView: View.EpisodeListItem
       itemViewContainer: "tbody"
@@ -183,6 +184,8 @@ define ["app",
         e.stopPropagation()
 
         Swabcast.trigger "feed:details", @model
+      onBeforeClose: ->,
+
     )
 
   Swabcast.EpisodesApp.Show.View

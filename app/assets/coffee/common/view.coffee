@@ -48,7 +48,15 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
 
       onBeforeClose: ->
 
+
       navigateToLibrary: ->
+        # - testing
+        # wide = $(window).width()
+        # $("#episodes-table-wrapper").animate
+        #   marginLeft: "+=" + wide + 50 #moves right
+        # , 1000, ->
+        #   Swabcast.trigger "episodes:library"
+        #   return
         Swabcast.trigger "episodes:library"
         @close()
     )
