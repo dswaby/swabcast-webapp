@@ -7,20 +7,20 @@
           <!-- Add To Playlist -->
         <table width="225px;">
             <tr>
-                <td class="js-enqueue">
-                    <a href="#" class="js-enqueue"><i class="fi-plus"></i></a>
+                <td class="js-show-enqueue">
+                    <a href="#"><i class="fi-plus"></i></a>
                     <br />
-                    <a href="#" class="js-enqueue">Queue</a>
+                    <a href="#">Queue</a>
                 </td>
-                <td>
-                    <a href="#" class="js-archive"><i class="fi-archive"></i> </a>
+                <td class="js-show-archive">
+                    <a href="#"><i class="fi-archive"></i> </a>
                     <br />
-                    <a href="#" class="js-archive">Archive</a>
+                    <a href="#">Archive</a>
                 </td>
-                  <td>
-                    <a href="#" class="js-favorite"><i class="fi-star"></i></a>
+                  <td class="js-show-favorite">
+                    <a href="#"><i class="fi-star"></i></a>
                     <br />
-                    <a href="#" class="js-favorite">Fav</a>
+                    <a href="#">Fav</a>
                 </td>
 
             </tr>

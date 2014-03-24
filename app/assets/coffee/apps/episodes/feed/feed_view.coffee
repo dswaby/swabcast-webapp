@@ -34,7 +34,7 @@ define ["app","tpl!apps/episodes/feed/templates/feed_layout.tpl",
       tagname: "table"
       template: feedViewTpl
       events:
-        "click a.js-episode-list": "showEpisodeList"
+        "click a.js-feed-episode-list": "showEpisodeList"
         "click a.js-feed-details": "showFeedDetails"
 
       highlightName: ->

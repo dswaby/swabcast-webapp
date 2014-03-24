@@ -14,11 +14,9 @@ requirejs.config
     foundation: "vendor/foundation"
     fastclick: "vendor/fastclick"
     toastr: "./../bower_components/toastr/toastr.min"
-    # transit: "vendor/jquery.transit"
 
 
 
-  #syphon: 'vendor/backbone.syphon',
   shim:
     underscore:
       exports: "_"
