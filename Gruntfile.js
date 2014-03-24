@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 ]
             },
             templates: {
-                files: ['<%= swabstack.app %>}/assets/**/templates/{,**/}*.tpl'],
+                files: ['<%= swabstack.app %>}/assets/**/templates/*.tpl'],
                 tasks: ['copy:templates']
             },
             vendorjs: {

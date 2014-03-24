@@ -10,6 +10,10 @@
 @import "./../bower_components/foundation/scss/foundation/components/button-groups";
 
 
+body {
+  height:100% !important;
+}
+
 .off-canvas-wrap {
   background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9)) !important;
 }
@@ -108,6 +112,17 @@
   margin-top: 5px;
 }
 
+/***************************************************************************************************
+    styles for episode detailed view  **********************************************
+***************************************************************************************************/
+
+.modal-row i{
+  margin-left:15px
+}
+
+.modal-row {
+  background: #ECECEC;
+}
 
 /***************************************************************************************************
     styles for feed detailed view  **********************************************

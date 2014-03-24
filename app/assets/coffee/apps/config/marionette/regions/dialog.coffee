@@ -34,9 +34,9 @@ define ["marionette", "jquery-ui"], (Marionette) ->
     winHeight: ->
       height
       height = $(window).height()
-      if (height <= 800)
+      if (height <= 600)
         return (height * 0.85).toFixed()
       else
-        return (height * 0.42).toFixed()
+        return (height * 0.62).toFixed()
   )
   Marionette.Region.Dialog
