@@ -1,8 +1,8 @@
 define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/player_controller"], (Swabcast, View) ->
   Swabcast.module "EpisodesApp.Playlist", (Playlist, Swabcast, Backbone, Marionette, $, _) ->
     Playlist.Controller =
-      # by default this view will show in the sideBarRegion
-      # optional mainView parameter will close an existing view in sideBarRegion
+      # default view will show in the sideBarRegion
+      # optional mainView will replace the main library region
       # and use the extendedView
       showTracks: (extendedView) ->
         extendedView = extendedView or false
@@ -39,7 +39,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               model.destroy()
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
-
             playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
               ####################################
               # DEBUGGING ONLY -- REMOVE THIS
@@ -62,12 +61,11 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                   # TODO - trigger success alert
                   newTrack = _.clone(apiResponse)
                   console.log("cloned newTrack", newTrack)
-                  #TODO decouple the seperate models
                   newTrack = new Swabcast.Entities.QueuedEpisode(
                     uid: apiResponse.get("uid") or null
                     albumArt: apiResponse.get("albumArt") or apiResponse.parent.get("albumArt")
                     episodeTitle: apiResponse.get("episodeTitle") or null
-                    episodeParent: apiResponse.get("episodeParent") or apiResponse.parent.get("subscriptionTitle")
+                    episodeParent: apiResponse.get("episodeParent") or null
                     feedUrl: apiResponse.get("feedUrl") or " "
                     mediaUrl: apiResponse.get("mediaUrl") or null
                     enqueue: true

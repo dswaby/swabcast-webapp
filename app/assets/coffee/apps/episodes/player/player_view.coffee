@@ -1,5 +1,12 @@
-define ["app", "tpl!apps/episodes/player/templates/player_view.tpl"], (Swabcast, playerTpl) ->
+define ["app", "tpl!apps/episodes/player/templates/player_view.tpl", ], (Swabcast, playerTpl) ->
   Swabcast.module "EpisodesApp.Player.View", (View, Swabcast, Backbone, Marionette, $, _) ->
+    View.Layout = Marionette.Layout.extend(
+      template: playerTpl
+      regions:
+        "player-preview": "#"
+        "nowPlayingInfo":"#"
+    )
+
     View.Player = Marionette.ItemView.extend(
       template: playerTpl
       events:

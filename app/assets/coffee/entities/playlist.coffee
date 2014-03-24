@@ -1,3 +1,6 @@
+# playlist.coffee
+# in addition to being responsible for managing the playlist
+# the playlist is responsible for s
 define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
     Entities.QueuedEpisode = Entities.Episode.extend(
@@ -120,21 +123,5 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
 
     Swabcast.reqres.setHandler "playlist:addtoqueue", (model) ->
       API.addToPlaylist model
-
-    # here the episode is being sent to the player controller
-    # since the playlist doesnt need to be loaded
-    # and this needs to be run only once
-    # im doing this from the playlist entity
-    episodeToSet = API.getPlaylistEntities()
-
-    $.when(episodeToSet).done (episodes) ->
-      playerEpisode
-      if episodes.at(0)
-        console.log("episodes", episodes.models[0])
-        playerEpisode = episodes.models[0]
-      # require ["apps/episodes/player/player_controller"], (playerEpisode) ->
-        # Swabcast.commands.execute "player:setepisode", playerEpisode
-        # console.log("setting first episode in playlist", episodes.at.(0))
-
 
   return

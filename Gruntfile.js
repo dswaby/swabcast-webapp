@@ -1,7 +1,7 @@
-var mountFolder = function (connect, dir) {
+var mountFolder = function(connect, dir) {
     return connect.static(require('path').resolve(dir));
 };
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     'use strict';
     var swabstackConfig = {
         app: 'app',
@@ -27,11 +27,12 @@ module.exports = function (grunt) {
             },
             coffee: {
                 files: ['<%= swabstack.app %>/assets/coffee/{,**/}*.coffee'],
-                tasks: ['coffee:glob_to_multiple']
+                tasks: ['coffee:glob_to_multiple','shell:mocha-phantomjs']
             },
             tests: {
                 files: ['<%= swabstack.test %>/coffee/*.coffee'],
-                tasks: ['coffee:testcoffee']
+                tasks: ['coffee:testcoffee','shell:mocha-phantomjs',
+]
             },
             templates: {
                 files: ['<%= swabstack.app %>}/assets/**/templates/{,**/}*.tpl'],
@@ -110,7 +111,7 @@ module.exports = function (grunt) {
                 flatten: false,
                 bare: true,
                 cwd: '<%= swabstack.app %>/assets/coffee/',
-                src: ['**/*.coffee','*.coffee'],
+                src: ['**/*.coffee', '*.coffee'],
                 dest: '<%= swabstack.app %>/assets/js/',
                 ext: '.js'
             },
@@ -175,37 +176,44 @@ module.exports = function (grunt) {
             }
         },
         cssmin: {
-          combine: {
-            options: {
-              banner: '/* Like a ninja */'
-            },
-            files: {
-              '<%= swabstack.dist %>/css/combined.min.css': ['./<%= swabstack.app %>/assets/css/app.css', './<%= swabstack.app %>/assets/css/jquery-ui-1.10.0.custom.css']
+            combine: {
+                options: {
+                    banner: '/* Like a ninja */'
+                },
+                files: {
+                    '<%= swabstack.dist %>/css/combined.min.css': ['./<%= swabstack.app %>/assets/css/app.css', './<%= swabstack.app %>/assets/css/jquery-ui-1.10.0.custom.css']
+                }
             }
-          }
         },
         docco: {
-          coffeescript: {
-            src: ['<%= swabstack.app %>/assets/coffee/**/*.coffee'],
-            options: {
-              output: './docs/CoffeScript/'
+            coffeescript: {
+                src: ['<%= swabstack.app %>/assets/coffee/**/*.coffee'],
+                options: {
+                    output: './docs/CoffeScript/'
+                }
+            },
+            javascript: {
+                src: ['<%= swabstack.app %>/assets/js/**/*.js'],
+                options: {
+                    output: './docs/Javascript/'
+                }
+            },
+            server: {
+                src: ['server/app.js'],
+                options: {
+                    output: './docs/Server/'
+                }
             }
-          },
-          javascript: {
-            src: ['<%= swabstack.app %>/assets/js/**/*.js'],
-            options: {
-              output: './docs/Javascript/'
-            }
-          },
-          server: {
-            src: ['server/app.js'],
-            options: {
-              output: './docs/Server/'
-            }
-          }
         },
         shell: {
-            buildRequire: {
+            'mocha-phantomjs': {
+                command: 'mocha-phantomjs -R dot http://localhost:1234/test/TestRunner.html',
+                options: {
+                    stdout: true,
+                    stderr: true
+                }
+            },
+            'buildRequire': {
                 command: 'node r.js -o assets/js/build.js',
                 options: {
                     stdout: true,
@@ -214,16 +222,6 @@ module.exports = function (grunt) {
                     }
                 }
             }
-        },
-        bgShell: {
-          connectMongo: {
-            cmd: 'mongod', // or function(){return 'ls -la'}
-            execOpts: {
-              cwd: 'app'
-            },
-            stdout: true,
-            bg: true
-          }
         }
     });
 
@@ -239,50 +237,51 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-shell');
 
-//registered task 'a' so i dont have to scroll down when running from the sublime grunt plugin
-//same as default
-grunt.registerTask('a', [
-    'dev',
-    'connect:testserver',
-    'express:dev',
-    'watch'
+    //registered task 'a' so i dont have to scroll down when running from the sublime grunt plugin
+    //same as default
+    grunt.registerTask('a', [
+        'dev',
+        'connect:testserver',
+        'express:dev',
+        'watch'
     ]);
 
-grunt.registerTask('default', [
-    'dev',
-    'connect:testserver',
-    'express:dev',
-    'watch'
+    grunt.registerTask('default', [
+        'dev',
+        'connect:testserver',
+        'express:dev',
+        'shell:mocha-phantomjs',
+        'watch'
     ]);
 
-grunt.registerTask('dev', [
-    'copy:vendorjs',
-    'copy:templates', // when starting, copy any templates that may have been added
-    'compass:app',
-    'coffee', //compile any coffescript files that may have changed
-    'targethtml:app'
+    grunt.registerTask('dev', [
+        'copy:vendorjs',
+        'copy:templates', // when starting, copy any templates that may have been added
+        'compass:app',
+        'coffee', //compile any coffescript files that may have changed
+        'targethtml:app'
     ]);
 
-grunt.registerTask('build', [
-    'copy:templates', // when starting, copy any templates that may have been added
-    'copy:components',
-    'copy:assets',
-    'shell:buildRequire',
-    'targethtml:dist',
-    'compass:app',
-    'cssmin',
-    'copy:requireBuilt',
+    grunt.registerTask('build', [
+        'copy:templates', // when starting, copy any templates that may have been added
+        'copy:components',
+        'copy:assets',
+        'shell:buildRequire',
+        'targethtml:dist',
+        'compass:app',
+        'cssmin',
+        'copy:requireBuilt',
     ]);
 
-grunt.registerTask('test', [
-    'coffee:testcoffee',
-    'connect:testserver',
-    'watch:tests'
+    grunt.registerTask('test', [
+        'coffee:testcoffee',
+        'connect:testserver',
+        'watch:tests'
     ]);
 
-grunt.registerTask('docs', [
-    'docco',
-    'copy:docs'
+    grunt.registerTask('docs', [
+        'docco',
+        'copy:docs'
     ]);
 
 };

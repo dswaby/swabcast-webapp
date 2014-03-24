@@ -17,19 +17,22 @@
             <div id="controls-wrapper">
                 <!-- Initially Disabled -->
                 <% if (typeof(mediaUrl) === "undefined" || mediaUrl === "") { %>
-                    <a:disabled href="#" class="js-player-jump-back"><i class="fi-rewind-ten" style="font-size: 35px; padding-top:10px; margin-bottom:5px;margin-top:5px;"></i></a>
-                    <a:disabled href="#" class="js-player-play">
-                        <i id="play-icon" class="fi-play" style="font-size: 45px; padding-left:20px;"></i>
-                        <i id="pause-icon" class="fi-pause Hidden" style="font-size: 45px; bottom:0; padding-left:20px;;"></i>
+                    <a:disabled href="#" class="js-player-jump-back player-controls"><i class="fi-rewind-ten"></i></a>
+                    <a:disabled href="#" class="js-player-play player-controls">
+                        <i id="play-icon" class="fi-play"></i>
+                        <i id="pause-icon" class="fi-pause Hidden"></i>
                     </a>
+                    <a:disabled href="#" class="js-player-forward player-controls"><i class="fi-rewind-ten"></i></a>
                 <% } %>
                 <!-- Media is ready -->
                 <% if (typeof(mediaUrl) != "undefined" && mediaUrl != "") { %>
-                    <a href="#" class="js-player-jump-back"><i class="fi-rewind-ten" style="font-size: 35px; padding-top:10px; margin-bottom:5px;"></i></a>
-                    <a href="#" class="js-player-play">
-                        <i id="play-icon" class="fi-play" style="font-size: 45px; padding-left:20px;"></i>
-                        <i id="pause-icon" class="fi-pause Hidden" style="font-size: 45px; bottom:0; padding-left:20px;;"></i>
+                    <a href="#" class="js-player-jump-back player-controls"><i class="fi-rewind-ten"></i></a>
+                    <a href="#" class="js-player-play player-controls">
+                        <i id="play-icon" class="fi-play"></i>
+                        <i id="pause-icon" class="fi-pause Hidden"></i>
                     </a>
+                    <a href="#" class="js-player-forward player-controls"><i class="fi-rewind-ten"></i></a>
+
                 <% } %>
             </div>
         </div>

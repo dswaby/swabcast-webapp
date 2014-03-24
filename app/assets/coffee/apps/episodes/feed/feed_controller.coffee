@@ -4,14 +4,13 @@ define ["app", "apps/episodes/feed/feed_view",
 (Swabcast, View, ShowView) ->
   Swabcast.module "EpisodesApp.Feed", (Feed, Swabcast, Backbone, Marionette, $, _) ->
     Feed.Controller =
-      showFeeds: ->
+      showFeeds: (timeOut) ->
         require ["common/view"], (CommonViews) ->
           loadingView = new CommonViews.Loading(
-            title: "Artificialy delaying this response"
-            message: "This is the view that is fucked"
+            title: "Loading feeds"
+            message: "content will appear shortly"
           )
           Swabcast.libraryRegion.show loadingView
-
         require ["entities/feed"], ->
           fetchingLibrary = Swabcast.request("entities:library")
           feedLayout = new View.Layout()
@@ -20,7 +19,9 @@ define ["app", "apps/episodes/feed/feed_view",
             feedLayout.on "show", ->
               feedLayout.feedItemsCollectionRegion.show subscriptions
 
-          Swabcast.libraryRegion.show feedLayout
+          setTimeout (->
+            Swabcast.libraryRegion.show feedLayout
+          ), timeOut
 
       showEpisodeDetails: (model) ->
         model.set
@@ -50,12 +51,10 @@ define ["app", "apps/episodes/feed/feed_view",
       showFeedEpisodesById: (id) ->
         require ["common/view"], (CommonViews) ->
           loadingView = new CommonViews.Loading(
-            title: "Finding Episode"
-            message: "Your data will load shortly"
+            title: "Loading Feed"
+            message: "stand by"
           )
           Swabcast.libraryRegion.show loadingView
-        #   return
-        # require ["common/view"], (CommonView) ->
           backButton = new CommonViews.NavHelper(
             buttonText: "Back to subscriptions"
           )

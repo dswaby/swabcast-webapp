@@ -15,7 +15,20 @@
 }
 
 .big-big-ico {
-  font-size: 144px;
+  font-size: 75px;
+}
+
+.loading {
+  text-align: left;
+  width: 200px;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loading img{
+  margin-bottom: 600px;
 }
 
 .playlist-row {
@@ -88,6 +101,14 @@
   color: #000;
 }
 
+.tab-bar-image img{
+  display:inline;
+  height:45px;
+  width:45px;
+  margin-top: 5px;
+}
+
+
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
@@ -120,7 +141,6 @@
   margin-left: 12px !important;
   color:#14B9E8;
   margin-bottom: 0 !important;
-
 }
 
 .feed-color {
@@ -195,7 +215,9 @@
   width: 100%;
 }
 
-
+.right-small {
+  border-left: 0 !important;
+}
 
 .playlist {
   table-border-style: solid;
@@ -203,37 +225,6 @@
   table-border-color: #ddd;
 
 }
-// Media Queries
-// #sidebar ul li a {
-//   color: #900;
-//   text-decoration: none;
-//   padding: 3px 0;
-//   display: block;
-// }
-
-// @media all and (min-width: 1001px) {
-//   #sidebar ul li a:after {
-//     content: " (" attr(data-email) ")";
-//     font-size: 11px;
-//     font-style: italic;
-//     color: #666;
-//   }
-// }
-
-// @media all and (max-width: 1000px) and (min-width: 700px) {
-//   #sidebar ul li a:before {
-//     content: "Email: ";
-//     font-style: italic;
-//     color: #666;
-//   }
-// }
-
-// @media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
-//   #sidebar ul li a {
-//     padding-left: 21px;
-//     background: url(../images/email.png) left center no-repeat;
-//   }
-// }
 
 /***************************************************************************************************
     styles for static player bar at bottom of screen  **********************************************
@@ -261,19 +252,6 @@
     height: 60px;
 }
 #album-preview {
-    // position: fixed;
-    // //left: 7px;
-    // bottom: 0;
-    // left: 80px;
-    // width: 80px;
-    // height: 80px;
-}
-
-#controls-wrapper {
-  height:60px;
-  position:fixed;
-  bottom:0;
-  right: 16px;
 }
 
 #feeditems-collection {
@@ -283,7 +261,10 @@
     position: fixed;
     // top: 15px;
     left: 63px;
-    bottom: 30px;
+    bottom: 0;
+    overflow: auto;
+    height: 60px;
+    max-width:50%;
     // font-weight: bold;
     // font-size: 18px;
 }
@@ -299,6 +280,25 @@
     width: 60px;
     height: 60px;
 }
+.player-controls i{
+  float: left;
+  font-size: 35px;
+  bottom:0;
+  padding:5px;
+}
+
+#controls-wrapper {
+  height:60px;
+  position:fixed;
+  bottom:0;
+  right: 0;
+  padding-top:10px;
+}
+
+.right-off-canvas-menu {
+  width: 320px !important;
+}
+
 @media all and (max-width: 1000px) and (min-width: 700px) {
   #player {
     height: 85px;
@@ -309,15 +309,28 @@
   }
   .player-preview{
     position: fixed;
-    // top: 15px;
+    height: 85px;
     left: 87px;
-    bottom: 45px;
     // font-weight: bold;
     // font-size: 18px;
-}
+  }
+  .player-controls i{
+    float: left;
+    font-size: 45px;
+    bottom:0;
+    padding:10px;
+  }
   #feeditems-collection {
     padding-left:80px;
     padding-right:80px;
+  }
+
+  #controls-wrapper {
+    height:85px;
+    position:fixed;
+    bottom:0;
+    right: 16px;
+    margin-top:15px;
   }
 }
 
@@ -332,7 +345,21 @@
   .player-preview {
     position: fixed;
     left: 85px;
-    bottom: 45px;
+    margin-top: 20px !important;
+
+  }
+  .player-controls i{
+    float: left;
+    font-size: 45px;
+    bottom:0;
+    padding:10px;
+  }
+    #controls-wrapper {
+    height:85px;
+    position:fixed;
+    bottom:0;
+    right: 16px;
+    margin-top:15px;
   }
 }
 

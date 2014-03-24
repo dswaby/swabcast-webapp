@@ -1,7 +1,8 @@
-docs/
+docs/*
+docs
 node_modules/
-.sass-cache
-.sass-cache/*
+app/.sass-cache/
+.sass-cache/
 app/assets/bower_components/*
 .sublime-grunt.cache
 .swabcast.sublime-workspace
@@ -11,3 +12,6 @@ app/assets/foundation_icons/
 app/assets/js
 app/assets/js/
 app/assets/js/*
+test/coffee/*
+app/index.html
+app/assets/css/*

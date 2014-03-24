@@ -26,12 +26,12 @@ define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/mari
       if Backbone.history
         Backbone.history.start()
         if Swabcast.getCurrentRoute() is ""
+          timeout = 3500
           Swabcast.navigate "library"
-          Swabcast.trigger "media:all"
-        # if Swabcast.getCurrentRoute() is "library"
-        #   Swabcast.trigger "media:all"
-        # if Swabcast.getCurrentRoute() is "feed"
-        #   Swabcast.trigger("feedid:episodeslist")
+          # Adding timeout so that on initial load, in addition to needing to retrieve
+          # data, will have time to load images
+          Swabcast.trigger "media:all", timeout
+
         if Swabcast.getCurrentRoute() is "playlist"
           Swabcast.trigger "media:all"
           console.log("playlist triggered")

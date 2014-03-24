@@ -2,6 +2,6 @@
 <i style="font-size:160px; float:left" class="fi-skull"></i>
 <div style="float:left">
 <br />
-<p>This application is a side project under development as often as I have time to work on it, if you are seeing this notification, it means that I intend to implement this feature, but haven't gotten around to it yet. Please try back another time</p>
+<p>This application is a side project under development I work on only as often as time permits. If you are seeing this notification, I am planning on working on this feature soon, otherwise I wouldn't have wasted my time on making this alert. Please try back another time</p>
 
 </div>

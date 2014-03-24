@@ -27,9 +27,9 @@ define ["app",
       template: episodeDetailedTpl
       events:
         "click a.dismiss": "closeDialog"
-        "click a.js-edit": "editClicked"
-        "click td a.js-enqueue": "queueEpisode"
-        "click td a.js-archive": "archiveEpisode"
+        "click td.js-edit": "editClicked"
+        "click td.js-enqueue": "queueEpisode"
+        "click td.js-archive": "archiveEpisode"
 
       initialize: ->
         @title = @model.get("subscriptionTitle")
@@ -42,15 +42,15 @@ define ["app",
       closeDialog: (e) ->
         @trigger "dialog:close"
 
-      queueEpisode: (e) ->
-        e.preventDefault()
-        e.stopPropagation()
-        @$el.addClass "disabled"
-
       archiveEpisode: (e) ->
         e.preventDefault()
         e.stopPropagation()
         console.log("mark episode as archived")
+        @trigger "dialog:close"
+      queueEpisode: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        @$el.addClass "disabled"
 
         if @model.get("enqueue") is false
           Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @model
@@ -75,13 +75,13 @@ define ["app",
       tagName: "tr"
       template: episodeItemViewTpl
       events:
-        "click a.js-enqueue": "toggleQueue"
+        "click td.js-enqueue": "toggleQueue"
         "click a.js-feedview": "feedDetails"
         "click td.js-view-detail": "showClicked"
         "click a.js-preview-audio": "previewAudio"
 
-      onBeforeRender: ->
-
+      onRender: ->
+        window.scrollTo(0,0)
       initialize: ->
 
       templateHelpers:

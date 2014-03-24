@@ -63,7 +63,6 @@ define ["app",
           order: 1
         )
         playerView = new View.Player(model: playerData)
-        console.log(playerView)
         return
       it "test4", ->
         feeds = new Swabcast.Entities.Episode()

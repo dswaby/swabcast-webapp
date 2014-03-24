@@ -12,7 +12,11 @@ requirejs.config
     tpl: "vendor/tpl"
     json2: "vendor/json2"
     foundation: "vendor/foundation"
-    transit: "vendor/jquery.transit"
+    fastclick: "vendor/fastclick"
+    toastr: "./../bower_components/toastr/toastr.min"
+    # transit: "vendor/jquery.transit"
+
+
 
   #syphon: 'vendor/backbone.syphon',
   shim:
@@ -33,21 +37,22 @@ requirejs.config
 
     "jquery-ui": ["jquery"]
 
-    transit:
+    fastclick:
+      exports: ["FastClick"]
+
+    toastr:
       deps: ["jquery"]
 
-    #   'spin.jquery':['jquery'],
-    #   spin: ['spin.jquery'],
     localstorage: ["backbone"]
 
     "vendor/foundation.offcanvas":
       deps: ["jquery", "foundation"]
 
-    "vendor/foundation.reveal":
-      deps: ["jquery", "foundation"]
+    # "vendor/foundation.reveal":
+    #   deps: ["jquery", "foundation"]
 
-    "vendor/foundation.fastclick":
-      deps: ["jquery", "foundation"]
+    # "vendor/foundation.fastclick":
+    #   deps: ["jquery", "foundation"]
 
     # "reveal": ["foundation"]
 
@@ -64,14 +69,13 @@ requirejs [
   "jquery"
   "foundation"
   "vendor/foundation.offcanvas"
-  "vendor/foundation.fastclick"
+  "fastclick"
 ], ($) ->
 
   (($, window, undefined_) ->
     $doc = $(document)
     Modernizr = window.Modernizr
     $(document).foundation()
-
   ) $, window
   return
 

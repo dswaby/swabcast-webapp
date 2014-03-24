@@ -9,6 +9,8 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "enqueue": false
         "publishedAt": 0
     )
+    # TODO - validations
+
     Entities.configureStorage Entities.Episode
 
     Entities.Episodes = Backbone.Collection.extend(
@@ -40,8 +42,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     initializeFeeds = ->
       feeds = new Entities.Feeds([
         "id": 8396
-        "feedUrl": "http://shoptalkshow.om"
-        "mediaUrl": "http://shoptalkshow.com/feed/podcast/"
+        "feedUrl": "http://shoptalkshow.com"
         "authors": "ShopTalk"
         "subscriptionTitle": "ShopTalk"
         "summary": "ShopTalk is a podcast about front end web design, development and UX. Each week Chris Coyier and Dave Rupert are joined by a special guest to talk shop and answer listener submitted questions."
@@ -497,6 +498,464 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "publishedAt": 1362409205
           "size": 32537835
           "duration": 4035
+        ]
+      ,
+        "id": 19230
+        "feedUrl": "http://5by5.tv/eastwing"
+        "authors": "5by5"
+        "subscriptionTitle": "The East Wing"
+        "summary": "The East Wing is a weekly talk show featuring the best of the internet. Hosted by Tim Smith."
+        "albumArt": "east_wing.jpg"
+        "episodes": [
+          "uid": 36622812
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-086.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 86: Katy DeCorah"
+          "episodeSummary": "Chris Enns fills in again for Tim Smith and he chats with Katy DeCorah about how she got her start on the web, how her education in history and library helps with research, and what it's like developing for IE 7 in 2014."
+          "publishedAt": 1394773200
+          "size": 26092759
+          "duration": 2545
+        ,
+          "uid": 36053602
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-085.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 85: Wren Lanier"
+          "episodeSummary": "Chris Enns is the guest host for Tim Smith and he chats with Wren Lanier about her journey onto the web, how her start was due to poison ivy, and her advice for those seeking success and recognition on the web."
+          "publishedAt": 1393016400
+          "size": 35455827
+          "duration": 3481
+        ,
+          "uid": 35893536
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-084.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 84: Shawn Blanc"
+          "episodeSummary": "Tim talks with Shawn Blanc about his beginnings, taking his site full-time, his daily podcast, and the other sites that he writes on."
+          "publishedAt": 1392431400
+          "size": 26008851
+          "duration": 3171
+        ,
+          "uid": 35700451
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-083.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 83: Brandon Mathis"
+          "episodeSummary": "Tim talks with Brandon Mathis about his beginnings, freelancing, his many side projects, and how he balances it all."
+          "publishedAt": 1391639400
+          "size": 30528873
+          "duration": 3736
+        ,
+          "uid": 35575798
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-082.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 82: Tim Murtaugh"
+          "episodeSummary": "Tim talks with Tim Murtaugh about how he got his start, keeping up with technology in a fast-paced industry, and working on projects that scare you."
+          "publishedAt": 1391035500
+          "size": 26748848
+          "duration": 3264
+        ,
+          "uid": 35441776
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-081.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 81: Sam Soffes - Part Three"
+          "episodeSummary": "Tim talks with Sam Soffes about Roon, contracting, getting married, and finding motivation."
+          "publishedAt": 1390431600
+          "size": 27213024
+          "duration": 3322
+        ,
+          "uid": 35345589
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-080.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 80: Adam Clark - Part Two"
+          "episodeSummary": "Tim talks with Grammy-nominated Adam Clark about figuring things out in a business, The Gently Mad, side projects, and more."
+          "publishedAt": 1389825000
+          "size": 22062942
+          "duration": 2678
+        ,
+          "uid": 35248267
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-079.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 79: Sean Johnson"
+          "episodeSummary": "Tim talks with Sean Johnson about his start in design, whether you should specialize, pricing projects, and more."
+          "publishedAt": 1389220200
+          "size": 34465139
+          "duration": 2819
+        ,
+          "uid": 35224299
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2014/eastwing-078.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 78: Haddie Cooke"
+          "episodeSummary": "Tim talks with Haddie Cooke about selling podcast ads, hosting The Frequency, and how she got her start at 5by5."
+          "publishedAt": 1389052800
+          "size": 44153984
+          "duration": 3613
+        ,
+          "uid": 35224300
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-077.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 77: Rachel Shillcock - Part Two"
+          "episodeSummary": "Tim talks with Rachel Shillcock about speaking engagements, her new podcast, Beyond Ink, and finding a way to make freelance work."
+          "publishedAt": 1387402200
+          "size": 37011994
+          "duration": 2917
+        ,
+          "uid": 35224301
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-076.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 76: Kevin M. Hoffman"
+          "episodeSummary": "Tim talks with Kevin M. Hoffman about his beginnings, how meetings are a design problem, and being an independent designer."
+          "publishedAt": 1386806400
+          "size": 35481939
+          "duration": 2790
+        ,
+          "uid": 35224302
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-075.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 75: Gene Crawford"
+          "episodeSummary": "Tim talks with Gene Crawford about client services and organizing conferences."
+          "publishedAt": 1386108000
+          "size": 34342725
+          "duration": 2776
+        ,
+          "uid": 35224303
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-074.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 74: Rich Robinson"
+          "episodeSummary": "Tim talks with Rich Robinson about the courage to do what you love, the fact that freelance is not for everyone, and his great talk about designers and developers working together."
+          "publishedAt": 1383087600
+          "size": 31238501
+          "duration": 2436
+        ,
+          "uid": 35224304
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-073.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 73: Liz Elcoate"
+          "episodeSummary": "Tim talks with Liz Elcoate about her start in the design industry, her podcast, and how she’d never go back to a full-time job."
+          "publishedAt": 1382482800
+          "size": 37222003
+          "duration": 2935
+        ,
+          "uid": 35224305
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-072.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 72: Garth Braithwaite"
+          "episodeSummary": "Tim talks with Garth Braithwaite about how he got started, projects he’s worked on at Adobe, Open Source Design, and design education."
+          "publishedAt": 1381273200
+          "size": 42538136
+          "duration": 3378
+        ,
+          "uid": 35224306
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-071.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 71: Scott Johnson"
+          "episodeSummary": "Tim talks with Scott Johnson about how he got started, takings risks, and being kind to people."
+          "publishedAt": 1380668400
+          "size": 38553937
+          "duration": 3046
+        ,
+          "uid": 35224307
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-070.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 70: Jeremy Fuksa"
+          "episodeSummary": "Tim talks with Jeremy Fuksa about being a design director, hiring designers, and the side-projects he works on."
+          "publishedAt": 1380063600
+          "size": 42538131
+          "duration": 3378
+        ,
+          "uid": 35224308
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-069.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 69: Anna Debenham"
+          "episodeSummary": "Tim talks with Anna Debenham about how she got started and some real talk about freelancing."
+          "publishedAt": 1379458800
+          "size": 32815252
+          "duration": 2567
+        ,
+          "uid": 35224309
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-068.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 68: Brian Krogsgard"
+          "episodeSummary": "Tim talks with Brian Krogsgard about his entrance into WordPress and development, writing a successful online publication, and the future of WordPress."
+          "publishedAt": 1377644400
+          "size": 35097938
+          "duration": 2758
+        ,
+          "uid": 35224310
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-067.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 67: Kyle Roderick"
+          "episodeSummary": "Tim talks with Kyle Roderick about getting into design, side-projects, and creating timeless content"
+          "publishedAt": 1377039600
+          "size": 37346452
+          "duration": 2945
+        ,
+          "uid": 35224311
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-066.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 66: Justin Mezzell"
+          "episodeSummary": "Tim talks with Justin Mezzell about his creative beginnings, balancing life and work, and having a positive voice within our community."
+          "publishedAt": 1376434800
+          "size": 44381647
+          "duration": 3531
+        ,
+          "uid": 35224313
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-064.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 64: Andrew Zusman"
+          "episodeSummary": "Tim talks with Andrew Zusman about starting a career in UX, the difficulties of being new to an industry, and the importance of writing and speaking about your experiences."
+          "publishedAt": 1375226100
+          "size": 31777041
+          "duration": 2481
+        ,
+          "uid": 35224314
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-063.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 63: Chris Coyier - Part Two"
+          "episodeSummary": "Tim talks with Chris Coyier about his successful Kickstarter project, going full-time with CodePen, building websites with what you know, and more."
+          "publishedAt": 1374620400
+          "size": 32186442
+          "duration": 2515
+        ,
+          "uid": 35224315
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-062.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 62: Jim Dalrymple"
+          "episodeSummary": "Tim talks with Jim Dalrymple about his beginnings, the new Logic, the future of Apple, and more."
+          "publishedAt": 1374015600
+          "size": 44989149
+          "duration": 3582
+        ,
+          "uid": 35224316
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-061.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 61: Allison Grayce"
+          "episodeSummary": "Tim talks with Allison Grayce about how she got started, working at Treehouse, and her new adventure to Las Vegas, Nevada."
+          "publishedAt": 1373410800
+          "size": 29062084
+          "duration": 2255
+        ,
+          "uid": 35224317
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-060.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 60: Nicole Dominguez"
+          "episodeSummary": "Tim talks with Nicole Dominguez about how she got started in Design, being young, her thoughts on college, and more."
+          "publishedAt": 1372201200
+          "size": 31868578
+          "duration": 2488
+        ,
+          "uid": 35224318
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-059.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 59: Marco Arment"
+          "episodeSummary": "Tim talks with Marco Arment about how he got started, getting the job at Tumblr, Instapaper, The Magazine, and the future."
+          "publishedAt": 1371682800
+          "size": 45659032
+          "duration": 3638
+        ,
+          "uid": 35224319
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-058.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 58: Paul Armstrong"
+          "episodeSummary": "Tim talks with Paul Armstrong. He has such an interesting mix of skills and talents, and we had the chance to talk about where they intersect, iOS, working on meaningful problems, and more."
+          "publishedAt": 1370991600
+          "size": 44724896
+          "duration": 3560
+        ,
+          "uid": 35224320
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-057.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 57: Adam Stacoviak - Part Two"
+          "episodeSummary": "Tim talks with Adam Stacoviak about building products, pricing them, and the hurdles and mistakes you make along the way."
+          "publishedAt": 1369868400
+          "size": 40339156
+          "duration": 3194
+        ,
+          "uid": 35224321
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-056.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 56: Adam Clark"
+          "episodeSummary": "Tim talks with Adam Clark about how he got into the web, taking risks in business, and starting his first podcast."
+          "publishedAt": 1369177200
+          "size": 36912921
+          "duration": 2909
+        ,
+          "uid": 35224322
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-055.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 55: Ashley Baxter"
+          "episodeSummary": "Tim talks with Ashley Baxter about how she got started, her first talk, and more."
+          "publishedAt": 1368658800
+          "size": 36291941
+          "duration": 2857
+        ,
+          "uid": 35224323
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-054.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 54: Matt Steele"
+          "episodeSummary": "Tim talks with Matt Steele about how got started, the difficulties of changing careers, and Tim's phobia of fish."
+          "publishedAt": 1368054000
+          "size": 36973108
+          "duration": 2914
+        ,
+          "uid": 35224324
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-053.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 53: Dan Benjamin"
+          "episodeSummary": "Tim talks with Dan Benjamin about his freelance business, the future of internet broadcasting, and Dan’s thoughts on t-shirts and hats."
+          "publishedAt": 1367535600
+          "size": 41046957
+          "duration": 3253
+        ,
+          "uid": 35224325
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-052.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 52: Sam Kapila"
+          "episodeSummary": "Tim talks with Sam Kapila, a Designer and Educator that is on the front lines of teaching web design at a university level. Somehow she manages to stay on top of everything, and provide her students with the most up-to-date information she can."
+          "publishedAt": 1366844400
+          "size": 36631112
+          "duration": 2885
+        ,
+          "uid": 35224326
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-051.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 51: Josh Long"
+          "episodeSummary": "Tim talks with Josh Long about how he got started, the challenges of being an editor for an online publication, and a lot more."
+          "publishedAt": 1366239600
+          "size": 30480842
+          "duration": 2373
+        ,
+          "uid": 35224327
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-050.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 50: Myke Hurley"
+          "episodeSummary": "Tim talks with Myke Hurley about how he started podcasting, producing show, dealing with guests, and a lot more."
+          "publishedAt": 1365634800
+          "size": 33078878
+          "duration": 2589
+        ,
+          "uid": 35224328
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-049.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 49: Jory Raphael"
+          "episodeSummary": "Tim talks with Jory Raphael about his start in theatre, doing what you love, and much more."
+          "publishedAt": 1365030000
+          "size": 36575630
+          "duration": 2881
+        ,
+          "uid": 35224329
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-048.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 48: Jen Simmons"
+          "episodeSummary": "Tim talks with Jen Simmons about how she got started, the world of Drupal, the work that goes into The Web Ahead, and much more."
+          "publishedAt": 1363820400
+          "size": 46390758
+          "duration": 3730
+        ,
+          "uid": 35224330
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-047.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 47: Rachel Shillcock"
+          "episodeSummary": "Tim talks with Rachel Shillcock about when and how she got started, her freelance adventures, staying positive, and much more."
+          "publishedAt": 1363215600
+          "size": 33970793
+          "duration": 2695
+        ,
+          "uid": 35224331
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-046.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 46: Geri Coady"
+          "episodeSummary": "Tim talks with Geri Coady about how she got started, her beautiful illustration work, and her recent venture into the land of freelancing."
+          "publishedAt": 1362787200
+          "size": 34537853
+          "duration": 2742
+        ,
+          "uid": 35224332
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-045.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 45: Adii Pienaar"
+          "episodeSummary": "Tim talks with Adii Pienaar about how he got started, the WooThemes journey and, how having balance in life is good for business."
+          "publishedAt": 1362009600
+          "size": 32860794
+          "duration": 2602
+        ,
+          "uid": 35224334
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-043.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 43: Sara Wachter-Boettcher"
+          "episodeSummary": "Tim talks with Sara Wachter-Boettcher about how she got started, what content strategy entails, serving as Editor for A List Apart, and much more."
+          "publishedAt": 1360800000
+          "size": 37174456
+          "duration": 2962
+        ,
+          "uid": 35224335
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-042.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 42: Laura Kalbag"
+          "episodeSummary": "Tim talks with Laura Kalbag about how she got started, speaking at conferences, women in our industry and mentorship."
+          "publishedAt": 1360195200
+          "size": 66078412
+          "duration": 3222
+        ,
+          "uid": 35224336
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-041.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 41: Trevan Hetzel"
+          "episodeSummary": "Tim talks with Trevan Hetzel about how he got started, convincing clients about the value of a website and his new product, Sidecar."
+          "publishedAt": 1359586800
+          "size": 60373270
+          "duration": 2937
+        ,
+          "uid": 35224337
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-040.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 40: Andy Clarke"
+          "episodeSummary": "Tim talks with Andy Clarke about writing books, starting podcasts and the tips on doing client services correctly."
+          "publishedAt": 1358982000
+          "size": 78243113
+          "duration": 3830
+        ,
+          "uid": 35224338
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-039.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 39: Trent Walton"
+          "episodeSummary": "Tim talks with Trent Walton about how he got started, starting Paravel, and how important it is to share."
+          "publishedAt": 1358377200
+          "size": 61428094
+          "duration": 2990
+        ,
+          "uid": 35224339
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-038.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 38: Steve Derico and Sam Soffes"
+          "episodeSummary": "Tim talks to Steve Derico and Sam Soffes about an range of topics, from how Steve got into iOS development to how you should really get yourself a Taco Bell Doritos Loco Taco."
+          "publishedAt": 1357686000
+          "size": 68145758
+          "duration": 3325
+        ,
+          "uid": 35224340
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-037.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 37: Brian Hoff"
+          "episodeSummary": "Tim talks with Brian Hoff about how he got started, the benefits of blogging and much more."
+          "publishedAt": 1356562800
+          "size": 59016467
+          "duration": 2869
+        ,
+          "uid": 35224341
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-036.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 36: Kerem Suer"
+          "episodeSummary": "Tim talks with Kerem Suer about how he got started, his work at Fitbit and managing your own design business."
+          "publishedAt": 1355958000
+          "size": 60862802
+          "duration": 2961
+        ,
+          "uid": 35224342
+          "mediaUrl": "http://d.5by5.net/redirect.mp3/cdn.5by5.tv/audio/broadcasts/eastwing/2013/eastwing-035.mp3"
+          "explicit": null
+          "episodeTitle": "The East Wing 35: Drew Wilson"
+          "episodeSummary": "Tim talks with Drew Wilson about how he got started, what he’s made, what he’s making and the philosophy behind all of his work."
+          "publishedAt": 1354748400
+          "size": 69923113
+          "duration": 3414
         ]
       ,
         "id": 199
@@ -1414,7 +1873,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "feedUrl": "http://emergingtech.chariotsolutions.com/category/devnews/feed/"
         "author": "Ken Rimple, Chariot Solutions"
         "subscriptionTitle": "Chariot Developer News"
-        "description": "Chariot's home of Emerging Technology research"
+        "episodeSummary": "Chariot's home of Emerging Technology research"
         "albumArt": "devnews-fullres.jpg"
         "episodes": [
           "uid": 36597554
@@ -1689,7 +2148,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "mediaUrl": "http://threedevsandamaybe.com/download/15-web-design-with-justin-delucia.mp3",
           "explicit": null
           "episodeTitle": "Episode 15 - Web Design with Justin DeLucia",
-          "description": "This week we are lucky to have special guest and good friend of the show Justin DeLucia on to discuss all things web design. Starting off with background discussion on how he got into the industry, we move on to how designers and developers work (and should work) together. Finally, we wrap up with our longest quiz yet, which undoubtedly went off in many random tangents.",
+          "episodeSummary": "This week we are lucky to have special guest and good friend of the show Justin DeLucia on to discuss all things web design. Starting off with background discussion on how he got into the industry, we move on to how designers and developers work (and should work) together. Finally, we wrap up with our longest quiz yet, which undoubtedly went off in many random tangents.",
           "publishedAt": 1394667000
           "size": 54392832
           "duration": 6013
@@ -1698,7 +2157,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "mediaUrl": "http://threedevsandamaybe.com/download/14-using-composer-and-the-command-line-cli.mp3",
           "explicit": null
           "episodeTitle": "Episode 14 - Using Composer and the Command Line (CLI)",
-          "description": "With only a two man crew this week we decided to have a little ramble about Composer and the Command Line. Initially discussing the benefits of Composer over alternatives (i.e. PEAR), we move onto some of the real-world issues that can arise from 'depending' on it. We then segue into discussing the Command Line and some of the key points new users should now about.",
+          "episodeSummary": "With only a two man crew this week we decided to have a little ramble about Composer and the Command Line. Initially discussing the benefits of Composer over alternatives (i.e. PEAR), we move onto some of the real-world issues that can arise from 'depending' on it. We then segue into discussing the Command Line and some of the key points new users should now about.",
           "publishedAt": 1394056800
           "size": 44419072
           "duration": 4852
@@ -1707,7 +2166,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "mediaUrl": "http://threedevsandamaybe.com/download/13-using-the-php-documentation.mp3",
           "explicit": null
           "episodeTitle": "Episode 13 - Using the PHP Documentation",
-          "description": "This week we discuss the important topic of learning how to effectively use the PHP documentation. Although easily neglected for other resources (i.e. StackOverflow), the official PHP documentation is a great place to learn about new functions and how they can be used. Finally, we touch on some accompanying third-party documentation tools we use on a daily basis.",
+          "episodeSummary": "This week we discuss the important topic of learning how to effectively use the PHP documentation. Although easily neglected for other resources (i.e. StackOverflow), the official PHP documentation is a great place to learn about new functions and how they can be used. Finally, we touch on some accompanying third-party documentation tools we use on a daily basis.",
           "publishedAt": 1393451877
           "size": 35321856
           "duration": 3930
@@ -1716,7 +2175,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "mediaUrl": "http://threedevsandamaybe.com/download/12-what-is-mvc.mp3",
           "explicit": null
           "episodeTitle": "Episode 12 - What is MVC?",
-          "description": "This week we discuss the popular MVC (Model-View-Controller) design pattern and how it is used in web application development today. We start with a brief history lesson and introduction to design patterns, then move on to a quiz which highlights some of variants that have been created.",
+          "episodeSummary": "This week we discuss the popular MVC (Model-View-Controller) design pattern and how it is used in web application development today. We start with a brief history lesson and introduction to design patterns, then move on to a quiz which highlights some of variants that have been created.",
           "publishedAt": 1392843600
           "size": 36313088
           "duration": 4049
@@ -1725,7 +2184,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "mediaUrl": "http://threedevsandamaybe.com/download/11-css-straight-from-the-hart.mp3",
           "explicit": null
           "episodeTitle": "Episode 11 - CSS, Straight from the Hart",
-          "description": "In this weeks show we introduce CSS to the web-development party. Starting off with a brief history lesson, we transition into highlighting why it is useful and the different types of styling options available. Finally, we put to rest the confusion between the different versions.",
+          "episodeSummary": "In this weeks show we introduce CSS to the web-development party. Starting off with a brief history lesson, we transition into highlighting why it is useful and the different types of styling options available. Finally, we put to rest the confusion between the different versions.",
           "publishedAt": 1392242400
           "size": 65712379
           "duration": 4082
@@ -1734,7 +2193,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "mediaUrl": "http://threedevsandamaybe.com/download/10-html-experiences-and-navigation-implementation-part-2.mp3",
           "explicit": null
           "episodeTitle": "Episode 10 - HTML Experiences and Navigation Implementation - Part 2",
-          "description": "This week we wrap up the discussion on HTML, highlighting useful tools that we have encountered and incorporate into our work-flow. We then move on to briefly talk about considerations that should be addressed when designing and implementing website navigation.",
+          "episodeSummary": "This week we wrap up the discussion on HTML, highlighting useful tools that we have encountered and incorporate into our work-flow. We then move on to briefly talk about considerations that should be addressed when designing and implementing website navigation.",
           "publishedAt": 1391634949
           "size": 40253440
           "duration": 4505
@@ -1743,7 +2202,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "mediaUrl": "http://threedevsandamaybe.com/download/9-introduction-to-object-oriented-programming.mp3",
           "explicit": null
           "episodeTitle": "Episode 9 - Introduction to Object-oriented programming",
-          "description": "Sadly we are one host down this week with Lewis hard are work, so we decided to postpone part two of the HTML discussion till next week. In the meantime however, we divert are attention to introducing the Object-oriented programming paradigm. We discuss its' advantages, along with concepts such as Objects, Classes, Data Encapsulation, Inheritance and Polymorphism.",
+          "episodeSummary": "Sadly we are one host down this week with Lewis hard are work, so we decided to postpone part two of the HTML discussion till next week. In the meantime however, we divert are attention to introducing the Object-oriented programming paradigm. We discuss its' advantages, along with concepts such as Objects, Classes, Data Encapsulation, Inheritance and Polymorphism.",
           "publishedAt": 1391038200
           "size": 34725888
           "duration": 3873
@@ -1752,7 +2211,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "mediaUrl": "http://threedevsandamaybe.com/download/8-html-experiences-part-1.mp3",
           "explicit": null
           "episodeTitle": "Episode 8 - HTML Experiences - Part 1",
-          "description": "This week we decided to do an episode on good ol' HTML. There are many good resources online for learning the language, so instead we decided to discuss our personal experiences. Along with this we reflect on browser support issues and how to help alleviate these problems.",
+          "episodeSummary": "This week we decided to do an episode on good ol' HTML. There are many good resources online for learning the language, so instead we decided to discuss our personal experiences. Along with this we reflect on browser support issues and how to help alleviate these problems.",
           "publishedAt": 1390423984
           "size": 33531904
           "duration": 3738
@@ -1760,7 +2219,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "uid": 35410986
           "mediaUrl": "http://threedevsandamaybe.com/download/7-discussion-on-freelance-work.mp3",
           "episodeTitle": "Episode 7 - Discussion on Freelance Work",
-          "description": "Following our discussion last week, we received a very cool email from a listener highlighting freelance work. In this weeks podcast we have a chat about our freelance experiences and how we find projects to take on. Following this we touch on things to look out for and how to juggle your day job and outside work.",
+          "episodeSummary": "Following our discussion last week, we received a very cool email from a listener highlighting freelance work. In this weeks podcast we have a chat about our freelance experiences and how we find projects to take on. Following this we touch on things to look out for and how to juggle your day job and outside work.",
           "publishedAt": 1389736800
           "size": 35090432
           "duration": 3878
@@ -1768,7 +2227,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "uid": 35410987
           "mediaUrl": "http://threedevsandamaybe.com/download/6-advice-to-new-php-web-developers.mp3",
           "episodeTitle": "Episode 6 - Advice to new PHP web developers",
-          "description": "With all the recent discussion in the PHP community we decided it would be a good time to give some grounded advice to new developers. When you do decide to bite the bullet and begin learning web-development/PHP you may quickly be overwhelmed with talk of frameworks, third-party code and dependencies. In this podcast we give our take on what is best to learn and when, and how we each personally went about doing it.",
+          "episodeSummary": "With all the recent discussion in the PHP community we decided it would be a good time to give some grounded advice to new developers. When you do decide to bite the bullet and begin learning web-development/PHP you may quickly be overwhelmed with talk of frameworks, third-party code and dependencies. In this podcast we give our take on what is best to learn and when, and how we each personally went about doing it.",
           "publishedAt": 1389043800
           "size": 32524288
           "duration": 3792
@@ -1776,7 +2235,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "uid": 35410988
           "mediaUrl": "http://threedevsandamaybe.com/download/5-exploring-text-source-editors-and-ides.mp3",
           "episodeTitle": "Episode 5 - Exploring Text/Source Editors and IDEs",
-          "description": "In the podcast this week we discuss the important topic of text editors. You will be using one daily if you plan to get serious about your programing, so it pays to be aware of what is out there. We first highlight the difference between text and source editors, and then name a couple of examples we have used in the past. Finally, we briefly discuss IDE's and the merits of using such an application when programming.",
+          "episodeSummary": "In the podcast this week we discuss the important topic of text editors. You will be using one daily if you plan to get serious about your programing, so it pays to be aware of what is out there. We first highlight the difference between text and source editors, and then name a couple of examples we have used in the past. Finally, we briefly discuss IDE's and the merits of using such an application when programming.",
           "publishedAt": 1387405800
           "size": 35260416
           "duration": 4109
@@ -1784,7 +2243,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "uid": 35410989
           "mediaUrl": "http://threedevsandamaybe.com/download/4-web-hosting-and-domains-part-2.mp3",
           "episodeTitle": "Episode 4 - Web Hosting and Domains - Part 2",
-          "description": "Second part of our discussion on Web Hosting options and what to look out for. We then move on to talk about Domains, DNS and the different types of record types (A, CNAME etc.).",
+          "episodeSummary": "Second part of our discussion on Web Hosting options and what to look out for. We then move on to talk about Domains, DNS and the different types of record types (A, CNAME etc.).",
           "publishedAt": 1386626400
           "size": 37036032
           "duration": 3954
@@ -1792,7 +2251,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "uid": 35410990
           "mediaUrl": "http://threedevsandamaybe.com/download/3-web-hosting-part-1.mp3",
           "episodeTitle": "Episode 3 - Web Hosting - Part 1",
-          "description": "1st part of our section on web hosting. In this episode we cover an essential part of web development, choosing a web hosting solution that is right for you.",
+          "episodeSummary": "1st part of our section on web hosting. In this episode we cover an essential part of web development, choosing a web hosting solution that is right for you.",
           "publishedAt": 1386018000
           "size": 33284096
           "duration": 3550
@@ -1800,7 +2259,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "uid": 35410991
           "mediaUrl": "http://threedevsandamaybe.com/download/2-getting-started.mp3",
           "episodeTitle": "Episode 2 - Setting up a local environment, basic PHP functionality",
-          "description": "This episode explores getting started, including, creating a local environment, and explores some very basic programming logic, in particular PHP logic. We touch on collections/arrays, data types, looping techniques.",
+          "episodeSummary": "This episode explores getting started, including, creating a local environment, and explores some very basic programming logic, in particular PHP logic. We touch on collections/arrays, data types, looping techniques.",
           "publishedAt": 1383598800
           "size": 28952576
           "duration": 3056
@@ -1808,7 +2267,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           "uid": 35410992
           "mediaUrl": "http://threedevsandamaybe.com/download/1-introduction-episode.mp3",
           "episodeTitle": "Introduction Episode - Who are the hosts, what is PHP, where to start",
-          "description": "This episode introduces listeners to the people hosting the podcast. It also touches on some very basic topics such as, what is needed to get in to web development, what experience is required, what will it cost, what will I need to learn. This is for absolute beginners, no knowledge at all of web development is required.",
+          "episodeSummary": "This episode introduces listeners to the people hosting the podcast. It also touches on some very basic topics such as, what is needed to get in to web development, what experience is required, what will it cost, what will I need to learn. This is for absolute beginners, no knowledge at all of web development is required.",
           "publishedAt": 1382191200
           "size": 37881856
           "duration": 4588

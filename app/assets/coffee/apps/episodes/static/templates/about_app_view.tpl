@@ -1,6 +1,6 @@
 <div class="large-8 small-12 columns" style="margin-bottom:75px;">
   <h1> Swabcast </h1>
-  <img src="./assets/img/swabcast.svg" height="150px" width="150px" />
+  <img src="./assets/img/small_swabcast_letter.png" height="90px" width="78px" style="float:left" />
   <p> The swabcast app is a personal side project I work on in the ongoing effort to experiment with and learn upcoming web technologies.
   </p>
   <br /><br />
@@ -51,3 +51,4 @@
 
 </div>
 <div class="large-12 small-12 columns" style="margin-bottom:70px;"></div>
+<a href="https://github.com/dswaby/swabstack"><img style="position: absolute; top: 0; right: 0; border: 0;" src="./assets/img/fork_me.png"></a>
