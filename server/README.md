@@ -1,5 +1,4 @@
-Database Architecture
-=====================
+
 ###### This Server
   * node.js
   * express.js framework
