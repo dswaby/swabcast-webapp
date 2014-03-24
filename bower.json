@@ -9,15 +9,17 @@
     "backbone-amd": "~1.0.0",
     "underscore-amd": "~1.4.4",
     "modernizr": "~2.6.2",
-    "backbone.marionette": "~1.0.2",
+    "backbone.marionette": "~1.7.1",
     "backbone.wreqr": "~0.2.0",
     "backbone.babysitter": "~0.0.6",
-    "require-handlebars-plugin": "~0.4.0",
     "mocha": "~1.12.0",
     "chai": "~1.7.2",
     "sinon": "~1.7.3",
     "toastr": "~2.0.0",
-    "almond": "~0.2.9"
+    "almond": "~0.2.9",
+    "backbone.localstorage": "~1.1.7",
+    "json2": "*",
+    "almond":"~0.2.9"
   },
   "devDependencies": {},
   "directory": "bower_components",
@@ -25,6 +27,7 @@
     "jquery": "~1.9.0",
     "backbone.babysitter": "~0.1.0",
     "backbone.wreqr": "~1.0.0",
-    "underscore": ">=1.5.0"
+    "underscore": ">=1.5.0",
+    "fastclick": "~1.0.0"
   }
 }

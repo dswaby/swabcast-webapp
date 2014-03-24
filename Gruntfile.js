@@ -82,6 +82,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+        // generate html based on target
         targethtml: {
             app: {
                 files: {

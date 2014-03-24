@@ -1,5 +1,6 @@
 requirejs.config
   baseUrl: "assets/js"
+  urlArgs: 'bust=' + Math.random()
 
   paths:
     backbone: "./../bower_components/backbone/backbone"
