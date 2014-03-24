@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         },
         watch: {
             compass: {
-                files: ['<%= swabstack.app %>/scss/*.{scss,sass}'],
+                files: ['<%= swabstack.app %>/assets/scss/*.{scss,sass}'],
                 tasks: ['compass:app']
             },
             coffee: {
