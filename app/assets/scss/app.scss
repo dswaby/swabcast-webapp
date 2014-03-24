@@ -1,13 +1,13 @@
 @import "settings";
 // @import "foundation";
-@import "./../bower_components/foundation/scss/foundation/components/offcanvas";
-@import "./../bower_components/foundation/scss/foundation/components/grid";
-@import "./../bower_components/foundation/scss/foundation/components/type";
-@import "./../bower_components/foundation/scss/foundation/components/visibility";
-// @import "./../bower_components/foundation/scss/foundation/components/thumbs";
-@import "./../bower_components/foundation/scss/foundation/components/tables";
-// @import "./../bower_components/foundation/scss/foundation/components/alert-boxes";
-@import "./../bower_components/foundation/scss/foundation/components/button-groups";
+@import "../bower_components/foundation/scss/foundation/components/offcanvas";
+@import "../bower_components/foundation/scss/foundation/components/grid";
+@import "../bower_components/foundation/scss/foundation/components/type";
+@import "../bower_components/foundation/scss/foundation/components/visibility";
+// @import "../bower_components/foundation/scss/foundation/components/thumbs";
+@import "../bower_components/foundation/scss/foundation/components/tables";
+// @import "../bower_components/foundation/scss/foundation/components/alert-boxes";
+@import "../bower_components/foundation/scss/foundation/components/button-groups";
 
 
 .off-canvas-wrap {
@@ -25,7 +25,6 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .loading img{
@@ -296,9 +295,9 @@
   padding-top:10px;
 }
 
-// .right-off-canvas-menu {
-//   width: 320px !important;
-// }
+.right-off-canvas-menu {
+  width: 320px !important;
+}
 
 @media all and (max-width: 1000px) and (min-width: 700px) {
   #player {
