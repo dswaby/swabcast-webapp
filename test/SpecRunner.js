@@ -11,7 +11,6 @@ requirejs.config({
       tpl: "vendor/tpl",
       json2: "vendor/json2",
       foundation: "vendor/foundation",
-      transit: "vendor/jquery.transit",
       chai: "../app/assets/bower_components/chai/chai",
       mocha: "../app/assets/bower_components/mocha/mocha"
     },

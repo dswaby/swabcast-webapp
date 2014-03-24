@@ -16,6 +16,8 @@
         <div id="player-main" class="span4">
             <div id="controls-wrapper">
                 <!-- Initially Disabled -->
+                    <!-- duration<p> </p> -->
+
                 <% if (typeof(mediaUrl) === "undefined" || mediaUrl === "") { %>
                     <a:disabled href="#" class="js-player-jump-back player-controls"><i class="fi-rewind-ten"></i></a>
                     <a:disabled href="#" class="js-player-play player-controls">
@@ -32,7 +34,6 @@
                         <i id="pause-icon" class="fi-pause Hidden"></i>
                     </a>
                     <a href="#" class="js-player-jump-forward player-controls"><i class="fi-rewind-ten"></i></a>
-
                 <% } %>
             </div>
         </div>

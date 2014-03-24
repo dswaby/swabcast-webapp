@@ -1,5 +1,4 @@
 <!-- show template episode_detailed_view -->
-<br /><br />
 <div class="panel">
     <div style="width:100%">
 
@@ -42,7 +41,6 @@
         <% if (typeof(episodeSummary) === "undefined") { %>
             <p></p>
         <% } %>
-
     </div>
 
 
