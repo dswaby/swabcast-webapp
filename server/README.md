@@ -1,11 +1,10 @@
-
 ###### This Server
   * node.js
   * express.js framework
   * mongodb
   * mongoose
 
-while I have been focused primarily on the fron end, I have begun to work on the server with this
+while I have been focused primarily on the front end, I have begun to work on the server with this
 
 DB architecture
 ---------------
