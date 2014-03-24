@@ -10,7 +10,7 @@
 				// "app/assets/bower_components",
 				"docs",
 				".sass-cache",
-				"app/assets/js"
+				// "app/assets/js"
 			],
 			"file_exclude_patterns": [".sublime-grunt.cache"],
 			"follow_symlinks": true,
