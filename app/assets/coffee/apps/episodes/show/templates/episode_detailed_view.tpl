@@ -5,7 +5,7 @@
 
           <!-- <li><a href="#" class="dismiss"> <i class="icon-arrow-left"></i>Close</a></li> -->
           <!-- Add To Playlist -->
-        <table width="225px;" class="modal-row">
+        <table width="100%;" class="modal-row">
             <tr>
                 <td class="modal-row js-show-enqueue">
                     <a href="#" class=""><i class="fi-plus"></i></a>
@@ -26,26 +26,16 @@
             </tr>
         </table>
 
-        <!-- button class="button dismiss">
-            <i class="icon-arrow-left"></i>Close
-        </button> -->
-        <!-- <button class="button js-enqueue">
-            <i class="icon-plus-sign"></i>Queue
-        </button> -->
-        <!-- <button class="button js-enqueue">
-            <i class="icon-plus-sign"></i>Archive
-        </button> -->
-        <!-- <button class="button js-enqueue">
-            <i class="icon-plus-sign"></i>Mark Played
-        </button> -->
     </div>
 
-    <div class="large-9 small-12 columns">
+    <img src=./assets/img/<%= albumArt %> alt="" class="library-image" />
 
-        <img src=./assets/img/<%= albumArt %> alt="" class="library-image">
+    <div class="modal-text-content">
+
         <% if (typeof(feedUrl) !== "undefined") { %>
-            <h6><a href="<%= feedUrl %>">Homepage</a><h6>
+            <a href="<%= feedUrl %>">Homepage</a>
         <% } %>
+
         <% if (typeof(episodeSummary) != "undefined") { %>
             <p><%= episodeSummary %></p>
         <% } %>

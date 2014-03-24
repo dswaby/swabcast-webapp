@@ -24,6 +24,7 @@ define ["app",
     View.EpisodeNotFound = Marionette.ItemView.extend(template: missingTpl)
     # view for displaying summary page of individual episode
     View.EpisodeDetail = Marionette.ItemView.extend(
+      tagName: "div"
       template: episodeDetailedTpl
       events:
         "click a.dismiss": "closeDialog"
