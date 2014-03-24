@@ -1,4 +1,4 @@
-define ["marionette", "apps/config/marionette/regions/dialog", "apps/config/marionette/regions/modal"], (Marionette) ->
+define ["marionette", "apps/config/marionette/regions/dialog"], (Marionette) ->
 
   Swabcast = new Marionette.Application()
   Swabcast.debugging = true
