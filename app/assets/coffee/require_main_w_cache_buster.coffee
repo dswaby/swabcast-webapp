@@ -9,7 +9,7 @@ requirejs.config
     "jquery-ui": "./../bower_components/jquery-ui/ui/jquery-ui"
     underscore: "./../bower_components/underscore/underscore"
     marionette: "./../bower_components/backbone.marionette/lib/backbone.marionette"
-    tpl: "./../bower_components/requirejs-tpl"
+    tpl: "./../bower_components/requirejs-tpl/tpl"
     json2: "./../bower_components/json2/json2"
     foundation: "./../bower_components/foundation/js/foundation/foundation"
     offcanvas: "./../bower_components/foundation/js/foundation/foundation.offcanvas"
