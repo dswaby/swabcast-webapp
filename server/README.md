@@ -1,13 +1,16 @@
-###### This Server
+Web Server
+----------
+
+Uses
   * node.js
   * express.js framework
   * mongodb
   * mongoose
 
-while I have been focused primarily on the front end, I have begun to work on the server with this
 
 DB architecture
 ---------------
+> while I have been spending my time primarily on the front end, I have begun to work on the server with the architecture following architecture in mind
 > Contributions or suggestions for improvements are welcome!
 
   * ###### Subscriptions collection

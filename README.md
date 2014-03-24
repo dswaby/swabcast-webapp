@@ -14,8 +14,9 @@ Want to contribute?
 This is a side project I have been working on I thought I would open source in case there is any interest.
 It is still in very early development, server hasn't been fleshed out and it still uses static assets I have hardcoded.  Contributions or suggestions for improvements are welcome!
 
-(Info on front-end)[https://github.com/dswaby/swabstack/tree/master/app]
-(Info on server)[https://github.com/dswaby/swabstack/tree/master/server]
+[app info](https://github.com/dswaby/swabstack/tree/master/app)
+<br />
+[server info](https://github.com/dswaby/swabstack/tree/master/server)
 
 
 Requirements
