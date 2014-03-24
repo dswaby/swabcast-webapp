@@ -10,8 +10,12 @@
 @import "./../bower_components/foundation/scss/foundation/components/button-groups";
 
 
-body {
-  height:100% !important;
+body, html {
+  height: 100%;
+}
+
+.inner-wrap {
+  height:100%;
 }
 
 .off-canvas-wrap {
@@ -39,6 +43,11 @@ body {
   width:100%;
 }
 
+#playlist-region {
+  height:100%;
+}
+
+// custom alert styles
 .danger-zone {
   color: #a94442;
   background-color: #f2dede;
@@ -109,7 +118,7 @@ body {
   display:inline;
   height:45px;
   width:45px;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 /***************************************************************************************************
@@ -209,6 +218,7 @@ body {
 
 .cover-art-block {
   padding:0 !important;
+  z-index: 8999;
 }
 .icon-closure {
   font-size:30px;

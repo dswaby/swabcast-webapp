@@ -20,7 +20,7 @@ It is still in very early development, server hasn't been fleshed out and it sti
 
 
 Requirements
-  * [compass](http://compass-style.org/)
+  * [compass-sourcemaps --pre](http://compass-style.org/)
   * [mongodb](http://www.mongodb.org/downloads)
   * [nodejs](http://nodejs.org/)
 
@@ -42,9 +42,9 @@ clone this repository, then from the root directory run
 
 this will install all dependancies
 
-To generate the project files and run test server run
+Default `grunt` task will compile coffescript/sass, generate sass sourcemaps, start express server, run mocha tests, and watch files. Just run
 
-`grunt`
+If you get an error about not being able to connect to mongodb, make sure its installed run `mongod` and then restart `grunt` task
 
 configured grunt tasks
 ```

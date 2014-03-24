@@ -16,6 +16,7 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl", "tpl!common/templ
         "click li.js-library-view": "showLibrary"
 
       showPlaylist: (e) ->
+        e.preventDefault()
         Swabcast.trigger "playlist:mainview"
 
       resetLocalStorage: (e) ->
@@ -26,13 +27,16 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl", "tpl!common/templ
         console.log('storage cleared')
 
       showAboutApp: ->
+        e.preventDefault()
         Swabcast.trigger "static:about:app"
 
       notImplemented: (e) ->
+        e.preventDefault()
         console.log("not implemented yet :(")
         Swabcast.trigger "feature:not:implemented"
 
       showLibrary: ->
+        e.preventDefault()
         Swabcast.trigger "episodes:library"
 
     )
