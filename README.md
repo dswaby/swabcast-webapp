@@ -45,31 +45,14 @@ To generate the project files and run test server run
 
 `grunt`
 
-Here is a list of the grunt tasks
+configured grunt tasks
 ```
-       compass  Compile Sass to CSS using Compass *
-        cssmin  Minify CSS *
-     requirejs  Build a RequireJS project. *
-       express  Start an express web server *
-       connect  Start a connect web server. *
-         watch  Run predefined tasks whenever watched files change.
-        coffee  Compile CoffeeScript files into JavaScript *
-          copy  Copy files. *
-         docco  Docco processor. *
-    targethtml  Produces html-output depending on grunt release version *
-         shell  Run shell commands *
-             a  Alias for "dev", "connect:testserver", "express:dev", "watch"
-                tasks.
        default  Alias for "dev", "connect:testserver", "express:dev",
                 "shell:mocha-phantomjs", "watch" tasks.
-           dev  Alias for "copy:vendorjs", "copy:templates", "compass:app",
-                "coffee", "targethtml:app" tasks.
-         build  Alias for "copy:templates", "copy:components", "copy:assets",
-                "shell:buildRequire", "targethtml:dist", "compass:app",
-                "cssmin", "copy:requireBuilt" tasks.
-          test  Alias for "coffee:testcoffee", "connect:testserver",
-                "watch:tests" tasks.
-          docs  Alias for "docco", "copy:docs" tasks.
+           dev  subset of common development tasks used in other tasks
+          test  for writing tests, only watches test folder and runs on change
+          docs  generates docs from source and adds to dist/
+         build  creates optimized distribution
 ```
 
 
