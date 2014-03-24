@@ -24,11 +24,21 @@ Used in this project
     * mocha
     * chai
 
-if you plan to contribute to this project, try to follow the style of [this](http://blog.sourcing.io/mvc-style-guide) post
+if you plan to contribute to this project, try to follow the style of [this](http://blog.sourcing.io/mvc-style-guide) post. Since the server part of this project is not completed, these are the assumptions I have been developing under
+
+
+ASSUMPTIONS
+-----------
+  * by time the user gets to this page, they will have been authenticated
+  * authentication will be handled in request and on server
+
+> * GET /api/subscribed/   will return json representation of a users subscribed feeds
+> * GET /api/playlist      will return json representation of episodes a user has subscribed to
+> * GET /player            will check localstorage of browser for saved audio data
 
 Bugs/In Prog
 ------------
-  * Playlist tracks added not rendering until refresh
+  * Manage playlist tracks added not rendering until refresh
   * Smooth transitions currently not soo smooth
   * Disabling buttons that
   * Fix strange issue with new Date(milliseconds) where all dates
@@ -46,7 +56,7 @@ Working
 
 Todo
 ----
-  * Mocha TDD tests
+  * Test coverage
   * Triggering Play now functionality in
   * Track removal, upnext on end of episode
   * parsing collections returned from mongoose so models resolve correctly
