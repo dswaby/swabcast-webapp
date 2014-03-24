@@ -13,7 +13,7 @@
                     <h6><a href="<%= feedUrl %>">Homepage</a><h6>
                 <% } %>
                 <p><%= summary %></p>
-                <button class="button js-back-button">
+                <button class="button js-show-go-back">
                     <i class="icon-arrow-left"></i>
                     Back
                 </button>

@@ -4529,34 +4529,49 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 
 /* line 17, ../scss/app.scss */
 .big-big-ico {
-  font-size: 144px;
+  font-size: 75px;
 }
 
 /* line 21, ../scss/app.scss */
+.loading {
+  text-align: left;
+  width: 200px;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 30, ../scss/app.scss */
+.loading img {
+  margin-bottom: 600px;
+}
+
+/* line 34, ../scss/app.scss */
 .playlist-row {
   width: 100%;
 }
 
-/* line 25, ../scss/app.scss */
+/* line 38, ../scss/app.scss */
 .danger-zone {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
 
-/* line 31, ../scss/app.scss */
+/* line 44, ../scss/app.scss */
 .success {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 
-/* line 37, ../scss/app.scss */
+/* line 50, ../scss/app.scss */
 .main-view {
   margin-bottom: 70px;
 }
 
-/* line 41, ../scss/app.scss */
+/* line 54, ../scss/app.scss */
 .nav-helper-overlay {
   position: fixed;
   height: 55px;
@@ -4570,19 +4585,19 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   cursor: default;
 }
 
-/* line 54, ../scss/app.scss */
+/* line 67, ../scss/app.scss */
 .nav-helper i {
   margin-left: 30% !important;
   font-size: -webkit-xxx-large !important;
   color: #fff !important;
 }
 
-/* line 60, ../scss/app.scss */
+/* line 73, ../scss/app.scss */
 .nav-helper a {
   color: #fff !important;
 }
 
-/* line 64, ../scss/app.scss */
+/* line 77, ../scss/app.scss */
 .nav-helper p {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -4591,36 +4606,44 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   line-height: 1 !important;
 }
 
-/* line 72, ../scss/app.scss */
+/* line 85, ../scss/app.scss */
 .sidebar-tab-content {
   color: #fff;
   margin-left: 40px;
 }
 
-/* line 78, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 .sidebar-tab {
   margin-left: 40px;
 }
 
-/* line 81, ../scss/app.scss */
+/* line 94, ../scss/app.scss */
 .sidebar-tab a {
   color: #000;
 }
 
-/* line 84, ../scss/app.scss */
+/* line 97, ../scss/app.scss */
 .sidebar-tab p {
   color: #000;
 }
 
-/* line 87, ../scss/app.scss */
+/* line 100, ../scss/app.scss */
 .tabs dd.active a {
   color: #000;
+}
+
+/* line 104, ../scss/app.scss */
+.tab-bar-image img {
+  display: inline;
+  height: 45px;
+  width: 45px;
+  margin-top: 5px;
 }
 
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
-/* line 95, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 .feed-head {
   padding: 20px;
   position: relative;
@@ -4629,7 +4652,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   overflow: hidden;
 }
 
-/* line 103, ../scss/app.scss */
+/* line 124, ../scss/app.scss */
 .table-date h5 {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4643,7 +4666,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-bottom: 0;
 }
 
-/* line 116, ../scss/app.scss */
+/* line 137, ../scss/app.scss */
 .table-date p {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4653,44 +4676,44 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-bottom: 0 !important;
 }
 
-/* line 126, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
 .feed-color {
   color: #14b9e8 !important;
 }
 
-/* line 130, ../scss/app.scss */
+/* line 150, ../scss/app.scss */
 .feed-list {
   background: #fff;
   padding-top: 12px;
 }
 
-/* line 136, ../scss/app.scss */
+/* line 156, ../scss/app.scss */
 .fancy-font {
   font-family: 'Oswald', sans-serif;
 }
 
-/* line 140, ../scss/app.scss */
+/* line 160, ../scss/app.scss */
 .not-found {
   margin-left: 10px;
 }
 
-/* line 144, ../scss/app.scss */
+/* line 164, ../scss/app.scss */
 .episodes-table-wrapper {
   height: 100%;
   overflow: auto;
 }
 
-/* line 148, ../scss/app.scss */
+/* line 168, ../scss/app.scss */
 .locked {
   overflow: hidden;
 }
 
-/* line 152, ../scss/app.scss */
+/* line 172, ../scss/app.scss */
 .playlist {
   top: 0;
 }
 
-/* line 156, ../scss/app.scss */
+/* line 176, ../scss/app.scss */
 .playlist-sidebar {
   background: #F4F4F4;
   min-height: 550px;
@@ -4698,54 +4721,59 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   margin-right: 10px;
 }
 
-/* line 160, ../scss/app.scss */
+/* line 180, ../scss/app.scss */
 .library-image {
   max-width: 25%;
   padding: 5px;
   float: left;
 }
 
-/* line 166, ../scss/app.scss */
+/* line 186, ../scss/app.scss */
 .library-title {
   height: 25px;
   overflow: auto;
 }
 
-/* line 171, ../scss/app.scss */
+/* line 191, ../scss/app.scss */
 .library-title h5 {
   font-family: 'Oswald', sans-serif !important;
 }
 
-/* line 175, ../scss/app.scss */
+/* line 195, ../scss/app.scss */
 .cover-art-block {
   padding: 0 !important;
 }
 
-/* line 178, ../scss/app.scss */
+/* line 198, ../scss/app.scss */
 .icon-closure {
   font-size: 30px;
   margin-right: 5px;
   max-width: 30px;
 }
 
-/* line 184, ../scss/app.scss */
+/* line 204, ../scss/app.scss */
 .dialog-fixed-bottom {
   position: relative;
   bottom: 0;
 }
 
-/* line 189, ../scss/app.scss */
+/* line 209, ../scss/app.scss */
 #page-main {
   padding: 0 !important;
 }
 
-/* line 193, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 .panel {
   overflow: auto;
   width: 100%;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 218, ../scss/app.scss */
+.right-small {
+  border-left: 0 !important;
+}
+
+/* line 222, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
@@ -4755,7 +4783,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 /***************************************************************************************************
     styles for static player bar at bottom of screen  **********************************************
 ***************************************************************************************************/
-/* line 242, ../scss/app.scss */
+/* line 233, ../scss/app.scss */
 #player {
   position: fixed;
   height: 60px;
@@ -4770,44 +4798,39 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   cursor: default;
 }
 
-/* line 255, ../scss/app.scss */
+/* line 246, ../scss/app.scss */
 #player-fill-left {
   height: 100%;
   width: 75%;
 }
 
-/* line 259, ../scss/app.scss */
+/* line 250, ../scss/app.scss */
 .album-preview {
   width: 60px;
   height: 60px;
 }
 
-/* line 272, ../scss/app.scss */
-#controls-wrapper {
-  height: 60px;
-  position: fixed;
-  bottom: 0;
-  right: 16px;
-}
-
-/* line 279, ../scss/app.scss */
+/* line 257, ../scss/app.scss */
 #feeditems-collection {
   margin-bottom: 80px !important;
 }
 
-/* line 282, ../scss/app.scss */
+/* line 260, ../scss/app.scss */
 .player-preview {
   position: fixed;
   left: 63px;
-  bottom: 30px;
+  bottom: 0;
+  overflow: auto;
+  height: 60px;
+  max-width: 50%;
 }
 
-/* line 290, ../scss/app.scss */
+/* line 271, ../scss/app.scss */
 .player-preview p {
   margin: 0 !important;
 }
 
-/* line 293, ../scss/app.scss */
+/* line 274, ../scss/app.scss */
 .player-art {
   background-color: transparent;
   display: block;
@@ -4816,6 +4839,28 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   left: 0;
   width: 60px;
   height: 60px;
+}
+
+/* line 283, ../scss/app.scss */
+.player-controls i {
+  float: left;
+  font-size: 35px;
+  bottom: 0;
+  padding: 5px;
+}
+
+/* line 290, ../scss/app.scss */
+#controls-wrapper {
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-top: 10px;
+}
+
+/* line 298, ../scss/app.scss */
+.right-off-canvas-menu {
+  width: 320px !important;
 }
 
 @media all and (max-width: 1000px) and (min-width: 700px) {
@@ -4833,53 +4878,87 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   /* line 310, ../scss/app.scss */
   .player-preview {
     position: fixed;
+    height: 85px;
     left: 87px;
-    bottom: 45px;
   }
 
-  /* line 318, ../scss/app.scss */
+  /* line 317, ../scss/app.scss */
+  .player-controls i {
+    float: left;
+    font-size: 45px;
+    bottom: 0;
+    padding: 10px;
+  }
+
+  /* line 323, ../scss/app.scss */
   #feeditems-collection {
     padding-left: 80px;
     padding-right: 80px;
   }
+
+  /* line 328, ../scss/app.scss */
+  #controls-wrapper {
+    height: 85px;
+    position: fixed;
+    bottom: 0;
+    right: 16px;
+    margin-top: 15px;
+  }
 }
 @media all and (min-width: 1001px) {
-  /* line 325, ../scss/app.scss */
+  /* line 338, ../scss/app.scss */
   #player {
     height: 85px;
   }
 
-  /* line 328, ../scss/app.scss */
+  /* line 341, ../scss/app.scss */
   .player-art {
     height: 85px;
     width: 85px;
   }
 
-  /* line 332, ../scss/app.scss */
+  /* line 345, ../scss/app.scss */
   .player-preview {
     position: fixed;
     left: 85px;
-    bottom: 45px;
+    margin-top: 20px !important;
+  }
+
+  /* line 351, ../scss/app.scss */
+  .player-controls i {
+    float: left;
+    font-size: 45px;
+    bottom: 0;
+    padding: 10px;
+  }
+
+  /* line 357, ../scss/app.scss */
+  #controls-wrapper {
+    height: 85px;
+    position: fixed;
+    bottom: 0;
+    right: 16px;
+    margin-top: 15px;
   }
 }
-/* line 340, ../scss/app.scss */
+/* line 367, ../scss/app.scss */
 .offcanvas-inner-shadow-left {
   -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   -moz-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
 }
 
-/* line 350, ../scss/app.scss */
+/* line 377, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 354, ../scss/app.scss */
+/* line 381, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 358, ../scss/app.scss */
+/* line 385, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;
@@ -4893,7 +4972,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   font-style: normal;
 }
 
-/* line 409, ../scss/app.scss */
+/* line 436, ../scss/app.scss */
 .fi-arrow-right:before,
 .fi-archive:before,
 .fi-alert:before,
@@ -4939,162 +5018,162 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
   text-decoration: inherit;
 }
 
-/* line 420, ../scss/app.scss */
+/* line 447, ../scss/app.scss */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 421, ../scss/app.scss */
+/* line 448, ../scss/app.scss */
 .fi-arrow-right:before {
   content: "\f10b";
 }
 
-/* line 422, ../scss/app.scss */
+/* line 449, ../scss/app.scss */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 423, ../scss/app.scss */
+/* line 450, ../scss/app.scss */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 424, ../scss/app.scss */
+/* line 451, ../scss/app.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 425, ../scss/app.scss */
+/* line 452, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 426, ../scss/app.scss */
+/* line 453, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 427, ../scss/app.scss */
+/* line 454, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 428, ../scss/app.scss */
+/* line 455, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 429, ../scss/app.scss */
+/* line 456, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 430, ../scss/app.scss */
+/* line 457, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 431, ../scss/app.scss */
+/* line 458, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 432, ../scss/app.scss */
+/* line 459, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 433, ../scss/app.scss */
+/* line 460, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 434, ../scss/app.scss */
+/* line 461, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 435, ../scss/app.scss */
+/* line 462, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 436, ../scss/app.scss */
+/* line 463, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 437, ../scss/app.scss */
+/* line 464, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 438, ../scss/app.scss */
+/* line 465, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 439, ../scss/app.scss */
+/* line 466, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 440, ../scss/app.scss */
+/* line 467, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 441, ../scss/app.scss */
+/* line 468, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 442, ../scss/app.scss */
+/* line 469, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 443, ../scss/app.scss */
+/* line 470, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 444, ../scss/app.scss */
+/* line 471, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 445, ../scss/app.scss */
+/* line 472, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 446, ../scss/app.scss */
+/* line 473, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 447, ../scss/app.scss */
+/* line 474, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 448, ../scss/app.scss */
+/* line 475, ../scss/app.scss */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 449, ../scss/app.scss */
+/* line 476, ../scss/app.scss */
 .fi-page-delete:before {
   content: "\f182";
 }
 
-/* line 450, ../scss/app.scss */
+/* line 477, ../scss/app.scss */
 .fi-social-facebook:before {
   content: "\f1c4";
 }
 
-/* line 451, ../scss/app.scss */
+/* line 478, ../scss/app.scss */
 .fi-archive:before {
   content: "\f108";
 }

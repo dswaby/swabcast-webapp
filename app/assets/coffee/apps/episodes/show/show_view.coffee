@@ -27,9 +27,9 @@ define ["app",
       template: episodeDetailedTpl
       events:
         "click a.dismiss": "closeDialog"
-        "click td.js-edit": "editClicked"
-        "click td.js-enqueue": "queueEpisode"
-        "click td.js-archive": "archiveEpisode"
+        "click td.js-show-enqueue": "queueEpisode"
+        "click td.js-show-archive": "archiveEpisode"
+        "click td.js-show-favorite": "favoriteEpisode"
 
       initialize: ->
         @title = @model.get("subscriptionTitle")
@@ -47,6 +47,13 @@ define ["app",
         e.stopPropagation()
         console.log("mark episode as archived")
         @trigger "dialog:close"
+
+      favoriteEpisode: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        console.log("mark episode as favorite")
+        @trigger "dialog:close"
+
       queueEpisode: (e) ->
         e.preventDefault()
         e.stopPropagation()
@@ -60,7 +67,7 @@ define ["app",
     View.Feed = Marionette.ItemView.extend(
       template: feedDetailedTpl
       events:
-        "click button.js-back-button": "goBack"
+        "click button.js-show-go-back": "goBack"
 
       initialize: ->
         @title = @model.get("subscriptionTitle")
@@ -75,10 +82,10 @@ define ["app",
       tagName: "tr"
       template: episodeItemViewTpl
       events:
-        "click td.js-enqueue": "toggleQueue"
-        "click a.js-feedview": "feedDetails"
-        "click td.js-view-detail": "showClicked"
-        "click a.js-preview-audio": "previewAudio"
+        "click td.js-show-enqueue": "toggleQueue"
+        "click a.js-show-feedview": "feedDetails"
+        "click td.js-show-view-detail": "showClicked"
+        "click a.js-show-preview-audio": "previewAudio"
 
       onRender: ->
         window.scrollTo(0,0)
@@ -152,8 +159,7 @@ define ["app",
       itemViewContainer: "tbody"
 
       events:
-        "click a.js-episode-list-modal": "showEpisodesDialog"
-        "click a.js-feed-details": "showFeedEpisodes"
+        "click a.js-show-favorite-feed": "showFeedEpisodes"
 
       initialize: ->
         parent = @model
@@ -173,8 +179,6 @@ define ["app",
         @$el.toggleClass "success"
 
       showFeedEpisodes: (e) ->
-        console.log("WHAT THE FUCK")
-
         e.preventDefault()
         e.stopPropagation()
 
