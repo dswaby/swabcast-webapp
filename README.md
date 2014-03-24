@@ -42,7 +42,7 @@ clone this repository, then from the root directory run
 
 this will install all dependancies
 
-Default `grunt` task will compile coffescript/sass, generate sass sourcemaps, start express server, run mocha tests, and watch files. Just run
+Default `grunt` task will compile coffescript/sass, generate sass sourcemaps, start express server, run mocha tests, and watch files.
 
 If you get an error about not being able to connect to mongodb, make sure its installed run `mongod` and then restart `grunt` task
 
@@ -55,5 +55,6 @@ configured grunt tasks
           docs  generates docs from source and adds to dist/
          build  creates optimized distribution
 ```
-
+Tests will run headless through phantom or with the default grunt task running can be viewed
+in the browser at [http://localhost:1234/test/TestRunner.html](http://localhost:1234/test/TestRunner.html)
 
