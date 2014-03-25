@@ -20,7 +20,7 @@ It is still in very early development, server hasn't been fleshed out and it sti
 
 
 Requirements
-  * [compass-sourcemaps --pre](http://compass-style.org/)
+  * [compass](http://compass-style.org/)
   * [mongodb](http://www.mongodb.org/downloads)
   * [nodejs](http://nodejs.org/)
 
@@ -28,19 +28,26 @@ Requirements
 
 To install locally you'll need mocha-phantomjs for the test runner
 
-```npm install -g mocha-phantomjs```
+```[sudo] npm install -g mocha-phantomjs```
 
-if you dont have phantomjs installed run ```npm install -g mocha-phantomjs phantomjs```
+if you dont have phantomjs installed run
+
+```npm install -g mocha-phantomjs phantomjs```
+
+
+If you want to generate sourcemaps to edit in chrome dev tools you can install compass-sourcemaps
+
+```[sudo] gem install compass-sourcemaps --pre```
+
 
 Install the foundation gem
 
 ```gem install foundation```
 
-clone this repository, then from the root directory run
+clone this repository, then install dependancys by running
 
 ```[sudo] npm install && bower install```
 
-this will install all dependancies
 
 Default `grunt` task will compile coffescript/sass, generate sass sourcemaps, start express server, run mocha tests, and watch files.
 

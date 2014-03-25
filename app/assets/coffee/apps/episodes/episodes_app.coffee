@@ -12,7 +12,6 @@ define ["app"], (Swabcast) ->
       showPageMedia: (optTimeOut)->
         optTimeOut = optTimeOut or 0
         require ["apps/episodes/nav/nav_controller"], ->
-          console.log("showPageMedia")
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
@@ -55,7 +54,6 @@ define ["app"], (Swabcast) ->
         EpisodesApp.Edit.Controller.editEpisode id
 
       showPlaylist: ->
-        console.log("calling in app mediator")
         require ["apps/episodes/playlist/playlist_controller"], ->
           EpisodesApp.Playlist.Controller.showTracks()
 
@@ -115,7 +113,6 @@ define ["app"], (Swabcast) ->
       API.editEpisode id
 
     Swabcast.on "episodes:playlist", ->
-      console.log("show side view recieved")
       API.showPlaylist()
 
     Swabcast.on "episode:details", (model) ->

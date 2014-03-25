@@ -137,15 +137,20 @@ td {
   background: #ECECEC;
 }
 
+.modal-text-content {
+  height: 40%;
+  overflow: auto;
+}
+
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
 
 .feed-head {
-  padding: 20px;
+  // padding: 20px;
   position: relative;
   background: #14b9e8 !important;
-  margin: 0 0 10px 0;
+  margin: 0;
   overflow: hidden;
 }
 

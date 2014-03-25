@@ -32,7 +32,6 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl", "tpl!common/templ
 
       notImplemented: (e) ->
         e.preventDefault()
-        console.log("not implemented yet :(")
         Swabcast.trigger "feature:not:implemented"
 
       showLibrary: ->

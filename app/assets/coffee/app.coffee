@@ -34,7 +34,6 @@ define ["marionette", "apps/config/marionette/regions/dialog"], (Marionette) ->
 
         if Swabcast.getCurrentRoute() is "playlist"
           Swabcast.trigger "media:all"
-          console.log("playlist triggered")
           Swabcast.trigger("playlist:mainview")
 
         # if Swabcast.getCurrentRoute() is "subscriptions"

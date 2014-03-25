@@ -91,13 +91,10 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
               @audio.currentTime = time  if typeof episodePosition is "number"
 
             skipback: ->
-              console.log("skipping back from %s to %s", @audio.currentTime, @audio.currentTime - 10 )
               if (@state is "ready" or @state is "playing") and @audio.currentTime > 10
                 @audio.pause()
                 @audio.currentTime = (@audio.currentTime - 10)
                 @audio.play()
-              else
-                console.log("could not skipback")
 
             skipahead: ->
               self = this
@@ -153,8 +150,6 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
               playerData.save()
 
             "player:playnow": (episodeModel) ->
-              console.log("player:playnow", episodeModel)
-
               sourceUrl = episodeModel.get("mediaUrl")
 
               # audio options
@@ -170,8 +165,6 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
               playerData.save()
 
             "player:setepisode": (episodeModel) ->
-              console.log("player:setepisode", episodeModel)
-
               # audio options
               options = {}
               options.preload = true
@@ -184,8 +177,6 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
               playerData.save()
 
             "playlist:updatenowplaying": (episodeModel) ->
-              console.log("playlist:updatenowplaying", episodeModel)
-
               # audio options
               options = {}
               options.preload = true
