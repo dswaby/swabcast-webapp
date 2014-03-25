@@ -15,3 +15,4 @@ app/assets/js/*
 test/coffee/*
 app/index.html
 app/assets/css/*
+Procfile
