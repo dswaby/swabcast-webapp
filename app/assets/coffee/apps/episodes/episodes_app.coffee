@@ -36,11 +36,6 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/static/static_controller"], ->
           EpisodesApp.Static.Controller.showAboutApp()
 
-      # "static:about:me"
-      showAboutApp: ->
-        require ["apps/episodes/static/static_controller"], ->
-          EpisodesApp.Static.Controller.showAboutApp()
-
       # "episodes:list"
       listEpisodes: ->
         require ["apps/episodes/list/list_controller"], ->

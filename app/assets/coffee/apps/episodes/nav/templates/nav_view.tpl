@@ -13,30 +13,30 @@
 <aside class="left-off-canvas-menu">
   <ul id="offcanvas-nav-left" class="off-canvas-list">
     <li>
-      <a><label>App Navigation</label></a>
+      <label>App Navigation</label>
     </li>
     <li class="active left-off-canvas-toggle js-nav-library-view">
-      <a href="#"><i class="fi-rss"></i>&nbsp Subscribed Feeds</a>
+      <a href="#library" class="left-off-canvas-toggle"><i class="fi-rss"></i>&nbsp Subscribed Feeds</a>
     </li>
-    <li class="left-off-canvas-toggle js-nav-not-implemented">
-      <a href="#"><i class="fi-plus"></i>&nbsp Add Subscriptions</a>
+    <li class="js-nav-not-implemented">
+      <a href="#" class="left-off-canvas-toggle"><i class="fi-plus"></i>&nbsp Add Subscriptions</a>
     </li>
-    <li class="left-off-canvas-toggle js-nav-playlist">
-      <a href="#"><i class="fi-indent-more"></i> &nbsp Manage Playlist</a>
+    <li class="js-nav-playlist">
+      <a href="#playlist" class="left-off-canvas-toggle"><i class="fi-indent-more"></i> &nbsp Manage Playlist</a>
     </li>
-    <li class="left-off-canvas-toggle js-nav-static-app">
-      <a href="#"><i class="fi-info"></i>&nbsp About App</a>
+    <li class="js-nav-static-app">
+      <a href="#about" class="left-off-canvas-toggle"><i class="fi-info"></i>&nbsp About App</a>
     </li>
 <!--     <li class="left-off-canvas-toggle js-static-me">
       <a href="#"><i class="fi-torso-business"></i>&nbsp Contact</a>
     </li> -->
     <li class="js-nav-reset-local">
-      <a><i class="fi-page-delete"></i>&nbsp Reset Local Storage</a>
+      <a href="#" class="left-off-canvas-toggle"><i class="fi-page-delete"></i>&nbsp Reset Local Storage</a>
     </li>
-    <li class="right-off-canvas-toggle left-off-canvas-toggle js-nav-not-implemented">
-      <a href="#"><i class="fi-widget"></i>&nbsp Settings</a>
+    <li class="js-nav-not-implemented">
+      <a href="#" class="left-off-canvas-toggle right-off-canvas-toggle"><i class="fi-widget"></i>&nbsp Settings</a>
     </li>
-    <li class="">
+    <li>
       <a href="#" class="left-off-canvas-toggle"><i class="fi-arrow-right"></i>&nbspClose This</a>
     </li>
   </ul>
@@ -49,7 +49,7 @@
       <a href="#"><i class="fi-info"></i>Preload audio data</a>
     </li>
     <li>
-      <a href="#" class="right-off-canvas-toggle">Close</a>
+      <a href="#" >Close</a>
     </li>
   </ul>
 </aside>
