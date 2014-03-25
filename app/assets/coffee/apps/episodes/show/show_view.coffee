@@ -31,14 +31,16 @@ define ["app",
         "click td.js-show-enqueue": "queueEpisode"
         "click td.js-show-archive": "archiveEpisode"
         "click td.js-show-favorite": "favoriteEpisode"
+        "click button.js-play-now": "playNow"
+        "click .ui-widget-overlay": "closeDialog"
 
       initialize: ->
         @title = @model.get("subscriptionTitle")
 
-      editClicked: (e) ->
-        e.preventDefault()
-        e.stopPropagation()
-        @trigger "episode:edit", @model
+      # editClicked: (e) ->
+      #   e.preventDefault()
+      #   e.stopPropagation()
+      #   @trigger "episode:edit", @model
 
       closeDialog: (e) ->
         @trigger "dialog:close"
@@ -53,6 +55,13 @@ define ["app",
         e.preventDefault()
         e.stopPropagation()
         console.log("mark episode as favorite")
+        @trigger "dialog:close"
+
+      playNow: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        uuid = @model.parent.get("id") + "-!" + @model.get("uid")
+        @trigger "player:playnow", uuid
         @trigger "dialog:close"
 
       queueEpisode: (e) ->

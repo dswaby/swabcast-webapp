@@ -137,10 +137,8 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
 
           # TODO - this should be seperated as an API
           Swabcast.commands.setHandlers
-
             "player:empty": ->
               console.log("player:empty")
-
               sourceUrl = ""
               # player commands
               self.playerControls.model.destroy()
@@ -149,20 +147,22 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
               self.playerControls.render()
               playerData.save()
 
-            "player:playnow": (episodeModel) ->
-              sourceUrl = episodeModel.get("mediaUrl")
+            "player:playnow": (uuid) ->
+              require ["entities/feed"], ->
+                getEpisode = Swabcast.request("entity:episode", uuid)
+                $.when(getEpisode).done (episodeModel) ->
+                  console.log(episodeModel)
+                  # audio options
+                  options = {}
+                  options.preload = true
 
-              # audio options
-              options = {}
-              options.preload = true
-
-              # player commands
-              self.playerControls.model.destroy()
-              self.newPlayerData episodeModel
-              self.updateAudio sourceUrl, options
-              self.audioPlayer.play()
-              self.playerControls.render()
-              playerData.save()
+                  # player commands
+                  self.playerControls.model.destroy()
+                  self.newPlayerData episodeModel
+                  self.updateAudio episodeModel.get("mediaUrl"), options
+                  self.audioPlayer.play()
+                  self.playerControls.render()
+                playerData.save()
 
             "player:setepisode": (episodeModel) ->
               # audio options

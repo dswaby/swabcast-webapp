@@ -33,6 +33,10 @@ define ["app", "apps/episodes/feed/feed_view",
         view.title = model.get("episodeTitle")
         view.on "episodes:list", ->
           view.trigger "view:close"
+        view.on "player:playnow", (uuid) ->
+          # send to player controller
+          # require ["apps/episodes/player/player_controller"], ->
+          Swabcast.commands.execute "player:playnow", uuid
 
         Swabcast.dialogRegion.show view
 
