@@ -13,13 +13,6 @@ define ["app",
         playlistRegion: "#playlist-region"
     )
 
-    View.LayoutExtended = Marionette.Layout.extend(
-      template: playlistLayoutExtendedTpl
-      regions:
-        nowPlayingRegion: "#now-playing-region"
-        playlistRegion: "#playlist-region"
-    )
-
     View.Track = Marionette.ItemView.extend(
       tagName: "tr"
       className: "playlist-item"

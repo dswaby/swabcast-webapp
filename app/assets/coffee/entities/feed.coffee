@@ -47,54 +47,48 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     initializeFeeds = ->
       feeds = new Entities.Feeds()
       feeds.url = 'http://localhost:9000/static_feeds.json'
-      feeds.bind "reset", ->
-        console.log(feeds)
       fetchStatic = feeds.fetch()
       $.when(fetchStatic).done (subscriptions) ->
-        console.log(subscriptions)
-
         subscriptions.forEach (feed) ->
-
-          #feed.tracks = Swabcast.Utils.Helpers.nestCollection(feed, 'tracks', new Entities.Episode(feed.get('tracks')));
-
-          #feed.tracks.parent = this;
           subscriptions.save()
-
         subscriptions.models
 
     API =
       getFeedEntity: (feedId) ->
+        console.log("feedId", feedId)
         feed = new Entities.Feed(id: feedId)
         defer = $.Deferred()
-        setTimeout (->
-          feed.fetch
-            success: (data) ->
-              defer.resolve data
+        feed.fetch success: (data) ->
+          defer.resolve data
 
-            error: ->
-              defer.resolve `undefined`
+            # error: ->
+            #   defer.resolve `undefined`
 
-        ), 500
         defer.promise()
 
       # episodeIdentifier consists of feedId + "-" followed by 7 digit numeric episodeId
-      getEpisodeEntity: (episodeIdentifier) ->
-        episodeString = episodeIdentifier.split("-",2)
-        feed = new Entities.Feed(id: episodeString[0])
+      getEpisodeByUuid: (uuid) ->
+        # uuid = FeedID-EpisodeUid
+        # TODO - a more efficient way of doing this
+        episodeString = uuid.split("-!",2)
         defer = $.Deferred()
-        setTimeout (->
-          feed.fetch
-            success: (data) ->
-              feed = defer.resolve data
-              for episode of episodes
-                return episode if episode.id is episodeString[1]
-                return null
-
-            error: ->
-              defer.resolve `undefined`
-
-        ), 500
-        defer.promise()
+        fetchFeeds = API.getFeedEntities()
+        promise = defer.promise()
+        $.when(fetchFeeds).done (feeds) ->
+          subscription = feeds.get(episodeString[0])
+          episodes = subscription.get("episodes")
+          episodes.forEach (episode) ->
+            if episode.uid == episodeString[1]
+              found = new Entities.Episode(
+                "albumArt": subscription.get("albumArt") or "podcast-default.png"
+                "episodeTitle": episode.title or null
+                "mediaUrl": episode.mediaUrl or null
+                "publishedAt": episode.publishedAt or null
+                "episodeSummary": episode.episodeSummary or null
+                "duration": episode.duration or null
+              )
+              defer.resolve found
+        promise
 
       getFeedEntities: ->
         feeds = new Entities.Feeds()
@@ -124,8 +118,8 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
       getPlaylistDisplayData: ->
 
 
-    Swabcast.reqres.setHandler "episode:entity", (episodeId) ->
-      API.getEpisodeEntity episodeId
+    Swabcast.reqres.setHandler "entity:episode", (uuid) ->
+      API.getEpisodeByUuid uuid
 
     Swabcast.reqres.setHandler "entities:library", ->
       API.getFeedEntities()

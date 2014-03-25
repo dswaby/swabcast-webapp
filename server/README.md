@@ -43,7 +43,7 @@ an example call to update an episode at /api/subscribed/:uuid could be
 
 ```javascript
 jQuery.ajax({
-    url: '/api/subscribed/abcde12345-06',
+    url: '/api/subscribed/abcde12345-!06',
     type: 'PUT',
     data: {
         'currentPosition': 34252

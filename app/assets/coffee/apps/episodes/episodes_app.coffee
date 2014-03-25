@@ -1,11 +1,11 @@
 define ["app"], (Swabcast) ->
   Swabcast.module "EpisodesApp", (EpisodesApp, Swabcast, Backbone, Marionette, $, _) ->
     EpisodesApp.Router = Marionette.AppRouter.extend(appRoutes:
-      library: "showPageMedia"
+      "library": "showPageMedia"
       "episodes/:id": "showEpisode"
       "feed/:id": "showFeedEpisodesOnLoad"
       "episodes/:id/edit": "editEpisode"
-      playlist: "showPlaylistOnLoad"
+      "playlist": "showPlaylistOnLoad"
     )
     API =
       # "media:all"

@@ -40,10 +40,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
             playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
-              ####################################
-              # DEBUGGING ONLY -- REMOVE THIS
-              ####################################
-              console.log("model recieved in playlist:enqueue", model)
               addingTrack = Swabcast.request "playlist:addtoqueue", model
               $.when(addingTrack).done (apiResponse) ->
 

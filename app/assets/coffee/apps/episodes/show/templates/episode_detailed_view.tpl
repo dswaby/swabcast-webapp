@@ -45,7 +45,7 @@
 
 
 </div>
-<div class="dialog-fixed-bottom" style="width: 100%;">
+<div class="dialog-absolute-bottom" style="width: 100%;">
     <button class="button js-play-now" style="width:100%;">
         <i class="icon-play"></i>Play Now
     </button>

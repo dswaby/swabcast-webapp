@@ -4791,7 +4791,7 @@ td {
 
 /* line 237, ../scss/app.scss */
 .dialog-fixed-bottom {
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 

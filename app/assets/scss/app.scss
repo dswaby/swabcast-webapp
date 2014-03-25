@@ -234,8 +234,13 @@ td {
   max-width:30px;
 }
 
-.dialog-fixed-bottom {
-  position: relative;
+.dialog-absolute-bottom {
+  position: absolute;
+  bottom:0;
+}
+
+.dialog-absolute-bottom {
+  position: absolute;
   bottom:0;
 }
 
