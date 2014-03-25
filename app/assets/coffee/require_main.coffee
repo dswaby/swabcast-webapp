@@ -12,8 +12,7 @@ requirejs.config
     json2: "./../bower_components/json2/json2"
     foundation: "./../bower_components/foundation/js/foundation/foundation"
     offcanvas: "./../bower_components/foundation/js/foundation/foundation.offcanvas"
-    fastclick: "./../bower_components/fastclick/lib/fastclick"
-    toastr: "./../bower_components/toastr/toastr"
+    # fastclick: "./../bower_components/fastclick/lib/fastclick"
 
   shim:
     underscore:
@@ -33,8 +32,8 @@ requirejs.config
 
     "jquery-ui": ["jquery"]
 
-    fastclick:
-      exports: ["FastClick"]
+    # fastclick:
+    #   exports: ["FastClick"]
 
     toastr:
       deps: ["jquery"]
@@ -56,8 +55,7 @@ requirejs [
   "jquery"
   "foundation"
   "offcanvas"
-  "fastclick"
-  "toastr"
+  # "fastclick"
 ], ($) ->
 
   (($, window, undefined_) ->

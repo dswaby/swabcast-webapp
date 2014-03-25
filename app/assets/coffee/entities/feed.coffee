@@ -38,7 +38,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     Entities.configureStorage Entities.Feeds
 
     Entities.Static = Backbone.Collection.extend(
-      url: "/static_feeds.json"
+      url: "/api/static_collection/"
       model: Entities.Feed
     )
 
@@ -46,7 +46,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     feeds = undefined
     initializeFeeds = ->
       feeds = new Entities.Feeds()
-      feeds.url = 'http://localhost:9000/static_feeds.json'
+      feeds.url = '/api/static_collection/'
       fetchStatic = feeds.fetch()
       $.when(fetchStatic).done (subscriptions) ->
         subscriptions.forEach (feed) ->
@@ -54,15 +54,16 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         subscriptions.models
 
     API =
+      # get feed model by Id
       getFeedEntity: (feedId) ->
         console.log("feedId", feedId)
         feed = new Entities.Feed(id: feedId)
         defer = $.Deferred()
         feed.fetch success: (data) ->
           defer.resolve data
-
+        feed.fetch error: ->
             # error: ->
-            #   defer.resolve `undefined`
+          defer.resolve `undefined`
 
         defer.promise()
 
@@ -111,7 +112,6 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         defer = $.Deferred()
         feeds.fetch success: (data) ->
           defer.resolve data
-
         promise = defer.promise()
         promise
 

@@ -39,6 +39,7 @@ define ["marionette", "jquery-ui"], (Marionette) ->
       if (height <= 600)
         return (height * 0.85).toFixed()
       else
-        return (height * 0.62).toFixed()
+        return (height * 0.60).toFixed()
+        #
   )
   Marionette.Region.Dialog

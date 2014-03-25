@@ -14,7 +14,7 @@ requirejs.config
     foundation: "./../bower_components/foundation/js/foundation/foundation"
     offcanvas: "./../bower_components/foundation/js/foundation/foundation.offcanvas"
     fastclick: "./../bower_components/fastclick/lib/fastclick"
-    toastr: "./../bower_components/toastr/toastr"
+    # toastr: "./../bower_components/toastr/toastr"
 
   shim:
     underscore:
@@ -58,7 +58,7 @@ requirejs [
   "foundation"
   "offcanvas"
   "fastclick"
-  "toastr"
+  # "toastr"
 ], ($) ->
 
   (($, window, undefined_) ->

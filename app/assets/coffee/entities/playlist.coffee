@@ -84,8 +84,6 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
             # DEBUGGING ONLY -- REMOVE THIS
             ####################################
             console.log("new track in playlist entity", newTrack)
-
-            # Swabcast.trigger "playlist:enqueue", newTrack
             defer.resolve newTrack
           else
             defer.resolve "fail"

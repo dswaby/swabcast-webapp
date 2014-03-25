@@ -6,7 +6,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
       # and use the extendedView
       showTracks: (extendedView) ->
         extendedView = extendedView or false
-        require ["entities/playlist", "apps/episodes/list/list_controller"], ->
+        require ["entities/playlist"], ->
           fetchingPlaylist = Swabcast.request("entities:playlist")
           playlistLayout = new View.Layout()
           $.when(fetchingPlaylist).done (tracks) ->
@@ -14,10 +14,10 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
 
             #nowplaying responsible for managing current episode to be in the player box
             #on change, triggers events and sends episode model to player and playersavedata
+            #
             @nowPlaying = (tracks.at(0))  unless typeof tracks.at(0) is "undefined"
             if @nowPlaying
               Swabcast.commands.execute "player:setepisode", @nowPlaying
-              console.log("\"player:setepisode\"triggered")
 
             playlistTracks = undefined
 
@@ -39,7 +39,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               model.destroy()
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
-            playlistTracks.listenTo Playlist, "playlist:enqueue", (model) ->
+            playlistTracks.listenTo Playlist, "itemview:episode:enqueue", (model) ->
               addingTrack = Swabcast.request "playlist:addtoqueue", model
               $.when(addingTrack).done (apiResponse) ->
 

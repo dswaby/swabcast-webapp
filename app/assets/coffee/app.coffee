@@ -33,8 +33,13 @@ define ["marionette", "apps/config/marionette/regions/dialog"], (Marionette) ->
           Swabcast.trigger "media:all", timeout
 
         if Swabcast.getCurrentRoute() is "playlist"
-          Swabcast.trigger "media:all"
-          Swabcast.trigger("playlist:mainview")
+          # Swabcast.trigger "media:all"
+          Swabcast.trigger "playlist:landing"
+
+        if Swabcast.getCurrentRoute() is "about"
+          Swabcast.trigger "landing:about"
+
+
 
         # if Swabcast.getCurrentRoute() is "subscriptions"
         #   require ["apps/subscriptions/subscriptions_app"], ->

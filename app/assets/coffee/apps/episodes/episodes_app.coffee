@@ -37,9 +37,9 @@ define ["app"], (Swabcast) ->
           EpisodesApp.Static.Controller.showAboutApp()
 
       # "static:about:me"
-      showAboutMe: ->
+      showAboutApp: ->
         require ["apps/episodes/static/static_controller"], ->
-          EpisodesApp.Static.Controller.showAboutMe()
+          EpisodesApp.Static.Controller.showAboutApp()
 
       # "episodes:list"
       listEpisodes: ->
@@ -88,6 +88,16 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
 
+      showAboutMainView: ->
+        require ["apps/episodes/nav/nav_controller"], ->
+          EpisodesApp.Nav.Controller.showNav()
+        require ["apps/episodes/player/player_controller"], ->
+          EpisodesApp.Player.Controller.showControls()
+        require ["apps/episodes/playlist/playlist_controller"], ->
+          EpisodesApp.Playlist.Controller.showTracks()
+        require ["apps/episodes/static/static_controller"], ->
+          EpisodesApp.Static.Controller.showAboutApp()
+
 
       featureNotImplemented: ->
         require ["apps/episodes/feed/feed_controller"], ->
@@ -128,15 +138,15 @@ define ["app"], (Swabcast) ->
       Swabcast.navigate "feed/" + model.get("id")
       API.showFeedEpisodes model
 
-    Swabcast.on "playlist:mainview", ->
+    Swabcast.on "playlist:landing", ->
       Swabcast.navigate "playlist"
       API.showPlaylistMain()
 
     Swabcast.on "static:about:app", ->
       API.showAboutApp()
 
-    Swabcast.on "static:about:me", ->
-      API.showAboutMe()
+    Swabcast.on "landing:about", ->
+      API.showAboutMainView()
 
     Swabcast.addInitializer ->
       new EpisodesApp.Router(controller: API)

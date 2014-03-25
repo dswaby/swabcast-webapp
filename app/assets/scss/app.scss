@@ -20,6 +20,7 @@ td {
 
 .inner-wrap {
   height:100%;
+  // overflow:hidden;
 }
 
 .off-canvas-wrap {
@@ -239,9 +240,8 @@ td {
   bottom:0;
 }
 
-.dialog-absolute-bottom {
-  position: absolute;
-  bottom:0;
+.dialog-absolute-bottom button{
+  padding-top: 45px;
 }
 
 #page-main {

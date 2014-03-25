@@ -17,26 +17,28 @@ define ["app", "tpl!apps/episodes/nav/templates/nav_view.tpl", "tpl!common/templ
 
       showPlaylist: (e) ->
         e.preventDefault()
-        Swabcast.trigger "playlist:mainview"
+        @trigger "nav:landing"
 
       resetLocalStorage: (e) ->
         e.preventDefault()
-        e.stopPropagation()
         localStorage.clear()
         location.reload()
         console.log('storage cleared')
 
       showAboutApp: ->
         e.preventDefault()
-        Swabcast.trigger "static:about:app"
+
+        @trigger "nav:static:about"
 
       notImplemented: (e) ->
         e.preventDefault()
-        Swabcast.trigger "feature:not:implemented"
+
+        @trigger "nav:notimplemented"
 
       showLibrary: ->
         e.preventDefault()
-        Swabcast.trigger "episodes:library"
+
+        @trigger "nav:library"
 
     )
 

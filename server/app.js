@@ -241,6 +241,9 @@ db.once('open', function callback () {
     app.get( '/api', function( request, response ) {
         response.send( 'Library API is running' );
     });
+    app.get( '/api/static_collection/', function( request, response ) {
+        response.sendfile(path.join(__dirname, '../app/static_feeds.json'));
+    });
     app.get('/api/subscriptions', function(req, res) {
         return SubscriptionModel.find(function(err, subscriptions) {
             if (!err) {

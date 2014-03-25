@@ -70,7 +70,7 @@ define ["app",
         @$el.addClass "disabled"
 
         if @model.get("enqueue") is false
-          Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @model
+          Swabcast.EpisodesApp.Playlist.trigger "itemview:episode:enqueue", @model
           @model.set "enqueue", true
         @trigger "dialog:close"
     )
@@ -144,7 +144,9 @@ define ["app",
         @$el.addClass "disabled"
 
         if @model.get("enqueue") is false
-          Swabcast.EpisodesApp.Playlist.trigger "playlist:enqueue", @model
+          # TODO - trigger controller, send to playlist from it
+          # view should be logicless
+          Swabcast.EpisodesApp.Playlist.trigger "itemview:episode:enqueue", @model
           @model.set "enqueue", true
         @trigger "dialog:close"
 
@@ -192,7 +194,7 @@ define ["app",
       showFeedEpisodes: (e) ->
         e.preventDefault()
         e.stopPropagation()
-
+        # @trigger "feed:details", @model
         Swabcast.trigger "feed:details", @model
       onBeforeClose: ->,
 
