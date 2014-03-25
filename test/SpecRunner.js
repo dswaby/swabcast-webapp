@@ -1,18 +1,20 @@
-
 requirejs.config({
     baseUrl: "./../app/assets/js",
     paths: {
-      backbone: "vendor/backbone",
-      localstorage: "vendor/backbone.localstorage",
-      jquery: "vendor/jquery",
-      "jquery-ui": "vendor/jquery-ui",
-      underscore: "vendor/underscore",
-      marionette: "vendor/backbone.marionette",
-      tpl: "vendor/tpl",
-      json2: "vendor/json2",
-      foundation: "vendor/foundation",
-      chai: "../app/assets/bower_components/chai/chai",
-      mocha: "../app/assets/bower_components/mocha/mocha"
+        backbone: "./../app/assets/bower_components/backbone/backbone"
+        localstorage: "./../app/assets/bower_components/backbone.localstorage/backbone.localstorage"
+        jquery: "./../app/assets/bower_components/jquery/jquery"
+        "jquery-ui": "./../app/assets/bower_components/jquery-ui/ui/jquery-ui"
+        underscore: "./../app/assets/bower_components/underscore/underscore"
+        marionette: "./../app/assets/bower_components/backbone.marionette/lib/backbone.marionette"
+        tpl: "./../app/assets/bower_components/requirejs-tpl/tpl"
+        json2: "./../app/assets/bower_components/json2/json2"
+        foundation: "./../app/assets/bower_components/foundation/js/foundation/foundation"
+        offcanvas: "./../app/assets/bower_components/foundation/js/foundation/foundation.offcanvas"
+        fastclick: "./../app/assets/bower_components/fastclick/lib/fastclick"
+        toastr: "./../app/assets/bower_components/toastr/toastr"
+        chai: "../app/assets/bower_components/chai/chai",
+        mocha: "../app/assets/bower_components/mocha/mocha"
     },
     shim: {
       underscore: {

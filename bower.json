@@ -19,15 +19,13 @@
     "almond": "~0.2.9",
     "backbone.localstorage": "~1.1.7",
     "json2": "*",
-    "almond":"~0.2.9"
+    "jquery-ui": "~1.10.4",
   },
   "devDependencies": {},
   "directory": "bower_components",
   "resolutions": {
     "jquery": "~1.9.0",
     "backbone.babysitter": "~0.1.0",
-    "backbone.wreqr": "~1.0.0",
-    "underscore": ">=1.5.0",
-    "fastclick": "~1.0.0"
+    "backbone.wreqr": "~1.0.0"
   }
 }
