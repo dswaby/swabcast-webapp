@@ -38,7 +38,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     Entities.configureStorage Entities.Feeds
 
     Entities.Static = Backbone.Collection.extend(
-      url: "/api/static_collection/"
+      url: "/static_feeds.json"
       model: Entities.Feed
     )
 
@@ -46,11 +46,11 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     feeds = undefined
     initializeFeeds = ->
       feeds = new Entities.Feeds()
-      feeds.url = '/api/static_collection/'
+      feeds.url = '/static_feeds.json'
       fetchStatic = feeds.fetch()
       $.when(fetchStatic).done (subscriptions) ->
         subscriptions.forEach (feed) ->
-          subscriptions.save()
+          feed.save()
         subscriptions.models
 
     API =
@@ -100,20 +100,19 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         promise = defer.promise()
         $.when(promise).done (feeds) ->
           if feeds.length is 0
-            subscriptions = API.getStaticEntities()
-            $.when(subscriptions).done (subs) ->
+            models = API.getStaticEntities()
+            $.when(models).done (subs) ->
               subs.forEach (feed) ->
                 feed.save()
-            feeds.reset subscriptions
-        promise
+            feeds.reset models
+          promise
 
       getStaticEntities: ->
         feeds = new Entities.Static()
         defer = $.Deferred()
         feeds.fetch success: (data) ->
           defer.resolve data
-        promise = defer.promise()
-        promise
+        defer.promise()
 
       getPlaylistDisplayData: ->
 
