@@ -84,14 +84,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
               episode.parent = subscription
               found = new Entities.Episode( _.clone(episode) )
               found.set("albumArt": episode.parent.get("albumArt"))
-              # found.set("albumArt": subscription.get("albumArt"))
-              #   "albumArt": subscription.get("albumArt") or "podcast-default.png"
-              #   "episodeTitle": episode.title or null
-              #   "mediaUrl": episode.mediaUrl or null
-              #   "publishedAt": episode.publishedAt or null
-              #   "episodeSummary": episode.episodeSummary or null
-              #   "duration": episode.duration or null
-              # )
+
               console.log(found)
               defer.resolve found
         promise
@@ -121,7 +114,6 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
 
       getPlaylistDisplayData: ->
 
-
     Swabcast.reqres.setHandler "entity:episode", (uuid) ->
       API.getEpisodeByUuid uuid
 
@@ -131,7 +123,6 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     Swabcast.reqres.setHandler "feed:entity", (id) ->
       API.getFeedEntity id
 
-    # for playlist entity, returns multidimensional array
     # consisting of unique episode identifier
     # and Episode Title
     Swabcast.reqres.setHandler "titles:episode:entity", (playlistIdentifiers) ->

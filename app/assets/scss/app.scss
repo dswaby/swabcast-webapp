@@ -52,7 +52,9 @@ td {
 #playlist-region {
   height:100%;
 }
-
+.playlist-empty p {
+  color: #AB998B;
+}
 // custom alert styles
 .danger-zone {
   color: #a94442;

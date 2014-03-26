@@ -16,15 +16,14 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks()
+          EpisodesApp.Playlist.Controller.showPlaylist()
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeeds optTimeOut
 
       # "playlist:mainview"
       showPlaylistMain: ->
-        options = true
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks options
+          EpisodesApp.Playlist.Controller.showManagePlaylist()
 
       # "episodes:library"
       showLibrary: ->
@@ -50,7 +49,7 @@ define ["app"], (Swabcast) ->
 
       showPlaylist: ->
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks()
+          EpisodesApp.Playlist.Controller.showPlaylist()
 
       showEpisodeDetails: (model) ->
         require ["apps/episodes/feed/feed_controller"], ->
@@ -68,7 +67,7 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks()
+          EpisodesApp.Playlist.Controller.showPlaylist()
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
         require ["apps/episodes/feed/feed_controller"], ->
@@ -79,7 +78,7 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks options
+          EpisodesApp.Playlist.Controller.showManagePlaylist()
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
 
@@ -89,7 +88,7 @@ define ["app"], (Swabcast) ->
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showTracks()
+          EpisodesApp.Playlist.Controller.showPlaylist()
         require ["apps/episodes/static/static_controller"], ->
           EpisodesApp.Static.Controller.showAboutApp()
 

@@ -3,8 +3,10 @@ define ["app",
 "tpl!apps/episodes/playlist/templates/playlist_item_view_extended.tpl",
 "tpl!apps/episodes/playlist/templates/playlist_layout.tpl",
 "tpl!apps/episodes/playlist/templates/playlist_layout_extended.tpl",
-"tpl!apps/episodes/playlist/templates/playlist.tpl"],
-(Swabcast, playlistItemTpl, playlistItemExtTpl, playlistLayoutTpl, playlistLayoutExtendedTpl, playlistTpl) ->
+"tpl!apps/episodes/playlist/templates/playlist.tpl"
+"tpl!apps/episodes/playlist/templates/playlist_empty.tpl"
+],
+(Swabcast, playlistItemTpl, playlistItemExtTpl, playlistLayoutTpl, playlistLayoutExtendedTpl, playlistTpl, emptyPlaylistTpl) ->
   Swabcast.module "EpisodesApp.Playlist.View", (View, Swabcast, Backbone, Marionette, $, _) ->
     View.Layout = Marionette.Layout.extend(
       template: playlistLayoutTpl
@@ -109,6 +111,9 @@ define ["app",
           ), 300
     )
 
-
-
+    View.EmptyPlaylist = Marionette.ItemView.extend(
+      tagName: "div"
+      className: "playlist-empty"
+      template: emptyPlaylistTpl
+    )
   Swabcast.EpisodesApp.Playlist.View

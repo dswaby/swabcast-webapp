@@ -4572,26 +4572,31 @@ td {
   height: 100%;
 }
 
-/* line 57, ../scss/app.scss */
+/* line 55, ../scss/app.scss */
+.playlist-empty p {
+  color: #AB998B;
+}
+
+/* line 59, ../scss/app.scss */
 .danger-zone {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
 
-/* line 63, ../scss/app.scss */
+/* line 65, ../scss/app.scss */
 .success {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 
-/* line 69, ../scss/app.scss */
+/* line 71, ../scss/app.scss */
 .main-view {
   margin-bottom: 70px;
 }
 
-/* line 73, ../scss/app.scss */
+/* line 75, ../scss/app.scss */
 .nav-helper-overlay {
   position: fixed;
   height: 55px;
@@ -4605,19 +4610,19 @@ td {
   cursor: default;
 }
 
-/* line 86, ../scss/app.scss */
+/* line 88, ../scss/app.scss */
 .nav-helper i {
   margin-left: 30% !important;
   font-size: -webkit-xxx-large !important;
   color: #fff !important;
 }
 
-/* line 92, ../scss/app.scss */
+/* line 94, ../scss/app.scss */
 .nav-helper a {
   color: #fff !important;
 }
 
-/* line 96, ../scss/app.scss */
+/* line 98, ../scss/app.scss */
 .nav-helper p {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -4626,33 +4631,33 @@ td {
   line-height: 1 !important;
 }
 
-/* line 104, ../scss/app.scss */
+/* line 106, ../scss/app.scss */
 .sidebar-tab-content {
   color: #fff;
   margin-left: 40px;
 }
 
-/* line 110, ../scss/app.scss */
+/* line 112, ../scss/app.scss */
 .sidebar-tab {
   margin-left: 40px;
 }
 
-/* line 113, ../scss/app.scss */
+/* line 115, ../scss/app.scss */
 .sidebar-tab a {
   color: #000;
 }
 
-/* line 116, ../scss/app.scss */
+/* line 118, ../scss/app.scss */
 .sidebar-tab p {
   color: #000;
 }
 
-/* line 119, ../scss/app.scss */
+/* line 121, ../scss/app.scss */
 .tabs dd.active a {
   color: #000;
 }
 
-/* line 123, ../scss/app.scss */
+/* line 125, ../scss/app.scss */
 .tab-bar-image img {
   display: inline;
   height: 45px;
@@ -4663,17 +4668,17 @@ td {
 /***************************************************************************************************
     styles for episode detailed view  **********************************************
 ***************************************************************************************************/
-/* line 134, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 .modal-row i {
   margin-left: 15px;
 }
 
-/* line 138, ../scss/app.scss */
+/* line 140, ../scss/app.scss */
 .modal-row {
   background: #ECECEC;
 }
 
-/* line 142, ../scss/app.scss */
+/* line 144, ../scss/app.scss */
 .modal-text-content {
   height: 40%;
   overflow: auto;
@@ -4682,7 +4687,7 @@ td {
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
 ***************************************************************************************************/
-/* line 151, ../scss/app.scss */
+/* line 153, ../scss/app.scss */
 .feed-head {
   position: relative;
   background: #14b9e8 !important;
@@ -4690,7 +4695,7 @@ td {
   overflow: hidden;
 }
 
-/* line 159, ../scss/app.scss */
+/* line 161, ../scss/app.scss */
 .table-date h5 {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4704,7 +4709,7 @@ td {
   margin-bottom: 0;
 }
 
-/* line 172, ../scss/app.scss */
+/* line 174, ../scss/app.scss */
 .table-date p {
   font-size: x-large !important;
   font-family: 'Oswald', sans-serif;
@@ -4714,44 +4719,44 @@ td {
   margin-bottom: 0 !important;
 }
 
-/* line 181, ../scss/app.scss */
+/* line 183, ../scss/app.scss */
 .feed-color {
   color: #14b9e8 !important;
 }
 
-/* line 185, ../scss/app.scss */
+/* line 187, ../scss/app.scss */
 .feed-list {
   background: #fff;
   padding-top: 12px;
 }
 
-/* line 191, ../scss/app.scss */
+/* line 193, ../scss/app.scss */
 .fancy-font {
   font-family: 'Oswald', sans-serif;
 }
 
-/* line 195, ../scss/app.scss */
+/* line 197, ../scss/app.scss */
 .not-found {
   margin-left: 10px;
 }
 
-/* line 199, ../scss/app.scss */
+/* line 201, ../scss/app.scss */
 .episodes-table-wrapper {
   height: 100%;
   overflow: auto;
 }
 
-/* line 203, ../scss/app.scss */
+/* line 205, ../scss/app.scss */
 .locked {
   overflow: hidden;
 }
 
-/* line 207, ../scss/app.scss */
+/* line 209, ../scss/app.scss */
 .playlist {
   top: 0;
 }
 
-/* line 211, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 .playlist-sidebar {
   background: #F4F4F4;
   min-height: 550px;
@@ -4759,64 +4764,64 @@ td {
   margin-right: 10px;
 }
 
-/* line 215, ../scss/app.scss */
+/* line 217, ../scss/app.scss */
 .library-image {
   max-width: 25%;
   padding: 5px;
   float: left;
 }
 
-/* line 221, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 .library-title {
   height: 25px;
   overflow: auto;
 }
 
-/* line 226, ../scss/app.scss */
+/* line 228, ../scss/app.scss */
 .library-title h5 {
   font-family: 'Oswald', sans-serif !important;
 }
 
-/* line 230, ../scss/app.scss */
+/* line 232, ../scss/app.scss */
 .cover-art-block {
   padding: 0 !important;
 }
 
-/* line 233, ../scss/app.scss */
+/* line 235, ../scss/app.scss */
 .icon-closure {
   font-size: 30px;
   margin-right: 5px;
   max-width: 30px;
 }
 
-/* line 239, ../scss/app.scss */
+/* line 241, ../scss/app.scss */
 .dialog-absolute-bottom {
   position: absolute;
   bottom: 0;
 }
 
-/* line 244, ../scss/app.scss */
+/* line 246, ../scss/app.scss */
 .dialog-absolute-bottom button {
   padding-top: 45px;
 }
 
-/* line 248, ../scss/app.scss */
+/* line 250, ../scss/app.scss */
 #page-main {
   padding: 0 !important;
 }
 
-/* line 252, ../scss/app.scss */
+/* line 254, ../scss/app.scss */
 .panel {
   overflow: auto;
   width: 100%;
 }
 
-/* line 257, ../scss/app.scss */
+/* line 259, ../scss/app.scss */
 .right-small {
   border-left: 0 !important;
 }
 
-/* line 261, ../scss/app.scss */
+/* line 263, ../scss/app.scss */
 .playlist {
   table-border-style: solid;
   table-border-size: 3 px;
@@ -4826,7 +4831,7 @@ td {
 /***************************************************************************************************
     styles for static player bar at bottom of screen  **********************************************
 ***************************************************************************************************/
-/* line 272, ../scss/app.scss */
+/* line 274, ../scss/app.scss */
 #player {
   position: fixed;
   height: 60px;
@@ -4841,24 +4846,24 @@ td {
   cursor: default;
 }
 
-/* line 285, ../scss/app.scss */
+/* line 287, ../scss/app.scss */
 #player-fill-left {
   height: 100%;
   width: 75%;
 }
 
-/* line 289, ../scss/app.scss */
+/* line 291, ../scss/app.scss */
 .album-preview {
   width: 60px;
   height: 60px;
 }
 
-/* line 296, ../scss/app.scss */
+/* line 298, ../scss/app.scss */
 #feeditems-collection {
   margin-bottom: 80px !important;
 }
 
-/* line 299, ../scss/app.scss */
+/* line 301, ../scss/app.scss */
 .player-preview {
   position: fixed;
   left: 63px;
@@ -4868,12 +4873,12 @@ td {
   max-width: 50%;
 }
 
-/* line 310, ../scss/app.scss */
+/* line 312, ../scss/app.scss */
 .player-preview p {
   margin: 0 !important;
 }
 
-/* line 313, ../scss/app.scss */
+/* line 315, ../scss/app.scss */
 .player-art {
   background-color: transparent;
   display: block;
@@ -4884,7 +4889,7 @@ td {
   height: 60px;
 }
 
-/* line 322, ../scss/app.scss */
+/* line 324, ../scss/app.scss */
 .player-controls i {
   float: left;
   font-size: 35px;
@@ -4892,7 +4897,7 @@ td {
   padding: 5px;
 }
 
-/* line 329, ../scss/app.scss */
+/* line 331, ../scss/app.scss */
 #controls-wrapper {
   height: 60px;
   position: fixed;
@@ -4901,31 +4906,31 @@ td {
   padding-top: 10px;
 }
 
-/* line 337, ../scss/app.scss */
+/* line 339, ../scss/app.scss */
 .right-off-canvas-menu {
   width: 320px !important;
 }
 
 @media all and (max-width: 1000px) and (min-width: 700px) {
-  /* line 342, ../scss/app.scss */
+  /* line 344, ../scss/app.scss */
   #player {
     height: 85px;
   }
 
-  /* line 345, ../scss/app.scss */
+  /* line 347, ../scss/app.scss */
   .player-art {
     height: 85px;
     width: 85px;
   }
 
-  /* line 349, ../scss/app.scss */
+  /* line 351, ../scss/app.scss */
   .player-preview {
     position: fixed;
     height: 85px;
     left: 87px;
   }
 
-  /* line 356, ../scss/app.scss */
+  /* line 358, ../scss/app.scss */
   .player-controls i {
     float: left;
     font-size: 45px;
@@ -4933,13 +4938,13 @@ td {
     padding: 10px;
   }
 
-  /* line 362, ../scss/app.scss */
+  /* line 364, ../scss/app.scss */
   #feeditems-collection {
     padding-left: 80px;
     padding-right: 80px;
   }
 
-  /* line 367, ../scss/app.scss */
+  /* line 369, ../scss/app.scss */
   #controls-wrapper {
     height: 85px;
     position: fixed;
@@ -4949,25 +4954,25 @@ td {
   }
 }
 @media all and (min-width: 1001px) {
-  /* line 377, ../scss/app.scss */
+  /* line 379, ../scss/app.scss */
   #player {
     height: 85px;
   }
 
-  /* line 380, ../scss/app.scss */
+  /* line 382, ../scss/app.scss */
   .player-art {
     height: 85px;
     width: 85px;
   }
 
-  /* line 384, ../scss/app.scss */
+  /* line 386, ../scss/app.scss */
   .player-preview {
     position: fixed;
     left: 85px;
     margin-top: 20px !important;
   }
 
-  /* line 390, ../scss/app.scss */
+  /* line 392, ../scss/app.scss */
   .player-controls i {
     float: left;
     font-size: 45px;
@@ -4975,7 +4980,7 @@ td {
     padding: 10px;
   }
 
-  /* line 396, ../scss/app.scss */
+  /* line 398, ../scss/app.scss */
   #controls-wrapper {
     height: 85px;
     position: fixed;
@@ -4984,24 +4989,24 @@ td {
     margin-top: 15px;
   }
 }
-/* line 406, ../scss/app.scss */
+/* line 408, ../scss/app.scss */
 .offcanvas-inner-shadow-left {
   -webkit-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   -moz-box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
   box-shadow: 4px 0px 10px 0px rgba(50, 50, 50, 0.64);
 }
 
-/* line 416, ../scss/app.scss */
+/* line 418, ../scss/app.scss */
 .unHidden {
   display: block;
 }
 
-/* line 420, ../scss/app.scss */
+/* line 422, ../scss/app.scss */
 .Hidden {
   display: none;
 }
 
-/* line 424, ../scss/app.scss */
+/* line 426, ../scss/app.scss */
 .episodes-list {
   height: 200px;
   overflow: auto;
@@ -5015,7 +5020,7 @@ td {
   font-style: normal;
 }
 
-/* line 442, ../scss/app.scss */
+/* line 444, ../scss/app.scss */
 .fi-arrow-right:before,
 .fi-archive:before,
 .fi-alert:before,
@@ -5061,162 +5066,162 @@ td {
   text-decoration: inherit;
 }
 
-/* line 486, ../scss/app.scss */
+/* line 488, ../scss/app.scss */
 .fi-social-github:before {
   content: "\f1c9";
 }
 
-/* line 487, ../scss/app.scss */
+/* line 489, ../scss/app.scss */
 .fi-arrow-right:before {
   content: "\f10b";
 }
 
-/* line 488, ../scss/app.scss */
+/* line 490, ../scss/app.scss */
 .fi-social-linkedin:before {
   content: "\f1d0";
 }
 
-/* line 489, ../scss/app.scss */
+/* line 491, ../scss/app.scss */
 .fi-social-stack-overflow:before {
   content: "\f1df";
 }
 
-/* line 490, ../scss/app.scss */
+/* line 492, ../scss/app.scss */
 .fi-star:before {
   content: "\f1ee";
 }
 
-/* line 491, ../scss/app.scss */
+/* line 493, ../scss/app.scss */
 .fi-play:before {
   content: "\f198";
 }
 
-/* line 492, ../scss/app.scss */
+/* line 494, ../scss/app.scss */
 .fi-plus:before {
   content: "\f199";
 }
 
-/* line 493, ../scss/app.scss */
+/* line 495, ../scss/app.scss */
 .fi-trash:before {
   content: "\f204";
 }
 
-/* line 494, ../scss/app.scss */
+/* line 496, ../scss/app.scss */
 .fi-previous:before {
   content: "\f19c";
 }
 
-/* line 495, ../scss/app.scss */
+/* line 497, ../scss/app.scss */
 .fi-rss:before {
   content: "\f1aa";
 }
 
-/* line 496, ../scss/app.scss */
+/* line 498, ../scss/app.scss */
 .fi-x-circle:before {
   content: "\f216";
 }
 
-/* line 497, ../scss/app.scss */
+/* line 499, ../scss/app.scss */
 .fi-fast-forward:before {
   content: "\f148";
 }
 
-/* line 498, ../scss/app.scss */
+/* line 500, ../scss/app.scss */
 .fi-x:before {
   content: "\f217";
 }
 
-/* line 499, ../scss/app.scss */
+/* line 501, ../scss/app.scss */
 .fi-social-apple:before {
   content: "\f1b8";
 }
 
-/* line 500, ../scss/app.scss */
+/* line 502, ../scss/app.scss */
 .fi-pause:before {
   content: "\f191";
 }
 
-/* line 501, ../scss/app.scss */
+/* line 503, ../scss/app.scss */
 .fi-social-google-plus:before {
   content: "\f1ca";
 }
 
-/* line 502, ../scss/app.scss */
+/* line 504, ../scss/app.scss */
 .fi-rewind-ten:before {
   content: "\f1a8";
 }
 
-/* line 503, ../scss/app.scss */
+/* line 505, ../scss/app.scss */
 .fi-rewind:before {
   content: "\f1a9";
 }
 
-/* line 504, ../scss/app.scss */
+/* line 506, ../scss/app.scss */
 .fi-refresh:before {
   content: "\f1a5";
 }
 
-/* line 505, ../scss/app.scss */
+/* line 507, ../scss/app.scss */
 .fi-indent-more:before {
   content: "\f15d";
 }
 
-/* line 506, ../scss/app.scss */
+/* line 508, ../scss/app.scss */
 .fi-eye:before {
   content: "\f147";
 }
 
-/* line 507, ../scss/app.scss */
+/* line 509, ../scss/app.scss */
 .fi-page-multiple:before {
   content: "\f18a";
 }
 
-/* line 508, ../scss/app.scss */
+/* line 510, ../scss/app.scss */
 .fi-torso-business:before {
   content: "\f1fc";
 }
 
-/* line 509, ../scss/app.scss */
+/* line 511, ../scss/app.scss */
 .fi-skull:before {
   content: "\f1b3";
 }
 
-/* line 510, ../scss/app.scss */
+/* line 512, ../scss/app.scss */
 .fi-alert:before {
   content: "\f101";
 }
 
-/* line 511, ../scss/app.scss */
+/* line 513, ../scss/app.scss */
 .fi-arrow-up:before {
   content: "\f10c";
 }
 
-/* line 512, ../scss/app.scss */
+/* line 514, ../scss/app.scss */
 .fi-info:before {
   content: "\f15e";
 }
 
-/* line 513, ../scss/app.scss */
+/* line 515, ../scss/app.scss */
 .fi-widget:before {
   content: "\f214";
 }
 
-/* line 514, ../scss/app.scss */
+/* line 516, ../scss/app.scss */
 .fi-arrow-left:before {
   content: "\f10a";
 }
 
-/* line 515, ../scss/app.scss */
+/* line 517, ../scss/app.scss */
 .fi-page-delete:before {
   content: "\f182";
 }
 
-/* line 516, ../scss/app.scss */
+/* line 518, ../scss/app.scss */
 .fi-social-facebook:before {
   content: "\f1c4";
 }
 
-/* line 517, ../scss/app.scss */
+/* line 519, ../scss/app.scss */
 .fi-archive:before {
   content: "\f108";
 }

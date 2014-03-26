@@ -3,7 +3,7 @@
   <p>
     <a href="#" class="js-library-back nav-helper">
       <i class="fi-arrow-left"></i>
-      &nbsp &nbsp Back
+      &nbsp &nbsp Back to Library
     </a>
   </p>
 </div>

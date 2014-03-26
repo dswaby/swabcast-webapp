@@ -1,4 +1,5 @@
-define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl"], (Swabcast, loadingView, notificationView, navHelper) ->
+define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/notification_box.tpl", "tpl!common/templates/nav_helper.tpl"],
+(Swabcast, loadingView, notificationView, navHelper) ->
   Swabcast.module "Common.Views", (Views, Swabcast, Backbone, Marionette, $, _) ->
 
 
@@ -50,13 +51,6 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
 
 
       navigateToLibrary: ->
-        # - testing
-        # wide = $(window).width()
-        # $("#episodes-table-wrapper").animate
-        #   marginLeft: "+=" + wide + 50 #moves right
-        # , 1000, ->
-        #   Swabcast.trigger "episodes:library"
-        #   return
         Swabcast.trigger "episodes:library"
         @close()
     )

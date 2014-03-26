@@ -4,26 +4,21 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
       # default view will show in the sideBarRegion
       # optional mainView will replace the main library region
       # and use the extendedView
-      showTracks: (extendedView) ->
-        extendedView = extendedView or false
+      showPlaylist: ->
         require ["entities/playlist"], ->
           fetchingPlaylist = Swabcast.request("entities:playlist")
           playlistLayout = new View.Layout()
           $.when(fetchingPlaylist).done (tracks) ->
             self = this
-
             #nowplaying responsible for managing current episode to be in the player box
             #on change, triggers events and sends episode model to player and playersavedata
-            #
             @nowPlaying = (tracks.at(0))  unless typeof tracks.at(0) is "undefined"
-            if @nowPlaying
-              Swabcast.commands.execute "player:setepisode", @nowPlaying
 
             playlistTracks = undefined
-
-            if (extendedView)
-              playlistTracks = new View.TracksExtended(collection: tracks)
+            if !@nowPlaying
+              playlistTracks = new View.EmptyPlaylist()
             else
+              Swabcast.commands.execute "player:setepisode", @nowPlaying
               playlistTracks = new View.Tracks(collection: tracks)
 
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
@@ -71,6 +66,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                   tracks.add newTrack
                   newTrack.save()
                   Swabcast.commands.execute "player:setepisode", newTrack  if tracks.at(0) is newTrack
+                  #update the playlist in mainview
+                  playlistTracks.trigger "itemview:episode:added", newTrack
                   tracks.nowPlaying = newTrack  unless tracks.nowPlaying
                 else
                   throw Error("Error being returned from the playlist entity API, can not continue")
@@ -81,7 +78,34 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             playlistTracks.on "playlist:update", (childView, model) ->
               playlistTracks.children.findByModel(model).flash "success"
 
-          if (extendedView)
+          Swabcast.sideBarRegion.show playlistLayout
+
+      showManagePlaylist: ->
+        require ["entities/playlist"], ->
+          fetchingPlaylist = Swabcast.request("entities:playlist")
+          playlistLayout = new View.Layout()
+          $.when(fetchingPlaylist).done (tracks) ->
+            self = this
+            playlistTracks = undefined
+
+
+            playlistTracks = new View.TracksExtended(collection: tracks)
+
+            playlistTracks.on "itemview:episode:delete", (childView, model) ->
+              model.destroy()
+              #TODO - forgot what this does
+              Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
+
+            playlistTracks.on "itemview:episode:added", (model) ->
+              tracks.add newTrack
+              newTrack.save()
+
+            playlistLayout.on "show", ->
+              playlistLayout.playlistRegion.show playlistTracks
+
+            playlistTracks.on "playlist:update", (childView, model) ->
+              playlistTracks.children.findByModel(model).flash "success"
+
             # TODO - do this better
             Swabcast.sideBarRegion.close()
             require ["common/view"], (CommonViews) ->
@@ -91,9 +115,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               Swabcast.navHelperRegion.show backButton
               # set the view to window height, this feels a little hack
               winheight = $(window).height() - 75
-            Swabcast.libraryRegion.show playlistLayout
-          else
-            Swabcast.sideBarRegion.show playlistLayout
-
+          Swabcast.libraryRegion.show playlistLayout
 
   Swabcast.EpisodesApp.Playlist.Controller
