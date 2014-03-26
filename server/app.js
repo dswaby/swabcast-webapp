@@ -32,7 +32,7 @@ db.once('open', function callback () {
     app.configure(function() {
         app.set('port', theport);
         app.set('view engine', 'handlebars');
-        app.set('views', __dirname + '../dist/assets');
+        app.set('views', __dirname + '../app/assets');
     });
     /* userauths Model Schema */
     var LocalUserSchema = new mongoose.Schema({
@@ -128,7 +128,7 @@ db.once('open', function callback () {
         next();
     });
     // mount static
-    app.use(express.static(path.join(__dirname, '../dist')));
+    app.use(express.static(path.join(__dirname, '../app')));
     app.use(express.static(path.join(__dirname, '../.tmp')));
     // include passport authentication middleware
     // app.use(express.cookieParser());
@@ -236,7 +236,7 @@ db.once('open', function callback () {
     //     });
     // });
     app.get('/', function(req, res) {
-        res.sendfile(path.join(__dirname, '../dist/index.html'));
+        res.sendfile(path.join(__dirname, '../app/index.html'));
     });
     app.get( '/api', function( request, response ) {
         response.send( 'Library API is running' );

@@ -11,8 +11,8 @@ Swabcast
 
 Want to contribute?
 -------------------
-This is a side project I have been working on I thought I would open source in case there is any interest.
-It is still in very early development, server hasn't been fleshed out and it still uses static assets I have hardcoded.  Contributions or suggestions for improvements are welcome!
+This is a side project I have been working on when I have time.
+It is still in very early stages, server hasn't been fleshed out and it still uses static assets I have hardcoded.  Contributions or suggestions for improvements are welcome!
 
 [app info](https://github.com/dswaby/swabstack/tree/master/app)
 <br />

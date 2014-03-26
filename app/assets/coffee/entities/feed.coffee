@@ -69,6 +69,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
 
       # episodeIdentifier consists of feedId + "-" followed by 7 digit numeric episodeId
       getEpisodeByUuid: (uuid) ->
+        console.log(uuid)
         # uuid = FeedID-EpisodeUid
         # TODO - a more efficient way of doing this
         episodeString = uuid.split("-!",2)
@@ -79,15 +80,19 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           subscription = feeds.get(episodeString[0])
           episodes = subscription.get("episodes")
           episodes.forEach (episode) ->
-            if episode.uid == episodeString[1]
-              found = new Entities.Episode(
-                "albumArt": subscription.get("albumArt") or "podcast-default.png"
-                "episodeTitle": episode.title or null
-                "mediaUrl": episode.mediaUrl or null
-                "publishedAt": episode.publishedAt or null
-                "episodeSummary": episode.episodeSummary or null
-                "duration": episode.duration or null
-              )
+            if episode.uid.toString() == episodeString[1]
+              episode.parent = subscription
+              found = new Entities.Episode( _.clone(episode) )
+              found.set("albumArt": episode.parent.get("albumArt"))
+              # found.set("albumArt": subscription.get("albumArt"))
+              #   "albumArt": subscription.get("albumArt") or "podcast-default.png"
+              #   "episodeTitle": episode.title or null
+              #   "mediaUrl": episode.mediaUrl or null
+              #   "publishedAt": episode.publishedAt or null
+              #   "episodeSummary": episode.episodeSummary or null
+              #   "duration": episode.duration or null
+              # )
+              console.log(found)
               defer.resolve found
         promise
 

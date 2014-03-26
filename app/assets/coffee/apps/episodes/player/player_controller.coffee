@@ -158,10 +158,11 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
 
                   # player commands
                   self.playerControls.model.destroy()
-                  self.newPlayerData episodeModel
+                  self.playerControls.model = self.newPlayerData(episodeModel)
+                  # self.newPlayerData episodeModel
                   self.updateAudio episodeModel.get("mediaUrl"), options
-                  self.audioPlayer.play()
                   self.playerControls.render()
+                  self.audioPlayer.play()
                 playerData.save()
 
             "player:setepisode": (episodeModel) ->
