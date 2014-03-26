@@ -6,8 +6,6 @@ app/.sass-cache/
 app/assets/bower_components/*
 .sublime-grunt.cache
 .swabcast.sublime-workspace
-dist
-dist/*
 app/assets/foundation_icons/
 app/assets/js
 app/assets/js/
