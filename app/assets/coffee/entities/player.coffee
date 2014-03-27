@@ -6,11 +6,11 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
     Entities.PlayerData = Entities.Episode.extend(urlRoot: "player")
     Entities.configureStorage Entities.PlayerData
 
-    Entities.PlayerDataStore = Backbone.Collection.extend(
-      model: Entities.Episode
-      url: "player"
-    )
-    Entities.configureStorage Entities.PlayerDataStore
+    # Entities.PlayerDataStore = Backbone.Collection.extend(
+    #   model: Entities.Episode
+    #   url: "player"
+    # )
+    # Entities.configureStorage Entities.PlayerDataStore
 
     initializePlayerData = ->
       syncData = undefined

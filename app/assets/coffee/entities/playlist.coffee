@@ -4,6 +4,7 @@
 define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
     Entities.QueuedEpisode = Entities.Episode.extend(
+      url: "playlistEpisode"
       urlRoot: "playlist"
       order: 0,
       validate: (attrs) ->
@@ -19,19 +20,16 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
     )
     Entities.configureStorage Entities.Playlist
 
-    playlist = undefined
-    initializePlaylist = ->
-      blankPlaylist = new Entities.Playlist()
-      blankPlaylist.save()
-
     #public
     API =
       getEpisodeEntity: (uniqueId) ->
-        episode = new Entities.Episode(id: uniqueId)
+        console.log(uniqueId)
+        episode = new Entities.QueuedEpisode(id: uniqueId)
         defer = $.Deferred()
         setTimeout (->
           episode.fetch
             success: (data) ->
+              console.log("success getting episodeEntity",data)
               defer.resolve data
 
             error: ->
@@ -46,7 +44,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
           defer.resolve data
 
         promise = defer.promise()
-        $.when(promise).done (queuedtracks) ->
+        # $.when(promise).done (queuedtracks) ->
 
         promise
 
@@ -65,6 +63,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
               t.get "order"
             )
             highestOrder = highestOrder.get("order") + 1
+          console.log("inQueue",inQueue)
           unless inQueue
             newTrack = new Swabcast.Entities.QueuedEpisode(
               uid: model.get("uid") or null
@@ -77,14 +76,8 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
               order: highestOrder or 1
             )
             tracks.add newTrack
-            # tracks.save()
-            # TODO should be saved here and then notify view new data available
-
-            ####################################
-            # DEBUGGING ONLY -- REMOVE THIS
-            ####################################
-            console.log("new track in playlist entity", newTrack)
-            defer.resolve newTrack
+            newTrack.save()
+            defer.resolve newTrack.get("id")
           else
             defer.resolve "fail"
         defer.promise()
@@ -110,7 +103,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
     Swabcast.reqres.setHandler "entities:playlist", ->
       API.getPlaylistEntities()
 
-    Swabcast.reqres.setHandler "episode:entity", (uid) ->
+    Swabcast.reqres.setHandler "playlist:episode", (uid) ->
       API.getEpisodeEntity uid
 
     Swabcast.reqres.setHandler "episode:playlist", ->

@@ -102,15 +102,31 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
             $.when(models).done (subs) ->
               subs.forEach (feed) ->
                 feed.save()
-            feeds.reset models
-          promise
+              feeds.reset subs
+        promise
 
       getStaticEntities: ->
         feeds = new Entities.Static()
         defer = $.Deferred()
         feeds.fetch success: (data) ->
           defer.resolve data
+          feeds.reset feeds.models
         defer.promise()
+
+      getAllEntities: ->
+        feeds = new Entities.Feeds()
+        fetchingLocalStorage = API.getFeedEntities()
+        deferred = $.Deferred()
+        $.when(fetchingLocalStorage).done (lsfeeds) ->
+          if lsfeeds.length is 0
+            fetchingStatic = API.getStaticEntities()
+            $.when(fetchingStatic).done (feeds) ->
+              deferred.resolve feeds
+              feeds.forEach (feed) ->
+                feed.save()
+          else
+            deferred.resolve lsfeeds
+
 
       getPlaylistDisplayData: ->
 
@@ -118,7 +134,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
       API.getEpisodeByUuid uuid
 
     Swabcast.reqres.setHandler "entities:library", ->
-      API.getFeedEntities()
+      API.getAllEntities()
 
     Swabcast.reqres.setHandler "feed:entity", (id) ->
       API.getFeedEntity id

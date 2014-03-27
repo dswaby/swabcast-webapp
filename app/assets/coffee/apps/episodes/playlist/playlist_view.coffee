@@ -2,7 +2,7 @@ define ["app",
 "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl",
 "tpl!apps/episodes/playlist/templates/playlist_item_view_extended.tpl",
 "tpl!apps/episodes/playlist/templates/playlist_layout.tpl",
-"tpl!apps/episodes/playlist/templates/playlist_layout_extended.tpl",
+"tpl!apps/episodes/playlist/templates/manage_playlist_layout.tpl",
 "tpl!apps/episodes/playlist/templates/playlist.tpl"
 "tpl!apps/episodes/playlist/templates/playlist_empty.tpl"
 ],
@@ -13,6 +13,12 @@ define ["app",
       regions:
         nowPlayingRegion: "#now-playing-region"
         playlistRegion: "#playlist-region"
+    )
+
+    View.ManagePlaylistLayout = Marionette.Layout.extend(
+      template: playlistLayoutTpl
+      regions:
+        managePlaylistRegion: "#manage-playlist-region"
     )
 
     View.Track = Marionette.ItemView.extend(

@@ -165,17 +165,19 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                   self.audioPlayer.play()
                 playerData.save()
 
-            "player:setepisode": (episodeModel) ->
+            "player:setepisode": (episodeId) ->
               # audio options
               options = {}
               options.preload = true
-
-              # player commands
-              self.playerControls.model.destroy()
-              self.playerControls.model = self.newPlayerData(episodeModel)
-              self.updateAudio episodeModel.get("mediaUrl"), options
-              self.playerControls.render()
-              playerData.save()
+              require ["entities/playlist"], ->
+                console.log("episodeId", episodeId)
+                fetchEpisode = Swabcast.request("playlist:episode", episodeId)
+                $.when(fetchEpisode).done (episodeModel) ->
+                  console.log("episodeModel", episodeModel)
+                  self.playerControls.model = self.newPlayerData(episodeModel)
+                  self.updateAudio episodeModel.get("mediaUrl"), options
+                  self.playerControls.render()
+                playerData.save()
 
             "playlist:updatenowplaying": (episodeModel) ->
               # audio options
