@@ -84,60 +84,52 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
 
       showManagePlaylist: ->
         require ["entities/playlist"], ->
-          fetchingPlaylist = Swabcast.request("entities:playlist")
           mainPlaylistLayout = new View.ManagePlaylistLayout()
-          $.when(fetchingPlaylist).done (episodes) ->
-            self = this
-            playlistEpisodes = new View.TracksExtended(collection: episodes)
 
-            playlistEpisodes.on "itemview:episode:delete", (childView, model) ->
-              if typeof episodes.at(0) is "undefined" and episodes.length is 0
-                emptyPlaylist = new View.EmptyPlaylist()
-                mainPlaylistLayout.managementBoxRegion.show emptyPlaylist
+          mainPlaylistLayout.on "show", ->
+            fetchingPlaylist = Swabcast.request("entities:playlist")
 
-              if typeof episodes.at(1) is "undefined" and episodes.length is 1
-                Swabcast.commands.execute "playerdata:remove"
-                Swabcast.commands.execute "player:empty"
-              Swabcast.commands.execute "playlist:updatenowplaying", episodes.at(1)  if episodes.at(0) is model and episodes.length >= 2
-              # modelUid = model.get("uid")
-              model.destroy()
-              # Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
+            $.when(fetchingPlaylist).done (episodes) ->
+              self = this
+              playlistEpisodes = new View.TracksExtended(collection: episodes)
 
-            playlistEpisodes.listenTo Playlist, "playlist:newepisode", (model) ->
-              console.log("showManagePlaylist", model)
-              episodes.add newTrack
-              newTrack.save()
-              playlistEpisodes.render()
+              playlistEpisodes.on "itemview:episode:delete", (childView, model) ->
+                if typeof episodes.at(0) is "undefined" and episodes.length is 0
+                  emptyPlaylist = new View.EmptyPlaylist()
+                  mainPlaylistLayout.managementBoxRegion.show emptyPlaylist
 
-            playlistEpisodes.on "playlist:update", (childView, model) ->
-              # if !episodes.length
-              #   emptyPlaylist = new View.EmptyPlaylist()
-              #   mainPlaylistLayout.managePlaylistRegion.show emptyPlaylist
-              # else
-              playlistEpisodes.children.findByModel(model).flash "success"
+                if typeof episodes.at(1) is "undefined" and episodes.length is 1
+                  Swabcast.commands.execute "playerdata:remove"
+                  Swabcast.commands.execute "player:empty"
+                Swabcast.commands.execute "playlist:updatenowplaying", episodes.at(1)  if episodes.at(0) is model and episodes.length >= 2
+                model.destroy()
 
-            mainPlaylistLayout.on "show", ->
-              Marionette.TemplateCache.clear("#tracks-extended-collection")
+              playlistEpisodes.listenTo Playlist, "playlist:newepisode", (model) ->
+                console.log("showManagePlaylist", model)
+                episodes.add newTrack
+                newTrack.save()
+                playlistEpisodes.render()
 
-              episodes.fetch()
+              playlistEpisodes.on "playlist:update", (childView, model) ->
+                console.log("playlist:update")
+                playlistEpisodes.children.findByModel(model).flash "success"
+
               Swabcast.sideBarRegion.close()
               require ["common/view"], (CommonViews) ->
                 backButton = new CommonViews.NavPlaylistHelper(
                   buttonText: "Back to subscriptions"
                 )
                 Swabcast.navHelperRegion.show backButton
+
                 # set the view to window height, this feels a little hack
               winheight = $(window).height() - 75
-              if !episodes.length
 
-                emptyPlaylist = new View.EmptyPlaylist()
-                mainPlaylistLayout.managementBoxRegion.show emptyPlaylist
 
               mainPlaylistLayout.managePlaylistRegion.show playlistEpisodes
 
-            mainPlaylistLayout.on "close", ->
-              playlistEpisodes
-            # TODO - do this better
+              playlistEpisodes.on "show", ->
+                episodes.sync()
+              # TODO - do this better
 
           Swabcast.libraryRegion.show mainPlaylistLayout
 

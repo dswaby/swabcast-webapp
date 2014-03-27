@@ -4,7 +4,7 @@
 define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
     Entities.QueuedEpisode = Entities.Episode.extend(
-      url: "playlistEpisode"
+      url: "playlist"
       urlRoot: "playlist"
       order: 0,
       validate: (attrs) ->

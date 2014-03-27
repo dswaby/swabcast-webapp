@@ -3,7 +3,7 @@
     <a class="left-off-canvas-toggle menu-icon"><span></span></a>
   </section>
   <section class="middle tab-bar-section">
-    <p class="title tab-bar-image"><img src="./assets/img/small_swabcast_letter.png"/></p>
+    <p class="title tab-bar-image"><img src="./img/small_swabcast_letter.png"/></p>
   </section>
   <section class="right-small">
     <a class="right-off-canvas-toggle menu-icon"></a>

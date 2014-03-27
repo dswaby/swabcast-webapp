@@ -128,7 +128,7 @@ db.once('open', function callback () {
         next();
     });
     // mount static
-    app.use(express.static(path.join(__dirname, '../app')));
+    app.use(express.static(path.join(__dirname, '../app/assets/')));
     app.use(express.static(path.join(__dirname, '../.tmp')));
     // include passport authentication middleware
     // app.use(express.cookieParser());

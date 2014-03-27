@@ -127,6 +127,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
       getStaticEntities: ->
         feeds = new Entities.Static()
         defer = $.Deferred()
+
         feeds.fetch success: (data) ->
           defer.resolve data
           feeds.reset feeds.models
@@ -153,7 +154,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
       API.getEpisodeByUuid uuid
 
     Swabcast.reqres.setHandler "entities:library", ->
-      API.getAllEntities()
+      API.getStaticEntities()
 
     Swabcast.reqres.setHandler "feed:entity", (id) ->
       API.getFeedEntity id

@@ -1,6 +1,6 @@
 <!-- playlist_item_view.tpl -->
 <td>
-    <img src=./assets/img/<%= albumArt %> alt="" height="75px" width="75px" />
+    <img src=./img/<%= albumArt %> alt="" height="75px" width="75px" />
 </td>
 
 <td>

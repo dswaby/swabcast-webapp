@@ -27,6 +27,7 @@ define ["app",
       tagName: "div"
       template: episodeDetailedTpl
       events:
+        "click .ui-dialog-titlebar": "closeDialog"
         "click a.dismiss": "closeDialog"
         "click td.js-show-enqueue": "queueEpisode"
         "click td.js-show-archive": "archiveEpisode"
@@ -77,6 +78,7 @@ define ["app",
     View.Feed = Marionette.ItemView.extend(
       template: feedDetailedTpl
       events:
+        "click div.ui-dialog-titlebar": "closeDialog"
         "click button.js-show-go-back": "goBack"
 
       initialize: ->
@@ -84,6 +86,9 @@ define ["app",
 
       goBack: (e) ->
         e.stopPropagation()
+        @trigger "dialog:close"
+
+      closeDialog: (e) ->
         @trigger "dialog:close"
     )
 

@@ -4,7 +4,7 @@
     <div class="panel">
         <div class="">
             <div class="large-6 columns">
-                <img src=./assets/img/<%= albumArt %> alt="" class="library">
+                <img src=./img/<%= albumArt %> alt="" class="library-image">
             </div>
             <div class="large-6 columns">
                 <% if (typeof(feedUrl) !== "undefined") { %>

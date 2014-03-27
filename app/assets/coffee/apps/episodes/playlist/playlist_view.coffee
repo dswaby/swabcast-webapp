@@ -1,12 +1,14 @@
+# TODO - split this out into multiple regions, there are way to many views in here
 define ["app",
 "tpl!apps/episodes/playlist/templates/playlist_item_view.tpl",
 "tpl!apps/episodes/playlist/templates/playlist_item_view_extended.tpl",
 "tpl!apps/episodes/playlist/templates/playlist_layout.tpl",
 "tpl!apps/episodes/playlist/templates/manage_playlist_layout.tpl",
 "tpl!apps/episodes/playlist/templates/playlist.tpl",
-"tpl!apps/episodes/playlist/templates/playlist_empty.tpl"
+"tpl!apps/episodes/playlist/templates/playlist_empty.tpl",
+"tpl!apps/episodes/playlist/templates/episode_detail.tpl"
 ],
-(Swabcast, playlistItemTpl, playlistItemExtTpl, playlistLayoutTpl, managePlaylistTpl, playlistTpl, emptyPlaylistTpl) ->
+(Swabcast, playlistItemTpl, playlistItemExtTpl, playlistLayoutTpl, managePlaylistTpl, playlistTpl, emptyPlaylistTpl, episodeDetailTpl) ->
   Swabcast.module "EpisodesApp.Playlist.View", (View, Swabcast, Backbone, Marionette, $, _) ->
     View.Layout = Marionette.Layout.extend(
       template: playlistLayoutTpl
@@ -118,6 +120,50 @@ define ["app",
             $view.toggleClass cssClass
           ), 300
     )
+
+    View.EpisodeDetail = Marionette.ItemView.extend(
+      tagName: "div"
+      template: episodeDetailTpl
+      events:
+        "click .ui-dialog-titlebar": "closeDialog"
+        "click a.dismiss": "closeDialog"
+        "click td.js-show-archive": "archiveEpisode"
+        "click td.js-show-favorite": "favoriteEpisode"
+        "click button.js-play-now": "playNow"
+        "click .ui-widget-overlay": "closeDialog"
+
+      initialize: ->
+        @title = @model.get("subscriptionTitle")
+
+      # editClicked: (e) ->
+      #   e.preventDefault()
+      #   e.stopPropagation()
+      #   @trigger "episode:edit", @model
+
+      closeDialog: (e) ->
+        @trigger "dialog:close"
+
+      archiveEpisode: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        console.log("mark episode as archived")
+        @trigger "dialog:close"
+
+      favoriteEpisode: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        console.log("mark episode as favorite")
+        @trigger "dialog:close"
+
+      playNow: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        uuid = @model.parent.get("id") + "-!" + @model.get("uid")
+        @trigger "player:playnow", uuid
+        @trigger "dialog:close"
+
+    )
+
 
     View.EmptyPlaylist = Marionette.ItemView.extend(
       tagName: "div"

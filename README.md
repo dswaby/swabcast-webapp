@@ -9,15 +9,10 @@ Swabcast
 ###### [tests](http://app.swa.by/test/)
 
 
-Want to contribute?
--------------------
+### contribute to this project or make it your own
+
 This is a side project I have been working on when I have time.
 It is still in very early stages, server hasn't been fleshed out and it still uses static assets I have hardcoded.  Contributions or suggestions for improvements are welcome!
-
-[app info](https://github.com/dswaby/swabstack/tree/master/app)
-<br />
-[server info](https://github.com/dswaby/swabstack/tree/master/server)
-
 
 Requirements
   * [compass](http://compass-style.org/)
@@ -64,4 +59,9 @@ configured grunt tasks
 ```
 Tests will run headless through phantom or with the default grunt task running can be viewed
 in the browser at [http://localhost:1234/test/TestRunner.html](http://localhost:1234/test/TestRunner.html)
+
+
+[app info](https://github.com/dswaby/swabstack/tree/master/app)
+<br />
+[server info](https://github.com/dswaby/swabstack/tree/master/server)
 
