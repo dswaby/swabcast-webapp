@@ -158,10 +158,14 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     Swabcast.reqres.setHandler "feed:entity", (id) ->
       API.getFeedEntity id
 
-    # consisting of unique episode identifier
-    # and Episode Title
-    Swabcast.reqres.setHandler "titles:episode:entity", (playlistIdentifiers) ->
-      API.getPlaylistDisplayData playlistIdentifiers
-
+    ## handler for adding attributes for an episode in a subscription
+    # ie
+    #   uuid = 3143143u1049-!12123
+    #   hash =
+    #      currentPositoin: 92340234
+    #      enqueue: true
+    ##  addingAttributes = Swabcast.request("entity:episode:attributes", uuid, hash)
+    Swabcast.reqres.setHandler "entity:episode:attributes", (uuid, attributesHash) ->
+      API.updateFeedEpisodeByUuid uuid, attributesHash
   #end of module
   return
