@@ -37,13 +37,10 @@ requirejs.config({
         deps: ["jquery"]
       },
       localstorage: ["backbone"],
-      "vendor/foundation.offcanvas": {
+      "./../bower_components/foundation/js/foundation/foundation.offcanvas": {
         deps: ["jquery", "foundation"]
       },
-      "vendor/foundation.reveal": {
-        deps: ["jquery", "foundation"]
-      },
-      "vendor/foundation.fastclick": {
+      "./../bower_components/fastclick/lib/fastclick": {
         deps: ["jquery", "foundation"]
       }
     }
