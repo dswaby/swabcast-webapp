@@ -1,7 +1,7 @@
 <div class="large-8 small-12 columns" style="margin-bottom:75px;">
-  <h1> Swabcast </h1>
   <img src="./assets/img/small_swabcast_letter.png" height="90px" width="78px" style="float:left" />
-  <p> The swabcast app is a personal side project I work on in the ongoing effort to experiment with and learn upcoming web technologies.
+  <br />
+  <p>wabcast app is a side project I work on my spare time.
   </p>
   <br /><br />
   <h3>Used in this project</h3>
@@ -41,13 +41,11 @@
 </div>
 <h3>Contact</h3>
 <div class="large-8 small-12 columns">
-  <a href=""><i class="fi-social-github big-big-ico"></i></a>
-
-  <a href=""><i class="fi-social-linkedin big-big-ico"></i></a>
-  <a href=""><i class="fi-social-stack-overflow big-big-ico"></i></a>
-  <a href=""><i class="fi-social-google-plus big-big-ico"></i></a>
-  <a href=""><i class="fi-social-twitter big-big-ico"></i></a>
-  <a href=""><i class="fi-social-facebook big-big-ico"></i></a>
+  <a href="https://github.com/dswaby"><i class="fi-social-github big-big-ico"></i></a>
+  <a href="http://www.linkedin.com/in/dannyswaby/"><i class="fi-social-linkedin big-big-ico"></i></a>
+  <a href="https://plus.google.com/104800891225968835613/posts"><i class="fi-social-google-plus big-big-ico"></i></a>
+  <a href="http://twitter.com/dswaby"><i class="fi-social-twitter big-big-ico"></i></a>
+  <!-- <a href=""><i class="fi-social-facebook big-big-ico"></i></a> -->
 
 </div>
 <div class="large-12 small-12 columns" style="margin-bottom:70px;"></div>

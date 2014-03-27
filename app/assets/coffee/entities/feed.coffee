@@ -89,6 +89,25 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
               defer.resolve found
         promise
 
+      updateFeedEpisodeByUuid: (uuid, attributesHash) ->
+        # uuid = FeedID-EpisodeUid
+        # attributesHash, propertys to set on the model, ie (currentPosition: 534522, archived: true, enqueue, true)
+        episodeString = uuid.split("-!",2)
+        defer = $.Deferred()
+        fetchFeeds = API.getFeedEntities()
+        promise = defer.promise()
+        $.when(fetchFeeds).done (feeds) ->
+          subscription = feeds.get(episodeString[0])
+          episodes = subscription.get("episodes")
+          episodes.forEach (episode) ->
+            if episode.uid.toString() == episodeString[1]
+              #not sure if this will work, may need to find
+              episode.set(attributesHash)
+              # save the subscription since it is the model
+              subscription.save()
+              defer.resolve "success"
+        promise
+
       getFeedEntities: ->
         feeds = new Entities.Feeds()
         defer = $.Deferred()

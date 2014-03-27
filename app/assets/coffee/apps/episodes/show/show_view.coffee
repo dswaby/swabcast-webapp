@@ -70,7 +70,7 @@ define ["app",
         @$el.addClass "disabled"
 
         if @model.get("enqueue") is false
-          Swabcast.EpisodesApp.Playlist.trigger "itemview:episode:enqueue", @model
+          Swabcast.EpisodesApp.Playlist.trigger "episode:enqueue", @model
           @model.set "enqueue", true
         @trigger "dialog:close"
     )
@@ -146,7 +146,7 @@ define ["app",
         if @model.get("enqueue") is false
           # TODO - trigger controller, send to playlist from it
           # view should be logicless
-          Swabcast.EpisodesApp.Playlist.trigger "itemview:episode:enqueue", @model
+          Swabcast.EpisodesApp.Playlist.trigger "episode:enqueue", @model
           @model.set "enqueue", true
         @trigger "dialog:close"
 

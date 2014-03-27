@@ -16,7 +16,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             #nowplaying responsible for managing current episode to be in the player box
             #on change, triggers events and sends episode model to player and playersavedata
             @nowPlaying = (tracks.at(0)) unless tracks.length == 0
-            if tracks.length > 1
+            if tracks.length > 0
               console.log(@nowPlaying)
               Swabcast.commands.execute "player:setepisode", @nowPlaying.get("id")
 
@@ -34,7 +34,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               model.destroy()
               Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
-            playlistTracks.listenTo Playlist, "itemview:episode:enqueue", (model) ->
+            playlistTracks.listenTo Playlist, "episode:enqueue", (model) ->
+              playlistLayout.nowPlayingRegion.close()
               addingTrack = Swabcast.request "playlist:addtoqueue", model
               $.when(addingTrack).done (apiResponse) ->
 
@@ -61,7 +62,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                     newTrack.save()
                     Swabcast.commands.execute "player:setepisode", newTrack.get("id")  if tracks.at(0) is newTrack
                     #update the playlist in mainview
-                    playlistTracks.trigger "itemview:episode:added", newTrack
+                    Playlist.trigger "playlist:newepisode", newTrack
                     tracks.nowPlaying = newTrack  unless tracks.nowPlaying
                 else
                   if apiResponse == "fail"
@@ -69,11 +70,8 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                   else
                     throw Error("Error being returned from the playlist entity API, can not continue")
 
-            playlistTracks.on "playlist:update", (childView, model) ->
 
             playlistTracks.on "playlist:update", (childView, model) ->
-              if emptyView
-                emptyView.close()
               playlistTracks.children.findByModel(model).flash "success"
 
             playlistLayout.on "show", ->
@@ -93,17 +91,23 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             playlistEpisodes = new View.TracksExtended(collection: episodes)
 
             playlistEpisodes.on "itemview:episode:delete", (childView, model) ->
+              if typeof episodes.at(0) is "undefined" and episodes.length is 0
+                emptyPlaylist = new View.EmptyPlaylist()
+                mainPlaylistLayout.managementBoxRegion.show emptyPlaylist
+
+              if typeof episodes.at(1) is "undefined" and episodes.length is 1
+                Swabcast.commands.execute "playerdata:remove"
+                Swabcast.commands.execute "player:empty"
+              Swabcast.commands.execute "playlist:updatenowplaying", episodes.at(1)  if episodes.at(0) is model and episodes.length >= 2
+              # modelUid = model.get("uid")
               model.destroy()
-              # if !episodes.length
-              #   emptyPlaylist = new View.EmptyPlaylist()
-                # mainPlaylistLayout.managePlaylistRegion.show emptyPlaylist
+              # Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
 
-            playlistEpisodes.on "itemview:episode:added", (model) ->
+            playlistEpisodes.listenTo Playlist, "playlist:newepisode", (model) ->
+              console.log("showManagePlaylist", model)
               episodes.add newTrack
-              # newTrack.save()
+              newTrack.save()
               playlistEpisodes.render()
-
-
 
             playlistEpisodes.on "playlist:update", (childView, model) ->
               # if !episodes.length
@@ -113,6 +117,9 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               playlistEpisodes.children.findByModel(model).flash "success"
 
             mainPlaylistLayout.on "show", ->
+              Marionette.TemplateCache.clear("#tracks-extended-collection")
+
+              episodes.fetch()
               Swabcast.sideBarRegion.close()
               require ["common/view"], (CommonViews) ->
                 backButton = new CommonViews.NavPlaylistHelper(
@@ -121,12 +128,15 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                 Swabcast.navHelperRegion.show backButton
                 # set the view to window height, this feels a little hack
               winheight = $(window).height() - 75
-              # if !episodes.length
-              #   emptyPlaylist = new View.EmptyPlaylist()
-              #   mainPlaylistLayout.managePlaylistRegion.show emptyPlaylist
+              if !episodes.length
+
+                emptyPlaylist = new View.EmptyPlaylist()
+                mainPlaylistLayout.managementBoxRegion.show emptyPlaylist
 
               mainPlaylistLayout.managePlaylistRegion.show playlistEpisodes
 
+            mainPlaylistLayout.on "close", ->
+              playlistEpisodes
             # TODO - do this better
 
           Swabcast.libraryRegion.show mainPlaylistLayout
