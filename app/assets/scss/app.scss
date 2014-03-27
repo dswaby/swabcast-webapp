@@ -74,7 +74,7 @@ td {
 
 .nav-helper-overlay {
   position: fixed;
-  height: 55px;
+  height: 45px;
   width: 100%;
   top: 0;
   background-color: #333333;
@@ -129,6 +129,10 @@ td {
   margin-top: 3px;
 }
 
+.tab-bar-image p{
+  margin-bottom: 0 !important;
+}
+
 /***************************************************************************************************
     styles for episode detailed view  **********************************************
 ***************************************************************************************************/
@@ -154,7 +158,7 @@ td {
   // padding: 20px;
   position: relative;
   background: #14b9e8 !important;
-  margin: 0;
+  // margin-top:55px;
   overflow: hidden;
 }
 
@@ -249,6 +253,7 @@ td {
 
 #page-main {
   padding: 0 !important;
+  // margin-top:55px;
 }
 
 .panel {
@@ -517,6 +522,8 @@ td {
 .fi-page-delete:before { content: "\f182"; }
 .fi-social-facebook:before { content: "\f1c4"; }
 .fi-archive:before { content: "\f108"; }
+.fi-social-twitter:before { content: "\f1e4"; }
+
 
 
 $include-html-table-classes: $include-html-classes !default;
