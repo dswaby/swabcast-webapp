@@ -268,7 +268,7 @@ module.exports = function(grunt) {
             'copy:templates', // when starting, copy any templates that may have been added
             'compass:app',
             'coffee', //compile any coffescript files that may have changed
-            'targethtml:app'
+            'targethtml'
         ]);
     });
 
@@ -290,13 +290,11 @@ module.exports = function(grunt) {
 
     grunt.task.registerTask('build', 'creates optimized distribution', function() {
         grunt.task.run([
-            'copy:templates',
+            'dev',
             'copy:components',
             'copy:assets',
             'shell:buildRequire',
             'copy:requireBuilt',
-            'targethtml:dist',
-            'compass:app',
             'cssmin',
             'express:dist',
             'open:build',
