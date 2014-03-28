@@ -173,7 +173,7 @@ module.exports = function(grunt) {
                 files: [{
                     cwd: './',
                     src: ['<%= swabstack.app %>/assets/js/require_main_built.js'],
-                    dest: '<%= swabstack.dist %>/require_main_built.js'
+                    dest: '<%= swabstack.dist %>/js/require_main_built.js'
                 }]
             }
         },
