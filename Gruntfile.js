@@ -233,6 +233,10 @@ module.exports = function(grunt) {
             build: {
                 path: 'http://localhost:9000',
                 app: 'Google Chrome'
+            },
+            testrunner: {
+                path: 'http://localhost:1234/test/TestRunner.html',
+                app: 'Google Chrome'
             }
         }
     });
@@ -259,6 +263,7 @@ module.exports = function(grunt) {
         'express:dev',
         'shell:mocha-phantomjs',
         'open:dev',
+        'open:testrunner',
         'watch'
     ]);
 
