@@ -1,11 +1,10 @@
 define ["app"], (Swabcast) ->
   Swabcast.module "EpisodesApp", (EpisodesApp, Swabcast, Backbone, Marionette, $, _) ->
     EpisodesApp.Router = Marionette.AppRouter.extend(appRoutes:
-      "library": "showPageMedia"
+      library: "showPageMedia"
       "episodes/:id": "showEpisode"
       "feed/:id": "showFeedEpisodesOnLoad"
-      "episodes/:id/edit": "editEpisode"
-      "playlist": "showPlaylistOnLoad"
+      playlist: "showPlaylistOnLoad"
     )
     API =
       # "media:all"
@@ -28,7 +27,8 @@ define ["app"], (Swabcast) ->
       # "episodes:library"
       showLibrary: ->
         require ["apps/episodes/feed/feed_controller"], ->
-          EpisodesApp.Feed.Controller.showFeeds()
+          optTimeOut = 0
+          EpisodesApp.Feed.Controller.showFeeds optTimeOut
 
       # "static:about:app"
       showAboutApp: ->
@@ -91,7 +91,6 @@ define ["app"], (Swabcast) ->
           EpisodesApp.Playlist.Controller.showPlaylist()
         require ["apps/episodes/static/static_controller"], ->
           EpisodesApp.Static.Controller.showAboutApp()
-
 
       featureNotImplemented: ->
         require ["apps/episodes/feed/feed_controller"], ->

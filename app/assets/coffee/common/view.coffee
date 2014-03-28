@@ -50,7 +50,6 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
       navigateToLibrary: (e) ->
         e.preventDefault()
         e.stopPropagation()
-        Swabcast.navigate "library"
         Swabcast.trigger "episodes:library"
         @close()
     )
@@ -76,7 +75,7 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
         Swabcast.navigate "library"
         Swabcast.trigger "episodes:library"
         Swabcast.trigger "episodes:playlist"
-        Swabcast.libraryRegion.close()
+        # Swabcast.libraryRegion.close()
         @close()
     )
   Swabcast.Common.Views

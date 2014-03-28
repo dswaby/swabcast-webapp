@@ -110,18 +110,12 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
 
       getFeedEntities: ->
         feeds = new Entities.Feeds()
+
         defer = $.Deferred()
         feeds.fetch success: (data) ->
           defer.resolve data
 
         promise = defer.promise()
-        $.when(promise).done (feeds) ->
-          if feeds.length is 0
-            models = API.getStaticEntities()
-            $.when(models).done (subs) ->
-              subs.forEach (feed) ->
-                feed.save()
-              feeds.reset subs
         promise
 
       getStaticEntities: ->
@@ -130,31 +124,42 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
 
         feeds.fetch success: (data) ->
           defer.resolve data
-          feeds.reset feeds.models
+
+          # feeds.reset feeds.models
         defer.promise()
+
+
 
       getAllEntities: ->
         feeds = new Entities.Feeds()
         fetchingLocalStorage = API.getFeedEntities()
         deferred = $.Deferred()
-        $.when(fetchingLocalStorage).done (lsfeeds) ->
-          if lsfeeds.length is 0
+        promise = deferred.promise()
+        fetchingLocalStorage.then (lsfeeds) ->
+          console.log("getAllEntities fetchingLocalStorage done", lsfeeds)
+          if lsfeeds.length <= 1
+
             fetchingStatic = API.getStaticEntities()
-            $.when(fetchingStatic).done (feeds) ->
-              deferred.resolve feeds
-              feeds.forEach (feed) ->
-                feed.save()
+            $.when(fetchingStatic).done (subscriptions) ->
+              console.log("getAllEntities fetching static done", subscriptions)
+              subscriptions.forEach (subscription) ->
+                subscription.save()
+              deferred.resolve subscriptions
           else
             deferred.resolve lsfeeds
 
+        promise
 
       getPlaylistDisplayData: ->
 
     Swabcast.reqres.setHandler "entity:episode", (uuid) ->
       API.getEpisodeByUuid uuid
 
-    Swabcast.reqres.setHandler "entities:library", ->
-      API.getStaticEntities()
+    Swabcast.reqres.setHandler "entities:library:local", ->
+      API.getAllEntities()
+
+    Swabcast.reqres.setHandler "entities:library:server", ->
+      API.getFeedEntities()
 
     Swabcast.reqres.setHandler "feed:entity", (id) ->
       API.getFeedEntity id

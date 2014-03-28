@@ -5,12 +5,15 @@ define ["app", "apps/episodes/feed/feed_view",
   Swabcast.module "EpisodesApp.Feed", (Feed, Swabcast, Backbone, Marionette, $, _) ->
     Feed.Controller =
       showFeeds: (timeOut) ->
+        console.log("show feeds")
+        timeOut = timeOut or 0
         require ["common/view"], (CommonViews) ->
           loadingView = new CommonViews.Loading(
             title: "Loading feeds"
             message: "content will appear shortly"
           )
           Swabcast.libraryRegion.show loadingView
+
         require ["entities/feed"], ->
           fetchingLibrary = Swabcast.request("entities:library")
           feedLayout = new View.Layout()
@@ -19,9 +22,12 @@ define ["app", "apps/episodes/feed/feed_view",
             feedLayout.on "show", ->
               feedLayout.feedItemsCollectionRegion.show subscriptions
 
-          setTimeout (->
-            Swabcast.libraryRegion.show feedLayout
-          ), timeOut
+            if timeOut is 0
+              Swabcast.libraryRegion.show feedLayout
+            else
+              setTimeout (->
+                Swabcast.libraryRegion.show feedLayout
+              ), timeOut
 
       showEpisodeDetails: (model) ->
         model.set
