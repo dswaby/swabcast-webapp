@@ -68,7 +68,7 @@ module.exports = function(grunt) {
             },
             dev: {
                 options: {
-                    script: 'server/app.js'
+                    script: 'server/test.js'
                 }
             },
             dist: {
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
             },
             test: {
                 options: {
-                    script: 'server/app.js'
+                    script: 'server/test.js'
                 }
             }
         },
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
                 bare: true,
                 cwd: '<%= swabstack.app %>/assets/',
                 src: ['*.coffee'],
-                dest: '<%= swabstack.app %>/assets/',
+                dest: '<%= swabstack.app %>/assets/js/',
                 ext: '.js'
             },
 
@@ -182,17 +182,17 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: './',
-                    src: ['<%= swabstack.app %>/assets/bower_components/requirejs-tpl/tools/r.js'],
-                    dest: '<%= swabstack.app %>/'
+                    src: ['<%= swabstack.app %>/assets/bower_components/requirejs-tpl/tools/*.js'],
+                    dest: '<%= swabstack.app %>/r.js'
                 }]
-            }//,
-            // requireBuilt: { //since having issues getting nested dependancys working with grunt task
-            //     // first from app folder, run 'node r.js -o assets/js/build.js'
-            //     files: [{
-            //         src: ['./<%= swabstack.app %>/assets/require_main_built.js'],
-            //         dest: './<%= swabstack.dist %>/require_main_built.js'
-            //     }]
-            // }
+            },
+            requiresrc: { //since having issues getting nested dependancys working with grunt task
+                // first from app folder, run 'node r.js -o assets/js/build.js'
+                files: [{
+                    src: ['./<%= swabstack.app %>/assets/bower_components/requirejs/require.js'],
+                    dest: './<%= swabstack.dist %>/js/require.js'
+                }]
+            }
         },
         cssmin: {
             combine: {
@@ -233,7 +233,7 @@ module.exports = function(grunt) {
                 }
             },
             'buildRequire': {
-                command: 'node r.js -o assets/build.js',
+                command: 'node r.js -o assets/js/build.js',
                 options: {
                     stdout: true,
                     execOptions: {
@@ -301,6 +301,7 @@ module.exports = function(grunt) {
             'coffee:configs',
             'copy:optimizer',
             'shell:buildRequire',
+            'copy:requiresrc',
             'targethtml:dist',
             'compass:app',
             'cssmin',

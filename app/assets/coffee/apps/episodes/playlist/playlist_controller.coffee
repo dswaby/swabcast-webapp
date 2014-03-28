@@ -66,6 +66,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                     tracks.nowPlaying = newTrack  unless tracks.nowPlaying
                 else
                   if apiResponse == "fail"
+                    alert("episode already in playlist")
                     console.log ("we done goofed, episode already in playlist, TODO: notify user")
                   else
                     throw Error("Error being returned from the playlist entity API, can not continue")

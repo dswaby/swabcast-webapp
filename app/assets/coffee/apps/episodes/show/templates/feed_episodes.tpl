@@ -4,7 +4,7 @@
         <div class="large-9 small-12 columns">
         <a href="#" class="js-show-favorite-feed"><i class="fi-star"></i></a>
         <a href="<%= feedUrl %>"><h2 style="color:#fff"><%= subscriptionTitle %></h2></a>
-            <img src=./img/<%= albumArt %> alt="" class="library-image">
+            <img src=./assets/img/<%= albumArt %> alt="" class="library-image">
             <% if (typeof(feedUrl) !== "undefined") { %>
                 <a href="<%= feedUrl %>"><h6>Visit Feed HomePage</h6></a>
             <% } %>

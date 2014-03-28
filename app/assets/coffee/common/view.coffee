@@ -47,7 +47,9 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
       serializeData: ->
         buttonText: @buttonText
 
-      navigateToLibrary: ->
+      navigateToLibrary: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
         Swabcast.navigate "library"
         Swabcast.trigger "episodes:library"
         @close()
@@ -68,7 +70,9 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
       onBeforeClose: ->
         # @$el.slideUp "slow"
 
-      navigateToLibrary: ->
+      navigateToLibrary: (e) ->
+        e.preventDefault()
+        e.stopPropagation()
         Swabcast.navigate "library"
         Swabcast.trigger "episodes:library"
         Swabcast.trigger "episodes:playlist"

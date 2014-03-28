@@ -27,15 +27,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <!--  End iOS Specific -->
     <!--(if target app)><!-->
-    <link rel="stylesheet" href="css/app.css"/>
-    <link rel="stylesheet" href="css/jquery-ui-1.10.0.custom.css"/>
-     <script src="./js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="./assets/css/app.css"/>
+    <link rel="stylesheet" href="./assets/css/jquery-ui-1.10.0.custom.css"/>
+     <script src="./assets/js/vendor/modernizr.js"></script>
 
     <!--<!(endif)-->
 
     <!--(if target dist)><!-->
-    <link rel="stylesheet" href="./css/combined.min.css"/>
-    <script src="./js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="./assets/css/combined.min.css"/>
+    <script src="./assets/js/vendor/modernizr.js"></script>
     <!--<!(endif)-->
   </head>
   <body>
@@ -72,7 +72,7 @@
     </div>
     <!-- require in dev -->
     <!--(if target app)><!-->
-      <script data-main="./require_main_w_cache_buster" src="./bower_components/requirejs/require.js"></script>
+      <script data-main="./assets/js/require_main_w_cache_buster" src="./assets/bower_components/requirejs/require.js"></script>
     <!--<!(endif)-->
 
     <!-- optimized with r.js -->
@@ -83,7 +83,8 @@
 
     <!-- optimized with r.js using almond shim -->
     <!--(if target dist)><!-->
-      <script defer="defer" src="./require_main_built.js"></script>
+      <script defer="defer" type="text/javascript" src="./js/require.js"></script>
+      <script defer="defer" src="./js/require_main_built.js"></script>
 
     <!--<!(endif)-->
   </body>

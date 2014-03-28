@@ -4,7 +4,7 @@
         <form>
             <div class="row">
                 <div class="span3">
-                    <img src=./img/<%= albumArt %> alt="">
+                    <img src=./assets/img/<%= albumArt %> alt="">
                 </div>
                 <div class="span6">
                     <h4> Podcast Title: </h4>

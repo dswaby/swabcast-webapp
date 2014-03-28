@@ -1,5 +1,6 @@
+# coffescript output to app/assets/js directory
 requirejs.config
-  baseUrl: "./js"
+  baseUrl: "assets/js"
   urlArgs: 'bust=' + Math.random()
 
   paths:
@@ -45,11 +46,11 @@ requirejs.config
     offcanvas:
       deps: ["jquery", "foundation"]
 
-  name: "main",
-  out: "main.min.js"
+  name: "app",
+  out: "app.min.js"
 
 #syphon:['backbone']
-require ["./app"], (Swabcast) ->
+require ["app"], (Swabcast) ->
   Swabcast.start()
 
 requirejs [

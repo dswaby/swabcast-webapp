@@ -52,14 +52,14 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
         queuedTracks = @getPlaylistEntities()
         defer = $.Deferred()
 
-        $.when(queuedTracks).done (tracks) ->
+        $.when(queuedTracks).done (queuedTracks) ->
           highestOrder = undefined
           inQueue = undefined
-          if tracks.length isnt 0
-            inQueue = tracks.find((t) ->
+          if queuedTracks.length isnt 0
+            inQueue = queuedTracks.find((t) ->
               t.get("uid") is model.get("uid")
             )
-            highestOrder = tracks.max((t) ->
+            highestOrder = queuedTracks.max((t) ->
               t.get "order"
             )
             highestOrder = highestOrder.get("order") + 1
@@ -75,7 +75,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
               enqueue: true
               order: highestOrder or 1
             )
-            tracks.add newTrack
+            queuedTracks.add newTrack
             newTrack.save()
             defer.resolve newTrack.get("id")
           else

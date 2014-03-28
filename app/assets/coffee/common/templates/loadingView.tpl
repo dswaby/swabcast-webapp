@@ -2,6 +2,6 @@
   <div class="loading">
     <h3><%= title %></h3>
     <p><%= message %></p>
-    <img src="./img/loading.gif" alt="" />
+    <img src="./assets/img/loading.gif" alt="" />
   </div>
 </div>
