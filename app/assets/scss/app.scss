@@ -92,12 +92,13 @@ td {
 }
 
 .nav-helper a {
+  line-height: 0.1 !important;
   color: #fff !important;
 }
 
 .nav-helper p{
+  top: 10px;
   margin-top:0 !important;
-  margin-bottom: 0 !important;
   font-size:35px !important;
   color: #fff !important;
   line-height: 1 !important;
