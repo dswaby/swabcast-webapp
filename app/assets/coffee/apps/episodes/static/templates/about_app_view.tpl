@@ -1,5 +1,5 @@
 <div class="large-8 small-12 columns" style="margin-bottom:75px;">
-  <img src="./assets/img/small_swabcast_letter.png" height="90px" width="78px" style="float:left" />
+  <img src="./img/small_swabcast_letter.png" height="90px" width="78px" style="float:left" />
   <br />
   <p>wabcast app is a side project I work on my spare time.
   </p>
@@ -49,4 +49,4 @@
 
 </div>
 <div class="large-12 small-12 columns" style="margin-bottom:70px;"></div>
-<a href="https://github.com/dswaby/swabstack"><img style="position: absolute; top: 0; right: 0; border: 0;" src="./assets/img/fork_me.png"></a>
+<a href="https://github.com/dswaby/swabstack"><img style="position: absolute; top: 0; right: 0; border: 0;" src="./img/fork_me.png"></a>
