@@ -13,7 +13,7 @@
 
     <div class="large-9 small-12 columns">
 
-        <img src=./assets/img/<%= albumArt %> alt="" class="library-image">
+        <img src=./server-data/album-art/<%= album-art %> alt="" class="library-image">
         <% if (typeof(feedUrl) !== "undefined") { %>
             <h6><a href="<%= feedUrl %>">Homepage</a><h6>
         <% } %>

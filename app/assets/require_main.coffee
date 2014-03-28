@@ -21,7 +21,7 @@ requirejs.config
       exports: "_"
 
     backbone:
-      deps: ["jquery", "underscore", "json2"]
+      deps: ["jquery", "underscore"]
       exports: "Backbone"
 
     marionette:
@@ -60,7 +60,7 @@ requirejs [
   "jquery"
   "foundation"
   "offcanvas"
-  # "fastclick"
+  "fastclick"
   # "toastr"
 ], ($) ->
 

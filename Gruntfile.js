@@ -178,14 +178,13 @@ module.exports = function(grunt) {
                     dest: '<%= swabstack.dist %>/'
                 }]
             },
-            optimizer: {
-                files: [{
-                    expand: true,
-                    cwd: './',
-                    src: ['<%= swabstack.app %>/assets/bower_components/requirejs-tpl/tools/*.js'],
-                    dest: '<%= swabstack.app %>/r.js'
-                }]
-            },
+            // optimizer: {
+            //     files: [{
+            //         cwd: './',
+            //         src: ['<%= swabstack.app %>/assets/bower_components/requirejs-tpl/tools/*.js'],
+            //         dest: '<%= swabstack.app %>/r.js'
+            //     }]
+            // },
             requiresrc: { //since having issues getting nested dependancys working with grunt task
                 // first from app folder, run 'node r.js -o assets/js/build.js'
                 files: [{
@@ -299,7 +298,7 @@ module.exports = function(grunt) {
             'copy:components',
             'copy:assets',
             'coffee:configs',
-            'copy:optimizer',
+            // 'copy:optimizer',
             'shell:buildRequire',
             'copy:requiresrc',
             'targethtml:dist',

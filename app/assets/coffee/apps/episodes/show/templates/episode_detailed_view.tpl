@@ -27,7 +27,7 @@
 
     </div>
 
-    <img src=./assets/img/<%= albumArt %> alt="" class="library-image" />
+    <img src=./server-data/album-art/<%= album-art %> alt="" class="library-image" />
 
     <div class="modal-text-content">
 
