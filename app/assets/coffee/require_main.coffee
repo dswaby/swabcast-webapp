@@ -1,6 +1,6 @@
 # coffescript output to app/assets/js directory
 requirejs.config
-  baseUrl: "."
+  baseUrl: "js"
   # urlArgs: 'bust=' + Math.random()
 
   paths:
@@ -21,7 +21,7 @@ requirejs.config
       exports: "_"
 
     backbone:
-      deps: ["jquery", "underscore"]
+      deps: ["jquery", "underscore", "json2"]
       exports: "Backbone"
 
     marionette:

@@ -2,7 +2,7 @@
 <div id="player-fill-left">
 	<div id="album-preview">
 		<% if (typeof(albumArt) != "undefined") { %>
-			 <img class="player-art" src=./server-data/album-art/<%= album-art %> alt="">
+			 <img class="player-art" src=../serverdata/albumart/<%= albumArt %> alt="">
 		<% } %>
         <div class="player-preview">
     <% if (typeof(title) != "undefined") { %>

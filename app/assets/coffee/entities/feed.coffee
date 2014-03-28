@@ -38,7 +38,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     Entities.configureStorage Entities.Feeds
 
     Entities.Static = Backbone.Collection.extend(
-      url: "/server-data/static_feeds.json"
+      url: "/serverdata/static_feeds.json"
       model: Entities.Feed
     )
 
@@ -46,7 +46,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     feeds = undefined
     initializeFeeds = ->
       feeds = new Entities.Feeds()
-      feeds.url = '/server-data/static_feeds.json'
+      feeds.url = '/serverdata/static_feeds.json'
       fetchStatic = feeds.fetch()
       $.when(fetchStatic).done (subscriptions) ->
         subscriptions.forEach (feed) ->

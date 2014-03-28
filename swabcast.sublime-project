@@ -4,13 +4,15 @@
 		{
 			"folder_exclude_patterns":
 			[
-				"test/lib",
-				"node_modules",
-				"app/assets/foundation-icons",
-				// "app/assets/bower_components",
-				"docs",
-				".sass-cache",
-				"app/assets/js"
+				"node_modules"
+				,
+				"docs"
+				,
+				".sass-cache"
+				// ,
+				// "app/assets/bower_components"
+				// ,
+				// "app/assets/js"
 			],
 			"file_exclude_patterns": [".sublime-grunt.cache"],
 			"follow_symlinks": true,

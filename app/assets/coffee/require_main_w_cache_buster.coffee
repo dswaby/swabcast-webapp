@@ -1,6 +1,6 @@
 # coffescript output to app/assets/js directory
 requirejs.config
-  baseUrl: "assets/js"
+  baseUrl: "js"
   urlArgs: 'bust=' + Math.random()
 
   paths:

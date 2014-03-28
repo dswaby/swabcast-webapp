@@ -9,7 +9,7 @@ var socketIO = require('socket.io');
 var mongoose = require('mongoose');
 
 var uristring = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/swabcast';
-var theport = process.env.PORT || 9000;
+var theport = process.env.PORT || 1337;
 mongoose.connect(uristring, function(err, res) {
     if (err) {
         console.log('ERROR connecting to: ' + uristring + '. ' + err);
@@ -106,7 +106,7 @@ db.once('open', function callback () {
         next();
     });
     // mount static
-    app.use(express.static(path.join(__dirname, '../app/')));
+    app.use(express.static(path.join(__dirname, '../app/assets/')));
     app.use(express.static(path.join(__dirname, '../.tmp')));
     app.use(express.bodyParser());
     app.use( app.router );
@@ -118,9 +118,6 @@ db.once('open', function callback () {
     });
     app.get( '/api', function( request, response ) {
         response.send( 'Library API is running' );
-    });
-    app.get( '/api/static_collection/', function( request, response ) {
-        response.sendfile(path.join(__dirname, '../app/static_feeds.json'));
     });
     app.get('/api/subscriptions', function(req, res) {
         return SubscriptionModel.find(function(err, subscriptions) {
