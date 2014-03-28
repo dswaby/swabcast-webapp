@@ -27,12 +27,11 @@ module.exports = function(grunt) {
             },
             coffee: {
                 files: ['<%= swabstack.app %>/assets/coffee/{,**/}*.coffee'],
-                tasks: ['coffee:glob_to_multiple','shell:mocha-phantomjs']
+                tasks: ['coffee:glob_to_multiple', 'shell:mocha-phantomjs']
             },
             tests: {
                 files: ['<%= swabstack.test %>/coffee/*.coffee'],
-                tasks: ['coffee:testcoffee','shell:mocha-phantomjs',
-]
+                tasks: ['coffee:testcoffee', 'shell:mocha-phantomjs']
             },
             templates: {
                 files: ['<%= swabstack.app %>}/assets/**/templates/*.tpl'],
@@ -68,6 +67,7 @@ module.exports = function(grunt) {
             },
             dev: {
                 options: {
+                    port: '1337',
                     script: 'server/test.js'
                 }
             },
@@ -79,6 +79,7 @@ module.exports = function(grunt) {
             test: {
                 options: {
                     script: 'server/test.js'
+
                 }
             }
         },
@@ -116,15 +117,15 @@ module.exports = function(grunt) {
                 dest: '<%= swabstack.app %>/assets/js/',
                 ext: '.js'
             },
-            configs: {
-                expand: true,
-                flatten: false,
-                bare: true,
-                cwd: '<%= swabstack.app %>/assets/',
-                src: ['*.coffee'],
-                dest: '<%= swabstack.app %>/assets/js/',
-                ext: '.js'
-            },
+            // configs: {
+            //     expand: true,
+            //     flatten: false,
+            //     bare: true,
+            //     cwd: '<%= swabstack.app %>/assets/coffee/',
+            //     src: ['*.coffee'],
+            //     dest: '<%= swabstack.app %>/assets/js/',
+            //     ext: '.js'
+            // },
 
             testcoffee: {
                 expand: true,
@@ -178,18 +179,11 @@ module.exports = function(grunt) {
                     dest: '<%= swabstack.dist %>/'
                 }]
             },
-            // optimizer: {
-            //     files: [{
-            //         cwd: './',
-            //         src: ['<%= swabstack.app %>/assets/bower_components/requirejs-tpl/tools/*.js'],
-            //         dest: '<%= swabstack.app %>/r.js'
-            //     }]
-            // },
-            requiresrc: { //since having issues getting nested dependancys working with grunt task
-                // first from app folder, run 'node r.js -o assets/js/build.js'
+            requireBuilt: {
                 files: [{
-                    src: ['./<%= swabstack.app %>/assets/bower_components/requirejs/require.js'],
-                    dest: './<%= swabstack.dist %>/js/require.js'
+                    cwd: './',
+                    src: ['<%= swabstack.app %>/assets/js/require_main_built.js'],
+                    dest: '<%= swabstack.dist %>/require_main_built.js'
                 }]
             }
         },
@@ -240,6 +234,16 @@ module.exports = function(grunt) {
                     }
                 }
             }
+        },
+        open: {
+            dev: {
+                path: 'http://localhost:1337',
+                app: 'Google Chrome'
+            },
+            build: {
+                path: 'http://localhost:9000',
+                app: 'Google Chrome'
+            }
         }
     });
 
@@ -254,6 +258,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-docco');
     grunt.loadNpmTasks('grunt-targethtml');
     grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-open');
 
     //registered task 'a' so i dont have to scroll down when running from the sublime grunt plugin
     //same as default
@@ -263,11 +268,12 @@ module.exports = function(grunt) {
         'connect:testserver',
         'express:dev',
         'shell:mocha-phantomjs',
+        'open:dev',
         'watch'
     ]);
 
-    grunt.task.registerTask('dev', 'subset of common development tasks used in other tasks', function(){
-        grunt.task.run( [
+    grunt.task.registerTask('dev', 'subset of common development tasks used in other tasks', function() {
+        grunt.task.run([
             'copy:vendorjs',
             'copy:templates', // when starting, copy any templates that may have been added
             'compass:app',
@@ -276,8 +282,8 @@ module.exports = function(grunt) {
         ]);
     });
 
-    grunt.task.registerTask('test', 'for writing tests, only watches test folder and runs on change', function(){
-        grunt.task.run( [
+    grunt.task.registerTask('test', 'for writing tests, only watches test folder and runs on change', function() {
+        grunt.task.run([
             'coffee:testcoffee',
             'connect:testserver',
             'shell:mocha-phantomjs',
@@ -285,26 +291,28 @@ module.exports = function(grunt) {
         ]);
     });
 
-    grunt.task.registerTask('docs', 'generates docs from source and adds to dist/ ', function(){
-        grunt.task.run( [
+    grunt.task.registerTask('docs', 'generates docs from source and adds to dist/ ', function() {
+        grunt.task.run([
             'docco',
             'copy:docs'
         ]);
     });
 
-    grunt.task.registerTask('build', 'creates optimized distribution', function(){
-        grunt.task.run( [
+    grunt.task.registerTask('build', 'creates optimized distribution', function() {
+        grunt.task.run([
             'copy:templates',
             'copy:components',
             'copy:assets',
-            'coffee:configs',
-            // 'copy:optimizer',
+            // 'coffee:configs',
             'shell:buildRequire',
+            'copy:requireBuilt',
             'copy:requiresrc',
             'targethtml:dist',
             'compass:app',
             'cssmin',
-            // 'copy:requireBuilt'
+            'express:dist',
+            'open:build',
+            'watch:indextemplate'
         ]);
     });
 
