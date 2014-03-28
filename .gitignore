@@ -11,7 +11,7 @@ app/assets/bower_components/*
 app/assets/foundation_icons/
 app/assets/js
 app/assets/js/
-app/assets/js/*
+app/assets/css
 test/coffee/*
 app/index.html
 app/assets/css/*
