@@ -7,7 +7,7 @@ requirejs.config
     localstorage: "../bower_components/backbone.localstorage/backbone.localstorage"
     jquery: "../bower_components/jquery/jquery"
     "jquery-ui": "../bower_components/jquery-ui/ui/jquery-ui"
-    underscore: "../bower_components/underscore/underscore"
+    underscore: "../bower_components/underscore-amd/underscore"
     marionette: "../bower_components/backbone.marionette/lib/backbone.marionette"
     tpl: "../bower_components/requirejs-tpl/tpl"
     json2: "../bower_components/json2/json2"
