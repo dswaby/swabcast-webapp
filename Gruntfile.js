@@ -237,7 +237,7 @@ module.exports = function(grunt) {
                 options: {
                     stdout: true,
                     execOptions: {
-                        cwd: 'app'
+                        cwd: './app'
                     }
                 }
             }
