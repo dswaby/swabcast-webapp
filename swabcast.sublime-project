@@ -7,10 +7,10 @@
 				"test/lib",
 				"node_modules",
 				"app/assets/foundation-icons",
-				// "app/assets/bower_components",
+				"app/assets/bower_components",
 				"docs",
-				".sass-cache"
-				// "app/assets/js"
+				".sass-cache",
+				"app/assets/js"
 			],
 			"file_exclude_patterns": [".sublime-grunt.cache"],
 			"follow_symlinks": true,
