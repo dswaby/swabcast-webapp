@@ -117,16 +117,6 @@ module.exports = function(grunt) {
                 dest: '<%= swabstack.app %>/assets/js/',
                 ext: '.js'
             },
-            // configs: {
-            //     expand: true,
-            //     flatten: false,
-            //     bare: true,
-            //     cwd: '<%= swabstack.app %>/assets/coffee/',
-            //     src: ['*.coffee'],
-            //     dest: '<%= swabstack.app %>/assets/js/',
-            //     ext: '.js'
-            // },
-
             testcoffee: {
                 expand: true,
                 flatten: true,
@@ -160,7 +150,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: './',
                     src: ['docs/***'],
-                    dest: '<%= swabstack.dist %>/'
+                    dest: '<%= swabstack.dist %>/docs/'
                 }]
             },
             assets: {
@@ -303,10 +293,8 @@ module.exports = function(grunt) {
             'copy:templates',
             'copy:components',
             'copy:assets',
-            // 'coffee:configs',
             'shell:buildRequire',
             'copy:requireBuilt',
-            'copy:requiresrc',
             'targethtml:dist',
             'compass:app',
             'cssmin',
