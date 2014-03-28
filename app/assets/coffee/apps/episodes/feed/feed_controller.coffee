@@ -5,7 +5,6 @@ define ["app", "apps/episodes/feed/feed_view",
   Swabcast.module "EpisodesApp.Feed", (Feed, Swabcast, Backbone, Marionette, $, _) ->
     Feed.Controller =
       showFeeds: (timeOut) ->
-        console.log("show feeds")
         timeOut = timeOut or 0
         require ["common/view"], (CommonViews) ->
           loadingView = new CommonViews.Loading(

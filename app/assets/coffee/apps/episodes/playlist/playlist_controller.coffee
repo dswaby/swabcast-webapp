@@ -17,7 +17,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             #on change, triggers events and sends episode model to player and playersavedata
             @nowPlaying = (tracks.at(0)) unless tracks.length == 0
             if tracks.length > 0
-              console.log(@nowPlaying)
               Swabcast.commands.execute "player:setepisode", @nowPlaying.get("id")
 
             playlistTracks = new View.Tracks(collection: tracks)
@@ -40,13 +39,11 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               $.when(addingTrack).done (apiResponse) ->
 
                 if typeof apiResponse == "string" and apiResponse != "fail"
-                  console.log("we are in the green!")
                   fetchNewTrack = Swabcast.request("playlist:episode", apiResponse)
                   $.when(fetchNewTrack).done (newTrack) ->
 
                   # TODO - trigger success alert
                     enqueuedTrack = _.clone(apiResponse)
-                    console.log("cloned newTrack", newTrack)
                     enqueuedTrack = new Swabcast.Entities.QueuedEpisode(
                       uid: newTrack.get("uid") or null
                       albumArt: newTrack.get("albumArt") or newTrack.parent.get("albumArt")
@@ -67,7 +64,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                 else
                   if apiResponse == "fail"
                     alert("episode already in playlist")
-                    console.log ("we done goofed, episode already in playlist, TODO: notify user")
+                    console.log ("we done goofed, episode already in playlist, TODO: better notification for user")
                   else
                     throw Error("Error being returned from the playlist entity API, can not continue")
 

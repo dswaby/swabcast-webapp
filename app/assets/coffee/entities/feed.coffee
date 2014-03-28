@@ -108,7 +108,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
               defer.resolve "success"
         promise
 
-      getFeedEntities: ->
+      getEntitiesInLocalStorage: ->
         feeds = new Entities.Feeds()
 
         defer = $.Deferred()
@@ -128,20 +128,16 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
           # feeds.reset feeds.models
         defer.promise()
 
-
-
-      getAllEntities: ->
+      getFeedEntities: ->
         feeds = new Entities.Feeds()
-        fetchingLocalStorage = API.getFeedEntities()
+        fetchingLocalStorage = API.getEntitiesInLocalStorage()
         deferred = $.Deferred()
         promise = deferred.promise()
         fetchingLocalStorage.then (lsfeeds) ->
-          console.log("getAllEntities fetchingLocalStorage done", lsfeeds)
           if lsfeeds.length <= 1
 
             fetchingStatic = API.getStaticEntities()
             $.when(fetchingStatic).done (subscriptions) ->
-              console.log("getAllEntities fetching static done", subscriptions)
               subscriptions.forEach (subscription) ->
                 subscription.save()
               deferred.resolve subscriptions
@@ -155,10 +151,7 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     Swabcast.reqres.setHandler "entity:episode", (uuid) ->
       API.getEpisodeByUuid uuid
 
-    Swabcast.reqres.setHandler "entities:library:local", ->
-      API.getAllEntities()
-
-    Swabcast.reqres.setHandler "entities:library:server", ->
+    Swabcast.reqres.setHandler "entities:library", ->
       API.getFeedEntities()
 
     Swabcast.reqres.setHandler "feed:entity", (id) ->
