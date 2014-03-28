@@ -16,7 +16,7 @@
     "chai": "~1.7.2",
     "sinon": "~1.7.3",
     "toastr": "~2.0.0",
-    "almond": "~0.2.9",
+    "almond": "0.2.6",
     "backbone.localstorage": "~1.1.7",
     "json2": "*",
     "jquery-ui": "~1.10.4"
@@ -26,6 +26,7 @@
   "resolutions": {
     "jquery": "~1.9.0",
     "backbone.babysitter": "~0.1.0",
-    "backbone.wreqr": "~1.0.0"
+    "backbone.wreqr": "~1.0.0",
+    "modernizr": "~2.6.2"
   }
 }
