@@ -4,10 +4,6 @@ Swabcast
 
 ###### [preview](http://app.swa.by/)
 
-######  [generated source docs](http://app.swa.by/docs/)
-
-###### [tests](http://app.swa.by/test/)
-
 
 ### contribute to this project or make it your own
 
