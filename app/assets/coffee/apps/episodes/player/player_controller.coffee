@@ -4,7 +4,7 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
     Player.Controller = showControls: ->
       require ["entities/player"], ->
           self = this
-          playerData = null
+          playerData = new Swabcast.Entities.PlayerData()
           # fetchPlayerData = Swabcast.request("player:savedata")
           # $.when(fetchPlayerData).done (playerData) ->
           self = this
@@ -28,12 +28,13 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
             self.audioPlayer.clearAudio()
 
           @newPlayerData = (newModelData) ->
-            newPlayerData = new Swabcast.Entities.Episode(
+            newPlayerData = new Swabcast.Entities.PlayerData(
               albumArt: newModelData.get("albumArt")
               mediaUrl: newModelData.get("mediaUrl")
               title: newModelData.get("episodeTitle")
               currentPosition: newModelData.get("currentPosition") or 0
             )
+            newPlayerData.save()
             newPlayerData
 
           @playNow = (newModelData) ->
@@ -41,12 +42,14 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
             self.audioPlayer.play()
 
           @defaultPlayerState = ->
-            defaultData = new Swabcast.Entities.Episode(
+            defaultData = new Swabcast.Entities.PlayerData(
+              id:0
               albumArt: "default.jpg"
               mediaUrl: ""
               title: ""
               currentPosition: 0
             )
+            defaultData.save()
             defaultData
 
           #audioplayer object
@@ -160,7 +163,7 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                   self.updateAudio episodeModel.get("mediaUrl"), options
                   self.playerControls.render()
                   self.audioPlayer.play()
-                playerData.save()
+                  playerData.save()
 
             "player:setepisode": (episodeId) ->
               # audio options
@@ -172,7 +175,7 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                   self.playerControls.model = self.newPlayerData(episodeModel)
                   self.updateAudio episodeModel.get("mediaUrl"), options
                   self.playerControls.render()
-                playerData.save()
+                  playerData.save()
 
             "playlist:updatenowplaying": (episodeModel) ->
               # audio options

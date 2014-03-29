@@ -1,4 +1,4 @@
-<div class="large-8 small-12 columns" style="margin-bottom:75px;">
+<div class="large-8 small-12 columns" style="margin-bottom:75px;margin-top:75px;">
   <img src="./img/small_swabcast_letter.png" height="90px" width="78px" style="float:left" />
   <br />
   <p>wabcast app is a side project I work on my spare time.

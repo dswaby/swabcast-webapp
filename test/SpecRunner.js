@@ -15,6 +15,7 @@ requirejs.config({
         toastr: "./../bower_components/toastr/toastr",
         chai: "../bower_components/chai/chai",
         mocha: "../bower_components/mocha/mocha"
+        // sinon: "../bower_components/sinon/lib/sinon"
     },
     shim: {
       underscore: {
@@ -48,12 +49,12 @@ requirejs.config({
 
 require([
   //files being tested
-  "app",
-  "./../../../test/spec/entitiesTestSuite",
+  "./../../../test/hello",
+  "./../../../test/spec/testfiles",
   "./../../../test/spec/feed",
   "./../../../test/spec/playlist",
-  "./../../../test/spec/player"
-
+  "./../../../test/spec/player",
+  "./../../../test/spec/swabcast"
 ],
 function(Swabcast) {
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }

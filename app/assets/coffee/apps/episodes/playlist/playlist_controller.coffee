@@ -10,6 +10,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
           fetchingPlaylist = Swabcast.request("entities:playlist")
           playlistLayout = new View.Layout()
           $.when(fetchingPlaylist).done (tracks) ->
+            console.log(tracks)
             self = this
             emptyView = undefined
 
@@ -43,7 +44,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                   $.when(fetchNewTrack).done (newTrack) ->
 
                   # TODO - trigger success alert
-                    enqueuedTrack = _.clone(apiResponse)
                     enqueuedTrack = new Swabcast.Entities.QueuedEpisode(
                       uid: newTrack.get("uid") or null
                       albumArt: newTrack.get("albumArt") or newTrack.parent.get("albumArt")
@@ -63,7 +63,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                     tracks.nowPlaying = newTrack  unless tracks.nowPlaying
                 else
                   if apiResponse == "fail"
-                    alert("episode already in playlist")
+                    alert("already in playlist")
                     console.log ("we done goofed, episode already in playlist, TODO: better notification for user")
                   else
                     throw Error("Error being returned from the playlist entity API, can not continue")
@@ -85,6 +85,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
           mainPlaylistLayout = new View.ManagePlaylistLayout()
 
           mainPlaylistLayout.on "show", ->
+            console.log(localStorage)
             fetchingPlaylist = Swabcast.request("entities:playlist")
 
             $.when(fetchingPlaylist).done (episodes) ->
@@ -122,12 +123,19 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                 # set the view to window height, this feels a little hack
               winheight = $(window).height() - 75
 
+              playlistEpisodes.on "show", ->
+                episodes.fetch
+                episodes.sync
+                episodes.reset
+
+              # TODO - do this better
+
+              playlistEpisodes.on "close", ->
 
               mainPlaylistLayout.managePlaylistRegion.show playlistEpisodes
 
-              playlistEpisodes.on "show", ->
-                episodes.sync()
-              # TODO - do this better
+          mainPlaylistLayout.on "close", ->
+            delete fetchingPlaylist
 
           Swabcast.libraryRegion.show mainPlaylistLayout
 

@@ -3,8 +3,8 @@
 # the playlist is responsible for s
 define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
-    Entities.QueuedEpisode = Entities.Episode.extend(
-      url: "playlist"
+    Entities.QueuedEpisode = Backbone.Model.extend(
+      url: "queuedtracks"
       urlRoot: "playlist"
       order: 0,
       validate: (attrs) ->
