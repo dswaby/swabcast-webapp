@@ -98,7 +98,6 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
           queuedtracks.forEach (t) ->
             t.set order: t.indexOf(@model) + 1
             t.save()
-            console.log t
 
     Swabcast.reqres.setHandler "entities:playlist", ->
       API.getPlaylistEntities()
@@ -109,8 +108,6 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
     Swabcast.reqres.setHandler "episode:playlist", ->
       API.getPlaylistEntities()
 
-    # Swabcast.reqres.setHandler "playlist:first", ->
-    #   API.firstInPlaylist()
 
     Swabcast.reqres.setHandler "playlist:addtoqueue", (model) ->
       API.addToPlaylist model
