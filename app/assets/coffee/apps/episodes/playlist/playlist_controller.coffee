@@ -10,7 +10,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
           fetchingPlaylist = Swabcast.request("entities:playlist")
           playlistLayout = new View.Layout()
           $.when(fetchingPlaylist).done (tracks) ->
-            console.log(tracks)
             self = this
             emptyView = undefined
 
@@ -59,7 +58,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                     newTrack.save()
                     Swabcast.commands.execute "player:setepisode", newTrack.get("id")  if tracks.at(0) is newTrack
                     #update the playlist in mainview
-                    Playlist.trigger "playlist:newepisode", newTrack
+                    # Playlist.trigger "playlist:newepisode", newTrack
                     tracks.nowPlaying = newTrack  unless tracks.nowPlaying
                 else
                   if apiResponse == "fail"
@@ -85,7 +84,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
           mainPlaylistLayout = new View.ManagePlaylistLayout()
 
           mainPlaylistLayout.on "show", ->
-            console.log(localStorage)
             fetchingPlaylist = Swabcast.request("entities:playlist")
 
             $.when(fetchingPlaylist).done (episodes) ->
@@ -104,13 +102,11 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                 model.destroy()
 
               playlistEpisodes.listenTo Playlist, "playlist:newepisode", (model) ->
-                console.log("showManagePlaylist", model)
                 episodes.add newTrack
                 newTrack.save()
                 playlistEpisodes.render()
 
               playlistEpisodes.on "playlist:update", (childView, model) ->
-                console.log("playlist:update")
                 playlistEpisodes.children.findByModel(model).flash "success"
 
               Swabcast.sideBarRegion.close()
