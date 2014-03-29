@@ -29,6 +29,8 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
         "summary": ""
         "feedUrl": ""
         "authors": ""
+      validate: (attrs) ->
+        "must contain episodes attribute"  unless attrs.episodes
     )
     Entities.configureStorage Entities.Feed
     Entities.Feeds = Backbone.Collection.extend(
