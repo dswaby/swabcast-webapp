@@ -1,6 +1,4 @@
 # playlist.coffee
-# in addition to being responsible for managing the playlist
-# the playlist is responsible for s
 define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) ->
   Swabcast.module "Entities", (Entities, Swabcast, Backbone, Marionette, $, _) ->
     Entities.QueuedEpisode = Backbone.Model.extend(
@@ -38,15 +36,16 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
         defer.promise()
 
       getPlaylistEntities: ->
+        if queuedTracks
+          console.log(queuedtracks)
+          delete queuedTracks
         queuedTracks = new Entities.Playlist()
         defer = $.Deferred()
-        queuedTracks.fetch success: (data) ->
-          defer.resolve data
+        queuedTracks.fetch
+          success: (data) ->
+            defer.resolve data
 
-        promise = defer.promise()
-        # $.when(promise).done (queuedtracks) ->
-
-        promise
+        defer.promise()
 
       addToPlaylist: (model) ->
         queuedTracks = @getPlaylistEntities()
