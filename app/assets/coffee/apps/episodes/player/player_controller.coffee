@@ -4,216 +4,230 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
     Player.Controller = showControls: ->
       require ["entities/player"], ->
           self = this
-          playerData = new Swabcast.Entities.PlayerData()
-          # fetchPlayerData = Swabcast.request("player:savedata")
-          # $.when(fetchPlayerData).done (playerData) ->
-          self = this
-          @initializePlayer = ->
-            player = self.audioPlayer.getInstance()
-            playerData = self.defaultPlayerState()
-            player.createAudio() #create audio
-            self.updateAudio()
+          fetchPlayerData = Swabcast.request("player:savedata")
+          $.when(fetchPlayerData).done (playerData) ->
+            self = this
+            if !playerData or playerData.invalid()
+              playerData = new Swabcast.Entities.PlayerData()
 
-          @updateAudio = (source, options) ->
-            player = self.audioPlayer.getInstance()
-            opts = options or {}
-            if playerData
-              opts.currentPosition = playerData.get("currentPosition") or 0
+            #audioplayer singleton
+            AudioPlayer = (->
 
-            if source and source != ""
-              player.resetAudio source
-              player.setAudioSource source
-              player.setPosition = options.currentPosition
-              player.audio.load()
+              init = ->
+                if !@audio
+                  @audio = new Audio()
+                if !@state
+                  @state = "disabled"
 
-          @removeCurrentAudio = ->
-            player = self.audioPlayer.getInstance()
-            player.clearAudio()
+                # createAudio: ->
+                #   @audio = new Audio()
+                #   @state = "disabled"
 
-          @newPlayerData = (newModelData) ->
-            newPlayerData = new Swabcast.Entities.PlayerData(
-              albumArt: newModelData.get("albumArt")
-              mediaUrl: newModelData.get("mediaUrl")
-              title: newModelData.get("episodeTitle")
-              currentPosition: newModelData.get("currentPosition") or 0
-            )
-            newPlayerData.save()
-            newPlayerData
+                resetAudio: () ->
+                  if @audio
+                    @audio.remove()
+                  @audio = new Audio()
+                  @audio.src = ""
 
-          @playNow = (newModelData) ->
-            player = self.audioPlayer.getInstance()
-            self.newPlayerData newModelData
-            player.play()
+                play: ->
+                  @audio.play() if @state is "ready"
+                  @state = "playing"
 
-          @defaultPlayerState = ->
-            defaultData = new Swabcast.Entities.PlayerData(
-              id:0
-              albumArt: "default.jpg"
-              mediaUrl: ""
-              title: ""
-            )
-            defaultData.save()
-            defaultData
-
-          #audioplayer object
-          @audioPlayer = (->
-
-            init = ->
-              createAudio: ->
-                @audio = new Audio()
-                @state = "disabled"
-
-              resetAudio: () ->
-                @audio.remove()
-                @audio = new Audio()
-                @audio.src = ""
-
-              play: ->
-                @audio.play() if @state is "ready"
-                @state = "playing"
-
-              pause: ->
-                @audio.pause()
-                playerData.set("currentPosition", @audio.currentTime)
-                playerData.save()
-                @state = "ready"
-
-              getState: ->
-                return @state
-
-              setState: (newState) ->
-                return  unless newState
-                @state = newState
-
-              setAudioSource: (mediaUrl) ->
-                @audio.src = mediaUrl
-                return  if not mediaUrl or typeof mediaUrl isnt "string"
-                @state = "ready"
-
-              getAudioSource: ->
-                return @audio.src
-
-              clearAudio: ->
-                if @state == "playing"
+                pause: ->
                   @audio.pause()
                   playerData.set("currentPosition", @audio.currentTime)
-                delete @audio
-                @audio = new Audio()
-                # @audio.load()
-                @state = "disabled"
+                  playerData.save()
+                  @state = "ready"
 
-              # setAudioOptions: (options) ->
+                getState: ->
+                  return @state
 
-              setPosition: (time) ->
-                @audio.currentTime = time  if typeof episodePosition is "number"
+                setState: (newState) ->
+                  return  unless newState
+                  @state = newState
 
-              skipback: ->
-                if (@state is "ready" or @state is "playing") and @audio.currentTime > 10
-                  @audio.pause()
-                  @audio.currentTime = (@audio.currentTime - 10)
-                  @audio.play()
+                setAudioSource: (mediaUrl) ->
+                  @audio.src = mediaUrl
+                  return  if not mediaUrl or typeof mediaUrl isnt "string"
+                  @state = "ready"
 
-              skipahead: ->
-                self = this
-                if (self.state is "ready" or self.state is "playing") and self.audio.currentTime + 10 <= self.audio.duration
-                  self.audio.pause()
-                  self.audio.currentTime = (self.audio.currentTime + 10)
-                  self.audio.play()
+                getAudioSource: ->
+                  return @audio.src
 
-              currentMediaUrl: ->
-                @audio.src
+                clearAudio: ->
+                  if @state == "playing"
+                    @audio.pause()
+                    playerData.set("currentPosition", @audio.currentTime)
+                  delete @audio
+                  @audio = new Audio()
+                  # @audio.load()
+                  @state = "disabled"
 
-            instance = undefined
+                # setAudioOptions: (options) ->
 
-            getInstance: ->
-              instance = init()  unless instance
-              instance
-          )()
+                setPosition: (time) ->
+                  @audio.currentTime = time  if typeof episodePosition is "number"
 
-          @initializePlayer()
-          @playerControls = new View.Player(model: playerData)
-          @playerControls.on "episode:playpause", ->
-            switch self.audioPlayer.state
-              when "disabled", "ready"
-                self.audioPlayer.play()
-                $("#play-icon").addClass "Hidden"
-                $("#pause-icon").removeClass "Hidden"
-                self.audioPlayer.setState "playing"
-              when "playing"
-                self.audioPlayer.pause()
-                playerData.set currentPosition: self.audioPlayer.audio.currentTime
-                $("#play-icon").removeClass "Hidden"
-                $("#pause-icon").addClass "Hidden"
-                self.audioPlayer.setState "ready"
-              else
+                skipback: ->
+                  if (@state is "ready" or @state is "playing") and @audio.currentTime > 10
+                    @audio.pause()
+                    @audio.currentTime = (@audio.currentTime - 10)
+                    @audio.play()
 
-          @playerControls.listenTo Player, "playlist:removed", (deleted) ->
-            if deleted.has("mediaUrl") and deleted.get("mediaUrl") is self.audioPlayer.audio.src
-              self.audioPlayer.audio.pause()
-              self.audioPlayer.audio.src = null
-            self.updatePlayer()
+                skipahead: ->
+                  self = this
+                  if (self.state is "ready" or self.state is "playing") and self.audio.currentTime + 10 <= self.audio.duration
+                    self.audio.pause()
+                    self.audio.currentTime = (self.audio.currentTime + 10)
+                    self.audio.play()
 
-          @playerControls.on "episode:skipback", ->
-            self.audioPlayer.skipback()
+                currentMediaUrl: ->
+                  @audio.src
 
-          @playerControls.on "episode:skipahead", ->
-            self.audioPlayer.skipahead()
+              instance = undefined
 
-          # TODO - this should be seperated as an API
-          Swabcast.commands.setHandlers
-            "player:empty": ->
-              sourceUrl = ""
-              # player commands
-              self.playerControls.model.destroy()
-              self.playerControls.model = self.defaultPlayerState()
-              self.updateAudio sourceUrl
-              self.playerControls.render()
-              playerData.save()
+              getInstance: ->
+                instance = init()  unless instance
+                instance
+            )()
 
-            "player:playnow": (uuid) ->
-              require ["entities/feed"], ->
-                getEpisode = Swabcast.request("entity:episode", uuid)
-                player = self.audioPlayer.getInstance()
-                $.when(getEpisode).done (episodeModel) ->
-                  # audio options
-                  options = {}
-                  options.preload = true
+            @initializePlayer = ->
+              player = new AudioPlayer.getInstance()
+              playerData = self.defaultPlayerState()
+              # player.createAudio() #create audio
+              self.updateAudio()
 
-                  # player commands
-                  self.playerControls.model.destroy()
-                  self.playerControls.model = self.newPlayerData(episodeModel)
-                  # self.newPlayerData episodeModel
-                  self.updateAudio episodeModel.get("mediaUrl"), options
-                  self.playerControls.render()
+            @updateAudio = (source, options) ->
+              player = AudioPlayer.getInstance()
+              opts = options or {}
+              if playerData
+                opts.currentPosition = playerData.get("currentPosition") or 0
+
+              if source and source != ""
+                player.resetAudio source
+                player.setAudioSource source
+                player.setPosition = options.currentPosition
+                player.audio.load()
+
+            @removeCurrentAudio = ->
+              player = AudioPlayer.getInstance()
+              player.clearAudio()
+
+            @newPlayerData = (newModelData) ->
+              newPlayerData = new Swabcast.Entities.PlayerData(
+                albumArt: newModelData.get("albumArt")
+                mediaUrl: newModelData.get("mediaUrl")
+                title: newModelData.get("episodeTitle")
+                currentPosition: newModelData.get("currentPosition") or 0
+              )
+              newPlayerData.save()
+              newPlayerData
+
+            @playNow = (newModelData) ->
+              player = AudioPlayer.getInstance()
+              self.newPlayerData newModelData
+              player.play()
+
+            @defaultPlayerState = ->
+              defaultData = new Swabcast.Entities.PlayerData(
+                id:0
+                albumArt: "default.jpg"
+                mediaUrl: ""
+                title: ""
+              )
+              defaultData.save()
+              defaultData
+
+
+
+            @initializePlayer()
+            @playerControls = new View.Player(model: playerData)
+            @playerControls.on "episode:playpause", ->
+              player = AudioPlayer.getInstance()
+              switch player.state
+                when "disabled", "ready"
                   player.play()
-                  playerData.save()
+                  $("#play-icon").addClass "Hidden"
+                  $("#pause-icon").removeClass "Hidden"
+                  player.setState "playing"
+                when "playing"
+                  player.pause()
+                  playerData.set currentPosition: player.audio.currentTime
+                  $("#play-icon").removeClass "Hidden"
+                  $("#pause-icon").addClass "Hidden"
+                  player.setState "ready"
+                else
 
-            "player:setepisode": (episodeId) ->
-              # audio options
-              options = {}
-              options.preload = true
-              require ["entities/playlist"], ->
+            @playerControls.listenTo Player, "playlist:removed", (deleted) ->
+              if deleted.has("mediaUrl") and deleted.get("mediaUrl") is player.audio.src
+                player.audio.pause()
+                player.audio.src = null
+              self.updatePlayer()
 
-                fetchEpisode = Swabcast.request("playlist:episode", episodeId)
-                $.when(fetchEpisode).done (episodeModel) ->
-                  self.playerControls.model.destroy()
-                  self.playerControls.model = self.newPlayerData(episodeModel)
-                  self.updateAudio episodeModel.get("mediaUrl"), options
-                  self.playerControls.render()
-                  playerData.save()
+            @playerControls.on "episode:skipback", ->
+              player = AudioPlayer.getInstance()
+              player.skipback()
 
-            "playlist:updatenowplaying": (episodeModel) ->
-              # audio options
-              options = {}
-              options.preload = true
+            @playerControls.on "episode:skipahead", ->
+              player = AudioPlayer.getInstance()
+              player.skipahead()
 
-              # player commands
-              self.playerControls.model.destroy()
-              self.playerControls.model = self.newPlayerData(episodeModel)
-              self.updateAudio episodeModel.get("mediaUrl"), options
-              self.playerControls.render()
-              playerData.save()
+            # TODO - this should be seperated as an API
+            Swabcast.commands.setHandlers
+              "player:empty": ->
+                sourceUrl = ""
+                # player commands
+                self.playerControls.model.destroy()
+                self.playerControls.model = self.defaultPlayerState()
+                self.updateAudio sourceUrl
+                self.playerControls.render()
+                playerData.save()
 
-          Swabcast.playerRegion.show @playerControls
+              "player:playnow": (uuid) ->
+                require ["entities/feed"], ->
+                  getEpisode = Swabcast.request("entity:episode", uuid)
+                  player = AudioPlayer.getInstance()
+                  $.when(getEpisode).done (episodeModel) ->
+                    # audio options
+                    options = {}
+                    options.preload = true
+
+                    # player commands
+                    self.playerControls.model.destroy()
+                    self.playerControls.model = self.newPlayerData(episodeModel)
+                    # self.newPlayerData episodeModel
+                    self.updateAudio episodeModel.get("mediaUrl"), options
+                    self.playerControls.render()
+                    player.play()
+                    playerData.save()
+
+              "player:setepisode": (episodeId) ->
+                # audio options
+                options = {}
+                options.preload = true
+                require ["entities/playlist"], ->
+                  player = AudioPlayer.getInstance()
+                  fetchEpisode = Swabcast.request("playlist:episode", episodeId)
+                  $.when(fetchEpisode).done (episodeModel) ->
+                    console.log(episodeModel)
+                    self.playerControls.model.destroy()
+                    self.playerControls.model = self.newPlayerData(episodeModel)
+                    self.updateAudio episodeModel.get("mediaUrl"), options
+                    self.playerControls.render()
+                    playerData.save()
+
+              "playlist:updatenowplaying": (episodeModel) ->
+                # audio options
+                options = {}
+                options.preload = true
+
+                # player commands
+                self.playerControls.model.destroy()
+                self.playerControls.model = self.newPlayerData(episodeModel)
+                self.updateAudio episodeModel.get("mediaUrl"), options
+                self.playerControls.render()
+                playerData.save()
+
+            Swabcast.playerRegion.show @playerControls
 
   Swabcast.EpisodesApp.Player.Controller
