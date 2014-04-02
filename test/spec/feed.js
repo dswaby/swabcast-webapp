@@ -4,12 +4,11 @@
     expect = chai.expect;
     describe("Feed Model", function() {
       describe("Creation", function() {
+        var feed;
+        feed = new Swabcast.Entities.Feed();
         return it("expect \"/feed\" to have default values", function() {
-          var feed;
-          feed = new Swabcast.Entities.Feed();
           expect(feed).to.be.ok;
           expect(feed.urlRoot).to.equal("feeds");
-          expect(feed.get("albumArt")).to.equal("default.jpg");
         });
       });
       describe("Validation", function() {

@@ -22,13 +22,15 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     Entities.Feed = Backbone.Model.extend(
       urlRoot: "feeds"
       defaults:
-        "id": ""
-        "subscriptionTitle": ""
+        "subscriptionTitle": " "
         "summary": ""
         "feedUrl": ""
         "authors": ""
       validate: (attrs) ->
-        "must contain episodes attribute"  unless attrs.episodes
+        "Subscription must have valid title" if !attrs.subscriptionTitle
+        "Subscription must have valid title" if attrs.subscriptionTitle == " "
+        "must contain episodes attribute" if !attrs.episodes
+        # "must contain title" if !attrs.subscriptionTitle
     )
     Entities.configureStorage Entities.Feed
     Entities.Feeds = Backbone.Collection.extend(
