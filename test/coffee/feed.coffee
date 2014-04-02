@@ -19,17 +19,12 @@ define ["app",
         feed = new Swabcast.Entities.Feed(
           "subscriptionTitle": ""
           "episodes": []
-          "albumArt": "test.jpg"
-          "summary": "This is a test feed"
-          "feedUrl": "http://test.com/test.xml"
-          "authors": "Danny Swaby"
         )
         feed.on "invalid", (model, error) ->
-          console.log(error)
           throw Error(error[0].message)
           return
         fn = ->
-          feed.save subscriptionTitle: ""
+          feed.save()
           return
 
         expect(fn).to.throw("Feed Entity must have valid title")
