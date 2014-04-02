@@ -75,13 +75,6 @@ module.exports = function(grunt) {
                 options: {
                     script: 'server/app.js'
                 }
-            },
-            test: {
-                options: {
-                    port: '1234',
-                    script: 'server/test.js'
-
-                }
             }
         },
         // generate html based on target
@@ -100,7 +93,7 @@ module.exports = function(grunt) {
 
         // connect server
         connect: {
-            testserver: {
+            test: {
                 options: {
                     port: 1234,
                     base: './'
@@ -260,8 +253,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'dev',
-        'express:test',
         'express:dev',
+        'connect:test',
         'shell:mocha-phantomjs',
         'open:dev',
         'open:testrunner',
@@ -281,7 +274,7 @@ module.exports = function(grunt) {
     grunt.task.registerTask('test', 'for writing tests, only watches test folder and runs on change', function() {
         grunt.task.run([
             'coffee:testcoffee',
-            'connect:testserver',
+            'connect:test',
             'shell:mocha-phantomjs',
             'watch:tests'
         ]);
