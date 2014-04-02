@@ -147,7 +147,7 @@ td {
 }
 
 .modal-text-content {
-  height: 40%;
+  height: 50%;
   overflow: auto;
 }
 
@@ -243,6 +243,10 @@ td {
   max-width:30px;
 }
 
+#dialog-region {
+  overflow: hidden;
+}
+
 .dialog-absolute-bottom {
   position: absolute;
   bottom:0;
@@ -259,7 +263,9 @@ td {
 
 .panel {
   overflow: auto;
-  width: 100%;
+  margin-left: 5px;
+  padding:2px;
+  width: 98%;
 }
 
 .right-small {
