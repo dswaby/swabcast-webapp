@@ -147,10 +147,19 @@ td {
 }
 
 .modal-text-content {
-  height: 230px;
-  padding-bottom:100px;
+  height: 300px;
+  padding-bottom:75px;
   overflow: auto;
 }
+
+.modal-play-now button{
+  margin: 0 !important;
+}
+
+.modal-play-now {
+  margin: 0 0 0 0 !important;
+}
+
 
 /***************************************************************************************************
     styles for feed detailed view  **********************************************
