@@ -13,19 +13,6 @@ define ["app",
         expect(feed.get("albumArt")).to.equal "default.jpg"
         return
 
-    describe "Attributes", ->
-      it "expect can set model Attributes", ->
-
-        feed = new Swabcast.Entities.Feed()
-        expect(feed).to.be.ok
-        expect(feed.urlRoot).to.equal("feeds")
-        return
-
-      it "expect \"albumArt\" property to have a default image of \"default.jpg\" ", ->
-        feeds = new Swabcast.Entities.Feed()
-        expect(feeds).to.be.ok
-        expect(feeds.get("albumArt")).to.equal "default.jpg"
-        return
 
     describe "Validation", ->
       it "expect \'Invalid\' if the feed does not contain episodes", ->

@@ -5,6 +5,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
       # default view will show in the sideBarRegion
       # optional mainView will replace the main library region
       # and use the extendedView
+
       showPlaylist: ->
         require ["entities/playlist"], ->
           fetchingPlaylist = Swabcast.request("entities:playlist")
@@ -131,7 +132,6 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               mainPlaylistLayout.managePlaylistRegion.show playlistEpisodes
 
           mainPlaylistLayout.on "close", ->
-            delete fetchingPlaylist
 
           Swabcast.libraryRegion.show mainPlaylistLayout
 

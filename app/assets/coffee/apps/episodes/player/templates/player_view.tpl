@@ -4,6 +4,9 @@
 		<% if (typeof(albumArt) != "undefined") { %>
 			 <img class="player-art" src=../serverdata/albumart/<%= albumArt %> alt="">
 		<% } %>
+        <% if (typeof(albumArt) === "undefined") { %>
+            <img class="player-art" src="../img/podcast-default.png" alt="">
+        <% } %>
         <div class="player-preview">
     <% if (typeof(title) != "undefined") { %>
         <p><%= title %></p>

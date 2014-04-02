@@ -3,7 +3,6 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
     Entities.Episode = Backbone.Model.extend(
       urlRoot: "episode"
       defaults:
-        "albumArt": "podcast-default.png"
         "episodeTitle": ""
         "mediaUrl": ""
         "enqueue": false
@@ -25,7 +24,6 @@ define ["app", "apps/config/storage/localstorage"], (Swabcast) ->
       defaults:
         "id": ""
         "subscriptionTitle": ""
-        "albumArt": "default.jpg"
         "summary": ""
         "feedUrl": ""
         "authors": ""

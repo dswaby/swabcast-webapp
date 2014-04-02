@@ -5,15 +5,10 @@
     should = chai.Should();
     describe("Player", function() {
       describe("Model", function() {
-        it("test1", function() {
+        return it("test1", function() {
           var playerData;
           playerData = new Swabcast.Entities.Episode();
-        });
-        it("test2", function() {});
-        it("test3", function() {});
-        return it("test4", function() {
-          var feeds;
-          feeds = new Swabcast.Entities.Episode();
+          expect(playerData).to.be.ok;
         });
       });
       describe("View", function() {
@@ -43,7 +38,7 @@
           var playerData, playerView;
           playerData = new Swabcast.Entities.Episode({
             uid: "episode1-333",
-            albumArt: " ",
+            albumArt: "default.jpg",
             episodeTitle: "Episode1",
             feedUrl: "http://episode1.test",
             episodeParent: "Swabcast Playlist",
@@ -54,6 +49,7 @@
           playerView = new View.Player({
             model: playerData
           });
+          playerView.render();
         });
         return it("test4", function() {
           var feeds;

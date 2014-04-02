@@ -21,16 +21,9 @@ define ["app",
     describe "Model", ->
       it "test1", ->
         playerData = new Swabcast.Entities.Episode()
+        expect(playerData).to.be.ok
         return
-      #test views
-      it "test2", ->
-        return
-      it "test3", ->
-        return
-      it "test4", ->
-        feeds = new Swabcast.Entities.Episode()
-        # expect(feeds.get("albumArt")).to.equal "default.jpg"
-        return
+
     describe "View", ->
       it "expect playerView to be a div", ->
         playerView = new View.Player
@@ -54,7 +47,7 @@ define ["app",
       it "player views should take a an episode model", ->
         playerData = new Swabcast.Entities.Episode(
           uid: "episode1-333"
-          albumArt: " "
+          albumArt: "default.jpg"
           episodeTitle: "Episode1"
           feedUrl: "http://episode1.test"
           episodeParent: "Swabcast Playlist"
@@ -63,6 +56,7 @@ define ["app",
           order: 1
         )
         playerView = new View.Player(model: playerData)
+        playerView.render()
         return
       it "test4", ->
         feeds = new Swabcast.Entities.Episode()
