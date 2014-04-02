@@ -186,13 +186,15 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
               "player:playnow": (uuid) ->
                 require ["entities/feed"], ->
                   getEpisode = Swabcast.request("entity:episode", uuid)
-                  player = AudioPlayer.getInstance()
                   $.when(getEpisode).done (episodeModel) ->
+                    player = AudioPlayer.getInstance()
+                    player.clearAudio()
                     # audio options
                     options = {}
                     options.preload = true
 
                     # player commands
+
                     self.playerControls.model.destroy()
                     self.playerControls.model = self.newPlayerData(episodeModel)
                     # self.newPlayerData episodeModel
@@ -209,8 +211,9 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                   player = AudioPlayer.getInstance()
                   fetchEpisode = Swabcast.request("playlist:episode", episodeId)
                   $.when(fetchEpisode).done (episodeModel) ->
-                    console.log(episodeModel)
-                    self.playerControls.model.destroy()
+                    # console.log(episodeModel)
+                    if self.playerControls.model is not "undefined"
+                      self.playerControls.model.destroy()
                     self.playerControls.model = self.newPlayerData(episodeModel)
                     self.updateAudio episodeModel.get("mediaUrl"), options
                     self.playerControls.render()
