@@ -12,6 +12,27 @@
         });
       });
       describe("Validation", function() {
+        it("expect \'Invalid\' if the feed does not contain title", function() {
+          var feed, fn;
+          feed = new Swabcast.Entities.Feed({
+            "subscriptionTitle": "",
+            "episodes": [],
+            "albumArt": "test.jpg",
+            "summary": "This is a test feed",
+            "feedUrl": "http://test.com/test.xml",
+            "authors": "Danny Swaby"
+          });
+          feed.on("invalid", function(model, error) {
+            console.log(error);
+            throw Error(error[0].message);
+          });
+          fn = function() {
+            feed.save({
+              subscriptionTitle: ""
+            });
+          };
+          return expect(fn).to["throw"]("Feed Entity must have valid title");
+        });
         it("expect \'Invalid\' if the feed does not contain episodes", function() {
           var feed, fn;
           feed = new Swabcast.Entities.Feed({
@@ -22,7 +43,7 @@
             "authors": "Danny Swaby"
           });
           feed.on("invalid", function(model, error) {
-            throw Error(model.get("subscriptionTitle") + " " + error);
+            throw Error(model.get("subscriptionTitle") + " " + error[0].message);
           });
           fn = function() {
             feed.save({

@@ -15,25 +15,24 @@ define ["app",
 
     describe "Validation", ->
 
-      # it "expect \'Invalid\' if the feed does not contain title", ->
-      #   feed = new Swabcast.Entities.Feed(
-      #     "subscriptionTitle": ""
-      #     "episodes": []
-      #     "albumArt": "test.jpg"
-      #     "summary": "This is a test feed"
-      #     "feedUrl": "http://test.com/test.xml"
-      #     "authors": "Danny Swaby"
-      #   )
-      #   feed.on "invalid", (error) ->
-      #     console.log(error)
-      #     throw Error(error)
-      #     return
-      #   fn = ->
-      #     feed.save subscriptionTitle: ""
-      #     return
+      it "expect \'Invalid\' if the feed does not contain title", ->
+        feed = new Swabcast.Entities.Feed(
+          "subscriptionTitle": ""
+          "episodes": []
+          "albumArt": "test.jpg"
+          "summary": "This is a test feed"
+          "feedUrl": "http://test.com/test.xml"
+          "authors": "Danny Swaby"
+        )
+        feed.on "invalid", (model, error) ->
+          console.log(error)
+          throw Error(error[0].message)
+          return
+        fn = ->
+          feed.save subscriptionTitle: ""
+          return
 
-      #   expect(fn).to.throw("Subscription must have valid title")
-      # return
+        expect(fn).to.throw("Feed Entity must have valid title")
 
       it "expect \'Invalid\' if the feed does not contain episodes", ->
         feed = new Swabcast.Entities.Feed(
@@ -44,7 +43,7 @@ define ["app",
           "authors": "Danny Swaby"
         )
         feed.on "invalid", (model, error) ->
-          throw Error(model.get("subscriptionTitle") + " " + error)
+          throw Error(model.get("subscriptionTitle") + " " + error[0].message)
           return
         fn = ->
           feed.save episodes: ""
