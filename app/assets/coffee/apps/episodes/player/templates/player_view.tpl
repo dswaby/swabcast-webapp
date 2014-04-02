@@ -2,10 +2,10 @@
 <div id="player-fill-left">
 	<div id="album-preview">
 		<% if (typeof(albumArt) != "undefined") { %>
-			 <img class="player-art" src=../serverdata/albumart/<%= albumArt %> alt="">
+			 <img id="player-art" class="player-art" src=../serverdata/albumart/<%= albumArt %> alt="">
 		<% } %>
         <% if (typeof(albumArt) === "undefined") { %>
-            <img class="player-art" src="../img/podcast-default.png" alt="">
+            <img id="player-art" class="player-art" src="../img/podcast-default.png" alt="">
         <% } %>
         <div class="player-preview">
     <% if (typeof(title) != "undefined") { %>

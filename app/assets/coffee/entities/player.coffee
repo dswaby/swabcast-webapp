@@ -5,10 +5,16 @@ define ["app", "apps/config/storage/localstorage", "entities/playlist"], (Swabca
     initializePlayerDataSyncData = undefined
     Entities.PlayerData = Backbone.Model.extend(
       url: "player"
+      currentPosition: 0
       validate: (attrs) ->
-        "must have media url"  unless attrs.mediaUrl
-        "must have image url"  unless attrs.albumArt
-        "must have valid uid"  unless attrs.uid
+        errors = []
+        if !attrs.mediaUrl
+          errors.push
+            message: "Player data must have media url"
+        if !attrs.uid
+          errors.push
+            message:"Player data must have valid uid"
+        errors if errors.length
     )
     Entities.configureStorage Entities.PlayerData
 

@@ -9,23 +9,26 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
           # $.when(fetchPlayerData).done (playerData) ->
           self = this
           @initializePlayer = ->
+            player = self.audioPlayer.getInstance()
             playerData = self.defaultPlayerState()
-            self.audioPlayer.createAudio() #create audio
+            player.createAudio() #create audio
             self.updateAudio()
 
           @updateAudio = (source, options) ->
+            player = self.audioPlayer.getInstance()
             opts = options or {}
             if playerData
               opts.currentPosition = playerData.get("currentPosition") or 0
 
             if source and source != ""
-              self.audioPlayer.resetAudio source
-              self.audioPlayer.setAudioSource source
-              self.audioPlayer.setPosition = options.currentPosition
-              self.audioPlayer.audio.load()
+              player.resetAudio source
+              player.setAudioSource source
+              player.setPosition = options.currentPosition
+              player.audio.load()
 
           @removeCurrentAudio = ->
-            self.audioPlayer.clearAudio()
+            player = self.audioPlayer.getInstance()
+            player.clearAudio()
 
           @newPlayerData = (newModelData) ->
             newPlayerData = new Swabcast.Entities.PlayerData(
@@ -38,8 +41,9 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
             newPlayerData
 
           @playNow = (newModelData) ->
+            player = self.audioPlayer.getInstance()
             self.newPlayerData newModelData
-            self.audioPlayer.play()
+            player.play()
 
           @defaultPlayerState = ->
             defaultData = new Swabcast.Entities.PlayerData(
@@ -47,66 +51,84 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
               albumArt: "default.jpg"
               mediaUrl: ""
               title: ""
-              currentPosition: 0
             )
             defaultData.save()
             defaultData
 
           #audioplayer object
-          @audioPlayer =
-            createAudio: ->
-              @audio = new Audio()
-              @state = "disabled"
+          @audioPlayer = (->
 
-            resetAudio: () ->
-              @audio.remove()
-              @audio = new Audio()
-              @audio.src = ""
+            init = ->
+              createAudio: ->
+                @audio = new Audio()
+                @state = "disabled"
 
-            play: ->
-              @audio.play() if @state is "ready"
-              @state = "playing"
+              resetAudio: () ->
+                @audio.remove()
+                @audio = new Audio()
+                @audio.src = ""
 
-            pause: ->
-              @audio.pause()
-              playerData.set("currentPosition", @audio.currentTime)
-              playerData.save()
-              @state = "ready"
+              play: ->
+                @audio.play() if @state is "ready"
+                @state = "playing"
 
-            setState: (newState) ->
-              return  unless newState
-              @state = newState
-
-            setAudioSource: (mediaUrl) ->
-              @audio.src = mediaUrl
-              return  if not mediaUrl or typeof mediaUrl isnt "string"
-              @state = "ready"
-
-            clearAudio: ->
-              @audio.src = ""
-              @audio.load()
-              @state = "disabled"
-
-            # setAudioOptions: (options) ->
-
-            setPosition: (time) ->
-              @audio.currentTime = time  if typeof episodePosition is "number"
-
-            skipback: ->
-              if (@state is "ready" or @state is "playing") and @audio.currentTime > 10
+              pause: ->
                 @audio.pause()
-                @audio.currentTime = (@audio.currentTime - 10)
-                @audio.play()
+                playerData.set("currentPosition", @audio.currentTime)
+                playerData.save()
+                @state = "ready"
 
-            skipahead: ->
-              self = this
-              if (self.state is "ready" or self.state is "playing") and self.audio.currentTime + 10 <= self.audio.duration
-                self.audio.pause()
-                self.audio.currentTime = (self.audio.currentTime + 10)
-                self.audio.play()
+              getState: ->
+                return @state
 
-            currentMediaUrl: ->
-              @audio.src
+              setState: (newState) ->
+                return  unless newState
+                @state = newState
+
+              setAudioSource: (mediaUrl) ->
+                @audio.src = mediaUrl
+                return  if not mediaUrl or typeof mediaUrl isnt "string"
+                @state = "ready"
+
+              getAudioSource: ->
+                return @audio.src
+
+              clearAudio: ->
+                if @state == "playing"
+                  @audio.pause()
+                  playerData.set("currentPosition", @audio.currentTime)
+                delete @audio
+                @audio = new Audio()
+                # @audio.load()
+                @state = "disabled"
+
+              # setAudioOptions: (options) ->
+
+              setPosition: (time) ->
+                @audio.currentTime = time  if typeof episodePosition is "number"
+
+              skipback: ->
+                if (@state is "ready" or @state is "playing") and @audio.currentTime > 10
+                  @audio.pause()
+                  @audio.currentTime = (@audio.currentTime - 10)
+                  @audio.play()
+
+              skipahead: ->
+                self = this
+                if (self.state is "ready" or self.state is "playing") and self.audio.currentTime + 10 <= self.audio.duration
+                  self.audio.pause()
+                  self.audio.currentTime = (self.audio.currentTime + 10)
+                  self.audio.play()
+
+              currentMediaUrl: ->
+                @audio.src
+
+            instance = undefined
+
+            getInstance: ->
+              instance = init()  unless instance
+              instance
+          )()
 
           @initializePlayer()
           @playerControls = new View.Player(model: playerData)
@@ -151,6 +173,7 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
             "player:playnow": (uuid) ->
               require ["entities/feed"], ->
                 getEpisode = Swabcast.request("entity:episode", uuid)
+                player = self.audioPlayer.getInstance()
                 $.when(getEpisode).done (episodeModel) ->
                   # audio options
                   options = {}
@@ -162,7 +185,7 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                   # self.newPlayerData episodeModel
                   self.updateAudio episodeModel.get("mediaUrl"), options
                   self.playerControls.render()
-                  self.audioPlayer.play()
+                  player.play()
                   playerData.save()
 
             "player:setepisode": (episodeId) ->
@@ -170,8 +193,10 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
               options = {}
               options.preload = true
               require ["entities/playlist"], ->
+
                 fetchEpisode = Swabcast.request("playlist:episode", episodeId)
                 $.when(fetchEpisode).done (episodeModel) ->
+                  self.playerControls.model.destroy()
                   self.playerControls.model = self.newPlayerData(episodeModel)
                   self.updateAudio episodeModel.get("mediaUrl"), options
                   self.playerControls.render()

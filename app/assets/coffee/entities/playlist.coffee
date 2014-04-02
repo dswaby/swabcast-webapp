@@ -64,7 +64,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
           unless inQueue
             newTrack = new Swabcast.Entities.QueuedEpisode(
               uid: model.get("uid") or null
-              albumArt: model.parent.get("albumArt") or "default.jpg"
+              albumArt: model.parent.get("albumArt") or null
               episodeTitle: model.get("episodeTitle") or " "
               feedUrl: model.parent.get("feedUrl") or " "
               episodeParent: model.parent.get("subscriptionTitle") or " "
