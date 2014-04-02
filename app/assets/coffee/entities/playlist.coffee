@@ -21,13 +21,11 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
     #public
     API =
       getEpisodeEntity: (uniqueId) ->
-        console.log(uniqueId)
         episode = new Entities.QueuedEpisode(id: uniqueId)
         defer = $.Deferred()
         setTimeout (->
           episode.fetch
             success: (data) ->
-              console.log("success getting episodeEntity",data)
               defer.resolve data
 
             error: ->
@@ -106,7 +104,6 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
 
     Swabcast.reqres.setHandler "episode:playlist", ->
       API.getPlaylistEntities()
-
 
     Swabcast.reqres.setHandler "playlist:addtoqueue", (model) ->
       API.addToPlaylist model

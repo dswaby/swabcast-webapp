@@ -1,8 +1,7 @@
 define ["marionette", "apps/config/marionette/regions/dialog"], (Marionette) ->
 
   Swabcast = new Marionette.Application()
-  console.log(Swabcast)
-  Swabcast.debugging = true
+  # Swabcast.debugging = true
   Swabcast.addRegions
     sideBarRegion: "#sidebar-region"
     libraryRegion: "#library-region"
