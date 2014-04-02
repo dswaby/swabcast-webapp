@@ -84,6 +84,11 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                 currentMediaUrl: ->
                   @audio.src
 
+                startSetTimeoutSaveLoop: ->
+                  console.log("starting save current position")
+                stopSetTimeoutSavePosition: ->
+                  console.log("starting save loop")
+
               instance = undefined
 
               getInstance: ->
@@ -178,7 +183,8 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                 sourceUrl = ""
                 # player commands
                 self.playerControls.model.destroy()
-                self.playerControls.model = self.defaultPlayerState()
+                self.playerControls.model = new Swabcast.Entities.PlayerData(id:0)
+
                 self.updateAudio sourceUrl
                 self.playerControls.render()
                 playerData.save()
@@ -189,11 +195,9 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                   $.when(getEpisode).done (episodeModel) ->
                     player = AudioPlayer.getInstance()
                     player.clearAudio()
-                    # audio options
                     options = {}
                     options.preload = true
 
-                    # player commands
 
                     self.playerControls.model.destroy()
                     self.playerControls.model = self.newPlayerData(episodeModel)
@@ -204,7 +208,6 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                     playerData.save()
 
               "player:setepisode": (episodeId) ->
-                # audio options
                 options = {}
                 options.preload = true
                 require ["entities/playlist"], ->
@@ -223,8 +226,10 @@ define ["app", "apps/episodes/player/player_view", ], (Swabcast, View) ->
                 # audio options
                 options = {}
                 options.preload = true
-
-                # player commands
+                player = AudioPlayer.getInstance()
+                player.clearAudio()
+                if self.playerControls.model is not "undefined"
+                      self.playerControls.model.destroy()
                 self.playerControls.model.destroy()
                 self.playerControls.model = self.newPlayerData(episodeModel)
                 self.updateAudio episodeModel.get("mediaUrl"), options
