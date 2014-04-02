@@ -68,7 +68,7 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     port: '1337',
-                    script: 'server/test.js'
+                    script: 'server/dev.js'
                 }
             },
             dist: {
@@ -78,6 +78,7 @@ module.exports = function(grunt) {
             },
             test: {
                 options: {
+                    port: '1234',
                     script: 'server/test.js'
 
                 }
@@ -259,7 +260,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'dev',
-        'connect:testserver',
+        'express:test',
         'express:dev',
         'shell:mocha-phantomjs',
         'open:dev',
