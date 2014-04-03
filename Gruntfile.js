@@ -169,6 +169,14 @@ module.exports = function(grunt) {
                     src: ['<%= swabstack.app %>/assets/js/require_main_built.js'],
                     dest: '<%= swabstack.dist %>/js/require_main_built.js'
                 }]
+            },
+            dummyData: {
+                //hoping to remove this soon but if i have to copy and paste twice its easier to add a grunt task
+                files: [{
+                    cwd: './',
+                    src: ['<%= swabstack.app %>/assets/serverdata/*'],
+                    dest: '<%= swabstack.dist %>/serverdata/'
+                }]
             }
         },
         cssmin: {
@@ -294,6 +302,7 @@ module.exports = function(grunt) {
             'copy:assets',
             'shell:buildRequire',
             'copy:requireBuilt',
+            'copy:dummyData',
             'cssmin',
             'express:dist',
             'open:build',
