@@ -6,7 +6,7 @@ define ["app",
 "tpl!apps/episodes/playlist/templates/manage_playlist_layout.tpl",
 "tpl!apps/episodes/playlist/templates/playlist.tpl",
 "tpl!apps/episodes/playlist/templates/playlist_empty.tpl",
-"tpl!apps/episodes/playlist/templates/episode_detail.tpl"
+"tpl!apps/episodes/playlist/templates/playlist_episode_detail_view.tpl"
 ],
 (Swabcast, playlistItemTpl, playlistItemExtTpl, playlistLayoutTpl, managePlaylistTpl, playlistTpl, emptyPlaylistTpl, episodeDetailTpl) ->
   Swabcast.module "EpisodesApp.Playlist.View", (View, Swabcast, Backbone, Marionette, $, _) ->
@@ -31,6 +31,7 @@ define ["app",
       events:
         "click a": "stopPropagating"
         "click a.js-remove-track": "destroyTrackView"
+        "click td.js-episode-detail": "showEpisodeDialog"
 
       destroyTrackView: (e) ->
         e.preventDefault()
@@ -42,6 +43,15 @@ define ["app",
           setTimeout (->
             $view.toggleClass cssClass
           ), 300
+
+      fadeOut: ->
+        @$el.fadeIn "slow", ->
+          $(this).fadeOut "slow"
+
+      showEpisodeDialog: (e)->
+        e.preventDefault()
+        e.stopPropagation()
+        @trigger "playlist:episode:detail", @model
     )
 
     View.Tracks = Marionette.CompositeView.extend(
@@ -59,11 +69,19 @@ define ["app",
           collectionView.$el.append itemView.el
 
       onPlaylistEnqueue: (model) ->
-        console.log(model)
+        # console.log(model)
 
       onItemviewEpisodeDelete: ->
-        @$el.fadeOut "slow", ->
-          $(this).fadeIn "slow"
+        @$el.fadeIn "slow", ->
+          $(this).fadeOut "slow"
+
+      onItemviewEpisodeRemove: ->
+        @$el.fadeIn "slow", ->
+          $(this).fadeOut "slow"
+
+      fadeOut: ->
+        @$el.fadeIn "slow", ->
+          $(this).fadeOut "slow"
 
       flash: (cssClass) ->
         $view = @$el
@@ -71,6 +89,8 @@ define ["app",
           setTimeout (->
             $view.toggleClass cssClass
           ), 300
+
+
     )
 
     View.TrackExtended = Marionette.ItemView.extend(
@@ -125,15 +145,16 @@ define ["app",
       tagName: "div"
       template: episodeDetailTpl
       events:
-        "click .ui-dialog-titlebar": "closeDialog"
         "click a.dismiss": "closeDialog"
         "click td.js-show-archive": "archiveEpisode"
         "click td.js-show-favorite": "favoriteEpisode"
+        "click td.js-remove-from-queue": "removeFromQueue"
         "click button.js-play-now": "playNow"
         "click .ui-widget-overlay": "closeDialog"
 
       initialize: ->
-        @title = @model.get("subscriptionTitle")
+        console.log("EpisodeDetail View", @model)
+        @title = @model.get("episodeTitle")
 
       # editClicked: (e) ->
       #   e.preventDefault()
@@ -161,6 +182,17 @@ define ["app",
         uuid = @model.parent.get("id") + "-!" + @model.get("uid")
         @trigger "player:playnow", uuid
         @trigger "dialog:close"
+
+      removeFromQueue: (e)->
+        e.preventDefault()
+        e.stopPropagation()
+        @trigger "dialog:close"
+        @trigger "episode:remove", @model
+
+      onItemviewEpisodeDelete: ->
+        @trigger "dialog:close"
+        @$el.fadeOut "slow", ->
+          $(this).fadeIn "slow"
 
     )
 

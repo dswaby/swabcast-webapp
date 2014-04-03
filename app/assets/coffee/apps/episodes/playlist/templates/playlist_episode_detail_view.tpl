@@ -1,4 +1,4 @@
-<!-- show template episode_detailed_view -->
+<!-- playlist template playlist_episode_detail_view -->
 <div class="panel">
     <div style="width:100%">
 
@@ -6,20 +6,20 @@
           <!-- Add To Playlist -->
         <table width="100%;" class="modal-row">
             <tr>
-                <td class="modal-row js-show-enqueue">
-                    <a href="#" class=""><i class="fi-plus modal-big-icons"></i></a>
+                <td class="modal-row js-remove-from-queue">
+                    <a href="#" class=""><i class="fi-x-circle modal-big-icons" style="margin-left:45px;"></i></a>
                     <br />
-                    <a href="#" style="margin-left:10px;">Queue</a>
+                    <a href="#">Remove from playlist</a>
                 </td>
                 <td class="modal-row js-show-archive">
                     <a href="#"><i class="fi-archive modal-big-icons"></i> </a>
                     <br />
-                    <a href="#" style="margin-left:5px;">Archive</a>
+                    <a href="#" style="margin-left:15px;">Archive</a>
                 </td>
                   <td class="modal-row js-show-favorite">
                     <a href="#"><i class="fi-star modal-big-icons"></i></a>
                     <br />
-                    <a href="#" style="margin-left:20px;">Fav</a>
+                    <a href="#" style="margin-left:30px;">Fav</a>
                 </td>
 
             </tr>
@@ -46,8 +46,7 @@
 
 </div>
 <div class="dialog-absolute-bottom" style="width: 100%;">
-    <button class="button modal-play-now js-play-now" style="width:100%;">
+    <button class="button js-play-now" style="width:100%;">
         <i class="icon-play"></i>Play Now
     </button>
 </div>
-

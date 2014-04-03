@@ -36,8 +36,8 @@ define ["marionette", "jquery-ui"], (Marionette) ->
     winHeight: ->
       height
       height = $(window).height()
-      if (height <= 600)
-        return (height * 0.85).toFixed()
+      if (screen.availHeight <= 600)
+        return (screen.availHeight * 0.85).toFixed()
       else
         return (height * 0.60).toFixed()
         #

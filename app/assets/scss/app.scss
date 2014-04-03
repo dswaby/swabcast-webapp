@@ -148,7 +148,7 @@ td {
 
 .modal-text-content {
   height: 300px;
-  padding-bottom:75px;
+  padding-bottom:55px;
   overflow: auto;
 }
 
@@ -158,6 +158,10 @@ td {
 
 .modal-play-now {
   margin: 0 0 0 0 !important;
+}
+
+.modal-big-icons {
+  font-size: -webkit-xxx-large;
 }
 
 
@@ -263,7 +267,7 @@ td {
 }
 
 .dialog-absolute-bottom button{
-  padding-top: 45px;
+  padding-top: 35px;
 }
 
 #page-main {

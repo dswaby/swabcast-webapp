@@ -1,5 +1,5 @@
 # TODO - do something interesting with nowPlaylingRegion
-define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/player_controller"], (Swabcast, View) ->
+define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/player_controller", "apps/config/marionette/regions/dialog"], (Swabcast, View) ->
   Swabcast.module "EpisodesApp.Playlist", (Playlist, Swabcast, Backbone, Marionette, $, _) ->
     Playlist.Controller =
       # default view will show in the sideBarRegion
@@ -21,6 +21,57 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
               Swabcast.commands.execute "player:setepisode", @nowPlaying.get("id")
 
             playlistTracks = new View.Tracks(collection: tracks)
+
+
+
+            playlistTracks.on "itemview:playlist:episode:detail", (playlistEpModel) ->
+              # container = new Backbone.ChildViewContainer()
+              # container.add(playlistTracks.findByCid(playlistEpModel.model.get("cid")))
+              # console.log("itemview:playlist:episode:detail", playlistEpModel.model.get("episodeTitle"))
+              modelClone = new Swabcast.Entities.QueuedEpisode(
+                id: playlistEpModel.model.get("id")
+                episodeTitle: playlistEpModel.model.get("episodeTitle")
+                albumArt: playlistEpModel.model.get("albumArt")
+                episodeParent: playlistEpModel.model.get("episodeParent")
+                mediaUrl: playlistEpModel.model.get("mediaUrl")
+                episodeSummary: playlistEpModel.model.get("episodeSummary")
+                uid: playlistEpModel.model.get("uid")
+                cid: playlistEpModel.model.get("cid")
+              )
+
+              view = new View.EpisodeDetail(model: modelClone)
+              # console.log(playlistEpModel.get("model")
+              view.title = modelClone.get("episodeTitle")
+              view.on "episodes:list", ->
+                view.trigger "view:close"
+              view.on "player:playnow", (uuid) ->
+                # send to player controller
+                # require ["apps/episodes/player/player_controller"], ->
+                Swabcast.commands.execute "player:playnow", uuid
+
+              view.on "episode:remove", (childView, playlistEpModel) ->
+                # console.log("cid", playlistEpModel.cid)
+                console.log("childView", childView)
+                console.log("playlistEpModel", playlistEpModel)
+                # trash2 = playlistTracks.children.findByModel(playlistEpModel)
+                # trash3 = playlistTracks.children.findByModel(playlistEpModel.model.cid)
+                # trash = playlistTracks.children.findByCid(playlistEpModel.cid)
+                # playlistTracks.children.findByModel(playlistEpModel.model.ge)
+                if typeof tracks.at(1) is "undefined" and tracks.length is 1
+                  Swabcast.commands.execute "playerdata:remove"
+                  Swabcast.commands.execute "player:empty"
+
+                # blah = playlistTracks.children.findByModel(model)
+                # console.log("blah", blah)
+                # view.trigger "episode:remove"
+                #if track being removed is at top of playlist
+                Swabcast.commands.execute "playlist:updatenowplaying", tracks.at(1)  if tracks.at(0) is playlistEpModel and tracks.length >= 2
+                playlistEpModel.destroy()
+                # model.destroy()
+                # Swabcast.EpisodesApp.List.trigger "episode:removefromqueue", modelUid
+
+
+              Swabcast.dialogRegion.show view
 
             playlistTracks.on "itemview:episode:delete", (childView, model) ->
               #if track that is about to be removed is at index 0
@@ -49,6 +100,7 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
                       albumArt: newTrack.get("albumArt") or newTrack.parent.get("albumArt")
                       episodeTitle: newTrack.get("episodeTitle") or null
                       episodeParent: newTrack.get("episodeParent") or null
+                      episodeSummary: newTrack.get("episodeSummary") or null
                       feedUrl: newTrack.get("feedUrl") or " "
                       mediaUrl: newTrack.get("mediaUrl") or null
                       enqueue: true
@@ -90,6 +142,20 @@ define ["app", "apps/episodes/playlist/playlist_view", "apps/episodes/player/pla
             $.when(fetchingPlaylist).done (episodes) ->
               self = this
               playlistEpisodes = new View.TracksExtended(collection: episodes)
+
+              playlistEpisodes.on "playlist:episode:detail", (model) ->
+                console.log("clicked")
+                view = new View.EpisodeDetail(model: model)
+                view.title = model.get("episodeTitle")
+                view.on "episodes:list", ->
+                  view.trigger "view:close"
+                view.on "player:playnow", (uuid) ->
+                  # send to player controller
+                  # require ["apps/episodes/player/player_controller"], ->
+                  Swabcast.commands.execute "player:playnow", uuid
+
+                Swabcast.dialogRegion.show view
+
 
               playlistEpisodes.on "itemview:episode:delete", (childView, model) ->
                 if typeof episodes.at(0) is "undefined" and episodes.length is 0

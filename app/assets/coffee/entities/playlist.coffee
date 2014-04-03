@@ -67,6 +67,7 @@ define ["app", "apps/config/storage/localstorage", "entities/feed"], (Swabcast) 
               albumArt: model.parent.get("albumArt") or null
               episodeTitle: model.get("episodeTitle") or " "
               feedUrl: model.parent.get("feedUrl") or " "
+              episodeSummary: model.get("episodeSummary")
               episodeParent: model.parent.get("subscriptionTitle") or " "
               mediaUrl: model.get("mediaUrl") or null
               enqueue: true

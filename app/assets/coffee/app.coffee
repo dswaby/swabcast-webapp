@@ -1,4 +1,9 @@
 define ["marionette", "apps/config/marionette/regions/dialog"], (Marionette) ->
+  if screen.availHeight <= 600
+    $(".inner-wrap").css "min-height", screen.availHeight + 108
+    $(".modal-text-content").css "max-height", (screen.availHeight *0.40).toFixed()
+
+
 
   Swabcast = new Marionette.Application()
   # Swabcast.debugging = true

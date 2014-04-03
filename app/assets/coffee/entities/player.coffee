@@ -18,11 +18,11 @@ define ["app", "apps/config/storage/localstorage", "entities/playlist"], (Swabca
     )
     Entities.configureStorage Entities.PlayerData
 
-    # Entities.PlayerDataStore = Backbone.Collection.extend(
-    #   model: Entities.Episode
-    #   url: "player"
-    # )
-    # Entities.configureStorage Entities.PlayerDataStore
+    Entities.PlayerDataStore = Backbone.Collection.extend(
+      model: Entities.Episode
+      url: "player"
+    )
+    Entities.configureStorage Entities.PlayerDataStore
 
     API =
       getPlayerData: ->
