@@ -15,11 +15,11 @@
 
   <h6>app</h6>
   <ul>
-    <li>jquery, jquery-ui, transit.jquery</li>
+    <li>jquery, jquery-ui, requirejs-tpl</li>
     <li>AMD with requirejs</li>
     <li>almond.js - require.js shim</li>
     <li>r.js optimizer</li>
-    <li>backbone.js</li>
+    <li>underscore/backbone.js</li>
     <li>marionette.js</li>
     <li>foundation CSS/ fastclick</li>
   </ul>
