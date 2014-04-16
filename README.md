@@ -1,4 +1,5 @@
-Swabcast
+
+Swabcast [![Build Status](https://secure.travis-ci.org/dswaby/swabcast-webapp.png?branch=master)](https://travis-ci.org/dswaby/swabcast-webapp)
 ========
 > web app for playing audio feeds
 
