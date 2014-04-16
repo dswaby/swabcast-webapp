@@ -10,7 +10,7 @@
     "underscore-amd": "~1.4.4",
     "modernizr": "~2.6.2",
     "backbone.marionette": "~1.7.1",
-    "backbone.wreqr": "~0.2.0",
+    "backbone.wreqr": "~1.0.0",
     "backbone.babysitter": "~0.0.6",
     "mocha": "~1.12.0",
     "chai": "~1.7.2",
