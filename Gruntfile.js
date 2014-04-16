@@ -105,7 +105,7 @@ module.exports = function(grunt) {
             glob_to_multiple: {
                 expand: true,
                 flatten: false,
-                bare: true,
+
                 cwd: '<%= swabstack.app %>/assets/coffee/',
                 src: ['**/*.coffee', '*.coffee'],
                 dest: '<%= swabstack.app %>/assets/js/',
@@ -118,6 +118,16 @@ module.exports = function(grunt) {
                 cwd: './',
                 src: ['test/coffee/*.coffee'],
                 dest: 'test/spec/',
+                ext: '.js'
+            },
+            testrequire: {
+                flatten: true,
+                options: {
+                    bare: true
+                },
+                cwd: './',
+                src: ['test/SpecRunner.coffee'],
+                dest: 'test/SpecRunner.js',
                 ext: '.js'
             }
         },
@@ -225,6 +235,13 @@ module.exports = function(grunt) {
                         cwd: './app'
                     }
                 }
+            },
+            'ci': {
+                command: 'mocha-phantomjs -R spec http://localhost:' + port +'test/TestRunner.html',
+                options: {
+                  stdout: true,
+                  stderr: true
+                }
             }
         },
         open: {
@@ -265,7 +282,7 @@ module.exports = function(grunt) {
         'connect:test',
         'shell:mocha-phantomjs',
         'open:dev',
-        'open:testrunner',
+        // 'open:testrunner',
         'watch'
     ]);
 
@@ -282,9 +299,11 @@ module.exports = function(grunt) {
     grunt.task.registerTask('test', 'for writing tests, only watches test folder and runs on change', function() {
         grunt.task.run([
             'coffee:testcoffee',
+            'coffee:testrequire',
             'connect:test',
             'shell:mocha-phantomjs',
-            'watch:tests'
+            'watch:tests',
+            'open:testrunner'
         ]);
     });
 
@@ -294,6 +313,8 @@ module.exports = function(grunt) {
             'copy:docs'
         ]);
     });
+
+
 
     grunt.task.registerTask('build', 'creates optimized distribution', function() {
         grunt.task.run([
@@ -309,5 +330,7 @@ module.exports = function(grunt) {
             'watch:indextemplate'
         ]);
     });
+
+    grunt.registerTask('test', ['connect', 'shell:ci']);
 
 };
