@@ -1,5 +1,5 @@
 (function() {
-  define(["app", "./../../app/assets/bower_components/chai/chai", "entities/playlist"], function(Swabcast, chai) {
+  define(["app", "apps/episodes/playlist/playlist_view", "./../../app/assets/bower_components/chai/chai", "apps/episodes/playlist/playlist_controller", "entities/playlist"], function(Swabcast, View, chai) {
     var expect;
     expect = chai.expect;
     describe("Playlist", function() {
@@ -48,6 +48,57 @@
         expect(fn).to["throw"]("Episode1 must have valid uid property");
       });
     });
+    describe("View", function() {
+      before(function() {
+        this.$layoutfixture = $("<div id='now-playing-region'></div><div id='playlist-region'></div>");
+      });
+      beforeEach(function() {
+        var playlist, track1, track2;
+        this.$layoutfixture.empty().appendTo($("#fixtures"));
+        this.layout = new View.Layout({
+          el: this.$layoutfixture
+        });
+        playlist = new Swabcast.Entities.Playlist();
+        this.view = new View.Tracks({
+          el: "#playlist-region",
+          collection: playlist
+        });
+        this.layout.on("show", function() {
+          return Swabcast.playlistRegion.show(this.view);
+        });
+        track1 = new Swabcast.Entities.QueuedEpisode({
+          id: 123,
+          episodeTitle: "Track 1",
+          albumArt: " ",
+          episodeParent: "Test Feed",
+          mediaUrl: "httpL//track1.mp3",
+          episodeSummary: "This is track 1, used for testing playlist view",
+          uid: "fo3ihr34",
+          order: 1
+        });
+        track2 = new Swabcast.Entities.QueuedEpisode({
+          id: 1234,
+          episodeTitle: "Track 2",
+          albumArt: " ",
+          episodeParent: "Test Feed",
+          mediaUrl: "httpL//track2.mp3",
+          episodeSummary: "This is track 2, used for testing playlist view",
+          uid: "fo3ihr34",
+          order: 2
+        });
+        playlist.add(track1, track2);
+        this.view.render();
+        return this.view.collection.add(track1);
+      });
+      afterEach(function() {});
+      after(function() {});
+      it("can render empty model", function() {
+        var $playlistRegion;
+        $playlistRegion = $("#playlist-region");
+      });
+      return it("views should correctly render item", function() {});
+    });
+    return;
   });
 
 }).call(this);

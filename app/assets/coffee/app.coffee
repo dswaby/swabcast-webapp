@@ -44,8 +44,6 @@ define ["marionette", "apps/config/marionette/regions/dialog"], (Marionette) ->
         if Swabcast.getCurrentRoute() is "about"
           Swabcast.trigger "landing:about"
 
-
-
         # if Swabcast.getCurrentRoute() is "subscriptions"
         #   require ["apps/subscriptions/subscriptions_app"], ->
         #     console.log("subscriptions triggered")

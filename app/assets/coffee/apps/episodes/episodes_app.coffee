@@ -1,10 +1,11 @@
 define ["app"], (Swabcast) ->
   Swabcast.module "EpisodesApp", (EpisodesApp, Swabcast, Backbone, Marionette, $, _) ->
-    EpisodesApp.Router = Marionette.AppRouter.extend(appRoutes:
-      library: "showPageMedia"
-      "episodes/:id": "showEpisode"
-      "feed/:id": "showFeedEpisodesOnLoad"
-      playlist: "showPlaylistOnLoad"
+    EpisodesApp.Router = Marionette.AppRouter.extend(
+      appRoutes:
+        library: "showPageMedia"
+        "episodes/:id": "showEpisode"
+        "feed/:id": "showFeedEpisodesOnLoad"
+        playlist: "showPlaylistOnLoad"
     )
     API =
       # "media:all"
@@ -20,9 +21,14 @@ define ["app"], (Swabcast) ->
           EpisodesApp.Feed.Controller.showFeeds optTimeOut
 
       # "playlist:mainview"
-      showPlaylistMain: ->
+      showPlaylistMain: (opts) ->
+        opts = opts or true
+        opts.showInMainRegion = true
+        opts.closeMain = false
+        opts.closeSideBar = true
+        console.log("showPlaylist Main on landing")
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showManagePlaylist()
+          EpisodesApp.Playlist.Controller.showPlaylist opts
 
       # "episodes:library"
       showLibrary: ->
@@ -47,9 +53,14 @@ define ["app"], (Swabcast) ->
       editEpisode: (id) ->
         EpisodesApp.Edit.Controller.editEpisode id
 
-      showPlaylist: ->
+      showPlaylist: (opts) ->
+        opts = opts or true
+        opts.showInMainRegion = false
+        opts.closeMain = false
+        opts.closeSideBar = false
+        # opts.closeMain = true
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showPlaylist()
+          EpisodesApp.Playlist.Controller.showPlaylist opts
 
       showEpisodeDetails: (model) ->
         require ["apps/episodes/feed/feed_controller"], ->
@@ -64,21 +75,28 @@ define ["app"], (Swabcast) ->
           EpisodesApp.Feed.Controller.showEpisodeList model
 
       showFeedEpisodesOnLoad: (id) ->
+        opts = true
+        opts.showInMainRegion = false
+        opts.closeMain = false
+        opts.closeSideBar = false
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showPlaylist()
+          EpisodesApp.Playlist.Controller.showPlaylist opts
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
         require ["apps/episodes/feed/feed_controller"], ->
           EpisodesApp.Feed.Controller.showFeedEpisodesById id
 
       showPlaylistOnLoad: ->
-        options = true
+        opts = true
+        opts.showInMainRegion = true
+        opts.closeSideBar = false
         require ["apps/episodes/nav/nav_controller"], ->
           EpisodesApp.Nav.Controller.showNav()
         require ["apps/episodes/playlist/playlist_controller"], ->
-          EpisodesApp.Playlist.Controller.showManagePlaylist()
+
+          EpisodesApp.Playlist.Controller.showPlaylist opts
         require ["apps/episodes/player/player_controller"], ->
           EpisodesApp.Player.Controller.showControls()
 
@@ -115,8 +133,8 @@ define ["app"], (Swabcast) ->
       Swabcast.navigate "episodes/" + id + "/edit"
       API.editEpisode id
 
-    Swabcast.on "episodes:playlist", ->
-      API.showPlaylist()
+    Swabcast.on "episodes:playlist", (opts) ->
+      API.showPlaylist opts
 
     Swabcast.on "episode:details", (model) ->
       API.showEpisodeDetails model
@@ -133,7 +151,7 @@ define ["app"], (Swabcast) ->
 
     Swabcast.on "playlist:landing", ->
       Swabcast.navigate "playlist"
-      API.showPlaylistMain()
+      API.showPlaylistMain
 
     Swabcast.on "static:about:app", ->
       API.showAboutApp()

@@ -118,6 +118,8 @@ define ["app",
 
 
     describe "Controller", ->
+      it "should create an audio instance if view model is not empty", ->
+
       # it "test1", ->
       #   playerData = new Swabcast.Entities.Episode()
       #   return

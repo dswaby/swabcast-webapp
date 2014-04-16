@@ -15,6 +15,7 @@ requirejs.config
     foundation: "../bower_components/foundation/js/foundation/foundation"
     offcanvas: "../bower_components/foundation/js/foundation/foundation.offcanvas"
     fastclick: "../bower_components/foundation/js/vendor/fastclick"
+    toastr: "../bower_components/toastr/toastr.min"
 
   shim:
     underscore:
@@ -37,14 +38,11 @@ requirejs.config
     fastclick:
       exports: ["FastClick"]
 
-    # toastr:
-    #   deps: ["jquery"]
-    #   exports: "toastr"
+    toastr:
+      deps: ["jquery"]
+      exports: "toastr"
 
     localstorage: ["backbone"]
-
-    # dualstorage:
-    #   deps: ["backbone"]
 
     offcanvas:
       deps: ["jquery", "foundation"]
@@ -58,16 +56,17 @@ require ["app"], (Swabcast) ->
 
 requirejs [
   "jquery"
+  # "toastr"
   "foundation"
   "offcanvas"
   "fastclick"
-  # "toastr"
 ], ($) ->
 
   (($, window, undefined_) ->
     $doc = $(document)
     Modernizr = window.Modernizr
     $(document).foundation()
+
   ) $, window
   return
 

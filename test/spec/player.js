@@ -97,7 +97,9 @@
           expect($playerimage.prop("src")).to.equal("http://localhost:1234/serverdata/albumart/default.jpg");
         });
       });
-      return describe("Controller", function() {});
+      return describe("Controller", function() {
+        return it("should create an audio instance if view model is not empty", function() {});
+      });
     });
   });
 

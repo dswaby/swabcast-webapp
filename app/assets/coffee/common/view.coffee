@@ -72,9 +72,12 @@ define ["app", "tpl!common/templates/loadingView.tpl", "tpl!common/templates/not
       navigateToLibrary: (e) ->
         e.preventDefault()
         e.stopPropagation()
+        opts = undefined
+        opts.closeMain = true
         Swabcast.navigate "library"
+        Swabcast.trigger "episodes:playlist", opts
         Swabcast.trigger "episodes:library"
-        Swabcast.trigger "episodes:playlist"
+
         # Swabcast.libraryRegion.close()
         @close()
     )
