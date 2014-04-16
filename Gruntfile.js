@@ -331,6 +331,6 @@ module.exports = function(grunt) {
         ]);
     });
 
-    grunt.registerTask('test', ['connect', 'shell:ci']);
+    grunt.registerTask('test', ['connect:test', 'shell:ci']);
 
 };
