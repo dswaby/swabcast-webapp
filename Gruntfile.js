@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         dist: 'dist',
         test: 'test'
     };
-    var port = 3030;
+    var port = 1234;
     grunt.initConfig({
         swabstack: swabstackConfig,
         compass: {
