@@ -99,6 +99,12 @@ module.exports = function(grunt) {
                     port: 1234,
                     base: './'
                 }
+            },
+            travis: {
+                options: {
+                    port: port,
+                    base: '.'
+                }
             }
         },
         // coffeescript
@@ -296,7 +302,7 @@ module.exports = function(grunt) {
         ]);
     });
 
-    grunt.task.registerTask('test', 'for writing tests, only watches test folder and runs on change', function() {
+    grunt.task.registerTask('testing', 'for writing tests, only watches test folder and runs on change', function() {
         grunt.task.run([
             'coffee:testcoffee',
             'coffee:testrequire',
@@ -330,4 +336,5 @@ module.exports = function(grunt) {
             'watch:indextemplate'
         ]);
     });
+    grunt.registerTask('test', ['connect:travis', 'shell:ci']);
 };
