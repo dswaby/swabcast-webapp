@@ -296,7 +296,7 @@ module.exports = function(grunt) {
         ]);
     });
 
-    grunt.task.registerTask('testing', 'for writing tests, only watches test folder and runs on change', function() {
+    grunt.task.registerTask('test', 'for writing tests, only watches test folder and runs on change', function() {
         grunt.task.run([
             'coffee:testcoffee',
             'coffee:testrequire',
