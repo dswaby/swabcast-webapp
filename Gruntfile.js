@@ -238,7 +238,7 @@ module.exports = function(grunt) {
                 }
             },
             'ci': {
-                command: 'mocha-phantomjs -R spec http://localhost:' + port +'test/TestRunner.html',
+                command: 'mocha-phantomjs -R dot http://localhost:' + port +'test/TestRunner.html',
                 options: {
                   stdout: true,
                   stderr: true
