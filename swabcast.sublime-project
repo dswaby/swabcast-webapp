@@ -14,7 +14,7 @@
 				// ,
 				// "app/assets/js"
 			],
-			"file_exclude_patterns": [".sublime-grunt.cache"],
+			"file_exclude_patterns": [".sublime-grunt.cache", ".bowerrc"],
 			"follow_symlinks": true,
 			"path": "."
 		}

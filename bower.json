@@ -2,7 +2,7 @@
   "name": "swabcast",
   "version": "0.0.1",
   "dependencies": {
-    "foundation": "zurb/bower-foundation",
+    "foundation": "~5.0.2",
     "jquery": "~1.9.0",
     "requirejs": "~2.1.5",
     "requirejs-text": "~2.0.5",
@@ -19,14 +19,13 @@
     "almond": "0.2.6",
     "backbone.localstorage": "~1.1.7",
     "json2": "*",
-    "jquery-ui": "~1.10.4"
+    "jquery-ui": "~1.10.4",
+    "requirejs-tpl": "*"
   },
   "devDependencies": {},
   "directory": "bower_components",
   "resolutions": {
     "jquery": "~1.9.0",
-    "backbone.babysitter": "~0.1.0",
-    "backbone.wreqr": "~1.0.0",
-    "modernizr": "~2.6.2"
+    "backbone.babysitter": "~0.1.0"
   }
 }

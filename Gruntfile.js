@@ -4,9 +4,11 @@ var mountFolder = function(connect, dir) {
 module.exports = function(grunt) {
     'use strict';
     var swabstackConfig = {
-        app: 'app',
-        dist: 'dist',
-        test: 'test'
+        app: './client/app',
+        dist: './client/dist',
+        test: './client/test',
+        clientDir: 'client',
+        serverDir: './server'
     };
     var port = 1234;
     grunt.initConfig({
@@ -29,6 +31,10 @@ module.exports = function(grunt) {
             coffee: {
                 files: ['<%= swabstack.app %>/assets/coffee/{,**/}*.coffee'],
                 tasks: ['coffee:glob_to_multiple', 'shell:mocha-phantomjs']
+            },
+            servercoffee: {
+                files: ['<%= swabstack.serverDir %>/coffee/{,**/}*.coffee'],
+                tasks: ['coffee:server']
             },
             tests: {
                 files: ['<%= swabstack.test %>/coffee/*.coffee'],
@@ -69,12 +75,12 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     port: '1337',
-                    script: 'server/dev.js'
+                    script: '<%= swabstack.serverDir %>/js/dev.js'
                 }
             },
             dist: {
                 options: {
-                    script: 'server/app.js'
+                    script: '<%= swabstack.serverDir %>/js/app.js'
                 }
             }
         },
@@ -97,7 +103,7 @@ module.exports = function(grunt) {
             test: {
                 options: {
                     port: 1234,
-                    base: './'
+                    base: '<%= swabstack.clientDir %>'
                 }
             },
             travis: {
@@ -118,13 +124,24 @@ module.exports = function(grunt) {
                 dest: '<%= swabstack.app %>/assets/js/',
                 ext: '.js'
             },
+            server: {
+                expand: true,
+                flatten: false,
+                options: {
+                    bare: true
+                },
+                cwd: '<%= swabstack.serverDir %>/coffee/',
+                src: ['**/*.coffee', '*.coffee'],
+                dest: '<%= swabstack.serverDir %>/js/',
+                ext: '.js'
+            },
             testcoffee: {
                 expand: true,
                 flatten: true,
                 bare: true,
                 cwd: './',
-                src: ['test/coffee/*.coffee'],
-                dest: 'test/spec/',
+                src: ['<%= swabstack.test %>/coffee/*.coffee'],
+                dest: '<%= swabstack.test %>/spec/',
                 ext: '.js'
             },
             testrequire: {
@@ -133,8 +150,8 @@ module.exports = function(grunt) {
                     bare: true
                 },
                 cwd: './',
-                src: ['test/SpecRunner.coffee'],
-                dest: 'test/SpecRunner.js',
+                src: ['<%= swabstack.test %>/SpecRunner.coffee'],
+                dest: '<%= swabstack.test %>/SpecRunner.js',
                 ext: '.js'
             }
         },
@@ -182,7 +199,7 @@ module.exports = function(grunt) {
             },
             requireBuilt: {
                 files: [{
-                    cwd: './',
+                    cwd: '.',
                     src: ['<%= swabstack.app %>/assets/js/require_main_built.js'],
                     dest: '<%= swabstack.dist %>/js/require_main_built.js'
                 }]
@@ -190,7 +207,7 @@ module.exports = function(grunt) {
             dummyData: {
                 //hoping to remove this soon but if i have to copy and paste twice its easier to add a grunt task
                 files: [{
-                    cwd: './',
+                    cwd: '.',
                     src: ['<%= swabstack.app %>/assets/serverdata/*'],
                     dest: '<%= swabstack.dist %>/serverdata/'
                 }]
@@ -210,7 +227,7 @@ module.exports = function(grunt) {
             coffeescript: {
                 src: ['<%= swabstack.app %>/assets/coffee/**/*.coffee'],
                 options: {
-                    output: './docs/CoffeScript/'
+                    output: '<%= swabstack.clientDir %>/docs/CoffeScript/'
                 }
             },
             javascript: {
@@ -235,16 +252,16 @@ module.exports = function(grunt) {
                 }
             },
             'buildRequire': {
-                command: 'node r.js -o assets/js/build.js',
+                command: 'pwd;node r.js -o assets/js/build.js',
                 options: {
                     stdout: true,
                     execOptions: {
-                        cwd: './app'
+                        cwd: '<%= swabstack.clientDir %>/app'
                     }
                 }
             },
             'ci': {
-                command: 'mocha-phantomjs -R dot http://localhost:' + port +'test/TestRunner.html',
+                command: 'mocha-phantomjs -R dot http://localhost:' + port +'<%= swabstack.test %>/TestRunner.html',
                 options: {
                   stdout: true,
                   stderr: true
@@ -261,7 +278,7 @@ module.exports = function(grunt) {
                 app: 'Google Chrome'
             },
             testrunner: {
-                path: 'http://localhost:1234/test/TestRunner.html',
+                path: 'http://localhost:1234/TestRunner.html',
                 app: 'Google Chrome'
             }
         }
